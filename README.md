@@ -1,33 +1,37 @@
-# portuguese-estate.com
+# portuguese-estate-website
 
-Independent EN advisory site for Portugal property investment (Tuscany, Puglia, Milan, Lake Como, Sicily).
+Independent Portugal property investment research site — **portuguese-estate.com**.
 
 ## Stack
 
-Astro 6 · MDX · Tailwind 4 · Vercel · Cloudinary `dphvjbqb4/more-group/italy/`
+- Astro 6 + MDX + Tailwind 4
+- Vercel (serverless `/api/lead/`)
+- Cloudflare DNS + Email Routing
 
 ## Commands
 
 ```bash
 npm run dev
-npm run build          # includes rendered postbuild audit
-npm run validate:content
+npm run build
 npm run healthcheck
+npm run validate:content
+npm run qa:full
 ```
 
-## Project images pipeline
+## Brand
 
-```bash
-cd ../08_Идеи/italy-re-projects
-node scrape-italy-projects.mjs --from-portfolio --download
-node scripts/build-italy-image-manifest.mjs
-python3 scripts/upload-italy-cloudinary.py
-```
+- URL: https://portuguese-estate.com
+- Email: info@portuguese-estate.com
+- IndexNow key: `20390df55e88e4dc0ec3da8c94acdace`
+- GCP indexing project (when ready): `portuguese-estate-indexing`
 
-Manifest: `08_Идеи/italy-re-projects/scripts/italy-cloudinary-manifest.json`
+## Maksim setup (GA4, GSC, Bing, GCP)
 
-## Status (2026-06-14)
+See `08_Идеи/PORTUGUESE_ESTATE_MAKSIM_STEPS.md`.
 
-- Astro scaffold: hubs, lead API, QA scripts, llms.txt
-- Parser batch 1: 6 Tier A projects scraped + 18 Cloudinary images
-- MDX content batches: not started (guides / projects / areas)
+## Content
+
+Research + 100 URL map: `08_Идеи/PORTUGAL_RE_CONTENT_MAP_100.md`  
+Parser pipeline: `08_Идеи/portugal-re-projects/`
+
+Batch 1 HUB guides (7 articles) — publishing next.
