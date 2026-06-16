@@ -70,8 +70,8 @@ function collectUrls() {
 
 async function main() {
   const key = JSON.parse(readFileSync(KEY_PATH, 'utf8'));
-  if (key.project_id !== 'italian-estate-indexing') {
-    console.error(`Wrong GCP project: ${key.project_id}`);
+  if (key.project_id !== 'portuguese-estate-indexing') {
+    console.error(`Wrong GCP project: ${key.project_id} (expected portuguese-estate-indexing)`);
     process.exit(1);
   }
   console.log(`Preflight OK: ${key.project_id} | ${HOST}`);

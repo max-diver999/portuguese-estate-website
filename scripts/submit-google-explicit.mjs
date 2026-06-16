@@ -30,8 +30,8 @@ if (bad.length) {
 }
 
 const key = JSON.parse(readFileSync(KEY_PATH, 'utf8'));
-if (key.project_id !== 'italian-estate-indexing') {
-  console.error(`Wrong GCP project in key: ${key.project_id} (expected italian-estate-indexing)`);
+if (key.project_id !== 'portuguese-estate-indexing') {
+  console.error(`Wrong GCP project in key: ${key.project_id} (expected portuguese-estate-indexing)`);
   process.exit(1);
 }
 console.log(`Preflight OK: ${key.project_id} | ${key.client_email}`);
