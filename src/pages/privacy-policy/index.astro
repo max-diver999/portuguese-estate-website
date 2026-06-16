@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../data/site';
+const updated = 'June 4, 2026';
+---
+<BaseLayout
+  title="Privacy Policy"
+  description="Privacy policy for Portuguese Estate — how we handle enquiries and personal data."
+>
+  <section class="site-container py-12 md:py-16 max-w-3xl">
+    <h1 class="mb-2">Privacy Policy</h1>
+    <p class="text-sm text-[var(--color-muted)] mb-8">Last updated: {updated}</p>
+    <div class="prose text-sm">
+      <p>{SITE.name} ({SITE.url}) operates as an editorial website. This policy explains how we process data when you contact us.</p>
+      <h2>Data we collect</h2>
+      <p>When you submit a form: name, phone/WhatsApp, email (optional), budget, market preference, and message content.</p>
+      <h2>How we use it</h2>
+      <ul>
+        <li>Respond to your enquiry</li>
+        <li>Refer qualified requests to licensed UAE property partners</li>
+        <li>Improve our content (aggregated, non-identifiable analytics)</li>
+      </ul>
+      <h2>Sharing</h2>
+      <p>We do not sell personal data. Enquiry details may be shared with AMPI-licensed partners solely to fulfil your request.</p>
+      <h2>Retention</h2>
+      <p>Enquiry records are kept as long as needed to service the request and comply with applicable law.</p>
+      <h2>Your rights</h2>
+      <p>Contact <a href={`mailto:${SITE.email}`}>{SITE.email}</a> to request access, correction, or deletion where applicable.</p>
+      <h2>Cookies</h2>
+      <p>We may use essential cookies and privacy-friendly analytics. No third-party ad tracking by default.</p>
+    </div>
+  </section>
+</BaseLayout>

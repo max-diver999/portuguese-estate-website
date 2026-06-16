@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import ContentCard from '../components/ContentCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+import { SITE } from '../data/site';
+import {
+  FEATURED_PROJECT_SLUGS,
+  FEATURED_GUIDE_SLUGS,
+  FEATURED_AREA_SLUGS,
+  HOMEPAGE_HERO_IMAGE,
+  HOMEPAGE_HERO_PROJECT_SLUG,
+} from '../data/featured';
+import { getCardImageUrl, formatAreaLabel } from '../lib/cardImage';
+import { pickHomepageProjects, projectHeroLine, projectStatusLabel } from '../lib/homeProjects';
+
+const [guides, projects, areas] = await Promise.all([
+  getCollection('guides'),
+  getCollection('projects'),
+  getCollection('areas'),
+]);
+
+const publishedGuides = guides.filter((g) => !g.data.noindex);
+const publishedProjects = projects.filter((p) => !p.data.noindex);
+const publishedAreas = areas.filter((a) => !a.data.noindex);
+
+const guideBySlug = new Map(publishedGuides.map((g) => [g.id, g]));
+const projectBySlug = new Map(publishedProjects.map((p) => [p.id, p]));
+const areaBySlug = new Map(publishedAreas.map((a) => [a.id, a]));
+
+const featuredGuides = FEATURED_GUIDE_SLUGS.map((slug) => guideBySlug.get(slug)).filter(Boolean);
+const homepageProjects = pickHomepageProjects(publishedProjects, FEATURED_PROJECT_SLUGS, 12);
+const heroProject = projectBySlug.get(HOMEPAGE_HERO_PROJECT_SLUG) ?? homepageProjects[0];
+const featuredAreas = FEATURED_AREA_SLUGS.map((slug) => areaBySlug.get(slug)).filter(Boolean);
+
+const heroImage = getCardImageUrl(HOMEPAGE_HERO_IMAGE, 'hero');
+const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImage, 'card') : heroImage;
+---
+<BaseLayout
+  title="Portuguese Estate — Independent Portugal Property Research"
+  description={SITE.description}
+>
+  <section class="border-b border-[var(--color-border-soft)] bg-[var(--color-surface)]">
+    <div class="site-container py-14 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div>
+        <span class="badge-pill mb-5">Independent research</span>
+        <h1 class="text-3xl md:text-[2.35rem] mb-5 leading-tight">
+          Understand Portugal property before you buy
+        </h1>
+        <p class="text-base md:text-lg text-[var(--color-muted)] mb-8 max-w-xl">
+          Lisbon, Algarve, Porto, Comporta — IMT for non-residents, AL licensing, Golden Visa fund route, rental yields, project reviews, and due diligence for US and UK buyers.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-10">
+          <a href="/guides/" class="btn-primary px-6 py-3">Browse guides</a>
+          <a href="/projects/" class="btn-secondary px-6 py-3">Project reviews</a>
+          <a href="/get-shortlist/" class="btn-secondary px-6 py-3">Free shortlist →</a>
+        </div>
+        <div class="grid grid-cols-3 gap-3 max-w-md">
+          <div class="stat-pill">
+            <strong>{publishedGuides.length}</strong>
+            <span>Guides</span>
+          </div>
+          <div class="stat-pill">
+            <strong>{publishedProjects.length}</strong>
+            <span>Projects</span>
+          </div>
+          <div class="stat-pill">
+            <strong>{publishedAreas.length}</strong>
+            <span>Areas</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual min-h-[280px] md:min-h-[380px] relative">
+        <img src={heroProjectImage} alt={heroProject ? `${heroProject.data.title} — featured Portugal project` : 'Lisbon new-build apartment, Vanguard Properties'} loading="eager" width="1400" height="560" />
+        <div class="hero-visual__overlay" />
+        <p class="hero-visual__caption">Lisbon · Tomás Ribeiro 79</p>
+        {heroProject && (
+          <div class="hero-project-card">
+            <div class="hero-project-card__copy">
+              <p class="hero-project-card__eyebrow">Featured · {formatAreaLabel(heroProject.data.area)}</p>
+              <p class="hero-project-card__title">{heroProject.data.title.replace(/ Review:.*$/, '').replace(/ 2026.*$/, '')}</p>
+              <p class="hero-project-card__meta">{projectHeroLine(heroProject)}</p>
+            </div>
+            <a href={`/projects/${heroProject.id}/`} class="hero-project-card__cta">View project →</a>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-[var(--color-border-soft)] bg-[var(--color-brand)] text-white py-8">
+    <div class="site-container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-2xl md:text-3xl font-semibold">{publishedProjects.length}+</p>
+        <p class="text-sm opacity-85 mt-1">Projects reviewed</p>
+      </div>
+      <div>
+        <p class="text-2xl md:text-3xl font-semibold">{publishedGuides.length}</p>
+        <p class="text-sm opacity-85 mt-1">Buyer guides</p>
+      </div>
+      <div>
+        <p class="text-2xl md:text-3xl font-semibold">{publishedAreas.length}</p>
+        <p class="text-sm opacity-85 mt-1">Investment areas</p>
+      </div>
+      <div>
+        <p class="text-2xl md:text-3xl font-semibold">7.5%</p>
+        <p class="text-sm opacity-85 mt-1">IMT flat (non-resident, 2026)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="site-container">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-2xl mb-2">Featured project reviews</h2>
+          <p class="text-[var(--color-muted)]">Click through for pricing, photos, yield math, and due diligence — not developer brochures.</p>
+        </div>
+        <a href="/projects/" class="link-arrow shrink-0 hidden sm:inline">All {publishedProjects.length} projects →</a>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {homepageProjects.length > 0 ? homepageProjects.map((project) => (
+          <ProjectCard
+            href={`/projects/${project.id}/`}
+            title={project.data.title}
+            description={project.data.description}
+            image={project.data.heroImage}
+            area={project.data.area}
+            developer={project.data.developer}
+            propertyType={project.data.propertyType}
+            status={project.data.status}
+            priceFromUsd={project.data.priceFromUsd}
+          />
+        )) : (
+          <p class="text-[var(--color-muted)] col-span-full py-8">Project reviews publishing soon — parser batch 1 ready on Cloudinary.</p>
+        )}
+      </div>
+      <div class="mt-8 text-center sm:hidden">
+        <a href="/projects/" class="btn-secondary px-6 py-3">Browse all {publishedProjects.length} projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-[var(--color-surface)] border-y border-[var(--color-border-soft)]">
+    <div class="site-container">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-2xl mb-2">Start here</h2>
+          <p class="text-[var(--color-muted)]">High-intent guides for foreign buyers.</p>
+        </div>
+        <a href="/guides/" class="link-arrow shrink-0 hidden sm:inline">All guides →</a>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        {featuredGuides.length > 0 ? featuredGuides.map((guide) => (
+          <ContentCard
+            href={`/guides/${guide.id}/`}
+            title={guide.data.title}
+            description={guide.data.description}
+            image={guide.data.heroImage}
+            badges={['Guide', ...(guide.data.tags?.slice(0, 1) ?? [])]}
+            meta={`${guide.data.readingTime ?? 8} min read`}
+          />
+        )) : (
+          <p class="text-[var(--color-muted)] col-span-full py-4">Buyer guides batch publishing next — see content map in research dossier.</p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="site-container">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-2xl mb-2">Investment areas</h2>
+          <p class="text-[var(--color-muted)]">Micro-market guides — yields, buyer fit, and red flags.</p>
+        </div>
+        <a href="/areas/" class="link-arrow shrink-0 hidden sm:inline">All areas →</a>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {featuredAreas.map((area) => (
+          <ContentCard
+            href={`/areas/${area.id}/`}
+            title={area.data.title}
+            description={area.data.description}
+            image={area.data.heroImage}
+            badges={['Area', formatAreaLabel(area.id)]}
+            meta={`${area.data.readingTime ?? 10} min read`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-[var(--color-surface)] border-t border-[var(--color-border-soft)]">
+    <div class="site-container max-w-xl">
+      <h2 class="text-2xl mb-3">Get a shortlist</h2>
+      <p class="text-[var(--color-muted)] mb-8">Tell us budget and market — we match you with vetted local partners. No obligation.</p>
+      <LeadForm context="Homepage shortlist" />
+    </div>
+  </section>
+</BaseLayout>

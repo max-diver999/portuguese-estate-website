@@ -1,0 +1,960 @@
+{
+  "uploaded": {
+    "viviendas-obra-nueva-marbella-soleil:inline-2": {
+      "kid": "viviendas-obra-nueva-marbella-soleil:inline-2",
+      "slug": "viviendas-obra-nueva-marbella-soleil",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466892/more-group/spain/projects/viviendas-obra-nueva-marbella-soleil/inline_2.png",
+      "source_url": "https://grupoinsur.com/img/promotion/cama_circulo.png",
+      "alt": "Exclusivas viviendas de obra nueva en Marbella - Soleil lifestyle or plan view",
+      "public_id": "more-group/spain/projects/viviendas-obra-nueva-marbella-soleil/inline_2"
+    },
+    "viviendas-obra-nueva-marbella-soleil:hero": {
+      "kid": "viviendas-obra-nueva-marbella-soleil:hero",
+      "slug": "viviendas-obra-nueva-marbella-soleil",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466894/more-group/spain/projects/viviendas-obra-nueva-marbella-soleil/hero.webp",
+      "source_url": "https://grupoinsur.com/storage/promotions/Soleil/Banner/banner-soleil.webp",
+      "alt": "Exclusivas viviendas de obra nueva en Marbella - Soleil exterior rendering",
+      "public_id": "more-group/spain/projects/viviendas-obra-nueva-marbella-soleil/hero"
+    },
+    "origin-viviendas-en-marbella:hero": {
+      "kid": "origin-viviendas-en-marbella:hero",
+      "slug": "origin-viviendas-en-marbella",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466895/more-group/spain/projects/origin-viviendas-en-marbella/hero.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/Origin/Galeria/Origin_piscina_diurna_HD.0000.jpg",
+      "alt": "Origin exterior rendering",
+      "public_id": "more-group/spain/projects/origin-viviendas-en-marbella/hero"
+    },
+    "origin-viviendas-en-marbella:inline-1": {
+      "kid": "origin-viviendas-en-marbella:inline-1",
+      "slug": "origin-viviendas-en-marbella",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466896/more-group/spain/projects/origin-viviendas-en-marbella/inline_1.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/Origin/Galeria/Origin_PiscinaNado_HD.0000.jpg",
+      "alt": "Origin interior or amenity view",
+      "public_id": "more-group/spain/projects/origin-viviendas-en-marbella/inline_1"
+    },
+    "origin-viviendas-en-marbella:inline-2": {
+      "kid": "origin-viviendas-en-marbella:inline-2",
+      "slug": "origin-viviendas-en-marbella",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466897/more-group/spain/projects/origin-viviendas-en-marbella/inline_2.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/Origin/Galeria/Origin_coworking_HD.jpg",
+      "alt": "Origin lifestyle or plan view",
+      "public_id": "more-group/spain/projects/origin-viviendas-en-marbella/inline_2"
+    },
+    "los-naranjos-de-marbella-one:hero": {
+      "kid": "los-naranjos-de-marbella-one:hero",
+      "slug": "los-naranjos-de-marbella-one",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466898/more-group/spain/projects/los-naranjos-de-marbella-one/hero.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/NaranjosMarbellaOne/Viviendas-en-Marbella-house-apartments-Marbella-casas-en-Marbella-adosadas-grupo-insur-23.jpg",
+      "alt": "Los Naranjos de Marbella One exterior rendering",
+      "public_id": "more-group/spain/projects/los-naranjos-de-marbella-one/hero"
+    },
+    "los-naranjos-de-marbella-one:inline-1": {
+      "kid": "los-naranjos-de-marbella-one:inline-1",
+      "slug": "los-naranjos-de-marbella-one",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466898/more-group/spain/projects/los-naranjos-de-marbella-one/inline_1.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/NaranjosMarbellaOne/Viviendas-en-Marbella-house-apartments-Marbella-casas-en-Marbella-adosadas-grupo-insur-01.jpg",
+      "alt": "Los Naranjos de Marbella One interior or amenity view",
+      "public_id": "more-group/spain/projects/los-naranjos-de-marbella-one/inline_1"
+    },
+    "los-naranjos-de-marbella-one:inline-2": {
+      "kid": "los-naranjos-de-marbella-one:inline-2",
+      "slug": "los-naranjos-de-marbella-one",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466900/more-group/spain/projects/los-naranjos-de-marbella-one/inline_2.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/NaranjosMarbellaOne/Viviendas-en-Marbella-house-apartments-Marbella-casas-en-Marbella-adosadas-grupo-insur-02.jpg",
+      "alt": "Los Naranjos de Marbella One lifestyle or plan view",
+      "public_id": "more-group/spain/projects/los-naranjos-de-marbella-one/inline_2"
+    },
+    "la-reserva-de-los-naranjos-marbella:inline-1": {
+      "kid": "la-reserva-de-los-naranjos-marbella:inline-1",
+      "slug": "la-reserva-de-los-naranjos-marbella",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466902/more-group/spain/projects/la-reserva-de-los-naranjos-marbella/inline_1.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/ReservaNaranjos/galeria/ReservaNaranjos1.jpg",
+      "alt": "La Reserva de Los Naranjos interior or amenity view",
+      "public_id": "more-group/spain/projects/la-reserva-de-los-naranjos-marbella/inline_1"
+    },
+    "la-reserva-de-los-naranjos-marbella:inline-2": {
+      "kid": "la-reserva-de-los-naranjos-marbella:inline-2",
+      "slug": "la-reserva-de-los-naranjos-marbella",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466902/more-group/spain/projects/la-reserva-de-los-naranjos-marbella/inline_2.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/ReservaNaranjos/galeria/ReservaNaranjos2.jpg",
+      "alt": "La Reserva de Los Naranjos lifestyle or plan view",
+      "public_id": "more-group/spain/projects/la-reserva-de-los-naranjos-marbella/inline_2"
+    },
+    "la-reserva-de-los-naranjos-marbella:hero": {
+      "kid": "la-reserva-de-los-naranjos-marbella:hero",
+      "slug": "la-reserva-de-los-naranjos-marbella",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466903/more-group/spain/projects/la-reserva-de-los-naranjos-marbella/hero.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/ReservaNaranjos/galeria/La-Reserva-de-Los-Naranjos-aerea.jpg",
+      "alt": "La Reserva de Los Naranjos exterior rendering",
+      "public_id": "more-group/spain/projects/la-reserva-de-los-naranjos-marbella/hero"
+    },
+    "alminar-de-marbella-2-fase:hero": {
+      "kid": "alminar-de-marbella-2-fase:hero",
+      "slug": "alminar-de-marbella-2-fase",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466903/more-group/spain/projects/alminar-de-marbella-2-fase/hero.png",
+      "source_url": "https://grupoinsur.com/img/promotion/info/status/delivered.png",
+      "alt": "Alminar de Marbella exterior rendering",
+      "public_id": "more-group/spain/projects/alminar-de-marbella-2-fase/hero"
+    },
+    "alminar-de-marbella-2-fase:inline-1": {
+      "kid": "alminar-de-marbella-2-fase:inline-1",
+      "slug": "alminar-de-marbella-2-fase",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466904/more-group/spain/projects/alminar-de-marbella-2-fase/inline_1.png",
+      "source_url": "https://grupoinsur.com/img/promotion/info/landscaped.png",
+      "alt": "Alminar de Marbella interior or amenity view",
+      "public_id": "more-group/spain/projects/alminar-de-marbella-2-fase/inline_1"
+    },
+    "alminar-de-marbella-2-fase:inline-2": {
+      "kid": "alminar-de-marbella-2-fase:inline-2",
+      "slug": "alminar-de-marbella-2-fase",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466905/more-group/spain/projects/alminar-de-marbella-2-fase/inline_2.png",
+      "source_url": "https://grupoinsur.com/img/promotion/info/swimming.png",
+      "alt": "Alminar de Marbella lifestyle or plan view",
+      "public_id": "more-group/spain/projects/alminar-de-marbella-2-fase/inline_2"
+    },
+    "obra-nueva-mijas-balance:hero": {
+      "kid": "obra-nueva-mijas-balance:hero",
+      "slug": "obra-nueva-mijas-balance",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466907/more-group/spain/projects/obra-nueva-mijas-balance/hero.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/Balance/Banner-obra-nueva-Mijas-Balance.jpg",
+      "alt": "New homes in Mijas! exterior rendering",
+      "public_id": "more-group/spain/projects/obra-nueva-mijas-balance/hero"
+    },
+    "obra-nueva-mijas-balance:inline-1": {
+      "kid": "obra-nueva-mijas-balance:inline-1",
+      "slug": "obra-nueva-mijas-balance",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466908/more-group/spain/projects/obra-nueva-mijas-balance/inline_1.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/Balance/Imagenes/Obra-nueva-Mijas-Balance-07.jpg",
+      "alt": "New homes in Mijas! interior or amenity view",
+      "public_id": "more-group/spain/projects/obra-nueva-mijas-balance/inline_1"
+    },
+    "obra-nueva-mijas-balance:inline-2": {
+      "kid": "obra-nueva-mijas-balance:inline-2",
+      "slug": "obra-nueva-mijas-balance",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466909/more-group/spain/projects/obra-nueva-mijas-balance/inline_2.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/Balance/Imagenes/Obra-nueva-Mijas-Balance-08.jpg",
+      "alt": "New homes in Mijas! lifestyle or plan view",
+      "public_id": "more-group/spain/projects/obra-nueva-mijas-balance/inline_2"
+    },
+    "chalet-adosado-obra-nueva-mijas:hero": {
+      "kid": "chalet-adosado-obra-nueva-mijas:hero",
+      "slug": "chalet-adosado-obra-nueva-mijas",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466911/more-group/spain/projects/chalet-adosado-obra-nueva-mijas/hero.webp",
+      "source_url": "https://grupoinsur.com/storage/promotions/Savia/banner-obra-nueva-mijas-savia.webp",
+      "alt": "Chalets adosados de obra nueva en Mijas, Málaga exterior rendering",
+      "public_id": "more-group/spain/projects/chalet-adosado-obra-nueva-mijas/hero"
+    },
+    "chalet-adosado-obra-nueva-mijas:inline-1": {
+      "kid": "chalet-adosado-obra-nueva-mijas:inline-1",
+      "slug": "chalet-adosado-obra-nueva-mijas",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466911/more-group/spain/projects/chalet-adosado-obra-nueva-mijas/inline_1.webp",
+      "source_url": "https://grupoinsur.com/storage/promotions/Savia/Galeria/piscina-noche-chalet-adosado-obra-nueva-mijas-savia.webp",
+      "alt": "Chalets adosados de obra nueva en Mijas, Málaga interior or amenity view",
+      "public_id": "more-group/spain/projects/chalet-adosado-obra-nueva-mijas/inline_1"
+    },
+    "chalet-adosado-obra-nueva-mijas:inline-2": {
+      "kid": "chalet-adosado-obra-nueva-mijas:inline-2",
+      "slug": "chalet-adosado-obra-nueva-mijas",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466913/more-group/spain/projects/chalet-adosado-obra-nueva-mijas/inline_2.webp",
+      "source_url": "https://grupoinsur.com/storage/promotions/Savia/Galeria/piscina-diachalet-adosado-obra-nueva-mijas-savia.webp",
+      "alt": "Chalets adosados de obra nueva en Mijas, Málaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/chalet-adosado-obra-nueva-mijas/inline_2"
+    },
+    "comprar-pisos-en-malaga:hero": {
+      "kid": "comprar-pisos-en-malaga:hero",
+      "slug": "comprar-pisos-en-malaga",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466915/more-group/spain/projects/comprar-pisos-en-malaga/hero.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/PlazaTeatro/Fotografias/PlazaDelTeatro18-min.jpg",
+      "alt": "Theater Square exterior rendering",
+      "public_id": "more-group/spain/projects/comprar-pisos-en-malaga/hero"
+    },
+    "comprar-pisos-en-malaga:inline-1": {
+      "kid": "comprar-pisos-en-malaga:inline-1",
+      "slug": "comprar-pisos-en-malaga",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466915/more-group/spain/projects/comprar-pisos-en-malaga/inline_1.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/PlazaTeatro/Fotografias/PlazaDelTeatro19-min.jpg",
+      "alt": "Theater Square interior or amenity view",
+      "public_id": "more-group/spain/projects/comprar-pisos-en-malaga/inline_1"
+    },
+    "comprar-pisos-en-malaga:inline-2": {
+      "kid": "comprar-pisos-en-malaga:inline-2",
+      "slug": "comprar-pisos-en-malaga",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466916/more-group/spain/projects/comprar-pisos-en-malaga/inline_2.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/PlazaTeatro/Fotografias/PlazaDelTeatro20-min.jpg",
+      "alt": "Theater Square lifestyle or plan view",
+      "public_id": "more-group/spain/projects/comprar-pisos-en-malaga/inline_2"
+    },
+    "pisos-obra-nueva-macenas-almeria:hero": {
+      "kid": "pisos-obra-nueva-macenas-almeria:hero",
+      "slug": "pisos-obra-nueva-macenas-almeria",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466919/more-group/spain/projects/pisos-obra-nueva-macenas-almeria/hero.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/TerrazasMacenas/Obra/avance-obra-mayo.jpg",
+      "alt": "Pisos de obra nueva en Mojácar, Almería exterior rendering",
+      "public_id": "more-group/spain/projects/pisos-obra-nueva-macenas-almeria/hero"
+    },
+    "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm:hero": {
+      "kid": "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm:hero",
+      "slug": "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466921/more-group/spain/projects/sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm/hero.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB954276.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle exterior rendering",
+      "public_id": "more-group/spain/projects/sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm/hero"
+    },
+    "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm:inline-1": {
+      "kid": "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm:inline-1",
+      "slug": "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466922/more-group/spain/projects/sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm/inline_1.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB954277.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle interior or amenity view",
+      "public_id": "more-group/spain/projects/sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm/inline_1"
+    },
+    "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm:inline-2": {
+      "kid": "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm:inline-2",
+      "slug": "sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466922/more-group/spain/projects/sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm/inline_2.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB954278.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle lifestyle or plan view",
+      "public_id": "more-group/spain/projects/sea-views-apartments-alicante-calpe-beach-la-fossa-azure-icons-by-tm/inline_2"
+    },
+    "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm:hero": {
+      "kid": "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm:hero",
+      "slug": "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466924/more-group/spain/projects/new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm/hero.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986193.jpg",
+      "alt": "Apartments with 2 and 3 bedrooms with fantastic communal areas in Torrevieja exterior rendering",
+      "public_id": "more-group/spain/projects/new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm/hero"
+    },
+    "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm:inline-1": {
+      "kid": "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm:inline-1",
+      "slug": "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466925/more-group/spain/projects/new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm/inline_1.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986192.jpg",
+      "alt": "Apartments with 2 and 3 bedrooms with fantastic communal areas in Torrevieja interior or amenity view",
+      "public_id": "more-group/spain/projects/new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm/inline_1"
+    },
+    "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm:inline-2": {
+      "kid": "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm:inline-2",
+      "slug": "new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466925/more-group/spain/projects/new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm/inline_2.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986191.jpg",
+      "alt": "Apartments with 2 and 3 bedrooms with fantastic communal areas in Torrevieja lifestyle or plan view",
+      "public_id": "more-group/spain/projects/new-build-apartment-beach-alicante-torrevieja-coronella-living-by-tm/inline_2"
+    },
+    "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-:hero": {
+      "kid": "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-:hero",
+      "slug": "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466928/more-group/spain/projects/villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-/hero.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986210.jpg",
+      "alt": "Apartments, bungalows, semi-detached and detached villas with wonderful communal areas in Torrevieja exterior rendering",
+      "public_id": "more-group/spain/projects/villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-/hero"
+    },
+    "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-:inline-2": {
+      "kid": "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-:inline-2",
+      "slug": "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466928/more-group/spain/projects/villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-/inline_2.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986208.jpg",
+      "alt": "Apartments, bungalows, semi-detached and detached villas with wonderful communal areas in Torrevieja lifestyle or plan view",
+      "public_id": "more-group/spain/projects/villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-/inline_2"
+    },
+    "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-:inline-1": {
+      "kid": "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-:inline-1",
+      "slug": "villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466930/more-group/spain/projects/villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-/inline_1.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986209.jpg",
+      "alt": "Apartments, bungalows, semi-detached and detached villas with wonderful communal areas in Torrevieja interior or amenity view",
+      "public_id": "more-group/spain/projects/villa-apartments-bungalow-new-home-beach-alicante-torrevieja-lagoons-village-by-/inline_1"
+    },
+    "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm:hero": {
+      "kid": "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm:hero",
+      "slug": "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466931/more-group/spain/projects/beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm/hero.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986248.jpg",
+      "alt": "New build properties on Poniente Beach Benidorm exterior rendering",
+      "public_id": "more-group/spain/projects/beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm/hero"
+    },
+    "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm:inline-1": {
+      "kid": "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm:inline-1",
+      "slug": "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466932/more-group/spain/projects/beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm/inline_1.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986247.jpg",
+      "alt": "New build properties on Poniente Beach Benidorm interior or amenity view",
+      "public_id": "more-group/spain/projects/beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm/inline_1"
+    },
+    "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm:inline-2": {
+      "kid": "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm:inline-2",
+      "slug": "beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466933/more-group/spain/projects/beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm/inline_2.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB981978.jpg",
+      "alt": "New build properties on Poniente Beach Benidorm lifestyle or plan view",
+      "public_id": "more-group/spain/projects/beach-apartments-sea-views-spain-benidorm-costa-blanca-north-tm-tower-by-tm/inline_2"
+    },
+    "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer:hero": {
+      "kid": "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer:hero",
+      "slug": "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466935/more-group/spain/projects/apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer/hero.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986239.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle exterior rendering",
+      "public_id": "more-group/spain/projects/apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer/hero"
+    },
+    "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer:inline-1": {
+      "kid": "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer:inline-1",
+      "slug": "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466935/more-group/spain/projects/apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer/inline_1.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986238.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle interior or amenity view",
+      "public_id": "more-group/spain/projects/apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer/inline_1"
+    },
+    "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer:inline-2": {
+      "kid": "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer:inline-2",
+      "slug": "apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466936/more-group/spain/projects/apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer/inline_2.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986237.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle lifestyle or plan view",
+      "public_id": "more-group/spain/projects/apartment-penthouse-new-build-beach-valencia-coast-sunrise-canet-de-berenguer/inline_2"
+    },
+    "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-:inline-1": {
+      "kid": "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-:inline-1",
+      "slug": "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466938/more-group/spain/projects/semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-/inline_1.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986227.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle interior or amenity view",
+      "public_id": "more-group/spain/projects/semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-/inline_1"
+    },
+    "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-:hero": {
+      "kid": "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-:hero",
+      "slug": "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466938/more-group/spain/projects/semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-/hero.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986228.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle exterior rendering",
+      "public_id": "more-group/spain/projects/semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-/hero"
+    },
+    "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-:inline-2": {
+      "kid": "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-:inline-2",
+      "slug": "semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466940/more-group/spain/projects/semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-/inline_2.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986226.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle lifestyle or plan view",
+      "public_id": "more-group/spain/projects/semi-detached-houses-apartament-penthouse-new-home-beach-el-puig-valencia-santa-/inline_2"
+    },
+    "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9:hero": {
+      "kid": "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9:hero",
+      "slug": "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466941/more-group/spain/projects/beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9/hero.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986224.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle exterior rendering",
+      "public_id": "more-group/spain/projects/beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9/hero"
+    },
+    "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9:inline-1": {
+      "kid": "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9:inline-1",
+      "slug": "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466941/more-group/spain/projects/beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9/inline_1.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986223.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle interior or amenity view",
+      "public_id": "more-group/spain/projects/beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9/inline_1"
+    },
+    "bali:hero": {
+      "kid": "bali:hero",
+      "slug": "bali",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466943/more-group/spain/projects/bali/hero.webp",
+      "source_url": "https://media.kronosre.com/material/comp/7429/1718212690_exteriores_mobile.webp",
+      "alt": "Bali » New Build Apartments in Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/bali/hero"
+    },
+    "bali:inline-1": {
+      "kid": "bali:inline-1",
+      "slug": "bali",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466943/more-group/spain/projects/bali/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/7429/1718212690_exteriores_mobile.jpg",
+      "alt": "Bali » New Build Apartments in Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/bali/inline_1"
+    },
+    "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9:inline-2": {
+      "kid": "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9:inline-2",
+      "slug": "beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466943/more-group/spain/projects/beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9/inline_2.jpg",
+      "source_url": "https://static.tmgrupoinmobiliario.com/media/fases/obra/COB986222.jpg",
+      "alt": "TM Grupo Inmobiliario - Choose your home, Choose your lifestyle lifestyle or plan view",
+      "public_id": "more-group/spain/projects/beach-apartments-spain-andalusia-almeria-coast-mar-de-pulpi-phase9/inline_2"
+    },
+    "oasis-325:hero": {
+      "kid": "oasis-325:hero",
+      "slug": "oasis-325",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466944/more-group/spain/projects/oasis-325/hero.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/1848/1634243795_Modulo-2-exterior_mobile.jpg",
+      "alt": "Oasis 325 » New Build Apartments in Estepona exterior rendering",
+      "public_id": "more-group/spain/projects/oasis-325/hero"
+    },
+    "oasis-325:inline-2": {
+      "kid": "oasis-325:inline-2",
+      "slug": "oasis-325",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466946/more-group/spain/projects/oasis-325/inline_2.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/1848/1643127915_oasis-interior_mobile.jpg",
+      "alt": "Oasis 325 » New Build Apartments in Estepona lifestyle or plan view",
+      "public_id": "more-group/spain/projects/oasis-325/inline_2"
+    },
+    "oasis-325:inline-1": {
+      "kid": "oasis-325:inline-1",
+      "slug": "oasis-325",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466945/more-group/spain/projects/oasis-325/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/1848/1634243795_Modulo-2-exterior.jpg",
+      "alt": "Oasis 325 » New Build Apartments in Estepona interior or amenity view",
+      "public_id": "more-group/spain/projects/oasis-325/inline_1"
+    },
+    "ipanema:hero": {
+      "kid": "ipanema:hero",
+      "slug": "ipanema",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466947/more-group/spain/projects/ipanema/hero.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/6603/1636654078_exterior_mobile.jpg",
+      "alt": "Ipanema » New Build Homes in Mijas, Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/ipanema/hero"
+    },
+    "ipanema:inline-1": {
+      "kid": "ipanema:inline-1",
+      "slug": "ipanema",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466947/more-group/spain/projects/ipanema/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/6603/1636654083_interiores_mobile.jpg",
+      "alt": "Ipanema » New Build Homes in Mijas, Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/ipanema/inline_1"
+    },
+    "bali:inline-2": {
+      "kid": "bali:inline-2",
+      "slug": "bali",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466947/more-group/spain/projects/bali/inline_2.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/7429/1639408464_exteriores.jpg",
+      "alt": "Bali » New Build Apartments in Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/bali/inline_2"
+    },
+    "ipanema:inline-2": {
+      "kid": "ipanema:inline-2",
+      "slug": "ipanema",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466949/more-group/spain/projects/ipanema/inline_2.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/6603/1636654083_interiores.jpg",
+      "alt": "Ipanema » New Build Homes in Mijas, Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/ipanema/inline_2"
+    },
+    "eden:inline-1": {
+      "kid": "eden:inline-1",
+      "slug": "eden",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466949/more-group/spain/projects/eden/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/7378/1639419500_B2-interiores_mobile.jpg",
+      "alt": "Eden » New Build Homes in Mijas, Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/eden/inline_1"
+    },
+    "panoramica:hero": {
+      "kid": "panoramica:hero",
+      "slug": "panoramica",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466951/more-group/spain/projects/panoramica/hero.webp",
+      "source_url": "https://media.kronosre.com/material/comp/7382/1638987230_bloque-2-exteriores_mobile.webp",
+      "alt": "Panoramica » New Build Apartments in Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/panoramica/hero"
+    },
+    "eden:hero": {
+      "kid": "eden:hero",
+      "slug": "eden",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466951/more-group/spain/projects/eden/hero.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/7378/1639419487_b2-EXTERIORES_mobile.jpg",
+      "alt": "Eden » New Build Homes in Mijas, Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/eden/hero"
+    },
+    "panoramica:inline-1": {
+      "kid": "panoramica:inline-1",
+      "slug": "panoramica",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466952/more-group/spain/projects/panoramica/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/7382/1638987230_bloque-2-exteriores_mobile.jpg",
+      "alt": "Panoramica » New Build Apartments in Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/panoramica/inline_1"
+    },
+    "the-edge:hero": {
+      "kid": "the-edge:hero",
+      "slug": "the-edge",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466953/more-group/spain/projects/the-edge/hero.webp",
+      "source_url": "https://media.kronosre.com/material/comp/2052/1638486659_exterior_mobile.webp",
+      "alt": "The Edge » New Beachfront Homes in Estepona exterior rendering",
+      "public_id": "more-group/spain/projects/the-edge/hero"
+    },
+    "the-edge:inline-1": {
+      "kid": "the-edge:inline-1",
+      "slug": "the-edge",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466953/more-group/spain/projects/the-edge/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/2052/1638486659_exterior_mobile.jpg",
+      "alt": "The Edge » New Beachfront Homes in Estepona interior or amenity view",
+      "public_id": "more-group/spain/projects/the-edge/inline_1"
+    },
+    "panoramica:inline-2": {
+      "kid": "panoramica:inline-2",
+      "slug": "panoramica",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466953/more-group/spain/projects/panoramica/inline_2.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/7382/1638987230_bloque-2-exteriores.jpg",
+      "alt": "Panoramica » New Build Apartments in Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/panoramica/inline_2"
+    },
+    "the-edge:inline-2": {
+      "kid": "the-edge:inline-2",
+      "slug": "the-edge",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466955/more-group/spain/projects/the-edge/inline_2.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/2052/1638486659_exterior.jpg",
+      "alt": "The Edge » New Beachfront Homes in Estepona lifestyle or plan view",
+      "public_id": "more-group/spain/projects/the-edge/inline_2"
+    },
+    "one-oak:hero": {
+      "kid": "one-oak:hero",
+      "slug": "one-oak",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466955/more-group/spain/projects/one-oak/hero.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203255757/1740666058_OneOak.webp",
+      "alt": "One Oak » New Build Homes in Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/one-oak/hero"
+    },
+    "one-oak:inline-1": {
+      "kid": "one-oak:inline-1",
+      "slug": "one-oak",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466955/more-group/spain/projects/one-oak/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/203255757/1740666058_OneOak.jpg",
+      "alt": "One Oak » New Build Homes in Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/one-oak/inline_1"
+    },
+    "one-oak:inline-2": {
+      "kid": "one-oak:inline-2",
+      "slug": "one-oak",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466956/more-group/spain/projects/one-oak/inline_2.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203255758/1747208577_HCP.webp",
+      "alt": "One Oak » New Build Homes in Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/one-oak/inline_2"
+    },
+    "bahia:hero": {
+      "kid": "bahia:hero",
+      "slug": "bahia",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466957/more-group/spain/projects/bahia/hero.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/90489/1695909697_bahia-exterior.jpg",
+      "alt": "Bahia » Luxury New Build Apartments in Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/bahia/hero"
+    },
+    "bahia:inline-1": {
+      "kid": "bahia:inline-1",
+      "slug": "bahia",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466957/more-group/spain/projects/bahia/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/90489/1695909967_bahia-interior.jpg",
+      "alt": "Bahia » Luxury New Build Apartments in Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/bahia/inline_1"
+    },
+    "bahia:inline-2": {
+      "kid": "bahia:inline-2",
+      "slug": "bahia",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466958/more-group/spain/projects/bahia/inline_2.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/90489/1695909956_bahia-interior.jpg",
+      "alt": "Bahia » Luxury New Build Apartments in Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/bahia/inline_2"
+    },
+    "capri:inline-1": {
+      "kid": "capri:inline-1",
+      "slug": "capri",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466959/more-group/spain/projects/capri/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/194131/1700736774_zona-exterior.jpg",
+      "alt": "Capri » New Build Homes in Estepona, Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/capri/inline_1"
+    },
+    "capri:hero": {
+      "kid": "capri:hero",
+      "slug": "capri",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466959/more-group/spain/projects/capri/hero.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/194131/1700736779_mobile-exterior.jpg",
+      "alt": "Capri » New Build Homes in Estepona, Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/capri/hero"
+    },
+    "capri:inline-2": {
+      "kid": "capri:inline-2",
+      "slug": "capri",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466960/more-group/spain/projects/capri/inline_2.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203255524/1740424612__material_comp_194133_1684768952_vistas-capri.webp",
+      "alt": "Capri » New Build Homes in Estepona, Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/capri/inline_2"
+    },
+    "kosmos:hero": {
+      "kid": "kosmos:hero",
+      "slug": "kosmos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466960/more-group/spain/projects/kosmos/hero.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203255608/1742375013_16341.webp",
+      "alt": "Kosmos » New Build Apartments in Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/kosmos/hero"
+    },
+    "kosmos:inline-2": {
+      "kid": "kosmos:inline-2",
+      "slug": "kosmos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466961/more-group/spain/projects/kosmos/inline_2.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203255608/1742375007_16341.webp",
+      "alt": "Kosmos » New Build Apartments in Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/kosmos/inline_2"
+    },
+    "the-kove:hero": {
+      "kid": "the-kove:hero",
+      "slug": "the-kove",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466962/more-group/spain/projects/the-kove/hero.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203255645/1742201794_640x570.webp",
+      "alt": "The Kove » New Build Apartments in Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/the-kove/hero"
+    },
+    "kosmos:inline-1": {
+      "kid": "kosmos:inline-1",
+      "slug": "kosmos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466964/more-group/spain/projects/kosmos/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/203255608/1742375013_16341.jpg",
+      "alt": "Kosmos » New Build Apartments in Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/kosmos/inline_1"
+    },
+    "the-kove:inline-2": {
+      "kid": "the-kove:inline-2",
+      "slug": "the-kove",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466963/more-group/spain/projects/the-kove/inline_2.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203255645/1742201788_640x570.webp",
+      "alt": "The Kove » New Build Apartments in Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/the-kove/inline_2"
+    },
+    "the-kove:inline-1": {
+      "kid": "the-kove:inline-1",
+      "slug": "the-kove",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466964/more-group/spain/projects/the-kove/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/203255645/1742201794_640x570.jpg",
+      "alt": "The Kove » New Build Apartments in Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/the-kove/inline_1"
+    },
+    "eklipse:hero": {
+      "kid": "eklipse:hero",
+      "slug": "eklipse",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466965/more-group/spain/projects/eklipse/hero.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203267801/1776421213_1740733952_Clavel.webp",
+      "alt": "Eklipse » New Build Apartments in Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/eklipse/hero"
+    },
+    "eklipse:inline-1": {
+      "kid": "eklipse:inline-1",
+      "slug": "eklipse",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466965/more-group/spain/projects/eklipse/inline_1.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203267801/1776421212_1740733952_Clavel.webp",
+      "alt": "Eklipse » New Build Apartments in Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/eklipse/inline_1"
+    },
+    "kalifornia:hero": {
+      "kid": "kalifornia:hero",
+      "slug": "kalifornia",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466966/more-group/spain/projects/kalifornia/hero.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203267844/1776155587_1747208573_HCP.webp",
+      "alt": "Kalifornia » New Build Apartments in Malaga exterior rendering",
+      "public_id": "more-group/spain/projects/kalifornia/hero"
+    },
+    "eklipse:inline-2": {
+      "kid": "eklipse:inline-2",
+      "slug": "eklipse",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466967/more-group/spain/projects/eklipse/inline_2.jpg",
+      "source_url": "https://www.kronoshomes.com/material/contents/596623391/1776763606_eklipse.jpg",
+      "alt": "Eklipse » New Build Apartments in Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/eklipse/inline_2"
+    },
+    "kalifornia:inline-1": {
+      "kid": "kalifornia:inline-1",
+      "slug": "kalifornia",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466966/more-group/spain/projects/kalifornia/inline_1.webp",
+      "source_url": "https://media.kronosre.com/material/comp/203267844/1776155585_1747208573_HCP.webp",
+      "alt": "Kalifornia » New Build Apartments in Malaga interior or amenity view",
+      "public_id": "more-group/spain/projects/kalifornia/inline_1"
+    },
+    "malaga:hero": {
+      "kid": "malaga:hero",
+      "slug": "malaga",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466969/more-group/spain/projects/malaga/hero.webp",
+      "source_url": "https://media.kronosre.com/material/contents/2157/1654179048_miniature-one-oak.webp",
+      "alt": "New Build Malaga: Luxury Apartments & Penthouses - Kronos Homes exterior rendering",
+      "public_id": "more-group/spain/projects/malaga/hero"
+    },
+    "malaga:inline-2": {
+      "kid": "malaga:inline-2",
+      "slug": "malaga",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466971/more-group/spain/projects/malaga/inline_2.webp",
+      "source_url": "https://media.kronosre.com/material/contents/24546/1684794592_capri-vertical.webp",
+      "alt": "New Build Malaga: Luxury Apartments & Penthouses - Kronos Homes lifestyle or plan view",
+      "public_id": "more-group/spain/projects/malaga/inline_2"
+    },
+    "kalifornia:inline-2": {
+      "kid": "kalifornia:inline-2",
+      "slug": "kalifornia",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466970/more-group/spain/projects/kalifornia/inline_2.png",
+      "source_url": "https://www.kronoshomes.com/material/contents/596623392/1776156973_PROYECTO-IMGLISTADO(1).png",
+      "alt": "Kalifornia » New Build Apartments in Malaga lifestyle or plan view",
+      "public_id": "more-group/spain/projects/kalifornia/inline_2"
+    },
+    "malaga:inline-1": {
+      "kid": "malaga:inline-1",
+      "slug": "malaga",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466971/more-group/spain/projects/malaga/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/contents/2157/1654179048_miniature-one-oak.jpg",
+      "alt": "New Build Malaga: Luxury Apartments & Penthouses - Kronos Homes interior or amenity view",
+      "public_id": "more-group/spain/projects/malaga/inline_1"
+    },
+    "general-marv-3:hero": {
+      "kid": "general-marv-3:hero",
+      "slug": "general-marv-3",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466973/more-group/spain/projects/general-marv-3/hero.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/1803/1645117125_exterior_mobile.jpg",
+      "alt": "General Marva 3 » New Build Homes in Alicante exterior rendering",
+      "public_id": "more-group/spain/projects/general-marv-3/hero"
+    },
+    "general-marv-3:inline-2": {
+      "kid": "general-marv-3:inline-2",
+      "slug": "general-marv-3",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466973/more-group/spain/projects/general-marv-3/inline_2.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/1803/1634631914_bloque-2-interiores_mobile.jpg",
+      "alt": "General Marva 3 » New Build Homes in Alicante lifestyle or plan view",
+      "public_id": "more-group/spain/projects/general-marv-3/inline_2"
+    },
+    "general-marv-3:inline-1": {
+      "kid": "general-marv-3:inline-1",
+      "slug": "general-marv-3",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781466975/more-group/spain/projects/general-marv-3/inline_1.jpg",
+      "source_url": "https://media.kronosre.com/material/comp/1803/1645117125_exterior.jpg",
+      "alt": "General Marva 3 » New Build Homes in Alicante interior or amenity view",
+      "public_id": "more-group/spain/projects/general-marv-3/inline_1"
+    },
+    "insur-scala:hero": {
+      "kid": "insur-scala:hero",
+      "slug": "insur-scala",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781467001/more-group/spain/projects/insur-scala/hero.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/InsurScala/Renders/SCALA_ALZADO_1_ARet.jpg",
+      "alt": "Insur Scala exterior",
+      "public_id": "more-group/spain/projects/insur-scala/hero"
+    },
+    "insur-scala:inline-1": {
+      "kid": "insur-scala:inline-1",
+      "slug": "insur-scala",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781467002/more-group/spain/projects/insur-scala/inline_1.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/InsurScala/obra/Scala.jpg",
+      "alt": "Insur Scala render",
+      "public_id": "more-group/spain/projects/insur-scala/inline_1"
+    },
+    "insur-scala:inline-2": {
+      "kid": "insur-scala:inline-2",
+      "slug": "insur-scala",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781467001/more-group/spain/projects/insur-scala/inline_2.jpg",
+      "source_url": "https://grupoinsur.com/storage/promotions/InsurScala/obra/SCALA_1.jpg",
+      "alt": "Insur Scala interior",
+      "public_id": "more-group/spain/projects/insur-scala/inline_2"
+    }
+  },
+  "failed": [
+    {
+      "kid": "viviendas-obra-nueva-marbella-soleil:inline-1",
+      "slug": "viviendas-obra-nueva-marbella-soleil",
+      "role": "inline-1",
+      "ok": false,
+      "error": "upload_failed",
+      "source_url": "https://grupoinsur.com/thumbnails/149Destacada-obra-nueva-Mijas-Balance.jpg"
+    },
+    {
+      "kid": "pisos-obra-nueva-macenas-almeria:inline-1",
+      "slug": "pisos-obra-nueva-macenas-almeria",
+      "role": "inline-1",
+      "ok": false,
+      "error": "upload_failed",
+      "source_url": "https://grupoinsur.com/thumbnails/150avance-obra-mayo.jpg"
+    },
+    {
+      "kid": "pisos-obra-nueva-macenas-almeria:inline-2",
+      "slug": "pisos-obra-nueva-macenas-almeria",
+      "role": "inline-2",
+      "ok": false,
+      "error": "upload_failed",
+      "source_url": "https://grupoinsur.com/thumbnails/152destacadar-obra-nueva-mijas-savia.webp"
+    },
+    {
+      "kid": "eden:inline-2",
+      "slug": "eden",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://media.kronosre.com/material/comp/7506/1639419697_b2-EXTERIORES.webp"
+    }
+  ],
+  "cloud": "dphvjbqb4",
+  "generatedAt": "2026-06-14"
+}

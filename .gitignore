@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+.env
+.env.*
+!.env.example
+.DS_Store
+.vercel
+
+# Credentials (never commit)
+scripts/google-indexing-key.json
+scripts/google-indexing-key-mexico.json
+scripts/indexing-progress.json
+scripts/indexing-log.txt
+scripts/google-indexing-key-moregroup-backup.json
+
+# Build artifacts / stale copies
+__pycache__/
+scripts/__pycache__/
+_drafts/

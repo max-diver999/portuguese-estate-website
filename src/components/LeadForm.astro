@@ -1,0 +1,132 @@
+---
+import { SITE } from '../data/site';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  context?: string;
+}
+
+const {
+  title = 'Get your Portugal property shortlist',
+  subtitle = 'Share your budget and target region — we respond within one business day.',
+  context = '',
+} = Astro.props;
+---
+<section class="surface-card p-8 md:p-10" id="lead-form">
+  <span class="badge-pill mb-3">Free · Independent advisory</span>
+  <h2 class="text-2xl mb-1 text-[var(--color-ink)]">{title}</h2>
+  <p class="text-[var(--color-muted)] mb-5 text-sm">{subtitle}</p>
+
+  <form class="grid gap-4 ig-lead-form" id="ig-lead-form" data-context={context} novalidate>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-medium mb-1" for="lf-name">Your name *</label>
+        <input type="text" id="lf-name" name="name" required placeholder="John Smith" autocomplete="name" />
+      </div>
+      <div>
+        <label class="block text-xs font-medium mb-1" for="lf-phone">WhatsApp / Phone *</label>
+        <input type="tel" id="lf-phone" name="phone" required placeholder="+44 7700 900000" autocomplete="tel" />
+      </div>
+    </div>
+    <div>
+      <label class="block text-xs font-medium mb-1" for="lf-email">Email</label>
+      <input type="email" id="lf-email" name="email" placeholder="john@example.com" autocomplete="email" />
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-medium mb-1" for="lf-market">Target market</label>
+        <select id="lf-market" name="market">
+          <option value="">— Select —</option>
+          <option value="tuscany">Tuscany</option>
+          <option value="puglia">Puglia</option>
+          <option value="milan-lombardy">Milan / Lombardy</option>
+          <option value="lake-como">Lake Como</option>
+          <option value="sicily">Sicily</option>
+          <option value="sardinia">Sardinia</option>
+          <option value="liguria">Liguria / Riviera</option>
+          <option value="rome-lazio">Rome / Lazio</option>
+          <option value="multi">Multiple / not sure</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-medium mb-1" for="lf-budget">Budget (EUR)</label>
+        <select id="lf-budget" name="budget">
+          <option value="">— Select —</option>
+          <option value="under-200k">Under €200k</option>
+          <option value="200-300k">€200k – €300k</option>
+          <option value="300-500k">€300k – €500k</option>
+          <option value="500k-1m">€500k – €1M</option>
+          <option value="1m+">€1M+</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <label class="block text-xs font-medium mb-1" for="lf-goal">Your goal</label>
+      <select id="lf-goal" name="goal">
+        <option value="">— Select —</option>
+        <option value="investment">Rental yield / investment</option>
+        <option value="holiday-home">Holiday home / personal use</option>
+        <option value="relocation">Relocation / residency planning</option>
+        <option value="off-plan">Off-plan / new build</option>
+        <option value="renovation">Renovation / 1-euro project</option>
+        <option value="explore">Just researching</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-xs font-medium mb-1" for="lf-message">Message (optional)</label>
+      <textarea id="lf-message" name="message" rows="3" placeholder="E.g. 2-bed apartment in Ostuni, holiday let, €350k budget…"></textarea>
+    </div>
+    <label class="flex items-start gap-2 text-xs text-[var(--color-muted)] cursor-pointer">
+      <input type="checkbox" name="consent" required class="mt-1 w-4 h-4" />
+      <span>I agree to be contacted about my enquiry. See our <a href="/privacy-policy/">Privacy Policy</a>.</span>
+    </label>
+    <button type="submit" class="btn-primary w-full py-3">Request shortlist →</button>
+    <p id="lf-success" class="hidden text-green-700 text-sm font-medium text-center">Thank you — redirecting…</p>
+    <p id="lf-error" class="hidden text-red-600 text-sm text-center">Something went wrong. Email {SITE.email} directly.</p>
+  </form>
+</section>
+
+<script>
+  document.querySelectorAll('form.ig-lead-form').forEach((formEl) => {
+    const form = formEl as HTMLFormElement;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const phone = String(data.get('phone') || '').trim();
+      const email = String(data.get('email') || '').trim();
+      if (phone.replace(/\D/g, '').length < 8) {
+        const err = document.getElementById('lf-error');
+        if (err) { err.textContent = 'Please enter a valid phone or WhatsApp number.'; err.classList.remove('hidden'); }
+        return;
+      }
+      const payload = {
+        name: data.get('name'),
+        phone,
+        email,
+        contact: email ? `${phone} / ${email}` : phone,
+        budget: data.get('budget'),
+        goal: data.get('goal'),
+        message: data.get('message'),
+        context: form.dataset.context || '',
+        market: data.get('market'),
+        source: window.location.href,
+        page: window.location.pathname,
+      };
+      try {
+        const res = await fetch('/api/lead/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('fail');
+        document.getElementById('lf-success')?.classList.remove('hidden');
+        setTimeout(() => {
+          window.location.assign('/thanks/?lead=1');
+        }, 400);
+      } catch {
+        document.getElementById('lf-error')?.classList.remove('hidden');
+      }
+    });
+  });
+</script>

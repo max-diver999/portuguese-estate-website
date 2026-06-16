@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+
+const faqItems = [
+  {
+    question: 'What happens in an Portugal property consultation?',
+    answer: 'You share budget, timeline, residency goals, and preferred regions. We map options against tax residency, STR rules, and yield expectations, then route to a licensed partner if you want viewings or off-plan terms.',
+  },
+  {
+    question: 'Can you compare Tuscany, Puglia, and Milan in one call?',
+    answer: 'Yes. Many buyers narrow three regions before visiting. We use our compare guides and market data so you understand trade-offs on price, yield, and compliance before flying to Italy.',
+  },
+  {
+    question: 'Do you charge for consultations?',
+    answer: 'Initial shortlist and consultation requests are free. Portuguese Estate earns no buyer-side commission; partners may pay a referral fee disclosed in our methodology page.',
+  },
+  {
+    question: 'How is this different from Gate-away or Idealista?',
+    answer: 'Portals list inventory; we publish independent due diligence and filter options to your budget band and goal. You receive curated matches plus links to tax, legal, and yield research on portuguese-estate.com.',
+  },
+];
+---
+<BaseLayout
+  title="Portugal Property Consultation for Foreign Buyers 2026"
+  description="Cross-region Portugal property consultation for foreign buyers. Compare Tuscany, Puglia, Milan, and Lake Como in one request. Independent research, licensed partner referral."
+>
+  <section class="site-container py-12 md:py-16 max-w-3xl">
+    <header class="mb-8">
+      <span class="badge-pill mb-4">Cross-region</span>
+      <h1 class="mb-4">Portugal property consultation</h1>
+      <p class="text-lg text-[var(--color-muted)]">
+        Not sure which region fits? Tell us budget, hold period, and residency goal — we route to the right market and partner.
+      </p>
+    </header>
+
+    <div class="prose mb-10 text-[var(--color-muted)]">
+      <p><strong>Quick answer:</strong> Italy is not one market. Lombardy skews corporate rental and off-plan; Puglia and Sicily skew holiday yield; Lake Como and Costa Smeralda skew luxury lifestyle. A single consultation request helps you compare regions before committing to flights or a compromesso deposit.</p>
+      <p>Regional landings: <a href="/invest-tuscany-property/">Tuscany</a> · <a href="/invest-puglia-property/">Puglia</a> · <a href="/invest-lake-como-property/">Lake Como</a> · <a href="/invest-sicily-property/">Sicily</a></p>
+      <p>Core guides: <a href="/guides/italy-property-investment-guide/">Portugal property investment</a> · <a href="/guides/best-regions-invest-italy-property-2026/">Best regions 2026</a> · <a href="/guides/italy-elective-residence-visa-property/">Elective residence</a> · <a href="/compare/italy-vs-spain-property-investment/">Italy vs Spain</a></p>
+    </div>
+
+    <LeadForm
+      title="Book an Portugal property consultation"
+      subtitle="Budget · regions · yield or lifestyle goal"
+      context="Portugal property consultation landing"
+    />
+    <FaqBlock items={faqItems} />
+    <p class="text-xs text-[var(--color-muted)] mt-6">Not financial or legal advice. <a href="/privacy-policy/">Privacy Policy</a></p>
+  </section>
+</BaseLayout>

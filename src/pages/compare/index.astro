@@ -1,0 +1,35 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentCard from '../../components/ContentCard.astro';
+
+const comparisons = (await getCollection('compare'))
+  .filter((c) => !c.data.noindex)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout
+  title="Spain Property Market Comparisons"
+  description="Side-by-side comparisons of Riviera Maya, Los Cabos, and other Gulf markets for property investors."
+>
+  <section class="site-container py-14 md:py-20">
+    <header class="max-w-2xl mb-12">
+      <h1 class="text-3xl">Market comparisons</h1>
+      <p class="text-lg text-[var(--color-muted)] mt-3">
+        When two markets look similar on a brochure, these breakdowns show fees, yields, and buyer fit.
+      </p>
+    </header>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {comparisons.map((item) => (
+        <ContentCard
+          href={`/compare/${item.id}/`}
+          title={item.data.title}
+          description={item.data.description}
+          image={item.data.heroImage}
+          badges={['Comparison', ...(item.data.tags?.slice(0, 1) ?? [])]}
+          meta={`${item.data.readingTime ?? 8} min read`}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

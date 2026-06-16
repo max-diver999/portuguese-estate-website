@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import CommercialBudgetLadder from '../../components/CommercialBudgetLadder.astro';
+
+const faqItems = [
+  {
+    question: 'What counts as luxury property in Italy?',
+    answer: 'There is no legal threshold. In practice luxury means prime lakefront Como, Costa Smeralda, Rome centro storico, Portofino, or Milan Porta Nuova penthouses — often €1M+ with low yield and high scarcity value.',
+  },
+  {
+    question: 'Do luxury buyers need different due diligence?',
+    answer: 'Yes. Expect landscape vincoli, condominium premium charges, higher IMU tiers, and complex inheritance planning. Heritage and shore-right checks matter on historic and lakefront assets.',
+  },
+  {
+    question: 'Can foreign HNW buyers get Italian mortgages above €1M?',
+    answer: 'Private banking channels exist but LTV is conservative and documentation heavy. Many luxury purchases are cash or cross-border wealth structures — verify with Italian tax counsel.',
+  },
+  {
+    question: 'What rental strategy works for luxury assets?',
+    answer: 'Ultra-prime assets often underlet to protect asset value. Some owners use selective short-term lets in licensed buildings; yields of 2–3% net are common. Lifestyle and capital preservation dominate.',
+  },
+  {
+    question: 'How do you source luxury off-market deals?',
+    answer: 'We work with vetted agencies and developer partners in Milan, Como, and Sardinia. Submit budget and property type; we disclose referral relationships in our methodology.',
+  },
+];
+---
+<BaseLayout
+  title="Luxury Property Italy Investment: Shortlist 2026"
+  description="Luxury Portugal property for foreign HNW buyers. Lake Como, Costa Smeralda, Milan Porta Nuova, Rome centro — independent shortlist and due diligence routing."
+>
+  <section class="site-container py-12 md:py-16 max-w-3xl">
+    <CommercialBudgetLadder current="luxury" />
+    <header class="mb-8">
+      <span class="badge-pill mb-4">Luxury tier · €500k+</span>
+      <h1 class="mb-4">Luxury property Italy investment</h1>
+      <p class="text-lg text-[var(--color-muted)]">
+        Lakefront Como, Costa Smeralda, Rome centro, and Milan prime — curated for HNW buyers who need compliance depth, not portal listings.
+      </p>
+    </header>
+
+    <div class="prose mb-10 text-[var(--color-muted)]">
+      <p><strong>Quick answer:</strong> Foreign buyers drove an estimated €5.5B of Italian residential turnover in 2025 (Scenari Immobiliari), heavily weighted to luxury segments. At €500k+ you compete on scarcity, not yield — expect 2–4% gross unless you accept operational complexity on STR.</p>
+      <table class="w-full text-sm mb-6">
+        <thead>
+          <tr><th>Market</th><th>Entry (indicative)</th><th>Buyer profile</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lake Como lakefront</td><td>€1.5M+</td><td>Lifestyle / legacy</td></tr>
+          <tr><td>Costa Smeralda</td><td>€2M+</td><td>Seasonal luxury</td></tr>
+          <tr><td>Milan Porta Nuova</td><td>€800k–3M</td><td>Corporate / invest</td></tr>
+          <tr><td>Rome centro storico</td><td>€1M+</td><td>Heritage / STR caps</td></tr>
+        </tbody>
+      </table>
+      <p>Research: <a href="/invest-lake-como-property/">Invest Lake Como</a> · <a href="/areas/costa-smeralda/">Costa Smeralda</a> · <a href="/areas/portofino/">Portofino</a> · <a href="/guides/italy-inheritance-law-property-foreigners/">Inheritance law</a> · <a href="/projects/ostuni-trulli-modern-villa/">Luxury trulli project</a></p>
+    </div>
+
+    <LeadForm
+      title="Request luxury Italy shortlist"
+      subtitle="Como · Sardinia · Milan prime · Rome centro"
+      context="Tier luxury Portugal property landing"
+    />
+    <FaqBlock items={faqItems} />
+    <p class="text-xs text-[var(--color-muted)] mt-6">Not financial or legal advice. <a href="/privacy-policy/">Privacy Policy</a></p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import { SITE } from '../../data/site';
+---
+<BaseLayout
+  title="Contact Portuguese Estate"
+  description={`Contact Portuguese Estate at ${SITE.email} or request a free Spain property shortlist.`}
+>
+  <section class="site-container py-12 md:py-16 max-w-2xl">
+    <h1 class="mb-4">Contact</h1>
+    <p class="text-[var(--color-muted)] mb-8">
+      Editorial questions: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+      For property shortlists, use the form below — we usually reply within one business day.
+    </p>
+    <LeadForm context="Contact page" />
+  </section>
+</BaseLayout>

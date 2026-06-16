@@ -1,0 +1,28 @@
+---
+import { COMMERCIAL_TIERS, COMMERCIAL_LADDER_TITLE } from '../data/commercial-tiers';
+
+interface Props {
+  current?: string;
+  title?: string;
+}
+
+const { current = '', title = COMMERCIAL_LADDER_TITLE } = Astro.props;
+---
+<section class="mb-10 pb-8 border-b border-[var(--color-border)]" aria-label={title}>
+  <h2 class="text-lg font-semibold mb-4 text-[var(--color-ink)]">{title}</h2>
+  <div class="flex flex-wrap gap-2">
+    {COMMERCIAL_TIERS.map((t) => (
+      <a
+        href={t.href}
+        class:list={[
+          'inline-block text-sm font-medium px-4 py-2 rounded-full no-underline transition-colors',
+          current === t.key
+            ? 'bg-[var(--color-teal)] text-white border border-[var(--color-teal)]'
+            : 'bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-teal)] hover:border-[var(--color-teal)]',
+        ]}
+      >
+        {t.label}
+      </a>
+    ))}
+  </div>
+</section>

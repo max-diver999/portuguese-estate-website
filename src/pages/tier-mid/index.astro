@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import CommercialBudgetLadder from '../../components/CommercialBudgetLadder.astro';
+
+const faqItems = [
+  {
+    question: 'What can I buy in Italy for around €300,000?',
+    answer: 'At €300k you can target Ostuni countryside villas, Florence fringe apartments, Milan peripheral new-build studios, or restored trulli with moderate renovation. Pool and land packages in Puglia often sit in the €350k–470k band.',
+  },
+  {
+    question: 'Is €300k enough for Milan property?',
+    answer: 'Central Milan rarely works at €300k. Cascina Merlata and Scali Ferroviari off-plan projects start near €348k for one-bedroom units. Expect lower yields than southern holiday markets.',
+  },
+  {
+    question: 'What closing costs apply at this tier?',
+    answer: 'Second-home buyers typically pay 9% registration tax on cadastral value or 10% VAT on new build, plus 1–2% notary and agency fees. Model totals in our closing costs guide before compromesso.',
+  },
+  {
+    question: 'Mortgage options for non-residents at €300k?',
+    answer: 'Italian banks often lend 50–60% LTV to foreign income earners with longer approval timelines. See our non-resident mortgage guide for document lists and LTV bands.',
+  },
+  {
+    question: 'Which region offers the best mid-tier yield?',
+    answer: 'Puglia and Sicily often beat Milan on gross holiday-let yields at €300k. Tuscany and Rome skew lifestyle with tighter STR rules in historic centres.',
+  },
+];
+---
+<BaseLayout
+  title="Buy Property in Italy for €300,000: Shortlist 2026"
+  description="Portugal property around €300,000 for foreign buyers. Ostuni villas, Milan off-plan, Tuscany apartments — independent shortlist with yield and tax notes."
+>
+  <section class="site-container py-12 md:py-16 max-w-3xl">
+    <CommercialBudgetLadder current="mid" />
+    <header class="mb-8">
+      <span class="badge-pill mb-4">Mid tier · €200k–€500k</span>
+      <h1 class="mb-4">Buy property in Italy for €300,000</h1>
+      <p class="text-lg text-[var(--color-muted)]">
+        The core foreign-buyer band — pool villas in Puglia, off-plan Milan, and Tuscan apartments with documented closing costs.
+      </p>
+    </header>
+
+    <div class="prose mb-10 text-[var(--color-muted)]">
+      <p><strong>Quick answer:</strong> €300k is the median enquiry band on Gate-away's 2025 data (avg enquiry €428k). At this level you balance liquidity and lifestyle: Puglia villas with pools, Milan fringe off-plan, or Chianti apartments with moderate renovation scope.</p>
+      <h2 class="text-xl text-[var(--color-ink)]">Featured project examples</h2>
+      <ul>
+        <li><a href="/projects/ostuni-new-villa-pool-470k/">Ostuni new villa with pool</a> — €470k near completion</li>
+        <li><a href="/projects/inspire-uptown-milan/">Inspire UpTown Milan</a> — from €348,500 off-plan</li>
+        <li><a href="/projects/prandina-navigli-milan/">Prandina Navigli</a> — Milan Navigli regeneration</li>
+      </ul>
+      <table class="w-full text-sm mb-6">
+        <thead>
+          <tr><th>Region</th><th>Typical €300k buy</th><th>Gross yield</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Puglia</td><td>3-bed villa + pool</td><td>6–8%</td></tr>
+          <tr><td>Milan fringe</td><td>1-bed off-plan</td><td>3–4%</td></tr>
+          <tr><td>Tuscany</td><td>2-bed apartment</td><td>4–5%</td></tr>
+          <tr><td>Sicily coast</td><td>2–3 bed turnkey</td><td>5–7%</td></tr>
+        </tbody>
+      </table>
+      <p>Guides: <a href="/guides/cost-of-buying-property-italy/">Cost of buying</a> · <a href="/guides/non-resident-mortgage-italy/">Non-resident mortgage</a> · <a href="/invest-puglia-property/">Invest Puglia</a> · <a href="/tier-luxury/">Luxury tier €500k+</a></p>
+    </div>
+
+    <LeadForm
+      title="Get your €300k band shortlist"
+      subtitle="Puglia villa · Milan off-plan · Tuscany apt"
+      context="Tier mid Portugal property landing"
+    />
+    <FaqBlock items={faqItems} />
+    <p class="text-xs text-[var(--color-muted)] mt-6">Not financial or legal advice. <a href="/privacy-policy/">Privacy Policy</a></p>
+  </section>
+</BaseLayout>

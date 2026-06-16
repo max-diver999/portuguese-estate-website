@@ -1,0 +1,567 @@
+---
+/** Portuguese Estate — live site report. Update via GSC/GA4/Bing MCP each session. */
+export const prerender = true;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>portuguese-estate.com — Site Report</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f3ef; color: #1c1917; min-height: 100vh; }
+    .header { background: #1c1917; color: white; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .header-brand { display: flex; align-items: center; gap: 12px; }
+    .header-logo { width: 36px; height: 36px; background: linear-gradient(135deg, #d4a853, #b45309); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: #1c1917; }
+    .header h1 { font-size: 22px; font-weight: 700; }
+    .header-sub { font-size: 13px; color: #a8a29e; margin-top: 2px; }
+    .header-meta { text-align: right; }
+    .header-meta .label { font-size: 12px; color: #a8a29e; }
+    .header-meta .value { font-size: 14px; font-weight: 600; margin-top: 2px; }
+    .live-badge { display: inline-flex; align-items: center; gap: 6px; background: #292524; border-radius: 20px; padding: 4px 12px; font-size: 12px; margin-top: 8px; }
+    .live-dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+    .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #78716c; margin-bottom: 16px; margin-top: 40px; }
+    .section-title:first-child { margin-top: 0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+    .stat-card { background: white; border-radius: 12px; padding: 20px; border: 1px solid #e7e5e4; }
+    .stat-card .num { font-size: 40px; font-weight: 800; color: #1c1917; line-height: 1; }
+    .stat-card .num.gold { color: #b45309; }
+    .stat-card .num.green { color: #15803d; }
+    .stat-card .label { font-size: 13px; color: #78716c; margin-top: 6px; }
+    .stat-card .sublabel { font-size: 11px; color: #a8a29e; margin-top: 4px; line-height: 1.4; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .info-grid { grid-template-columns: 1fr; } }
+    .info-card { background: white; border-radius: 12px; padding: 20px; border: 1px solid #e7e5e4; }
+    .info-card h3 { font-size: 14px; font-weight: 700; color: #1c1917; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #f5f5f4; }
+    .info-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid #fafaf9; gap: 16px; }
+    .info-row:last-child { border-bottom: none; }
+    .info-row .key { font-size: 13px; color: #78716c; flex-shrink: 0; }
+    .info-row .val { font-size: 13px; font-weight: 600; color: #1c1917; text-align: right; }
+    .info-row .val a { color: #b45309; text-decoration: none; }
+    .info-row .val a:hover { text-decoration: underline; }
+    .content-card { background: white; border-radius: 12px; border: 1px solid #e7e5e4; overflow: hidden; }
+    .table-scroll { width: 100%; overflow-x: auto; }
+    .content-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+    .content-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #78716c; font-weight: 700; padding: 12px 20px; text-align: left; background: #fafaf9; border-bottom: 1px solid #e7e5e4; }
+    .content-table td { padding: 12px 20px; font-size: 13px; border-bottom: 1px solid #f5f5f4; vertical-align: top; }
+    .content-table tr:last-child td { border-bottom: none; }
+    .content-table .count { font-weight: 800; color: #b45309; font-size: 18px; }
+    .content-table .words { color: #78716c; font-size: 12px; }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+    .tag.green { background: #dcfce7; color: #166534; }
+    .tag.blue { background: #dbeafe; color: #1e40af; }
+    .tag.amber { background: #fef3c7; color: #92400e; }
+    .tag.gray { background: #f5f5f4; color: #57534e; }
+    .tag.red { background: #fee2e2; color: #991b1b; }
+    .changelog-item { background: white; border: 1px solid #e7e5e4; border-bottom: none; padding: 16px 20px; display: flex; gap: 16px; align-items: flex-start; }
+    .changelog-item:first-child { border-radius: 12px 12px 0 0; }
+    .changelog-item:last-child { border-radius: 0 0 12px 12px; border-bottom: 1px solid #e7e5e4; }
+    .changelog-date { font-size: 11px; color: #a8a29e; min-width: 100px; padding-top: 2px; }
+    .changelog-title { font-size: 13px; font-weight: 600; color: #1c1917; }
+    .changelog-desc { font-size: 12px; color: #78716c; margin-top: 3px; line-height: 1.45; }
+    .changelog-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+    .next-item { background: white; border-radius: 10px; border: 1px solid #e7e5e4; padding: 14px 18px; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+    .priority.high { color: #dc2626; font-size: 11px; font-weight: 700; min-width: 50px; }
+    .priority.medium { color: #d97706; font-size: 11px; font-weight: 700; min-width: 50px; }
+    .priority.low { color: #059669; font-size: 11px; font-weight: 700; min-width: 50px; }
+    .next-item .text { font-size: 13px; color: #1c1917; }
+    .next-item .subtext { font-size: 12px; color: #a8a29e; margin-top: 2px; }
+    .pulse-wrap { background: white; border-radius: 16px; border: 1px solid #e7e5e4; padding: 24px 28px; }
+    .pulse-kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+    @media (max-width: 700px) { .pulse-kpi-row { grid-template-columns: repeat(2, 1fr); } }
+    .pulse-kpi { background: #fafaf9; border-radius: 12px; border: 1px solid #e7e5e4; padding: 18px 20px; }
+    .pulse-kpi .kpi-val { font-size: 36px; font-weight: 900; color: #1c1917; line-height: 1; margin-top: 4px; }
+    .pulse-kpi .kpi-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #78716c; }
+    .pulse-kpi .kpi-sub { font-size: 11px; color: #a8a29e; margin-top: 4px; line-height: 1.35; }
+    .baseline-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 16px 20px; margin-bottom: 20px; font-size: 13px; color: #92400e; line-height: 1.5; }
+    .baseline-box strong { color: #78350f; }
+    .insight { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 14px 18px; margin-top: 16px; font-size: 12px; color: #166534; line-height: 1.5; }
+    .insight strong { font-weight: 700; }
+    .slug-list { font-size: 11px; color: #57534e; line-height: 1.6; column-count: 2; column-gap: 24px; }
+    @media (max-width: 700px) { .slug-list { column-count: 1; } }
+    .slug-list a { color: #b45309; text-decoration: none; }
+    .slug-list a:hover { text-decoration: underline; }
+    .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .link-card { background: white; border-radius: 10px; border: 1px solid #e7e5e4; padding: 16px; text-decoration: none; color: #1c1917; display: block; }
+    .link-card:hover { border-color: #b45309; }
+    .link-card .link-label { font-size: 11px; color: #a8a29e; text-transform: uppercase; letter-spacing: 0.06em; }
+    .link-card .link-url { font-size: 13px; font-weight: 600; color: #b45309; margin-top: 4px; word-break: break-all; }
+    .footer { text-align: center; padding: 32px 24px; color: #a8a29e; font-size: 12px; line-height: 1.6; }
+    .footer a { color: #b45309; text-decoration: none; }
+    @media (max-width: 640px) {
+      .header { padding: 22px 16px; }
+      .header-meta { text-align: left; margin-top: 12px; }
+      .container { padding: 20px 12px; }
+      .changelog-item { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo">MX</div>
+    <div>
+      <div class="header-sub">Website Performance Report — Mexico RE</div>
+      <h1>portuguese-estate.com</h1>
+    </div>
+  </div>
+  <div class="header-meta">
+    <div class="label">Last updated</div>
+    <div class="value">8 June 2026 · v2.2</div>
+    <div class="live-badge"><span class="live-dot"></span> 200 articles · 211 sitemap · 189 API indexed</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-title">At a glance</div>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="num gold">200</div>
+      <div class="label">MDX articles</div>
+      <div class="sublabel">86 guides · 34 compares · 21 areas · 46 projects · 9 developers · 4 news · 198 indexable</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">487K</div>
+      <div class="label">Words of SEO content</div>
+      <div class="sublabel">~2 434 avg/article · qa-audit 200/200 PASS · build green</div>
+    </div>
+    <div class="stat-card">
+      <div class="num gold">211</div>
+      <div class="label">URLs in sitemap</div>
+      <div class="sublabel">GSC sitemap resubmitted 8 Jun · 0 errors · last downloaded 8 Jun</div>
+    </div>
+    <div class="stat-card">
+      <div class="num green">5</div>
+      <div class="label">Content waves shipped</div>
+      <div class="sublabel">Waves 1–2 · 3–5 · 6–8 · 9–10 — 200-article master plan complete</div>
+    </div>
+    <div class="stat-card">
+      <div class="num green">189</div>
+      <div class="label">URLs indexed (Google API)</div>
+      <div class="sublabel">59 + 78 + 52 Wave 9–10 · 52/52 OK 8 Jun · Bing IndexNow 130 URLs</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">10</div>
+      <div class="label">Git commits</div>
+      <div class="sublabel">fb36206 Wave 9–10 · indexing scripts · site-report v2.2</div>
+    </div>
+  </div>
+
+  <div class="section-title">SEO Pulse — Google Search Console</div>
+  <div class="pulse-wrap">
+    <div class="baseline-box">
+      <strong>Early index phase (8 Jun 2026).</strong> GSC MCP <code>sc-domain:portuguese-estate.com</code> · period 11 May – 5 Jun: <strong>0 clicks, 0 impressions</strong> on queries/pages — site launched 6–8 Jun, 189 URLs pinged via Indexing API. First query data expected ~20 Jun. Sitemap resubmitted 8 Jun: <strong>0 errors</strong>, last downloaded 8 Jun 17:39 UTC.
+    </div>
+    <div class="pulse-kpi-row">
+      <div class="pulse-kpi">
+        <div class="kpi-label">Total Clicks</div>
+        <div class="kpi-val">0</div>
+        <div class="kpi-sub">Baseline · target first clicks ~20 Jun</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">Impressions</div>
+        <div class="kpi-val">0</div>
+        <div class="kpi-sub">189 URLs via Indexing API · awaiting crawl</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">Avg. Position</div>
+        <div class="kpi-val">—</div>
+        <div class="kpi-sub">Awaiting first query data</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">Avg. CTR</div>
+        <div class="kpi-val">—</div>
+        <div class="kpi-sub">CTR sprint when 50+ imp/query</div>
+      </div>
+    </div>
+    <div class="insight"><strong>Quick wins pipeline:</strong> When GSC shows pos 8–15 with 50+ impressions — expand FAQ + title CTR on fideicomiso HUB, Riviera Maya guide, Mexico vs Panama compare. Monitor weekly via <code>search-console-mexico-invest</code> MCP.</div>
+    <p style="font-size:11px;color:#a8a29e;text-align:center;margin-top:16px;">Updated 8 Jun 2026 via GSC API · period 11 May – 5 Jun · EN site — never Yandex</p>
+  </div>
+
+  <div class="section-title">Analytics — GA4</div>
+  <div class="pulse-wrap">
+    <div class="pulse-kpi-row">
+      <div class="pulse-kpi">
+        <div class="kpi-label">Sessions (Jun 1–7)</div>
+        <div class="kpi-val">27</div>
+        <div class="kpi-sub">25 on 7 Jun (likely crawl bots) · GA4 MCP</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">Users</div>
+        <div class="kpi-val">24</div>
+        <div class="kpi-sub">22 on 7 Jun · first traffic spike post-index</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">Pageviews</div>
+        <div class="kpi-val">26</div>
+        <div class="kpi-sub">24 on 7 Jun · organic TBD ~20 Jun</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">Lead API</div>
+        <div class="kpi-val" style="font-size:22px;">✓</div>
+        <div class="kpi-sub">POST /api/lead/ → 200 · Telegram configured</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Bing Webmaster</div>
+  <div class="pulse-wrap">
+    <div class="pulse-kpi-row">
+      <div class="pulse-kpi">
+        <div class="kpi-label">Bing Clicks</div>
+        <div class="kpi-val">0</div>
+        <div class="kpi-sub">MCP bing-webmaster-mexico-invest</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">Impressions</div>
+        <div class="kpi-val">0</div>
+        <div class="kpi-sub">130 URLs IndexNow total · +52 on 8 Jun · 200 OK</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">Site verified</div>
+        <div class="kpi-val" style="font-size:22px;">✓</div>
+        <div class="kpi-sub">Import from GSC</div>
+      </div>
+      <div class="pulse-kpi">
+        <div class="kpi-label">IndexNow</div>
+        <div class="kpi-val" style="font-size:22px;">✓</div>
+        <div class="kpi-sub">bing.com/indexnow only · never api.indexnow.org</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Content breakdown</div>
+  <div class="content-card table-scroll">
+    <table class="content-table">
+      <thead>
+        <tr><th>Collection</th><th>Pages</th><th>Words</th><th>Avg</th><th>Min gate</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Guides</strong><br><span class="words">Legal, tax, US buyer, investment HUBs, personas, nearshoring</span></td>
+          <td><span class="count">86</span></td>
+          <td><span class="words">260 722</span></td>
+          <td><span class="words">3 031</span></td>
+          <td><span class="tag blue">2 000+</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Comparisons</strong><br><span class="words">Mexico vs Panama/Colombia/Thailand/Florida/Costa Rica · area vs area · strategy</span></td>
+          <td><span class="count">34</span></td>
+          <td><span class="words">79 525</span></td>
+          <td><span class="words">2 338</span></td>
+          <td><span class="tag blue">1 800+</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Areas</strong><br><span class="words">Tulum, Playa, Cabos, PV, Mérida, Akumal, Sayulita, Aldea Zama…</span></td>
+          <td><span class="count">21</span></td>
+          <td><span class="words">54 595</span></td>
+          <td><span class="words">2 600</span></td>
+          <td><span class="tag blue">1 800+</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Projects</strong><br><span class="words">Riviera Maya P0 (20) + Cabos/PV luxury (10) — SIMCA, Emerita, Quivira, TAO</span></td>
+          <td><span class="count">46</span></td>
+          <td><span class="words">68 063</span></td>
+          <td><span class="words">1 479</span></td>
+          <td><span class="tag blue">1 200+</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Developers</strong><br><span class="words">Quivira, Emerita, TAO, Vidanta, Zama — entity authority profiles</span></td>
+          <td><span class="count">9</span></td>
+          <td><span class="words">20 380</span></td>
+          <td><span class="words">2 264</span></td>
+          <td><span class="tag blue">1 200+</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>News</strong><br><span class="words">Quintana Roo prices, Tulum inventory, Tren Maya, STR tax reporting</span></td>
+          <td><span class="count">4</span></td>
+          <td><span class="words">3 531</span></td>
+          <td><span class="words">883</span></td>
+          <td><span class="tag blue">600+</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Noindex (cannibalization)</strong><br><span class="words">KEEP redirects via internal links — excluded from sitemap</span></td>
+          <td><span class="count">2</span></td>
+          <td colspan="3"><span class="words">invest-in-los-cabos · mexico-property-closing-costs-breakdown</span></td>
+          <td><span class="tag red">noindex</span></td>
+        </tr>
+        <tr>
+          <td><strong>TOTAL</strong></td>
+          <td><span class="count">200</span></td>
+          <td><span class="words"><strong>486 816</strong></span></td>
+          <td><span class="words">2 434</span></td>
+          <td><span class="tag green">qa-audit PASS</span></td>
+          <td><span class="tag green">Production</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title">Content waves (200-article master plan)</div>
+  <div class="content-card table-scroll">
+    <table class="content-table">
+      <thead>
+        <tr><th>Wave</th><th>Commit</th><th>Shipped</th><th>Focus</th><th>Indexing</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Wave 1–2</strong></td>
+          <td><span class="words">ab2b2e3</span></td>
+          <td><span class="count">50</span></td>
+          <td>Pillar HUBs: fideicomiso, due diligence, yields, 9 core areas, 4 compares</td>
+          <td><span class="tag gray">Launch batch</span></td>
+        </tr>
+        <tr>
+          <td><strong>Wave 3–5</strong></td>
+          <td><span class="words">8f64f3a</span></td>
+          <td><span class="count">50</span></td>
+          <td>12 new areas, 6 compares, 32 guides (tax, retiree, tier, pre-con risks)</td>
+          <td><span class="tag green">Google 59/59 · Bing OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Wave 6–8</strong></td>
+          <td><span class="words">f130215</span></td>
+          <td><span class="count">50</span></td>
+          <td>11 compares + 8 guides + 30 project reviews + /projects/ collection</td>
+          <td><span class="tag green">Google 78/78 · Bing OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Wave 9–10</strong></td>
+          <td><span class="words">fb36206</span></td>
+          <td><span class="count">50</span></td>
+          <td>10 guides · 11 compares · 16 projects · 9 developers · 4 news · /developers/ + /news/</td>
+          <td><span class="tag green">Google 52/52 · Bing OK · GSC sitemap</span></td>
+        </tr>
+        <tr>
+          <td><strong>Plan total</strong></td>
+          <td colspan="2"><span class="count">200 / 200</span></td>
+          <td>MEXICO_INVEST_CONTENT_MASTER_PLAN_200 — <strong>complete</strong></td>
+          <td><span class="tag green">Done</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title">Wave 9–10 — all 50 new articles (indexed 8 Jun)</div>
+  <div class="content-card" style="padding:20px;">
+    <p style="font-size:12px;color:#78716c;margin-bottom:12px;">Published 8 Jun 2026 · Tier A QA · Google 52/52 + Bing IndexNow · scripts/wave9-10-urls.txt</p>
+    <div class="slug-list">
+      <strong>Guides (10):</strong><br />
+      <a href="/guides/branded-residences-mexico-guide/">branded-residences-mexico-guide</a> ·
+      <a href="/guides/mexico-branded-residences-investment/">mexico-branded-residences-investment</a> ·
+      <a href="/guides/luxury-investor-cabos-branded/">luxury-investor-cabos-branded</a> ·
+      <a href="/guides/mexico-golf-course-property/">mexico-golf-course-property</a> ·
+      <a href="/guides/mexico-marina-property-investment/">mexico-marina-property-investment</a> ·
+      <a href="/guides/mexico-off-plan-investment/">mexico-off-plan-investment</a> ·
+      <a href="/guides/mexico-turnkey-rental-property/">mexico-turnkey-rental-property</a> ·
+      <a href="/guides/mexico-villa-investment/">mexico-villa-investment</a> ·
+      <a href="/guides/cash-buyer-mexico-advantages/">cash-buyer-mexico-advantages</a> ·
+      <a href="/guides/portfolio-diversification-mexico-re/">portfolio-diversification-mexico-re</a><br /><br />
+      <strong>Compares (11):</strong><br />
+      <a href="/compare/akumal-vs-tulum-investment/">akumal-vs-tulum</a> ·
+      <a href="/compare/amara-vs-nhoa-tulum/">amara-vs-nhoa</a> ·
+      <a href="/compare/gran-tulum-vs-101-park/">gran-tulum-vs-101-park</a> ·
+      <a href="/compare/punta-mita-vs-los-cabos-luxury/">punta-mita-vs-cabos</a> ·
+      <a href="/compare/st-regis-vs-chileno-bay-residences/">st-regis-vs-chileno</a> ·
+      <a href="/compare/mexico-vs-arizona-retirement/">mexico-vs-arizona</a> ·
+      <a href="/compare/mexico-vs-texas-no-state-tax/">mexico-vs-texas</a> ·
+      <a href="/compare/montage-vs-pendry-punta-mita/">montage-vs-pendry</a> ·
+      <a href="/compare/copala-quivira-vs-mavila-quivira/">copala-vs-mavila</a> ·
+      <a href="/compare/distrito-xcalacoco-vs-paravian/">xcalacoco-vs-paravian</a> ·
+      <a href="/compare/tao-blue-gardens-vs-marina-vallarta/">tao-blue-vs-marina</a><br /><br />
+      <strong>Projects (16):</strong><br />
+      one-only-mandarina · rosewood-mandarina · saint-marine · amaru-inka · ceiba-25-condo-paradise · montage-punta-mita · pendry-punta-mita · four-seasons-punta-mita · siari-ritz-carlton-reserve · ritz-carlton-puerto-los-cabos · alvar-quivira · coronado-quivira · el-lago-querencia · fundadores-puerto-los-cabos · junglar-kaybe · selva-zama-mondo<br /><br />
+      <strong>Developers (9):</strong><br />
+      <a href="/developers/quivira-los-cabos/">quivira</a> ·
+      <a href="/developers/grupo-emerita/">emerita</a> ·
+      <a href="/developers/tao-mexico/">tao</a> ·
+      <a href="/developers/zama-desarrollos/">zama</a> ·
+      <a href="/developers/vidanta-nuevo-vallarta/">vidanta</a> ·
+      <a href="/developers/querencia-los-cabos/">querencia</a> ·
+      <a href="/developers/simca-desarrollos/">simca</a> ·
+      <a href="/developers/tm-real-estate-group/">tm-real-estate</a> ·
+      <a href="/developers/dine-montage-punta-mita/">dine-montage</a><br /><br />
+      <strong>News (4):</strong><br />
+      <a href="/news/tulum-inventory-2026/">tulum-inventory</a> ·
+      <a href="/news/quintana-roo-price-growth-2026/">quintana-roo-prices</a> ·
+      <a href="/news/tren-maya-property-impact/">tren-maya</a> ·
+      <a href="/news/mexico-str-tax-reporting-2026/">str-tax-reporting</a>
+      <br /><br />
+      <a href="/developers/">→ /developers/</a> ·
+      <a href="/news/">→ /news/</a> ·
+      <a href="/projects/">→ /projects/</a>
+    </div>
+  </div>
+
+  <div class="section-title">Cursor MCP servers (Mexico direction)</div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>Analytics &amp; Search MCP</h3>
+      <div class="info-row"><span class="key">GSC</span><span class="val">search-console-mexico-invest</span></div>
+      <div class="info-row"><span class="key">GA4</span><span class="val">ga4-analytics-mexico-invest</span></div>
+      <div class="info-row"><span class="key">Bing</span><span class="val">bing-webmaster-mexico-invest</span></div>
+      <div class="info-row"><span class="key">GSC property</span><span class="val">sc-domain:portuguese-estate.com</span></div>
+      <div class="info-row"><span class="key">Update cadence</span><span class="val">Weekly site-report refresh</span></div>
+    </div>
+    <div class="info-card">
+      <h3>Indexing isolation</h3>
+      <div class="info-row"><span class="key">GCP project</span><span class="val">mexico-invest-indexing</span></div>
+      <div class="info-row"><span class="key">SA email</span><span class="val">indexing-bot-mexico@…</span></div>
+      <div class="info-row"><span class="key">NOT shared with</span><span class="val">soy-braid / invest-gulf</span></div>
+      <div class="info-row"><span class="key">Google API</span><span class="val">submit-google-explicit.mjs</span></div>
+      <div class="info-row"><span class="key">Bing</span><span class="val">submit-bing-explicit.mjs</span></div>
+      <div class="info-row"><span class="key">Yandex</span><span class="val">❌ Never (EN site)</span></div>
+    </div>
+  </div>
+
+  <div class="section-title">Technical setup</div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>Infrastructure</h3>
+      <div class="info-row"><span class="key">Framework</span><span class="val">Astro 5 + MDX</span></div>
+      <div class="info-row"><span class="key">Hosting</span><span class="val">Vercel (auto-deploy)</span></div>
+      <div class="info-row"><span class="key">Repository</span><span class="val"><a href="https://github.com/max-diver999/portuguese-estate-website" target="_blank">portuguese-estate-website</a></span></div>
+      <div class="info-row"><span class="key">Domain</span><span class="val"><a href="https://portuguese-estate.com/">portuguese-estate.com</a></span></div>
+      <div class="info-row"><span class="key">Email</span><span class="val">info@portuguese-estate.com</span></div>
+      <div class="info-row"><span class="key">QA script</span><span class="val">scripts/qa-audit.mjs</span></div>
+    </div>
+    <div class="info-card">
+      <h3>SEO &amp; schema</h3>
+      <div class="info-row"><span class="key">JSON-LD</span><span class="val">Article + FAQPage + BreadcrumbList</span></div>
+      <div class="info-row"><span class="key">Organization</span><span class="val">RealEstateAgent schema</span></div>
+      <div class="info-row"><span class="key">Lead form</span><span class="val">Riviera Maya · Los Cabos · PV · Tulum · Mérida</span></div>
+      <div class="info-row"><span class="key">Sitemap filter</span><span class="val">noindex + thanks + site-report excluded</span></div>
+      <div class="info-row"><span class="key">Collections</span><span class="val">guides · compare · areas · projects · developers · news</span></div>
+      <div class="info-row"><span class="key">Content plan</span><span class="val">MEXICO_INVEST_CONTENT_MASTER_PLAN_200</span></div>
+    </div>
+  </div>
+
+  <div class="section-title">Launch changelog</div>
+  <div>
+    <div class="changelog-item">
+      <div class="changelog-date">8 Jun 2026 v2.2</div>
+      <div>
+        <div class="changelog-title">Wave 9–10 indexed — Google 52/52 + Bing + GSC sitemap</div>
+        <div class="changelog-desc">Explicit batch via mexico-invest-indexing (189 API URLs total). Bing IndexNow 52 URLs. GSC sitemap resubmitted 0 errors. GA4 spike 25 sessions 7 Jun (crawl bots). Site-report v2.2. Script fix: record-submitted logging.</div>
+        <div class="changelog-tags"><span class="tag green">Indexing</span><span class="tag blue">Report v2.2</span></div>
+      </div>
+    </div>
+    <div class="changelog-item">
+      <div class="changelog-date">8 Jun 2026 v2.1</div>
+      <div>
+        <div class="changelog-title">Wave 9–10 published — 50 articles · 200-plan complete</div>
+        <div class="changelog-desc">200 total MDX (487K words). New collections /developers/ (9) and /news/ (4). Tier A QA: link remap, slop strip, 4 thin projects expanded. qa-audit 200/200 PASS. Sitemap 211 URLs. Commit fb36206.</div>
+        <div class="changelog-tags"><span class="tag green">Wave 9–10</span><span class="tag blue">Developers</span><span class="tag amber">200 plan</span></div>
+      </div>
+    </div>
+    <div class="changelog-item">
+      <div class="changelog-date">7 Jun 2026 v2.0</div>
+      <div>
+        <div class="changelog-title">Wave 6–8 published — 50 articles + /projects/ collection</div>
+        <div class="changelog-desc">150 total MDX (383K words). Deep quality audit: cannibalization noindex (2), link redirects, fact-density enrichment. Google Indexing API 78/78 + Bing IndexNow 78 URLs. Site-report v2.0 with GSC/GA4/Bing MCP data. Sitemap 159 URLs (noindex pages excluded).</div>
+        <div class="changelog-tags"><span class="tag green">Wave 6–8</span><span class="tag blue">Indexing</span><span class="tag amber">Report v2.0</span></div>
+      </div>
+    </div>
+    <div class="changelog-item">
+      <div class="changelog-date">7 Jun 2026</div>
+      <div>
+        <div class="changelog-title">Wave 3–5 published — 50 articles + schema upgrades</div>
+        <div class="changelog-desc">FAQPage + BreadcrumbList JSON-LD, Organization schema, LeadForm Mexico markets. Google 59/59 URLs indexed. 12 area guides, 6 compares, 32 guides.</div>
+        <div class="changelog-tags"><span class="tag green">Wave 3–5</span><span class="tag blue">Schema</span></div>
+      </div>
+    </div>
+    <div class="changelog-item">
+      <div class="changelog-date">6 Jun 2026</div>
+      <div>
+        <div class="changelog-title">Wave 1–2 — first 50 SEO articles live</div>
+        <div class="changelog-desc">Core HUBs: mexico-property-investment-guide, fideicomiso, due diligence, yields. 9 areas, 4 compares, tier guides.</div>
+        <div class="changelog-tags"><span class="tag green">Wave 1–2</span></div>
+      </div>
+    </div>
+    <div class="changelog-item">
+      <div class="changelog-date">6 Jun 2026</div>
+      <div>
+        <div class="changelog-title">Mexico indexing isolated from MORE Group quota</div>
+        <div class="changelog-desc">Dedicated GCP project mexico-invest-indexing. SA verify-sa-ownership.mjs. Bing via bing.com/indexnow only.</div>
+        <div class="changelog-tags"><span class="tag blue">Infra</span><span class="tag gray">MCP trio</span></div>
+      </div>
+    </div>
+    <div class="changelog-item">
+      <div class="changelog-date">5–6 Jun 2026</div>
+      <div>
+        <div class="changelog-title">Site scaffold + MCP + IndexNow</div>
+        <div class="changelog-desc">Astro site on Vercel. search-console-mexico-invest, ga4-analytics-mexico-invest, bing-webmaster-mexico-invest in Cursor. Lead API + Telegram.</div>
+        <div class="changelog-tags"><span class="tag green">Launch</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Next steps</div>
+  <div>
+    <div class="next-item">
+      <div class="priority high">HIGH</div>
+      <div>
+        <div class="text">Monitor GSC first impressions (~20 Jun) — refresh SEO Pulse</div>
+        <div class="subtext">search-console-mexico-invest MCP · queries pos 8–15 = quick-win CTR sprint</div>
+      </div>
+    </div>
+    <div class="next-item">
+      <div class="priority medium">MED</div>
+      <div>
+        <div class="text">Project heroImage CDN pass — verify Cloudinary URLs before ads</div>
+        <div class="subtext">30 project reviews · lotsof portfolio data · SEDETUS permit notes</div>
+      </div>
+    </div>
+    <div class="next-item">
+      <div class="priority medium">MED</div>
+      <div>
+        <div class="text">Internal linking: projects ↔ areas ↔ HUB guides</div>
+        <div class="subtext">Cross-link Tulum projects to invest-in-tulum + aldea-zama area</div>
+      </div>
+    </div>
+    <div class="next-item">
+      <div class="priority low">LOW</div>
+      <div>
+        <div class="text">Wikidata entity for Portuguese Estate brand (GEO)</div>
+        <div class="subtext">Q-id in Organization sameAs · llms.txt refresh</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Quick links</div>
+  <div class="links-grid">
+    <a class="link-card" href="https://portuguese-estate.com/" target="_blank" rel="noopener"><div class="link-label">Live site</div><div class="link-url">portuguese-estate.com</div></a>
+    <a class="link-card" href="https://portuguese-estate.com/guides/" target="_blank" rel="noopener"><div class="link-label">Guides hub</div><div class="link-url">/guides/</div></a>
+    <a class="link-card" href="https://portuguese-estate.com/projects/" target="_blank" rel="noopener"><div class="link-label">Projects hub</div><div class="link-url">/projects/</div></a>
+    <a class="link-card" href="https://portuguese-estate.com/developers/" target="_blank" rel="noopener"><div class="link-label">Developers hub</div><div class="link-url">/developers/</div></a>
+    <a class="link-card" href="https://portuguese-estate.com/news/" target="_blank" rel="noopener"><div class="link-label">News hub</div><div class="link-url">/news/</div></a>
+    <a class="link-card" href="https://portuguese-estate.com/sitemap-index.xml" target="_blank" rel="noopener"><div class="link-label">Sitemap</div><div class="link-url">sitemap-index.xml (211 URLs)</div></a>
+    <a class="link-card" href="https://search.google.com/search-console?resource_id=sc-domain:portuguese-estate.com" target="_blank" rel="noopener"><div class="link-label">Google Search Console</div><div class="link-url">sc-domain:portuguese-estate.com</div></a>
+    <a class="link-card" href="https://analytics.google.com/" target="_blank" rel="noopener"><div class="link-label">GA4</div><div class="link-url">ga4-analytics-mexico-invest MCP</div></a>
+    <a class="link-card" href="https://www.bing.com/webmasters/" target="_blank" rel="noopener"><div class="link-label">Bing Webmaster</div><div class="link-url">portuguese-estate.com</div></a>
+    <a class="link-card" href="https://github.com/max-diver999/portuguese-estate-website" target="_blank" rel="noopener"><div class="link-label">GitHub</div><div class="link-url">max-diver999/portuguese-estate-website</div></a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <strong>Portuguese Estate Site Report v2.2</strong> · 8 June 2026 ·
+  <a href="https://portuguese-estate.com/site-report/">portuguese-estate.com/site-report/</a><br />
+  Data: GSC + GA4 + Bing MCP · Content: qa-audit.mjs · Plan: MEXICO_INVEST_CONTENT_MASTER_PLAN_200.md<br />
+  EN site — Google + Bing only · never Yandex
+</div>
+
+</body>
+</html>

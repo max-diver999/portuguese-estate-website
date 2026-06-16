@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import CommercialBudgetLadder from '../../components/CommercialBudgetLadder.astro';
+
+const faqItems = [
+  {
+    question: 'Can I buy property in Italy under €200,000?',
+    answer: 'Yes in many southern and interior markets. Apartments in Sicily, Calabria, or Abruzzo and inland Puglia towns often list under €200k. Renovation projects and 1-euro municipality schemes may show lower headline prices but require separate capex budgets.',
+  },
+  {
+    question: 'What are the hidden costs below €200k?',
+    answer: 'Budget 10–12% for taxes, notary, and agency fees on a second home. Renovations, seismic retrofit, and pool builds can add €50k–150k. Always verify cadastral value vs market price before offer.',
+  },
+  {
+    question: 'Is sub-€200k property good for rental yield?',
+    answer: 'Interior Sicily and Puglia can show high gross yields if renovation and STR registration are done properly. Liquidity and resale pools are thinner than Milan or Florence — plan longer hold periods.',
+  },
+  {
+    question: 'Should I consider the 1-euro home programs?',
+    answer: 'Municipal 1-euro schemes are renovation-led, not move-in ready. Read our 1-euro homes guide for bond deposits, timeline commitments, and contractor risk before applying.',
+  },
+  {
+    question: 'How fast will you send entry-tier options?',
+    answer: 'Within one business day we return 3–5 matches in your band with links to area guides and cost breakdowns. Viewings require partner scheduling in Italy.',
+  },
+];
+---
+<BaseLayout
+  title="Buy Property in Italy Under €200,000: Shortlist 2026"
+  description="Portugal property under €200k for foreign buyers. Sicily, Puglia interior, renovation paths — independent shortlist with closing cost notes. Free request."
+>
+  <section class="site-container py-12 md:py-16 max-w-3xl">
+    <CommercialBudgetLadder current="entry" />
+    <header class="mb-8">
+      <span class="badge-pill mb-4">Entry tier</span>
+      <h1 class="mb-4">Buy property in Italy under €200,000</h1>
+      <p class="text-lg text-[var(--color-muted)]">
+        Curated resale and renovation opportunities in lower-cost communes — with realistic capex and tax notes, not portal spam.
+      </p>
+    </header>
+
+    <div class="prose mb-10 text-[var(--color-muted)]">
+      <p><strong>Quick answer:</strong> Sub-€200k buys exist mainly in southern regions, inland towns, and apartments needing cosmetic work. Expect 9% registration tax on second homes, IMU from year one, and slower resale liquidity than prime north Italy.</p>
+      <table class="w-full text-sm mb-6">
+        <thead>
+          <tr><th>Typical fit</th><th>Price band</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sicily interior apt</td><td>€80k–180k</td><td>Renovation common</td></tr>
+          <tr><td>Puglia inland 2-bed</td><td>€120k–200k</td><td>STR potential</td></tr>
+          <tr><td>1-euro + reno</td><td>€1 + €50k+ works</td><td>Municipal bonds</td></tr>
+          <tr><td>Milan fringe</td><td>Rare under €200k</td><td>Micro-studios only</td></tr>
+        </tbody>
+      </table>
+      <p>Related: <a href="/guides/italy-1-euro-homes-program/">1-euro homes program</a> · <a href="/invest-sicily-property/">Invest Sicily</a> · <a href="/guides/hidden-costs-buying-property-italy/">Hidden costs</a> · <a href="/tier-mid/">€200k–€500k tier</a></p>
+    </div>
+
+    <LeadForm
+      title="Get sub-€200k shortlist"
+      subtitle="Renovation tolerance · region · rental goal"
+      context="Tier entry Portugal property landing"
+    />
+    <FaqBlock items={faqItems} />
+    <p class="text-xs text-[var(--color-muted)] mt-6">Not financial or legal advice. <a href="/privacy-policy/">Privacy Policy</a></p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,22 @@
+# Portuguese Estate — full site map (scaffold)
+
+Site: https://portuguese-estate.com
+Status: Astro scaffold live; editorial and project MDX batches pending.
+
+## Hubs
+- /
+- /guides/
+- /projects/
+- /areas/
+- /compare/
+- /developers/
+- /news/
+- /about/
+- /methodology/
+- /contact/
+- /get-shortlist/
+
+## Parser pipeline (research)
+Local images: 08_Идеи/portugal-re-projects/images/
+Cloudinary prefix (planned): dphvjbqb4/more-group/portugal/projects/{slug}/
+Tier A sources: Vanguard Properties, VIC Properties, Sonae Sierra/Casais, Lantia

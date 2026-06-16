@@ -1,0 +1,48 @@
+---
+import ContentCard from './ContentCard.astro';
+import { formatAreaLabel, formatUsd } from '../lib/cardImage';
+
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  image?: string;
+  area?: string;
+  developer?: string;
+  propertyType?: string;
+  status?: string;
+  priceFromUsd?: number;
+}
+
+const {
+  href,
+  title,
+  description,
+  image,
+  area,
+  developer,
+  propertyType,
+  status,
+  priceFromUsd,
+} = Astro.props;
+
+const badges = [
+  propertyType ? propertyType.replace(/-/g, ' ') : '',
+  status === 'off-plan' ? 'Off-plan' : status === 'completed' ? 'Completed' : '',
+  formatAreaLabel(area),
+].filter(Boolean);
+
+const price = formatUsd(priceFromUsd);
+const meta = [price && `From ${price}`, developer].filter(Boolean).join(' · ');
+---
+
+<ContentCard
+  href={href}
+  title={title}
+  description={description}
+  image={image}
+  badges={badges}
+  meta={meta}
+  metaAccent={!!price}
+  placeholder="🏢"
+/>

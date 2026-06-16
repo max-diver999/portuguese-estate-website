@@ -1,0 +1,112 @@
+{
+  "pilot": "project-images-v1",
+  "verified": "2026-06-08",
+  "rule": "15 unique URLs across 5 articles — no cross-article reuse",
+  "articles": [
+    {
+      "slug": "gran-tulum",
+      "source": "https://grantulum.mx/galeria",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://grantulum.mx/uploads/gallery/1696545483_6471de92c550b67a580a.jpg",
+          "alt": "Gran Tulum gated community exterior at 101 Tulum"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://grantulum.mx/uploads/gallery/1696545484_299289b4a34da7e10c85.jpg",
+          "alt": "Gran Tulum exterior rendering at 101 Tulum master plan"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://grantulum.mx/uploads/gallery/1696545484_ed6586e7ab4cc6ee24c7.jpg",
+          "alt": "Gran Tulum pool and amenity deck at SIMCA 101 Tulum"
+        }
+      ]
+    },
+    {
+      "slug": "distrito-xcalacoco-beach",
+      "source": "https://www.distritoxcalacoco.com/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://static.wixstatic.com/media/75248b_364dab5416624e298b0f54df638c24ae~mv2.jpg",
+          "alt": "Distrito Xcalacoco Beach North Shore Playa aerial"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://static.wixstatic.com/media/75248b_0e0097af089345839dc049d494afa3a9~mv2.jpg",
+          "alt": "Distrito Xcalacoco Beach tower and North Shore skyline"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://static.wixstatic.com/media/75248b_40f44de8e40b42389b21e1eba2d21ed8~mv2.jpg",
+          "alt": "Distrito Xcalacoco Beach resort pool and amenity deck"
+        }
+      ]
+    },
+    {
+      "slug": "copala-quivira",
+      "source": "https://www.quiviraloscabos.com/residences/copala/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+          "alt": "Copala at Quivira Los Cabos residences exterior"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Inset-LargeInterior-Copala-58a46726aac5f.jpg",
+          "alt": "Copala at Quivira Pacific-side condominium interior"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Copala-Clubhouse-58f623071edd6.jpg",
+          "alt": "Copala at Quivira clubhouse and golf community"
+        }
+      ]
+    },
+    {
+      "slug": "tao-blue-gardens-pv",
+      "source": "https://taomexico.com/tao-blue-gardens-puerto-vallarta/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://taomexico.com/wp-content/uploads/2026/01/tao-blue-gardens-vallarta.webp",
+          "alt": "TAO Blue Gardens Puerto Vallarta project hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://taomexico.com/wp-content/uploads/2026/01/04-PVALLARTA_CAM06.webp",
+          "alt": "TAO Blue Gardens building exterior Zona Romántica"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://taomexico.com/wp-content/uploads/2026/01/Infinity-pool.webp",
+          "alt": "TAO Blue Gardens infinity pool Banderas Bay"
+        }
+      ]
+    },
+    {
+      "slug": "montage-punta-mita",
+      "source": "https://www.montageresidences.com/punta-mita/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://mnt-uploads-montage-residences-prod.s3.amazonaws.com/uploads/2025/12/11161945/Montage-Punta-Mita-1920x730-1-1000x643.jpeg",
+          "alt": "Montage Residences Punta Mita peninsula hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://mnt-uploads-montage-residences-prod.s3.amazonaws.com/uploads/2026/03/30094831/MRPM-Residential-Renderings-2025-ph-shutters-abiertos-1-1920x1080.jpg",
+          "alt": "Montage Residences Punta Mita residential rendering"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://mnt-uploads-montage-residences-prod.s3.amazonaws.com/uploads/2026/05/12083206/Montage_Film_04_010_Yacht-Arrival_Aerial_Still_260505-1000x643.jpg",
+          "alt": "Aerial yacht arrival Montage Residences Punta Mita"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# Portuguese Estate
+
+> Independent research on Portugal property investment for US, UK, and European buyers.
+
+- Site: https://portuguese-estate.com
+- Contact: info@portuguese-estate.com
+- Markets: Lisbon, Algarve, Porto, Comporta, Cascais
+- Focus: IMT 7.5% flat for non-residents (Sep 2026), AL licensing, Golden Visa fund route (€500k), rental yields, foreign buyer share
+- Not a developer, not a listing portal
+
+## Collections (scaffold — content publishing next)
+- /guides/
+- /projects/
+- /areas/
+- /compare/
+- /developers/
+- /news/
+
+## Full corpus
+https://portuguese-estate.com/llms-full.txt

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../data/site';
+
+const isLead = Astro.url.searchParams.get('lead') === '1';
+---
+<BaseLayout
+  title="Thank You"
+  description="Thank you for contacting Portuguese Estate."
+  noindex={true}
+>
+  <section class="site-container py-20 max-w-xl text-center">
+    <p class="text-4xl mb-4">✓</p>
+    <h1 class="mb-4">{isLead ? 'Request received' : 'Thank you'}</h1>
+    <p class="text-[var(--color-muted)] mb-8">
+      {isLead
+        ? 'We received your shortlist request. Expect a reply by email or WhatsApp within one business day.'
+        : `Thanks for visiting ${SITE.name}.`}
+    </p>
+    <a href="/guides/" class="btn-primary px-6 py-3">Browse guides</a>
+  </section>
+  {isLead && (
+    <script is:inline>
+      if (typeof window.investGulfTrack === 'function') {
+        window.investGulfTrack('generate_lead', { lead_type: 'shortlist_form', value: 1, currency: 'USD' });
+      } else if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', { lead_type: 'shortlist_form', value: 1, currency: 'USD' });
+      }
+    </script>
+  )}
+</BaseLayout>

@@ -1,0 +1,48 @@
+{
+  "name": "portuguese-estate-website",
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "postbuild": "node scripts/audit-rendered-live.mjs --local --fail",
+    "preview": "astro preview",
+    "healthcheck": "node scripts/post-deploy-smoke.mjs --http-only",
+    "validate:content": "node scripts/qa-audit.mjs",
+    "validate:content:changed": "node scripts/qa-audit.mjs --changed",
+    "qa:corpus": "node scripts/qa-corpus-signals.mjs",
+    "qa:full": "node scripts/qa-full.mjs",
+    "qa:full:quick": "node scripts/qa-full.mjs --quick",
+    "corpus:cleanup": "node scripts/corpus-cleanup.mjs",
+    "prepush:gate": "node scripts/pre-push-gate.mjs",
+    "setup:hooks": "git config core.hooksPath .githooks && chmod +x .githooks/pre-push && echo 'Git hooks → .githooks (pre-push runs validate:content + build on MDX changes)'",
+    "fix:queue": "node scripts/fix-batch-queue.mjs",
+    "fix:card": "node scripts/fix-content-card.mjs",
+    "refresh:protected": "node scripts/refresh-protected-slugs.mjs",
+    "audit:rendered": "node scripts/audit-rendered-live.mjs",
+    "audit:rendered:fail": "node scripts/audit-rendered-live.mjs --fail",
+    "fix:leadforms": "node scripts/fix-inline-leadforms.mjs",
+    "sync:content-gate": "node scripts/sync-content-gate.mjs",
+    "validate:strict": "node scripts/qa-audit.mjs",
+    "images:upload": "python3 scripts/upload-mexico-cloudinary.py --collection projects",
+    "images:upload:guides": "python3 scripts/upload-mexico-cloudinary.py --collection guides",
+    "images:upload:areas": "python3 scripts/upload-mexico-cloudinary.py --collection areas",
+    "images:upload:editorial": "python3 scripts/upload-mexico-cloudinary.py --collection editorial",
+    "images:upload:content": "python3 scripts/upload-mexico-cloudinary.py --collection all",
+    "images:upload:dry": "python3 scripts/upload-mexico-cloudinary.py --collection all --dry-run",
+    "images:rollout": "node scripts/rollout-mexico-cloudinary.mjs",
+    "images:rollout:content": "node scripts/rollout-mexico-cloudinary-content.mjs"
+  },
+  "dependencies": {
+    "google-auth-library": "^10.6.2",
+    "@astrojs/mdx": "5.0.2",
+    "@astrojs/sitemap": "3.7.1",
+    "@astrojs/vercel": "10.0.2",
+    "@tailwindcss/vite": "4.2.2",
+    "astro": "6.0.8",
+    "tailwindcss": "4.2.2"
+  }
+}

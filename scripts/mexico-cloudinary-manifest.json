@@ -1,0 +1,2900 @@
+{
+  "uploaded": {
+    "distrito-xcalacoco-beach:inline-1": {
+      "slug": "distrito-xcalacoco-beach",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459805/more-group/spain/projects/distrito-xcalacoco-beach/inline_1.jpg",
+      "source_url": "https://static.wixstatic.com/media/75248b_0e0097af089345839dc049d494afa3a9~mv2.jpg",
+      "alt": "Distrito Xcalacoco Beach tower and North Shore skyline",
+      "public_id": "more-group/spain/projects/distrito-xcalacoco-beach/inline_1"
+    },
+    "distrito-xcalacoco-beach:inline-2": {
+      "slug": "distrito-xcalacoco-beach",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459805/more-group/spain/projects/distrito-xcalacoco-beach/inline_2.jpg",
+      "source_url": "https://static.wixstatic.com/media/75248b_40f44de8e40b42389b21e1eba2d21ed8~mv2.jpg",
+      "alt": "Distrito Xcalacoco Beach resort pool and amenity deck",
+      "public_id": "more-group/spain/projects/distrito-xcalacoco-beach/inline_2"
+    },
+    "distrito-xcalacoco-beach:hero": {
+      "slug": "distrito-xcalacoco-beach",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459805/more-group/spain/projects/distrito-xcalacoco-beach/hero.jpg",
+      "source_url": "https://static.wixstatic.com/media/75248b_364dab5416624e298b0f54df638c24ae~mv2.jpg",
+      "alt": "Distrito Xcalacoco Beach North Shore Playa aerial",
+      "public_id": "more-group/spain/projects/distrito-xcalacoco-beach/hero"
+    },
+    "gran-tulum:hero": {
+      "slug": "gran-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459808/more-group/spain/projects/gran-tulum/hero.jpg",
+      "source_url": "https://grantulum.mx/uploads/gallery/1696545483_6471de92c550b67a580a.jpg",
+      "alt": "Gran Tulum gated community exterior at 101 Tulum",
+      "public_id": "more-group/spain/projects/gran-tulum/hero"
+    },
+    "gran-tulum:inline-2": {
+      "slug": "gran-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459808/more-group/spain/projects/gran-tulum/inline_2.jpg",
+      "source_url": "https://grantulum.mx/uploads/gallery/1696545484_ed6586e7ab4cc6ee24c7.jpg",
+      "alt": "Gran Tulum pool and amenity deck at SIMCA 101 Tulum",
+      "public_id": "more-group/spain/projects/gran-tulum/inline_2"
+    },
+    "gran-tulum:inline-1": {
+      "slug": "gran-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459809/more-group/spain/projects/gran-tulum/inline_1.jpg",
+      "source_url": "https://grantulum.mx/uploads/gallery/1696545484_299289b4a34da7e10c85.jpg",
+      "alt": "Gran Tulum exterior rendering at 101 Tulum master plan",
+      "public_id": "more-group/spain/projects/gran-tulum/inline_1"
+    },
+    "101-park-tulum:inline-1": {
+      "slug": "101-park-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459816/more-group/spain/projects/101-park-tulum/inline_1.jpg",
+      "source_url": "https://grantulum.mx/uploads/gallery/1696545484_b7220735bccf53556868.jpg",
+      "alt": "101 Park Tulum gated community amenity view",
+      "public_id": "more-group/spain/projects/101-park-tulum/inline_1"
+    },
+    "101-park-tulum:inline-2": {
+      "slug": "101-park-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459816/more-group/spain/projects/101-park-tulum/inline_2.jpg",
+      "source_url": "https://grantulum.mx/uploads/gallery/1696545484_fb252879d80399bd9830.jpg",
+      "alt": "101 Tulum SIMCA residential phase rendering",
+      "public_id": "more-group/spain/projects/101-park-tulum/inline_2"
+    },
+    "101-park-tulum:hero": {
+      "slug": "101-park-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459816/more-group/spain/projects/101-park-tulum/hero.jpg",
+      "source_url": "https://grantulum.mx/uploads/gallery/1696545484_0304fa215e648fe9ccc2.jpg",
+      "alt": "101 Park Tulum master plan exterior rendering",
+      "public_id": "more-group/spain/projects/101-park-tulum/hero"
+    },
+    "aldea-thai:inline-2": {
+      "slug": "aldea-thai",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459817/more-group/spain/projects/aldea-thai/inline_2.jpg",
+      "source_url": "https://static.wixstatic.com/media/0dbd62_20b4ac82f317400a961c916eabf6c79a~mv2.jpg",
+      "alt": "Aldea Thai pool and rooftop amenity deck",
+      "public_id": "more-group/spain/projects/aldea-thai/inline_2"
+    },
+    "aldea-thai:hero": {
+      "slug": "aldea-thai",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459818/more-group/spain/projects/aldea-thai/hero.jpg",
+      "source_url": "https://static.wixstatic.com/media/7977c9_40a15fcb753b4a2eb31c6f17861ce885~mv2.jpg",
+      "alt": "Aldea Thai Playa del Carmen condo-hotel exterior",
+      "public_id": "more-group/spain/projects/aldea-thai/hero"
+    },
+    "alvar-quivira:hero": {
+      "slug": "alvar-quivira",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459820/more-group/spain/projects/alvar-quivira/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/alvarrendering-5e4301b18c367.jpg",
+      "alt": "Alvar at Quivira Los Cabos architectural rendering",
+      "public_id": "more-group/spain/projects/alvar-quivira/hero"
+    },
+    "alvar-quivira:inline-1": {
+      "slug": "alvar-quivira",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459821/more-group/spain/projects/alvar-quivira/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/residences-alvar-5e3d8dcb1fa29.jpg",
+      "alt": "Alvar at Quivira residences overview",
+      "public_id": "more-group/spain/projects/alvar-quivira/inline_1"
+    },
+    "alvar-quivira:inline-2": {
+      "slug": "alvar-quivira",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459821/more-group/spain/projects/alvar-quivira/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Insets_0001_GettingHere-58a4789e1dd38.jpg",
+      "alt": "Quivira Los Cabos access and master plan context for Alvar",
+      "public_id": "more-group/spain/projects/alvar-quivira/inline_2"
+    },
+    "amara-tulum:hero": {
+      "slug": "amara-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459823/more-group/spain/projects/amara-tulum/hero.jpg",
+      "source_url": "https://owninmayanriviera.com/wp-content/uploads/2025/11/AMA_01_FACHADA_PRINCIPAL_DIA_240531.jpg",
+      "alt": "Amara Tulum Region 8 main facade daytime render",
+      "public_id": "more-group/spain/projects/amara-tulum/hero"
+    },
+    "amara-tulum:inline-1": {
+      "slug": "amara-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459824/more-group/spain/projects/amara-tulum/inline_1.jpg",
+      "source_url": "https://owninmayanriviera.com/wp-content/uploads/2025/11/AMA_17_SWIMUP_240605.jpg",
+      "alt": "Amara Tulum swim-up pool amenity render",
+      "public_id": "more-group/spain/projects/amara-tulum/inline_1"
+    },
+    "amara-tulum:inline-2": {
+      "slug": "amara-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459824/more-group/spain/projects/amara-tulum/inline_2.jpg",
+      "source_url": "https://owninmayanriviera.com/wp-content/uploads/2025/11/06-ROOF-TOP-POOL.jpg",
+      "alt": "Amara Tulum rooftop pool and lounge amenity",
+      "public_id": "more-group/spain/projects/amara-tulum/inline_2"
+    },
+    "amaru-inka:hero": {
+      "slug": "amaru-inka",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459825/more-group/spain/projects/amaru-inka/hero.jpg",
+      "source_url": "https://rivieramayacozy.com/wp-content/uploads/2023/03/Amaru-1.jpg",
+      "alt": "Amaru Inka Aldea Zama boutique condo exterior",
+      "public_id": "more-group/spain/projects/amaru-inka/hero"
+    },
+    "amaru-inka:inline-2": {
+      "slug": "amaru-inka",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459826/more-group/spain/projects/amaru-inka/inline_2.jpg",
+      "source_url": "https://rivieramayacozy.com/wp-content/uploads/2023/03/Amaru-3.jpg",
+      "alt": "Amaru Inka unit interior living area render",
+      "public_id": "more-group/spain/projects/amaru-inka/inline_2"
+    },
+    "amaru-inka:inline-1": {
+      "slug": "amaru-inka",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459826/more-group/spain/projects/amaru-inka/inline_1.jpg",
+      "source_url": "https://rivieramayacozy.com/wp-content/uploads/2023/03/Amaru-2.jpg",
+      "alt": "Amaru Inka rooftop pool and amenity deck",
+      "public_id": "more-group/spain/projects/amaru-inka/inline_1"
+    },
+    "ceiba-25-condo-paradise:hero": {
+      "slug": "ceiba-25-condo-paradise",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459829/more-group/spain/projects/ceiba-25-condo-paradise/hero.png",
+      "source_url": "https://simca.mx/uploads/18/1618500451_951ad9e0ec6e58094702.png",
+      "alt": "Ceiba at 25 Condo Paradise exterior rendering",
+      "public_id": "more-group/spain/projects/ceiba-25-condo-paradise/hero"
+    },
+    "ceiba-25-condo-paradise:inline-1": {
+      "slug": "ceiba-25-condo-paradise",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459830/more-group/spain/projects/ceiba-25-condo-paradise/inline_1.png",
+      "source_url": "https://simca.mx/uploads/18/1618500459_962041102d02e49758a2.png",
+      "alt": "Ceiba at 25 pool and amenity deck",
+      "public_id": "more-group/spain/projects/ceiba-25-condo-paradise/inline_1"
+    },
+    "ceiba-25-condo-paradise:inline-2": {
+      "slug": "ceiba-25-condo-paradise",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459830/more-group/spain/projects/ceiba-25-condo-paradise/inline_2.png",
+      "source_url": "https://simca.mx/uploads/18/1618500465_c836b47ea03d0ac3e150.png",
+      "alt": "Ceiba at 25 Playa del Carmen condo tower view",
+      "public_id": "more-group/spain/projects/ceiba-25-condo-paradise/inline_2"
+    },
+    "chileno-bay-residences:hero": {
+      "slug": "chileno-bay-residences",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459834/more-group/spain/projects/chileno-bay-residences/hero.jpg",
+      "source_url": "https://chilenobayresidences.com/wp-content/uploads/2026/02/CBR_Exterior_Beach_2017_29-2.jpeg",
+      "alt": "Chileno Bay Residences beachfront exterior Los Cabos",
+      "public_id": "more-group/spain/projects/chileno-bay-residences/hero"
+    },
+    "chileno-bay-residences:inline-1": {
+      "slug": "chileno-bay-residences",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459834/more-group/spain/projects/chileno-bay-residences/inline_1.jpg",
+      "source_url": "https://chilenobayresidences.com/wp-content/uploads/2026/02/CBR_Wellness_Spa_Garden_Ice-Fountain_2017_01-2.jpeg",
+      "alt": "Chileno Bay Residences wellness spa garden",
+      "public_id": "more-group/spain/projects/chileno-bay-residences/inline_1"
+    },
+    "chileno-bay-residences:inline-2": {
+      "slug": "chileno-bay-residences",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459835/more-group/spain/projects/chileno-bay-residences/inline_2.jpg",
+      "source_url": "https://chilenobayresidences.com/wp-content/uploads/2022/02/RemoteMediaFile_6619340_0_2022_02_01_07_43_02.jpeg",
+      "alt": "Chileno Bay Residences resort amenities and coastline",
+      "public_id": "more-group/spain/projects/chileno-bay-residences/inline_2"
+    },
+    "constelada-tulum:inline-1": {
+      "slug": "constelada-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459837/more-group/spain/projects/constelada-tulum/inline_1.png",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/69ab16c0625cf56caeaf83bf_Constelada%20Roof.png",
+      "alt": "Constelada rooftop terrace and pool amenity",
+      "public_id": "more-group/spain/projects/constelada-tulum/inline_1"
+    },
+    "constelada-tulum:inline-2": {
+      "slug": "constelada-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459837/more-group/spain/projects/constelada-tulum/inline_2.png",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/69ab16c06f275e32bf8c0abf_Constelada%20Gimnasio.png",
+      "alt": "Constelada equipped gym interior render",
+      "public_id": "more-group/spain/projects/constelada-tulum/inline_2"
+    },
+    "copala-quivira:inline-1": {
+      "slug": "copala-quivira",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459840/more-group/spain/projects/copala-quivira/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Inset-LargeInterior-Copala-58a46726aac5f.jpg",
+      "alt": "Copala at Quivira Pacific-side condominium interior",
+      "public_id": "more-group/spain/projects/copala-quivira/inline_1"
+    },
+    "copala-quivira:hero": {
+      "slug": "copala-quivira",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459841/more-group/spain/projects/copala-quivira/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+      "alt": "Copala at Quivira Los Cabos residences exterior",
+      "public_id": "more-group/spain/projects/copala-quivira/hero"
+    },
+    "constelada-tulum:hero": {
+      "slug": "constelada-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459842/more-group/spain/projects/constelada-tulum/hero.png",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/69ab16c1df741563d388fafd_Constelada%20Frente.png",
+      "alt": "Constelada Tulum front elevation Aldea Zama",
+      "public_id": "more-group/spain/projects/constelada-tulum/hero"
+    },
+    "copala-quivira:inline-2": {
+      "slug": "copala-quivira",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459843/more-group/spain/projects/copala-quivira/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Copala-Clubhouse-58f623071edd6.jpg",
+      "alt": "Copala at Quivira clubhouse and golf community",
+      "public_id": "more-group/spain/projects/copala-quivira/inline_2"
+    },
+    "coronado-quivira:hero": {
+      "slug": "coronado-quivira",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459844/more-group/spain/projects/coronado-quivira/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0003_Coronado-589cc7d986349-930x550.jpg",
+      "alt": "Coronado at Quivira Los Cabos residences hero",
+      "public_id": "more-group/spain/projects/coronado-quivira/hero"
+    },
+    "coronado-quivira:inline-1": {
+      "slug": "coronado-quivira",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459844/more-group/spain/projects/coronado-quivira/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Coronado_ListView_0000s_0001_EspejoModel-58acbd19a9bd2.jpg",
+      "alt": "Coronado at Quivira Espejo model home interior",
+      "public_id": "more-group/spain/projects/coronado-quivira/inline_1"
+    },
+    "coronado-quivira:inline-2": {
+      "slug": "coronado-quivira",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459846/more-group/spain/projects/coronado-quivira/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cornonadoroom-5dae3ed2914b5.jpg",
+      "alt": "Coronado at Quivira luxury residence living room",
+      "public_id": "more-group/spain/projects/coronado-quivira/inline_2"
+    },
+    "diamante-ocean-club:hero": {
+      "slug": "diamante-ocean-club",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459847/more-group/spain/projects/diamante-ocean-club/hero.jpg",
+      "source_url": "https://diamantecabosanlucas.com/wp-content/uploads/2022/10/OCR_Hero-2-scaled.jpg",
+      "alt": "Diamante Ocean Club Los Cabos hero aerial",
+      "public_id": "more-group/spain/projects/diamante-ocean-club/hero"
+    },
+    "diamante-ocean-club:inline-1": {
+      "slug": "diamante-ocean-club",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459847/more-group/spain/projects/diamante-ocean-club/inline_1.jpg",
+      "source_url": "https://diamantecabosanlucas.com/wp-content/uploads/2022/10/OCR_Slider_1.jpg",
+      "alt": "Diamante Ocean Club residences and Pacific views",
+      "public_id": "more-group/spain/projects/diamante-ocean-club/inline_1"
+    },
+    "diamante-ocean-club:inline-2": {
+      "slug": "diamante-ocean-club",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459850/more-group/spain/projects/diamante-ocean-club/inline_2.jpg",
+      "source_url": "https://diamantecabosanlucas.com/wp-content/uploads/2022/10/OCR_Slider_5.jpg",
+      "alt": "Diamante Ocean Club luxury amenity and architecture",
+      "public_id": "more-group/spain/projects/diamante-ocean-club/inline_2"
+    },
+    "el-lago-querencia:inline-1": {
+      "slug": "el-lago-querencia",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459850/more-group/spain/projects/el-lago-querencia/inline_1.jpg",
+      "source_url": "https://qcabo.com/wp-content/uploads/img-carousel-1-desktop-2.jpg",
+      "alt": "El Lago Querencia villa exterior and lake views",
+      "public_id": "more-group/spain/projects/el-lago-querencia/inline_1"
+    },
+    "el-lago-querencia:hero": {
+      "slug": "el-lago-querencia",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459850/more-group/spain/projects/el-lago-querencia/hero.jpg",
+      "source_url": "https://qcabo.com/wp-content/uploads/hero-desktop2-scaled.jpg",
+      "alt": "El Lago Querencia golf and lake villas hero",
+      "public_id": "more-group/spain/projects/el-lago-querencia/hero"
+    },
+    "four-seasons-costa-palmas:hero": {
+      "slug": "four-seasons-costa-palmas",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459852/more-group/spain/projects/four-seasons-costa-palmas/hero.jpg",
+      "source_url": "https://media.costapalmas.com/2024/06/four-seasons-private-residences.jpg",
+      "alt": "Four Seasons Private Residences Costa Palmas hero",
+      "public_id": "more-group/spain/projects/four-seasons-costa-palmas/hero"
+    },
+    "four-seasons-costa-palmas:inline-1": {
+      "slug": "four-seasons-costa-palmas",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459854/more-group/spain/projects/four-seasons-costa-palmas/inline_1.jpg",
+      "source_url": "https://media.costapalmas.com/2024/07/Four-Seasons-Golf-Villas-SV-180026-WR.jpg",
+      "alt": "Four Seasons Costa Palmas golf villa rendering",
+      "public_id": "more-group/spain/projects/four-seasons-costa-palmas/inline_1"
+    },
+    "el-lago-querencia:inline-2": {
+      "slug": "el-lago-querencia",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459854/more-group/spain/projects/el-lago-querencia/inline_2.jpg",
+      "source_url": "https://qcabo.com/wp-content/uploads/img-carousel-2-desktop-3.jpg",
+      "alt": "El Lago Querencia community amenity and architecture",
+      "public_id": "more-group/spain/projects/el-lago-querencia/inline_2"
+    },
+    "four-seasons-costa-palmas:inline-2": {
+      "slug": "four-seasons-costa-palmas",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459855/more-group/spain/projects/four-seasons-costa-palmas/inline_2.jpg",
+      "source_url": "https://media.costapalmas.com/2024/07/Four-Seasons-Oceanview-Villas-LCP_092.jpg",
+      "alt": "Four Seasons Costa Palmas oceanview villa Sea of Cortez",
+      "public_id": "more-group/spain/projects/four-seasons-costa-palmas/inline_2"
+    },
+    "four-seasons-punta-mita:hero": {
+      "slug": "four-seasons-punta-mita",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459857/more-group/spain/projects/four-seasons-punta-mita/hero.jpg",
+      "source_url": "https://www.puntamita.com/wp-content/uploads/2017/03/four_seasons.jpg",
+      "alt": "Four Seasons Private Residences Punta Mita hero",
+      "public_id": "more-group/spain/projects/four-seasons-punta-mita/hero"
+    },
+    "four-seasons-punta-mita:inline-1": {
+      "slug": "four-seasons-punta-mita",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459857/more-group/spain/projects/four-seasons-punta-mita/inline_1.jpg",
+      "source_url": "https://realestate.puntamita.com/wp-content/uploads/2017/05/FSPV-Sunset.jpg",
+      "alt": "Four Seasons Punta Mita sunset villa Pacific view",
+      "public_id": "more-group/spain/projects/four-seasons-punta-mita/inline_1"
+    },
+    "four-seasons-punta-mita:inline-2": {
+      "slug": "four-seasons-punta-mita",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459859/more-group/spain/projects/four-seasons-punta-mita/inline_2.webp",
+      "source_url": "https://realestate.puntamita.com/wp-content/uploads/2025/12/Four-Season-Villa-37_6-1980x1319.webp",
+      "alt": "Four Seasons Punta Mita luxury villa interior and terrace",
+      "public_id": "more-group/spain/projects/four-seasons-punta-mita/inline_2"
+    },
+    "fundadores-puerto-los-cabos:inline-1": {
+      "slug": "fundadores-puerto-los-cabos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459859/more-group/spain/projects/fundadores-puerto-los-cabos/inline_1.jpg",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/683639b5ec10703bbb9ecaee/1753471583333-9KR7Z36XG34GQCJVL4G1/FundadoresRE2_1600x1067.jpg",
+      "alt": "Fundadores Puerto Los Cabos hillside and golf community",
+      "public_id": "more-group/spain/projects/fundadores-puerto-los-cabos/inline_1"
+    },
+    "fundadores-puerto-los-cabos:hero": {
+      "slug": "fundadores-puerto-los-cabos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459859/more-group/spain/projects/fundadores-puerto-los-cabos/hero.jpg",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/683639b5ec10703bbb9ecaee/1753471583154-UC8MPUJXJ1226EVG10NF/FundadoresRE3_1600x1067.jpg",
+      "alt": "Fundadores at Puerto Los Cabos luxury real estate",
+      "public_id": "more-group/spain/projects/fundadores-puerto-los-cabos/hero"
+    },
+    "fundadores-puerto-los-cabos:inline-2": {
+      "slug": "fundadores-puerto-los-cabos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459862/more-group/spain/projects/fundadores-puerto-los-cabos/inline_2.jpg",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/683639b5ec10703bbb9ecaee/1755101637708-OTCBB1CSQZ9NOO404UFU/Puerto+Los+Cabos_Real+Estate_Casa+55+Fundadores_1.jpg",
+      "alt": "Casa 55 Fundadores Puerto Los Cabos residence",
+      "public_id": "more-group/spain/projects/fundadores-puerto-los-cabos/inline_2"
+    },
+    "hideaways-los-cabos:inline-1": {
+      "slug": "hideaways-los-cabos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459862/more-group/spain/projects/hideaways-los-cabos/inline_1.jpg",
+      "source_url": "https://assets.cdn.filesafe.space/4WKAshJWeeeLZiJbuxHA/media/67b370dcf7165730ef3c2e23.jpeg",
+      "alt": "Hideaways Los Cabos San José del Cabo condo exterior",
+      "public_id": "more-group/spain/projects/hideaways-los-cabos/inline_1"
+    },
+    "hideaways-los-cabos:inline-2": {
+      "slug": "hideaways-los-cabos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459865/more-group/spain/projects/hideaways-los-cabos/inline_2.jpg",
+      "source_url": "https://assets.cdn.filesafe.space/4WKAshJWeeeLZiJbuxHA/media/67b371ac2c2f04f45d0d142c.jpeg",
+      "alt": "Hideaways Los Cabos amenity deck and Pacific views",
+      "public_id": "more-group/spain/projects/hideaways-los-cabos/inline_2"
+    },
+    "inna-beach-condos:hero": {
+      "slug": "inna-beach-condos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459867/more-group/spain/projects/inna-beach-condos/hero.jpg",
+      "source_url": "https://lavallepeniche.com/storage/2023/09/FACHADA-MAR-FRONTAL.jpg",
+      "alt": "Inna Beach Condos Puerto Morelos seafront facade",
+      "public_id": "more-group/spain/projects/inna-beach-condos/hero"
+    },
+    "junglar-kaybe:hero": {
+      "slug": "junglar-kaybe",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459869/more-group/spain/projects/junglar-kaybe/hero.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68aca7808a0c3b6c074d2f68_Proyecto%20Junglar.webp",
+      "alt": "Junglar at Kaybé townhouse community aerial",
+      "public_id": "more-group/spain/projects/junglar-kaybe/hero"
+    },
+    "inna-beach-condos:inline-2": {
+      "slug": "inna-beach-condos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459869/more-group/spain/projects/inna-beach-condos/inline_2.jpg",
+      "source_url": "https://lavallepeniche.com/storage/2023/09/LOBBY.jpg",
+      "alt": "Inna Beach Condos arrival lobby and amenity",
+      "public_id": "more-group/spain/projects/inna-beach-condos/inline_2"
+    },
+    "inna-beach-condos:inline-1": {
+      "slug": "inna-beach-condos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459869/more-group/spain/projects/inna-beach-condos/inline_1.jpg",
+      "source_url": "https://lavallepeniche.com/storage/2023/09/AEREA-1.jpg",
+      "alt": "Inna Beach Condos aerial Puerto Morelos coastline",
+      "public_id": "more-group/spain/projects/inna-beach-condos/inline_1"
+    },
+    "junglar-kaybe:inline-2": {
+      "slug": "junglar-kaybe",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459870/more-group/spain/projects/junglar-kaybe/inline_2.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68aca77c1267feadab95abcd_junglar%2020.webp",
+      "alt": "Junglar Kaybé jungle-integrated villa exterior",
+      "public_id": "more-group/spain/projects/junglar-kaybe/inline_2"
+    },
+    "junglar-kaybe:inline-1": {
+      "slug": "junglar-kaybe",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459871/more-group/spain/projects/junglar-kaybe/inline_1.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68acadfff4dd9bfcde7472b8_JUNGLAR_FOTO_ALTEA.webp",
+      "alt": "Junglar Kaybé Altea phase exterior",
+      "public_id": "more-group/spain/projects/junglar-kaybe/inline_1"
+    },
+    "kabana-aldea-zama:hero": {
+      "slug": "kabana-aldea-zama",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459872/more-group/spain/projects/kabana-aldea-zama/hero.jpg",
+      "source_url": "https://kabana.mx/images/sliders/2/slide-1.jpg",
+      "alt": "Kabana Aldea Zama Premium condo exterior",
+      "public_id": "more-group/spain/projects/kabana-aldea-zama/hero"
+    },
+    "kabana-aldea-zama:inline-1": {
+      "slug": "kabana-aldea-zama",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459873/more-group/spain/projects/kabana-aldea-zama/inline_1.jpg",
+      "source_url": "https://kabana.mx/images/sliders/2/slide-2.jpg",
+      "alt": "Kabana Tulum natural setting and architecture",
+      "public_id": "more-group/spain/projects/kabana-aldea-zama/inline_1"
+    },
+    "kabana-aldea-zama:inline-2": {
+      "slug": "kabana-aldea-zama",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459874/more-group/spain/projects/kabana-aldea-zama/inline_2.jpg",
+      "source_url": "https://kabana.mx/images/sliders/2/home2_slider3.jpg",
+      "alt": "Kabana pool and jungle-integrated amenity deck",
+      "public_id": "more-group/spain/projects/kabana-aldea-zama/inline_2"
+    },
+    "la-reserva-querencia:hero": {
+      "slug": "la-reserva-querencia",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459876/more-group/spain/projects/la-reserva-querencia/hero.jpg",
+      "source_url": "https://dlajgvw9htjpb.cloudfront.net/cms/d60dd635-8983-45c2-843d-507c3e3e72e8/25-4851/-5817468571895516957.jpg",
+      "alt": "La Reserva at Querencia boutique condo rendering",
+      "public_id": "more-group/spain/projects/la-reserva-querencia/hero"
+    },
+    "la-reserva-querencia:inline-2": {
+      "slug": "la-reserva-querencia",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459877/more-group/spain/projects/la-reserva-querencia/inline_2.jpg",
+      "source_url": "https://snellrealestate.com/wp-content/uploads/2025/08/20241112204745185561000000-o-scaled.jpg",
+      "alt": "La Reserva at Querencia pool and fitness amenity render",
+      "public_id": "more-group/spain/projects/la-reserva-querencia/inline_2"
+    },
+    "la-reserva-querencia:inline-1": {
+      "slug": "la-reserva-querencia",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459877/more-group/spain/projects/la-reserva-querencia/inline_1.jpg",
+      "source_url": "https://dlajgvw9htjpb.cloudfront.net/cms/d60dd635-8983-45c2-843d-507c3e3e72e8/24-4016/-6600878216111569912.jpg",
+      "alt": "La Reserva at Querencia Horizontes subdivision exterior",
+      "public_id": "more-group/spain/projects/la-reserva-querencia/inline_1"
+    },
+    "luum-zama:inline-1": {
+      "slug": "luum-zama",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459880/more-group/spain/projects/luum-zama/inline_1.jpg",
+      "source_url": "https://selvazama.mx/wp-content/uploads/2021/10/Mask-1@2x-3.jpg",
+      "alt": "Luum Zama jungle-integrated residential landscape",
+      "public_id": "more-group/spain/projects/luum-zama/inline_1"
+    },
+    "luum-zama:hero": {
+      "slug": "luum-zama",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459879/more-group/spain/projects/luum-zama/hero.webp",
+      "source_url": "https://selvazama.mx/wp-content/uploads/2024/07/Heroe_Eng_web-1.webp",
+      "alt": "Luum Zama Aldea Zama gated community master plan",
+      "public_id": "more-group/spain/projects/luum-zama/hero"
+    },
+    "luum-zama:inline-2": {
+      "slug": "luum-zama",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459881/more-group/spain/projects/luum-zama/inline_2.jpg",
+      "source_url": "https://selvazama.mx/wp-content/uploads/2024/10/04_charlesmiroux1982_Luxury_villa_tulum_lifestyle_outdoor_wabi_sab_540c9267-90ef-4996-94eb-339d6d50c797.jpg",
+      "alt": "Luum Zama eco-luxury outdoor living concept",
+      "public_id": "more-group/spain/projects/luum-zama/inline_2"
+    },
+    "maresol-downtown-studios:hero": {
+      "slug": "maresol-downtown-studios",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459883/more-group/spain/projects/maresol-downtown-studios/hero.jpg",
+      "source_url": "https://simca.mx/uploads/28/1704994376_5d20850165d74274b0c6.jpg",
+      "alt": "Maresol Downtown Studios exterior Playa del Carmen",
+      "public_id": "more-group/spain/projects/maresol-downtown-studios/hero"
+    },
+    "maresol-downtown-studios:inline-1": {
+      "slug": "maresol-downtown-studios",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459883/more-group/spain/projects/maresol-downtown-studios/inline_1.jpg",
+      "source_url": "https://simca.mx/uploads/28/1704994377_e7b1e9a27e1216b02e53.jpg",
+      "alt": "Maresol studio building facade near Fifth Avenue",
+      "public_id": "more-group/spain/projects/maresol-downtown-studios/inline_1"
+    },
+    "mavila-quivira:hero": {
+      "slug": "mavila-quivira",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459885/more-group/spain/projects/mavila-quivira/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/49658277173_5b487b2579_c-5f46e95828ab0.jpg",
+      "alt": "Mavila at Quivira Los Cabos condominium community exterior",
+      "public_id": "more-group/spain/projects/mavila-quivira/hero"
+    },
+    "mavila-quivira:inline-2": {
+      "slug": "mavila-quivira",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459887/more-group/spain/projects/mavila-quivira/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/intro-inset-1-58ed125b4d547-5dc99e6b8c6c3.jpg",
+      "alt": "Mavila at Quivira lifestyle and amenity inset",
+      "public_id": "more-group/spain/projects/mavila-quivira/inline_2"
+    },
+    "mavila-quivira:inline-1": {
+      "slug": "mavila-quivira",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459887/more-group/spain/projects/mavila-quivira/inline_1.png",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/dsc_1106_web-5e33ba40a67b4-optimized.png",
+      "alt": "Mavila at Quivira building and Pacific-side residences",
+      "public_id": "more-group/spain/projects/mavila-quivira/inline_1"
+    },
+    "montage-punta-mita:hero": {
+      "slug": "montage-punta-mita",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459890/more-group/spain/projects/montage-punta-mita/hero.jpg",
+      "source_url": "https://mnt-uploads-montage-residences-prod.s3.amazonaws.com/uploads/2025/12/11161945/Montage-Punta-Mita-1920x730-1-1000x643.jpeg",
+      "alt": "Montage Residences Punta Mita peninsula hero",
+      "public_id": "more-group/spain/projects/montage-punta-mita/hero"
+    },
+    "maresol-downtown-studios:inline-2": {
+      "slug": "maresol-downtown-studios",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459891/more-group/spain/projects/maresol-downtown-studios/inline_2.jpg",
+      "source_url": "https://simca.mx/uploads/28/1704995009_2835ec83529041cd4a13.jpg",
+      "alt": "Maresol Downtown Studios pool and common areas",
+      "public_id": "more-group/spain/projects/maresol-downtown-studios/inline_2"
+    },
+    "montage-punta-mita:inline-2": {
+      "slug": "montage-punta-mita",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459893/more-group/spain/projects/montage-punta-mita/inline_2.jpg",
+      "source_url": "https://mnt-uploads-montage-residences-prod.s3.amazonaws.com/uploads/2026/05/12083206/Montage_Film_04_010_Yacht-Arrival_Aerial_Still_260505-1000x643.jpg",
+      "alt": "Aerial yacht arrival Montage Residences Punta Mita",
+      "public_id": "more-group/spain/projects/montage-punta-mita/inline_2"
+    },
+    "montage-punta-mita:inline-1": {
+      "slug": "montage-punta-mita",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459893/more-group/spain/projects/montage-punta-mita/inline_1.jpg",
+      "source_url": "https://mnt-uploads-montage-residences-prod.s3.amazonaws.com/uploads/2026/03/30094831/MRPM-Residential-Renderings-2025-ph-shutters-abiertos-1-1920x1080.jpg",
+      "alt": "Montage Residences Punta Mita residential rendering",
+      "public_id": "more-group/spain/projects/montage-punta-mita/inline_1"
+    },
+    "mukta-369:hero": {
+      "slug": "mukta-369",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459894/more-group/spain/projects/mukta-369/hero.jpg",
+      "source_url": "https://play-investments.com/wp-content/uploads/2025/01/departamento-en-venta-en-puerto-morelos-mukta-369-ruta-de-los-cenotes-01.jpg",
+      "alt": "Mukta 369 Puerto Morelos jungle condo exterior render",
+      "public_id": "more-group/spain/projects/mukta-369/hero"
+    },
+    "mukta-369:inline-1": {
+      "slug": "mukta-369",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459896/more-group/spain/projects/mukta-369/inline_1.jpg",
+      "source_url": "https://play-investments.com/wp-content/uploads/2025/01/departamento-en-venta-en-puerto-morelos-mukta-369-ruta-de-los-cenotes-02.jpg",
+      "alt": "Mukta 369 amenity pool and clubhouse area",
+      "public_id": "more-group/spain/projects/mukta-369/inline_1"
+    },
+    "mukta-369:inline-2": {
+      "slug": "mukta-369",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459897/more-group/spain/projects/mukta-369/inline_2.jpg",
+      "source_url": "https://play-investments.com/wp-content/uploads/2025/01/departamento-en-venta-en-puerto-morelos-mukta-369-ruta-de-los-cenotes-03.jpg",
+      "alt": "Mukta 369 sustainable residential community aerial",
+      "public_id": "more-group/spain/projects/mukta-369/inline_2"
+    },
+    "nalu-sea-living:hero": {
+      "slug": "nalu-sea-living",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459897/more-group/spain/projects/nalu-sea-living/hero.jpg",
+      "source_url": "https://nalu.mx/wp-content/uploads/2024/04/1-Fachada-1-2-1.jpg",
+      "alt": "NALU Sea Living Puerto Morelos building facade",
+      "public_id": "more-group/spain/projects/nalu-sea-living/hero"
+    },
+    "nalu-sea-living:inline-1": {
+      "slug": "nalu-sea-living",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459899/more-group/spain/projects/nalu-sea-living/inline_1.jpg",
+      "source_url": "https://nalu.mx/wp-content/uploads/2024/04/3-Rooftop-1-1.jpg",
+      "alt": "NALU Sea Living rooftop pool and lounge",
+      "public_id": "more-group/spain/projects/nalu-sea-living/inline_1"
+    },
+    "nhoa-aldea-zama:hero": {
+      "slug": "nhoa-aldea-zama",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459899/more-group/spain/projects/nhoa-aldea-zama/hero.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68caec26a0716e19d07ffdc6_Nhoa.webp",
+      "alt": "NHOA Aldea Zama condo exterior rendering",
+      "public_id": "more-group/spain/projects/nhoa-aldea-zama/hero"
+    },
+    "nalu-sea-living:inline-2": {
+      "slug": "nalu-sea-living",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459901/more-group/spain/projects/nalu-sea-living/inline_2.jpg",
+      "source_url": "https://nalu.mx/wp-content/uploads/2024/04/7-Balcon-1-1.jpg",
+      "alt": "NALU Sea Living balcony ocean-view unit",
+      "public_id": "more-group/spain/projects/nalu-sea-living/inline_2"
+    },
+    "nhoa-aldea-zama:inline-2": {
+      "slug": "nhoa-aldea-zama",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459901/more-group/spain/projects/nhoa-aldea-zama/inline_2.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68ac990a45487de936a2c369_gimnasio%20equipado.webp",
+      "alt": "NHOA equipped gym and wellness area",
+      "public_id": "more-group/spain/projects/nhoa-aldea-zama/inline_2"
+    },
+    "nhoa-aldea-zama:inline-1": {
+      "slug": "nhoa-aldea-zama",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459901/more-group/spain/projects/nhoa-aldea-zama/inline_1.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68ac990ade6b044cbbd31eb1_alberca%20y%20soleadero.webp",
+      "alt": "NHOA pool and sun deck amenity",
+      "public_id": "more-group/spain/projects/nhoa-aldea-zama/inline_1"
+    },
+    "oceana-residences:inline-1": {
+      "slug": "oceana-residences",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459904/more-group/spain/projects/oceana-residences/inline_1.jpg",
+      "source_url": "https://www.oceanaresidences.mx/img/gallery/muestra/5.jpg",
+      "alt": "Oceana Residences tower and beachfront setting",
+      "public_id": "more-group/spain/projects/oceana-residences/inline_1"
+    },
+    "oceana-residences:inline-2": {
+      "slug": "oceana-residences",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459904/more-group/spain/projects/oceana-residences/inline_2.jpg",
+      "source_url": "https://www.oceanaresidences.mx/img/gallery/renders/1.jpg",
+      "alt": "Oceana Residences interior living area render",
+      "public_id": "more-group/spain/projects/oceana-residences/inline_2"
+    },
+    "oceana-residences:hero": {
+      "slug": "oceana-residences",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459905/more-group/spain/projects/oceana-residences/hero.jpg",
+      "source_url": "https://www.oceanaresidences.mx/img/gallery/muestra/1.jpg",
+      "alt": "Oceana Residences Playa del Carmen Mamitas Beach exterior",
+      "public_id": "more-group/spain/projects/oceana-residences/hero"
+    },
+    "omara-tulum:hero": {
+      "slug": "omara-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459906/more-group/spain/projects/omara-tulum/hero.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68ac2ce3083155ebbbd02a3b_omara-exterior_7.webp",
+      "alt": "Omara Tulum Aldea Zama exterior rendering",
+      "public_id": "more-group/spain/projects/omara-tulum/hero"
+    },
+    "omara-tulum:inline-1": {
+      "slug": "omara-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459906/more-group/spain/projects/omara-tulum/inline_1.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68ac2cca4b8bfaf95580b707_showroom_1.webp",
+      "alt": "Omara showroom finished unit interior",
+      "public_id": "more-group/spain/projects/omara-tulum/inline_1"
+    },
+    "omara-tulum:inline-2": {
+      "slug": "omara-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459907/more-group/spain/projects/omara-tulum/inline_2.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68ac2b7a9a5f1c00b16e4e0e_omara-entry.webp",
+      "alt": "Omara gated entry and arrival lobby",
+      "public_id": "more-group/spain/projects/omara-tulum/inline_2"
+    },
+    "one-only-mandarina:hero": {
+      "slug": "one-only-mandarina",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459908/more-group/spain/projects/one-only-mandarina/hero.jpg",
+      "source_url": "https://rlhproperties.com/wp-content/uploads/2021/12/One_Only_Mandarina_Resort_PoloAndEquestrianClub_PoloPlaying_5218_MASTER_Small.jpg",
+      "alt": "One&Only Mandarina polo club and resort setting",
+      "public_id": "more-group/spain/projects/one-only-mandarina/hero"
+    },
+    "one-only-mandarina:inline-1": {
+      "slug": "one-only-mandarina",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459908/more-group/spain/projects/one-only-mandarina/inline_1.jpg",
+      "source_url": "https://rlhproperties.com/wp-content/uploads/2021/12/One_Only_Mandarina_Resort_PoloAndEquestrianClub_PoloPlaying_5313_MASTER_Small.jpg",
+      "alt": "One&Only Mandarina equestrian club aerial",
+      "public_id": "more-group/spain/projects/one-only-mandarina/inline_1"
+    },
+    "paravian-playa:hero": {
+      "slug": "paravian-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459911/more-group/spain/projects/paravian-playa/hero.jpg",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/69f8e4b50e25b9e15d7d0deb_Paravian_Amenidades%20(10).jpg",
+      "alt": "Paravian Playa del Carmen amenity terrace render",
+      "public_id": "more-group/spain/projects/paravian-playa/hero"
+    },
+    "paravian-playa:inline-1": {
+      "slug": "paravian-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459910/more-group/spain/projects/paravian-playa/inline_1.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68ac284997ffe9bd8785499a_1.webp",
+      "alt": "Paravian tower exterior Playa corridor",
+      "public_id": "more-group/spain/projects/paravian-playa/inline_1"
+    },
+    "one-only-mandarina:inline-2": {
+      "slug": "one-only-mandarina",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459912/more-group/spain/projects/one-only-mandarina/inline_2.jpg",
+      "source_url": "https://rlhproperties.com/wp-content/uploads/2021/12/mn0193RGB.jpg",
+      "alt": "One&Only Mandarina ultra-luxury villa coastline",
+      "public_id": "more-group/spain/projects/one-only-mandarina/inline_2"
+    },
+    "paravian-playa:inline-2": {
+      "slug": "paravian-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459914/more-group/spain/projects/paravian-playa/inline_2.webp",
+      "source_url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68ac283f331875d60740e8a6_paravian-pool.webp",
+      "alt": "Paravian resort-style pool deck",
+      "public_id": "more-group/spain/projects/paravian-playa/inline_2"
+    },
+    "pendry-punta-mita:inline-1": {
+      "slug": "pendry-punta-mita",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459914/more-group/spain/projects/pendry-punta-mita/inline_1.webp",
+      "source_url": "https://mnt-uploads-pendry-residences.s3.amazonaws.com/uploads/2026/01/29133914/PMW2-LOBBY-03-1135-960x700-1.webp",
+      "alt": "Pendry Residences Punta Mita lobby interior",
+      "public_id": "more-group/spain/projects/pendry-punta-mita/inline_1"
+    },
+    "pendry-punta-mita:hero": {
+      "slug": "pendry-punta-mita",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459914/more-group/spain/projects/pendry-punta-mita/hero.jpg",
+      "source_url": "https://mnt-uploads-pendry-residences.s3.amazonaws.com/uploads/2026/01/20102753/Pendry-Punta-Mita1.jpg",
+      "alt": "Pendry Residences Punta Mita development hero",
+      "public_id": "more-group/spain/projects/pendry-punta-mita/hero"
+    },
+    "pendry-punta-mita:inline-2": {
+      "slug": "pendry-punta-mita",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459917/more-group/spain/projects/pendry-punta-mita/inline_2.jpg",
+      "source_url": "https://mnt-uploads-pendry-residences.s3.amazonaws.com/uploads/2026/01/20102838/UL-ThePendryResidences-01-Aerial_Night-07_logo-Horizontal-scaled-1-1-960x700.jpg",
+      "alt": "Pendry Residences Punta Mita aerial night rendering",
+      "public_id": "more-group/spain/projects/pendry-punta-mita/inline_2"
+    },
+    "piedra-de-mar:inline-1": {
+      "slug": "piedra-de-mar",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459917/more-group/spain/projects/piedra-de-mar/inline_1.jpg",
+      "source_url": "https://piedrademarpuertomorelos.com/wp-content/uploads/2026/01/foto1.jpg",
+      "alt": "Piedra de Mar Puerto Morelos building facade render",
+      "public_id": "more-group/spain/projects/piedra-de-mar/inline_1"
+    },
+    "piedra-de-mar:hero": {
+      "slug": "piedra-de-mar",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459917/more-group/spain/projects/piedra-de-mar/hero.jpg",
+      "source_url": "https://piedrademarpuertomorelos.com/wp-content/uploads/2026/01/hero.jpg",
+      "alt": "Piedra de Mar Puerto Morelos condo exterior hero",
+      "public_id": "more-group/spain/projects/piedra-de-mar/hero"
+    },
+    "ritz-carlton-puerto-los-cabos:inline-1": {
+      "slug": "ritz-carlton-puerto-los-cabos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459919/more-group/spain/projects/ritz-carlton-puerto-los-cabos/inline_1.jpg",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/683639b5ec10703bbb9ecaee/1753471081791-V0S5AE92XG4UFJRLWOXX/Zad%C3%BAnResidencesRE2_1600x1067.jpg",
+      "alt": "Ritz-Carlton Reserve branded residences at Puerto Los Cabos",
+      "public_id": "more-group/spain/projects/ritz-carlton-puerto-los-cabos/inline_1"
+    },
+    "piedra-de-mar:inline-2": {
+      "slug": "piedra-de-mar",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459920/more-group/spain/projects/piedra-de-mar/inline_2.jpg",
+      "source_url": "https://piedrademarpuertomorelos.com/wp-content/uploads/2026/01/foto2.jpg",
+      "alt": "Piedra de Mar pool and amenity deck Puerto Morelos",
+      "public_id": "more-group/spain/projects/piedra-de-mar/inline_2"
+    },
+    "ritz-carlton-puerto-los-cabos:inline-2": {
+      "slug": "ritz-carlton-puerto-los-cabos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459921/more-group/spain/projects/ritz-carlton-puerto-los-cabos/inline_2.jpg",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/683639b5ec10703bbb9ecaee/1753471079396-QGBTT156ABIMFGTEGAZ5/Zad%C3%BAnResidencesRE4_1600x1067.jpg",
+      "alt": "Zadún Reserve Residences luxury interiors Puerto Los Cabos",
+      "public_id": "more-group/spain/projects/ritz-carlton-puerto-los-cabos/inline_2"
+    },
+    "rosewood-mandarina:hero": {
+      "slug": "rosewood-mandarina",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459923/more-group/spain/projects/rosewood-mandarina/hero.jpg",
+      "source_url": "https://picasso.rosewoodhotelgroup.com/transform/553ee8c8-9837-4731-b0e5-613d1c1198db/RWMDR_Destination_Beach_Ocean-Aerial-2",
+      "alt": "Rosewood Mandarina ocean aerial destination view",
+      "public_id": "more-group/spain/projects/rosewood-mandarina/hero"
+    },
+    "rosewood-mandarina:inline-1": {
+      "slug": "rosewood-mandarina",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459924/more-group/spain/projects/rosewood-mandarina/inline_1.jpg",
+      "source_url": "https://picasso.rosewoodhotelgroup.com/transform/2f5f1b05-9cb5-4379-b332-f3cd69fd9a20/RWMDR_Destination_Beachfront_aerial_landscape",
+      "alt": "Rosewood Mandarina beachfront aerial landscape",
+      "public_id": "more-group/spain/projects/rosewood-mandarina/inline_1"
+    },
+    "ritz-carlton-puerto-los-cabos:hero": {
+      "slug": "ritz-carlton-puerto-los-cabos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459925/more-group/spain/projects/ritz-carlton-puerto-los-cabos/hero.jpg",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/683639b5ec10703bbb9ecaee/1753470671765-VM1CC7ZTEGH4GZIZN404/Zad%C3%BAnResidencesRE1_1600x1067.jpg",
+      "alt": "Zadún Ritz-Carlton Reserve Residences Puerto Los Cabos",
+      "public_id": "more-group/spain/projects/ritz-carlton-puerto-los-cabos/hero"
+    },
+    "saint-marine:hero": {
+      "slug": "saint-marine",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459927/more-group/spain/projects/saint-marine/hero.jpg",
+      "source_url": "https://simca.mx/uploads/29/1721853376_38d264cbb8e578187c25.jpg",
+      "alt": "Saint Marine seafront condo exterior Playa del Carmen",
+      "public_id": "more-group/spain/projects/saint-marine/hero"
+    },
+    "rosewood-mandarina:inline-2": {
+      "slug": "rosewood-mandarina",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459927/more-group/spain/projects/rosewood-mandarina/inline_2.jpg",
+      "source_url": "https://picasso.rosewoodhotelgroup.com/transform/201722ad-9a18-4776-a2d6-93fd5c74d9d8/RWMDR_Facilities_Suites_Canalan-Beachfront-Villa_Living-Room_Terrace",
+      "alt": "Rosewood Mandarina Canalan beachfront villa living room",
+      "public_id": "more-group/spain/projects/rosewood-mandarina/inline_2"
+    },
+    "saint-marine:inline-1": {
+      "slug": "saint-marine",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459928/more-group/spain/projects/saint-marine/inline_1.jpg",
+      "source_url": "https://simca.mx/uploads/29/1721853538_8afc296eb48c0f01c1a2.jpg",
+      "alt": "Saint Marine beach-proximate tower rendering",
+      "public_id": "more-group/spain/projects/saint-marine/inline_1"
+    },
+    "saint-marine:inline-2": {
+      "slug": "saint-marine",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459930/more-group/spain/projects/saint-marine/inline_2.jpg",
+      "source_url": "https://simca.mx/uploads/29/1721853566_3a737f49bbe63cd61973.jpg",
+      "alt": "Saint Marine premium amenity deck and pool",
+      "public_id": "more-group/spain/projects/saint-marine/inline_2"
+    },
+    "selva-zama-mondo:inline-1": {
+      "slug": "selva-zama-mondo",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459931/more-group/spain/projects/selva-zama-mondo/inline_1.jpg",
+      "source_url": "https://selvazama.mx/wp-content/uploads/2024/10/charlesmiroux1982_Aerial_view_of_luxury_properties_in_Tulum._a52c78d9-2a63-4368-bf48-f5ab7abfbd1b.jpg",
+      "alt": "Selvazama master plan aerial Tulum",
+      "public_id": "more-group/spain/projects/selva-zama-mondo/inline_1"
+    },
+    "selva-zama-mondo:hero": {
+      "slug": "selva-zama-mondo",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459931/more-group/spain/projects/selva-zama-mondo/hero.webp",
+      "source_url": "https://selvazama.mx/wp-content/uploads/2024/07/Mondo_web.webp",
+      "alt": "Selva Zama Mondo multi-family development render",
+      "public_id": "more-group/spain/projects/selva-zama-mondo/hero"
+    },
+    "siari-ritz-carlton-reserve:inline-1": {
+      "slug": "siari-ritz-carlton-reserve",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459933/more-group/spain/projects/siari-ritz-carlton-reserve/inline_1.jpg",
+      "source_url": "https://cdn.prod.website-files.com/6743c3e6ac714cfd67db12cc/67997ae8bdfd71441fe5abc0_92a717e06e9c5a5147774dd0ee80300b_siari-development-rendering.jpg",
+      "alt": "Siari Ritz-Carlton Reserve development rendering",
+      "public_id": "more-group/spain/projects/siari-ritz-carlton-reserve/inline_1"
+    },
+    "selva-zama-mondo:inline-2": {
+      "slug": "selva-zama-mondo",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459933/more-group/spain/projects/selva-zama-mondo/inline_2.jpg",
+      "source_url": "https://selvazama.mx/wp-content/uploads/2024/10/02_charlesmiroux1982_different_images_of_tulum_lifestyle_outdoor_p_942f179b-b9b1-4da0-9441-87ac40e5ef3b.jpg",
+      "alt": "Selvazama outdoor lifestyle and community amenity",
+      "public_id": "more-group/spain/projects/selva-zama-mondo/inline_2"
+    },
+    "siari-ritz-carlton-reserve:inline-2": {
+      "slug": "siari-ritz-carlton-reserve",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459935/more-group/spain/projects/siari-ritz-carlton-reserve/inline_2.jpg",
+      "source_url": "https://cdn.prod.website-files.com/6743c3e6ac714cfd67db12cc/6801710f78ae5da4b12d4760_56337c2735be7c2926259ce9d038308b_home-card-beach.jpg",
+      "alt": "Siari Ritz-Carlton Reserve beach and jungle setting",
+      "public_id": "more-group/spain/projects/siari-ritz-carlton-reserve/inline_2"
+    },
+    "siari-ritz-carlton-reserve:hero": {
+      "slug": "siari-ritz-carlton-reserve",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459936/more-group/spain/projects/siari-ritz-carlton-reserve/hero.jpg",
+      "source_url": "https://cdn.prod.website-files.com/6743c3e6ac714cfd67db12cc/68016e58b653c0aa71b9f52e_home-hero-bg.jpg",
+      "alt": "Siari Ritz-Carlton Reserve Nayarit hero coastline",
+      "public_id": "more-group/spain/projects/siari-ritz-carlton-reserve/hero"
+    },
+    "solar-midtown:hero": {
+      "slug": "solar-midtown",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459936/more-group/spain/projects/solar-midtown/hero.jpg",
+      "source_url": "https://simca.mx/uploads/30/1747331036_58105500b7e5bc543be5.jpg",
+      "alt": "SOLAR Midtown studio tower exterior Playa del Carmen",
+      "public_id": "more-group/spain/projects/solar-midtown/hero"
+    },
+    "solar-midtown:inline-1": {
+      "slug": "solar-midtown",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459938/more-group/spain/projects/solar-midtown/inline_1.jpg",
+      "source_url": "https://simca.mx/uploads/30/1747331036_6db5c3c675dac8e0c4a1.jpg",
+      "alt": "SOLAR Midtown rooftop and amenity rendering",
+      "public_id": "more-group/spain/projects/solar-midtown/inline_1"
+    },
+    "sole-blu-ocean-living:hero": {
+      "slug": "sole-blu-ocean-living",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459938/more-group/spain/projects/sole-blu-ocean-living/hero.webp",
+      "source_url": "https://soleblu.mx/wp-content/uploads/2025/06/02_Fachada-Principal_Tarde-scaled-800x600-1.webp",
+      "alt": "Sole Blu Ocean Living Puerto Morelos main facade",
+      "public_id": "more-group/spain/projects/sole-blu-ocean-living/hero"
+    },
+    "solar-midtown:inline-2": {
+      "slug": "solar-midtown",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459939/more-group/spain/projects/solar-midtown/inline_2.jpg",
+      "source_url": "https://simca.mx/uploads/30/1747331036_9db2a514516a0ff5c76d.jpg",
+      "alt": "SOLAR Midtown downtown Playa condo facade",
+      "public_id": "more-group/spain/projects/solar-midtown/inline_2"
+    },
+    "sole-blu-ocean-living:inline-1": {
+      "slug": "sole-blu-ocean-living",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459940/more-group/spain/projects/sole-blu-ocean-living/inline_1.webp",
+      "source_url": "https://soleblu.mx/wp-content/uploads/2025/06/Aereo-Proyecto-800x600-1.webp",
+      "alt": "Sole Blu Ocean Living aerial project view",
+      "public_id": "more-group/spain/projects/sole-blu-ocean-living/inline_1"
+    },
+    "sole-blu-ocean-living:inline-2": {
+      "slug": "sole-blu-ocean-living",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459940/more-group/spain/projects/sole-blu-ocean-living/inline_2.webp",
+      "source_url": "https://soleblu.mx/wp-content/uploads/2025/06/EXTERIOR2-800x600-1.webp",
+      "alt": "Sole Blu Ocean Living exterior amenity terrace",
+      "public_id": "more-group/spain/projects/sole-blu-ocean-living/inline_2"
+    },
+    "st-regis-residences-los-cabos:hero": {
+      "slug": "st-regis-residences-los-cabos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459941/more-group/spain/projects/st-regis-residences-los-cabos/hero.jpg",
+      "source_url": "https://srresidencesloscabos.com/wp-content/uploads/2021/01/St-Regis-Cabos-Overview.jpg",
+      "alt": "The Residences at The St. Regis Los Cabos overview",
+      "public_id": "more-group/spain/projects/st-regis-residences-los-cabos/hero"
+    },
+    "st-regis-residences-los-cabos:inline-1": {
+      "slug": "st-regis-residences-los-cabos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459942/more-group/spain/projects/st-regis-residences-los-cabos/inline_1.jpg",
+      "source_url": "https://srresidencesloscabos.com/wp-content/uploads/2021/01/St-Regis-Hotel-Overview2.jpg",
+      "alt": "St. Regis Los Cabos hotel and branded residence setting",
+      "public_id": "more-group/spain/projects/st-regis-residences-los-cabos/inline_1"
+    },
+    "st-regis-residences-los-cabos:inline-2": {
+      "slug": "st-regis-residences-los-cabos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459943/more-group/spain/projects/st-regis-residences-los-cabos/inline_2.jpg",
+      "source_url": "https://srresidencesloscabos.com/wp-content/uploads/2021/10/st-regis-oceanfront-villas-2.jpg",
+      "alt": "St. Regis Los Cabos oceanfront villas at Quivira",
+      "public_id": "more-group/spain/projects/st-regis-residences-los-cabos/inline_2"
+    },
+    "tao-blue-gardens-pv:hero": {
+      "slug": "tao-blue-gardens-pv",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459944/more-group/spain/projects/tao-blue-gardens-pv/hero.webp",
+      "source_url": "https://taomexico.com/wp-content/uploads/2026/01/tao-blue-gardens-vallarta.webp",
+      "alt": "TAO Blue Gardens Puerto Vallarta project hero",
+      "public_id": "more-group/spain/projects/tao-blue-gardens-pv/hero"
+    },
+    "tao-blue-gardens-pv:inline-1": {
+      "slug": "tao-blue-gardens-pv",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459945/more-group/spain/projects/tao-blue-gardens-pv/inline_1.webp",
+      "source_url": "https://taomexico.com/wp-content/uploads/2026/01/04-PVALLARTA_CAM06.webp",
+      "alt": "TAO Blue Gardens building exterior Zona Romántica",
+      "public_id": "more-group/spain/projects/tao-blue-gardens-pv/inline_1"
+    },
+    "tao-blue-gardens-pv:inline-2": {
+      "slug": "tao-blue-gardens-pv",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459946/more-group/spain/projects/tao-blue-gardens-pv/inline_2.webp",
+      "source_url": "https://taomexico.com/wp-content/uploads/2026/01/Infinity-pool.webp",
+      "alt": "TAO Blue Gardens infinity pool Banderas Bay",
+      "public_id": "more-group/spain/projects/tao-blue-gardens-pv/inline_2"
+    },
+    "tao-monte-rocella:hero": {
+      "slug": "tao-monte-rocella",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459946/more-group/spain/projects/tao-monte-rocella/hero.webp",
+      "source_url": "https://taomexico.com/wp-content/uploads/2025/12/monte-rocella-4.webp",
+      "alt": "TAO Monte Rocella Los Cabos building exterior",
+      "public_id": "more-group/spain/projects/tao-monte-rocella/hero"
+    },
+    "tao-monte-rocella:inline-1": {
+      "slug": "tao-monte-rocella",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459947/more-group/spain/projects/tao-monte-rocella/inline_1.webp",
+      "source_url": "https://taomexico.com/wp-content/uploads/2025/12/monte-rocella-two-infinity-pools.webp",
+      "alt": "TAO Monte Rocella dual infinity pools",
+      "public_id": "more-group/spain/projects/tao-monte-rocella/inline_1"
+    },
+    "tao-monte-rocella:inline-2": {
+      "slug": "tao-monte-rocella",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459949/more-group/spain/projects/tao-monte-rocella/inline_2.webp",
+      "source_url": "https://taomexico.com/wp-content/uploads/2025/12/monte-rocella-coworking-area.webp",
+      "alt": "TAO Monte Rocella coworking and amenity deck",
+      "public_id": "more-group/spain/projects/tao-monte-rocella/inline_2"
+    },
+    "tao-santamar-akumal:inline-1": {
+      "slug": "tao-santamar-akumal",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459949/more-group/spain/projects/tao-santamar-akumal/inline_1.jpg",
+      "source_url": "https://taomexico.com/wp-content/uploads/2025/12/Santamar_Photos_HighRes_0032-scaled.jpg",
+      "alt": "TAO Santamar Akumal high-resolution property photo",
+      "public_id": "more-group/spain/projects/tao-santamar-akumal/inline_1"
+    },
+    "tao-santamar-akumal:hero": {
+      "slug": "tao-santamar-akumal",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459952/more-group/spain/projects/tao-santamar-akumal/hero.jpg",
+      "source_url": "https://taomexico.com/wp-content/uploads/2025/12/santamar-prime-fachada-scaled.jpg",
+      "alt": "TAO Santamar Prime Akumal building facade",
+      "public_id": "more-group/spain/projects/tao-santamar-akumal/hero"
+    },
+    "tao-santamar-akumal:inline-2": {
+      "slug": "tao-santamar-akumal",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459953/more-group/spain/projects/tao-santamar-akumal/inline_2.webp",
+      "source_url": "https://taomexico.com/wp-content/uploads/2025/12/Santamar-Prime-Pool.webp",
+      "alt": "TAO Santamar Prime resort-style pool terrace",
+      "public_id": "more-group/spain/projects/tao-santamar-akumal/inline_2"
+    },
+    "aldea-thai:inline-1": {
+      "slug": "aldea-thai",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459983/more-group/spain/projects/aldea-thai/inline_1.jpg",
+      "source_url": "https://static.wixstatic.com/media/0dbd62_77b1b78566c54f8784bf5cebe3783d04~mv2.jpg",
+      "alt": "Aldea Thai beach-proximate tower rendering",
+      "public_id": "more-group/spain/projects/aldea-thai/inline_1"
+    },
+    "hideaways-los-cabos:hero": {
+      "slug": "hideaways-los-cabos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781459985/more-group/spain/projects/hideaways-los-cabos/hero.jpg",
+      "source_url": "https://assets.cdn.filesafe.space/4WKAshJWeeeLZiJbuxHA/media/27606737-0448-4762-99a7-c691fa34c792.jpeg",
+      "alt": "Hideaways Los Cabos three-tower development rendering",
+      "public_id": "more-group/spain/projects/hideaways-los-cabos/hero"
+    },
+    "costa-mujeres-cancun:hero": {
+      "kid": "costa-mujeres-cancun:hero",
+      "slug": "costa-mujeres-cancun",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462709/more-group/spain/projects/costa-mujeres-cancun/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085554/ibis-cancun.jpg",
+      "alt": "Costa Mujeres Cancun hotel zone coastline",
+      "public_id": "more-group/spain/projects/costa-mujeres-cancun/hero"
+    },
+    "costa-mujeres-cancun:inline-2": {
+      "kid": "costa-mujeres-cancun:inline-2",
+      "slug": "costa-mujeres-cancun",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462709/more-group/spain/projects/costa-mujeres-cancun/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/29111547/CasaBarbaraHolbox-811.jpg",
+      "alt": "Caribbean resort architecture near Cancun north zone",
+      "public_id": "more-group/spain/projects/costa-mujeres-cancun/inline_2"
+    },
+    "puerto-cancun-marina:hero": {
+      "kid": "puerto-cancun-marina:hero",
+      "slug": "puerto-cancun-marina",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462709/more-group/spain/projects/puerto-cancun-marina/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085928/grand-fiesta-coral-beach.jpg",
+      "alt": "Puerto Cancun marina luxury tower exterior",
+      "public_id": "more-group/spain/projects/puerto-cancun-marina/hero"
+    },
+    "costa-mujeres-cancun:inline-1": {
+      "kid": "costa-mujeres-cancun:inline-1",
+      "slug": "costa-mujeres-cancun",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462709/more-group/spain/projects/costa-mujeres-cancun/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225948/cancun-playa-turquesa-familias-scaled.jpg",
+      "alt": "Turquoise beach Cancun Costa Mujeres corridor",
+      "public_id": "more-group/spain/projects/costa-mujeres-cancun/inline_1"
+    },
+    "puerto-cancun-marina:inline-1": {
+      "kid": "puerto-cancun-marina:inline-1",
+      "slug": "puerto-cancun-marina",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462711/more-group/spain/projects/puerto-cancun-marina/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05135021/hilton-6.jpg",
+      "alt": "Puerto Cancun resort marina waterfront",
+      "public_id": "more-group/spain/projects/puerto-cancun-marina/inline_1"
+    },
+    "puerto-cancun-marina:inline-2": {
+      "kid": "puerto-cancun-marina:inline-2",
+      "slug": "puerto-cancun-marina",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462711/more-group/spain/projects/puerto-cancun-marina/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05134932/hilton-4.jpg",
+      "alt": "Cancun marina district high-rise residences",
+      "public_id": "more-group/spain/projects/puerto-cancun-marina/inline_2"
+    },
+    "olea-luxury-beach-campeche:hero": {
+      "kid": "olea-luxury-beach-campeche:hero",
+      "slug": "olea-luxury-beach-campeche",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462712/more-group/spain/projects/olea-luxury-beach-campeche/hero.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/portada.webp",
+      "alt": "Olea Luxury Beach Condos Campeche rendering",
+      "public_id": "more-group/spain/projects/olea-luxury-beach-campeche/hero"
+    },
+    "olea-luxury-beach-campeche:inline-1": {
+      "kid": "olea-luxury-beach-campeche:inline-1",
+      "slug": "olea-luxury-beach-campeche",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462712/more-group/spain/projects/olea-luxury-beach-campeche/inline_1.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/location1.webp",
+      "alt": "Olea beachfront location Campeche coast",
+      "public_id": "more-group/spain/projects/olea-luxury-beach-campeche/inline_1"
+    },
+    "nara-condos-campeche:inline-1": {
+      "kid": "nara-condos-campeche:inline-1",
+      "slug": "nara-condos-campeche",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462714/more-group/spain/projects/nara-condos-campeche/inline_1.jpg",
+      "source_url": "https://assets.cdn.filesafe.space/QqkqdK0ZwL6ZtBEyZyYs/media/6966905ae4b3055d1628e1f7.jpg",
+      "alt": "Nara Campeche country club residential rendering",
+      "public_id": "more-group/spain/projects/nara-condos-campeche/inline_1"
+    },
+    "olea-luxury-beach-campeche:inline-2": {
+      "kid": "olea-luxury-beach-campeche:inline-2",
+      "slug": "olea-luxury-beach-campeche",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462715/more-group/spain/projects/olea-luxury-beach-campeche/inline_2.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/amenidades1.webp",
+      "alt": "Olea luxury beach condo amenities pool",
+      "public_id": "more-group/spain/projects/olea-luxury-beach-campeche/inline_2"
+    },
+    "nara-condos-campeche:hero": {
+      "kid": "nara-condos-campeche:hero",
+      "slug": "nara-condos-campeche",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462715/more-group/spain/projects/nara-condos-campeche/hero.jpg",
+      "source_url": "https://www.topmexicorealestate.com/1-images/nara-campeche-country-club/Nara_condos_campeche_1.jpg",
+      "alt": "Nara Condos Country Club Campeche exterior",
+      "public_id": "more-group/spain/projects/nara-condos-campeche/hero"
+    },
+    "hard-rock-riviera-maya:inline-1": {
+      "kid": "hard-rock-riviera-maya:inline-1",
+      "slug": "hard-rock-riviera-maya",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462716/more-group/spain/projects/hard-rock-riviera-maya/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100602/st-regis-kanai-resort-riviera-maya.jpg",
+      "alt": "Riviera Maya branded resort coastline context",
+      "public_id": "more-group/spain/projects/hard-rock-riviera-maya/inline_1"
+    },
+    "hard-rock-riviera-maya:hero": {
+      "kid": "hard-rock-riviera-maya:hero",
+      "slug": "hard-rock-riviera-maya",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462717/more-group/spain/projects/hard-rock-riviera-maya/hero.jpg",
+      "source_url": "https://hotel.hardrock.com/riviera-maya/files/6135/HRH_Riviera_Maya_Pool.jpg",
+      "alt": "Hard Rock Hotel Riviera Maya pool and towers",
+      "public_id": "more-group/spain/projects/hard-rock-riviera-maya/hero"
+    },
+    "hard-rock-riviera-maya:inline-2": {
+      "kid": "hard-rock-riviera-maya:inline-2",
+      "slug": "hard-rock-riviera-maya",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462717/more-group/spain/projects/hard-rock-riviera-maya/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27125007/Generations-Riviera-Maya1.jpg",
+      "alt": "Riviera Maya luxury resort residences corridor",
+      "public_id": "more-group/spain/projects/hard-rock-riviera-maya/inline_2"
+    },
+    "nara-condos-campeche:inline-2": {
+      "kid": "nara-condos-campeche:inline-2",
+      "slug": "nara-condos-campeche",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462717/more-group/spain/projects/nara-condos-campeche/inline_2.jpg",
+      "source_url": "https://assets.cdn.filesafe.space/QqkqdK0ZwL6ZtBEyZyYs/media/6966abd902f1be04362ea0b1.jpeg",
+      "alt": "Nara Condos Campeche golf community amenity",
+      "public_id": "more-group/spain/projects/nara-condos-campeche/inline_2"
+    },
+    "holistika-tulum:inline-1": {
+      "kid": "holistika-tulum:inline-1",
+      "slug": "holistika-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462719/more-group/spain/projects/holistika-tulum/inline_1.jpg",
+      "source_url": "https://static.wixstatic.com/media/a57285_fa55080fc3f747e18e3376962a915f70~mv2.jpg",
+      "alt": "Holistika Tulum jungle wellness architecture",
+      "public_id": "more-group/spain/projects/holistika-tulum/inline_1"
+    },
+    "holistika-tulum:inline-2": {
+      "kid": "holistika-tulum:inline-2",
+      "slug": "holistika-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462719/more-group/spain/projects/holistika-tulum/inline_2.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22201451/AerialConradTulum-0410508A-2.webp",
+      "alt": "Tulum coastline context near Holistika",
+      "public_id": "more-group/spain/projects/holistika-tulum/inline_2"
+    },
+    "holistika-tulum:hero": {
+      "kid": "holistika-tulum:hero",
+      "slug": "holistika-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462719/more-group/spain/projects/holistika-tulum/hero.png",
+      "source_url": "https://static.wixstatic.com/media/a57285_4987a1148ade465f8e93498fd84a2e45~mv2.png/v1/fill/w_2500,h_1141,al_c/a57285_4987a1148ade465f8e93498fd84a2e45~mv2.png",
+      "alt": "Holistika Tulum wellness residences overview",
+      "public_id": "more-group/spain/projects/holistika-tulum/hero"
+    },
+    "coralina-tulum:hero": {
+      "kid": "coralina-tulum:hero",
+      "slug": "coralina-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462719/more-group/spain/projects/coralina-tulum/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18152827/AZULIK-TULUM4-scaled.jpg",
+      "alt": "Coralina Tulum eco-luxury beach architecture",
+      "public_id": "more-group/spain/projects/coralina-tulum/hero"
+    },
+    "coralina-tulum:inline-1": {
+      "kid": "coralina-tulum:inline-1",
+      "slug": "coralina-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462721/more-group/spain/projects/coralina-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101633/moxy-tulum-entrance.jpg",
+      "alt": "Tulum hotel zone entrance near Coralina corridor",
+      "public_id": "more-group/spain/projects/coralina-tulum/inline_1"
+    },
+    "coralina-tulum:inline-2": {
+      "kid": "coralina-tulum:inline-2",
+      "slug": "coralina-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781462721/more-group/spain/projects/coralina-tulum/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/10/13204357/TULUM-scaled.jpg",
+      "alt": "Tulum destination overview Coralina buyer context",
+      "public_id": "more-group/spain/projects/coralina-tulum/inline_2"
+    },
+    "tulum-country-club:inline-1": {
+      "kid": "tulum-country-club:inline-1",
+      "slug": "tulum-country-club",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463454/more-group/spain/projects/tulum-country-club/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/26184011/riviera-maya-drone-beach-coastline-1.jpg",
+      "alt": "Riviera Maya coastline near Tulum Country Club",
+      "public_id": "more-group/spain/projects/tulum-country-club/inline_1"
+    },
+    "tulum-country-club:inline-2": {
+      "kid": "tulum-country-club:inline-2",
+      "slug": "tulum-country-club",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463454/more-group/spain/projects/tulum-country-club/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100604/the-riviera-maya-edition.jpg",
+      "alt": "Tulum branded resort corridor context",
+      "public_id": "more-group/spain/projects/tulum-country-club/inline_2"
+    },
+    "tulum-country-club:hero": {
+      "kid": "tulum-country-club:hero",
+      "slug": "tulum-country-club",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463454/more-group/spain/projects/tulum-country-club/hero.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22201451/AerialConradTulum-0410508A-2.webp",
+      "alt": "Tulum Country Club golf and coastline aerial",
+      "public_id": "more-group/spain/projects/tulum-country-club/hero"
+    },
+    "playacar-phase-ii:hero": {
+      "kid": "playacar-phase-ii:hero",
+      "slug": "playacar-phase-ii",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463454/more-group/spain/projects/playacar-phase-ii/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28123551/The-Reef-Playacar-1920x10801-1.jpg",
+      "alt": "Playacar Phase II reef beach gated community",
+      "public_id": "more-group/spain/projects/playacar-phase-ii/hero"
+    },
+    "playacar-phase-ii:inline-1": {
+      "kid": "playacar-phase-ii:inline-1",
+      "slug": "playacar-phase-ii",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463456/more-group/spain/projects/playacar-phase-ii/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101157/allegro-playacar.jpg",
+      "alt": "Allegro Playacar beachfront zone",
+      "public_id": "more-group/spain/projects/playacar-phase-ii/inline_1"
+    },
+    "playacar-phase-ii:inline-2": {
+      "kid": "playacar-phase-ii:inline-2",
+      "slug": "playacar-phase-ii",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463456/more-group/spain/projects/playacar-phase-ii/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22085130/Sandos-Playacar.jpg",
+      "alt": "Sandos Playacar resort community",
+      "public_id": "more-group/spain/projects/playacar-phase-ii/inline_2"
+    },
+    "vidanta-nuevo-vallarta:hero": {
+      "kid": "vidanta-nuevo-vallarta:hero",
+      "slug": "vidanta-nuevo-vallarta",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463456/more-group/spain/projects/vidanta-nuevo-vallarta/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "Vidanta Nuevo Vallarta beach resort towers",
+      "public_id": "more-group/spain/projects/vidanta-nuevo-vallarta/hero"
+    },
+    "vidanta-nuevo-vallarta:inline-1": {
+      "kid": "vidanta-nuevo-vallarta:inline-1",
+      "slug": "vidanta-nuevo-vallarta",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463456/more-group/spain/projects/vidanta-nuevo-vallarta/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "Nuevo Vallarta Pacific beach Vidanta context",
+      "public_id": "more-group/spain/projects/vidanta-nuevo-vallarta/inline_1"
+    },
+    "vidanta-nuevo-vallarta:inline-2": {
+      "kid": "vidanta-nuevo-vallarta:inline-2",
+      "slug": "vidanta-nuevo-vallarta",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463458/more-group/spain/projects/vidanta-nuevo-vallarta/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085928/grand-fiesta-coral-beach.jpg",
+      "alt": "Nayarit luxury resort residences",
+      "public_id": "more-group/spain/projects/vidanta-nuevo-vallarta/inline_2"
+    },
+    "garza-blanca-pv:hero": {
+      "kid": "garza-blanca-pv:hero",
+      "slug": "garza-blanca-pv",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463459/more-group/spain/projects/garza-blanca-pv/hero.webp",
+      "source_url": "https://a.storyblok.com/f/285826016720786/1920x1280/9073d8b778/garza-blanca-vallarta.webp",
+      "alt": "Garza Blanca Puerto Vallarta oceanfront resort",
+      "public_id": "more-group/spain/projects/garza-blanca-pv/hero"
+    },
+    "garza-blanca-pv:inline-2": {
+      "kid": "garza-blanca-pv:inline-2",
+      "slug": "garza-blanca-pv",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463460/more-group/spain/projects/garza-blanca-pv/inline_2.jpg",
+      "source_url": "https://a.storyblok.com/f/285826016720786/1024x683/ac035acfcf/gbpv-facilities-property-panoramic_08-hd.jpg",
+      "alt": "Garza Blanca PV panoramic facilities",
+      "public_id": "more-group/spain/projects/garza-blanca-pv/inline_2"
+    },
+    "garza-blanca-pv:inline-1": {
+      "kid": "garza-blanca-pv:inline-1",
+      "slug": "garza-blanca-pv",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463461/more-group/spain/projects/garza-blanca-pv/inline_1.jpg",
+      "source_url": "https://a.storyblok.com/f/285826016720786/5225x3483/0ebc2583c4/gbpv-suites-honeymoon-ocean-front-high_02.jpg",
+      "alt": "Garza Blanca PV suite ocean front",
+      "public_id": "more-group/spain/projects/garza-blanca-pv/inline_1"
+    },
+    "ikuku-condos-campeche:hero": {
+      "kid": "ikuku-condos-campeche:hero",
+      "slug": "ikuku-condos-campeche",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463461/more-group/spain/projects/ikuku-condos-campeche/hero.png",
+      "source_url": "https://assets.cdn.filesafe.space/qNPUk8OxQPReakBDHfcl/media/683d4bbd93301c4b08506714.png",
+      "alt": "Ikuku Condos Campeche rendering",
+      "public_id": "more-group/spain/projects/ikuku-condos-campeche/hero"
+    },
+    "ikuku-condos-campeche:inline-1": {
+      "kid": "ikuku-condos-campeche:inline-1",
+      "slug": "ikuku-condos-campeche",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463461/more-group/spain/projects/ikuku-condos-campeche/inline_1.png",
+      "source_url": "https://assets.cdn.filesafe.space/QqkqdK0ZwL6ZtBEyZyYs/media/69610db8cef1012bd1a4622e.png",
+      "alt": "Ikuku Campeche residential amenity",
+      "public_id": "more-group/spain/projects/ikuku-condos-campeche/inline_1"
+    },
+    "ikuku-condos-campeche:inline-2": {
+      "kid": "ikuku-condos-campeche:inline-2",
+      "slug": "ikuku-condos-campeche",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463463/more-group/spain/projects/ikuku-condos-campeche/inline_2.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/portada.webp",
+      "alt": "Campeche Gulf coast development context",
+      "public_id": "more-group/spain/projects/ikuku-condos-campeche/inline_2"
+    },
+    "lerma-beach-condos-campeche:hero": {
+      "kid": "lerma-beach-condos-campeche:hero",
+      "slug": "lerma-beach-condos-campeche",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463464/more-group/spain/projects/lerma-beach-condos-campeche/hero.jpg",
+      "source_url": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/QqkqdK0ZwL6ZtBEyZyYs/media/6966905ae4b3055d1628e1f7.jpg",
+      "alt": "Lerma Beach Condos Campeche exterior",
+      "public_id": "more-group/spain/projects/lerma-beach-condos-campeche/hero"
+    },
+    "lerma-beach-condos-campeche:inline-2": {
+      "kid": "lerma-beach-condos-campeche:inline-2",
+      "slug": "lerma-beach-condos-campeche",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463464/more-group/spain/projects/lerma-beach-condos-campeche/inline_2.jpg",
+      "source_url": "https://www.topmexicorealestate.com/1-images/nara-campeche-country-club/Nara_condos_campeche_1.jpg",
+      "alt": "Campeche country club residential context",
+      "public_id": "more-group/spain/projects/lerma-beach-condos-campeche/inline_2"
+    },
+    "lerma-beach-condos-campeche:inline-1": {
+      "kid": "lerma-beach-condos-campeche:inline-1",
+      "slug": "lerma-beach-condos-campeche",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463464/more-group/spain/projects/lerma-beach-condos-campeche/inline_1.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/location1.webp",
+      "alt": "Lerma Campeche beachfront location",
+      "public_id": "more-group/spain/projects/lerma-beach-condos-campeche/inline_1"
+    },
+    "torremar-country-club-campeche:hero": {
+      "kid": "torremar-country-club-campeche:hero",
+      "slug": "torremar-country-club-campeche",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463466/more-group/spain/projects/torremar-country-club-campeche/hero.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/torremar-country-club/img5.webp",
+      "alt": "Torremar Country Club Campeche rendering",
+      "public_id": "more-group/spain/projects/torremar-country-club-campeche/hero"
+    },
+    "torremar-country-club-campeche:inline-1": {
+      "kid": "torremar-country-club-campeche:inline-1",
+      "slug": "torremar-country-club-campeche",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463467/more-group/spain/projects/torremar-country-club-campeche/inline_1.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/torremar-country-club/img8.webp",
+      "alt": "Torremar Campeche golf community",
+      "public_id": "more-group/spain/projects/torremar-country-club-campeche/inline_1"
+    },
+    "torremar-country-club-campeche:inline-2": {
+      "kid": "torremar-country-club-campeche:inline-2",
+      "slug": "torremar-country-club-campeche",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463467/more-group/spain/projects/torremar-country-club-campeche/inline_2.jpg",
+      "source_url": "https://www.topmexicorealestate.com/1-images/nara-campeche-country-club/Nara_condos_campeche_1.jpg",
+      "alt": "Campeche golf residential corridor",
+      "public_id": "more-group/spain/projects/torremar-country-club-campeche/inline_2"
+    },
+    "corasol-playa:hero": {
+      "kid": "corasol-playa:hero",
+      "slug": "corasol-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463483/more-group/spain/projects/corasol-playa/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "Corasol Mareazul Playa north aerial",
+      "public_id": "more-group/spain/projects/corasol-playa/hero"
+    },
+    "tankah-bay:inline-2": {
+      "kid": "tankah-bay:inline-2",
+      "slug": "tankah-bay",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463483/more-group/spain/projects/tankah-bay/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101633/moxy-tulum-entrance.jpg",
+      "alt": "Tulum Tankah corridor",
+      "public_id": "more-group/spain/projects/tankah-bay/inline_2"
+    },
+    "tankah-bay:hero": {
+      "kid": "tankah-bay:hero",
+      "slug": "tankah-bay",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463483/more-group/spain/projects/tankah-bay/hero.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22201451/AerialConradTulum-0410508A-2.webp",
+      "alt": "Tankah Bay Tulum premium beach",
+      "public_id": "more-group/spain/projects/tankah-bay/hero"
+    },
+    "tankah-bay:inline-1": {
+      "kid": "tankah-bay:inline-1",
+      "slug": "tankah-bay",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463483/more-group/spain/projects/tankah-bay/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18152827/AZULIK-TULUM4-scaled.jpg",
+      "alt": "Tankah Bay eco-luxury coast",
+      "public_id": "more-group/spain/projects/tankah-bay/inline_1"
+    },
+    "corasol-playa:inline-1": {
+      "kid": "corasol-playa:inline-1",
+      "slug": "corasol-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463485/more-group/spain/projects/corasol-playa/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161850/playa-del-carmen-4_11zon-scaled-1.jpg",
+      "alt": "Corasol Playa del Carmen context",
+      "public_id": "more-group/spain/projects/corasol-playa/inline_1"
+    },
+    "hacienda-encantada:inline-1": {
+      "kid": "hacienda-encantada:inline-1",
+      "slug": "hacienda-encantada",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463485/more-group/spain/projects/hacienda-encantada/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+      "alt": "Cabo corridor branded residences",
+      "public_id": "more-group/spain/projects/hacienda-encantada/inline_1"
+    },
+    "hacienda-encantada:hero": {
+      "kid": "hacienda-encantada:hero",
+      "slug": "hacienda-encantada",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463485/more-group/spain/projects/hacienda-encantada/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/alvarrendering-5e4301b18c367.jpg",
+      "alt": "Hacienda Encantada Cabo corridor",
+      "public_id": "more-group/spain/projects/hacienda-encantada/hero"
+    },
+    "corasol-playa:inline-2": {
+      "kid": "corasol-playa:inline-2",
+      "slug": "corasol-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463485/more-group/spain/projects/corasol-playa/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "North Playa luxury beach",
+      "public_id": "more-group/spain/projects/corasol-playa/inline_2"
+    },
+    "hacienda-encantada:inline-2": {
+      "kid": "hacienda-encantada:inline-2",
+      "slug": "hacienda-encantada",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463487/more-group/spain/projects/hacienda-encantada/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Insets_0001_GettingHere-58a4789e1dd38.jpg",
+      "alt": "Los Cabos Pacific access",
+      "public_id": "more-group/spain/projects/hacienda-encantada/inline_2"
+    },
+    "puerto-los-cabos-marina:hero": {
+      "kid": "puerto-los-cabos-marina:hero",
+      "slug": "puerto-los-cabos-marina",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463487/more-group/spain/projects/puerto-los-cabos-marina/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0003_Coronado-589cc7d986349-930x550.jpg",
+      "alt": "Puerto Los Cabos marina villas",
+      "public_id": "more-group/spain/projects/puerto-los-cabos-marina/hero"
+    },
+    "puerto-los-cabos-marina:inline-1": {
+      "kid": "puerto-los-cabos-marina:inline-1",
+      "slug": "puerto-los-cabos-marina",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463487/more-group/spain/projects/puerto-los-cabos-marina/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Copala-Clubhouse-58f623071edd6.jpg",
+      "alt": "Puerto Los Cabos master plan",
+      "public_id": "more-group/spain/projects/puerto-los-cabos-marina/inline_1"
+    },
+    "puerto-los-cabos-marina:inline-2": {
+      "kid": "puerto-los-cabos-marina:inline-2",
+      "slug": "puerto-los-cabos-marina",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463487/more-group/spain/projects/puerto-los-cabos-marina/inline_2.jpg",
+      "source_url": "https://hotel.hardrock.com/riviera-maya/files/6135/HRH_Riviera_Maya_Pool.jpg",
+      "alt": "Marina lifestyle Cabo context",
+      "public_id": "more-group/spain/projects/puerto-los-cabos-marina/inline_2"
+    },
+    "las-lupitas-campeche:inline-2": {
+      "kid": "las-lupitas-campeche:inline-2",
+      "slug": "las-lupitas-campeche",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463490/more-group/spain/projects/las-lupitas-campeche/inline_2.jpg",
+      "source_url": "https://www.topmexicorealestate.com/1-images/nara-campeche-country-club/Nara_condos_campeche_1.jpg",
+      "alt": "Campeche golf community",
+      "public_id": "more-group/spain/projects/las-lupitas-campeche/inline_2"
+    },
+    "bao-luxury-condos-campeche:hero": {
+      "kid": "bao-luxury-condos-campeche:hero",
+      "slug": "bao-luxury-condos-campeche",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463490/more-group/spain/projects/bao-luxury-condos-campeche/hero.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/portada.webp",
+      "alt": "Bao Luxury Condos Campeche",
+      "public_id": "more-group/spain/projects/bao-luxury-condos-campeche/hero"
+    },
+    "las-lupitas-campeche:inline-1": {
+      "kid": "las-lupitas-campeche:inline-1",
+      "slug": "las-lupitas-campeche",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463490/more-group/spain/projects/las-lupitas-campeche/inline_1.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/location1.webp",
+      "alt": "Campeche coastal residential",
+      "public_id": "more-group/spain/projects/las-lupitas-campeche/inline_1"
+    },
+    "las-lupitas-campeche:hero": {
+      "kid": "las-lupitas-campeche:hero",
+      "slug": "las-lupitas-campeche",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463490/more-group/spain/projects/las-lupitas-campeche/hero.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/torremar-country-club/img5.webp",
+      "alt": "Las Lupitas Campeche development",
+      "public_id": "more-group/spain/projects/las-lupitas-campeche/hero"
+    },
+    "bao-luxury-condos-campeche:inline-1": {
+      "kid": "bao-luxury-condos-campeche:inline-1",
+      "slug": "bao-luxury-condos-campeche",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463493/more-group/spain/projects/bao-luxury-condos-campeche/inline_1.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/amenidades1.webp",
+      "alt": "Bao Campeche amenities",
+      "public_id": "more-group/spain/projects/bao-luxury-condos-campeche/inline_1"
+    },
+    "zen-tulum:hero": {
+      "kid": "zen-tulum:hero",
+      "slug": "zen-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463493/more-group/spain/projects/zen-tulum/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/10/13204357/TULUM-scaled.jpg",
+      "alt": "Zen Tulum wellness residences",
+      "public_id": "more-group/spain/projects/zen-tulum/hero"
+    },
+    "zen-tulum:inline-1": {
+      "kid": "zen-tulum:inline-1",
+      "slug": "zen-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463493/more-group/spain/projects/zen-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225909/jungle-cabanas-riviera-maya-poolside-family-scaled.jpg",
+      "alt": "Zen Tulum jungle pool",
+      "public_id": "more-group/spain/projects/zen-tulum/inline_1"
+    },
+    "zen-tulum:inline-2": {
+      "kid": "zen-tulum:inline-2",
+      "slug": "zen-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463495/more-group/spain/projects/zen-tulum/inline_2.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142254/cenote-dos-ojos.webp",
+      "alt": "Tulum cenote corridor context",
+      "public_id": "more-group/spain/projects/zen-tulum/inline_2"
+    },
+    "bao-luxury-condos-campeche:inline-2": {
+      "kid": "bao-luxury-condos-campeche:inline-2",
+      "slug": "bao-luxury-condos-campeche",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463495/more-group/spain/projects/bao-luxury-condos-campeche/inline_2.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/torremar-country-club/img8.webp",
+      "alt": "Campeche country club condos",
+      "public_id": "more-group/spain/projects/bao-luxury-condos-campeche/inline_2"
+    },
+    "duna-tulum:inline-2": {
+      "kid": "duna-tulum:inline-2",
+      "slug": "duna-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463505/more-group/spain/projects/duna-tulum/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23085835/Wyndham-Alltra-Playa-del-Carmen.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/duna-tulum/inline_2"
+    },
+    "duna-tulum:hero": {
+      "kid": "duna-tulum:hero",
+      "slug": "duna-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463505/more-group/spain/projects/duna-tulum/hero.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142307/tulum-landing.webp",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/duna-tulum/hero"
+    },
+    "sak-tulum:hero": {
+      "kid": "sak-tulum:hero",
+      "slug": "sak-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463506/more-group/spain/projects/sak-tulum/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18152827/AZULIK-TULUM4-scaled.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/sak-tulum/hero"
+    },
+    "duna-tulum:inline-1": {
+      "kid": "duna-tulum:inline-1",
+      "slug": "duna-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463505/more-group/spain/projects/duna-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/26184011/riviera-maya-drone-beach-coastline-1.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/duna-tulum/inline_1"
+    },
+    "sak-tulum:inline-1": {
+      "kid": "sak-tulum:inline-1",
+      "slug": "sak-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463507/more-group/spain/projects/sak-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101633/moxy-tulum-entrance.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/sak-tulum/inline_1"
+    },
+    "sak-tulum:inline-2": {
+      "kid": "sak-tulum:inline-2",
+      "slug": "sak-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463508/more-group/spain/projects/sak-tulum/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/10/13204357/TULUM-scaled.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/sak-tulum/inline_2"
+    },
+    "mistiq-tulum:hero": {
+      "kid": "mistiq-tulum:hero",
+      "slug": "mistiq-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463509/more-group/spain/projects/mistiq-tulum/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27125007/Generations-Riviera-Maya1.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/mistiq-tulum/hero"
+    },
+    "mistiq-tulum:inline-1": {
+      "kid": "mistiq-tulum:inline-1",
+      "slug": "mistiq-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463509/more-group/spain/projects/mistiq-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225909/jungle-cabanas-riviera-maya-poolside-family-scaled.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/mistiq-tulum/inline_1"
+    },
+    "anah-tulum:hero": {
+      "kid": "anah-tulum:hero",
+      "slug": "anah-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463509/more-group/spain/projects/anah-tulum/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100604/the-riviera-maya-edition.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/anah-tulum/hero"
+    },
+    "anah-tulum:inline-2": {
+      "kid": "anah-tulum:inline-2",
+      "slug": "anah-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463510/more-group/spain/projects/anah-tulum/inline_2.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142254/cenote-dos-ojos.webp",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/anah-tulum/inline_2"
+    },
+    "anah-tulum:inline-1": {
+      "kid": "anah-tulum:inline-1",
+      "slug": "anah-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463511/more-group/spain/projects/anah-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18230010/playa-mexico-familias-kids-beach-day-scaled.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/anah-tulum/inline_1"
+    },
+    "mistiq-tulum:inline-2": {
+      "kid": "mistiq-tulum:inline-2",
+      "slug": "mistiq-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463509/more-group/spain/projects/mistiq-tulum/inline_2.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22201451/AerialConradTulum-0410508A-2.webp",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/mistiq-tulum/inline_2"
+    },
+    "aldea-tulum:hero": {
+      "kid": "aldea-tulum:hero",
+      "slug": "aldea-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463511/more-group/spain/projects/aldea-tulum/hero.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142307/tulum-landing.webp",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/aldea-tulum/hero"
+    },
+    "aldea-tulum:inline-1": {
+      "kid": "aldea-tulum:inline-1",
+      "slug": "aldea-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463512/more-group/spain/projects/aldea-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225918/riviera-maya-drone-beach-coastline.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/aldea-tulum/inline_1"
+    },
+    "bardo-tulum:inline-1": {
+      "kid": "bardo-tulum:inline-1",
+      "slug": "bardo-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463513/more-group/spain/projects/bardo-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101059/moskito-beach-club-un.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/bardo-tulum/inline_1"
+    },
+    "bardo-tulum:hero": {
+      "kid": "bardo-tulum:hero",
+      "slug": "bardo-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463513/more-group/spain/projects/bardo-tulum/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18152827/AZULIK-TULUM4-scaled.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/bardo-tulum/hero"
+    },
+    "bardo-tulum:inline-2": {
+      "kid": "bardo-tulum:inline-2",
+      "slug": "bardo-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463514/more-group/spain/projects/bardo-tulum/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27125007/Generations-Riviera-Maya1.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/bardo-tulum/inline_2"
+    },
+    "essentials-tulum:hero": {
+      "kid": "essentials-tulum:hero",
+      "slug": "essentials-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463515/more-group/spain/projects/essentials-tulum/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/10/13204357/TULUM-scaled.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/essentials-tulum/hero"
+    },
+    "essentials-tulum:inline-1": {
+      "kid": "essentials-tulum:inline-1",
+      "slug": "essentials-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463516/more-group/spain/projects/essentials-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101633/moxy-tulum-entrance.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/essentials-tulum/inline_1"
+    },
+    "essentials-tulum:inline-2": {
+      "kid": "essentials-tulum:inline-2",
+      "slug": "essentials-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463516/more-group/spain/projects/essentials-tulum/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225909/jungle-cabanas-riviera-maya-poolside-family-scaled.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/essentials-tulum/inline_2"
+    },
+    "aldea-tulum:inline-2": {
+      "kid": "aldea-tulum:inline-2",
+      "slug": "aldea-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463526/more-group/spain/projects/aldea-tulum/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27125224/Hidden-Beach-Au-Naturel1.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/aldea-tulum/inline_2"
+    },
+    "ocean-village-playa:hero": {
+      "kid": "ocean-village-playa:hero",
+      "slug": "ocean-village-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463546/more-group/spain/projects/ocean-village-playa/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/ocean-village-playa/hero"
+    },
+    "ocean-village-playa:inline-1": {
+      "kid": "ocean-village-playa:inline-1",
+      "slug": "ocean-village-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463546/more-group/spain/projects/ocean-village-playa/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161850/playa-del-carmen-4_11zon-scaled-1.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/ocean-village-playa/inline_1"
+    },
+    "the-city-playa:hero": {
+      "kid": "the-city-playa:hero",
+      "slug": "the-city-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463546/more-group/spain/projects/the-city-playa/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161846/Playa-Norte-Isla-Mujeres_22_11zon-scaled-1.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/the-city-playa/hero"
+    },
+    "ocean-village-playa:inline-2": {
+      "kid": "ocean-village-playa:inline-2",
+      "slug": "ocean-village-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463546/more-group/spain/projects/ocean-village-playa/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/ocean-village-playa/inline_2"
+    },
+    "the-city-playa:inline-1": {
+      "kid": "the-city-playa:inline-1",
+      "slug": "the-city-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463547/more-group/spain/projects/the-city-playa/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/the-city-playa/inline_1"
+    },
+    "the-city-playa:inline-2": {
+      "kid": "the-city-playa:inline-2",
+      "slug": "the-city-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463548/more-group/spain/projects/the-city-playa/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161844/D2_Edition_Playa-3_11zon-1-scaled-1.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/the-city-playa/inline_2"
+    },
+    "it-building-playa:hero": {
+      "kid": "it-building-playa:hero",
+      "slug": "it-building-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463548/more-group/spain/projects/it-building-playa/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23085835/Wyndham-Alltra-Playa-del-Carmen.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/it-building-playa/hero"
+    },
+    "it-building-playa:inline-2": {
+      "kid": "it-building-playa:inline-2",
+      "slug": "it-building-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463550/more-group/spain/projects/it-building-playa/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161850/playa-del-carmen-4_11zon-scaled-1.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/it-building-playa/inline_2"
+    },
+    "tres-patios-playa:hero": {
+      "kid": "tres-patios-playa:hero",
+      "slug": "tres-patios-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463550/more-group/spain/projects/tres-patios-playa/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101157/allegro-playacar.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/tres-patios-playa/hero"
+    },
+    "tres-patios-playa:inline-1": {
+      "kid": "tres-patios-playa:inline-1",
+      "slug": "tres-patios-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463550/more-group/spain/projects/tres-patios-playa/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22085130/Sandos-Playacar.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/tres-patios-playa/inline_1"
+    },
+    "it-building-playa:inline-1": {
+      "kid": "it-building-playa:inline-1",
+      "slug": "it-building-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463550/more-group/spain/projects/it-building-playa/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28123551/The-Reef-Playacar-1920x10801-1.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/it-building-playa/inline_1"
+    },
+    "tres-patios-playa:inline-2": {
+      "kid": "tres-patios-playa:inline-2",
+      "slug": "tres-patios-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463552/more-group/spain/projects/tres-patios-playa/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/tres-patios-playa/inline_2"
+    },
+    "the-fives-playa:hero": {
+      "kid": "the-fives-playa:hero",
+      "slug": "the-fives-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463552/more-group/spain/projects/the-fives-playa/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100602/st-regis-kanai-resort-riviera-maya.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/the-fives-playa/hero"
+    },
+    "the-fives-playa:inline-2": {
+      "kid": "the-fives-playa:inline-2",
+      "slug": "the-fives-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463552/more-group/spain/projects/the-fives-playa/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27125007/Generations-Riviera-Maya1.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/the-fives-playa/inline_2"
+    },
+    "pedregal-cabo:inline-1": {
+      "kid": "pedregal-cabo:inline-1",
+      "slug": "pedregal-cabo",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463554/more-group/spain/projects/pedregal-cabo/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/alvarrendering-5e4301b18c367.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/pedregal-cabo/inline_1"
+    },
+    "pedregal-cabo:inline-2": {
+      "kid": "pedregal-cabo:inline-2",
+      "slug": "pedregal-cabo",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463554/more-group/spain/projects/pedregal-cabo/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Insets_0001_GettingHere-58a4789e1dd38.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/pedregal-cabo/inline_2"
+    },
+    "pedregal-cabo:hero": {
+      "kid": "pedregal-cabo:hero",
+      "slug": "pedregal-cabo",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463555/more-group/spain/projects/pedregal-cabo/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0003_Coronado-589cc7d986349-930x550.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/pedregal-cabo/hero"
+    },
+    "the-fives-playa:inline-1": {
+      "kid": "the-fives-playa:inline-1",
+      "slug": "the-fives-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463554/more-group/spain/projects/the-fives-playa/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/the-fives-playa/inline_1"
+    },
+    "palmilla-san-jose:hero": {
+      "kid": "palmilla-san-jose:hero",
+      "slug": "palmilla-san-jose",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463556/more-group/spain/projects/palmilla-san-jose/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/palmilla-san-jose/hero"
+    },
+    "palmilla-san-jose:inline-1": {
+      "kid": "palmilla-san-jose:inline-1",
+      "slug": "palmilla-san-jose",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463556/more-group/spain/projects/palmilla-san-jose/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Copala-Clubhouse-58f623071edd6.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/palmilla-san-jose/inline_1"
+    },
+    "palmilla-san-jose:inline-2": {
+      "kid": "palmilla-san-jose:inline-2",
+      "slug": "palmilla-san-jose",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463556/more-group/spain/projects/palmilla-san-jose/inline_2.jpg",
+      "source_url": "https://hotel.hardrock.com/riviera-maya/files/6135/HRH_Riviera_Maya_Pool.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/palmilla-san-jose/inline_2"
+    },
+    "bacalar-lagoon-homes:inline-1": {
+      "kid": "bacalar-lagoon-homes:inline-1",
+      "slug": "bacalar-lagoon-homes",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463558/more-group/spain/projects/bacalar-lagoon-homes/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22120453/MiaBacalar-Drone-Suites.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/bacalar-lagoon-homes/inline_1"
+    },
+    "bacalar-lagoon-homes:inline-2": {
+      "kid": "bacalar-lagoon-homes:inline-2",
+      "slug": "bacalar-lagoon-homes",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463558/more-group/spain/projects/bacalar-lagoon-homes/inline_2.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142254/cenote-dos-ojos.webp",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/bacalar-lagoon-homes/inline_2"
+    },
+    "bacalar-lagoon-homes:hero": {
+      "kid": "bacalar-lagoon-homes:hero",
+      "slug": "bacalar-lagoon-homes",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463558/more-group/spain/projects/bacalar-lagoon-homes/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155356/Cenote-negro-bacalar-scaled.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/bacalar-lagoon-homes/hero"
+    },
+    "sian-kaan-biosphere-homes:inline-2": {
+      "kid": "sian-kaan-biosphere-homes:inline-2",
+      "slug": "sian-kaan-biosphere-homes",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463560/more-group/spain/projects/sian-kaan-biosphere-homes/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/26184011/riviera-maya-drone-beach-coastline-1.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/sian-kaan-biosphere-homes/inline_2"
+    },
+    "sian-kaan-biosphere-homes:inline-1": {
+      "kid": "sian-kaan-biosphere-homes:inline-1",
+      "slug": "sian-kaan-biosphere-homes",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463560/more-group/spain/projects/sian-kaan-biosphere-homes/inline_1.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22201451/AerialConradTulum-0410508A-2.webp",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/sian-kaan-biosphere-homes/inline_1"
+    },
+    "mayakoba-residences-playa:inline-1": {
+      "kid": "mayakoba-residences-playa:inline-1",
+      "slug": "mayakoba-residences-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463562/more-group/spain/projects/mayakoba-residences-playa/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/mayakoba-residences-playa/inline_1"
+    },
+    "mayakoba-residences-playa:inline-2": {
+      "kid": "mayakoba-residences-playa:inline-2",
+      "slug": "mayakoba-residences-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463562/more-group/spain/projects/mayakoba-residences-playa/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/mayakoba-residences-playa/inline_2"
+    },
+    "cozumel-beach-condos:hero": {
+      "kid": "cozumel-beach-condos:hero",
+      "slug": "cozumel-beach-condos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463564/more-group/spain/projects/cozumel-beach-condos/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161846/Playa-Norte-Isla-Mujeres_22_11zon-scaled-1.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/cozumel-beach-condos/hero"
+    },
+    "sian-kaan-biosphere-homes:hero": {
+      "kid": "sian-kaan-biosphere-homes:hero",
+      "slug": "sian-kaan-biosphere-homes",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463564/more-group/spain/projects/sian-kaan-biosphere-homes/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/29111547/CasaBarbaraHolbox-811.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/sian-kaan-biosphere-homes/hero"
+    },
+    "cozumel-beach-condos:inline-1": {
+      "kid": "cozumel-beach-condos:inline-1",
+      "slug": "cozumel-beach-condos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463564/more-group/spain/projects/cozumel-beach-condos/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/29111547/CasaBarbaraHolbox-811.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/cozumel-beach-condos/inline_1"
+    },
+    "mayakoba-residences-playa:hero": {
+      "kid": "mayakoba-residences-playa:hero",
+      "slug": "mayakoba-residences-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463566/more-group/spain/projects/mayakoba-residences-playa/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100602/st-regis-kanai-resort-riviera-maya.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/mayakoba-residences-playa/hero"
+    },
+    "cozumel-beach-condos:inline-2": {
+      "kid": "cozumel-beach-condos:inline-2",
+      "slug": "cozumel-beach-condos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463566/more-group/spain/projects/cozumel-beach-condos/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225948/cancun-playa-turquesa-familias-scaled.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/cozumel-beach-condos/inline_2"
+    },
+    "progreso-beach-campeche:hero": {
+      "kid": "progreso-beach-campeche:hero",
+      "slug": "progreso-beach-campeche",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463567/more-group/spain/projects/progreso-beach-campeche/hero.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/portada.webp",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/progreso-beach-campeche/hero"
+    },
+    "progreso-beach-campeche:inline-1": {
+      "kid": "progreso-beach-campeche:inline-1",
+      "slug": "progreso-beach-campeche",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463567/more-group/spain/projects/progreso-beach-campeche/inline_1.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/torremar-country-club/img5.webp",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/progreso-beach-campeche/inline_1"
+    },
+    "puerto-aventuras-marina:hero": {
+      "kid": "puerto-aventuras-marina:hero",
+      "slug": "puerto-aventuras-marina",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463568/more-group/spain/projects/puerto-aventuras-marina/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28123551/The-Reef-Playacar-1920x10801-1.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/puerto-aventuras-marina/hero"
+    },
+    "progreso-beach-campeche:inline-2": {
+      "kid": "progreso-beach-campeche:inline-2",
+      "slug": "progreso-beach-campeche",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463568/more-group/spain/projects/progreso-beach-campeche/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155356/Cenote-negro-bacalar-scaled.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/progreso-beach-campeche/inline_2"
+    },
+    "puerto-aventuras-marina:inline-1": {
+      "kid": "puerto-aventuras-marina:inline-1",
+      "slug": "puerto-aventuras-marina",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463568/more-group/spain/projects/puerto-aventuras-marina/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100602/st-regis-kanai-resort-riviera-maya.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/puerto-aventuras-marina/inline_1"
+    },
+    "puerto-aventuras-marina:inline-2": {
+      "kid": "puerto-aventuras-marina:inline-2",
+      "slug": "puerto-aventuras-marina",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463569/more-group/spain/projects/puerto-aventuras-marina/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/puerto-aventuras-marina/inline_2"
+    },
+    "cancun-huayacan-condos:hero": {
+      "kid": "cancun-huayacan-condos:hero",
+      "slug": "cancun-huayacan-condos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463569/more-group/spain/projects/cancun-huayacan-condos/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085554/ibis-cancun.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/cancun-huayacan-condos/hero"
+    },
+    "cancun-huayacan-condos:inline-1": {
+      "kid": "cancun-huayacan-condos:inline-1",
+      "slug": "cancun-huayacan-condos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463570/more-group/spain/projects/cancun-huayacan-condos/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05135021/hilton-6.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/cancun-huayacan-condos/inline_1"
+    },
+    "cancun-huayacan-condos:inline-2": {
+      "kid": "cancun-huayacan-condos:inline-2",
+      "slug": "cancun-huayacan-condos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463570/more-group/spain/projects/cancun-huayacan-condos/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05134932/hilton-4.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/cancun-huayacan-condos/inline_2"
+    },
+    "cancun-lagoon-lofts:hero": {
+      "kid": "cancun-lagoon-lofts:hero",
+      "slug": "cancun-lagoon-lofts",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463571/more-group/spain/projects/cancun-lagoon-lofts/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05135021/hilton-6.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/cancun-lagoon-lofts/hero"
+    },
+    "cancun-lagoon-lofts:inline-2": {
+      "kid": "cancun-lagoon-lofts:inline-2",
+      "slug": "cancun-lagoon-lofts",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463572/more-group/spain/projects/cancun-lagoon-lofts/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225948/cancun-playa-turquesa-familias-scaled.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/cancun-lagoon-lofts/inline_2"
+    },
+    "east-cape-villa-cabo:hero": {
+      "kid": "east-cape-villa-cabo:hero",
+      "slug": "east-cape-villa-cabo",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463572/more-group/spain/projects/east-cape-villa-cabo/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Insets_0001_GettingHere-58a4789e1dd38.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/east-cape-villa-cabo/hero"
+    },
+    "cancun-lagoon-lofts:inline-1": {
+      "kid": "cancun-lagoon-lofts:inline-1",
+      "slug": "cancun-lagoon-lofts",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463572/more-group/spain/projects/cancun-lagoon-lofts/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085928/grand-fiesta-coral-beach.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/cancun-lagoon-lofts/inline_1"
+    },
+    "east-cape-villa-cabo:inline-1": {
+      "kid": "east-cape-villa-cabo:inline-1",
+      "slug": "east-cape-villa-cabo",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463573/more-group/spain/projects/east-cape-villa-cabo/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0003_Coronado-589cc7d986349-930x550.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/east-cape-villa-cabo/inline_1"
+    },
+    "east-cape-villa-cabo:inline-2": {
+      "kid": "east-cape-villa-cabo:inline-2",
+      "slug": "east-cape-villa-cabo",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463573/more-group/spain/projects/east-cape-villa-cabo/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100602/st-regis-kanai-resort-riviera-maya.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/east-cape-villa-cabo/inline_2"
+    },
+    "holbox-lagoon-homes:hero": {
+      "kid": "holbox-lagoon-homes:hero",
+      "slug": "holbox-lagoon-homes",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463574/more-group/spain/projects/holbox-lagoon-homes/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/29111547/CasaBarbaraHolbox-811.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/holbox-lagoon-homes/hero"
+    },
+    "holbox-lagoon-homes:inline-1": {
+      "kid": "holbox-lagoon-homes:inline-1",
+      "slug": "holbox-lagoon-homes",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463574/more-group/spain/projects/holbox-lagoon-homes/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161846/Playa-Norte-Isla-Mujeres_22_11zon-scaled-1.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/holbox-lagoon-homes/inline_1"
+    },
+    "holbox-lagoon-homes:inline-2": {
+      "kid": "holbox-lagoon-homes:inline-2",
+      "slug": "holbox-lagoon-homes",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463575/more-group/spain/projects/holbox-lagoon-homes/inline_2.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22201451/AerialConradTulum-0410508A-2.webp",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/holbox-lagoon-homes/inline_2"
+    },
+    "bacalar-mia-suites:hero": {
+      "kid": "bacalar-mia-suites:hero",
+      "slug": "bacalar-mia-suites",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463576/more-group/spain/projects/bacalar-mia-suites/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22120453/MiaBacalar-Drone-Suites.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/bacalar-mia-suites/hero"
+    },
+    "bacalar-mia-suites:inline-2": {
+      "kid": "bacalar-mia-suites:inline-2",
+      "slug": "bacalar-mia-suites",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463576/more-group/spain/projects/bacalar-mia-suites/inline_2.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142254/cenote-dos-ojos.webp",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/bacalar-mia-suites/inline_2"
+    },
+    "bacalar-mia-suites:inline-1": {
+      "kid": "bacalar-mia-suites:inline-1",
+      "slug": "bacalar-mia-suites",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463577/more-group/spain/projects/bacalar-mia-suites/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155356/Cenote-negro-bacalar-scaled.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/bacalar-mia-suites/inline_1"
+    },
+    "campeche-city-lofts:hero": {
+      "kid": "campeche-city-lofts:hero",
+      "slug": "campeche-city-lofts",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463578/more-group/spain/projects/campeche-city-lofts/hero.jpg",
+      "source_url": "https://www.topmexicorealestate.com/1-images/nara-campeche-country-club/Nara_condos_campeche_1.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/campeche-city-lofts/hero"
+    },
+    "campeche-city-lofts:inline-2": {
+      "kid": "campeche-city-lofts:inline-2",
+      "slug": "campeche-city-lofts",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463578/more-group/spain/projects/campeche-city-lofts/inline_2.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/torremar-country-club/img8.webp",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/campeche-city-lofts/inline_2"
+    },
+    "campeche-city-lofts:inline-1": {
+      "kid": "campeche-city-lofts:inline-1",
+      "slug": "campeche-city-lofts",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463578/more-group/spain/projects/campeche-city-lofts/inline_1.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/location2.webp",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/campeche-city-lofts/inline_1"
+    },
+    "riviera-maya-mayakoba-studio:hero": {
+      "kid": "riviera-maya-mayakoba-studio:hero",
+      "slug": "riviera-maya-mayakoba-studio",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463579/more-group/spain/projects/riviera-maya-mayakoba-studio/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/riviera-maya-mayakoba-studio/hero"
+    },
+    "cancun-downtown-lofts:hero": {
+      "kid": "cancun-downtown-lofts:hero",
+      "slug": "cancun-downtown-lofts",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463580/more-group/spain/projects/cancun-downtown-lofts/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085554/ibis-cancun.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/cancun-downtown-lofts/hero"
+    },
+    "cancun-downtown-lofts:inline-1": {
+      "kid": "cancun-downtown-lofts:inline-1",
+      "slug": "cancun-downtown-lofts",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463581/more-group/spain/projects/cancun-downtown-lofts/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/29111547/CasaBarbaraHolbox-811.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/cancun-downtown-lofts/inline_1"
+    },
+    "riviera-maya-mayakoba-studio:inline-2": {
+      "kid": "riviera-maya-mayakoba-studio:inline-2",
+      "slug": "riviera-maya-mayakoba-studio",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463581/more-group/spain/projects/riviera-maya-mayakoba-studio/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161850/playa-del-carmen-4_11zon-scaled-1.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/riviera-maya-mayakoba-studio/inline_2"
+    },
+    "riviera-maya-mayakoba-studio:inline-1": {
+      "kid": "riviera-maya-mayakoba-studio:inline-1",
+      "slug": "riviera-maya-mayakoba-studio",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463581/more-group/spain/projects/riviera-maya-mayakoba-studio/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100602/st-regis-kanai-resort-riviera-maya.jpg",
+      "alt": "inline1",
+      "public_id": "more-group/spain/projects/riviera-maya-mayakoba-studio/inline_1"
+    },
+    "playa-emerald-studio:hero": {
+      "kid": "playa-emerald-studio:hero",
+      "slug": "playa-emerald-studio",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463582/more-group/spain/projects/playa-emerald-studio/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23085835/Wyndham-Alltra-Playa-del-Carmen.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/playa-emerald-studio/hero"
+    },
+    "cancun-downtown-lofts:inline-2": {
+      "kid": "cancun-downtown-lofts:inline-2",
+      "slug": "cancun-downtown-lofts",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463582/more-group/spain/projects/cancun-downtown-lofts/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05134932/hilton-4.jpg",
+      "alt": "inline2",
+      "public_id": "more-group/spain/projects/cancun-downtown-lofts/inline_2"
+    },
+    "playa-emerald-studio:inline-1": {
+      "kid": "playa-emerald-studio:inline-1",
+      "slug": "playa-emerald-studio",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463583/more-group/spain/projects/playa-emerald-studio/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161850/playa-del-carmen-4_11zon-scaled-1.jpg",
+      "alt": "i1",
+      "public_id": "more-group/spain/projects/playa-emerald-studio/inline_1"
+    },
+    "tulum-jungle-lofts:hero": {
+      "kid": "tulum-jungle-lofts:hero",
+      "slug": "tulum-jungle-lofts",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463584/more-group/spain/projects/tulum-jungle-lofts/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225909/jungle-cabanas-riviera-maya-poolside-family-scaled.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/tulum-jungle-lofts/hero"
+    },
+    "tulum-jungle-lofts:inline-1": {
+      "kid": "tulum-jungle-lofts:inline-1",
+      "slug": "tulum-jungle-lofts",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463585/more-group/spain/projects/tulum-jungle-lofts/inline_1.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142307/tulum-landing.webp",
+      "alt": "i1",
+      "public_id": "more-group/spain/projects/tulum-jungle-lofts/inline_1"
+    },
+    "tulum-jungle-lofts:inline-2": {
+      "kid": "tulum-jungle-lofts:inline-2",
+      "slug": "tulum-jungle-lofts",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463585/more-group/spain/projects/tulum-jungle-lofts/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/10/13204357/TULUM-scaled.jpg",
+      "alt": "i2",
+      "public_id": "more-group/spain/projects/tulum-jungle-lofts/inline_2"
+    },
+    "cabo-corridor-vista:hero": {
+      "kid": "cabo-corridor-vista:hero",
+      "slug": "cabo-corridor-vista",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463586/more-group/spain/projects/cabo-corridor-vista/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/alvarrendering-5e4301b18c367.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/cabo-corridor-vista/hero"
+    },
+    "playa-emerald-studio:inline-2": {
+      "kid": "playa-emerald-studio:inline-2",
+      "slug": "playa-emerald-studio",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463586/more-group/spain/projects/playa-emerald-studio/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28123551/The-Reef-Playacar-1920x10801-1.jpg",
+      "alt": "i2",
+      "public_id": "more-group/spain/projects/playa-emerald-studio/inline_2"
+    },
+    "cabo-corridor-vista:inline-1": {
+      "kid": "cabo-corridor-vista:inline-1",
+      "slug": "cabo-corridor-vista",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463587/more-group/spain/projects/cabo-corridor-vista/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+      "alt": "i1",
+      "public_id": "more-group/spain/projects/cabo-corridor-vista/inline_1"
+    },
+    "cabo-corridor-vista:inline-2": {
+      "kid": "cabo-corridor-vista:inline-2",
+      "slug": "cabo-corridor-vista",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463587/more-group/spain/projects/cabo-corridor-vista/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22100602/st-regis-kanai-resort-riviera-maya.jpg",
+      "alt": "i2",
+      "public_id": "more-group/spain/projects/cabo-corridor-vista/inline_2"
+    },
+    "nuevo-vallarta-bungalows:inline-1": {
+      "kid": "nuevo-vallarta-bungalows:inline-1",
+      "slug": "nuevo-vallarta-bungalows",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463588/more-group/spain/projects/nuevo-vallarta-bungalows/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "i1",
+      "public_id": "more-group/spain/projects/nuevo-vallarta-bungalows/inline_1"
+    },
+    "nuevo-vallarta-bungalows:inline-2": {
+      "kid": "nuevo-vallarta-bungalows:inline-2",
+      "slug": "nuevo-vallarta-bungalows",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463589/more-group/spain/projects/nuevo-vallarta-bungalows/inline_2.webp",
+      "source_url": "https://a.storyblok.com/f/285826016720786/1920x1280/9073d8b778/garza-blanca-vallarta.webp",
+      "alt": "i2",
+      "public_id": "more-group/spain/projects/nuevo-vallarta-bungalows/inline_2"
+    },
+    "nuevo-vallarta-bungalows:hero": {
+      "kid": "nuevo-vallarta-bungalows:hero",
+      "slug": "nuevo-vallarta-bungalows",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463589/more-group/spain/projects/nuevo-vallarta-bungalows/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/nuevo-vallarta-bungalows/hero"
+    },
+    "campeche-gulf-villas:hero": {
+      "kid": "campeche-gulf-villas:hero",
+      "slug": "campeche-gulf-villas",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463590/more-group/spain/projects/campeche-gulf-villas/hero.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/olea-luxury-beach-condos/portada.webp",
+      "alt": "hero",
+      "public_id": "more-group/spain/projects/campeche-gulf-villas/hero"
+    },
+    "campeche-gulf-villas:inline-1": {
+      "kid": "campeche-gulf-villas:inline-1",
+      "slug": "campeche-gulf-villas",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463591/more-group/spain/projects/campeche-gulf-villas/inline_1.webp",
+      "source_url": "https://www.topmexicorealestate.com/1-images/torremar-country-club/img5.webp",
+      "alt": "i1",
+      "public_id": "more-group/spain/projects/campeche-gulf-villas/inline_1"
+    },
+    "campeche-gulf-villas:inline-2": {
+      "kid": "campeche-gulf-villas:inline-2",
+      "slug": "campeche-gulf-villas",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781463592/more-group/spain/projects/campeche-gulf-villas/inline_2.jpg",
+      "source_url": "https://www.topmexicorealestate.com/1-images/nara-campeche-country-club/Nara_condos_campeche_1.jpg",
+      "alt": "i2",
+      "public_id": "more-group/spain/projects/campeche-gulf-villas/inline_2"
+    }
+  },
+  "failed": [
+    {
+      "slug": "aldea-thai",
+      "role": "inline-1",
+      "ok": false,
+      "error": "upload_failed",
+      "source_url": "https://static.wixstatic.com/media/0dbd62_77b1b78566c54f8784bf5cebe3783d04~mv2.jpg"
+    },
+    {
+      "slug": "hideaways-los-cabos",
+      "role": "hero",
+      "ok": false,
+      "error": "upload_failed",
+      "source_url": "https://assets.cdn.filesafe.space/4WKAshJWeeeLZiJbuxHA/media/27606737-0448-4762-99a7-c691fa34c792.jpeg"
+    },
+    {
+      "slug": "aldea-thai",
+      "role": "inline-1",
+      "ok": false,
+      "error": "upload_failed",
+      "source_url": "https://static.wixstatic.com/media/0dbd62_77b1b78566c54f8784bf5cebe3783d04~mv2.jpg"
+    },
+    {
+      "slug": "hideaways-los-cabos",
+      "role": "hero",
+      "ok": false,
+      "error": "upload_failed",
+      "source_url": "https://assets.cdn.filesafe.space/4WKAshJWeeeLZiJbuxHA/media/27606737-0448-4762-99a7-c691fa34c792.jpeg"
+    }
+  ],
+  "cloud": "dphvjbqb4",
+  "folder_base": "more-group/spain/projects",
+  "generatedAt": "2026-06-14",
+  "collection": "projects"
+}

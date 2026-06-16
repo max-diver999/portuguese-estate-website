@@ -1,0 +1,4 @@
+#!/bin/sh
+# invest-gulf.com — block push if changed MDX fails validate:content or build
+cd "$(git rev-parse --show-toplevel)" || exit 1
+npm run prepush:gate

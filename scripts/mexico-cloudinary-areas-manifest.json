@@ -1,0 +1,919 @@
+{
+  "uploaded": {
+    "areas:tulum:inline-1": {
+      "kid": "areas:tulum:inline-1",
+      "slug": "tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460931/more-group/spain/areas/tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101633/moxy-tulum-entrance.jpg",
+      "alt": "Tulum hotel zone entrance and jungle corridor",
+      "public_id": "more-group/spain/areas/tulum/inline_1"
+    },
+    "areas:aldea-zama-tulum:hero": {
+      "kid": "areas:aldea-zama-tulum:hero",
+      "slug": "aldea-zama-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460931/more-group/spain/areas/aldea-zama-tulum/hero.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142307/tulum-landing.webp",
+      "alt": "Tulum town landing zone near Aldea Zama master-planned corridor",
+      "public_id": "more-group/spain/areas/aldea-zama-tulum/hero"
+    },
+    "areas:tulum:hero": {
+      "kid": "areas:tulum:hero",
+      "slug": "tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460931/more-group/spain/areas/tulum/hero.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22201451/AerialConradTulum-0410508A-2.webp",
+      "alt": "Aerial view of Tulum coastline and Caribbean Sea",
+      "public_id": "more-group/spain/areas/tulum/hero"
+    },
+    "areas:tulum:inline-2": {
+      "kid": "areas:tulum:inline-2",
+      "slug": "tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460931/more-group/spain/areas/tulum/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18152827/AZULIK-TULUM4-scaled.jpg",
+      "alt": "Eco-luxury beach architecture on Tulum coast",
+      "public_id": "more-group/spain/areas/tulum/inline_2"
+    },
+    "areas:aldea-zama-tulum:inline-2": {
+      "kid": "areas:aldea-zama-tulum:inline-2",
+      "slug": "aldea-zama-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460933/more-group/spain/areas/aldea-zama-tulum/inline_2.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Tulum_Mexico_20081105.JPG/1280px-Tulum_Mexico_20081105.JPG",
+      "alt": "Caribbean beach near Tulum town and Aldea Zama",
+      "public_id": "more-group/spain/areas/aldea-zama-tulum/inline_2"
+    },
+    "areas:la-veleta-tulum:hero": {
+      "kid": "areas:la-veleta-tulum:hero",
+      "slug": "la-veleta-tulum",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460934/more-group/spain/areas/la-veleta-tulum/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/26184011/riviera-maya-drone-beach-coastline-1.jpg",
+      "alt": "Drone view of Riviera Maya coastline near Tulum residential zones",
+      "public_id": "more-group/spain/areas/la-veleta-tulum/hero"
+    },
+    "areas:aldea-zama-tulum:inline-1": {
+      "kid": "areas:aldea-zama-tulum:inline-1",
+      "slug": "aldea-zama-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460934/more-group/spain/areas/aldea-zama-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/10/13204357/TULUM-scaled.jpg",
+      "alt": "Tulum destination overview — Aldea Zama residential context",
+      "public_id": "more-group/spain/areas/aldea-zama-tulum/inline_1"
+    },
+    "areas:la-veleta-tulum:inline-1": {
+      "kid": "areas:la-veleta-tulum:inline-1",
+      "slug": "la-veleta-tulum",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460934/more-group/spain/areas/la-veleta-tulum/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18225918/riviera-maya-drone-beach-coastline.jpg",
+      "alt": "Aerial Riviera Maya beach — Tulum and La Veleta corridor",
+      "public_id": "more-group/spain/areas/la-veleta-tulum/inline_1"
+    },
+    "areas:akumal:hero": {
+      "kid": "areas:akumal:hero",
+      "slug": "akumal",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460936/more-group/spain/areas/akumal/hero.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Akumal%2Cbeach.jpg/1280px-Akumal%2Cbeach.jpg",
+      "alt": "Akumal Bay beach and turquoise Caribbean water",
+      "public_id": "more-group/spain/areas/akumal/hero"
+    },
+    "areas:la-veleta-tulum:inline-2": {
+      "kid": "areas:la-veleta-tulum:inline-2",
+      "slug": "la-veleta-tulum",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460936/more-group/spain/areas/la-veleta-tulum/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23085835/Wyndham-Alltra-Playa-del-Carmen.jpg",
+      "alt": "Riviera Maya condo tower context near Tulum residential grid",
+      "public_id": "more-group/spain/areas/la-veleta-tulum/inline_2"
+    },
+    "areas:playa-del-carmen:hero": {
+      "kid": "areas:playa-del-carmen:hero",
+      "slug": "playa-del-carmen",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460937/more-group/spain/areas/playa-del-carmen/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "Aerial rooftop view of Playa del Carmen and Caribbean coast",
+      "public_id": "more-group/spain/areas/playa-del-carmen/hero"
+    },
+    "areas:playa-del-carmen:inline-2": {
+      "kid": "areas:playa-del-carmen:inline-2",
+      "slug": "playa-del-carmen",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460938/more-group/spain/areas/playa-del-carmen/inline_2.jpg",
+      "source_url": "https://www.playadelcarmen.com/front/img/main-slider/4.jpg",
+      "alt": "Playa del Carmen beach and Quinta Avenida corridor",
+      "public_id": "more-group/spain/areas/playa-del-carmen/inline_2"
+    },
+    "areas:playa-del-carmen:inline-1": {
+      "kid": "areas:playa-del-carmen:inline-1",
+      "slug": "playa-del-carmen",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460938/more-group/spain/areas/playa-del-carmen/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "Wide beach view along Playa del Carmen coast",
+      "public_id": "more-group/spain/areas/playa-del-carmen/inline_1"
+    },
+    "areas:gonzalo-guerrero-playa:hero": {
+      "kid": "areas:gonzalo-guerrero-playa:hero",
+      "slug": "gonzalo-guerrero-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460939/more-group/spain/areas/gonzalo-guerrero-playa/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/06161850/playa-del-carmen-4_11zon-scaled-1.jpg",
+      "alt": "Downtown Playa del Carmen — walkable colonia near Quinta Avenida",
+      "public_id": "more-group/spain/areas/gonzalo-guerrero-playa/hero"
+    },
+    "areas:playacar:hero": {
+      "kid": "areas:playacar:hero",
+      "slug": "playacar",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460941/more-group/spain/areas/playacar/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28123551/The-Reef-Playacar-1920x10801-1.jpg",
+      "alt": "Playacar reef beach and resort coastline",
+      "public_id": "more-group/spain/areas/playacar/hero"
+    },
+    "areas:playacar:inline-1": {
+      "kid": "areas:playacar:inline-1",
+      "slug": "playacar",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460941/more-group/spain/areas/playacar/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101157/allegro-playacar.jpg",
+      "alt": "Allegro Playacar beachfront zone south of centro",
+      "public_id": "more-group/spain/areas/playacar/inline_1"
+    },
+    "areas:playacar:inline-2": {
+      "kid": "areas:playacar:inline-2",
+      "slug": "playacar",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460941/more-group/spain/areas/playacar/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22085130/Sandos-Playacar.jpg",
+      "alt": "Sandos Playacar beach and gated resort community",
+      "public_id": "more-group/spain/areas/playacar/inline_2"
+    },
+    "areas:zazil-ha-playa:hero": {
+      "kid": "areas:zazil-ha-playa:hero",
+      "slug": "zazil-ha-playa",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460942/more-group/spain/areas/zazil-ha-playa/hero.jpg",
+      "source_url": "https://www.playadelcarmen.com/front/img/header/header_image_1.jpg",
+      "alt": "North Playa del Carmen beach near Zazil-Ha",
+      "public_id": "more-group/spain/areas/zazil-ha-playa/hero"
+    },
+    "areas:zazil-ha-playa:inline-1": {
+      "kid": "areas:zazil-ha-playa:inline-1",
+      "slug": "zazil-ha-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460943/more-group/spain/areas/zazil-ha-playa/inline_1.jpg",
+      "source_url": "https://www.playadelcarmen.com/front/img/header/header_image_2.jpg",
+      "alt": "Caribbean shoreline north of Quinta Avenida",
+      "public_id": "more-group/spain/areas/zazil-ha-playa/inline_1"
+    },
+    "areas:zazil-ha-playa:inline-2": {
+      "kid": "areas:zazil-ha-playa:inline-2",
+      "slug": "zazil-ha-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460943/more-group/spain/areas/zazil-ha-playa/inline_2.jpg",
+      "source_url": "https://www.playadelcarmen.com/front/img/header/header_image_4.jpg",
+      "alt": "Zazil-Ha beach access and turquoise water",
+      "public_id": "more-group/spain/areas/zazil-ha-playa/inline_2"
+    },
+    "areas:cancun:inline-1": {
+      "kid": "areas:cancun:inline-1",
+      "slug": "cancun",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460945/more-group/spain/areas/cancun/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/10084435/JWCancunxLeagueCreativeCo-62-scaled.jpg",
+      "alt": "JW Marriott Cancun Resort on Hotel Zone beach",
+      "public_id": "more-group/spain/areas/cancun/inline_1"
+    },
+    "areas:cancun:hero": {
+      "kid": "areas:cancun:hero",
+      "slug": "cancun",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460945/more-group/spain/areas/cancun/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/19000716/PuertoCancun_AndreaChiri-1-scaled.jpg",
+      "alt": "Puerto Cancun marina and lagoon skyline",
+      "public_id": "more-group/spain/areas/cancun/hero"
+    },
+    "areas:puerto-morelos:hero": {
+      "kid": "areas:puerto-morelos:hero",
+      "slug": "puerto-morelos",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460945/more-group/spain/areas/puerto-morelos/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24144934/Hacienda-Morelos.jpg",
+      "alt": "Hacienda Morelos — Puerto Morelos town landmark",
+      "public_id": "more-group/spain/areas/puerto-morelos/hero"
+    },
+    "areas:cancun:inline-2": {
+      "kid": "areas:cancun:inline-2",
+      "slug": "cancun",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460946/more-group/spain/areas/cancun/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22085128/Sandos-Cancun.jpg",
+      "alt": "Sandos Cancun resort on Hotel Zone beach",
+      "public_id": "more-group/spain/areas/cancun/inline_2"
+    },
+    "areas:merida:hero": {
+      "kid": "areas:merida:hero",
+      "slug": "merida",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460947/more-group/spain/areas/merida/hero.jpg",
+      "source_url": "https://yucatan.travel/wp-content/uploads/2019/12/Merida-CentroMerida-Yucatan-Regiones-303x496.jpg",
+      "alt": "Merida historic center colonial streets",
+      "public_id": "more-group/spain/areas/merida/hero"
+    },
+    "areas:merida:inline-1": {
+      "kid": "areas:merida:inline-1",
+      "slug": "merida",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460948/more-group/spain/areas/merida/inline_1.jpg",
+      "source_url": "https://yucatan.travel/wp-content/uploads/2021/05/M%C3%A9rida-city-tour-turibus-8-703x535-crop.jpg",
+      "alt": "Merida Turibus on Paseo de Montejo",
+      "public_id": "more-group/spain/areas/merida/inline_1"
+    },
+    "areas:puerto-morelos:inline-2": {
+      "kid": "areas:puerto-morelos:inline-2",
+      "slug": "puerto-morelos",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460948/more-group/spain/areas/puerto-morelos/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130244/VS-Beach-1.jpg",
+      "alt": "Quiet Caribbean beach near Puerto Morelos reef town",
+      "public_id": "more-group/spain/areas/puerto-morelos/inline_2"
+    },
+    "areas:merida:inline-2": {
+      "kid": "areas:merida:inline-2",
+      "slug": "merida",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781460949/more-group/spain/areas/merida/inline_2.jpg",
+      "source_url": "https://yucatan.travel/wp-content/uploads/2025/12/merida-paseo-de-montejo-2.jpg",
+      "alt": "Paseo de Montejo boulevard Merida",
+      "public_id": "more-group/spain/areas/merida/inline_2"
+    },
+    "areas:akumal:inline-1": {
+      "kid": "areas:akumal:inline-1",
+      "slug": "akumal",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461175/more-group/spain/areas/akumal/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "Akumal beach port and snorkeling bay",
+      "public_id": "more-group/spain/areas/akumal/inline_1"
+    },
+    "areas:akumal:inline-2": {
+      "kid": "areas:akumal:inline-2",
+      "slug": "akumal",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461175/more-group/spain/areas/akumal/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18230010/playa-mexico-familias-kids-beach-day-scaled.jpg",
+      "alt": "Akumal shoreline between Tulum and Playa del Carmen",
+      "public_id": "more-group/spain/areas/akumal/inline_2"
+    },
+    "areas:gonzalo-guerrero-playa:inline-2": {
+      "kid": "areas:gonzalo-guerrero-playa:inline-2",
+      "slug": "gonzalo-guerrero-playa",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461175/more-group/spain/areas/gonzalo-guerrero-playa/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18230010/playa-mexico-familias-kids-beach-day-scaled.jpg",
+      "alt": "Quinta Avenida beach culture in Gonzalo Guerrero corridor",
+      "public_id": "more-group/spain/areas/gonzalo-guerrero-playa/inline_2"
+    },
+    "areas:gonzalo-guerrero-playa:inline-1": {
+      "kid": "areas:gonzalo-guerrero-playa:inline-1",
+      "slug": "gonzalo-guerrero-playa",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461175/more-group/spain/areas/gonzalo-guerrero-playa/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "Coastal bike path in Playa del Carmen centro",
+      "public_id": "more-group/spain/areas/gonzalo-guerrero-playa/inline_1"
+    },
+    "areas:cabo-san-lucas:inline-1": {
+      "kid": "areas:cabo-san-lucas:inline-1",
+      "slug": "cabo-san-lucas",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461177/more-group/spain/areas/cabo-san-lucas/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Insets_0001_GettingHere-58a4789e1dd38.jpg",
+      "alt": "Lovers Beach cove near Cabo San Lucas marina",
+      "public_id": "more-group/spain/areas/cabo-san-lucas/inline_1"
+    },
+    "areas:puerto-morelos:inline-1": {
+      "kid": "areas:puerto-morelos:inline-1",
+      "slug": "puerto-morelos",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461177/more-group/spain/areas/puerto-morelos/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27155433/Hyatt-Centric-Playa-del-Carmen-Rooftop-Aerial1.jpg",
+      "alt": "Puerto Morelos town plaza and local commerce",
+      "public_id": "more-group/spain/areas/puerto-morelos/inline_1"
+    },
+    "areas:cabo-san-lucas:hero": {
+      "kid": "areas:cabo-san-lucas:hero",
+      "slug": "cabo-san-lucas",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461177/more-group/spain/areas/cabo-san-lucas/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/alvarrendering-5e4301b18c367.jpg",
+      "alt": "El Arco rock formation at Land's End, Cabo San Lucas",
+      "public_id": "more-group/spain/areas/cabo-san-lucas/hero"
+    },
+    "areas:cabo-san-lucas:inline-2": {
+      "kid": "areas:cabo-san-lucas:inline-2",
+      "slug": "cabo-san-lucas",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461177/more-group/spain/areas/cabo-san-lucas/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+      "alt": "Cabo San Lucas marina and sport-fishing fleet aerial",
+      "public_id": "more-group/spain/areas/cabo-san-lucas/inline_2"
+    },
+    "areas:san-jose-del-cabo:inline-1": {
+      "kid": "areas:san-jose-del-cabo:inline-1",
+      "slug": "san-jose-del-cabo",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461178/more-group/spain/areas/san-jose-del-cabo/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Insets_0001_GettingHere-58a4789e1dd38.jpg",
+      "alt": "Papel picado decorations in San José del Cabo arts district",
+      "public_id": "more-group/spain/areas/san-jose-del-cabo/inline_1"
+    },
+    "areas:san-jose-del-cabo:hero": {
+      "kid": "areas:san-jose-del-cabo:hero",
+      "slug": "san-jose-del-cabo",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461179/more-group/spain/areas/san-jose-del-cabo/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/alvarrendering-5e4301b18c367.jpg",
+      "alt": "San José del Cabo historic centro plaza",
+      "public_id": "more-group/spain/areas/san-jose-del-cabo/hero"
+    },
+    "areas:san-jose-del-cabo:inline-2": {
+      "kid": "areas:san-jose-del-cabo:inline-2",
+      "slug": "san-jose-del-cabo",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461179/more-group/spain/areas/san-jose-del-cabo/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+      "alt": "Street market scene in walkable San José del Cabo centro",
+      "public_id": "more-group/spain/areas/san-jose-del-cabo/inline_2"
+    },
+    "areas:cabo-corridor:hero": {
+      "kid": "areas:cabo-corridor:hero",
+      "slug": "cabo-corridor",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461179/more-group/spain/areas/cabo-corridor/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/alvarrendering-5e4301b18c367.jpg",
+      "alt": "ESA satellite view of Los Cabos Tourist Corridor peninsula",
+      "public_id": "more-group/spain/areas/cabo-corridor/hero"
+    },
+    "areas:cabo-corridor:inline-1": {
+      "kid": "areas:cabo-corridor:inline-1",
+      "slug": "cabo-corridor",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461180/more-group/spain/areas/cabo-corridor/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Insets_0001_GettingHere-58a4789e1dd38.jpg",
+      "alt": "Resort-lined Cabo Tourist Corridor coastline",
+      "public_id": "more-group/spain/areas/cabo-corridor/inline_1"
+    },
+    "areas:cabo-corridor:inline-2": {
+      "kid": "areas:cabo-corridor:inline-2",
+      "slug": "cabo-corridor",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461180/more-group/spain/areas/cabo-corridor/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+      "alt": "Aerial context of Cabo Corridor between San José and Cabo San Lucas",
+      "public_id": "more-group/spain/areas/cabo-corridor/inline_2"
+    },
+    "areas:east-cape-baja:inline-1": {
+      "kid": "areas:east-cape-baja:inline-1",
+      "slug": "east-cape-baja",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461181/more-group/spain/areas/east-cape-baja/inline_1.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/Quivira-Insets_0001_GettingHere-58a4789e1dd38.jpg",
+      "alt": "Playa Los Barriles surf and fishing coast East Cape",
+      "public_id": "more-group/spain/areas/east-cape-baja/inline_1"
+    },
+    "areas:east-cape-baja:hero": {
+      "kid": "areas:east-cape-baja:hero",
+      "slug": "east-cape-baja",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461180/more-group/spain/areas/east-cape-baja/hero.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/alvarrendering-5e4301b18c367.jpg",
+      "alt": "Los Barriles beach on Baja East Cape",
+      "public_id": "more-group/spain/areas/east-cape-baja/hero"
+    },
+    "areas:east-cape-baja:inline-2": {
+      "kid": "areas:east-cape-baja:inline-2",
+      "slug": "east-cape-baja",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461182/more-group/spain/areas/east-cape-baja/inline_2.jpg",
+      "source_url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/cache/Residences-Rotator_0001_Copala-589cc34062d27-930x550.jpg",
+      "alt": "East Cape shoreline panorama at Los Barriles",
+      "public_id": "more-group/spain/areas/east-cape-baja/inline_2"
+    },
+    "areas:puerto-vallarta:hero": {
+      "kid": "areas:puerto-vallarta:hero",
+      "slug": "puerto-vallarta",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461183/more-group/spain/areas/puerto-vallarta/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "Banderas Bay coastline Puerto Vallarta",
+      "public_id": "more-group/spain/areas/puerto-vallarta/hero"
+    },
+    "areas:puerto-vallarta:inline-1": {
+      "kid": "areas:puerto-vallarta:inline-1",
+      "slug": "puerto-vallarta",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461183/more-group/spain/areas/puerto-vallarta/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "Aerial view of Banderas Bay and Puerto Vallarta hills",
+      "public_id": "more-group/spain/areas/puerto-vallarta/inline_1"
+    },
+    "areas:puerto-vallarta:inline-2": {
+      "kid": "areas:puerto-vallarta:inline-2",
+      "slug": "puerto-vallarta",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461183/more-group/spain/areas/puerto-vallarta/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085928/grand-fiesta-coral-beach.jpg",
+      "alt": "Malecón waterfront dancers Puerto Vallarta Zona Romántica",
+      "public_id": "more-group/spain/areas/puerto-vallarta/inline_2"
+    },
+    "areas:nuevo-vallarta:hero": {
+      "kid": "areas:nuevo-vallarta:hero",
+      "slug": "nuevo-vallarta",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461184/more-group/spain/areas/nuevo-vallarta/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "Nuevo Vallarta marina zone sunset",
+      "public_id": "more-group/spain/areas/nuevo-vallarta/hero"
+    },
+    "areas:nuevo-vallarta:inline-1": {
+      "kid": "areas:nuevo-vallarta:inline-1",
+      "slug": "nuevo-vallarta",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461184/more-group/spain/areas/nuevo-vallarta/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "Nuevo Vallarta resort coastline Nayarit",
+      "public_id": "more-group/spain/areas/nuevo-vallarta/inline_1"
+    },
+    "areas:nuevo-vallarta:inline-2": {
+      "kid": "areas:nuevo-vallarta:inline-2",
+      "slug": "nuevo-vallarta",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461185/more-group/spain/areas/nuevo-vallarta/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085928/grand-fiesta-coral-beach.jpg",
+      "alt": "Nuevo Vallarta planned community beach panorama",
+      "public_id": "more-group/spain/areas/nuevo-vallarta/inline_2"
+    },
+    "areas:bucerias:hero": {
+      "kid": "areas:bucerias:hero",
+      "slug": "bucerias",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461186/more-group/spain/areas/bucerias/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "Bucerías main beach Riviera Nayarit",
+      "public_id": "more-group/spain/areas/bucerias/hero"
+    },
+    "areas:bucerias:inline-2": {
+      "kid": "areas:bucerias:inline-2",
+      "slug": "bucerias",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461187/more-group/spain/areas/bucerias/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085928/grand-fiesta-coral-beach.jpg",
+      "alt": "Bucerías coastal town panorama Nayarit",
+      "public_id": "more-group/spain/areas/bucerias/inline_2"
+    },
+    "areas:bucerias:inline-1": {
+      "kid": "areas:bucerias:inline-1",
+      "slug": "bucerias",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461186/more-group/spain/areas/bucerias/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "Bucerías town street and local commerce",
+      "public_id": "more-group/spain/areas/bucerias/inline_1"
+    },
+    "areas:punta-de-mita:hero": {
+      "kid": "areas:punta-de-mita:hero",
+      "slug": "punta-de-mita",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461187/more-group/spain/areas/punta-de-mita/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "Punta de Mita peninsula sunset Nayarit",
+      "public_id": "more-group/spain/areas/punta-de-mita/hero"
+    },
+    "areas:punta-de-mita:inline-1": {
+      "kid": "areas:punta-de-mita:inline-1",
+      "slug": "punta-de-mita",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461188/more-group/spain/areas/punta-de-mita/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "Punta de Mita malecón and waterfront",
+      "public_id": "more-group/spain/areas/punta-de-mita/inline_1"
+    },
+    "areas:punta-de-mita:inline-2": {
+      "kid": "areas:punta-de-mita:inline-2",
+      "slug": "punta-de-mita",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461188/more-group/spain/areas/punta-de-mita/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085928/grand-fiesta-coral-beach.jpg",
+      "alt": "Anclote anchorage near ultra-luxury Punta de Mita",
+      "public_id": "more-group/spain/areas/punta-de-mita/inline_2"
+    },
+    "areas:sayulita:hero": {
+      "kid": "areas:sayulita:hero",
+      "slug": "sayulita",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461189/more-group/spain/areas/sayulita/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05130242/VS-Beach-Desktop.jpg",
+      "alt": "Sayulita bohemian surf town Nayarit",
+      "public_id": "more-group/spain/areas/sayulita/hero"
+    },
+    "areas:sayulita:inline-1": {
+      "kid": "areas:sayulita:inline-1",
+      "slug": "sayulita",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461189/more-group/spain/areas/sayulita/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120518/VS-Beach.jpg",
+      "alt": "Sayulita beach and surf break",
+      "public_id": "more-group/spain/areas/sayulita/inline_1"
+    },
+    "areas:sayulita:inline-2": {
+      "kid": "areas:sayulita:inline-2",
+      "slug": "sayulita",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461190/more-group/spain/areas/sayulita/inline_2.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24085928/grand-fiesta-coral-beach.jpg",
+      "alt": "Sayulita playa and palapa coastline",
+      "public_id": "more-group/spain/areas/sayulita/inline_2"
+    },
+    "areas:san-miguel-de-allende-property:hero": {
+      "kid": "areas:san-miguel-de-allende-property:hero",
+      "slug": "san-miguel-de-allende-property",
+      "role": "hero",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461191/more-group/spain/areas/san-miguel-de-allende-property/hero.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155356/Cenote-negro-bacalar-scaled.jpg",
+      "alt": "Parroquia de San Miguel Arcángel iconic tower",
+      "public_id": "more-group/spain/areas/san-miguel-de-allende-property/hero"
+    },
+    "areas:san-miguel-de-allende-property:inline-1": {
+      "kid": "areas:san-miguel-de-allende-property:inline-1",
+      "slug": "san-miguel-de-allende-property",
+      "role": "inline-1",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461191/more-group/spain/areas/san-miguel-de-allende-property/inline_1.jpg",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22120453/MiaBacalar-Drone-Suites.jpg",
+      "alt": "Mesones Street colonial centro San Miguel de Allende",
+      "public_id": "more-group/spain/areas/san-miguel-de-allende-property/inline_1"
+    },
+    "areas:san-miguel-de-allende-property:inline-2": {
+      "kid": "areas:san-miguel-de-allende-property:inline-2",
+      "slug": "san-miguel-de-allende-property",
+      "role": "inline-2",
+      "ok": true,
+      "secure_url": "https://res.cloudinary.com/dphvjbqb4/image/upload/v1781461191/more-group/spain/areas/san-miguel-de-allende-property/inline_2.webp",
+      "source_url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142254/cenote-dos-ojos.webp",
+      "alt": "Parroquia facade and Jardín Principal UNESCO centro",
+      "public_id": "more-group/spain/areas/san-miguel-de-allende-property/inline_2"
+    }
+  },
+  "failed": [
+    {
+      "kid": "areas:akumal:inline-1",
+      "slug": "akumal",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Akumal_Beach%2C_Port_%284303205786%29.jpg/1280px-Akumal_Beach%2C_Port_%284303205786%29.jpg"
+    },
+    {
+      "kid": "areas:akumal:inline-2",
+      "slug": "akumal",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Akumal_Beach_-_Mexico_%284303204764%29.jpg/1280px-Akumal_Beach_-_Mexico_%284303204764%29.jpg"
+    },
+    {
+      "kid": "areas:gonzalo-guerrero-playa:inline-1",
+      "slug": "gonzalo-guerrero-playa",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Bike_path%2C_Playa_del_Carmen%2C_Quintana_Roo%2C_Mexico.jpg/1280px-Bike_path%2C_Playa_del_Carmen%2C_Quintana_Roo%2C_Mexico.jpg"
+    },
+    {
+      "kid": "areas:gonzalo-guerrero-playa:inline-2",
+      "slug": "gonzalo-guerrero-playa",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Playa_del_Carmen%2C_Quintana_Roo%2C_Mexico_-_Una_Fresa.jpg/1280px-Playa_del_Carmen%2C_Quintana_Roo%2C_Mexico_-_Una_Fresa.jpg"
+    },
+    {
+      "kid": "areas:puerto-morelos:inline-1",
+      "slug": "puerto-morelos",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Puerto-Morelos-plaza.jpg/1280px-Puerto-Morelos-plaza.jpg"
+    },
+    {
+      "kid": "areas:cabo-san-lucas:hero",
+      "slug": "cabo-san-lucas",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/El_Arco%2C_Cabo_San_Lucas%2C_M%C3%A9xico%2C_2024-12-22%2C_DD_03.jpg/1280px-El_Arco%2C_Cabo_San_Lucas%2C_M%C3%A9xico%2C_2024-12-22%2C_DD_03.jpg"
+    },
+    {
+      "kid": "areas:cabo-san-lucas:inline-1",
+      "slug": "cabo-san-lucas",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Lovers_Beach_Los_Cabos_2008_%288997396795%29.jpg/1280px-Lovers_Beach_Los_Cabos_2008_%288997396795%29.jpg"
+    },
+    {
+      "kid": "areas:cabo-san-lucas:inline-2",
+      "slug": "cabo-san-lucas",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Cabo_San_Lucas_Race_Start_2013_photo_Don_Ramey_Logan.jpg/1280px-Cabo_San_Lucas_Race_Start_2013_photo_Don_Ramey_Logan.jpg"
+    },
+    {
+      "kid": "areas:san-jose-del-cabo:hero",
+      "slug": "san-jose-del-cabo",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/San_Jos%C3%A9_del_Cabo%2C_Mexico.jpg/1280px-San_Jos%C3%A9_del_Cabo%2C_Mexico.jpg"
+    },
+    {
+      "kid": "areas:san-jose-del-cabo:inline-1",
+      "slug": "san-jose-del-cabo",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Papel_picado%2C_San_Jos%C3%A9_del_Cabo%2C_Mexico.jpg/1280px-Papel_picado%2C_San_Jos%C3%A9_del_Cabo%2C_Mexico.jpg"
+    },
+    {
+      "kid": "areas:san-jose-del-cabo:inline-2",
+      "slug": "san-jose-del-cabo",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Vendor_in_Street_-_San_Jose_del_Cabo_-_Baja_California_Sur_-_Mexico_%2824112122246%29_%282%29.jpg/1280px-Vendor_in_Street_-_San_Jose_del_Cabo_-_Baja_California_Sur_-_Mexico_%2824112122246%29_%282%29.jpg"
+    },
+    {
+      "kid": "areas:cabo-corridor:hero",
+      "slug": "cabo-corridor",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Los_Cabos%2C_Mexico_ESA23313914.jpeg/1280px-Los_Cabos%2C_Mexico_ESA23313914.jpeg"
+    },
+    {
+      "kid": "areas:cabo-corridor:inline-1",
+      "slug": "cabo-corridor",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Los-Cabos-Corridor.jpg/1280px-Los-Cabos-Corridor.jpg"
+    },
+    {
+      "kid": "areas:cabo-corridor:inline-2",
+      "slug": "cabo-corridor",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Los_Cabos%2C_Mexico_ESA23313914.tiff/lossy-page1-1280px-Los_Cabos%2C_Mexico_ESA23313914.tiff.jpg"
+    },
+    {
+      "kid": "areas:east-cape-baja:hero",
+      "slug": "east-cape-baja",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Los_Barriles_Beach.jpg/1280px-Los_Barriles_Beach.jpg"
+    },
+    {
+      "kid": "areas:east-cape-baja:inline-1",
+      "slug": "east-cape-baja",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Playa_Los_Barriles.jpg/1280px-Playa_Los_Barriles.jpg"
+    },
+    {
+      "kid": "areas:east-cape-baja:inline-2",
+      "slug": "east-cape-baja",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Playa%2C_Los_Barriles_-_panoramio.jpg/1280px-Playa%2C_Los_Barriles_-_panoramio.jpg"
+    },
+    {
+      "kid": "areas:puerto-vallarta:hero",
+      "slug": "puerto-vallarta",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Banderas_Bay%2C_Mexico_%2825945325938%29.jpg/1280px-Banderas_Bay%2C_Mexico_%2825945325938%29.jpg"
+    },
+    {
+      "kid": "areas:puerto-vallarta:inline-1",
+      "slug": "puerto-vallarta",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banderas_Bay%2C_Mexico_%2837784264145%29.jpg/1280px-Banderas_Bay%2C_Mexico_%2837784264145%29.jpg"
+    },
+    {
+      "kid": "areas:puerto-vallarta:inline-2",
+      "slug": "puerto-vallarta",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Vallarta_Dancers%2C_Malec%C3%B3n%2C_Puerto_Vallarta%2C_2014.jpg/1280px-Vallarta_Dancers%2C_Malec%C3%B3n%2C_Puerto_Vallarta%2C_2014.jpg"
+    },
+    {
+      "kid": "areas:nuevo-vallarta:hero",
+      "slug": "nuevo-vallarta",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Nuevo_Vallarta_atardecer.jpg/1280px-Nuevo_Vallarta_atardecer.jpg"
+    },
+    {
+      "kid": "areas:nuevo-vallarta:inline-1",
+      "slug": "nuevo-vallarta",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Nuevo_Vallarta_2.JPG/1280px-Nuevo_Vallarta_2.JPG"
+    },
+    {
+      "kid": "areas:nuevo-vallarta:inline-2",
+      "slug": "nuevo-vallarta",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Nuevo_Vallarta%2C_Mexico_-_panoramio.jpg/1280px-Nuevo_Vallarta%2C_Mexico_-_panoramio.jpg"
+    },
+    {
+      "kid": "areas:bucerias:hero",
+      "slug": "bucerias",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Bucerias_Beach_%28cropped%29.jpg/1280px-Bucerias_Beach_%28cropped%29.jpg"
+    },
+    {
+      "kid": "areas:bucerias:inline-1",
+      "slug": "bucerias",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bucerias_Street.jpg/1280px-Bucerias_Street.jpg"
+    },
+    {
+      "kid": "areas:bucerias:inline-2",
+      "slug": "bucerias",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Bucerias%2C_Mexico_-_panoramio.jpg/1280px-Bucerias%2C_Mexico_-_panoramio.jpg"
+    },
+    {
+      "kid": "areas:punta-de-mita:hero",
+      "slug": "punta-de-mita",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Atardecer_en_Punta_de_Mita%2C_Nayarit.jpg/1280px-Atardecer_en_Punta_de_Mita%2C_Nayarit.jpg"
+    },
+    {
+      "kid": "areas:punta-de-mita:inline-1",
+      "slug": "punta-de-mita",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Malec%C3%B3n_de_Punta_de_Mita_-_panoramio.jpg/1280px-Malec%C3%B3n_de_Punta_de_Mita_-_panoramio.jpg"
+    },
+    {
+      "kid": "areas:punta-de-mita:inline-2",
+      "slug": "punta-de-mita",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Anclote%2C_Punta_de_Mita_-_panoramio.jpg/1280px-Anclote%2C_Punta_de_Mita_-_panoramio.jpg"
+    },
+    {
+      "kid": "areas:sayulita:hero",
+      "slug": "sayulita",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sayulita_Nayarit.jpg/1280px-Sayulita_Nayarit.jpg"
+    },
+    {
+      "kid": "areas:sayulita:inline-1",
+      "slug": "sayulita",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Beach_at_Sayulita_%2817268510126%29.jpg/1280px-Beach_at_Sayulita_%2817268510126%29.jpg"
+    },
+    {
+      "kid": "areas:sayulita:inline-2",
+      "slug": "sayulita",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Sayulita_Playa.jpg/1280px-Sayulita_Playa.jpg"
+    },
+    {
+      "kid": "areas:san-miguel-de-allende-property:hero",
+      "slug": "san-miguel-de-allende-property",
+      "role": "hero",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/ParroquiaSanMiguelTower2019.jpg/1280px-ParroquiaSanMiguelTower2019.jpg"
+    },
+    {
+      "kid": "areas:san-miguel-de-allende-property:inline-1",
+      "slug": "san-miguel-de-allende-property",
+      "role": "inline-1",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Mesones_Street_SnMiguelAllende2019.jpg/1280px-Mesones_Street_SnMiguelAllende2019.jpg"
+    },
+    {
+      "kid": "areas:san-miguel-de-allende-property:inline-2",
+      "slug": "san-miguel-de-allende-property",
+      "role": "inline-2",
+      "ok": false,
+      "error": "download_failed",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/ParroquiaSanMiguelFacade2019.jpg/1280px-ParroquiaSanMiguelFacade2019.jpg"
+    }
+  ],
+  "cloud": "dphvjbqb4",
+  "collection": "areas",
+  "generatedAt": "2026-06-14"
+}

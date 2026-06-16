@@ -1,0 +1,994 @@
+{
+  "rollout": "compare-dev-news-images-47",
+  "verified": "2026-06-08",
+  "rule": "141 unique URLs — 3 per article, zero overlap with 459 prior URLs",
+  "articles": [
+    {
+      "slug": "akumal-vs-tulum-investment",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/06103643/xNG25bk.jpeg",
+          "alt": "Akumal Vs Tulum Investment — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05143051/jungle-tour.jpeg",
+          "alt": "Akumal Vs Tulum Investment — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05121008/Editable-1-H-copia.jpg",
+          "alt": "Akumal Vs Tulum Investment — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "aldea-zama-vs-region-15-tulum",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/05120805/Horizontal-1.png",
+          "alt": "Aldea Zama Vs Region 15 Tulum — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/30124453/20260428_1036360101011.jpg",
+          "alt": "Aldea Zama Vs Region 15 Tulum — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/30112437/890426_n.jpg",
+          "alt": "Aldea Zama Vs Region 15 Tulum — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "amara-vs-nhoa-tulum",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/29112106/image-2.png",
+          "alt": "Amara Vs Nhoa Tulum — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28123949/Exterior1.jpg",
+          "alt": "Amara Vs Nhoa Tulum — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28123736/The-Reef-28-1920x10801-1.jpg",
+          "alt": "Amara Vs Nhoa Tulum — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "branded-residence-vs-standard-condo-mexico",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28121032/Tren-Maya-Boletos.jpg",
+          "alt": "Branded Residence Vs Standard Condo Mexico — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28120952/Paq-Tren-Maya-Paraiso-del-Mayab2.jpg",
+          "alt": "Branded Residence Vs Standard Condo Mexico — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/28120758/Paq-Tren-Maya-Esencia-Maya.jpg",
+          "alt": "Branded Residence Vs Standard Condo Mexico — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "cabo-san-lucas-vs-san-jose-del-cabo",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27181705/WhatsApp-Image-2026-04-27-at-18.18.46.jpeg",
+          "alt": "Cabo San Lucas Vs San Jose Del Cabo — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27181518/SLS_PM_CPTQ_Caribe_Mexicano_Vacation_Specials_1920X10801.jpg",
+          "alt": "Cabo San Lucas Vs San Jose Del Cabo — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27160616/WhatsApp-Image-2026-04-27-at-17.03.54.jpeg",
+          "alt": "Cabo San Lucas Vs San Jose Del Cabo — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "cash-vs-mortgage-mexico-foreigner",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27150305/n37H87w.jpg",
+          "alt": "Cash Vs Mortgage Mexico Foreigner — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27150150/SW-RM-HTR-VIEWS-FACHADA-20180413-1920x1080-acc42b40-410c-45e6-830e-13926f2595621.jpg",
+          "alt": "Cash Vs Mortgage Mexico Foreigner — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27150048/Sunset-Fishermen-Piscina-0158-1920x1050-a017ff6c-1a16-449b-9c99-3e880a4722f71.jpg",
+          "alt": "Cash Vs Mortgage Mexico Foreigner — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "centro-playa-vs-playacar",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27145946/SW-CUN-SR-INSTALACIONES-AEREAS-2023-4-1920x1080-95d2fee2-dea5-4841-bda1-8f4be8a5f8cc1.jpg",
+          "alt": "Centro Playa Vs Playacar — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27145837/SW-CUN-SM-INSTALACIONES-AEREAS-2023-8-1920x1080-9593d366-cdcf-4c0c-ad55-836ea0fe76491.jpg",
+          "alt": "Centro Playa Vs Playacar — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27145537/VacationSpecials26.jpg",
+          "alt": "Centro Playa Vs Playacar — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "condo-vs-villa-mexico-investment",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27145144/FAIRMONT-MYK1.jpg",
+          "alt": "Condo Vs Villa Invest Spain Propertyment — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27144520/EMF_56671.jpg",
+          "alt": "Condo Vs Villa Invest Spain Propertyment — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27144411/WhatsApp-Image-2025-10-25-at-12.28.17-2.jpeg",
+          "alt": "Condo Vs Villa Invest Spain Propertyment — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "copala-quivira-vs-mavila-quivira",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27144315/DSC008341.jpg",
+          "alt": "Copala Quivira Vs Mavila Quivira — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27125121/Palafitos-Overwater-Bungalows1.jpg",
+          "alt": "Copala Quivira Vs Mavila Quivira — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27124911/El-Dorado-Seaside-Palms1.jpg",
+          "alt": "Copala Quivira Vs Mavila Quivira — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "dine-montage-punta-mita",
+      "source": "official developer site",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://dine.com.mx/site/uploads/es/images/dine_home_bosques_02.jpg",
+          "alt": "DINE Desarrollos Bosques luxury community"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://dine.com.mx/site/uploads/es/images/dine_home_proyectos.jpg",
+          "alt": "DINE Desarrollos project portfolio Nayarit"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://dine.com.mx/site/uploads/es/images/dine_home_rinconada_02.jpg",
+          "alt": "DINE Rinconada Punta de Mita development"
+        }
+      ]
+    },
+    {
+      "slug": "distrito-xcalacoco-vs-paravian",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27124658/El-Dorado-Maroma1.jpg",
+          "alt": "Distrito Xcalacoco Vs Paravian — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27124530/El-Dorado-Royale1.jpg",
+          "alt": "Distrito Xcalacoco Vs Paravian — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27124312/El-Dorado-Casitas-Royale1.jpg",
+          "alt": "Distrito Xcalacoco Vs Paravian — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "gran-tulum-vs-101-park",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/27090149/IMG_47021.jpg",
+          "alt": "Gran Tulum Vs 101 Park — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24155710/Fragata-Departamentos.jpg",
+          "alt": "Gran Tulum Vs 101 Park — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24130352/Paq-Tren-Maya-Mares-y-Lagunas-1.png",
+          "alt": "Gran Tulum Vs 101 Park — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "grupo-emerita",
+      "source": "official developer site",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.prod.website-files.com/68a8ef2a5f402bfda49ad696/68ae8a8955801c1b625826c6_tierra-madre-bg-p-1080.webp",
+          "alt": "Grupo Emerita Tierra Madre Tulum development"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.prod.website-files.com/68a8ef2a5f402bfda49ad696/68ae8a49729ad96012d15fc5_constelada-bg-p-800.webp",
+          "alt": "Grupo Emerita Constelada Tulum project"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.prod.website-files.com/688478dccbeba13cdede033b/68abeb24c0e27b7c4fdf772c_Paravian-p-1080.webp",
+          "alt": "Grupo Emerita Paravian Playa del Carmen tower"
+        }
+      ]
+    },
+    {
+      "slug": "los-cabos-vs-puerto-vallarta",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101335/property-exterior.jpg",
+          "alt": "Los Cabos Vs Puerto Vallarta — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24101253/caption.jpg",
+          "alt": "Los Cabos Vs Puerto Vallarta — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24100811/filters_formatwebp_quality85.webp",
+          "alt": "Los Cabos Vs Puerto Vallarta — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "los-cabos-vs-riviera-maya",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24090200/MUELLE_2025_041.jpg",
+          "alt": "Los Cabos Vs Riviera Maya — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/24090049/2014-11-21-13.20.281.jpg",
+          "alt": "Los Cabos Vs Riviera Maya — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23103735/OCOZ_VIEW_0571.jpg",
+          "alt": "Los Cabos Vs Riviera Maya — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "merida-vs-riviera-maya-investment",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23103619/ACOZ_VIEW_0091.jpg",
+          "alt": "Merida Vs Riviera Maya Investment — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23100631/IMG_17702.jpg",
+          "alt": "Merida Vs Riviera Maya Investment — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23095627/promo-mama-2026.jpg",
+          "alt": "Merida Vs Riviera Maya Investment — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "mexico-str-tax-reporting-2026",
+      "source": "news thematic",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/26123332/HOLBOX_ISLA-white-01-scaled.png",
+          "alt": "Merida government palace tax jurisdiction context"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22200702/b9mootmogguggbasu6en.webp",
+          "alt": "Merida historic center foreign landlord reporting"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22200356/piedra-escondida.webp",
+          "alt": "Riviera Maya STR rental tax reporting context"
+        }
+      ]
+    },
+    {
+      "slug": "mexico-vs-arizona-retirement",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23095626/primavera.jpg",
+          "alt": "Mexico Vs Arizona Retirement — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/23095623/Especial-Nacionales-30.jpg",
+          "alt": "Mexico Vs Arizona Retirement — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22120554/IMG_90831.jpg",
+          "alt": "Mexico Vs Arizona Retirement — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "mexico-vs-colombia-investment",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/22094010/barcelo-maya-palace.jpg",
+          "alt": "Mexico Vs Colombia Investment — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/21144302/cunif-ext-family.jpg",
+          "alt": "Mexico Vs Colombia Investment — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/19205238/vacation-specials-2026-caribe-mexicano.webp",
+          "alt": "Mexico Vs Colombia Investment — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "mexico-vs-costa-rica-real-estate",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/19204405/vacation-specials-caribe-mexicano.webp",
+          "alt": "Mexico Vs Costa Rica Real Estate — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/04/19202456/vacation-specials.webp",
+          "alt": "Mexico Vs Costa Rica Real Estate — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30200518/Megaestructura-scaled.jpg",
+          "alt": "Mexico Vs Costa Rica Real Estate — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "mexico-vs-florida-property-investment",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30200344/Museo-Chetumal-Blog.jpg",
+          "alt": "Mexico Vs Florida Property Investment — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30200148/Museo-cultura-maya-chetumal-blog--scaled.jpg",
+          "alt": "Mexico Vs Florida Property Investment — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30200014/CHetumal-Blog--scaled.jpg",
+          "alt": "Mexico Vs Florida Property Investment — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "mexico-vs-panama-real-estate",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/03/30175034/Chetumal-10-2-scaled.jpg",
+          "alt": "Mexico Vs Panama Real Estate — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/03/30175002/Chetumal-Family-1-1-scaled.jpg",
+          "alt": "Mexico Vs Panama Real Estate — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/03/30174932/Planetario-CHetumal-1-1.jpg",
+          "alt": "Mexico Vs Panama Real Estate — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "mexico-vs-texas-no-state-tax",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/03/30174852/Chetumal-Culture-1-1-scaled.jpg",
+          "alt": "Mexico Vs Texas No State Tax — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/03/30173715/Blog-chetumal-5-scaled.jpg",
+          "alt": "Mexico Vs Texas No State Tax — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/03/30173430/Chetumal-blog-2-1-scaled.jpg",
+          "alt": "Mexico Vs Texas No State Tax — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "mexico-vs-thailand-property",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/03/30173319/Museo-Cultura-Maya-Chetumal-1-1-scaled.jpg",
+          "alt": "Mexico Vs Thailand Property — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155949/Bacalar-flavors-1-scaled.jpg",
+          "alt": "Mexico Vs Thailand Property — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155826/Bacalar-modern-food.jpg",
+          "alt": "Mexico Vs Thailand Property — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "montage-vs-pendry-punta-mita",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155213/STILL-BACALAR-2.jpg",
+          "alt": "Montage Vs Pendry Punta Mita — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155108/Bacalar-blog-5-1-scaled.jpg",
+          "alt": "Montage Vs Pendry Punta Mita — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30155103/Bacalar-Blog-2-2-scaled.jpg",
+          "alt": "Montage Vs Pendry Punta Mita — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "nuevo-vallarta-vs-puerto-vallarta",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30154120/4-Bacalar-scaled.jpg",
+          "alt": "Nuevo Vallarta Vs Puerto Vallarta — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30153940/bacalar3-1.jpg",
+          "alt": "Nuevo Vallarta Vs Puerto Vallarta — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30153724/Bacalar-Blog-2-scaled.jpg",
+          "alt": "Nuevo Vallarta Vs Puerto Vallarta — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "playa-del-carmen-vs-cancun-investment",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2024/09/30153620/DJI_0683-1-scaled.jpg",
+          "alt": "Playa Del Carmen Vs Cancun Investment — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/14174227/AshleyAlecco-WDD-611-1.jpg",
+          "alt": "Playa Del Carmen Vs Cancun Investment — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/14174141/AshleyAlecco-WDD-611.jpg",
+          "alt": "Playa Del Carmen Vs Cancun Investment — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "playa-del-carmen-vs-tulum-investment",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/12/10154318/007_LF_Waterpark_.jpg",
+          "alt": "Playa Del Carmen Vs Tulum Investment — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/12/10153732/009_LF_Camp_Kids_CUNMX_19107.jpg",
+          "alt": "Playa Del Carmen Vs Tulum Investment — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/01160043/BACALAR-Romance.jpg",
+          "alt": "Playa Del Carmen Vs Tulum Investment — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "pre-construction-vs-resale-tulum",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/29010104/Family.jpg",
+          "alt": "Pre Construction Vs Resale Tulum — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/29001926/faro-mirador-xelha-5_11zon.jpg",
+          "alt": "Pre Construction Vs Resale Tulum — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/29001921/faro-mirador-xelha-8_11zon2.jpg",
+          "alt": "Pre Construction Vs Resale Tulum — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "puerto-morelos-vs-playa-del-carmen",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/29000056/Couple-at-hotel-1.jpg",
+          "alt": "Puerto Morelos Vs Playa Del Carmen — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/28231332/Couple-at-hotel.jpg",
+          "alt": "Puerto Morelos Vs Playa Del Carmen — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/28212338/Hi_AQU_103593556_AQUA_SUITE_2-scaled.jpg",
+          "alt": "Puerto Morelos Vs Playa Del Carmen — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "punta-mita-vs-los-cabos-luxury",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/28212241/YAM1962-scaled.jpg",
+          "alt": "Punta Mita Vs Los Cabos Luxury — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/28211247/WEDDING-4-scaled.jpg",
+          "alt": "Punta Mita Vs Los Cabos Luxury — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/28210129/BlueDiamond1734_11zon-scaled.jpg",
+          "alt": "Punta Mita Vs Los Cabos Luxury — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "querencia-los-cabos",
+      "source": "official developer site",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://images.squarespace-cdn.com/content/v1/6583a74d1ebc22517abac142/e59be4e1-01d2-4994-bde7-1a6118df874a/IMG_8169_MOD-13327.jpg",
+          "alt": "Querencia Los Cabos golf and ocean community"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://images.squarespace-cdn.com/content/v1/6583a74d1ebc22517abac142/d2e5b1e1-3c81-4a9c-a862-e226115a7e80/291659788_10225027554328859_8389916189825822498_n.jpg",
+          "alt": "Querencia clubhouse and Baja hills"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://images.squarespace-cdn.com/content/v1/6583a74d1ebc22517abac142/c4cce748-9c02-4d89-8073-47d74b4fdd54/IMG_6542.jpg",
+          "alt": "Querencia Los Cabos luxury estate context"
+        }
+      ]
+    },
+    {
+      "slug": "quintana-roo-price-growth-2026",
+      "source": "news thematic",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22200235/LZ-MONEY-scaled-1.webp",
+          "alt": "Puerto Cancun skyline Quintana Roo price growth"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22195104/Xel-Ha.jpg",
+          "alt": "Playa del Carmen aerial property values 2026"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142304/sitio-arqueologico-coba.webp",
+          "alt": "Riviera Maya drone view price corridor"
+        }
+      ]
+    },
+    {
+      "slug": "quivira-los-cabos",
+      "source": "official developer site",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://www.quiviraloscabos.com/assets/images/golf-1.jpg",
+          "alt": "Quivira Los Cabos Jack Nicklaus golf community"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://www.quiviraloscabos.com/assets/images/discover-los-cabos.jpg",
+          "alt": "Quivira Los Cabos Pacific coastline master plan"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://symphony.cdn.tambourine.com/quivira-los-cabos-residence/media/home2-58adbfec52ec2.jpg",
+          "alt": "Quivira Los Cabos luxury residences marketing"
+        }
+      ]
+    },
+    {
+      "slug": "riviera-maya-vs-puerto-vallarta",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/28205906/Copia-de-PatriciaRobHD-354-scaled.jpg",
+          "alt": "Riviera Maya Vs Puerto Vallarta — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/28205836/BACALAR-scaled.jpg",
+          "alt": "Riviera Maya Vs Puerto Vallarta — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/28170851/image-1.png",
+          "alt": "Riviera Maya Vs Puerto Vallarta — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "short-term-vs-long-term-rental-mexico",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/27184326/image.png",
+          "alt": "Short Term Vs Long Term Rental Mexico — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/27161232/cena-ro%CC%81mantica-BAKHALAR-6-scaled.jpg",
+          "alt": "Short Term Vs Long Term Rental Mexico — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/27161014/RIOSECRETO-BODAS-1-scaled.jpg",
+          "alt": "Short Term Vs Long Term Rental Mexico — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "simca-desarrollos",
+      "source": "official developer site",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://grantulum.mx/assets/images/home5.png",
+          "alt": "SIMCA Desarrollos — Gran Tulum master plan rendering"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://grantulum.mx/assets/images/home1.png",
+          "alt": "SIMCA premium residential development Riviera Maya"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://grantulum.mx/assets/images/resonante.png",
+          "alt": "SIMCA Resonante project marketing visual"
+        }
+      ]
+    },
+    {
+      "slug": "st-regis-vs-chileno-bay-residences",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/27160952/RIOSECRETO-BODAS-scaled.jpg",
+          "alt": "St Regis Vs Chileno Bay Residences — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/27160804/HXMX-MONTAJES-01-scaled.jpg",
+          "alt": "St Regis Vs Chileno Bay Residences — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/27064800/HARD-ROCK-HOTEL-GOLF-1-scaled.jpg",
+          "alt": "St Regis Vs Chileno Bay Residences — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "tao-blue-gardens-vs-marina-vallarta",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/27064030/Gran-Coyote-Golf__.jpg",
+          "alt": "Tao Blue Gardens Vs Marina Vallarta — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/27063100/El-Tinto-G.C.-Hole18-scaled.jpg",
+          "alt": "Tao Blue Gardens Vs Marina Vallarta — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/26235154/IMG_7732.jpg-1-1.jpeg",
+          "alt": "Tao Blue Gardens Vs Marina Vallarta — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "tao-mexico",
+      "source": "official developer site",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://taomexico.com/wp-content/uploads/2025/12/67ae5c9a5e0e99ea60e7f965_TAO_HOME_BANNER_DESK-1.webp",
+          "alt": "TAO Mexico developer portfolio banner"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://taomexico.com/wp-content/uploads/2026/01/Tao-Tulum-1.webp",
+          "alt": "TAO Tulum branded residences"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://taomexico.com/wp-content/uploads/2025/12/santamar-prime-vista-2048x1365.jpg",
+          "alt": "TAO Santamar Akumal beachfront project"
+        }
+      ]
+    },
+    {
+      "slug": "tm-real-estate-group",
+      "source": "official developer site",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://images.squarespace-cdn.com/content/v1/5658b216e4b0e19717065929/1574788989957-ZVB5ZMNDGQBMONZ0KD0P/musa+LA+SAL+selects-06675.jpg",
+          "alt": "TM Real Estate Group Musa La Sal Los Cabos project"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://images.squarespace-cdn.com/content/v1/5658b216e4b0e19717065929/1577650132816-HZKVWN5ELHYGGG7BN0RA/musa-loma-bonita-loot-mx.jpg",
+          "alt": "TM Real Estate Group Loma Bonita development"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05135529/UNICORM.webp",
+          "alt": "Baja California Sur development corridor context"
+        }
+      ]
+    },
+    {
+      "slug": "tren-maya-property-impact",
+      "source": "news thematic",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142302/azulik.webp",
+          "alt": "Tren Maya museum Merida infrastructure impact"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142259/g0010195.webp",
+          "alt": "Merida Paseo de Montejo Tren Maya connectivity"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22142257/djl-0049.webp",
+          "alt": "Progreso Yucatan coast Tren Maya access"
+        }
+      ]
+    },
+    {
+      "slug": "tulum-inventory-2026",
+      "source": "news thematic",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22101731/CaribeMexicano-Vertical-20260521-1-scaled.png",
+          "alt": "Tulum condo tower supply 2026 inventory context"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/22100254/MexicanCaribbean-Vertical-20260521-scaled.png",
+          "alt": "Riviera Maya market inventory snapshot 2026"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/06134058/DJI_09231.jpg",
+          "alt": "Quintana Roo resale inventory comparison corridor"
+        }
+      ]
+    },
+    {
+      "slug": "tulum-vs-cancun-investment",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/26184603/BPGC_MEX_RMGC_GOLFCOURSE_030_med.jpg",
+          "alt": "Tulum Vs Cancun Investment — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/26183102/IMG_7732.jpg-1.jpeg",
+          "alt": "Tulum Vs Cancun Investment — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/21174903/MontajesHXM-19-scaled.jpg",
+          "alt": "Tulum Vs Cancun Investment — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "vacation-home-vs-pure-rental-mexico",
+      "source": "https://mexicancaribbean.travel/",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/19000728/Cacun-moon-palace-golf-course-scaled.jpg",
+          "alt": "Vacation Home Vs Pure Rental Mexico — comparison hero"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/19000720/DJI_0093-1-scaled.jpg",
+          "alt": "Vacation Home Vs Pure Rental Mexico — comparison context"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2025/11/18230019/caribbean-kids-family-tubing-activity-scaled.jpg",
+          "alt": "Vacation Home Vs Pure Rental Mexico — investment corridor"
+        }
+      ]
+    },
+    {
+      "slug": "vidanta-nuevo-vallarta",
+      "source": "official developer site",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://www.vidanta.com/documents/36219/190261/vidanta-nuevovallarta-ataglance-destinationhighlights-dining.jpg/724a7f40-dcf3-0adc-f1b8-e5a4c9e9bc25",
+          "alt": "Vidanta Nuevo Vallarta resort destination"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://www.vidanta.com/documents/36219/190263/vidanta-nuevovallarta-ataglance-resorthotels-theestates.jpg/ce748c14-e6ff-f8b8-edca-06af326bf69e",
+          "alt": "Vidanta Estates Nuevo Vallarta residences"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://www.vidanta.com/documents/36219/190259/vidanta-nuevovallarta-ataglance-gallery-16.jpg/344bda6e-392e-4fcc-f7c2-7e34b5d74537",
+          "alt": "Vidanta Nuevo Vallarta beachfront amenities"
+        }
+      ]
+    },
+    {
+      "slug": "zama-desarrollos",
+      "source": "DMO pool (Tulum)",
+      "images": [
+        {
+          "role": "hero",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05135526/HRH-RM.webp",
+          "alt": "Zama Desarrollos Tulum beach corridor context"
+        },
+        {
+          "role": "inline-1",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/06/05135523/HRH-CN.webp",
+          "alt": "Aldea Zama master-planned Tulum development zone"
+        },
+        {
+          "role": "inline-2",
+          "url": "https://cdn.mexicancaribbean.travel/wp-content/uploads/2026/05/26124044/TULUM_WHITE-scaled.png",
+          "alt": "Aerial Tulum jungle-beach development pipeline"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "siteUrl": "https://portuguese-estate.com",
+  "siteHost": "portuguese-estate.com",
+  "market": "en",
+  "locale": "en",
+  "brandName": "Portuguese Estate",
+  "indexNow": {
+    "key": "20390df55e88e4dc0ec3da8c94acdace",
+    "enBingEndpoint": "https://www.bing.com/indexnow",
+    "ruHubEndpoint": "https://api.indexnow.org"
+  },
+  "googleIndexingKeyPath": "scripts/google-indexing-key.json",
+  "yandex": {
+    "enabled": false
+  },
+  "contentCollections": {
+    "guides": { "dir": "guides", "urlPrefix": "/guides/", "minWords": 2000, "faqMin": 5 },
+    "news": { "dir": "news", "urlPrefix": "/news/", "minWords": 500, "faqMin": 0 },
+    "projects": { "dir": "projects", "urlPrefix": "/projects/", "minWords": 1200, "faqMin": 3 }
+  },
+  "smoke": {
+    "collections": [{ "hubPath": "/guides/", "contentDir": "guides" }],
+    "contactPath": "/contact/",
+    "extraHttpChecks": [{ "name": "projects hub", "path": "/projects/", "expect": 200 }]
+  }
+}

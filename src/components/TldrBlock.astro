@@ -1,0 +1,35 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+<aside class="tldr-block" itemprop="abstract">
+  <div class="tldr-label">Key Takeaway</div>
+  <p>{text}</p>
+</aside>
+
+<style>
+  .tldr-block {
+    border-left: 4px solid var(--color-teal, #2c6b62);
+    background: linear-gradient(135deg, var(--color-teal-light, #e6f0ed) 0%, #fafaf8 100%);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 0 0 24px 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-ink, #1f2421);
+  }
+  .tldr-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-teal-dark, #235851);
+    margin-bottom: 6px;
+  }
+  .tldr-block p {
+    margin: 0;
+  }
+</style>

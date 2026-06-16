@@ -1,0 +1,47 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { SITE } from '../../data/site';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const hasInlineFaqBlock = entry.body?.includes('<FaqBlock') ?? false;
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author,
+  readingTime,
+  heroImage,
+  faq,
+  noindex,
+} = entry.data;
+---
+<ArticleLayout
+  {title}
+  {description}
+  {pubDate}
+  {updatedDate}
+  {author}
+  readingTime={readingTime ?? 8}
+  {heroImage}
+  {faq}
+  {noindex}
+  {hasInlineFaqBlock}
+  contextLabel={title}
+  canonical={`${SITE.url}/guides/${entry.id}/`}
+>
+  <Content />
+</ArticleLayout>

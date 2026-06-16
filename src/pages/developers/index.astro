@@ -1,0 +1,36 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentCard from '../../components/ContentCard.astro';
+
+const developers = (await getCollection('developers'))
+  .filter((d) => !d.data.noindex)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<BaseLayout
+  title="Italy Real Estate Developers"
+  description="Developer profiles for Milan, Puglia, and Lake Como projects — track record, delivery history, and due diligence notes for foreign buyers."
+>
+  <section class="site-container py-14 md:py-20">
+    <header class="max-w-2xl mb-12">
+      <h1 class="text-3xl">Developer profiles</h1>
+      <p class="text-lg text-[var(--color-muted)] mt-3">
+        Entity authority reviews — not sales brochures. Verify permits, delivery history, and escrow before any deposit.
+      </p>
+    </header>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {developers.map((dev) => (
+        <ContentCard
+          href={`/developers/${dev.id}/`}
+          title={dev.data.title}
+          description={dev.data.description}
+          image={dev.data.heroImage}
+          badges={['Developer']}
+          meta={`${dev.data.readingTime ?? 8} min read`}
+          placeholder="🏗️"
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

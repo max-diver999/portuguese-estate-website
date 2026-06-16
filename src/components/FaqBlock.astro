@@ -1,0 +1,54 @@
+---
+interface FaqItem { question: string; answer: string; }
+interface Props {
+  items: FaqItem[];
+  title?: string;
+  noSchema?: boolean;
+}
+const { items, title = 'Frequently Asked Questions', noSchema = false } = Astro.props;
+---
+<section class="my-12" aria-label="FAQ">
+  <h2 class="text-2xl mb-6 text-[var(--color-ink)]">{title}</h2>
+  <div>
+    {items.map((item, i) => (
+      <div class="faq-item" id={`faq-${i}`}>
+        <button type="button" class="faq-question w-full text-left" aria-expanded="false" aria-controls={`faq-answer-${i}`}>
+          <span>{item.question}</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id={`faq-answer-${i}`} role="region">
+          <p set:html={item.answer} />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+{!noSchema && items.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  })} />
+)}
+
+<script>
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item?.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach((el) => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item?.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

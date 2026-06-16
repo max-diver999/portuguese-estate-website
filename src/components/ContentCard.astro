@@ -1,0 +1,62 @@
+---
+import { getCardImageUrl } from '../lib/cardImage';
+
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  image?: string;
+  imageAlt?: string;
+  badges?: string[];
+  meta?: string;
+  metaAccent?: boolean;
+  placeholder?: string;
+}
+
+const {
+  href,
+  title,
+  description = '',
+  image,
+  imageAlt,
+  badges = [],
+  meta,
+  metaAccent = false,
+  placeholder = '🏝️',
+} = Astro.props;
+
+const photo = getCardImageUrl(image);
+---
+
+<a href={href} class="content-card surface-card is-link block no-underline overflow-hidden h-full">
+  {photo ? (
+    <div class="content-card__media">
+      <img
+        src={photo}
+        alt={imageAlt || title}
+        loading="lazy"
+        decoding="async"
+        width="640"
+        height="360"
+      />
+    </div>
+  ) : (
+    <div class="content-card__media content-card__media--placeholder" aria-hidden="true">
+      <span>{placeholder}</span>
+    </div>
+  )}
+  <div class="content-card__body">
+    {badges.length > 0 && (
+      <div class="content-card__badges">
+        {badges.slice(0, 3).map((badge) => (
+          <span class="badge-pill">{badge}</span>
+        ))}
+      </div>
+    )}
+    <h3 class="content-card__title">{title}</h3>
+    {description && <p class="content-card__desc">{description}</p>}
+    {meta && (
+      <p class:list={['content-card__meta', metaAccent && 'content-card__meta--accent']}>{meta}</p>
+    )}
+  </div>
+</a>

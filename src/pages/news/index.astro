@@ -1,0 +1,33 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articles = (await getCollection('news'))
+  .filter((n) => !n.data.noindex)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout
+  title="Portugal Property Market News"
+  description="Market updates for foreign buyers — OMI transaction data, foreign capital flows, Gate-away demand signals, and Milan living sector trends."
+>
+  <section class="site-container py-14 md:py-20">
+    <header class="max-w-2xl mb-12">
+      <h1 class="text-3xl">Market news</h1>
+      <p class="text-lg text-[var(--color-muted)] mt-3">
+        Data-driven updates on Portugal property markets — verify figures with counsel before investment decisions.
+      </p>
+    </header>
+    <div class="grid gap-5 max-w-3xl">
+      {articles.map((article) => (
+        <a href={`/news/${article.id}/`} class="surface-card p-6 block no-underline hover:border-[var(--color-teal)] transition-colors">
+          <time class="text-xs text-[var(--color-muted)]" datetime={article.data.pubDate.toISOString()}>
+            {article.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <h2 class="text-lg font-semibold mt-2 mb-2 text-[var(--color-ink)]">{article.data.title}</h2>
+          <p class="text-sm text-[var(--color-muted)]">{article.data.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

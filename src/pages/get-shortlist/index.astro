@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import CommercialBudgetLadder from '../../components/CommercialBudgetLadder.astro';
+
+const faqItems = [
+  {
+    question: 'What do I receive after submitting the shortlist form?',
+    answer: 'Within one business day you get 3–5 vetted options matched to your budget band and region, with price range, yield notes where relevant, and links to our due diligence guides. No developer pressure and no buyer-side commission from Portuguese Estate.',
+  },
+  {
+    question: 'Which Italian regions can you shortlist?',
+    answer: 'Tuscany, Puglia, Milan/Lombardy, Lake Como, Sicily, Sardinia, Liguria, and Rome/Lazio. Tell us your goal (yield, holiday home, off-plan, relocation) and we filter accordingly.',
+  },
+  {
+    question: 'Do you sell property directly?',
+    answer: 'No. Portuguese Estate publishes independent research. When you request a shortlist we may introduce a licensed Italian agency or developer partner after you opt in. Always verify cadastral records, IMU, and STR rules before any deposit.',
+  },
+];
+---
+<BaseLayout
+  title="Portugal Property Shortlist for Foreign Buyers"
+  description="Free independent shortlist for Portugal property buyers. Tuscany, Puglia, Milan, Lake Como — budget-matched options within one business day. Not a portal."
+>
+  <section class="site-container py-12 md:py-16 max-w-3xl">
+    <CommercialBudgetLadder />
+    <header class="mb-8">
+      <span class="badge-pill mb-4">Free · Independent</span>
+      <h1 class="mb-3">Get your Portugal property shortlist</h1>
+      <p class="text-lg text-[var(--color-muted)]">
+        Share budget, region, and goal. We match you with vetted resale, off-plan, and new-build options — no spam, no listing portal noise.
+      </p>
+    </header>
+
+    <div class="prose mb-10 text-[var(--color-muted)]">
+      <p><strong>Quick answer:</strong> Foreign buyers can own freehold residential property across Italy subject to reciprocity checks at the notary. Entry from roughly €150k in Puglia or Sicily countryside; Milan and Lake Como start higher. Budget 10–12% on top of price for taxes, notary, and registration on a second home.</p>
+      <p>Regional landings: <a href="/invest-tuscany-property/">Invest Tuscany</a> · <a href="/invest-puglia-property/">Invest Puglia</a> · <a href="/invest-lake-como-property/">Invest Lake Como</a> · <a href="/invest-sicily-property/">Invest Sicily</a> · <a href="/portugal-property-consultation/">Cross-region consultation</a></p>
+      <p>Research: <a href="/guides/buy-property-italy-foreigner/">Buy property in Italy as a foreigner</a> · <a href="/guides/cost-of-buying-property-italy/">Closing costs</a> · <a href="/guides/due-diligence-italy-property/">Due diligence</a></p>
+    </div>
+
+    <LeadForm
+      title="Request your shortlist"
+      subtitle="Tuscany · Puglia · Milan · Lake Como · Sicily"
+      context="Get shortlist page"
+    />
+
+    <FaqBlock items={faqItems} />
+
+    <p class="text-xs text-[var(--color-muted)] mt-6">
+      By submitting you agree to our <a href="/privacy-policy/">Privacy Policy</a>. Not financial, tax, or legal advice.
+    </p>
+  </section>
+</BaseLayout>

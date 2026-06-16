@@ -1,0 +1,58 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentCard from '../../components/ContentCard.astro';
+import { FEATURED_GUIDE_SLUGS } from '../../data/featured';
+
+const guides = (await getCollection('guides'))
+  .filter((g) => !g.data.noindex)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const priority = FEATURED_GUIDE_SLUGS.map((slug) => guides.find((g) => g.id === slug)).filter(Boolean);
+---
+<BaseLayout
+  title="Spain Property Investment Guides"
+  description="Independent guides on Mexico real estate — fideicomiso, foreign ownership, net yields, and due diligence."
+>
+  <section class="site-container py-14 md:py-20">
+    <header class="max-w-2xl mb-12">
+      <h1 class="text-3xl">Investment guides</h1>
+      <p class="text-lg text-[var(--color-muted)] mt-3">
+        Research-first articles for foreign buyers. Not developer brochures — verify all figures before you transact.
+      </p>
+      <p class="text-sm text-[var(--color-muted)] mt-2">{guides.length} guides with photos and net-yield focus.</p>
+    </header>
+
+    {priority.length > 0 && (
+      <section class="mb-14">
+        <h2 class="text-xl mb-5">Start here</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {priority.map((guide) => (
+            <ContentCard
+              href={`/guides/${guide.id}/`}
+              title={guide.data.title}
+              description={guide.data.description}
+              image={guide.data.heroImage}
+              badges={['Pillar', ...(guide.data.tags?.slice(0, 1) ?? [])]}
+              meta={`${guide.data.readingTime ?? 8} min read`}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {guides.map((guide) => (
+        <ContentCard
+          href={`/guides/${guide.id}/`}
+          title={guide.data.title}
+          description={guide.data.description}
+          image={guide.data.heroImage}
+          badges={guide.data.tags?.slice(0, 2) ?? []}
+          meta={`${guide.data.readingTime ?? 8} min read`}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

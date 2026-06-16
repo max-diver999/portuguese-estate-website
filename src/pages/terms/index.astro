@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../data/site';
+const updated = 'June 4, 2026';
+---
+<BaseLayout
+  title="Terms of Use"
+  description="Terms of use for Portuguese Estate — editorial disclaimer and limitation of liability."
+>
+  <section class="site-container py-12 md:py-16 max-w-3xl">
+    <h1 class="mb-2">Terms of Use</h1>
+    <p class="text-sm text-[var(--color-muted)] mb-8">Last updated: {updated}</p>
+    <div class="prose text-sm">
+      <p>By using {SITE.url} you agree to these terms.</p>
+      <h2>Editorial content</h2>
+      <p>
+        All guides are for general information only. They are not financial, legal, tax, or investment advice.
+        Property values, yields, and visa rules change. Verify independently before any transaction.
+      </p>
+      <h2>No agency relationship</h2>
+      <p>
+        {SITE.name} is not your broker or fiduciary unless a separate written agreement says otherwise.
+        Partner brokers operate under their own licenses and terms.
+      </p>
+      <h2>Limitation of liability</h2>
+      <p>
+        To the fullest extent permitted by law, we are not liable for decisions you make based on site content
+        or partner introductions.
+      </p>
+      <h2>Contact</h2>
+      <p><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+    </div>
+  </section>
+</BaseLayout>
