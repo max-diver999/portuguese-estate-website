@@ -7,16 +7,20 @@ import ContentCard from '../../components/ContentCard.astro';
 const developers = (await getCollection('developers'))
   .filter((d) => !d.data.noindex)
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+function badgeFor(id: string) {
+  return id.includes('farinvest') ? 'Agency' : 'Developer';
+}
 ---
 <BaseLayout
-  title="Italy Real Estate Developers"
-  description="Developer profiles for Milan, Puglia, and Lake Como projects — track record, delivery history, and due diligence notes for foreign buyers."
+  title="Portugal Property Developers — Due Diligence Profiles"
+  description="Independent Portugal developer and agency due diligence profiles — Vanguard, VIC, Farinvest brokerage, track record, CPCV checks, and off-plan buyer checklists."
 >
   <section class="site-container py-14 md:py-20">
     <header class="max-w-2xl mb-12">
-      <h1 class="text-3xl">Developer profiles</h1>
+      <h1 class="text-3xl">Developer &amp; agency profiles</h1>
       <p class="text-lg text-[var(--color-muted)] mt-3">
-        Entity authority reviews — not sales brochures. Verify permits, delivery history, and escrow before any deposit.
+        Entity authority reviews — not sales brochures. Verify permits, delivery history, bank guarantees, and escrow before any deposit. Start with the <a href="/guides/portugal-property-developers-guide-2026/" class="text-[var(--color-accent)]">developers hub</a>.
       </p>
     </header>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -26,7 +30,7 @@ const developers = (await getCollection('developers'))
           title={dev.data.title}
           description={dev.data.description}
           image={dev.data.heroImage}
-          badges={['Developer']}
+          badges={[badgeFor(dev.id)]}
           meta={`${dev.data.readingTime ?? 8} min read`}
           placeholder="🏗️"
         />

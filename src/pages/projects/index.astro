@@ -11,32 +11,42 @@ const projects = (await getCollection('projects'))
 
 const priced = projects.map((p) => p.data.priceFromUsd).filter((v): v is number => !!v && v > 0);
 const minPrice = priced.length ? Math.min(...priced) : 150000;
+const hasProjects = projects.length > 0;
 ---
 <BaseLayout
-  title="Mexico Real Estate Projects"
-  description="Independent project reviews for foreign buyers — Riviera Maya, Los Cabos, and Puerto Vallarta developments with prices and due diligence notes."
+  title="Portugal Property Project Reviews"
+  description="Independent Portugal new-build and resort project reviews for foreign buyers — Lisbon, Algarve, and Porto developments with due diligence notes."
+  noindex={!hasProjects}
 >
   <section class="site-container py-14 md:py-20">
     <header class="max-w-2xl mb-12">
-      <h1 class="text-3xl">Project reviews</h1>
-      <p class="text-lg text-[var(--color-muted)] mt-3">
-        <strong>{projects.length} projects</strong> with editorial analysis — from <strong>{formatUsd(minPrice) || '$150K'}</strong>, photos, and due diligence notes. Not developer marketing.
-      </p>
+      <h1 class="text-3xl">Portugal project reviews</h1>
+      {hasProjects ? (
+        <p class="text-lg text-[var(--color-muted)] mt-3">
+          <strong>{projects.length} projects</strong> with editorial analysis — from <strong>{formatUsd(minPrice) || '€150K'}</strong>, photos, and due diligence notes. Not developer marketing.
+        </p>
+      ) : (
+        <p class="text-lg text-[var(--color-muted)] mt-3">
+          Project review pages are in preparation. Until launch, use our <a href="/guides/off-plan-property-portugal-guide/" class="text-[var(--color-accent)]">off-plan guide</a>, <a href="/guides/portugal-property-developers-guide-2026/" class="text-[var(--color-accent)]">developers hub</a>, and <a href="/developers/" class="text-[var(--color-accent)]">developer due diligence profiles</a>.
+        </p>
+      )}
     </header>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      {projects.map((project) => (
-        <ProjectCard
-          href={`/projects/${project.id}/`}
-          title={project.data.title}
-          description={project.data.description}
-          image={project.data.heroImage}
-          area={project.data.area}
-          developer={project.data.developer}
-          propertyType={project.data.propertyType}
-          status={project.data.status}
-          priceFromUsd={project.data.priceFromUsd}
-        />
-      ))}
-    </div>
+    {hasProjects && (
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {projects.map((project) => (
+          <ProjectCard
+            href={`/projects/${project.id}/`}
+            title={project.data.title}
+            description={project.data.description}
+            image={project.data.heroImage}
+            area={project.data.area}
+            developer={project.data.developer}
+            propertyType={project.data.propertyType}
+            status={project.data.status}
+            priceFromUsd={project.data.priceFromUsd}
+          />
+        ))}
+      </div>
+    )}
   </section>
 </BaseLayout>
