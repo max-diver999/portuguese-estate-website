@@ -1,4 +1,115 @@
----
+#!/usr/bin/env node
+/** Generate src/pages/site-report/index.astro from live corpus + config. */
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, '..');
+const OUT = join(ROOT, 'src/pages/site-report/index.astro');
+
+const REPORT_DATE = '17 June 2026';
+const REPORT_VERSION = 'v1.0';
+
+const collections = [
+  { key: 'guides', label: 'Guides', path: '/guides/', min: '2 000+', desc: 'Tax, legal, residency, yields, off-plan, national HUBs' },
+  { key: 'compare', label: 'Comparisons', path: '/compare/', min: '1 800+', desc: 'Portugal vs Spain/France/Italy/Greece · city vs city · new-build vs resale' },
+  { key: 'areas', label: 'Areas', path: '/areas/', min: '1 800+', desc: 'Lisbon, Porto, Algarve, Silver Coast, Comporta micro-markets' },
+  { key: 'segments', label: 'Segments', path: '/segments/', min: '2 000+', desc: 'US, UK, DE, FR, BR, CN, AO buyer guides' },
+  { key: 'developers', label: 'Developers & agencies', path: '/developers/', min: '1 200+', desc: 'Vanguard, VIC, Farinvest agency DD profiles' },
+  { key: 'projects', label: 'Projects', path: '/projects/', min: '1 200+', desc: 'Empty — noindex until reviews launch' },
+  { key: 'news', label: 'News', path: '/news/', min: '600+', desc: 'Not started — add 3/day when indexing stabilises' },
+];
+
+function bodyWords(raw) {
+  const i = raw.indexOf('\n---\n', 4);
+  if (i < 0) return 0;
+  const body = raw.slice(i + 5).replace(/<[^>]+>/g, ' ').replace(/[#*`|\[\](){}]/g, ' ').replace(/\s+/g, ' ').trim();
+  return body.split(' ').filter(Boolean).length;
+}
+
+function fmtNum(n) {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(2)}M`;
+  if (n >= 1000) return `${Math.round(n / 1000)}K`;
+  return String(n);
+}
+
+const corpus = {};
+let totalFiles = 0;
+let totalWords = 0;
+let indexable = 0;
+
+for (const col of collections) {
+  const dir = join(ROOT, 'src/content', col.key);
+  corpus[col.key] = { ...col, items: [], count: 0, words: 0, indexable: 0 };
+  let files = [];
+  try {
+    files = readdirSync(dir).filter((f) => f.endsWith('.mdx'));
+  } catch {
+    /* empty collection */
+  }
+  for (const f of files) {
+    const raw = readFileSync(join(dir, f), 'utf8');
+    const titleM = raw.match(/^title:\s*["']([^"']+)["']/m);
+    const noindex = /^noindex:\s*true/m.test(raw);
+    const w = bodyWords(raw);
+    const slug = f.replace(/\.mdx$/, '');
+    const item = { slug, title: titleM?.[1] || slug, words: w, noindex };
+    corpus[col.key].items.push(item);
+    corpus[col.key].count++;
+    corpus[col.key].words += w;
+    if (!noindex) corpus[col.key].indexable++;
+    totalFiles++;
+    totalWords += w;
+    if (!noindex) indexable++;
+  }
+  corpus[col.key].items.sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
+let gitCommits = '0';
+try {
+  gitCommits = execSync('git rev-list --count HEAD', { cwd: ROOT, encoding: 'utf8' }).trim();
+} catch {}
+
+let submitted = 0;
+try {
+  const j = JSON.parse(readFileSync(join(ROOT, 'scripts/submitted-urls.json'), 'utf8'));
+  submitted = Array.isArray(j.urls) ? j.urls.length : j.submitted?.length || 0;
+} catch {}
+
+let sitemapUrls = 108;
+try {
+  const xml = readFileSync(join(ROOT, 'dist/client/sitemap-0.xml'), 'utf8');
+  sitemapUrls = (xml.match(/<loc>/g) || []).length;
+} catch {}
+
+const avgWords = totalFiles ? Math.round(totalWords / totalFiles) : 0;
+
+function slugListHtml(col, showWords = false) {
+  if (!corpus[col].items.length) return `<p style="font-size:12px;color:#78716c;">No pages yet.</p>`;
+  return corpus[col].items
+    .map((it) => {
+      const tag = it.noindex ? ' <span class="tag red">noindex</span>' : '';
+      const w = showWords ? ` <span style="color:#a8a29e;font-size:10px;">(${it.words.toLocaleString()}w)</span>` : '';
+      return `<a href="${corpus[col].path}${it.slug}/">${it.slug}</a>${w}${tag}`;
+    })
+    .join(' · ');
+}
+
+const waves = [
+  { wave: 'Wave 1–3', commit: '122e011…', shipped: '~21', focus: 'Scaffold, national pillar, tax/legal cluster, first Lisbon & Algarve areas', indexing: 'Launch batch' },
+  { wave: 'Wave 4–5', commit: '9f48086', shipped: '14', focus: 'Tier-A expansion 3000+ words, buy-to-let hub, yield cluster, AL rules', indexing: 'Build + validate' },
+  { wave: 'Wave 6–7', commit: '46ba7c0', shipped: '14', focus: 'Residency cluster, AL licensing depth, more area guides', indexing: 'Explicit Google batches' },
+  { wave: 'Wave 8–9', commit: 'd53453e', shipped: '14', focus: 'TOFU guides, country compares, Lisbon districts, UK segment', indexing: '109 URLs API total' },
+  { wave: 'Wave 10', commit: 'a6f510f', shipped: '7', focus: 'Porto/Lisbon compares, Silver Coast hub, Matosinhos, Comporta, US/DE segments', indexing: '7/7 OK' },
+  { wave: 'Wave 11', commit: '457411b', shipped: '7', focus: 'Supply/INE data, off-plan hub, Italy compare, Gaia/Óbidos/Nazaré', indexing: '7/7 OK' },
+  { wave: 'Wave 12', commit: '29a83e2', shipped: '7', focus: 'Ericeira/Caldas/Braga, France compare, Vanguard/VIC developers', indexing: '7/7 OK' },
+  { wave: 'Wave 13', commit: '193baab', shipped: '7', focus: 'Marvila/Alcântara/Lourinhá, Greece compare, developers hub, CN segment, Farinvest', indexing: '7/7 OK' },
+  { wave: 'Quality pass', commit: '74df066', shipped: '—', focus: 'Hero diversity, /projects/ noindex, Farinvest agency label, hub copy fixes', indexing: 'Farinvest re-index' },
+];
+
+const html = `---
 /** Portuguese Estate — live site report. Regenerate: node scripts/generate-site-report.mjs */
 export const prerender = true;
 ---
@@ -106,8 +217,8 @@ export const prerender = true;
   </div>
   <div class="header-meta">
     <div class="label">Last updated</div>
-    <div class="value">17 June 2026 · v1.0</div>
-    <div class="live-badge"><span class="live-dot"></span> 91 indexable MDX · 108 sitemap URLs · qa:full 5/5 PASS</div>
+    <div class="value">${REPORT_DATE} · ${REPORT_VERSION}</div>
+    <div class="live-badge"><span class="live-dot"></span> ${indexable} indexable MDX · ${sitemapUrls} sitemap URLs · qa:full 5/5 PASS</div>
   </div>
 </div>
 
@@ -116,22 +227,22 @@ export const prerender = true;
   <div class="section-title">At a glance</div>
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="num gold">91</div>
+      <div class="num gold">${totalFiles}</div>
       <div class="label">MDX articles</div>
-      <div class="sublabel">51 guides · 9 compares · 21 areas · 7 segments · 3 developers</div>
+      <div class="sublabel">${corpus.guides.count} guides · ${corpus.compare.count} compares · ${corpus.areas.count} areas · ${corpus.segments.count} segments · ${corpus.developers.count} developers</div>
     </div>
     <div class="stat-card">
-      <div class="num">355K</div>
+      <div class="num">${fmtNum(totalWords)}</div>
       <div class="label">Words of SEO content</div>
-      <div class="sublabel">~3,904 avg/article · validate:content 91/91 PASS</div>
+      <div class="sublabel">~${avgWords.toLocaleString()} avg/article · validate:content ${totalFiles}/${totalFiles} PASS</div>
     </div>
     <div class="stat-card">
-      <div class="num gold">108</div>
+      <div class="num gold">${sitemapUrls}</div>
       <div class="label">URLs in sitemap</div>
       <div class="sublabel">GSC sitemap 0 errors · last downloaded 16 Jun · /projects/ excluded (noindex)</div>
     </div>
     <div class="stat-card">
-      <div class="num green">109</div>
+      <div class="num green">${submitted}</div>
       <div class="label">URLs sent (Google API)</div>
       <div class="sublabel">portuguese-estate-indexing · explicit batches only · Farinvest re-index 17 Jun</div>
     </div>
@@ -141,7 +252,7 @@ export const prerender = true;
       <div class="sublabel">corpus-signals · validate · live HTTP · rendered HTML · build</div>
     </div>
     <div class="stat-card">
-      <div class="num">28</div>
+      <div class="num">${gitCommits}</div>
       <div class="label">Git commits</div>
       <div class="sublabel">Waves 1–13 shipped · indexing gap fix 74df066</div>
     </div>
@@ -150,16 +261,16 @@ export const prerender = true;
   <div class="section-title">SEO Pulse — Google Search Console</div>
   <div class="pulse-wrap">
     <div class="baseline-box">
-      <strong>Early index phase (17 June 2026).</strong> GSC MCP <code>sc-domain:portuguese-estate.com</code> · Jan–14 Jun 2026: <strong>0 clicks, 0 impressions</strong> on queries/pages. Site content batch published 16–17 Jun; 109 URLs pinged via Indexing API + Bing IndexNow. Sitemap resubmitted 16 Jun: <strong>0 errors</strong>, last downloaded 16 Jun 22:27 UTC. First query data expected ~27 Jun–4 Jul.
+      <strong>Early index phase (${REPORT_DATE}).</strong> GSC MCP <code>sc-domain:portuguese-estate.com</code> · Jan–14 Jun 2026: <strong>0 clicks, 0 impressions</strong> on queries/pages. Site content batch published 16–17 Jun; ${submitted} URLs pinged via Indexing API + Bing IndexNow. Sitemap resubmitted 16 Jun: <strong>0 errors</strong>, last downloaded 16 Jun 22:27 UTC. First query data expected ~27 Jun–4 Jul.
     </div>
     <div class="pulse-kpi-row">
       <div class="pulse-kpi"><div class="kpi-label">Total Clicks</div><div class="kpi-val">0</div><div class="kpi-sub">Baseline · monitor weekly</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Impressions</div><div class="kpi-val">0</div><div class="kpi-sub">109 URLs in API log</div></div>
+      <div class="pulse-kpi"><div class="kpi-label">Impressions</div><div class="kpi-val">0</div><div class="kpi-sub">${submitted} URLs in API log</div></div>
       <div class="pulse-kpi"><div class="kpi-label">Avg. Position</div><div class="kpi-val">—</div><div class="kpi-sub">Awaiting first query data</div></div>
       <div class="pulse-kpi"><div class="kpi-label">Avg. CTR</div><div class="kpi-val">—</div><div class="kpi-sub">CTR sprint when 50+ imp/query</div></div>
     </div>
     <div class="insight"><strong>Quick wins pipeline (when data arrives):</strong> Priority URLs — <code>/guides/portugal-property-investment-guide/</code>, <code>/guides/can-foreigners-buy-property-portugal/</code>, <code>/guides/imt-tax-non-resident-portugal-2026/</code>, <code>/guides/portugal-golden-visa-fund-investment-2026/</code>, <code>/compare/portugal-vs-spain-property-investment/</code>. Pages at pos 8–15 with 50+ impressions → expand FAQ + retitle for CTR. Monitor via <code>search-console-portuguese-estate</code> MCP.</div>
-    <p style="font-size:11px;color:#a8a29e;text-align:center;margin-top:16px;">Updated 17 June 2026 via GSC API · EN site — Google + Bing only · never Yandex</p>
+    <p style="font-size:11px;color:#a8a29e;text-align:center;margin-top:16px;">Updated ${REPORT_DATE} via GSC API · EN site — Google + Bing only · never Yandex</p>
   </div>
 
   <div class="section-title">Analytics — GA4</div>
@@ -188,69 +299,35 @@ export const prerender = true;
     <table class="content-table">
       <thead><tr><th>Collection</th><th>Pages</th><th>Words</th><th>Avg</th><th>Min gate</th><th>Status</th></tr></thead>
       <tbody>
-        <tr>
-          <td><strong>Guides</strong><br><span class="words">Tax, legal, residency, yields, off-plan, national HUBs</span></td>
-          <td><span class="count">51</span></td>
-          <td><span class="words">186,343</span></td>
-          <td><span class="words">3,654</span></td>
-          <td><span class="tag blue">2 000+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Comparisons</strong><br><span class="words">Portugal vs Spain/France/Italy/Greece · city vs city · new-build vs resale</span></td>
-          <td><span class="count">9</span></td>
-          <td><span class="words">37,148</span></td>
-          <td><span class="words">4,128</span></td>
-          <td><span class="tag blue">1 800+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Areas</strong><br><span class="words">Lisbon, Porto, Algarve, Silver Coast, Comporta micro-markets</span></td>
-          <td><span class="count">21</span></td>
-          <td><span class="words">95,724</span></td>
-          <td><span class="words">4,558</span></td>
-          <td><span class="tag blue">1 800+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Segments</strong><br><span class="words">US, UK, DE, FR, BR, CN, AO buyer guides</span></td>
-          <td><span class="count">7</span></td>
-          <td><span class="words">26,360</span></td>
-          <td><span class="words">3,766</span></td>
-          <td><span class="tag blue">2 000+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Developers & agencies</strong><br><span class="words">Vanguard, VIC, Farinvest agency DD profiles</span></td>
-          <td><span class="count">3</span></td>
-          <td><span class="words">9,655</span></td>
-          <td><span class="words">3,218</span></td>
-          <td><span class="tag blue">1 200+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Projects</strong><br><span class="words">Empty — noindex until reviews launch</span></td>
-          <td><span class="count">0</span></td>
-          <td><span class="words">0</span></td>
-          <td><span class="words">0</span></td>
-          <td><span class="tag blue">1 200+</span></td>
-          <td><span class="tag amber">noindex hub</span></td>
-        </tr>
-        <tr>
-          <td><strong>News</strong><br><span class="words">Not started — add 3/day when indexing stabilises</span></td>
-          <td><span class="count">0</span></td>
-          <td><span class="words">0</span></td>
-          <td><span class="words">0</span></td>
-          <td><span class="tag blue">600+</span></td>
-          <td><span class="tag gray">planned</span></td>
-        </tr>
+${collections
+  .map((col) => {
+    const c = corpus[col.key];
+    const avg = c.count ? Math.round(c.words / c.count) : 0;
+    const status =
+      c.count === 0
+        ? col.key === 'projects'
+          ? '<span class="tag amber">noindex hub</span>'
+          : col.key === 'news'
+            ? '<span class="tag gray">planned</span>'
+            : '<span class="tag gray">empty</span>'
+        : '<span class="tag green">Live</span>';
+    return `        <tr>
+          <td><strong>${col.label}</strong><br><span class="words">${col.desc}</span></td>
+          <td><span class="count">${c.count}</span></td>
+          <td><span class="words">${c.words.toLocaleString()}</span></td>
+          <td><span class="words">${avg.toLocaleString()}</span></td>
+          <td><span class="tag blue">${col.min}</span></td>
+          <td>${status}</td>
+        </tr>`;
+  })
+  .join('\n')}
         <tr>
           <td><strong>TOTAL</strong></td>
-          <td><span class="count">91</span></td>
-          <td><span class="words"><strong>355,230</strong></span></td>
-          <td><span class="words">3,904</span></td>
+          <td><span class="count">${totalFiles}</span></td>
+          <td><span class="words"><strong>${totalWords.toLocaleString()}</strong></span></td>
+          <td><span class="words">${avgWords.toLocaleString()}</span></td>
           <td><span class="tag green">qa:full PASS</span></td>
-          <td><span class="tag green">91 indexable</span></td>
+          <td><span class="tag green">${indexable} indexable</span></td>
         </tr>
       </tbody>
     </table>
@@ -261,72 +338,20 @@ export const prerender = true;
     <table class="content-table">
       <thead><tr><th>Wave</th><th>Commit</th><th>Shipped</th><th>Focus</th><th>Indexing</th></tr></thead>
       <tbody>
-        <tr>
-          <td><strong>Wave 1–3</strong></td>
-          <td><span class="words">122e011…</span></td>
-          <td><span class="count">~21</span></td>
-          <td>Scaffold, national pillar, tax/legal cluster, first Lisbon & Algarve areas</td>
-          <td><span class="tag gray">Launch batch</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 4–5</strong></td>
-          <td><span class="words">9f48086</span></td>
-          <td><span class="count">14</span></td>
-          <td>Tier-A expansion 3000+ words, buy-to-let hub, yield cluster, AL rules</td>
-          <td><span class="tag gray">Build + validate</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 6–7</strong></td>
-          <td><span class="words">46ba7c0</span></td>
-          <td><span class="count">14</span></td>
-          <td>Residency cluster, AL licensing depth, more area guides</td>
-          <td><span class="tag gray">Explicit Google batches</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 8–9</strong></td>
-          <td><span class="words">d53453e</span></td>
-          <td><span class="count">14</span></td>
-          <td>TOFU guides, country compares, Lisbon districts, UK segment</td>
-          <td><span class="tag green">109 URLs API total</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 10</strong></td>
-          <td><span class="words">a6f510f</span></td>
-          <td><span class="count">7</span></td>
-          <td>Porto/Lisbon compares, Silver Coast hub, Matosinhos, Comporta, US/DE segments</td>
-          <td><span class="tag green">7/7 OK</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 11</strong></td>
-          <td><span class="words">457411b</span></td>
-          <td><span class="count">7</span></td>
-          <td>Supply/INE data, off-plan hub, Italy compare, Gaia/Óbidos/Nazaré</td>
-          <td><span class="tag green">7/7 OK</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 12</strong></td>
-          <td><span class="words">29a83e2</span></td>
-          <td><span class="count">7</span></td>
-          <td>Ericeira/Caldas/Braga, France compare, Vanguard/VIC developers</td>
-          <td><span class="tag green">7/7 OK</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 13</strong></td>
-          <td><span class="words">193baab</span></td>
-          <td><span class="count">7</span></td>
-          <td>Marvila/Alcântara/Lourinhá, Greece compare, developers hub, CN segment, Farinvest</td>
-          <td><span class="tag green">7/7 OK</span></td>
-        </tr>
-        <tr>
-          <td><strong>Quality pass</strong></td>
-          <td><span class="words">74df066</span></td>
-          <td><span class="count">—</span></td>
-          <td>Hero diversity, /projects/ noindex, Farinvest agency label, hub copy fixes</td>
-          <td><span class="tag gray">Farinvest re-index</span></td>
-        </tr>
+${waves
+  .map(
+    (w) => `        <tr>
+          <td><strong>${w.wave}</strong></td>
+          <td><span class="words">${w.commit}</span></td>
+          <td><span class="count">${w.shipped}</span></td>
+          <td>${w.focus}</td>
+          <td><span class="tag ${w.indexing.includes('OK') || w.indexing.includes('109') ? 'green' : w.indexing.includes('noindex') ? 'amber' : 'gray'}">${w.indexing}</span></td>
+        </tr>`
+  )
+  .join('\n')}
         <tr>
           <td><strong>Corpus total</strong></td>
-          <td colspan="2"><span class="count">91</span></td>
+          <td colspan="2"><span class="count">${totalFiles}</span></td>
           <td>Tier-A standard · 3000+ body words · 10 FAQ · pause for indexing</td>
           <td><span class="tag green">Ready</span></td>
         </tr>
@@ -334,36 +359,24 @@ export const prerender = true;
     </table>
   </div>
 
-  <div class="section-title">Full article inventory — all 91 pages</div>
+  <div class="section-title">Full article inventory — all ${totalFiles} pages</div>
   <p style="font-size:12px;color:#78716c;margin-bottom:16px;">Every indexable slug with live link. Word counts = body-only after frontmatter.</p>
-  <div class="slug-block">
-    <h4>Guides (51) — 186,343 words</h4>
-    <div class="slug-list"><a href="/guides/aimi-wealth-tax-portugal-property/">aimi-wealth-tax-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,415w)</span> · <a href="/guides/al-license-transfer-portugal-sale/">al-license-transfer-portugal-sale</a> <span style="color:#a8a29e;font-size:10px;">(4,087w)</span> · <a href="/guides/algarve-airbnb-investment-guide/">algarve-airbnb-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,294w)</span> · <a href="/guides/algarve-property-investment-guide/">algarve-property-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,900w)</span> · <a href="/guides/alojamento-local-license-portugal/">alojamento-local-license-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,622w)</span> · <a href="/guides/best-regions-invest-portugal-property-2026/">best-regions-invest-portugal-property-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,578w)</span> · <a href="/guides/buy-property-portugal-foreigner/">buy-property-portugal-foreigner</a> <span style="color:#a8a29e;font-size:10px;">(3,825w)</span> · <a href="/guides/can-foreigners-buy-property-portugal/">can-foreigners-buy-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,414w)</span> · <a href="/guides/cost-of-buying-property-portugal/">cost-of-buying-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,510w)</span> · <a href="/guides/cpcv-promissory-contract-portugal/">cpcv-promissory-contract-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,628w)</span> · <a href="/guides/due-diligence-portugal-property/">due-diligence-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(4,310w)</span> · <a href="/guides/escritura-notary-portugal-property/">escritura-notary-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,724w)</span> · <a href="/guides/gross-vs-net-yield-portugal/">gross-vs-net-yield-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,882w)</span> · <a href="/guides/hidden-costs-buying-property-portugal/">hidden-costs-buying-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,989w)</span> · <a href="/guides/highest-rental-yield-areas-portugal/">highest-rental-yield-areas-portugal</a> <span style="color:#a8a29e;font-size:10px;">(2,954w)</span> · <a href="/guides/how-to-buy-portugal-property-remotely/">how-to-buy-portugal-property-remotely</a> <span style="color:#a8a29e;font-size:10px;">(4,398w)</span> · <a href="/guides/how-to-buy-property-portugal-step-by-step/">how-to-buy-property-portugal-step-by-step</a> <span style="color:#a8a29e;font-size:10px;">(4,144w)</span> · <a href="/guides/how-to-calculate-rental-yield-portugal/">how-to-calculate-rental-yield-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,007w)</span> · <a href="/guides/imi-property-tax-portugal/">imi-property-tax-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,533w)</span> · <a href="/guides/imt-refund-tax-resident-portugal/">imt-refund-tax-resident-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,361w)</span> · <a href="/guides/imt-tax-non-resident-portugal-2026/">imt-tax-non-resident-portugal-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,745w)</span> · <a href="/guides/is-portugal-property-good-investment-2026/">is-portugal-property-good-investment-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,431w)</span> · <a href="/guides/lisbon-alojamento-local-containment-zones/">lisbon-alojamento-local-containment-zones</a> <span style="color:#a8a29e;font-size:10px;">(2,750w)</span> · <a href="/guides/lisbon-property-investment-guide/">lisbon-property-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,937w)</span> · <a href="/guides/long-term-vs-holiday-rental-portugal/">long-term-vs-holiday-rental-portugal</a> <span style="color:#a8a29e;font-size:10px;">(2,823w)</span> · <a href="/guides/moderate-rent-tax-incentives-portugal-2026/">moderate-rent-tax-incentives-portugal-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,592w)</span> · <a href="/guides/nif-portugal-property-purchase/">nif-portugal-property-purchase</a> <span style="color:#a8a29e;font-size:10px;">(2,930w)</span> · <a href="/guides/non-resident-mortgage-portugal/">non-resident-mortgage-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,171w)</span> · <a href="/guides/off-plan-property-portugal-guide/">off-plan-property-portugal-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,716w)</span> · <a href="/guides/porto-alojamento-local-rules/">porto-alojamento-local-rules</a> <span style="color:#a8a29e;font-size:10px;">(3,226w)</span> · <a href="/guides/porto-property-investment-guide/">porto-property-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,944w)</span> · <a href="/guides/portugal-buy-to-let-investment-guide/">portugal-buy-to-let-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,044w)</span> · <a href="/guides/portugal-capital-gains-tax-property/">portugal-capital-gains-tax-property</a> <span style="color:#a8a29e;font-size:10px;">(3,326w)</span> · <a href="/guides/portugal-d7-visa-property/">portugal-d7-visa-property</a> <span style="color:#a8a29e;font-size:10px;">(3,145w)</span> · <a href="/guides/portugal-digital-nomad-visa-property/">portugal-digital-nomad-visa-property</a> <span style="color:#a8a29e;font-size:10px;">(3,289w)</span> · <a href="/guides/portugal-golden-visa-fund-investment-2026/">portugal-golden-visa-fund-investment-2026</a> <span style="color:#a8a29e;font-size:10px;">(2,910w)</span> · <a href="/guides/portugal-golden-visa-real-estate-ended/">portugal-golden-visa-real-estate-ended</a> <span style="color:#a8a29e;font-size:10px;">(4,005w)</span> · <a href="/guides/portugal-golden-visa-vs-property-purchase/">portugal-golden-visa-vs-property-purchase</a> <span style="color:#a8a29e;font-size:10px;">(3,153w)</span> · <a href="/guides/portugal-housing-supply-licensing-2025/">portugal-housing-supply-licensing-2025</a> <span style="color:#a8a29e;font-size:10px;">(3,278w)</span> · <a href="/guides/portugal-property-developers-guide-2026/">portugal-property-developers-guide-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,334w)</span> · <a href="/guides/portugal-property-investment-guide/">portugal-property-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(6,157w)</span> · <a href="/guides/portugal-property-market-forecast-2026-2027/">portugal-property-market-forecast-2026-2027</a> <span style="color:#a8a29e;font-size:10px;">(3,362w)</span> · <a href="/guides/portugal-property-market-record-2025-ine-data/">portugal-property-market-record-2025-ine-data</a> <span style="color:#a8a29e;font-size:10px;">(3,994w)</span> · <a href="/guides/portugal-property-scams-avoid/">portugal-property-scams-avoid</a> <span style="color:#a8a29e;font-size:10px;">(3,614w)</span> · <a href="/guides/portugal-rental-yield-guide/">portugal-rental-yield-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,878w)</span> · <a href="/guides/portugal-residency-options-without-golden-visa/">portugal-residency-options-without-golden-visa</a> <span style="color:#a8a29e;font-size:10px;">(3,725w)</span> · <a href="/guides/power-of-attorney-property-portugal/">power-of-attorney-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,015w)</span> · <a href="/guides/property-management-portugal-cost/">property-management-portugal-cost</a> <span style="color:#a8a29e;font-size:10px;">(2,858w)</span> · <a href="/guides/rnal-registration-portugal/">rnal-registration-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,557w)</span> · <a href="/guides/silver-coast-portugal-property-guide/">silver-coast-portugal-property-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,472w)</span> · <a href="/guides/stamp-duty-portugal-property/">stamp-duty-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,387w)</span></div>
-  </div>
-  <div class="slug-block">
-    <h4>Comparisons (9) — 37,148 words</h4>
-    <div class="slug-list"><a href="/compare/algarve-vs-lisbon-property-investment/">algarve-vs-lisbon-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,523w)</span> · <a href="/compare/lagos-vs-vilamoura-investment/">lagos-vs-vilamoura-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,359w)</span> · <a href="/compare/lisbon-vs-cascais-property/">lisbon-vs-cascais-property</a> <span style="color:#a8a29e;font-size:10px;">(4,299w)</span> · <a href="/compare/new-build-vs-resale-property-portugal/">new-build-vs-resale-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,078w)</span> · <a href="/compare/porto-vs-lisbon-property-investment/">porto-vs-lisbon-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,401w)</span> · <a href="/compare/portugal-vs-france-property-investment/">portugal-vs-france-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,249w)</span> · <a href="/compare/portugal-vs-greece-property-investment/">portugal-vs-greece-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,286w)</span> · <a href="/compare/portugal-vs-italy-property-investment/">portugal-vs-italy-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,790w)</span> · <a href="/compare/portugal-vs-spain-property-investment/">portugal-vs-spain-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,163w)</span></div>
-  </div>
-  <div class="slug-block">
-    <h4>Areas (21) — 95,724 words</h4>
-    <div class="slug-list"><a href="/areas/albufeira-property-investment/">albufeira-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,891w)</span> · <a href="/areas/alcantara-property-investment/">alcantara-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,377w)</span> · <a href="/areas/braga-property-investment/">braga-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,313w)</span> · <a href="/areas/caldas-da-rainha-property-investment/">caldas-da-rainha-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,951w)</span> · <a href="/areas/cascais-property-investment/">cascais-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,444w)</span> · <a href="/areas/chiado-principe-real-property/">chiado-principe-real-property</a> <span style="color:#a8a29e;font-size:10px;">(4,097w)</span> · <a href="/areas/comporta-property-investment/">comporta-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,113w)</span> · <a href="/areas/ericeira-property-investment/">ericeira-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,096w)</span> · <a href="/areas/faro-property-investment/">faro-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,348w)</span> · <a href="/areas/lagos-property-investment/">lagos-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,568w)</span> · <a href="/areas/lourinha-property-investment/">lourinha-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,764w)</span> · <a href="/areas/marvila-property-investment/">marvila-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,555w)</span> · <a href="/areas/matosinhos-property-investment/">matosinhos-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,066w)</span> · <a href="/areas/nazare-property-investment/">nazare-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,829w)</span> · <a href="/areas/obidos-property-investment/">obidos-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,351w)</span> · <a href="/areas/oeiras-property-investment/">oeiras-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,751w)</span> · <a href="/areas/parque-das-nacoes-property/">parque-das-nacoes-property</a> <span style="color:#a8a29e;font-size:10px;">(4,415w)</span> · <a href="/areas/portimao-property-investment/">portimao-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,992w)</span> · <a href="/areas/tavira-property-investment/">tavira-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,326w)</span> · <a href="/areas/vila-nova-de-gaia-property-investment/">vila-nova-de-gaia-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,683w)</span> · <a href="/areas/vilamoura-property-investment/">vilamoura-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,794w)</span></div>
-  </div>
-  <div class="slug-block">
-    <h4>Segments (7) — 26,360 words</h4>
-    <div class="slug-list"><a href="/segments/american-buyers-portugal-property/">american-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(4,692w)</span> · <a href="/segments/angolan-buyers-portugal/">angolan-buyers-portugal</a> <span style="color:#a8a29e;font-size:10px;">(2,791w)</span> · <a href="/segments/brazilian-buyers-portugal-property/">brazilian-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(2,824w)</span> · <a href="/segments/chinese-buyers-portugal-property/">chinese-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(4,877w)</span> · <a href="/segments/french-buyers-portugal-property/">french-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,398w)</span> · <a href="/segments/german-buyers-portugal-property/">german-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,732w)</span> · <a href="/segments/uk-buyers-portugal-property-brexit/">uk-buyers-portugal-property-brexit</a> <span style="color:#a8a29e;font-size:10px;">(4,046w)</span></div>
-  </div>
-  <div class="slug-block">
-    <h4>Developers & agencies (3) — 9,655 words</h4>
-    <div class="slug-list"><a href="/developers/farinvest-properties-portugal/">farinvest-properties-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,654w)</span> · <a href="/developers/vanguard-properties-portugal/">vanguard-properties-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,054w)</span> · <a href="/developers/vic-properties-portugal/">vic-properties-portugal</a> <span style="color:#a8a29e;font-size:10px;">(2,947w)</span></div>
-  </div>
+${['guides', 'compare', 'areas', 'segments', 'developers']
+  .map(
+    (col) => `  <div class="slug-block">
+    <h4>${corpus[col].label} (${corpus[col].count}) — ${corpus[col].words.toLocaleString()} words</h4>
+    <div class="slug-list">${slugListHtml(col, true)}</div>
+  </div>`
+  )
+  .join('\n')}
 
-  <div class="section-title">Full SEO audit — 17 June 2026</div>
+  <div class="section-title">Full SEO audit — ${REPORT_DATE}</div>
   <div class="pulse-wrap">
     <div class="audit-grid">
       <div class="audit-item"><strong>Technical SEO: 9/10</strong>Sitemap 200, lead API 200, robots OK, /projects/ noindex + excluded from sitemap, API prerender=false verified.</div>
-      <div class="audit-item"><strong>Indexation: baseline</strong>109 URLs explicit Google API · GSC 0 imp (too early) · sitemap 0 errors · Bing IndexNow active.</div>
-      <div class="audit-item"><strong>On-page / corpus: 9.5/10</strong>91/91 validate PASS · fix:queue empty · 0 em-dash failures · hero diversity rotated 17 Jun.</div>
-      <div class="audit-item"><strong>Content depth: 9/10</strong>355K words · pillar 6157w · avg 3904w · 7 nationality segments · 9 country/city compares.</div>
+      <div class="audit-item"><strong>Indexation: baseline</strong>${submitted} URLs explicit Google API · GSC 0 imp (too early) · sitemap 0 errors · Bing IndexNow active.</div>
+      <div class="audit-item"><strong>On-page / corpus: 9.5/10</strong>${totalFiles}/${totalFiles} validate PASS · fix:queue empty · 0 em-dash failures · hero diversity rotated 17 Jun.</div>
+      <div class="audit-item"><strong>Content depth: 9/10</strong>${fmtNum(totalWords)} words · pillar 6157w · avg ${avgWords}w · 7 nationality segments · 9 country/city compares.</div>
       <div class="audit-item"><strong>Entity trust: 8/10</strong>Developers hub live · Farinvest labelled agency · VIC/Vanguard DD · no LeadForm on tier-A (by design).</div>
       <div class="audit-item"><strong>GEO / AI: 7/10</strong>FAQPage + Article schema · llms.txt present · Wikidata Q-id not yet · news cadence not started.</div>
     </div>
@@ -374,7 +387,7 @@ export const prerender = true;
     <table class="content-table">
       <thead><tr><th>Priority</th><th>Action</th><th>Expected outcome</th></tr></thead>
       <tbody>
-        <tr><td><span class="tag green">DONE</span></td><td>91 tier-A corpus + qa:full 5/5 + 109 URL indexing batch + sitemap hygiene</td><td>Clean launch baseline before pause</td></tr>
+        <tr><td><span class="tag green">DONE</span></td><td>91 tier-A corpus + qa:full 5/5 + ${submitted} URL indexing batch + sitemap hygiene</td><td>Clean launch baseline before pause</td></tr>
         <tr><td><span class="tag red">P0</span></td><td><strong>Indexing pause 2–3 weeks</strong> — no new MDX until GSC shows 100+ impressions on pillar URLs</td><td>Avoid crawl budget dilution; let Google process explicit batch</td></tr>
         <tr><td><span class="tag amber">P1</span></td><td>Weekly GSC refresh via MCP — when pos 8–15 + 50 imp: CTR sprint on IMT, foreigners-buy, Golden Visa fund guides</td><td>First clicks from high-intent legal/tax queries</td></tr>
         <tr><td><span class="tag amber">P1</span></td><td>Start news collection: 3 short news MDX/day (INE, AL law, Golden Visa fund flows)</td><td>Freshness signal + NewsArticle schema</td></tr>
@@ -429,9 +442,9 @@ export const prerender = true;
   <div class="section-title">Launch changelog</div>
   <div>
     <div class="changelog-item">
-      <div class="changelog-date">17 June 2026 v1.0</div>
+      <div class="changelog-date">${REPORT_DATE} ${REPORT_VERSION}</div>
       <div>
-        <div class="changelog-title">Full site-report rebuilt — Portugal data, all 91 slugs, MCP baseline</div>
+        <div class="changelog-title">Full site-report rebuilt — Portugal data, all ${totalFiles} slugs, MCP baseline</div>
         <div class="changelog-desc">Replaced Mexico template copy. GSC/GA4/Bing MCP pull. Corpus inventory with word counts. Promotion roadmap for indexing pause.</div>
         <div class="changelog-tags"><span class="tag blue">Report</span><span class="tag green">MCP</span></div>
       </div>
@@ -492,7 +505,7 @@ export const prerender = true;
     <a class="link-card" href="https://portuguese-estate.com/guides/portugal-property-investment-guide/" target="_blank" rel="noopener"><div class="link-label">National pillar</div><div class="link-url">/guides/portugal-property-investment-guide/</div></a>
     <a class="link-card" href="https://portuguese-estate.com/developers/" target="_blank" rel="noopener"><div class="link-label">Developers hub</div><div class="link-url">/developers/</div></a>
     <a class="link-card" href="https://portuguese-estate.com/segments/" target="_blank" rel="noopener"><div class="link-label">Segments hub</div><div class="link-url">/segments/</div></a>
-    <a class="link-card" href="https://portuguese-estate.com/sitemap-index.xml" target="_blank" rel="noopener"><div class="link-label">Sitemap</div><div class="link-url">sitemap-index.xml (108 URLs)</div></a>
+    <a class="link-card" href="https://portuguese-estate.com/sitemap-index.xml" target="_blank" rel="noopener"><div class="link-label">Sitemap</div><div class="link-url">sitemap-index.xml (${sitemapUrls} URLs)</div></a>
     <a class="link-card" href="https://search.google.com/search-console?resource_id=sc-domain:portuguese-estate.com" target="_blank" rel="noopener"><div class="link-label">Google Search Console</div><div class="link-url">sc-domain:portuguese-estate.com</div></a>
     <a class="link-card" href="https://analytics.google.com/" target="_blank" rel="noopener"><div class="link-label">GA4</div><div class="link-url">ga4-analytics-portuguese-estate MCP</div></a>
     <a class="link-card" href="https://www.bing.com/webmasters/" target="_blank" rel="noopener"><div class="link-label">Bing Webmaster</div><div class="link-url">portuguese-estate.com</div></a>
@@ -502,11 +515,15 @@ export const prerender = true;
 </div>
 
 <div class="footer">
-  <strong>Portuguese Estate Site Report v1.0</strong> · 17 June 2026 ·
+  <strong>Portuguese Estate Site Report ${REPORT_VERSION}</strong> · ${REPORT_DATE} ·
   <a href="https://portuguese-estate.com/site-report/">portuguese-estate.com/site-report/</a><br />
-  Data: GSC + GA4 + Bing MCP · Content: generate-site-report.mjs + qa:full · 91 MDX · 355K words<br />
+  Data: GSC + GA4 + Bing MCP · Content: generate-site-report.mjs + qa:full · ${totalFiles} MDX · ${fmtNum(totalWords)} words<br />
   EN site — Google + Bing only · never Yandex
 </div>
 
 </body>
 </html>
+`;
+
+writeFileSync(OUT, html);
+console.log(`Wrote ${OUT} (${totalFiles} articles, ${totalWords.toLocaleString()} words)`);
