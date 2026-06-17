@@ -1,0 +1,324 @@
+---
+title: "How to Calculate Rental Yield in Portugal: 2026 Guide"
+description: "Step-by-step gross and net rental yield formulas for Portugal with spreadsheet columns, vacancy rates, capex reserve, and three worked examples."
+pubDate: 2026-06-17
+updatedDate: 2026-06-17
+author: "Portuguese Estate Editorial"
+category: "guides"
+tags: ["calculate rental yield portugal", "portugal rental yield formula", "gross yield portugal", "net yield property portugal", "rental return calculation portugal"]
+readingTime: 14
+featured: false
+heroImage: "https://www.vangproperties.com/media/6658/terracos-do-monte_2.png?anchor=center&mode=crop&rnd=133602640930000000&preset=socialShare"
+faq:
+  - question: "How do you calculate gross rental yield on a Portuguese property?"
+    answer: "Divide annual rental income by the property purchase price, then multiply by 100. A Lisbon apartment bought for €400,000 rented at €1,600 per month generates €19,200 per year: €19,200 divided by €400,000 multiplied by 100 = 4.8% gross yield. This figure does not deduct taxes, management fees, or any operating costs."
+  - question: "What is a good net rental yield in Portugal?"
+    answer: "Net yields above 3.5% are considered strong in Lisbon and Porto after deducting IMI, management, maintenance, and non-resident income tax. Algarve properties with active Alojamento Local licences can reach 4–5% net with good annual occupancy. Below 2.5% net is generally too thin to justify investment risk without strong capital appreciation expectations."
+  - question: "How much does IMI reduce rental yield in Portugal?"
+    answer: "IMI (Imposto Municipal sobre Imóveis) is levied at 0.3–0.45% of the patrimonial value (VPT), which typically sits 20–40% below market value in urban areas. On a €400,000 Lisbon apartment with a VPT of €280,000 and a 0.3% rate, annual IMI is €840. That reduces gross yield on a €400,000 property by approximately 0.21 percentage points."
+  - question: "What vacancy rate should I use when calculating rental yield in Portugal?"
+    answer: "Long-term residential lets in Lisbon and Porto typically experience 3–5% vacancy (roughly two to four weeks per year between tenancies). Algarve short-term rentals can see 35–45% effective vacancy when accounting for November through March. Use the upper end of the range for conservative underwriting and always model full annual occupancy, not just peak-month revenue."
+  - question: "How do management fees affect rental yield calculations in Portugal?"
+    answer: "Professional long-term property management in Portugal costs 8–15% of collected rent. A 10% management fee on €19,200 annual rent reduces net income by €1,920, lowering yield by roughly 0.48 percentage points. Short-term rental all-in management runs 20–30% of gross revenue and includes cleaning coordination, linen, and channel management."
+  - question: "What capex reserve should I budget for a Portuguese rental property?"
+    answer: "Standard practice is 1–2% of property value annually for properties under 15 years old, rising to 2–3% for older stock. On a €350,000 apartment, that is €3,500–7,000 per year set aside for appliance replacement, plumbing, repainting between tenancies, and major turnover costs. New-build investors often skip this line, which creates a liquidity problem in years four and five."
+  - question: "What is the rental income tax rate for non-residents in Portugal?"
+    answer: "Non-residents declaring rental income in Portugal pay income tax on 70% of gross rent under the simplified IRS regime. That 70% taxable base is then taxed at the 25% non-resident flat rate, giving an effective income tax cost of 17.5% of gross rent. Income is declared annually via IRS Modelo 3. Landlords using the organised accounting regime can deduct actual costs before applying tax."
+  - question: "What is the practical difference between gross and net yield in Portuguese property?"
+    answer: "Gross yield is annual rent divided by purchase price. Net yield deducts IMI, condominium fees, insurance, management, maintenance, income tax, and a vacancy allowance. In Portugal, the gross-to-net gap typically runs 1.5–2.5 percentage points for a non-resident owner using professional management. Self-managing owners with low vacancy can narrow that gap to 1.0–1.5 points."
+  - question: "How do I calculate yield on an Alojamento Local short-term rental in Portugal?"
+    answer: "Project annual occupancy (not peak-month revenue), then subtract platform fees of 3–15%, cleaning between stays at €25–60 per turnaround, channel management, AL licence annual renewal costs, and income tax at 17.5% of gross. Most AL operators in the Algarve run 55–65% annual occupancy. Modelling on that basis rather than peak-month rates gives a realistic net yield figure."
+  - question: "Should I include acquisition costs in my yield calculation?"
+    answer: "For return on invested capital, yes. From September 2026, non-resident buyers pay 7.5% IMT flat rate plus 0.8% stamp duty plus legal and notary fees, totalling roughly 9–12% of the purchase price under DL 97/2026. Including these costs in the denominator reduces effective yield by 0.3–0.5 percentage points compared to yield calculated on the headline purchase price alone."
+---
+
+import TldrBlock from '../../components/TldrBlock.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+
+# How to Calculate Rental Yield in Portugal: 2026 Guide
+
+Quick Answer: Gross rental yield is annual rent divided by purchase price, multiplied by 100. Net yield deducts IMI, condominium fees, property management, income tax (17.5% effective rate for non-residents on the simplified IRS regime), a maintenance reserve, and a vacancy allowance. In most Portuguese cities, the gap between gross and net is 1.5–2.5 percentage points for a professionally managed property.
+
+<TldrBlock text="Gross rental yield = (annual rent ÷ purchase price) × 100. Net yield deducts IMI, condominium, management (8–15%), income tax (17.5% effective for non-residents), capex reserve (1–2% of value annually), and vacancy. On a well-run Porto T2 at 5.5% gross, realistic non-resident net yield with management is 3.0–3.8%. Build the full six-line deduction model before committing capital." />
+
+Most property portals and developer brochures present **gross rental yield** only. That figure is useful for comparing locations on a consistent, like-for-like basis. It does not tell you what reaches your bank account after the Portuguese tax authority, the building administrator, the letting agent, and maintenance costs have each taken their share. This guide builds the full calculation from first principles, gives you a reusable spreadsheet structure, and walks through three representative examples across Lisbon, Porto, and the Algarve.
+
+## What Rental Yield Actually Measures
+
+Yield converts an annual income stream into a percentage of the capital deployed to generate it. If you purchase a Porto T2 for €310,000 and let it for €1,500 per month, your annual rent is €18,000. Dividing that by the purchase price gives 5.81%. That single number tells you one genuinely useful thing: how this property's income ratio compares to other properties in different cities or asset classes on an equivalent basis.
+
+The problem is entirely in what that number excludes. Gross yield ignores the IMI bill that arrives each November, the condominium quarterly charge, the management fee on each rent cheque, the income tax return that a non-resident must file annually, the kitchen appliances that need replacing in year three, and the two months of vacancy between tenants. Stack those deductions onto a 5.81% gross yield and the figure that survives can fall below 3.0%.
+
+**Net rental yield** includes all of those real operating costs. It is the number you need before deciding whether a property is worth purchasing at a given price.
+
+There is also a third metric worth computing: return on invested capital (ROIC), which places total cash deployed, including acquisition costs, in the denominator. Under DL 97/2026, non-resident buyers face a flat 7.5% IMT rate from September 2026, adding roughly €22,500 in acquisition tax alone on a €300,000 property before stamp duty and legal fees. Including those costs in the denominator reduces effective yield materially and is the right basis for comparing Portuguese property against other investment opportunities.
+
+## The Gross Rental Yield Formula
+
+The formula itself is straightforward:
+
+**Gross Yield (%) = (Annual Rental Income ÷ Purchase Price) × 100**
+
+Where annual rental income equals monthly market rent multiplied by 12 for long-term lets, or projected annual occupancy revenue for Alojamento Local short-term strategy.
+
+A worked example at each of the three main Portuguese investment regions illustrates the starting point:
+
+| Property | Purchase price | Monthly rent | Annual rent | Gross yield |
+|---|---:|---:|---:|---:|
+| Lisbon T2, Arroios | €420,000 | €1,700 | €20,400 | 4.86% |
+| Porto T2, Bonfim | €310,000 | €1,500 | €18,000 | 5.81% |
+| Algarve T2, Tavira | €280,000 | €1,100 | €13,200 | 4.71% |
+
+Note that the Tavira long-term rent yield (4.71%) looks lower than Porto despite the lower price. That is because Tavira rents are pulled down by seasonality and a smaller permanent population. The same property on an Alojamento Local strategy can deliver substantially higher gross revenue, which is discussed in the worked examples below.
+
+For the ROIC version of gross yield, add acquisition costs to the denominator. On a €310,000 Porto apartment with 9% total acquisition costs (€27,900 in IMT, stamp duty, and legal fees), the ROIC denominator becomes €337,900. The 5.81% gross yield on purchase price falls to 5.33% on total invested capital. That 0.5-point difference is worth tracking.
+
+## Step-by-Step: Building Your Net Yield Calculation in Portugal
+
+Net yield in Portugal has six primary deduction lines. Work through them in sequence. Each line is independent; stacking them in order makes it easier to run sensitivity scenarios by adjusting a single variable.
+
+### Line 1: IMI (Municipal Property Tax)
+
+**IMI** is billed annually by the municipality. The tax rate is 0.3–0.45% applied to the Valor Patrimonial Tributário (VPT), the assessed value used by the Tax Authority rather than the market price. In Lisbon and Porto, VPT typically runs 20–40% below market. In smaller towns and rural areas, the gap narrows.
+
+Lisbon and Porto municipalities apply 0.3%. Many Algarve councils apply 0.4–0.45%. The bill arrives in two tranches (April and November) for amounts above €500.
+
+IMI is not deductible against rental income under the simplified IRS regime, though it is deductible under the organised accounting (contabilidade organizada) regime for qualifying landlords who appoint a certified accountant.
+
+To estimate IMI, obtain the caderneta predial of the property (freely available from the Tax Authority portal using the property's article number). The VPT is stated on the caderneta. Multiply VPT by the applicable municipal rate.
+
+### Line 2: Condominium Fees and Building Insurance
+
+Apartments in Portuguese condominium buildings pay monthly charges covering common area maintenance, lift service contracts, building structural insurance, cleaning, and contributions to the caixa de condomínio maintenance reserve. Charges vary considerably: older central Lisbon buildings without lifts may charge €60–80 per month; modern buildings with pools and concierge in Lisbon can exceed €300 per month.
+
+For yield modelling purposes, budget €100–180 per month (€1,200–2,160 per year) for a typical mid-quality urban apartment. Add €250–600 per year for individual unit contents and landlord liability insurance.
+
+### Line 3: Property Management Fees
+
+Professional management for long-term residential tenancies costs 8–15% of collected rent. Some agents charge a monthly flat fee of €60–120 plus a leasing commission of one month's rent when a new tenant is placed. Others charge a pure percentage with no commission on let.
+
+For short-term Alojamento Local management, all-in operators (who handle RNAL compliance, guest communication, cleaning, linen, and channel management across Airbnb, Booking.com, and similar platforms) typically charge 20–30% of gross revenue. This higher percentage reflects the greater operational intensity of short-stay management.
+
+If you plan to self-manage entirely, assign zero to this line, but be realistic about your time and the cost of managing from abroad.
+
+### Line 4: Income Tax on Rental Income (Non-Residents)
+
+Non-residents renting property in Portugal are required to file an annual IRS Modelo 3 tax return. Under the simplified IRS regime, 70% of gross residential rental income is treated as the taxable base (the remaining 30% is a statutory cost deduction). This taxable base is then subject to the 25% non-resident flat rate.
+
+Effective income tax as a share of gross rent: 70% × 25% = **17.5%**
+
+On €18,000 annual rent, income tax is €3,150.
+
+If your rent is eligible under the moderate rent incentives programme (rendas acessíveis), the taxable percentage is reduced substantially. The [moderate rent tax incentives guide](/guides/moderate-rent-tax-incentives-portugal-2026/) sets out the 2026 rates, which can reduce effective income tax to under 10% of gross rent in qualifying cases.
+
+Residents who are tax-domiciled in Portugal may elect to use progressive rates on rental income, which can be advantageous at lower income levels but less so once other income pushes the marginal rate above 35%.
+
+### Line 5: Maintenance and Capex Reserve
+
+Maintenance is the most variable line and the most consistently underestimated. Planned maintenance covers regular items: appliance servicing and periodic replacement (washing machine, dishwasher, boiler), repainting between tenancies every three to five years, minor plumbing and electrical work, carpet or flooring replacement, and cleaning at turnover.
+
+A prudent reserve is 1% of purchase price annually for properties under 15 years old in good condition. For properties over 20 years or requiring periodic system upgrades (plumbing, electrical panel), budget 1.5–2.0%.
+
+This is not money necessarily spent every year; it is money set aside for the years when significant work is required. Skipping the reserve line does not reduce costs, it just disguises them.
+
+On a €310,000 Porto apartment, 1% is €3,100 per year. Over a ten-year hold, you will spend the equivalent of that reserve on at least one full kitchen or bathroom renovation.
+
+### Line 6: Vacancy Allowance
+
+Portuguese long-term residential tenancy law gives tenants significant protections under the Regime do Arrendamento Urbano. Tenancies run a minimum of one year and notice requirements on both sides are structured. In practice, well-located urban apartments in Lisbon and Porto experience low vacancy: 3–5% of rental time, equivalent to two to four empty weeks per year between tenancies.
+
+In secondary cities, smaller towns, and rural areas, budget 6–10% vacancy. For Alojamento Local, annual occupancy at prime Algarve locations typically runs 60–70% (Algarve west), falling to 55–65% in eastern towns like Tavira. In lesser-known inland areas, annual occupancy can fall below 50%.
+
+The vacancy line is the most sensitive to local market conditions and management quality. Good letting agents in tight markets (central Porto, prime Lisbon T2) can achieve near-zero vacancy with careful tenant selection. Poor management or overpriced lets can push vacancy well above the averages.
+
+## Your Rental Yield Spreadsheet: Column by Column
+
+The following structure can be reproduced in any spreadsheet in under ten minutes. Once built, run sensitivity scenarios by changing one input at a time.
+
+| Column | Input or Calculated | Notes |
+|---|---|---|
+| Purchase price (€) | Input | Agreed escritura price |
+| VPT (€) | Input | From caderneta predial |
+| Monthly rent (€) | Input | Market rate long-term |
+| Annual gross rent (€) | Monthly × 12 | Calculated |
+| Gross yield (%) | Annual rent ÷ purchase price × 100 | Calculated |
+| IMI rate (%) | Input | 0.30–0.45 by municipality |
+| IMI annual (€) | VPT × IMI rate | Calculated |
+| Condominium + insurance (€/year) | Input | From building administrator |
+| Management fee (%) | Input | 8–15% long-term |
+| Management annual (€) | Annual rent × management % | Calculated |
+| Income tax rate (%) | Input | 17.5% non-resident simplified |
+| Income tax annual (€) | Annual rent × 17.5% | Calculated |
+| Maintenance reserve (%) | Input | 1.0–2.0% of purchase price |
+| Maintenance annual (€) | Purchase price × reserve % | Calculated |
+| Vacancy rate (%) | Input | 3–10% long-term |
+| Vacancy cost (€/year) | Annual rent × vacancy % | Calculated |
+| Total annual costs (€) | Sum of all cost lines | Calculated |
+| Net annual income (€) | Annual gross rent minus costs | Calculated |
+| Net yield (%) | Net income ÷ purchase price × 100 | Calculated |
+| ROIC gross (%) | Annual rent ÷ (price + acquisition costs) × 100 | Optional |
+
+Add a sensitivity table that varies vacancy from 3% to 10% and management fee from 0% to 15%. The spread of outcomes shows the importance of management quality and tenant retention to actual returns.
+
+## Gross vs Net: How Far Apart Are They in Practice?
+
+The [Portugal rental yield guide](/guides/portugal-rental-yield-guide/) contains worked gross-to-net comparisons for Porto Bonfim and Lisbon T2 examples. The gap depends heavily on two variables: tax status and management arrangement.
+
+For a non-resident owner with professional management in a central Lisbon T2 at 4.86% gross:
+
+| Deduction line | Impact on yield |
+|---|---:|
+| IMI (0.3% × VPT) | -0.19% |
+| Condominium + insurance | -0.40% |
+| Management (10%) | -0.49% |
+| Income tax (17.5%) | -0.85% |
+| Maintenance reserve (1.0%) | -1.00% |
+| Vacancy (4%) | -0.19% |
+| Total deductions | -3.12% |
+| Net yield | 1.74% |
+
+That figure is the fully-loaded, professionally managed, full-reserve outcome. Real-world net yields for actively managed Lisbon long-lets typically run 2.5–3.5% for non-residents who self-manage partially and spend rather than reserve on maintenance. The point of building this model is not to conclude that Lisbon is unattractive; it is to establish what assumptions drive the result and which ones are in your control.
+
+## Short-Term vs Long-Term: Which Model Generates Higher Net Yield?
+
+In locations where Alojamento Local licences are available and transferable with the property, short-term rental gross revenue typically runs 30–60% higher than long-term rent for equivalent apartments. However, operating costs are structurally higher across every line.
+
+The [Alojamento Local licensing guide](/guides/alojamento-local-license-portugal/) covers RNAL registration, containment zones in Lisbon and Porto, and rules on licence transfer on resale. The critical point for yield calculations: if an AL licence cannot be transferred to a buyer, the AL premium cannot be underwritten. Verify RNAL status before assuming short-term rental income.
+
+In Lisbon's RMAL containment zones, parishes where licensed AL units already represent 10% or more of total housing stock receive no new licences. This is now the situation in much of central Lisbon: the AL model is not available to new buyers in those parishes, and yield calculations must be based on long-term or furnished medium-term rents only.
+
+In the Algarve, most municipalities remain more open to AL outside declared containment areas, making the short-term model more accessible. See the [Algarve property investment guide](/guides/algarve-property-investment-guide/) for a municipality-by-municipality overview of current AL policy.
+
+## Three Complete Worked Examples
+
+### Example 1: Lisbon T2, Arroios, Long-Term Let
+
+Property details: purchase price €420,000, VPT €285,000, monthly rent €1,700, Lisbon municipality IMI rate 0.3%.
+
+| Line item | Annual (€) |
+|---|---:|
+| Gross rent | €20,400 |
+| Gross yield | 4.86% |
+| IMI (€285,000 × 0.3%) | -€855 |
+| Condominium + insurance | -€1,950 |
+| Management (10%) | -€2,040 |
+| Income tax (17.5%) | -€3,570 |
+| Maintenance reserve (1.0%) | -€4,200 |
+| Vacancy (4%) | -€816 |
+| Total costs | -€13,431 |
+| Net annual income | €6,969 |
+| Net yield | 1.66% |
+
+This is the fully loaded outcome for a non-resident, professionally managed, full-reserve scenario. An investor who self-manages (saving €2,040), uses the organised accounting regime to deduct IMI and maintenance from taxable income, and spends €2,000 on actual maintenance rather than reserving €4,200, would see net yield closer to 3.0–3.5%.
+
+### Example 2: Porto T2, Bonfim, Long-Term Let
+
+Property details: purchase price €310,000, VPT €200,000, monthly rent €1,500, Porto municipality IMI rate 0.3%.
+
+| Line item | Annual (€) |
+|---|---:|
+| Gross rent | €18,000 |
+| Gross yield | 5.81% |
+| IMI (€200,000 × 0.3%) | -€600 |
+| Condominium + insurance | -€1,500 |
+| Management (10%) | -€1,800 |
+| Income tax (17.5%) | -€3,150 |
+| Maintenance reserve (1.0%) | -€3,100 |
+| Vacancy (5%) | -€900 |
+| Total costs | -€11,050 |
+| Net annual income | €6,950 |
+| Net yield | 2.24% |
+
+Porto's lower entry price produces a higher gross yield, but the proportional cost structure is similar. Self-managing owners achieving low vacancy and running actual rather than reserved maintenance expenditure typically reach 3.5–4.2% net.
+
+### Example 3: Algarve T2, Tavira, Alojamento Local Strategy
+
+Property details: purchase price €280,000, valid and transferable AL licence in place. Annual AL revenue modelled at 62% occupancy, €130 average daily rate, giving approximately €29,500 gross annual revenue.
+
+| Line item | Annual (€) |
+|---|---:|
+| Gross AL revenue | €29,500 |
+| Gross AL yield | 10.54% |
+| IMI (VPT €185,000 × 0.4%) | -€740 |
+| Condominium + insurance | -€1,300 |
+| AL management all-in (25%) | -€7,375 |
+| Platform fees (5% net of management) | included in management |
+| Income tax (17.5% of gross) | -€5,163 |
+| Maintenance (1.5% older stock) | -€4,200 |
+| AL licence renewal + compliance | -€350 |
+| Total costs | -€19,128 |
+| Net annual income | €10,372 |
+| Net yield | 3.70% |
+
+The AL model in Tavira produces a stronger net yield than a professionally managed long-let in central Lisbon, but it requires active management, a valid and transferable licence, and genuine annual occupancy in the 60%+ range. If occupancy falls to 50%, gross revenue drops to approximately €23,750 and net yield falls to around 2.4%, which changes the investment case materially.
+
+## Common Calculation Mistakes and How to Avoid Them
+
+Not deducting income tax from gross figures is the most widespread error in Portuguese property marketing. Developer and portal presentations almost never apply the 17.5% effective income tax line. On a 5.5% gross yield, that single omission overstates return by approximately 0.96 percentage points.
+
+Modelling AL yield on peak-month revenue ignores low season. July and August rates in Algarve can be three to four times higher than January rates. An investor who models annual revenue based on summer occupancy and pricing will overstate returns by 40–60% compared to a realistic full-year projection.
+
+Ignoring acquisition costs in the return calculation matters from September 2026 for non-residents. The 7.5% flat IMT rate under DL 97/2026 is the largest single cost outside the property price itself. See the [IMT tax guide for non-residents](/guides/imt-tax-non-resident-portugal-2026/) and the [full cost of buying guide](/guides/cost-of-buying-property-portugal/) for the complete acquisition cost breakdown.
+
+Applying no maintenance reserve on the grounds that the property is new or recently renovated is a common oversight. Appliances have finite lifespans, repainting is required after each multi-year tenancy, and boilers need replacement. Budget from year one.
+
+Treating the simplified IRS deduction (30% of gross rent) as cash in hand rather than a statutory allowance is another frequent confusion. The 30% is a deemed cost reduction, not actual money returned. Your real costs may be higher than 30% of gross rent if you have professional management, an older building, and full reserves.
+
+## What Net Yield Should You Target Before Committing Capital?
+
+There is no universal threshold, but the following framework reflects current Portuguese market practice:
+
+Below 2.5% net yield: the property is an asset-appreciation play, not primarily an income investment. Appropriate only if you have strong conviction on price growth and a five-year or longer hold, and if you can service the property without relying on rental income.
+
+2.5–3.5% net yield: acceptable in primary Lisbon and Porto for investors combining yield with capital growth expectations. Typical outcome for a non-resident with professional management on a central long-let. The [Lisbon investment guide](/guides/lisbon-property-investment-guide/) and [Porto investment guide](/guides/porto-property-investment-guide/) cover the capital growth context for each city.
+
+3.5–5.0% net yield: strong for Portugal. Achievable in Porto outer parishes, Braga, Algarve east with a valid AL licence, and secondary northern cities. Requires either self-management, a below-market acquisition, or a particularly efficient cost structure.
+
+Above 5.0% net: exceptional. Usually signals either a below-market purchase price, an unusually favourable AL situation, or costs that have not yet been fully identified in the model. Apply extra scrutiny before accepting a figure this high at face value.
+
+The [Portugal rental yield guide](/guides/portugal-rental-yield-guide/) covers the macro picture including gross yield benchmarks by region and the impact of AL containment zones on net yield across strategies. The [highest rental yield areas guide](/guides/highest-rental-yield-areas-portugal/) maps which locations currently offer the most attractive gross and indicative net yields across the country, with price data and yield tables by area.
+
+Before you identify a target region, build the full six-line net model for a representative property there. The inputs change significantly between Braga at €1,800 per square metre and central Lisbon at €5,500 per square metre, and understanding those differences through the calculation rather than through headline gross figures is the foundation of accurate investment underwriting in Portugal.
+
+<FaqBlock items={[
+  {
+    question: "How do you calculate gross rental yield on a Portuguese property?",
+    answer: "Divide annual rental income by the property purchase price, then multiply by 100. A Lisbon apartment bought for €400,000 rented at €1,600 per month generates €19,200 per year: €19,200 divided by €400,000 multiplied by 100 equals 4.8% gross yield. This figure does not deduct taxes, management fees, or any operating costs."
+  },
+  {
+    question: "What is a good net rental yield in Portugal?",
+    answer: "Net yields above 3.5% are considered strong in Lisbon and Porto after deducting IMI, management, maintenance, and non-resident income tax. Algarve properties with active Alojamento Local licences can reach 4–5% net with good annual occupancy. Below 2.5% net is generally too thin to justify investment risk without strong capital appreciation expectations."
+  },
+  {
+    question: "How much does IMI reduce rental yield in Portugal?",
+    answer: "IMI is levied at 0.3–0.45% of the patrimonial value (VPT), which typically sits 20–40% below market value in urban areas. On a €400,000 Lisbon apartment with a VPT of €280,000 and a 0.3% rate, annual IMI is €840. That reduces gross yield on a €400,000 property by approximately 0.21 percentage points."
+  },
+  {
+    question: "What vacancy rate should I use when calculating rental yield in Portugal?",
+    answer: "Long-term residential lets in Lisbon and Porto typically experience 3–5% vacancy (roughly two to four weeks per year between tenancies). Algarve short-term rentals can see 35–45% effective vacancy when accounting for low season. Use the upper end of the range for conservative underwriting and always model full annual occupancy, not just peak-month revenue."
+  },
+  {
+    question: "How do management fees affect rental yield calculations in Portugal?",
+    answer: "Professional long-term property management in Portugal costs 8–15% of collected rent. A 10% management fee on €19,200 annual rent reduces net income by €1,920, lowering yield by roughly 0.48 percentage points. Short-term rental all-in management runs 20–30% of gross revenue and includes cleaning coordination, linen, and channel management."
+  },
+  {
+    question: "What capex reserve should I budget for a Portuguese rental property?",
+    answer: "Standard practice is 1–2% of property value annually for properties under 15 years old in good condition, rising to 2–3% for older stock. On a €350,000 apartment, that is €3,500–7,000 per year set aside for appliance replacement, plumbing, repainting, and major turnover costs. New-build investors often skip this line, which creates a liquidity problem in years four and five."
+  },
+  {
+    question: "What is the rental income tax rate for non-residents in Portugal?",
+    answer: "Non-residents declaring rental income in Portugal pay income tax on 70% of gross rent under the simplified IRS regime. That 70% taxable base is taxed at the 25% non-resident flat rate, giving an effective income tax cost of 17.5% of gross rent. Income is declared annually via IRS Modelo 3. Landlords using the organised accounting regime can deduct actual costs before applying tax."
+  },
+  {
+    question: "What is the practical difference between gross and net yield in Portuguese property?",
+    answer: "Gross yield is annual rent divided by purchase price. Net yield deducts IMI, condominium fees, insurance, management, maintenance, income tax, and a vacancy allowance. In Portugal, the gross-to-net gap typically runs 1.5–2.5 percentage points for a non-resident owner using professional management. Self-managing owners with low vacancy can narrow that gap to 1.0–1.5 points."
+  },
+  {
+    question: "How do I calculate yield on an Alojamento Local short-term rental in Portugal?",
+    answer: "Project annual occupancy (not peak-month revenue), then subtract platform fees of 3–15%, cleaning between stays at €25–60 per turnaround, channel management, AL licence annual renewal costs, and income tax at 17.5% of gross. Most AL operators in the Algarve run 55–65% annual occupancy. Modelling on that basis gives a realistic net yield figure rather than an inflated peak-season estimate."
+  },
+  {
+    question: "Should I include acquisition costs in my yield calculation?",
+    answer: "For return on invested capital, yes. From September 2026, non-resident buyers pay 7.5% IMT flat rate plus 0.8% stamp duty plus legal and notary fees, totalling roughly 9–12% of the purchase price under DL 97/2026. Including these costs in the denominator reduces effective yield by 0.3–0.5 percentage points compared to yield calculated on the headline purchase price alone."
+  }
+]} />
