@@ -77,12 +77,13 @@ const COLLECTIONS = isRu
       developers: { minWords: 1200, minFaq: 3, commercial: false },
       news: { minWords: 500, minFaq: 0, light: true },
       resales: { minWords: 500, minFaq: 0, light: true },
+      segments: { minWords: 2000, minFaq: 5, commercial: true },
     };
 
 const LAYOUT_PROVIDES_LEAD_FORM = new Set(
   isRu
     ? ['gajdy', 'rajony', 'sravneniya']
-    : ['guides', 'areas', 'comparisons', 'compare', 'projects', 'developers', 'markets', 'costs', 'finance', 'legal'],
+    : ['guides', 'areas', 'comparisons', 'compare', 'projects', 'developers', 'markets', 'costs', 'finance', 'legal', 'segments'],
 );
 
 const SEVERITY = {

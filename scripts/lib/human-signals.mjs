@@ -13,6 +13,7 @@ export const EM_DASH_LIMIT = {
   proekty: 9,
   news: 10,
   novosti: 10,
+  segments: 8,
   default: 8,
 };
 
