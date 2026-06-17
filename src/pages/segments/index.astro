@@ -1,0 +1,37 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentCard from '../../components/ContentCard.astro';
+
+const segments = (await getCollection('segments'))
+  .filter((g) => !g.data.noindex)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout
+  title="Buyer Guides by Nationality"
+  description="Portugal property guides for Brazilian, Angolan, French, UK, and US buyers. Tax, banking, residency, and regional market data for 2026."
+>
+  <section class="site-container py-14 md:py-20">
+    <header class="max-w-2xl mb-12">
+      <h1 class="text-3xl">Buyer segments</h1>
+      <p class="text-lg text-[var(--color-muted)] mt-3">
+        Country-specific guidance for foreign buyers. Same ownership rights for all nationalities; practical steps differ by tax domicile and banking.
+      </p>
+      <p class="text-sm text-[var(--color-muted)] mt-2">{segments.length} segment guides.</p>
+    </header>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {segments.map((item) => (
+        <ContentCard
+          href={`/segments/${item.id}/`}
+          title={item.data.title}
+          description={item.data.description}
+          image={item.data.heroImage}
+          badges={item.data.tags?.slice(0, 2) ?? []}
+          meta={`${item.data.readingTime ?? 8} min read`}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

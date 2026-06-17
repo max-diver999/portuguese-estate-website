@@ -10,7 +10,7 @@ import { join, relative } from 'node:path';
 import { runExtendedChecks } from './lib/more-content-gate.mjs';
 
 const ROOT = decodeURIComponent(new URL('../src/content/', import.meta.url).pathname);
-const COLLECTIONS = ['guides', 'compare', 'areas', 'projects', 'developers', 'news'];
+const COLLECTIONS = ['guides', 'compare', 'areas', 'projects', 'developers', 'news', 'segments'];
 
 const BANNED_PHRASES = [
   'Regional diversification',
@@ -149,6 +149,7 @@ function auditFile(c, slug) {
     areas: 1800,
     developers: 1200,
     news: 600,
+    segments: 2000,
   }[c] ?? 1800;
   if (words < minW) prob.push(`words:${words}<${minW}`);
 
@@ -158,7 +159,7 @@ function auditFile(c, slug) {
 
   const links = body.match(/\]\((\/[a-z0-9\-\/]*)\)/gi) || [];
   const internal = links.filter((l) =>
-    /\]\(\/(guides|compare|areas|projects|developers|news)\//i.test(l),
+    /\]\(\/(guides|compare|areas|projects|developers|news|segments)\//i.test(l),
   );
   if (internal.length < 5) prob.push(`intLinks:${internal.length}<5`);
   const noTrail = internal.filter((l) => !/\/\)$/.test(l));
