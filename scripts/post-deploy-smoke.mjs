@@ -12,6 +12,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const HTTP_ONLY = process.argv.includes('--http-only');
 
+const SMOKE_UA = 'MORE-Group-smoke/1.0';
+
+/** Cloudflare blocks empty User-Agent (Python urllib); always send one. */
+async function siteFetch(url, options = {}) {
+  const headers = new Headers(options.headers || {});
+  if (!headers.has('User-Agent')) headers.set('User-Agent', SMOKE_UA);
+  return fetch(url, { ...options, headers });
+}
+
 function readSiteUrl() {
   if (process.env.SITE_URL) return process.env.SITE_URL.replace(/\/$/, '');
   const siteFile = path.join(ROOT, 'src/data/site.ts');
@@ -44,17 +53,17 @@ async function runHttpChecks(site) {
   console.log('\n[http] Production HTTP checks');
   let failed = 0;
 
-  const sitemap = await fetch(`${site}/sitemap-index.xml`);
+  const sitemap = await siteFetch(`${site}/sitemap-index.xml`);
   log(sitemap.ok, 'sitemap-index.xml', String(sitemap.status));
   if (!sitemap.ok) failed++;
 
   for (const p of buildPaths()) {
-    const res = await fetch(`${site}${p}`);
+    const res = await siteFetch(`${site}${p}`);
     log(res.ok, p, String(res.status));
     if (!res.ok) failed++;
   }
 
-  const lead = await fetch(`${site}/api/lead/`, {
+  const lead = await siteFetch(`${site}/api/lead/`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
