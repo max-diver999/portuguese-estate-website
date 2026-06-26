@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { sendLeadNotifyEmail } from '../../lib/lead-notify-email';
 import { SITE } from '../../data/site';
 
 export const prerender = false;
@@ -79,6 +80,17 @@ export const POST: APIRoute = async ({ request }) => {
     ].filter(Boolean).join('\n');
 
     await sendTelegram(lines);
+    if (!isHealthcheck) {
+      try {
+        await sendLeadNotifyEmail({
+          subject: 'New lead — portuguese-estate',
+          htmlBody: lines,
+          from: LEAD_FROM_EMAIL,
+        });
+      } catch (err) {
+        console.error('Lead notify email failed:', err);
+      }
+    }
 
     if (!isHealthcheck && emailText) {
       try {
