@@ -1,14 +1,1416 @@
 {
   "version": 1,
+  "updatedAt": "2026-06-20T00:44:15.007Z",
   "urls": [
-    "https://portuguese-estate.com"
+    "https://portuguese-estate.com",
+    "https://portuguese-estate.com/about",
+    "https://portuguese-estate.com/areas",
+    "https://portuguese-estate.com/areas/albufeira-property-investment",
+    "https://portuguese-estate.com/areas/alcantara-property-investment",
+    "https://portuguese-estate.com/areas/braga-property-investment",
+    "https://portuguese-estate.com/areas/caldas-da-rainha-property-investment",
+    "https://portuguese-estate.com/areas/cascais-property-investment",
+    "https://portuguese-estate.com/areas/chiado-principe-real-property",
+    "https://portuguese-estate.com/areas/comporta-property-investment",
+    "https://portuguese-estate.com/areas/ericeira-property-investment",
+    "https://portuguese-estate.com/areas/faro-property-investment",
+    "https://portuguese-estate.com/areas/lagos-property-investment",
+    "https://portuguese-estate.com/areas/lourinha-property-investment",
+    "https://portuguese-estate.com/areas/marvila-property-investment",
+    "https://portuguese-estate.com/areas/matosinhos-property-investment",
+    "https://portuguese-estate.com/areas/nazare-property-investment",
+    "https://portuguese-estate.com/areas/obidos-property-investment",
+    "https://portuguese-estate.com/areas/oeiras-property-investment",
+    "https://portuguese-estate.com/areas/parque-das-nacoes-property",
+    "https://portuguese-estate.com/areas/portimao-property-investment",
+    "https://portuguese-estate.com/areas/tavira-property-investment",
+    "https://portuguese-estate.com/areas/vila-nova-de-gaia-property-investment",
+    "https://portuguese-estate.com/areas/vilamoura-property-investment",
+    "https://portuguese-estate.com/compare",
+    "https://portuguese-estate.com/compare/algarve-vs-lisbon-property-investment",
+    "https://portuguese-estate.com/compare/lagos-vs-vilamoura-investment",
+    "https://portuguese-estate.com/compare/lisbon-vs-cascais-property",
+    "https://portuguese-estate.com/compare/new-build-vs-resale-property-portugal",
+    "https://portuguese-estate.com/compare/porto-vs-lisbon-property-investment",
+    "https://portuguese-estate.com/compare/portugal-vs-france-property-investment",
+    "https://portuguese-estate.com/compare/portugal-vs-greece-property-investment",
+    "https://portuguese-estate.com/compare/portugal-vs-italy-property-investment",
+    "https://portuguese-estate.com/compare/portugal-vs-spain-property-investment",
+    "https://portuguese-estate.com/contact",
+    "https://portuguese-estate.com/developers",
+    "https://portuguese-estate.com/developers/farinvest-properties-portugal",
+    "https://portuguese-estate.com/developers/vanguard-properties-portugal",
+    "https://portuguese-estate.com/developers/vic-properties-portugal",
+    "https://portuguese-estate.com/get-shortlist",
+    "https://portuguese-estate.com/guides",
+    "https://portuguese-estate.com/guides/aimi-wealth-tax-portugal-property",
+    "https://portuguese-estate.com/guides/al-license-transfer-portugal-sale",
+    "https://portuguese-estate.com/guides/algarve-airbnb-investment-guide",
+    "https://portuguese-estate.com/guides/algarve-property-investment-guide",
+    "https://portuguese-estate.com/guides/alojamento-local-license-portugal",
+    "https://portuguese-estate.com/guides/best-regions-invest-portugal-property-2026",
+    "https://portuguese-estate.com/guides/buy-property-portugal-foreigner",
+    "https://portuguese-estate.com/guides/can-foreigners-buy-property-portugal",
+    "https://portuguese-estate.com/guides/cost-of-buying-property-portugal",
+    "https://portuguese-estate.com/guides/cpcv-promissory-contract-portugal",
+    "https://portuguese-estate.com/guides/due-diligence-portugal-property",
+    "https://portuguese-estate.com/guides/escritura-notary-portugal-property",
+    "https://portuguese-estate.com/guides/gross-vs-net-yield-portugal",
+    "https://portuguese-estate.com/guides/hidden-costs-buying-property-portugal",
+    "https://portuguese-estate.com/guides/highest-rental-yield-areas-portugal",
+    "https://portuguese-estate.com/guides/how-to-buy-portugal-property-remotely",
+    "https://portuguese-estate.com/guides/how-to-buy-property-portugal-step-by-step",
+    "https://portuguese-estate.com/guides/how-to-calculate-rental-yield-portugal",
+    "https://portuguese-estate.com/guides/imi-property-tax-portugal",
+    "https://portuguese-estate.com/guides/imt-refund-tax-resident-portugal",
+    "https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026",
+    "https://portuguese-estate.com/guides/is-portugal-property-good-investment-2026",
+    "https://portuguese-estate.com/guides/lisbon-alojamento-local-containment-zones",
+    "https://portuguese-estate.com/guides/lisbon-property-investment-guide",
+    "https://portuguese-estate.com/guides/long-term-vs-holiday-rental-portugal",
+    "https://portuguese-estate.com/guides/moderate-rent-tax-incentives-portugal-2026",
+    "https://portuguese-estate.com/guides/nif-portugal-property-purchase",
+    "https://portuguese-estate.com/guides/non-resident-mortgage-portugal",
+    "https://portuguese-estate.com/guides/off-plan-property-portugal-guide",
+    "https://portuguese-estate.com/guides/porto-alojamento-local-rules",
+    "https://portuguese-estate.com/guides/porto-property-investment-guide",
+    "https://portuguese-estate.com/guides/portugal-buy-to-let-investment-guide",
+    "https://portuguese-estate.com/guides/portugal-capital-gains-tax-property",
+    "https://portuguese-estate.com/guides/portugal-d7-visa-property",
+    "https://portuguese-estate.com/guides/portugal-digital-nomad-visa-property",
+    "https://portuguese-estate.com/guides/portugal-golden-visa-fund-investment-2026",
+    "https://portuguese-estate.com/guides/portugal-golden-visa-real-estate-ended",
+    "https://portuguese-estate.com/guides/portugal-golden-visa-vs-property-purchase",
+    "https://portuguese-estate.com/guides/portugal-housing-supply-licensing-2025",
+    "https://portuguese-estate.com/guides/portugal-property-developers-guide-2026",
+    "https://portuguese-estate.com/guides/portugal-property-investment-guide",
+    "https://portuguese-estate.com/guides/portugal-property-market-forecast-2026-2027",
+    "https://portuguese-estate.com/guides/portugal-property-market-record-2025-ine-data",
+    "https://portuguese-estate.com/guides/portugal-property-scams-avoid",
+    "https://portuguese-estate.com/guides/portugal-rental-yield-guide",
+    "https://portuguese-estate.com/guides/portugal-residency-options-without-golden-visa",
+    "https://portuguese-estate.com/guides/power-of-attorney-property-portugal",
+    "https://portuguese-estate.com/guides/property-management-portugal-cost",
+    "https://portuguese-estate.com/guides/rnal-registration-portugal",
+    "https://portuguese-estate.com/guides/silver-coast-portugal-property-guide",
+    "https://portuguese-estate.com/guides/stamp-duty-portugal-property",
+    "https://portuguese-estate.com/methodology",
+    "https://portuguese-estate.com/news",
+    "https://portuguese-estate.com/portugal-property-consultation",
+    "https://portuguese-estate.com/privacy-policy",
+    "https://portuguese-estate.com/projects",
+    "https://portuguese-estate.com/segments",
+    "https://portuguese-estate.com/segments/american-buyers-portugal-property",
+    "https://portuguese-estate.com/segments/angolan-buyers-portugal",
+    "https://portuguese-estate.com/segments/brazilian-buyers-portugal-property",
+    "https://portuguese-estate.com/segments/chinese-buyers-portugal-property",
+    "https://portuguese-estate.com/segments/french-buyers-portugal-property",
+    "https://portuguese-estate.com/segments/german-buyers-portugal-property",
+    "https://portuguese-estate.com/segments/uk-buyers-portugal-property-brexit",
+    "https://portuguese-estate.com/terms",
+    "https://portuguese-estate.com/tier-entry",
+    "https://portuguese-estate.com/tier-luxury",
+    "https://portuguese-estate.com/tier-mid"
   ],
+  "syncedAt": "2026-06-17T23:32:05.609Z",
+  "removedWrongDomains": 0,
+  "sitemapCount": 108,
   "entries": [
     {
       "url": "https://portuguese-estate.com",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/about",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/albufeira-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/alcantara-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/braga-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/caldas-da-rainha-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/cascais-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/chiado-principe-real-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/comporta-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/ericeira-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/faro-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/lagos-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/lourinha-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/marvila-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/matosinhos-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/nazare-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/obidos-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/oeiras-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/parque-das-nacoes-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/portimao-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/tavira-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/vila-nova-de-gaia-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/vilamoura-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/algarve-vs-lisbon-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/lagos-vs-vilamoura-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/lisbon-vs-cascais-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/new-build-vs-resale-property-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/porto-vs-lisbon-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/portugal-vs-france-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/portugal-vs-greece-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/portugal-vs-italy-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/portugal-vs-spain-property-investment",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/contact",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/farinvest-properties-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/vanguard-properties-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/vic-properties-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/get-shortlist",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/aimi-wealth-tax-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/al-license-transfer-portugal-sale",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/algarve-airbnb-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/algarve-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/alojamento-local-license-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/best-regions-invest-portugal-property-2026",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/buy-property-portugal-foreigner",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/can-foreigners-buy-property-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/cost-of-buying-property-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/cpcv-promissory-contract-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/due-diligence-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/escritura-notary-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/gross-vs-net-yield-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/hidden-costs-buying-property-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/highest-rental-yield-areas-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-buy-portugal-property-remotely",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-buy-property-portugal-step-by-step",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-calculate-rental-yield-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imi-property-tax-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imt-refund-tax-resident-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/is-portugal-property-good-investment-2026",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/lisbon-alojamento-local-containment-zones",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/lisbon-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/long-term-vs-holiday-rental-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/moderate-rent-tax-incentives-portugal-2026",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/nif-portugal-property-purchase",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/non-resident-mortgage-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/off-plan-property-portugal-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-alojamento-local-rules",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-buy-to-let-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-capital-gains-tax-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-d7-visa-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-digital-nomad-visa-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-golden-visa-fund-investment-2026",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-golden-visa-real-estate-ended",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-golden-visa-vs-property-purchase",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-housing-supply-licensing-2025",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-developers-guide-2026",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-market-forecast-2026-2027",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-market-record-2025-ine-data",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-scams-avoid",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-rental-yield-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-residency-options-without-golden-visa",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/power-of-attorney-property-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/property-management-portugal-cost",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/rnal-registration-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/silver-coast-portugal-property-guide",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/stamp-duty-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/methodology",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/news",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/portugal-property-consultation",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/privacy-policy",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/american-buyers-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/angolan-buyers-portugal",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/brazilian-buyers-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/chinese-buyers-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/french-buyers-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/german-buyers-portugal-property",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/uk-buyers-portugal-property-brexit",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/terms",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/tier-entry",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/tier-luxury",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com/tier-mid",
+      "channel": "bing",
+      "at": "2026-06-20T00:09:04.483Z",
+      "note": "backfill: launch full sitemap submit documented"
+    },
+    {
+      "url": "https://portuguese-estate.com",
       "channel": "google",
-      "at": "2026-06-16T22:11:20.740Z"
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/about",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/albufeira-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/alcantara-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/braga-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/caldas-da-rainha-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/cascais-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/chiado-principe-real-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/comporta-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/ericeira-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/faro-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/lagos-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/lourinha-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/marvila-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/matosinhos-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/nazare-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/obidos-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/oeiras-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/parque-das-nacoes-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/portimao-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/tavira-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/vila-nova-de-gaia-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/vilamoura-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/algarve-vs-lisbon-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/lagos-vs-vilamoura-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/lisbon-vs-cascais-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/new-build-vs-resale-property-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/porto-vs-lisbon-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/portugal-vs-france-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/portugal-vs-greece-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/portugal-vs-italy-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/compare/portugal-vs-spain-property-investment",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/contact",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/farinvest-properties-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/vanguard-properties-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/vic-properties-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/get-shortlist",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/aimi-wealth-tax-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/al-license-transfer-portugal-sale",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/algarve-airbnb-investment-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/algarve-property-investment-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/alojamento-local-license-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/best-regions-invest-portugal-property-2026",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/buy-property-portugal-foreigner",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/can-foreigners-buy-property-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/cost-of-buying-property-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/cpcv-promissory-contract-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/due-diligence-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/escritura-notary-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/gross-vs-net-yield-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/hidden-costs-buying-property-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/highest-rental-yield-areas-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-buy-portugal-property-remotely",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-buy-property-portugal-step-by-step",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-calculate-rental-yield-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imi-property-tax-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imt-refund-tax-resident-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/is-portugal-property-good-investment-2026",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/lisbon-alojamento-local-containment-zones",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/lisbon-property-investment-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/long-term-vs-holiday-rental-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/moderate-rent-tax-incentives-portugal-2026",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/nif-portugal-property-purchase",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/non-resident-mortgage-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/off-plan-property-portugal-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-alojamento-local-rules",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-property-investment-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-buy-to-let-investment-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-capital-gains-tax-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-d7-visa-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-digital-nomad-visa-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-golden-visa-fund-investment-2026",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-golden-visa-real-estate-ended",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-golden-visa-vs-property-purchase",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-housing-supply-licensing-2025",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-developers-guide-2026",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-investment-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-market-forecast-2026-2027",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-market-record-2025-ine-data",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-scams-avoid",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-rental-yield-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-residency-options-without-golden-visa",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/power-of-attorney-property-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/property-management-portugal-cost",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/rnal-registration-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/silver-coast-portugal-property-guide",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/stamp-duty-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/methodology",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/news",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/portugal-property-consultation",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/privacy-policy",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/american-buyers-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/angolan-buyers-portugal",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/brazilian-buyers-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/chinese-buyers-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/french-buyers-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/german-buyers-portugal-property",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/uk-buyers-portugal-property-brexit",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/terms",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/tier-entry",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/tier-luxury",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
+    },
+    {
+      "url": "https://portuguese-estate.com/tier-mid",
+      "channel": "google",
+      "at": "2026-06-20T00:44:15.007Z",
+      "note": "backfill: confirmed full send on all channels — log was incomplete before per-channel tracking"
     }
-  ],
-  "updatedAt": "2026-06-16T22:11:20.740Z"
+  ]
 }

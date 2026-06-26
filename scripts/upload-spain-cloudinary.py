@@ -17,12 +17,17 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT / "scripts/lib") not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT / "scripts/lib"))
+from cloudinary_routing import load_cloudinary_credentials
+
 ssl._create_default_https_context = ssl._create_unverified_context
 
 SCRIPTS = Path(__file__).resolve().parent
 ROOT = SCRIPTS.parent
 MORE_GROUP = SCRIPTS.parent.parent.parent
-CLOUD = "dphvjbqb4"
+CLOUD = "dlrrtf6bq"
 UPLOAD_WORKERS = 3
 RATE_SLEEP = 0.15
 MAX_UPLOAD_BYTES = 9_500_000
@@ -53,22 +58,8 @@ def compress_image_bytes(data: bytes) -> bytes:
 
 
 def load_env() -> tuple[str, str, str]:
-    for env_path in (
-        MORE_GROUP / "more-group-website" / ".env.local",
-        MORE_GROUP / "invest-spain-property-website" / ".env.local",
-    ):
-        if not env_path.exists():
-            continue
-        for line in env_path.read_text(encoding="utf-8").splitlines():
-            m = re.match(r"^([A-Z0-9_]+)=(.*)$", line.strip())
-            if m and not os.environ.get(m.group(1)):
-                os.environ[m.group(1)] = m.group(2).strip().strip('"')
-    cloud = os.environ.get("CLOUDINARY_CLOUD_NAME", CLOUD)
-    key = os.environ.get("CLOUDINARY_API_KEY", "")
-    secret = os.environ.get("CLOUDINARY_API_SECRET", "")
-    if not key or not secret:
-        sys.exit("Missing CLOUDINARY_API_KEY / CLOUDINARY_API_SECRET in more-group-website/.env.local")
-    return cloud, key, secret
+    return load_cloudinary_credentials(ROOT)
+
 
 
 def download_bytes(url: str) -> bytes | None:

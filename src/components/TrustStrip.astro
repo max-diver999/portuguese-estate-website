@@ -1,0 +1,56 @@
+---
+interface Item {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  items?: Item[];
+}
+
+const {
+  items = [
+    { value: 'Independent', label: 'Not a developer or portal' },
+    { value: '91 guides', label: 'INE-backed market data' },
+    { value: '1 business day', label: 'Shortlist reply target' },
+    { value: 'Licensed partners', label: 'Vetted local lawyers & agents' },
+  ],
+} = Astro.props;
+---
+<div class="trust-strip">
+  {items.map((item) => (
+    <div class="trust-strip__item">
+      <strong>{item.value}</strong>
+      <span>{item.label}</span>
+    </div>
+  ))}
+</div>
+
+<style>
+  .trust-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  @media (min-width: 768px) {
+    .trust-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+  .trust-strip__item {
+    background: white;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 12px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .trust-strip__item strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--color-brand);
+    margin-bottom: 4px;
+  }
+  .trust-strip__item span {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    line-height: 1.35;
+  }
+</style>

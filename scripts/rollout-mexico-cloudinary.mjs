@@ -8,6 +8,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { resolveNicheCloudinaryCdn } from '../../scripts/lib/cloudinary-routing.mjs';
+import { deliveryUrl } from '../../scripts/lib/cloudinary-gate.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -18,7 +20,7 @@ const LOTSOF_DIR = path.join(REPO_ROOT, '06_Объекты_и_База_Знан�
 const INDEX_PATH = path.join(REPO_ROOT, '06_Объекты_и_База_Знаний/Проекты_Mexico/index.json');
 
 const dryRun = process.argv.includes('--dry-run');
-const CDN = 'dphvjbqb4';
+const CDN = resolveNicheCloudinaryCdn(import.meta.url);
 
 function requireCdn(url) {
   if (!url?.includes(CDN)) {
@@ -55,7 +57,7 @@ const IMG_LINE = /^!\[[^\]]*\]\([^)]+\)\s*$/gm;
 
 function applyBody(body, inline1, inline2) {
   let b = body.replace(IMG_LINE, '').replace(/\n{3,}/g, '\n\n');
-  const block = `\n\n![${inline1.alt || ''}](${inline1.secure_url})\n\n![${inline2.alt || ''}](${inline2.secure_url})`;
+  const block = `\n\n![${inline1.alt || ''}](${deliveryUrl(inline1.secure_url, 'inline')})\n\n![${inline2.alt || ''}](${deliveryUrl(inline2.secure_url, 'inline')})`;
   const firstH2 = b.indexOf('\n## ');
   if (firstH2 === -1) return b.trimEnd() + block + '\n';
   const marker = '\n\n---\n\n## ';
@@ -69,8 +71,8 @@ function updateLotsof(slug, hero, inlines) {
   if (!fs.existsSync(lotsofPath)) return false;
   const data = JSON.parse(fs.readFileSync(lotsofPath, 'utf8'));
   data.cloudinary = {
-    hero: requireCdn(hero.secure_url),
-    exterior: inlines.map((i) => requireCdn(i.secure_url)),
+    hero: requireCdn(deliveryUrl(hero.secure_url, 'hero')),
+    exterior: inlines.map((i) => requireCdn(deliveryUrl(i.secure_url, 'hero'))),
   };
   if (data.images) {
     data.images.hero = { ...data.images.hero, url: hero.secure_url, cloudinary: true };
@@ -119,7 +121,7 @@ function main() {
       continue;
     }
 
-    const newFm = setHero(parsed.fm, requireCdn(hero.secure_url));
+    const newFm = setHero(parsed.fm, requireCdn(deliveryUrl(hero.secure_url, 'hero')));
     const newBody = applyBody(parsed.body, i1, i2);
     const newRaw = `---\n${newFm}\n---\n${newBody}`;
     if (newRaw !== raw) {

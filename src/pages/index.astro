@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import ContentCard from '../components/ContentCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import TrustStrip from '../components/TrustStrip.astro';
 import { getCollection } from 'astro:content';
 import { SITE } from '../data/site';
 import {
@@ -38,8 +39,8 @@ const heroImage = getCardImageUrl(HOMEPAGE_HERO_IMAGE, 'hero');
 const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImage, 'card') : heroImage;
 ---
 <BaseLayout
-  title="Portuguese Estate — Independent Portugal Property Research"
-  description={SITE.description}
+  title="Portugal Property Investment 2026 — Guides & Shortlist"
+  description="Independent Portugal property research for foreign buyers: IMT 7.5%, step-by-step purchase, Algarve yields, Golden Visa funds. Free shortlist within 1 business day."
 >
   <section class="border-b border-[var(--color-border-soft)] bg-[var(--color-surface)]">
     <div class="site-container py-14 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -51,25 +52,12 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
         <p class="text-base md:text-lg text-[var(--color-muted)] mb-8 max-w-xl">
           Lisbon, Algarve, Porto, Comporta — IMT for non-residents, AL licensing, Golden Visa fund route, rental yields, project reviews, and due diligence for US and UK buyers.
         </p>
-        <div class="flex flex-wrap gap-3 mb-10">
-          <a href="/guides/" class="btn-primary px-6 py-3">Browse guides</a>
-          <a href="/projects/" class="btn-secondary px-6 py-3">Project reviews</a>
+        <div class="flex flex-wrap gap-3 mb-8">
+          <a href="/guides/how-to-buy-property-portugal-step-by-step/" class="btn-primary px-6 py-3">Step-by-step guide</a>
+          <a href="/compare/portugal-vs-france-property-investment/" class="btn-secondary px-6 py-3">Portugal vs France</a>
           <a href="/get-shortlist/" class="btn-secondary px-6 py-3">Free shortlist →</a>
         </div>
-        <div class="grid grid-cols-3 gap-3 max-w-md">
-          <div class="stat-pill">
-            <strong>{publishedGuides.length}</strong>
-            <span>Guides</span>
-          </div>
-          <div class="stat-pill">
-            <strong>{publishedProjects.length}</strong>
-            <span>Projects</span>
-          </div>
-          <div class="stat-pill">
-            <strong>{publishedAreas.length}</strong>
-            <span>Areas</span>
-          </div>
-        </div>
+        <TrustStrip />
       </div>
       <div class="hero-visual min-h-[280px] md:min-h-[380px] relative">
         <img src={heroProjectImage} alt={heroProject ? `${heroProject.data.title} — featured Portugal project` : 'Lisbon new-build apartment, Vanguard Properties'} loading="eager" width="1400" height="560" />
@@ -193,9 +181,11 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
   </section>
 
   <section class="section bg-[var(--color-surface)] border-t border-[var(--color-border-soft)]">
+    <div class="site-container max-w-3xl text-center mb-8">
+      <h2 class="text-2xl mb-3">Talk to a human — not a chatbot</h2>
+      <p class="text-[var(--color-muted)]">WhatsApp or the form below. Independent advisory — we refer to licensed Portuguese lawyers and agents, not developer sales desks.</p>
+    </div>
     <div class="site-container max-w-xl">
-      <h2 class="text-2xl mb-3">Get a shortlist</h2>
-      <p class="text-[var(--color-muted)] mb-8">Tell us budget and market — we match you with vetted local partners. No obligation.</p>
       <LeadForm context="Homepage shortlist" />
     </div>
   </section>

@@ -10,6 +10,7 @@ import {
   LIST_DASH_STEPS_MIN,
   analyzeHumanSignals,
 } from './human-signals.mjs';
+import { runCloudinaryDeliveryChecks } from '../../../scripts/lib/cloudinary-gate.mjs';
 
 export const BANNED_PHRASES = [
   'Regional diversification',
@@ -127,6 +128,8 @@ export function runStructuralChecks(opts) {
   }
   if (STAMP_PREFIX_RE.test(body)) {
     errors.push(`${prefix} wave17 area stamp prefix on paragraph — remove`);
+
+  runCloudinaryDeliveryChecks({ prefix, text, errors, legacyExempt });
   }
 
   const humanCollections = ['guides', 'comparisons', 'areas', 'projects', 'news'];

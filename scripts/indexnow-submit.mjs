@@ -5,8 +5,10 @@
 import { readFileSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { logIndexNowSuccess } from '../../scripts/lib/indexnow-log.mjs';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
+const INDEXNOW_SCRIPT = fileURLToPath(import.meta.url);
 const siteConfig = JSON.parse(readFileSync(join(__dir, '..', 'site.config.json'), 'utf8'));
 const KEY = siteConfig.indexNow?.key || '326cf10d167118cd94780f774c0457e4';
 const HOST = siteConfig.siteHost || 'portuguese-estate.com';
@@ -82,8 +84,10 @@ console.log(`Response: ${res.status} ${res.statusText}`);
 
 if (res.status === 200) {
   console.log(`✅ Success! ${urls.length} URLs submitted to Bing IndexNow`);
+  logIndexNowSuccess(INDEXNOW_SCRIPT, urls, 'bing');
 } else if (res.status === 202) {
   console.log('✅ Accepted! URLs queued for processing.');
+  logIndexNowSuccess(INDEXNOW_SCRIPT, urls, 'bing');
 } else {
   const text = await res.text();
   console.log(`Response body: ${text}`);

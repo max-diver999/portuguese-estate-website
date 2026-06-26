@@ -3,6 +3,8 @@ export const prerender = true;
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContentCard from '../../components/ContentCard.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import InlineCta from '../../components/InlineCta.astro';
 import { FEATURED_GUIDE_SLUGS } from '../../data/featured';
 
 const guides = (await getCollection('guides'))
@@ -12,21 +14,21 @@ const guides = (await getCollection('guides'))
 const priority = FEATURED_GUIDE_SLUGS.map((slug) => guides.find((g) => g.id === slug)).filter(Boolean);
 ---
 <BaseLayout
-  title="Portugal Property Investment Guides"
-  description="Independent guides on Portugal real estate for foreign buyers: IMT tax, Golden Visa changes, rental yields, Lisbon, Algarve, Porto, and nationality-specific advice."
+  title="Portugal Property Guides 2026 — IMT, Yields, Golden Visa"
+  description="51 independent guides for foreign buyers: IMT 7.5%, step-by-step purchase, Algarve yields, remote buying, NIF, AIMI — updated June 2026."
 >
   <section class="site-container py-14 md:py-20">
     <header class="max-w-2xl mb-12">
-      <h1 class="text-3xl">Investment guides</h1>
+      <h1 class="text-3xl">Portugal property investment guides</h1>
       <p class="text-lg text-[var(--color-muted)] mt-3">
-        Research-first articles for foreign buyers. Not developer brochures — verify all figures before you transact.
+        Research-first articles for US, UK, and EU buyers — IMT, CPCV, yields, and due diligence. Not developer brochures.
       </p>
-      <p class="text-sm text-[var(--color-muted)] mt-2">{guides.length} guides with photos and net-yield focus.</p>
+      <p class="text-sm text-[var(--color-muted)] mt-2">{guides.length} guides · INE-backed data · Independent editorial</p>
     </header>
 
     {priority.length > 0 && (
       <section class="mb-14">
-        <h2 class="text-xl mb-5">Start here</h2>
+        <h2 class="text-xl mb-5">Start here — highest buyer intent</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {priority.map((guide) => (
             <ContentCard
@@ -42,6 +44,13 @@ const priority = FEATURED_GUIDE_SLUGS.map((slug) => guides.find((g) => g.id === 
       </section>
     )}
 
+    <InlineCta
+      headline="Not sure which guide to read first?"
+      subtext="Tell us your budget and region — we send a reading order plus matching property options."
+      ctaId="guides_hub_inline"
+      whatsappMessage="Hi Portuguese Estate! I'm browsing your guides and want help picking the right Portugal market for my budget."
+    />
+
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {guides.map((guide) => (
         <ContentCard
@@ -53,6 +62,10 @@ const priority = FEATURED_GUIDE_SLUGS.map((slug) => guides.find((g) => g.id === 
           meta={`${guide.data.readingTime ?? 8} min read`}
         />
       ))}
+    </div>
+
+    <div class="max-w-xl mx-auto mt-16">
+      <LeadForm context="Guides hub shortlist" />
     </div>
   </section>
 </BaseLayout>

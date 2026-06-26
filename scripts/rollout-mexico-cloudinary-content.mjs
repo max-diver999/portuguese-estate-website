@@ -9,10 +9,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { resolveNicheCloudinaryCdn } from '../../scripts/lib/cloudinary-routing.mjs';
+import { deliveryUrl } from '../../scripts/lib/cloudinary-gate.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const CDN = 'dphvjbqb4';
+const CDN = resolveNicheCloudinaryCdn(import.meta.url);
 
 const MANIFESTS = {
   guides: {
@@ -80,7 +82,7 @@ function setHero(fm, url) {
 
 function applyBody(body, inline1, inline2) {
   let b = body.replace(IMG_LINE, '').replace(/\n{3,}/g, '\n\n');
-  const block = `\n\n![${inline1.alt || ''}](${inline1.secure_url})\n\n![${inline2.alt || ''}](${inline2.secure_url})`;
+  const block = `\n\n![${inline1.alt || ''}](${deliveryUrl(inline1.secure_url, 'inline')})\n\n![${inline2.alt || ''}](${deliveryUrl(inline2.secure_url, 'inline')})`;
   const firstH2 = b.indexOf('\n## ');
   if (firstH2 === -1) return `${b.trimEnd()}${block}\n`;
   const markers = ['\n\n---\n\n## ', '\n## '];
@@ -147,9 +149,9 @@ function applyCollection(name, cfg) {
 
     let fm = parsed.fm;
     if (!/^heroImage:/m.test(fm)) {
-      fm = fm.trimEnd() + `\nheroImage: "${requireCdn(hero.secure_url)}"`;
+      fm = fm.trimEnd() + `\nheroImage: "${requireCdn(deliveryUrl(hero.secure_url, 'hero'))}"`;
     } else {
-      fm = fm.replace(/^heroImage:\s*.+$/m, `heroImage: "${requireCdn(hero.secure_url)}"`);
+      fm = fm.replace(/^heroImage:\s*.+$/m, `heroImage: "${requireCdn(deliveryUrl(hero.secure_url, 'hero'))}"`);
     }
     const newBody = applyBody(parsed.body, i1, i2);
     const newRaw = `---\n${fm}\n---\n${newBody}`;
