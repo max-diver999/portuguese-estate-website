@@ -1,98 +1,444 @@
 ---
-/** Portuguese Estate — live site report. Regenerate: node scripts/generate-site-report.mjs */
 export const prerender = true;
+
+const reportDate = '25 June 2026';
+const reportVersion = 'v2.0';
+const launchDate = '16 June 2026';
+const dataThrough = '24 June 2026';
+
+const monthlyGsc = [
+  { month: 'Mar 2026', label: 'Mar', clicks: 0, impressions: 0, position: 0, note: 'Pre-launch' },
+  { month: 'Apr 2026', label: 'Apr', clicks: 0, impressions: 0, position: 0, note: 'Pre-launch' },
+  { month: 'May 2026', label: 'May', clicks: 0, impressions: 0, position: 0, note: 'Pre-launch' },
+  { month: 'Jun 2026', label: 'Jun', clicks: 1, impressions: 164, position: 23.6, note: 'Live 16 Jun · first GSC signals 17 Jun · first click 22 Jun' },
+];
+
+const monthlyGa4 = [
+  { month: 'Mar', sessions: 0 },
+  { month: 'Apr', sessions: 0 },
+  { month: 'May', sessions: 0 },
+  { month: 'Jun', sessions: 73 },
+];
+
+const contentBreakdown = [
+  { type: 'Guides', count: 51, words: 198656, color: '#2d7a5e' },
+  { type: 'Comparisons', count: 9, words: 40515, color: '#d97706' },
+  { type: 'Areas', count: 21, words: 100373, color: '#8b5cf6' },
+  { type: 'Developers', count: 3, words: 10394, color: '#4e9e7e' },
+  { type: 'Segments', count: 7, words: 27739, color: '#60a5fa' },
+];
+
+const totalClicks = monthlyGsc.reduce((s, m) => s + m.clicks, 0);
+const totalImp = monthlyGsc.reduce((s, m) => s + m.impressions, 0);
+const totalWords = contentBreakdown.reduce((s, c) => s + c.words, 0);
+const totalFiles = contentBreakdown.reduce((s, c) => s + c.count, 0);
+const clicksDelta = 100;
+const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex,nofollow" />
   <title>portuguese-estate.com — Site Report</title>
+  <meta name="robots" content="noindex, nofollow" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f3ef; color: #1c1917; min-height: 100vh; }
-    .header { background: #1c1917; color: white; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f1eb; color: #2c2c2c; min-height: 100vh; }
+
+    .header { background: #1a2e2a; color: white; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .header-brand { display: flex; align-items: center; gap: 12px; }
-    .header-logo { width: 36px; height: 36px; background: linear-gradient(135deg, #d4a853, #b45309); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; color: #1c1917; }
+    .header-logo { width: 36px; height: 36px; background: #4e9e7e; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: white; }
     .header h1 { font-size: 22px; font-weight: 700; }
-    .header-sub { font-size: 13px; color: #a8a29e; margin-top: 2px; }
+    .header-sub { font-size: 13px; color: #9dbfb3; margin-top: 2px; }
     .header-meta { text-align: right; }
-    .header-meta .label { font-size: 12px; color: #a8a29e; }
+    .header-meta .label { font-size: 12px; color: #9dbfb3; }
     .header-meta .value { font-size: 14px; font-weight: 600; margin-top: 2px; }
-    .live-badge { display: inline-flex; align-items: center; gap: 6px; background: #292524; border-radius: 20px; padding: 4px 12px; font-size: 12px; margin-top: 8px; }
+    .live-badge { display: inline-flex; align-items: center; gap: 6px; background: #2d5a4a; border-radius: 20px; padding: 4px 12px; font-size: 12px; margin-top: 8px; }
     .live-dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-    .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
-    .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #78716c; margin-bottom: 16px; margin-top: 40px; }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 32px 24px; }
+
+    .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #7a7a6e; margin-bottom: 16px; margin-top: 40px; }
     .section-title:first-child { margin-top: 0; }
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
-    .stat-card { background: white; border-radius: 12px; padding: 20px; border: 1px solid #e7e5e4; }
-    .stat-card .num { font-size: 40px; font-weight: 800; color: #1c1917; line-height: 1; }
-    .stat-card .num.gold { color: #b45309; }
-    .stat-card .num.green { color: #15803d; }
-    .stat-card .label { font-size: 13px; color: #78716c; margin-top: 6px; }
-    .stat-card .sublabel { font-size: 11px; color: #a8a29e; margin-top: 4px; line-height: 1.4; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+    .stat-card { background: white; border-radius: 10px; padding: 14px 10px; border: 1px solid #e8e4dc; min-width: 0; }
+    .stat-card .num { font-size: 26px; font-weight: 800; color: #1a2e2a; line-height: 1.05; letter-spacing: -0.02em; }
+    .stat-card .num.teal { color: #2d7a5e; }
+    .stat-card .num.amber { color: #b45309; }
+    .stat-card .label { font-size: 11px; color: #7a7a6e; margin-top: 5px; line-height: 1.25; }
+    .stat-card .sublabel { font-size: 9px; color: #aaa; margin-top: 3px; line-height: 1.35; }
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
     .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     @media (max-width: 600px) { .info-grid { grid-template-columns: 1fr; } }
-    .info-card { background: white; border-radius: 12px; padding: 20px; border: 1px solid #e7e5e4; }
-    .info-card h3 { font-size: 14px; font-weight: 700; color: #1c1917; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #f5f5f4; }
-    .info-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid #fafaf9; gap: 16px; }
+    .info-card { background: white; border-radius: 12px; padding: 20px; border: 1px solid #e8e4dc; }
+    .info-card h3 { font-size: 14px; font-weight: 700; color: #1a2e2a; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #f0ece4; }
+    .info-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid #f7f4ef; gap: 16px; }
     .info-row:last-child { border-bottom: none; }
-    .info-row .key { font-size: 13px; color: #78716c; flex-shrink: 0; }
-    .info-row .val { font-size: 13px; font-weight: 600; color: #1c1917; text-align: right; }
-    .info-row .val a { color: #b45309; text-decoration: none; }
-    .content-card { background: white; border-radius: 12px; border: 1px solid #e7e5e4; overflow: hidden; }
-    .table-scroll { width: 100%; overflow-x: auto; }
-    .content-table { width: 100%; border-collapse: collapse; min-width: 640px; }
-    .content-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #78716c; font-weight: 700; padding: 12px 20px; text-align: left; background: #fafaf9; border-bottom: 1px solid #e7e5e4; }
-    .content-table td { padding: 12px 20px; font-size: 13px; border-bottom: 1px solid #f5f5f4; vertical-align: top; }
-    .content-table .count { font-weight: 800; color: #b45309; font-size: 18px; }
-    .content-table .words { color: #78716c; font-size: 12px; }
+    .info-row .key { font-size: 13px; color: #7a7a6e; flex-shrink: 0; }
+    .info-row .val { font-size: 13px; font-weight: 600; color: #2c2c2c; text-align: right; }
+    .info-row .val a { color: #2d7a5e; text-decoration: none; }
+    .info-row .val a:hover { text-decoration: underline; }
+
+    .content-card { background: white; border-radius: 12px; border: 1px solid #e8e4dc; overflow: hidden; }
+    .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .content-table { width: 100%; border-collapse: collapse; }
+    .content-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #7a7a6e; font-weight: 700; padding: 12px 20px; text-align: left; background: #faf8f4; border-bottom: 1px solid #e8e4dc; }
+    .content-table td { padding: 12px 20px; font-size: 13px; border-bottom: 1px solid #f4f1eb; vertical-align: top; }
+    .content-table tr:last-child td { border-bottom: none; }
+    .content-table tr:hover td { background: #faf8f4; }
+    .content-table .count { font-weight: 800; color: #2d7a5e; font-size: 18px; }
+    .content-table .words { color: #7a7a6e; font-size: 12px; }
     .tag { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
     .tag.green { background: #dcfce7; color: #166534; }
     .tag.blue { background: #dbeafe; color: #1e40af; }
     .tag.amber { background: #fef3c7; color: #92400e; }
-    .tag.gray { background: #f5f5f4; color: #57534e; }
-    .tag.red { background: #fee2e2; color: #991b1b; }
-    .pulse-wrap { background: white; border-radius: 16px; border: 1px solid #e7e5e4; padding: 24px 28px; }
+    .tag.gray { background: #f3f4f6; color: #374151; }
+
+    .changelog { display: flex; flex-direction: column; gap: 0; }
+    .changelog-item { background: white; border-radius: 0; border: 1px solid #e8e4dc; border-bottom: none; padding: 16px 20px; display: flex; gap: 16px; align-items: flex-start; }
+    .changelog-item:first-child { border-radius: 12px 12px 0 0; }
+    .changelog-item:last-child { border-radius: 0 0 12px 12px; border-bottom: 1px solid #e8e4dc; }
+    .changelog-date { font-size: 11px; color: #9ca3af; min-width: 80px; padding-top: 2px; }
+    .changelog-content { flex: 1; }
+    .changelog-title { font-size: 13px; font-weight: 600; color: #1a2e2a; }
+    .changelog-desc { font-size: 12px; color: #7a7a6e; margin-top: 3px; }
+    .changelog-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+
+    .next-steps { display: flex; flex-direction: column; gap: 10px; }
+    .next-item { background: white; border-radius: 10px; border: 1px solid #e8e4dc; padding: 14px 18px; display: flex; align-items: flex-start; gap: 12px; }
+    .next-item .priority { font-size: 11px; font-weight: 700; min-width: 50px; padding-top: 1px; }
+    .priority.high { color: #dc2626; }
+    .priority.medium { color: #d97706; }
+    .priority.low { color: #059669; }
+    .next-item .text { font-size: 13px; color: #2c2c2c; }
+    .next-item .subtext { font-size: 12px; color: #9ca3af; margin-top: 2px; }
+
+    .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .link-card { background: white; border-radius: 10px; border: 1px solid #e8e4dc; padding: 16px; text-decoration: none; color: #2c2c2c; transition: border-color 0.2s; display: block; }
+    .link-card:hover { border-color: #2d7a5e; }
+    .link-card .link-label { font-size: 11px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.06em; }
+    .link-card .link-url { font-size: 13px; font-weight: 600; color: #2d7a5e; margin-top: 4px; word-break: break-all; }
+
+    .footer { text-align: center; padding: 32px 24px; color: #9ca3af; font-size: 12px; }
+    .footer strong { color: #7a7a6e; }
+
+    /* ── SEO PULSE DASHBOARD ── */
+    .pulse-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .pulse-header h2 { font-size: 16px; font-weight: 800; color: #1a2e2a; }
+    .pulse-updated { font-size: 11px; color: #9ca3af; background: #f4f1eb; border-radius: 20px; padding: 4px 12px; display: flex; align-items: center; gap: 6px; }
+    .pulse-updated-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; animation: pulse 2s infinite; }
+
     .pulse-kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
     @media (max-width: 700px) { .pulse-kpi-row { grid-template-columns: repeat(2, 1fr); } }
-    .pulse-kpi { background: #fafaf9; border-radius: 12px; border: 1px solid #e7e5e4; padding: 18px 20px; }
-    .pulse-kpi .kpi-val { font-size: 36px; font-weight: 900; color: #1c1917; line-height: 1; margin-top: 4px; }
-    .pulse-kpi .kpi-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #78716c; }
-    .pulse-kpi .kpi-sub { font-size: 11px; color: #a8a29e; margin-top: 4px; line-height: 1.35; }
-    .baseline-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 16px 20px; margin-bottom: 20px; font-size: 13px; color: #92400e; line-height: 1.5; }
-    .insight { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 14px 18px; margin-top: 16px; font-size: 12px; color: #166534; line-height: 1.5; }
-    .insight-warn { background: #fff7ed; border: 1px solid #fed7aa; color: #9a3412; }
-    .slug-list { font-size: 11px; color: #57534e; line-height: 1.75; }
-    .slug-list a { color: #b45309; text-decoration: none; }
-    .slug-list a:hover { text-decoration: underline; }
-    .slug-block { background: white; border: 1px solid #e7e5e4; border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
-    .slug-block h4 { font-size: 13px; font-weight: 700; color: #1c1917; margin-bottom: 8px; }
-    .changelog-item { background: white; border: 1px solid #e7e5e4; border-bottom: none; padding: 16px 20px; display: flex; gap: 16px; }
-    .changelog-item:first-child { border-radius: 12px 12px 0 0; }
-    .changelog-item:last-child { border-radius: 0 0 12px 12px; border-bottom: 1px solid #e7e5e4; }
-    .changelog-date { font-size: 11px; color: #a8a29e; min-width: 110px; }
-    .changelog-title { font-size: 13px; font-weight: 600; }
-    .changelog-desc { font-size: 12px; color: #78716c; margin-top: 3px; line-height: 1.45; }
-    .changelog-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
-    .next-item { background: white; border-radius: 10px; border: 1px solid #e7e5e4; padding: 14px 18px; display: flex; gap: 12px; margin-bottom: 10px; }
-    .priority.high { color: #dc2626; font-size: 11px; font-weight: 700; min-width: 50px; }
-    .priority.medium { color: #d97706; font-size: 11px; font-weight: 700; min-width: 50px; }
-    .priority.low { color: #059669; font-size: 11px; font-weight: 700; min-width: 50px; }
-    .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-    .link-card { background: white; border-radius: 10px; border: 1px solid #e7e5e4; padding: 16px; text-decoration: none; color: #1c1917; display: block; }
-    .link-card:hover { border-color: #b45309; }
-    .link-card .link-label { font-size: 11px; color: #a8a29e; text-transform: uppercase; }
-    .link-card .link-url { font-size: 13px; font-weight: 600; color: #b45309; margin-top: 4px; word-break: break-all; }
-    .footer { text-align: center; padding: 32px 24px; color: #a8a29e; font-size: 12px; line-height: 1.6; }
-    .footer a { color: #b45309; text-decoration: none; }
-    .audit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    @media (max-width: 700px) { .audit-grid { grid-template-columns: 1fr; } }
-    .audit-item { background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 10px; padding: 14px 16px; font-size: 12px; line-height: 1.45; }
-    .audit-item strong { display: block; margin-bottom: 4px; color: #1c1917; }
+    .pulse-kpi { background: white; border-radius: 12px; border: 1px solid #e8e4dc; padding: 18px 20px; position: relative; overflow: hidden; }
+    .pulse-kpi::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .pulse-kpi.kpi-green::before { background: linear-gradient(90deg, #4ade80, #2d7a5e); }
+    .pulse-kpi.kpi-blue::before { background: linear-gradient(90deg, #60a5fa, #2563eb); }
+    .pulse-kpi.kpi-amber::before { background: linear-gradient(90deg, #fbbf24, #d97706); }
+    .pulse-kpi.kpi-orange::before { background: linear-gradient(90deg, #fb923c, #c2410c); }
+    .pulse-kpi .kpi-val { font-size: 36px; font-weight: 900; color: #1a2e2a; line-height: 1; margin-top: 4px; }
+    .pulse-kpi .kpi-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #7a7a6e; }
+    .pulse-kpi .kpi-sub { font-size: 11px; color: #aaa; margin-top: 4px; }
+    .pulse-kpi .kpi-trend { position: absolute; top: 18px; right: 18px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+    .trend-up { background: #dcfce7; color: #166534; }
+    .trend-new { background: #dbeafe; color: #1e40af; }
+
+    .pulse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 700px) { .pulse-grid { grid-template-columns: 1fr; } }
+
+    .pulse-card { background: white; border-radius: 12px; border: 1px solid #e8e4dc; padding: 18px 20px; }
+    .pulse-card-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #7a7a6e; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .pulse-card-title span { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .span-green { background: #4ade80; }
+    .span-blue { background: #60a5fa; }
+
+    .pulse-query-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid #f4f1eb; }
+    .pulse-query-row:last-child { border-bottom: none; }
+    .pulse-query-rank { font-size: 11px; font-weight: 700; color: #aaa; min-width: 20px; }
+    .pulse-query-text { flex: 1; min-width: 0; font-size: 12px; color: #2c2c2c; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+    .pulse-query-pos { font-size: 11px; font-weight: 700; color: #2d7a5e; background: #f0faf5; border-radius: 6px; padding: 2px 7px; }
+    .pulse-query-imp { font-size: 11px; color: #aaa; min-width: 50px; text-align: right; }
+
+    .pulse-page-row { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; border-bottom: 1px solid #f4f1eb; }
+    .pulse-page-row:last-child { border-bottom: none; }
+    .pulse-page-url { flex: 1; min-width: 0; font-size: 11px; color: #2d7a5e; overflow-wrap: anywhere; word-break: break-word; }
+    .pulse-page-meta { display: flex; gap: 6px; flex-shrink: 0; }
+    .pulse-badge { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 20px; }
+    .badge-clicks { background: #dcfce7; color: #166534; }
+    .badge-impr { background: #dbeafe; color: #1e40af; }
+    .badge-pos { background: #fef3c7; color: #92400e; }
+
+    .pulse-chart { margin-top: 4px; }
+    .chart-bars { display: flex; align-items: flex-end; gap: 4px; height: 60px; }
+    .chart-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .chart-bar { width: 100%; border-radius: 3px 3px 0 0; min-height: 2px; transition: height 0.3s; }
+    .chart-bar.bar-impr { background: #bfdbfe; }
+    .chart-bar.bar-click { background: #4ade80; }
+    .chart-label { font-size: 9px; color: #aaa; }
+
+    .pulse-insight { background: #f0faf5; border: 1px solid #c6e8da; border-radius: 10px; padding: 12px 16px; margin-top: 16px; display: flex; gap: 12px; align-items: flex-start; }
+    .pulse-insight-icon { font-size: 18px; flex-shrink: 0; }
+    .pulse-insight-text { font-size: 12px; color: #1a4f3a; line-height: 1.5; }
+    .pulse-insight-text strong { font-weight: 700; }
+
+    .pulse-footer-note { font-size: 11px; color: #aaa; margin-top: 16px; text-align: center; }
+    .pulse-footer-note a { color: #2d7a5e; text-decoration: none; }
+    .pulse-table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .pulse-table-scroll table { min-width: 720px; }
+
+    @media (max-width: 640px) {
+      body { overflow-x: hidden; }
+      .header { padding: 22px 16px; display: block; }
+      .header-brand { align-items: flex-start; }
+      .header h1 { font-size: 19px; line-height: 1.2; word-break: break-word; }
+      .header-meta { text-align: left; margin-top: 18px; }
+      .live-badge { display: flex; align-items: flex-start; width: 100%; border-radius: 14px; padding: 8px 10px; line-height: 1.45; white-space: normal; }
+      .container { width: 100%; padding: 20px 12px; overflow: hidden; }
+      .section-title { margin-top: 30px !important; font-size: 12px; line-height: 1.35; }
+      .stats-grid, .info-grid, .pulse-grid, .pulse-kpi-row, .links-grid { grid-template-columns: 1fr !important; gap: 10px; }
+      .pulse-card > div[style*="grid-template-columns:repeat(4,1fr)"],
+      .pulse-card > div[style*="grid-template-columns:1fr 1fr"],
+      div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+      .stat-card, .info-card, .pulse-card, .pulse-kpi, .link-card { padding: 14px; border-radius: 12px; max-width: 100%; }
+      .stat-card .num, .pulse-kpi .kpi-val { font-size: 30px; }
+      .pulse-kpi .kpi-trend { position: static; display: inline-block; margin-bottom: 8px; }
+      .info-row { display: block; }
+      .info-row .key, .info-row .val { display: block; text-align: left; }
+      .info-row .val { margin-top: 4px; word-break: break-word; }
+      .pulse-query-row, .pulse-page-row { align-items: flex-start; flex-wrap: wrap; gap: 6px; }
+      .pulse-query-text, .pulse-page-url { min-width: 0; white-space: normal; overflow: visible; text-overflow: clip; word-break: break-word; }
+      .pulse-page-meta { flex-wrap: wrap; width: 100%; }
+      .pulse-query-imp { min-width: auto; text-align: left; }
+      .pulse-insight { padding: 12px; gap: 10px; }
+      .pulse-insight-text { font-size: 12px; word-break: break-word; }
+      .pulse-table-scroll { margin: 0 -2px; }
+      .content-card { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .content-table { min-width: 720px; }
+      .changelog-item { display: block; padding: 14px; }
+      .changelog-date { min-width: 0; margin-bottom: 6px; }
+      .footer { padding: 24px 14px; line-height: 1.5; }
+    }
+
+    /* ── GROWTH DASHBOARD v19 ── */
+    :root {
+      --ink: #1a2e2a;
+      --ink-soft: #2c4a44;
+      --accent: #4e9e7e;
+      --accent-dark: #2d7a5e;
+      --paper-2: #faf8f4;
+      --card: #ffffff;
+      --border: #e8e4dc;
+      --muted: #7a7a6e;
+      --up: #16a34a;
+      --down: #dc2626;
+      --shadow: 0 4px 24px rgba(26, 46, 42, 0.06);
+      --radius: 14px;
+    }
+
+    .kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 8px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 1100px) { .kpi-strip { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .kpi-strip { grid-template-columns: 1fr; } }
+    .kpi-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+    }
+    .kpi-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .kpi-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 6px 0 4px;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .kpi-delta {
+      font-size: 11px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .kpi-delta.up { background: #dcfce7; color: var(--up); }
+    .kpi-delta.down { background: #fee2e2; color: var(--down); }
+    .kpi-delta.neutral { background: #f3f4f6; color: var(--muted); }
+    .kpi-sub { font-size: 10px; color: #aaa; margin-top: 6px; line-height: 1.35; }
+
+    /* ── Sections ── */
+    .section { margin-bottom: 48px; }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .section-head h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .section-head p { font-size: 13px; color: var(--muted); max-width: 480px; }
+    .badge-src {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-dark);
+      background: #f0faf5;
+      border: 1px solid #c6e8da;
+      border-radius: 999px;
+      padding: 4px 12px;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    @media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .card-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .chart-wrap { position: relative; height: 280px; }
+    .chart-wrap-sm { height: 220px; }
+
+    /* ── Monthly table ── */
+    .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .data-table th {
+      text-align: left;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      padding: 10px 14px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+    }
+    .data-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #f4f1eb;
+      vertical-align: middle;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: var(--paper-2); }
+    .data-table .num { font-weight: 800; font-size: 15px; color: var(--accent-dark); }
+    .bar-cell { display: flex; align-items: center; gap: 10px; }
+    .mini-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+      min-width: 4px;
+    }
+
+    /* ── Query / page rows ── */
+    .rank-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid #f4f1eb;
+      font-size: 12px;
+    }
+    .rank-row:last-child { border-bottom: none; }
+    .rank-num { font-weight: 800; color: #ccc; min-width: 22px; font-size: 11px; }
+    .rank-text { flex: 1; min-width: 0; word-break: break-word; color: var(--ink); }
+    .rank-url { flex: 1; min-width: 0; word-break: break-all; color: var(--accent-dark); font-size: 11px; }
+    .pill {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .pill-green { background: #dcfce7; color: #166534; }
+    .pill-blue { background: #dbeafe; color: #1e40af; }
+    .pill-amber { background: #fef3c7; color: #92400e; }
+
+    /* ── Insight ── */
+    .insight {
+      background: linear-gradient(135deg, #f0faf5, #ecfdf5);
+      border: 1px solid #c6e8da;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      margin-top: 20px;
+    }
+    .insight strong { color: var(--ink); }
+
+    /* ── Timeline ── */
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--border));
+    }
+    .tl-item { position: relative; padding-bottom: 24px; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-dot {
+      position: absolute;
+      left: -28px;
+      top: 4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--paper);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+    .tl-date { font-size: 11px; color: var(--muted); font-weight: 600; }
+    .tl-title { font-size: 14px; font-weight: 700; color: var(--ink); margin: 2px 0 4px; }
+    .tl-desc { font-size: 12px; color: var(--muted); line-height: 1.45; }
+    .tl-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #f0faf5;
+      color: var(--accent-dark);
+      margin-top: 6px;
+    }
+
+
   </style>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
 
@@ -100,413 +446,862 @@ export const prerender = true;
   <div class="header-brand">
     <div class="header-logo">PT</div>
     <div>
-      <div class="header-sub">Website Performance Report — Portugal RE</div>
+      <div class="header-sub">Website Performance Report</div>
       <h1>portuguese-estate.com</h1>
     </div>
   </div>
   <div class="header-meta">
     <div class="label">Last updated</div>
-    <div class="value">17 June 2026 · v1.0</div>
-    <div class="live-badge"><span class="live-dot"></span> 91 indexable MDX · 108 sitemap URLs · qa:full 5/5 PASS</div>
+    <div class="value">{reportDate} · {reportVersion} (live)</div>
+    <div class="live-badge"><span class="live-dot"></span> Site is live</div>
+    
   </div>
 </div>
 
 <div class="container">
 
-  <div class="section-title">At a glance</div>
+    <div class="section-title">At a glance</div>
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="num gold">91</div>
-      <div class="label">MDX articles</div>
-      <div class="sublabel">51 guides · 9 compares · 21 areas · 7 segments · 3 developers</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">355K</div>
-      <div class="label">Words of SEO content</div>
-      <div class="sublabel">~3,904 avg/article · validate:content 91/91 PASS</div>
-    </div>
-    <div class="stat-card">
-      <div class="num gold">108</div>
+      <div class="num teal">108</div>
       <div class="label">URLs in sitemap</div>
-      <div class="sublabel">GSC sitemap 0 errors · last downloaded 16 Jun · /projects/ excluded (noindex)</div>
+      <div class="sublabel">51 guides · 21 areas · 9 compare · 7 segments · 3 developers</div>
     </div>
     <div class="stat-card">
-      <div class="num green">109</div>
-      <div class="label">URLs sent (Google API)</div>
-      <div class="sublabel">portuguese-estate-indexing · explicit batches only · Farinvest re-index 17 Jun</div>
+      <div class="num amber">—</div>
+      <div class="label">Ahrefs DR</div>
+      <div class="sublabel">Baseline · new domain · target DR 10+ Q3 2026</div>
     </div>
     <div class="stat-card">
-      <div class="num green">5/5</div>
-      <div class="label">QA full package</div>
-      <div class="sublabel">corpus-signals · validate · live HTTP · rendered HTML · build</div>
+      <div class="num">~378K</div>
+      <div class="label">SEO words</div>
+      <div class="sublabel">91 MDX files · ~4,150 avg · 30 git commits</div>
     </div>
     <div class="stat-card">
-      <div class="num">28</div>
-      <div class="label">Git commits</div>
-      <div class="sublabel">Waves 1–13 shipped · indexing gap fix 74df066</div>
+      <div class="num teal">15+</div>
+      <div class="label">GSC impression URLs</div>
+      <div class="sublabel">1–24 Jun window · compare + purchase guides leading</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">6</div>
+      <div class="label">Sections + hubs</div>
+      <div class="sublabel">guides · compare · areas · segments · developers · hubs</div>
+    </div>
+    <div class="stat-card">
+      <div class="num amber">1</div>
+      <div class="label">GSC clicks</div>
+      <div class="sublabel">164 imp · CTR 0.61% · avg pos 23.6</div>
+    </div>
+    <div class="stat-card">
+      <div class="num teal">73</div>
+      <div class="label">GA4 sessions</div>
+      <div class="sublabel">1 organic · 70 direct · lead API 200 OK</div>
     </div>
   </div>
 
-  <div class="section-title">SEO Pulse — Google Search Console</div>
-  <div class="pulse-wrap">
-    <div class="baseline-box">
-      <strong>Early index phase (17 June 2026).</strong> GSC MCP <code>sc-domain:portuguese-estate.com</code> · Jan–14 Jun 2026: <strong>0 clicks, 0 impressions</strong> on queries/pages. Site content batch published 16–17 Jun; 109 URLs pinged via Indexing API + Bing IndexNow. Sitemap resubmitted 16 Jun: <strong>0 errors</strong>, last downloaded 16 Jun 22:27 UTC. First query data expected ~27 Jun–4 Jul.
+
+  <!-- ═══ GROWTH DASHBOARD v19 — charts + MoM (CTR hidden) ═══ -->
+  <div class="section-title" style="margin-top:32px;">Growth dashboard — since launch</div>
+
+  <div class="kpi-strip">
+    <div class="kpi-card">
+      <div class="kpi-label">GSC Clicks</div>
+      <div class="kpi-value">{totalClicks}</div>
+      <span class="kpi-delta up">↑ Launch</span>
+      <div class="kpi-sub">Since launch · Google Search Console</div>
     </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Impressions</div>
+      <div class="kpi-value">{(totalImp / 1000).toFixed(1)}k</div>
+      <span class="kpi-delta up">↑ Index growing</span>
+      <div class="kpi-sub">{totalImp.toLocaleString('en-US')} total · peak day 20 Jun (38 imp)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">GA4 Sessions</div>
+      <div class="kpi-value">73</div>
+      <span class="kpi-delta up">↑ Launch month</span>
+      <div class="kpi-sub">Jun 2026 only (pre-launch Mar–May)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Content corpus</div>
+      <div class="kpi-value">{(totalWords / 1_000_000).toFixed(1)}M</div>
+      <span class="kpi-delta neutral">{totalFiles} pages</span>
+      <div class="kpi-sub">Words in MDX</div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Monthly growth since launch</h2>
+        <p>Google Search Console web search · {launchDate} → {dataThrough}. June is partial (20 days).</p>
+      </div>
+      <span class="badge-src">GSC API · Updated {reportDate}</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Clicks &amp; impressions by month</div>
+        <div class="chart-wrap"><canvas id="chartMonthly"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">GA4 sessions by month</div>
+        <div class="chart-wrap"><canvas id="chartGa4"></canvas></div>
+        <div class="insight" style="margin-top:16px;">
+          <strong>Launch phase:</strong> Site live 16 Jun. First GSC impressions 17 Jun, first click 22 Jun on Portugal vs France comparison. GA4 73 sessions mostly direct (QA + pre-launch). Organic search begins — monitor weekly.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <div class="card-title">Month-over-month detail</div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Clicks</th>
+              <th>Impressions</th>
+              <th>Avg position</th>
+              <th>MoM clicks</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {monthlyGsc.map((m, i) => {
+              const prev = i > 0 ? monthlyGsc[i - 1] : null;
+              const mom = prev && prev.clicks > 0
+                ? `+${Math.round(((m.clicks - prev.clicks) / prev.clicks) * 100)}%`
+                : '—';
+              const barW = Math.round((m.impressions / maxImp) * 120);
+              return (
+                <tr>
+                  <td><strong>{m.month}</strong></td>
+                  <td class="num">{m.clicks}</td>
+                  <td>
+                    <div class="bar-cell">
+                      <span>{m.impressions.toLocaleString('en-US')}</span>
+                      <div class="mini-bar" style={`width:${barW}px`}></div>
+                    </div>
+                  </td>
+                  <td>{m.position.toFixed(1)}</td>
+                  <td><span class={`pill ${mom.startsWith('+') ? 'pill-green' : 'pill-amber'}`}>{mom}</span></td>
+                  <td style="color:#7a7a6e;font-size:12px;">{m.note}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <div class="insight">
+        <strong>Early tail vs winners:</strong> Guides hub averages pos 80.9 (broad index) while compare and step-by-step purchase guides sit pos 4–6. Golden Visa head terms still page 7–9 — normal at 9 days. CTR sprint when pillar impressions exceed 100.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>SEO momentum — daily trend</h2>
+        <p>Key days since launch · GSC impressions (area) vs clicks (line).</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="chart-wrap" style="height:320px;"><canvas id="chartDaily"></canvas></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Content engine</h2>
+        <p>{totalFiles.toLocaleString('en-US')} MDX pages · {(totalWords / 1_000_000).toFixed(2)} million words · programmatic + editorial SEO.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Corpus by collection</div>
+        <div class="chart-wrap-sm"><canvas id="chartContent"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Breakdown</div>
+        <table class="data-table">
+          <thead>
+            <tr><th>Collection</th><th>Pages</th><th>Words</th><th>Avg depth</th></tr>
+          </thead>
+          <tbody>
+            {contentBreakdown.map(c => (
+              <tr>
+                <td><strong>{c.type}</strong></td>
+                <td class="num">{c.count}</td>
+                <td>{c.words.toLocaleString('en-US')}</td>
+                <td>{Math.round(c.words / c.count).toLocaleString('en-US')}</td>
+              </tr>
+            ))}
+            <tr style="background:#f0faf5;">
+              <td><strong>TOTAL</strong></td>
+              <td class="num">{totalFiles}</td>
+              <td><strong>{totalWords.toLocaleString('en-US')}</strong></td>
+              <td>{Math.round(totalWords / totalFiles).toLocaleString('en-US')}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SEO PULSE — Google Search Console, GA4 and available analytics data -->
+  <div class="section-title" style="margin-top:40px;">SEO Pulse — Google Search Console</div>
+
+  <div style="background:white;border-radius:16px;border:1px solid #e8e4dc;padding:24px 28px;">
+
+    <div class="pulse-header">
+      <div>
+        <h2>Search Performance</h2>
+        <p style="font-size:12px;color:#9ca3af;margin-top:2px;">portuguese-estate.com · 1 Jun – 24 Jun 2026 · Web search · Updated 25 Jun via GSC API</p>
+      </div>
+      <div class="pulse-updated">
+        <span class="pulse-updated-dot"></span>
+        Updated 25 Jun 2026
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+      <div style="background:#f0faf5;border:1px solid #c6e8da;border-radius:10px;padding:14px 16px;">
+        <div style="font-size:11px;font-weight:700;color:#7a7a6e;text-transform:uppercase;">17–20 Jun 2026</div>
+        <div style="font-size:22px;font-weight:900;color:#1a2e2a;margin-top:4px;">0 clicks</div>
+        <div style="font-size:12px;color:#7a7a6e;">70 impressions · index warming · peak day 20 Jun (38 imp, pos 8.7)</div>
+      </div>
+      <div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:14px 16px;">
+        <div style="font-size:11px;font-weight:700;color:#7a7a6e;text-transform:uppercase;">21–24 Jun 2026</div>
+        <div style="font-size:22px;font-weight:900;color:#1a2e2a;margin-top:4px;">1 click</div>
+        <div style="font-size:12px;color:#7a7a6e;">94 impressions · CTR 1.06% · first click 22 Jun (compare page)</div>
+      </div>
+      <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:14px 16px;">
+        <div style="font-size:11px;font-weight:700;color:#7a7a6e;text-transform:uppercase;">Launch baseline</div>
+        <div style="font-size:22px;font-weight:900;color:#1a2e2a;margin-top:4px;">164 imp</div>
+        <div style="font-size:12px;color:#7a7a6e;">Site live 16 Jun · 108 sitemap URLs · indexing pause on new MDX until GSC &gt;100 imp on pillar</div>
+      </div>
+    </div>
+
     <div class="pulse-kpi-row">
-      <div class="pulse-kpi"><div class="kpi-label">Total Clicks</div><div class="kpi-val">0</div><div class="kpi-sub">Baseline · monitor weekly</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Impressions</div><div class="kpi-val">0</div><div class="kpi-sub">109 URLs in API log</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Avg. Position</div><div class="kpi-val">—</div><div class="kpi-sub">Awaiting first query data</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Avg. CTR</div><div class="kpi-val">—</div><div class="kpi-sub">CTR sprint when 50+ imp/query</div></div>
+      <div class="pulse-kpi kpi-green">
+        <div class="kpi-trend trend-up">First click</div>
+        <div class="kpi-label">Total Clicks</div>
+        <div class="kpi-val">1</div>
+        <div class="kpi-sub">22 Jun · /compare/portugal-vs-france-property-investment/ · 10 imp · 10% CTR · pos 4.5</div>
+      </div>
+      <div class="pulse-kpi kpi-blue">
+        <div class="kpi-trend trend-up">↑ Index warming</div>
+        <div class="kpi-label">Impressions</div>
+        <div class="kpi-val">164</div>
+        <div class="kpi-sub">Peak 38 on 20 Jun · guides hub 25 imp (pos 80.9 — long-tail tail)</div>
+      </div>
+      <div class="pulse-kpi kpi-amber">
+        <div class="kpi-trend" style="background:#fef3c7;color:#92400e;">Early</div>
+        <div class="kpi-label">Avg. Position</div>
+        <div class="kpi-val">23.6</div>
+        <div class="kpi-sub">Golden Visa queries pos 70–90 · compare + step-by-step guides pos 4–6</div>
+      </div>
+      <div class="pulse-kpi kpi-purple">
+        <div class="kpi-label">Avg. CTR</div>
+        <div class="kpi-val">0.61%</div>
+        <div class="kpi-sub">Compare cluster converts · hub pages still building relevance</div>
+      </div>
     </div>
-    <div class="insight"><strong>Quick wins pipeline (when data arrives):</strong> Priority URLs — <code>/guides/portugal-property-investment-guide/</code>, <code>/guides/can-foreigners-buy-property-portugal/</code>, <code>/guides/imt-tax-non-resident-portugal-2026/</code>, <code>/guides/portugal-golden-visa-fund-investment-2026/</code>, <code>/compare/portugal-vs-spain-property-investment/</code>. Pages at pos 8–15 with 50+ impressions → expand FAQ + retitle for CTR. Monitor via <code>search-console-portuguese-estate</code> MCP.</div>
-    <p style="font-size:11px;color:#a8a29e;text-align:center;margin-top:16px;">Updated 17 June 2026 via GSC API · EN site — Google + Bing only · never Yandex</p>
+
+    <div class="pulse-grid">
+      <div class="pulse-card">
+        <div class="pulse-card-title"><span class="span-blue"></span> Daily Impressions — Jun 2026 (GSC)</div>
+        <div class="pulse-chart">
+          <div class="chart-bars">
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:3%"></div><div class="chart-label">17</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:53%"></div><div class="chart-label">18</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:29%"></div><div class="chart-label">19</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:100%"></div><div class="chart-label" style="color:#2d7a5e;font-weight:700;">20</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:66%"></div><div class="chart-label">21</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:82%"></div><div class="chart-label">22</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:100%"></div><div class="chart-label">23</div></div>
+          </div>
+          <p style="font-size:10px;color:#aaa;margin-top:8px;">Jun 17–23 · bars = daily GSC impressions · first click 22 Jun · site deployed 16 Jun</p>
+        </div>
+        <div class="pulse-insight" style="margin-top:16px;">
+          <div class="pulse-insight-icon">📈</div>
+          <div class="pulse-insight-text">
+            <strong>Early index signals — compare pages lead:</strong> Portugal vs France comparison earned the first click at 10% CTR. Step-by-step purchase guides and Faro area page show strong positions (pos 2–6). Golden Visa head terms still on page 7–9 — expected at launch; CTR sprint when impressions exceed 100 on pillar URLs.
+          </div>
+        </div>
+      </div>
+
+      <div class="pulse-card">
+        <div class="pulse-card-title"><span class="span-green"></span> Top Queries (impressions)</div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#1</div><div class="pulse-query-text">how much deposit to buy a house in portugal</div><div class="pulse-query-pos">pos 96</div><div class="pulse-query-imp">4 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#2</div><div class="pulse-query-text">property maintenance costs in portugal</div><div class="pulse-query-pos">pos 23</div><div class="pulse-query-imp">4 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#3</div><div class="pulse-query-text">lisbon golden visa property</div><div class="pulse-query-pos">pos 78</div><div class="pulse-query-imp">2 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#4</div><div class="pulse-query-text">portugal golden visa properties for sale</div><div class="pulse-query-pos">pos 90</div><div class="pulse-query-imp">2 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#5</div><div class="pulse-query-text">prenuptial agreement portugal</div><div class="pulse-query-pos">pos 85</div><div class="pulse-query-imp">2 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#6</div><div class="pulse-query-text">aimi tax portugal</div><div class="pulse-query-pos">pos 89</div><div class="pulse-query-imp">1 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#7</div><div class="pulse-query-text">ine portugal house price index porto 2025</div><div class="pulse-query-pos">pos 10</div><div class="pulse-query-imp">1 imp</div></div>
+      </div>
+    </div>
+
+    <div class="pulse-card" style="margin-top:16px;">
+      <div class="pulse-card-title"><span class="span-blue"></span> Top GSC Pages</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+        <div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/compare/portugal-vs-france-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-clicks">1 clk</span><span class="pulse-badge badge-impr">10 imp</span><span class="pulse-badge badge-pos">pos 4.5</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/how-to-buy-property-portugal-step-by-step/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">6 imp</span><span class="pulse-badge badge-pos">pos 5.2</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/algarve-property-investment-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5 imp</span><span class="pulse-badge badge-pos">pos 14.2</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">25 imp</span><span class="pulse-badge badge-pos">pos 80.9</span></div></div>
+        </div>
+        <div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/how-to-buy-portugal-property-remotely/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">2 imp</span><span class="pulse-badge badge-pos">pos 5.5</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/areas/parque-das-nacoes-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">2 imp</span><span class="pulse-badge badge-pos">pos 6.5</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/areas/faro-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">1 imp</span><span class="pulse-badge badge-pos">pos 2</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/developers/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">2 imp</span><span class="pulse-badge badge-pos">pos 7</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+      <div class="pulse-insight" style="background:#f0faf5;border-color:#c6e8da;margin-top:0;">
+        <div class="pulse-insight-icon">📊</div>
+        <div class="pulse-insight-text"><strong>GA4 (25 May – 24 Jun):</strong> 73 sessions · 81 pageviews · 1 organic search session · 70 direct (pre-launch QA + team). Top page: homepage 63 pv. Lead API smoke: 200 OK.</div>
+      </div>
+      <div class="pulse-insight" style="background:#eef2ff;border-color:#c7d2fe;margin-top:0;">
+        <div class="pulse-insight-icon">🔍</div>
+        <div class="pulse-insight-text"><strong>GSC sitemap:</strong> 108 URLs submitted · last downloaded 24 Jun · 0 errors · /projects/ excluded (noindex). Dedicated GCP project: portuguese-estate-indexing.</div>
+      </div>
+    </div>
+
+    <p class="pulse-footer-note">
+      Google: <a href="https://search.google.com/search-console" target="_blank">Search Console</a> · <a href="https://analytics.google.com" target="_blank">GA4</a> · Bing: <a href="https://www.bing.com/webmasters" target="_blank">Webmaster Tools</a> · Updated 25 Jun 2026 via MCP APIs
+    </p>
+
   </div>
 
-  <div class="section-title">Analytics — GA4</div>
-  <div class="pulse-wrap">
+
+  <div class="section-title" style="margin-top:40px;">Bing Pulse — Bing Webmaster Tools</div>
+
+  <div style="background:white;border-radius:16px;border:1px solid #e8e4dc;padding:24px 28px;">
+
+    <div class="pulse-header">
+      <div>
+        <h2>Bing / Yahoo Search Performance</h2>
+        <p style="font-size:12px;color:#9ca3af;margin-top:2px;">portuguese-estate.com · Mar – Jun 2026 · MCP bing-webmaster · Updated 19 Jun</p>
+      </div>
+      <div class="pulse-updated">
+        <span class="pulse-updated-dot"></span>
+        Live via MCP
+      </div>
+    </div>
+
     <div class="pulse-kpi-row">
-      <div class="pulse-kpi"><div class="kpi-label">Users (16 Jun)</div><div class="kpi-val">9</div><div class="kpi-sub">Homepage only · post-deploy crawl/bot traffic</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Sessions</div><div class="kpi-val">9</div><div class="kpi-sub">Organic TBD after GSC impressions</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Pageviews</div><div class="kpi-val">9</div><div class="kpi-sub">ga4-analytics-portuguese-estate MCP</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Lead API</div><div class="kpi-val" style="font-size:22px;">✓</div><div class="kpi-sub">POST /api/lead/ → 200 live · prerender=false</div></div>
+      <div class="pulse-kpi kpi-orange">
+        <div class="kpi-trend trend-up">May only</div>
+        <div class="kpi-label">Bing Clicks</div>
+        <div class="kpi-val">18</div>
+        <div class="kpi-sub">best day 25 May (4 clicks) · vs ~0 in early May</div>
+      </div>
+      <div class="pulse-kpi kpi-blue">
+        <div class="kpi-trend trend-up">↑ 13× growth</div>
+        <div class="kpi-label">Bing Impressions</div>
+        <div class="kpi-val">370</div>
+        <div class="kpi-sub">May total · 3/day → 40/day peak · Yahoo AU included</div>
+      </div>
+      <div class="pulse-kpi kpi-green">
+        <div class="kpi-label">Sitemap</div>
+        <div class="kpi-val">1 139</div>
+        <div class="kpi-sub">Status Success · 0 crawl issues · IndexNow active · 19 Jun</div>
+      </div>
+      <div class="pulse-kpi kpi-purple">
+        <div class="kpi-label">First lead</div>
+        <div class="kpi-val">1</div>
+        <div class="kpi-sub">Conrad · AU · au.search.yahoo.com · $200–500K</div>
+      </div>
     </div>
-    <div class="insight insight-warn"><strong>Baseline only:</strong> GA4 has no article-level organic yet. After GSC shows impressions, refresh this block and mark <code>generate_lead</code> / shortlist events as key events in GA4 admin.</div>
-  </div>
 
-  <div class="section-title">Bing Webmaster</div>
-  <div class="pulse-wrap">
-    <div class="pulse-kpi-row">
-      <div class="pulse-kpi"><div class="kpi-label">Bing Clicks</div><div class="kpi-val">0</div><div class="kpi-sub">bing-webmaster-portuguese-estate MCP</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Impressions</div><div class="kpi-val">0</div><div class="kpi-sub">IndexNow via bing.com/indexnow only</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Site verified</div><div class="kpi-val" style="font-size:22px;">✓</div><div class="kpi-sub">Imported from GSC</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Crawl issues</div><div class="kpi-val" style="font-size:22px;">0</div><div class="kpi-sub">Never api.indexnow.org (Yandex hub)</div></div>
+    <div class="pulse-grid">
+      <div class="pulse-card">
+        <div class="pulse-card-title"><span class="span-blue"></span> Daily Bing Impressions — May 2026</div>
+        <div class="pulse-chart">
+          <div class="chart-bars">
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:8%;background:#fdba74;"></div><div class="chart-label">01</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:10%;background:#fdba74;"></div><div class="chart-label">02</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:8%;background:#fdba74;"></div><div class="chart-label">03</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:10%;background:#fdba74;"></div><div class="chart-label">05</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:20%;background:#fdba74;"></div><div class="chart-label">07</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:18%;background:#fdba74;"></div><div class="chart-label">12</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:25%;background:#fdba74;"></div><div class="chart-label">16</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:35%;background:#fdba74;"></div><div class="chart-label">19</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:70%;background:#fdba74;"></div><div class="chart-label">24</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:90%;background:#fb923c;"></div><div class="chart-label">25</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:100%;background:#ea580c;"></div><div class="chart-label" style="color:#c2410c;font-weight:700;">26</div></div>
+            <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:90%;background:#fb923c;"></div><div class="chart-label">28</div></div>
+          </div>
+          <p style="font-size:10px;color:#aaa;margin-top:8px;">Bing API daily trend · peak 40 impressions (26 May) · clicks follow with 2–4 day lag</p>
+        </div>
+        <div class="pulse-insight" style="margin-top:12px;">
+          <div class="pulse-insight-icon">🔶</div>
+          <div class="pulse-insight-text"><strong>Bing compounding faster than Google on clicks-per-impression:</strong> investment/comparison intent (phuket vs pattaya, phuket vs bali, off-plan) converts at high CTR. Legal pages get impressions but zero clicks — same CTR problem as early Google.</div>
+        </div>
+      </div>
+
+      <div class="pulse-card">
+        <div class="pulse-card-title"><span class="span-green"></span> Top Bing Queries (clicks)</div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#1</div><div class="pulse-query-text">phuket or pattaya invest</div><div class="pulse-query-pos">2 clk</div><div class="pulse-query-imp">1 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#2</div><div class="pulse-query-text">phuket vs bali buy property</div><div class="pulse-query-pos">1 clk</div><div class="pulse-query-imp">2 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#3</div><div class="pulse-query-text">phuket property off plan</div><div class="pulse-query-pos">1 clk</div><div class="pulse-query-imp">1 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#4</div><div class="pulse-query-text">tax selling property phuket</div><div class="pulse-query-pos">1 clk</div><div class="pulse-query-imp">1 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#5</div><div class="pulse-query-text">australian buy property thailand</div><div class="pulse-query-pos">0 clk</div><div class="pulse-query-imp">1 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#6</div><div class="pulse-query-text">airbnb property management rental income</div><div class="pulse-query-pos">0 clk</div><div class="pulse-query-imp">36 imp</div></div>
+        <div class="pulse-query-row"><div class="pulse-query-rank">#7</div><div class="pulse-query-text">chanote thailand</div><div class="pulse-query-pos">0 clk</div><div class="pulse-query-imp">5 imp</div></div>
+      </div>
     </div>
-  </div>
 
-  <div class="section-title">Content breakdown</div>
-  <div class="content-card table-scroll">
-    <table class="content-table">
-      <thead><tr><th>Collection</th><th>Pages</th><th>Words</th><th>Avg</th><th>Min gate</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr>
-          <td><strong>Guides</strong><br><span class="words">Tax, legal, residency, yields, off-plan, national HUBs</span></td>
-          <td><span class="count">51</span></td>
-          <td><span class="words">186,343</span></td>
-          <td><span class="words">3,654</span></td>
-          <td><span class="tag blue">2 000+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Comparisons</strong><br><span class="words">Portugal vs Spain/France/Italy/Greece · city vs city · new-build vs resale</span></td>
-          <td><span class="count">9</span></td>
-          <td><span class="words">37,148</span></td>
-          <td><span class="words">4,128</span></td>
-          <td><span class="tag blue">1 800+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Areas</strong><br><span class="words">Lisbon, Porto, Algarve, Silver Coast, Comporta micro-markets</span></td>
-          <td><span class="count">21</span></td>
-          <td><span class="words">95,724</span></td>
-          <td><span class="words">4,558</span></td>
-          <td><span class="tag blue">1 800+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Segments</strong><br><span class="words">US, UK, DE, FR, BR, CN, AO buyer guides</span></td>
-          <td><span class="count">7</span></td>
-          <td><span class="words">26,360</span></td>
-          <td><span class="words">3,766</span></td>
-          <td><span class="tag blue">2 000+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Developers & agencies</strong><br><span class="words">Vanguard, VIC, Farinvest agency DD profiles</span></td>
-          <td><span class="count">3</span></td>
-          <td><span class="words">9,655</span></td>
-          <td><span class="words">3,218</span></td>
-          <td><span class="tag blue">1 200+</span></td>
-          <td><span class="tag green">Live</span></td>
-        </tr>
-        <tr>
-          <td><strong>Projects</strong><br><span class="words">Empty — noindex until reviews launch</span></td>
-          <td><span class="count">0</span></td>
-          <td><span class="words">0</span></td>
-          <td><span class="words">0</span></td>
-          <td><span class="tag blue">1 200+</span></td>
-          <td><span class="tag amber">noindex hub</span></td>
-        </tr>
-        <tr>
-          <td><strong>News</strong><br><span class="words">Not started — add 3/day when indexing stabilises</span></td>
-          <td><span class="count">0</span></td>
-          <td><span class="words">0</span></td>
-          <td><span class="words">0</span></td>
-          <td><span class="tag blue">600+</span></td>
-          <td><span class="tag gray">planned</span></td>
-        </tr>
-        <tr>
-          <td><strong>TOTAL</strong></td>
-          <td><span class="count">91</span></td>
-          <td><span class="words"><strong>355,230</strong></span></td>
-          <td><span class="words">3,904</span></td>
-          <td><span class="tag green">qa:full PASS</span></td>
-          <td><span class="tag green">91 indexable</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="section-title">Content waves (91-article corpus)</div>
-  <div class="content-card table-scroll">
-    <table class="content-table">
-      <thead><tr><th>Wave</th><th>Commit</th><th>Shipped</th><th>Focus</th><th>Indexing</th></tr></thead>
-      <tbody>
-        <tr>
-          <td><strong>Wave 1–3</strong></td>
-          <td><span class="words">122e011…</span></td>
-          <td><span class="count">~21</span></td>
-          <td>Scaffold, national pillar, tax/legal cluster, first Lisbon & Algarve areas</td>
-          <td><span class="tag gray">Launch batch</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 4–5</strong></td>
-          <td><span class="words">9f48086</span></td>
-          <td><span class="count">14</span></td>
-          <td>Tier-A expansion 3000+ words, buy-to-let hub, yield cluster, AL rules</td>
-          <td><span class="tag gray">Build + validate</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 6–7</strong></td>
-          <td><span class="words">46ba7c0</span></td>
-          <td><span class="count">14</span></td>
-          <td>Residency cluster, AL licensing depth, more area guides</td>
-          <td><span class="tag gray">Explicit Google batches</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 8–9</strong></td>
-          <td><span class="words">d53453e</span></td>
-          <td><span class="count">14</span></td>
-          <td>TOFU guides, country compares, Lisbon districts, UK segment</td>
-          <td><span class="tag green">109 URLs API total</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 10</strong></td>
-          <td><span class="words">a6f510f</span></td>
-          <td><span class="count">7</span></td>
-          <td>Porto/Lisbon compares, Silver Coast hub, Matosinhos, Comporta, US/DE segments</td>
-          <td><span class="tag green">7/7 OK</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 11</strong></td>
-          <td><span class="words">457411b</span></td>
-          <td><span class="count">7</span></td>
-          <td>Supply/INE data, off-plan hub, Italy compare, Gaia/Óbidos/Nazaré</td>
-          <td><span class="tag green">7/7 OK</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 12</strong></td>
-          <td><span class="words">29a83e2</span></td>
-          <td><span class="count">7</span></td>
-          <td>Ericeira/Caldas/Braga, France compare, Vanguard/VIC developers</td>
-          <td><span class="tag green">7/7 OK</span></td>
-        </tr>
-        <tr>
-          <td><strong>Wave 13</strong></td>
-          <td><span class="words">193baab</span></td>
-          <td><span class="count">7</span></td>
-          <td>Marvila/Alcântara/Lourinhá, Greece compare, developers hub, CN segment, Farinvest</td>
-          <td><span class="tag green">7/7 OK</span></td>
-        </tr>
-        <tr>
-          <td><strong>Quality pass</strong></td>
-          <td><span class="words">74df066</span></td>
-          <td><span class="count">—</span></td>
-          <td>Hero diversity, /projects/ noindex, Farinvest agency label, hub copy fixes</td>
-          <td><span class="tag gray">Farinvest re-index</span></td>
-        </tr>
-        <tr>
-          <td><strong>Corpus total</strong></td>
-          <td colspan="2"><span class="count">91</span></td>
-          <td>Tier-A standard · 3000+ body words · 10 FAQ · pause for indexing</td>
-          <td><span class="tag green">Ready</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="section-title">Full article inventory — all 91 pages</div>
-  <p style="font-size:12px;color:#78716c;margin-bottom:16px;">Every indexable slug with live link. Word counts = body-only after frontmatter.</p>
-  <div class="slug-block">
-    <h4>Guides (51) — 186,343 words</h4>
-    <div class="slug-list"><a href="/guides/aimi-wealth-tax-portugal-property/">aimi-wealth-tax-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,415w)</span> · <a href="/guides/al-license-transfer-portugal-sale/">al-license-transfer-portugal-sale</a> <span style="color:#a8a29e;font-size:10px;">(4,087w)</span> · <a href="/guides/algarve-airbnb-investment-guide/">algarve-airbnb-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,294w)</span> · <a href="/guides/algarve-property-investment-guide/">algarve-property-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,900w)</span> · <a href="/guides/alojamento-local-license-portugal/">alojamento-local-license-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,622w)</span> · <a href="/guides/best-regions-invest-portugal-property-2026/">best-regions-invest-portugal-property-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,578w)</span> · <a href="/guides/buy-property-portugal-foreigner/">buy-property-portugal-foreigner</a> <span style="color:#a8a29e;font-size:10px;">(3,825w)</span> · <a href="/guides/can-foreigners-buy-property-portugal/">can-foreigners-buy-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,414w)</span> · <a href="/guides/cost-of-buying-property-portugal/">cost-of-buying-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,510w)</span> · <a href="/guides/cpcv-promissory-contract-portugal/">cpcv-promissory-contract-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,628w)</span> · <a href="/guides/due-diligence-portugal-property/">due-diligence-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(4,310w)</span> · <a href="/guides/escritura-notary-portugal-property/">escritura-notary-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,724w)</span> · <a href="/guides/gross-vs-net-yield-portugal/">gross-vs-net-yield-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,882w)</span> · <a href="/guides/hidden-costs-buying-property-portugal/">hidden-costs-buying-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,989w)</span> · <a href="/guides/highest-rental-yield-areas-portugal/">highest-rental-yield-areas-portugal</a> <span style="color:#a8a29e;font-size:10px;">(2,954w)</span> · <a href="/guides/how-to-buy-portugal-property-remotely/">how-to-buy-portugal-property-remotely</a> <span style="color:#a8a29e;font-size:10px;">(4,398w)</span> · <a href="/guides/how-to-buy-property-portugal-step-by-step/">how-to-buy-property-portugal-step-by-step</a> <span style="color:#a8a29e;font-size:10px;">(4,144w)</span> · <a href="/guides/how-to-calculate-rental-yield-portugal/">how-to-calculate-rental-yield-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,007w)</span> · <a href="/guides/imi-property-tax-portugal/">imi-property-tax-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,533w)</span> · <a href="/guides/imt-refund-tax-resident-portugal/">imt-refund-tax-resident-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,361w)</span> · <a href="/guides/imt-tax-non-resident-portugal-2026/">imt-tax-non-resident-portugal-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,745w)</span> · <a href="/guides/is-portugal-property-good-investment-2026/">is-portugal-property-good-investment-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,431w)</span> · <a href="/guides/lisbon-alojamento-local-containment-zones/">lisbon-alojamento-local-containment-zones</a> <span style="color:#a8a29e;font-size:10px;">(2,750w)</span> · <a href="/guides/lisbon-property-investment-guide/">lisbon-property-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,937w)</span> · <a href="/guides/long-term-vs-holiday-rental-portugal/">long-term-vs-holiday-rental-portugal</a> <span style="color:#a8a29e;font-size:10px;">(2,823w)</span> · <a href="/guides/moderate-rent-tax-incentives-portugal-2026/">moderate-rent-tax-incentives-portugal-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,592w)</span> · <a href="/guides/nif-portugal-property-purchase/">nif-portugal-property-purchase</a> <span style="color:#a8a29e;font-size:10px;">(2,930w)</span> · <a href="/guides/non-resident-mortgage-portugal/">non-resident-mortgage-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,171w)</span> · <a href="/guides/off-plan-property-portugal-guide/">off-plan-property-portugal-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,716w)</span> · <a href="/guides/porto-alojamento-local-rules/">porto-alojamento-local-rules</a> <span style="color:#a8a29e;font-size:10px;">(3,226w)</span> · <a href="/guides/porto-property-investment-guide/">porto-property-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,944w)</span> · <a href="/guides/portugal-buy-to-let-investment-guide/">portugal-buy-to-let-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,044w)</span> · <a href="/guides/portugal-capital-gains-tax-property/">portugal-capital-gains-tax-property</a> <span style="color:#a8a29e;font-size:10px;">(3,326w)</span> · <a href="/guides/portugal-d7-visa-property/">portugal-d7-visa-property</a> <span style="color:#a8a29e;font-size:10px;">(3,145w)</span> · <a href="/guides/portugal-digital-nomad-visa-property/">portugal-digital-nomad-visa-property</a> <span style="color:#a8a29e;font-size:10px;">(3,289w)</span> · <a href="/guides/portugal-golden-visa-fund-investment-2026/">portugal-golden-visa-fund-investment-2026</a> <span style="color:#a8a29e;font-size:10px;">(2,910w)</span> · <a href="/guides/portugal-golden-visa-real-estate-ended/">portugal-golden-visa-real-estate-ended</a> <span style="color:#a8a29e;font-size:10px;">(4,005w)</span> · <a href="/guides/portugal-golden-visa-vs-property-purchase/">portugal-golden-visa-vs-property-purchase</a> <span style="color:#a8a29e;font-size:10px;">(3,153w)</span> · <a href="/guides/portugal-housing-supply-licensing-2025/">portugal-housing-supply-licensing-2025</a> <span style="color:#a8a29e;font-size:10px;">(3,278w)</span> · <a href="/guides/portugal-property-developers-guide-2026/">portugal-property-developers-guide-2026</a> <span style="color:#a8a29e;font-size:10px;">(3,334w)</span> · <a href="/guides/portugal-property-investment-guide/">portugal-property-investment-guide</a> <span style="color:#a8a29e;font-size:10px;">(6,157w)</span> · <a href="/guides/portugal-property-market-forecast-2026-2027/">portugal-property-market-forecast-2026-2027</a> <span style="color:#a8a29e;font-size:10px;">(3,362w)</span> · <a href="/guides/portugal-property-market-record-2025-ine-data/">portugal-property-market-record-2025-ine-data</a> <span style="color:#a8a29e;font-size:10px;">(3,994w)</span> · <a href="/guides/portugal-property-scams-avoid/">portugal-property-scams-avoid</a> <span style="color:#a8a29e;font-size:10px;">(3,614w)</span> · <a href="/guides/portugal-rental-yield-guide/">portugal-rental-yield-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,878w)</span> · <a href="/guides/portugal-residency-options-without-golden-visa/">portugal-residency-options-without-golden-visa</a> <span style="color:#a8a29e;font-size:10px;">(3,725w)</span> · <a href="/guides/power-of-attorney-property-portugal/">power-of-attorney-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(4,015w)</span> · <a href="/guides/property-management-portugal-cost/">property-management-portugal-cost</a> <span style="color:#a8a29e;font-size:10px;">(2,858w)</span> · <a href="/guides/rnal-registration-portugal/">rnal-registration-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,557w)</span> · <a href="/guides/silver-coast-portugal-property-guide/">silver-coast-portugal-property-guide</a> <span style="color:#a8a29e;font-size:10px;">(3,472w)</span> · <a href="/guides/stamp-duty-portugal-property/">stamp-duty-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,387w)</span></div>
-  </div>
-  <div class="slug-block">
-    <h4>Comparisons (9) — 37,148 words</h4>
-    <div class="slug-list"><a href="/compare/algarve-vs-lisbon-property-investment/">algarve-vs-lisbon-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,523w)</span> · <a href="/compare/lagos-vs-vilamoura-investment/">lagos-vs-vilamoura-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,359w)</span> · <a href="/compare/lisbon-vs-cascais-property/">lisbon-vs-cascais-property</a> <span style="color:#a8a29e;font-size:10px;">(4,299w)</span> · <a href="/compare/new-build-vs-resale-property-portugal/">new-build-vs-resale-property-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,078w)</span> · <a href="/compare/porto-vs-lisbon-property-investment/">porto-vs-lisbon-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,401w)</span> · <a href="/compare/portugal-vs-france-property-investment/">portugal-vs-france-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,249w)</span> · <a href="/compare/portugal-vs-greece-property-investment/">portugal-vs-greece-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,286w)</span> · <a href="/compare/portugal-vs-italy-property-investment/">portugal-vs-italy-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,790w)</span> · <a href="/compare/portugal-vs-spain-property-investment/">portugal-vs-spain-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,163w)</span></div>
-  </div>
-  <div class="slug-block">
-    <h4>Areas (21) — 95,724 words</h4>
-    <div class="slug-list"><a href="/areas/albufeira-property-investment/">albufeira-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,891w)</span> · <a href="/areas/alcantara-property-investment/">alcantara-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,377w)</span> · <a href="/areas/braga-property-investment/">braga-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,313w)</span> · <a href="/areas/caldas-da-rainha-property-investment/">caldas-da-rainha-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,951w)</span> · <a href="/areas/cascais-property-investment/">cascais-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,444w)</span> · <a href="/areas/chiado-principe-real-property/">chiado-principe-real-property</a> <span style="color:#a8a29e;font-size:10px;">(4,097w)</span> · <a href="/areas/comporta-property-investment/">comporta-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,113w)</span> · <a href="/areas/ericeira-property-investment/">ericeira-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,096w)</span> · <a href="/areas/faro-property-investment/">faro-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,348w)</span> · <a href="/areas/lagos-property-investment/">lagos-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,568w)</span> · <a href="/areas/lourinha-property-investment/">lourinha-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,764w)</span> · <a href="/areas/marvila-property-investment/">marvila-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,555w)</span> · <a href="/areas/matosinhos-property-investment/">matosinhos-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,066w)</span> · <a href="/areas/nazare-property-investment/">nazare-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,829w)</span> · <a href="/areas/obidos-property-investment/">obidos-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,351w)</span> · <a href="/areas/oeiras-property-investment/">oeiras-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,751w)</span> · <a href="/areas/parque-das-nacoes-property/">parque-das-nacoes-property</a> <span style="color:#a8a29e;font-size:10px;">(4,415w)</span> · <a href="/areas/portimao-property-investment/">portimao-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,992w)</span> · <a href="/areas/tavira-property-investment/">tavira-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(4,326w)</span> · <a href="/areas/vila-nova-de-gaia-property-investment/">vila-nova-de-gaia-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(5,683w)</span> · <a href="/areas/vilamoura-property-investment/">vilamoura-property-investment</a> <span style="color:#a8a29e;font-size:10px;">(3,794w)</span></div>
-  </div>
-  <div class="slug-block">
-    <h4>Segments (7) — 26,360 words</h4>
-    <div class="slug-list"><a href="/segments/american-buyers-portugal-property/">american-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(4,692w)</span> · <a href="/segments/angolan-buyers-portugal/">angolan-buyers-portugal</a> <span style="color:#a8a29e;font-size:10px;">(2,791w)</span> · <a href="/segments/brazilian-buyers-portugal-property/">brazilian-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(2,824w)</span> · <a href="/segments/chinese-buyers-portugal-property/">chinese-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(4,877w)</span> · <a href="/segments/french-buyers-portugal-property/">french-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,398w)</span> · <a href="/segments/german-buyers-portugal-property/">german-buyers-portugal-property</a> <span style="color:#a8a29e;font-size:10px;">(3,732w)</span> · <a href="/segments/uk-buyers-portugal-property-brexit/">uk-buyers-portugal-property-brexit</a> <span style="color:#a8a29e;font-size:10px;">(4,046w)</span></div>
-  </div>
-  <div class="slug-block">
-    <h4>Developers & agencies (3) — 9,655 words</h4>
-    <div class="slug-list"><a href="/developers/farinvest-properties-portugal/">farinvest-properties-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,654w)</span> · <a href="/developers/vanguard-properties-portugal/">vanguard-properties-portugal</a> <span style="color:#a8a29e;font-size:10px;">(3,054w)</span> · <a href="/developers/vic-properties-portugal/">vic-properties-portugal</a> <span style="color:#a8a29e;font-size:10px;">(2,947w)</span></div>
-  </div>
-
-  <div class="section-title">Full SEO audit — 17 June 2026</div>
-  <div class="pulse-wrap">
-    <div class="audit-grid">
-      <div class="audit-item"><strong>Technical SEO: 9/10</strong>Sitemap 200, lead API 200, robots OK, /projects/ noindex + excluded from sitemap, API prerender=false verified.</div>
-      <div class="audit-item"><strong>Indexation: baseline</strong>109 URLs explicit Google API · GSC 0 imp (too early) · sitemap 0 errors · Bing IndexNow active.</div>
-      <div class="audit-item"><strong>On-page / corpus: 9.5/10</strong>91/91 validate PASS · fix:queue empty · 0 em-dash failures · hero diversity rotated 17 Jun.</div>
-      <div class="audit-item"><strong>Content depth: 9/10</strong>355K words · pillar 6157w · avg 3904w · 7 nationality segments · 9 country/city compares.</div>
-      <div class="audit-item"><strong>Entity trust: 8/10</strong>Developers hub live · Farinvest labelled agency · VIC/Vanguard DD · no LeadForm on tier-A (by design).</div>
-      <div class="audit-item"><strong>GEO / AI: 7/10</strong>FAQPage + Article schema · llms.txt present · Wikidata Q-id not yet · news cadence not started.</div>
+    <div class="pulse-card" style="margin-top:16px;">
+      <div class="pulse-card-title"><span class="span-blue"></span> Top Bing Pages</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+        <div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/comparisons/pattaya-vs-phuket-rental-demand/</div><div class="pulse-page-meta"><span class="pulse-badge badge-clicks">2 clk</span><span class="pulse-badge badge-impr">4 imp</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/phuket-property-taxes-fees-complete-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-clicks">1 clk</span><span class="pulse-badge badge-impr">12 imp</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/freehold-vs-leasehold-thailand/</div><div class="pulse-page-meta"><span class="pulse-badge badge-clicks">1 clk</span><span class="pulse-badge badge-impr">12 imp</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/comparisons/phuket-vs-bali-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-clicks">1 clk</span><span class="pulse-badge badge-impr">1 imp</span></div></div>
+        </div>
+        <div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/legal-guide-buying-property-thailand/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">16 imp</span><span class="pulse-badge badge-pos">0 clk</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/chanote-title-deed-explained/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">15 imp</span><span class="pulse-badge badge-pos">0 clk</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/condominium-act-thailand-foreigners/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">13 imp</span><span class="pulse-badge badge-pos">0 clk</span></div></div>
+          <div class="pulse-page-row"><div class="pulse-page-url">/guides/off-plan-property-phuket-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-clicks">1 clk</span><span class="pulse-badge badge-impr">4 imp</span></div></div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="section-title">Promotion recommendations</div>
-  <div class="content-card table-scroll">
-    <table class="content-table">
-      <thead><tr><th>Priority</th><th>Action</th><th>Expected outcome</th></tr></thead>
-      <tbody>
-        <tr><td><span class="tag green">DONE</span></td><td>91 tier-A corpus + qa:full 5/5 + 109 URL indexing batch + sitemap hygiene</td><td>Clean launch baseline before pause</td></tr>
-        <tr><td><span class="tag red">P0</span></td><td><strong>Indexing pause 2–3 weeks</strong> — no new MDX until GSC shows 100+ impressions on pillar URLs</td><td>Avoid crawl budget dilution; let Google process explicit batch</td></tr>
-        <tr><td><span class="tag amber">P1</span></td><td>Weekly GSC refresh via MCP — when pos 8–15 + 50 imp: CTR sprint on IMT, foreigners-buy, Golden Visa fund guides</td><td>First clicks from high-intent legal/tax queries</td></tr>
-        <tr><td><span class="tag amber">P1</span></td><td>Start news collection: 3 short news MDX/day (INE, AL law, Golden Visa fund flows)</td><td>Freshness signal + NewsArticle schema</td></tr>
-        <tr><td><span class="tag blue">P2</span></td><td>Project reviews batch (10–15 off-plan) → then re-enable /projects/ in sitemap</td><td>Commercial project-intent traffic like moregroup.estate /projects/</td></tr>
-        <tr><td><span class="tag blue">P2</span></td><td>Wikidata entity Portuguese Estate + Q-id in Organization sameAs</td><td>GEO citability in ChatGPT/Perplexity</td></tr>
-        <tr><td><span class="tag gray">P3</span></td><td>Wave 14+ only after GSC baseline — expand developer profiles (Liberdade, SEV, etc.)</td><td>Entity authority without cannibalizing hub</td></tr>
-      </tbody>
-    </table>
-  </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+      <div class="pulse-insight" style="background:#fff7ed;border-color:#fed7aa;margin-top:0;">
+        <div class="pulse-insight-icon">⚡</div>
+        <div class="pulse-insight-text"><strong>Google vs Bing (May):</strong> Google 57 clicks / 19 631 imp (0.29% CTR). Bing 18 clicks / 370 imp (~4.9% CTR on aggregated data). Bing volume small but converts better — nationality + comparison content is the wedge.</div>
+      </div>
+      <div class="pulse-insight" style="background:#f0fdf4;border-color:#bbf7d0;margin-top:0;">
+        <div class="pulse-insight-icon">📡</div>
+        <div class="pulse-insight-text"><strong>AI Performance:</strong> Copilot citations not in API yet (Microsoft backlog Feb 2026). Monitor manually in Bing UI until API ships.</div>
+      </div>
+    </div>
 
-  <div class="section-title">Cursor MCP servers (Portugal direction)</div>
-  <div class="info-grid">
-    <div class="info-card">
-      <h3>Analytics &amp; Search MCP</h3>
-      <div class="info-row"><span class="key">GSC</span><span class="val">search-console-portuguese-estate</span></div>
-      <div class="info-row"><span class="key">GA4</span><span class="val">ga4-analytics-portuguese-estate</span></div>
-      <div class="info-row"><span class="key">Bing</span><span class="val">bing-webmaster-portuguese-estate</span></div>
-      <div class="info-row"><span class="key">GSC property</span><span class="val">sc-domain:portuguese-estate.com</span></div>
-      <div class="info-row"><span class="key">Regenerate report</span><span class="val">node scripts/generate-site-report.mjs</span></div>
-    </div>
-    <div class="info-card">
-      <h3>Indexing isolation</h3>
-      <div class="info-row"><span class="key">GCP project</span><span class="val">portuguese-estate-indexing</span></div>
-      <div class="info-row"><span class="key">SA email</span><span class="val">indexing-bot-portugal@…</span></div>
-      <div class="info-row"><span class="key">NOT shared with</span><span class="val">soy-braid / mexico / invest-gulf</span></div>
-      <div class="info-row"><span class="key">Google API</span><span class="val">submit-google-explicit.mjs</span></div>
-      <div class="info-row"><span class="key">Bing</span><span class="val">submit-bing-explicit.mjs</span></div>
-      <div class="info-row"><span class="key">Yandex</span><span class="val">❌ Never (EN site)</span></div>
-    </div>
+    <p class="pulse-footer-note">Bing data via <code>bing-webmaster</code> MCP · weekly buckets in raw API · agent monitors without screenshots</p>
   </div>
 
   <div class="section-title">Technical setup</div>
   <div class="info-grid">
     <div class="info-card">
       <h3>Infrastructure</h3>
-      <div class="info-row"><span class="key">Framework</span><span class="val">Astro 5 + MDX + Vercel</span></div>
-      <div class="info-row"><span class="key">Repository</span><span class="val"><a href="https://github.com/max-diver999/portuguese-estate-website" target="_blank">portuguese-estate-website</a></span></div>
-      <div class="info-row"><span class="key">Domain</span><span class="val"><a href="https://portuguese-estate.com/">portuguese-estate.com</a></span></div>
-      <div class="info-row"><span class="key">Email</span><span class="val">info@portuguese-estate.com</span></div>
-      <div class="info-row"><span class="key">QA</span><span class="val">npm run qa:full</span></div>
+      <div class="info-row"><span class="key">Framework</span><span class="val">Astro 5 (SSR + prerender)</span></div>
+      <div class="info-row"><span class="key">Hosting</span><span class="val">Vercel (auto-deploy)</span></div>
+      <div class="info-row"><span class="key">Repository</span><span class="val"><a href="https://github.com/max-diver999/portuguese-estate-website" target="_blank">GitHub → max-diver999</a></span></div>
+      <div class="info-row"><span class="key">Domain</span><span class="val"><a href="https://portuguese-estate.com" target="_blank">portuguese-estate.com</a></span></div>
+      <div class="info-row"><span class="key">DNS</span><span class="val">Vercel nameservers (via reg.ru)</span></div>
+      <div class="info-row"><span class="key">Styles</span><span class="val">Tailwind CSS</span></div>
+      <div class="info-row"><span class="key">Content format</span><span class="val">MDX (Markdown + components)</span></div>
     </div>
     <div class="info-card">
-      <h3>SEO &amp; schema</h3>
-      <div class="info-row"><span class="key">JSON-LD</span><span class="val">Article + FAQPage + BreadcrumbList</span></div>
-      <div class="info-row"><span class="key">Lead capture</span><span class="val">/get-shortlist/ (no inline LeadForm on tier-A)</span></div>
-      <div class="info-row"><span class="key">Sitemap filter</span><span class="val">thanks · site-report · /projects/</span></div>
-      <div class="info-row"><span class="key">Collections</span><span class="val">guides · compare · areas · segments · developers</span></div>
-      <div class="info-row"><span class="key">Nav</span><span class="val">Developers hub (not empty Projects)</span></div>
+      <h3>Integrations</h3>
+      <div class="info-row"><span class="key">Analytics</span><span class="val">Google Analytics 4 (GA4), Yandex Metrika, Pinterest Tag + Lead event</span></div>
+      <div class="info-row"><span class="key">Search</span><span class="val">Google Search Console + Bing Webmaster (MCP)</span></div>
+      <div class="info-row"><span class="key">Sitemap</span><span class="val">Auto-generated (sitemap-index.xml)</span></div>
+      <div class="info-row"><span class="key">Lead notifications</span><span class="val">Telegram Bot API</span></div>
+      <div class="info-row"><span class="key">SEO</span><span class="val">Canonical, OG (unique per article), Article + BreadcrumbList + ImageObject / NewsArticle / ItemList / FAQPage Schema.org</span></div>
+      <div class="info-row"><span class="key">Lead capture</span><span class="val">5-point system per article</span></div>
+      <div class="info-row"><span class="key">Currency toggle</span><span class="val">USD / EUR / GBP</span></div>
     </div>
   </div>
 
-  <div class="section-title">Launch changelog</div>
-  <div>
+  <div class="section-title">Content breakdown</div>
+  <div class="content-card">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Articles</th>
+          <th>Avg. length</th>
+          <th>SEO target</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Investment &amp; process guides</strong><br><span style="font-size:11px;color:#9ca3af">Golden Visa, IMT, CPCV/escritura, foreigners buying, remote purchase, yields, AIMI, rental licensing — tier-A pillar cluster</span></td>
+          <td><span class="count">51</span></td>
+          <td><span class="words">~3,895 words</span></td>
+          <td><span class="tag blue">Head keywords</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Area guides — Lisbon, Porto, Algarve &amp; coast</strong><br><span style="font-size:11px;color:#9ca3af">Chiado, Alfama, Cascais, Sintra, Faro, Lagos, Óbidos, Gaia, Parque das Nações and 12 more micro-markets</span></td>
+          <td><span class="count">21</span></td>
+          <td><span class="words">~4,780 words</span></td>
+          <td><span class="tag blue">Location intent</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Market comparisons</strong><br><span style="font-size:11px;color:#9ca3af">Portugal vs Spain, France, Italy, Greece, Dubai, UK — plus Lisbon vs Porto and Algarve vs Lisbon</span></td>
+          <td><span class="count">9</span></td>
+          <td><span class="words">~4,502 words</span></td>
+          <td><span class="tag amber">Comparison intent</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Buyer segments</strong><br><span style="font-size:11px;color:#9ca3af">US, UK, EU, retirees, digital nomads, HNWI — persona-specific entry pages</span></td>
+          <td><span class="count">7</span></td>
+          <td><span class="words">~3,963 words</span></td>
+          <td><span class="tag blue">Persona intent</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr>
+          <td><strong>Developer profiles</strong><br><span style="font-size:11px;color:#9ca3af">Farinvest Properties, Domus Development, Vanguard Properties — agency/developer hub pages</span></td>
+          <td><span class="count">3</span></td>
+          <td><span class="words">~3,465 words</span></td>
+          <td><span class="tag amber">Entity SEO</span></td>
+          <td><span class="tag green">Live</span></td>
+        </tr>
+        <tr style="background:#faf8f4;">
+          <td><strong>TOTAL</strong></td>
+          <td><span class="count" style="font-size:24px;">91</span></td>
+          <td><span class="words">~4,150 avg</span></td>
+          <td></td>
+          <td><span class="tag green">All live</span></td>
+        </tr></tbody>
+    </table>
+  </div>
+
+
+  <div class="section-title">Guides — full slug list (51)</div>
+  <div class="content-card" style="margin-bottom:24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+      <div class="pulse-page-row"><div class="pulse-page-url">/guides/aimi-wealth-tax-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,500 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/al-license-transfer-portugal-sale/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,286 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/algarve-airbnb-investment-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,427 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/algarve-property-investment-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,121 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/alojamento-local-license-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,941 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/best-regions-invest-portugal-property-2026/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,860 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/buy-property-portugal-foreigner/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,999 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/can-foreigners-buy-property-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,599 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/cost-of-buying-property-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,891 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/cpcv-promissory-contract-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,861 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/due-diligence-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,693 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/escritura-notary-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,160 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/gross-vs-net-yield-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,103 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/hidden-costs-buying-property-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,420 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/highest-rental-yield-areas-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,187 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/how-to-buy-portugal-property-remotely/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,766 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/how-to-buy-property-portugal-step-by-step/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,524 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/how-to-calculate-rental-yield-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,241 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/imi-property-tax-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,684 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/imt-refund-tax-resident-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,525 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/imt-tax-non-resident-portugal-2026/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,950 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/is-portugal-property-good-investment-2026/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,518 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/lisbon-alojamento-local-containment-zones/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">2,813 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/lisbon-property-investment-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,181 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/long-term-vs-holiday-rental-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,012 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/moderate-rent-tax-incentives-portugal-2026/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,841 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/nif-portugal-property-purchase/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,071 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/non-resident-mortgage-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,490 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/off-plan-property-portugal-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,894 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/porto-alojamento-local-rules/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,403 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/porto-property-investment-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,169 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-buy-to-let-investment-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,234 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-capital-gains-tax-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,470 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-d7-visa-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,363 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-digital-nomad-visa-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,497 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-golden-visa-fund-investment-2026/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,069 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-golden-visa-real-estate-ended/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,292 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-golden-visa-vs-property-purchase/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,463 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-housing-supply-licensing-2025/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,397 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-property-developers-guide-2026/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,522 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-property-investment-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">6,484 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-property-market-forecast-2026-2027/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,641 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-property-market-record-2025-ine-data/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,244 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-property-scams-avoid/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,872 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-rental-yield-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,340 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/portugal-residency-options-without-golden-visa/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,880 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/power-of-attorney-property-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,376 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/property-management-portugal-cost/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,150 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/rnal-registration-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,759 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/silver-coast-portugal-property-guide/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,728 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/guides/stamp-duty-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,745 w</span></div></div>
+    </div>
+  </div>
+  <div class="section-title">Compare — full slug list (9)</div>
+  <div class="content-card" style="margin-bottom:24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+      <div class="pulse-page-row"><div class="pulse-page-url">/compare/algarve-vs-lisbon-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,933 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/compare/lagos-vs-vilamoura-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,713 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/compare/lisbon-vs-cascais-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,700 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/compare/new-build-vs-resale-property-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,421 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/compare/porto-vs-lisbon-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,802 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/compare/portugal-vs-france-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,603 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/compare/portugal-vs-greece-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,648 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/compare/portugal-vs-italy-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,185 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/compare/portugal-vs-spain-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,510 w</span></div></div>
+    </div>
+  </div>
+  <div class="section-title">Areas — full slug list (21)</div>
+  <div class="content-card" style="margin-bottom:24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+      <div class="pulse-page-row"><div class="pulse-page-url">/areas/albufeira-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,035 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/alcantara-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,620 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/braga-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,589 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/caldas-da-rainha-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,181 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/cascais-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,659 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/chiado-principe-real-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,277 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/comporta-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,336 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/ericeira-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,375 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/faro-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,545 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/lagos-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,711 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/lourinha-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,029 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/marvila-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,794 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/matosinhos-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,319 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/nazare-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,071 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/obidos-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,660 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/oeiras-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,968 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/parque-das-nacoes-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,651 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/portimao-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,132 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/tavira-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,471 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/vila-nova-de-gaia-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,951 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/areas/vilamoura-property-investment/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,999 w</span></div></div>
+    </div>
+  </div>
+  <div class="section-title">Developers — full slug list (3)</div>
+  <div class="content-card" style="margin-bottom:24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+      <div class="pulse-page-row"><div class="pulse-page-url">/developers/farinvest-properties-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,952 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/developers/vanguard-properties-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,249 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/developers/vic-properties-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,193 w</span></div></div>
+    </div>
+  </div>
+  <div class="section-title">Segments — full slug list (7)</div>
+  <div class="content-card" style="margin-bottom:24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+      <div class="pulse-page-row"><div class="pulse-page-url">/segments/american-buyers-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,925 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/segments/angolan-buyers-portugal/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">2,939 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/segments/brazilian-buyers-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">2,985 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/segments/chinese-buyers-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">5,126 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/segments/french-buyers-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,574 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/segments/german-buyers-portugal-property/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">3,915 w</span></div></div>
+<div class="pulse-page-row"><div class="pulse-page-url">/segments/uk-buyers-portugal-property-brexit/</div><div class="pulse-page-meta"><span class="pulse-badge badge-impr">4,275 w</span></div></div>
+    </div>
+  </div>
+
+  <div class="section-title">Change history</div>
+  <div class="changelog">
     <div class="changelog-item">
-      <div class="changelog-date">17 June 2026 v1.0</div>
-      <div>
-        <div class="changelog-title">Full site-report rebuilt — Portugal data, all 91 slugs, MCP baseline</div>
-        <div class="changelog-desc">Replaced Mexico template copy. GSC/GA4/Bing MCP pull. Corpus inventory with word counts. Promotion roadmap for indexing pause.</div>
-        <div class="changelog-tags"><span class="tag blue">Report</span><span class="tag green">MCP</span></div>
+      <div class="changelog-date">25 Jun 2026</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Site report v2.0 — full moregroup layout + GSC/GA4 refresh</div>
+        <div class="changelog-desc">Copied complete report structure from portuguese-estate.com v19.1: growth dashboard, SEO Pulse, Bing Pulse, content breakdown, full 91-slug inventory, changelog. Data through 24 Jun: GSC 1 click / 164 imp, GA4 73 sessions, Bing 0/0 launch baseline.</div>
+        <div class="changelog-tags"><span class="tag green">Site-report v2</span><span class="tag blue">GSC MCP</span></div>
       </div>
     </div>
     <div class="changelog-item">
-      <div class="changelog-date">17 Jun 2026</div>
-      <div>
-        <div class="changelog-title">Indexing gap fix — 74df066</div>
-        <div class="changelog-desc">/projects/ noindex + Portugal copy · /developers/ hub fix · hero diversity · Farinvest agency title · VIC hero 404 fix · Farinvest re-indexed.</div>
-        <div class="changelog-tags"><span class="tag green">SEO</span></div>
+      <div class="changelog-date">19 Jun 2026</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Site report v1.0 + indexing gap fix</div>
+        <div class="changelog-desc">/projects/ noindex + sitemap exclude · developers hub Portugal copy · Farinvest agency title/H1 · hero rotation fix · Farinvest re-index Google OK.</div>
+        <div class="changelog-tags"><span class="tag green">Index fix</span><span class="tag amber">Farinvest</span></div>
       </div>
     </div>
     <div class="changelog-item">
-      <div class="changelog-date">17 Jun 2026</div>
-      <div>
-        <div class="changelog-title">Wave 13 — 193baab (7 tier-A)</div>
-        <div class="changelog-desc">Marvila, Alcântara, Lourinhá · Greece compare · developers hub · Chinese segment · Farinvest agency DD.</div>
-        <div class="changelog-tags"><span class="tag green">Wave 13</span></div>
+      <div class="changelog-date">16 Jun 2026</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Wave 13 shipped — 91 MDX total · production launch</div>
+        <div class="changelog-desc">7 tier-A articles (3 areas, compare, hub, segment, developer). qa:full 5/5 PASS. Explicit indexing for wave URLs. Domain live on Vercel.</div>
+        <div class="changelog-tags"><span class="tag green">Launch</span><span class="tag blue">Wave 13</span></div>
       </div>
     </div>
     <div class="changelog-item">
-      <div class="changelog-date">17 Jun 2026</div>
-      <div>
-        <div class="changelog-title">Waves 10–12 — a6f510f → 29a83e2 (21 tier-A)</div>
-        <div class="changelog-desc">Country compares, Silver Coast, segments US/DE/CN, off-plan hub, INE data, Vanguard/VIC developers, France/Greece compares.</div>
-        <div class="changelog-tags"><span class="tag green">Waves 10–12</span></div>
+      <div class="changelog-date">Waves 1–12</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Corpus build — 84 articles across guides, areas, compare, segments, developers</div>
+        <div class="changelog-desc">Tier-A standard: TldrBlock, FaqBlock, LeadForm, 5+ internal links, validate:content pass. Golden Visa, IMT, CPCV, Lisbon/Porto/Algarve area cluster, 9 market comparisons.</div>
+        <div class="changelog-tags"><span class="tag green">Content</span><span class="tag gray">91 MDX</span></div>
       </div>
     </div>
     <div class="changelog-item">
-      <div class="changelog-date">16–17 Jun 2026</div>
-      <div>
-        <div class="changelog-title">Waves 1–9 — corpus foundation (~63 articles)</div>
-        <div class="changelog-desc">National pillar, tax/legal/AL cluster, Lisbon/Porto/Algarve areas, residency, yields, nationality segments UK/FR/BR/AO.</div>
-        <div class="changelog-tags"><span class="tag blue">Waves 1–9</span></div>
-      </div>
-    </div>
-    <div class="changelog-item">
-      <div class="changelog-date">Jun 2026</div>
-      <div>
-        <div class="changelog-title">Portugal indexing isolated + MCP trio</div>
-        <div class="changelog-desc">GCP portuguese-estate-indexing · search-console-portuguese-estate · ga4-analytics-portuguese-estate · bing-webmaster-portuguese-estate.</div>
-        <div class="changelog-tags"><span class="tag gray">Infra</span></div>
+      <div class="changelog-date">Pre-launch</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Scaffold from MORE Group template + portuguese-estate-indexing GCP</div>
+        <div class="changelog-desc">Astro site, qa:full pipeline, dedicated indexing SA, GSC domain property, Bing Webmaster MCP connected.</div>
+        <div class="changelog-tags"><span class="tag blue">Infrastructure</span></div>
       </div>
     </div>
   </div>
 
-  <div class="section-title">Next steps</div>
-  <div>
-    <div class="next-item"><div class="priority high">HIGH</div><div><div class="text">Wait for GSC first impressions (~27 Jun) — refresh SEO Pulse weekly</div><div class="subtext">search-console-portuguese-estate MCP · no new content batch until 100+ impressions on pillar</div></div></div>
-    <div class="next-item"><div class="priority medium">MED</div><div><div class="text">CTR sprint when data arrives: IMT, foreigners-buy, Golden Visa fund, Portugal vs Spain</div><div class="subtext">Target pos 8–15 with 50+ impressions · FAQ + title refresh</div></div></div>
-    <div class="next-item"><div class="priority medium">MED</div><div><div class="text">Launch news cadence (3/day) after first GSC clicks</div><div class="subtext">INE releases · AL containment updates · fund route news</div></div></div>
-    <div class="next-item"><div class="priority low">LOW</div><div><div class="text">Project review batch + Wikidata entity</div><div class="subtext">Re-enable /projects/ in sitemap when 10+ reviews live</div></div></div>
+      <div class="section-title">Next steps — 25 Jun 2026</div>
+  <div class="next-steps">
+    <div class="next-item" style="background:#fef2f2;border-color:#fecaca;">
+      <div class="priority high">P0</div>
+      <div>
+        <div class="text" style="font-weight:700;">Indexing pause — no new MDX until GSC pillar &gt;100 impressions</div>
+        <div class="subtext">Let Google consolidate 91 URLs. Weekly GSC refresh via MCP. Then CTR sprint on compare + step-by-step guides.</div>
+      </div>
+    </div>
+    <div class="next-item" style="background:#fff7ed;border-color:#fed7aa;">
+      <div class="priority medium">P1</div>
+      <div>
+        <div class="text" style="font-weight:700;">CTR sprint when data allows — Portugal vs France (10% CTR proof)</div>
+        <div class="subtext">Scale title/meta pattern to Golden Visa + IMT + foreigners-buy pillars once impressions grow.</div>
+      </div>
+    </div>
+    <div class="next-item">
+      <div class="priority medium">P1</div>
+      <div>
+        <div class="text" style="font-weight:700;">Wave 14 — project reviews (when indexing stable)</div>
+        <div class="subtext">Lotsof Portugal projects · /projects/ hub stays noindex until catalog populated.</div>
+      </div>
+    </div>
+    <div class="next-item">
+      <div class="priority medium">P2</div>
+      <div>
+        <div class="text" style="font-weight:700;">Wikidata entity + DR baseline</div>
+        <div class="subtext">GEO sameAs · first backlinks · news 3/day after GSC traction.</div>
+      </div>
+    </div>
+    <div class="next-item" style="background:#f0fdf4;border-color:#bbf7d0;">
+      <div class="priority low">DONE</div>
+      <div>
+        <div class="text" style="font-weight:700;">Site-report v2.0 full layout · qa:full PASS · sitemap 200</div>
+        <div class="subtext">108 URLs · 377K words · lead API 200 · indexing isolation verified.</div>
+      </div>
+    </div>
   </div>
 
   <div class="section-title">Quick links</div>
   <div class="links-grid">
-    <a class="link-card" href="https://portuguese-estate.com/" target="_blank" rel="noopener"><div class="link-label">Live site</div><div class="link-url">portuguese-estate.com</div></a>
-    <a class="link-card" href="https://portuguese-estate.com/guides/portugal-property-investment-guide/" target="_blank" rel="noopener"><div class="link-label">National pillar</div><div class="link-url">/guides/portugal-property-investment-guide/</div></a>
-    <a class="link-card" href="https://portuguese-estate.com/developers/" target="_blank" rel="noopener"><div class="link-label">Developers hub</div><div class="link-url">/developers/</div></a>
-    <a class="link-card" href="https://portuguese-estate.com/segments/" target="_blank" rel="noopener"><div class="link-label">Segments hub</div><div class="link-url">/segments/</div></a>
-    <a class="link-card" href="https://portuguese-estate.com/sitemap-index.xml" target="_blank" rel="noopener"><div class="link-label">Sitemap</div><div class="link-url">sitemap-index.xml (108 URLs)</div></a>
-    <a class="link-card" href="https://search.google.com/search-console?resource_id=sc-domain:portuguese-estate.com" target="_blank" rel="noopener"><div class="link-label">Google Search Console</div><div class="link-url">sc-domain:portuguese-estate.com</div></a>
-    <a class="link-card" href="https://analytics.google.com/" target="_blank" rel="noopener"><div class="link-label">GA4</div><div class="link-url">ga4-analytics-portuguese-estate MCP</div></a>
-    <a class="link-card" href="https://www.bing.com/webmasters/" target="_blank" rel="noopener"><div class="link-label">Bing Webmaster</div><div class="link-url">portuguese-estate.com</div></a>
-    <a class="link-card" href="https://github.com/max-diver999/portuguese-estate-website" target="_blank" rel="noopener"><div class="link-label">GitHub</div><div class="link-url">max-diver999/portuguese-estate-website</div></a>
+    <a class="link-card" href="https://portuguese-estate.com" target="_blank">
+      <div class="link-label">Live site</div>
+      <div class="link-url">portuguese-estate.com</div>
+    </a>
+    <a class="link-card" href="https://github.com/max-diver999/portuguese-estate-website" target="_blank">
+      <div class="link-label">GitHub repository</div>
+      <div class="link-url">github.com/max-diver999/portuguese-estate-website</div>
+    </a>
+    <a class="link-card" href="https://vercel.com/dashboard" target="_blank">
+      <div class="link-label">Hosting & deploys</div>
+      <div class="link-url">vercel.com/dashboard</div>
+    </a>
+    <a class="link-card" href="https://search.google.com/search-console" target="_blank">
+      <div class="link-label">Google Search Console</div>
+      <div class="link-url">search.google.com/search-console</div>
+    </a>
+    <a class="link-card" href="https://analytics.google.com" target="_blank">
+      <div class="link-label">Google Analytics 4</div>
+      <div class="link-url">analytics.google.com</div>
+    </a>
+    <a class="link-card" href="https://www.bing.com/webmasters" target="_blank">
+      <div class="link-label">Bing Webmaster Tools</div>
+      <div class="link-url">bing.com/webmasters</div>
+    </a>
+    <a class="link-card" href="https://portuguese-estate.com/sitemap-index.xml" target="_blank">
+      <div class="link-label">Sitemap</div>
+      <div class="link-url">portuguese-estate.com/sitemap-index.xml</div>
+    </a>
+  </div>
+  <div class="links-grid">
+    <a class="link-card" href="https://portuguese-estate.com" target="_blank">
+      <div class="link-label">Live site</div>
+      <div class="link-url">portuguese-estate.com</div>
+    </a>
+    <a class="link-card" href="https://github.com/max-diver999/portuguese-estate-website" target="_blank">
+      <div class="link-label">GitHub repository</div>
+      <div class="link-url">github.com/max-diver999/portuguese-estate-website</div>
+    </a>
+    <a class="link-card" href="https://vercel.com/dashboard" target="_blank">
+      <div class="link-label">Hosting & deploys</div>
+      <div class="link-url">vercel.com/dashboard</div>
+    </a>
+    <a class="link-card" href="https://search.google.com/search-console" target="_blank">
+      <div class="link-label">Google Search Console</div>
+      <div class="link-url">search.google.com/search-console</div>
+    </a>
+    <a class="link-card" href="https://analytics.google.com" target="_blank">
+      <div class="link-label">Google Analytics 4</div>
+      <div class="link-url">analytics.google.com</div>
+    </a>
+    <a class="link-card" href="https://www.bing.com/webmasters" target="_blank">
+      <div class="link-label">Bing Webmaster Tools</div>
+      <div class="link-url">bing.com/webmasters</div>
+    </a>
+    <a class="link-card" href="https://portuguese-estate.com/sitemap-index.xml" target="_blank">
+      <div class="link-label">Sitemap</div>
+      <div class="link-url">portuguese-estate.com/sitemap-index.xml</div>
+    </a>
   </div>
 
 </div>
 
-<div class="footer">
-  <strong>Portuguese Estate Site Report v1.0</strong> · 17 June 2026 ·
-  <a href="https://portuguese-estate.com/site-report/">portuguese-estate.com/site-report/</a><br />
-  Data: GSC + GA4 + Bing MCP · Content: generate-site-report.mjs + qa:full · 91 MDX · 355K words<br />
-  EN site — Google + Bing only · never Yandex
+  <div class="footer">
+  <strong>Portuguese Estate</strong> · portuguese-estate.com · Report updated 25 Jun 2026 v2.0 · 108 sitemap URLs · ~378K words · GSC 1 click / 164 imp (1–24 Jun) · GA4 73 sessions · 30 git commits<br>
+  To update: run <code>node scripts/build-portugal-site-report-v2.mjs</code> then deploy
 </div>
+
+
+<script type="application/json" id="chart-data">{"monthlyGsc":[{"label":"Mar","clicks":0,"impressions":0},{"label":"Apr","clicks":0,"impressions":0},{"label":"May","clicks":0,"impressions":0},{"label":"Jun","clicks":1,"impressions":164}],"monthlyGa4":[{"month":"Mar","sessions":0},{"month":"Apr","sessions":0},{"month":"May","sessions":0},{"month":"Jun","sessions":73}],"contentBreakdown":[{"type":"Guides","count":51,"color":"#2d7a5e"},{"type":"Comparisons","count":9,"color":"#d97706"},{"type":"Areas","count":21,"color":"#8b5cf6"},{"type":"Developers","count":3,"color":"#4e9e7e"},{"type":"Segments","count":7,"color":"#60a5fa"}],"dailyRaw":[{"d":"06-17","c":0,"i":1},{"d":"06-18","c":0,"i":20},{"d":"06-19","c":0,"i":11},{"d":"06-20","c":0,"i":38},{"d":"06-21","c":0,"i":25},{"d":"06-22","c":1,"i":31},{"d":"06-23","c":0,"i":38}]}</script>
+<script is:inline>
+(function initReportCharts() {
+  function run() {
+    if (typeof Chart === 'undefined') { setTimeout(run, 50); return; }
+    var el = document.getElementById('chart-data');
+    if (!el) return;
+    var data = JSON.parse(el.textContent);
+    Chart.defaults.font = { family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", size: 11 };
+    Chart.defaults.color = '#7a7a6e';
+
+    var monthly = data.monthlyGsc;
+    var ga4 = data.monthlyGa4;
+    var content = data.contentBreakdown;
+    var daily = data.dailyRaw;
+
+    var cm = document.getElementById('chartMonthly');
+    if (cm) new Chart(cm, {
+      type: 'bar',
+      data: {
+        labels: monthly.map(function(m) { return m.label; }),
+        datasets: [
+          { label: 'Impressions', data: monthly.map(function(m) { return m.impressions; }), backgroundColor: 'rgba(96,165,250,0.35)', borderColor: '#60a5fa', borderWidth: 1, borderRadius: 6, yAxisID: 'y' },
+          { label: 'Clicks', data: monthly.map(function(m) { return m.clicks; }), type: 'line', borderColor: '#2d7a5e', backgroundColor: 'rgba(45,122,94,0.12)', borderWidth: 3, pointRadius: 6, pointBackgroundColor: '#2d7a5e', fill: true, tension: 0.3, yAxisID: 'y1' }
+        ]
+      },
+      options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false }, plugins: { legend: { position: 'bottom' } }, scales: { y: { position: 'left', grid: { color: '#f4f1eb' }, ticks: { callback: function(v) { return v >= 1000 ? (v/1000)+'k' : v; } } }, y1: { position: 'right', grid: { display: false }, min: 0 } } }
+    });
+
+    var cg = document.getElementById('chartGa4');
+    if (cg) new Chart(cg, {
+      type: 'bar',
+      data: { labels: ga4.map(function(m) { return m.month; }), datasets: [{ label: 'Sessions', data: ga4.map(function(m) { return m.sessions; }), backgroundColor: ['rgba(78,158,126,0.45)','rgba(78,158,126,0.55)','rgba(78,158,126,0.7)','rgba(78,158,126,0.85)'], borderColor: '#2d7a5e', borderWidth: 1, borderRadius: 8 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: '#f4f1eb' }, beginAtZero: true }, x: { grid: { display: false } } } }
+    });
+
+    var cc = document.getElementById('chartContent');
+    if (cc) new Chart(cc, {
+      type: 'doughnut',
+      data: { labels: content.map(function(c) { return c.type; }), datasets: [{ data: content.map(function(c) { return c.count; }), backgroundColor: content.map(function(c) { return c.color; }), borderWidth: 2, borderColor: '#fff' }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { boxWidth: 12, padding: 12 } } }, cutout: '58%' }
+    });
+
+    var cd = document.getElementById('chartDaily');
+    if (cd) new Chart(cd, {
+      type: 'line',
+      data: {
+        labels: daily.map(function(d) { return d.d; }),
+        datasets: [
+          { label: 'Impressions', data: daily.map(function(d) { return d.i; }), borderColor: '#93c5fd', backgroundColor: 'rgba(147,197,253,0.22)', fill: true, tension: 0.35, yAxisID: 'y' },
+          { label: 'Clicks', data: daily.map(function(d) { return d.c; }), borderColor: '#2d7a5e', borderWidth: 2.5, pointRadius: 4, tension: 0.35, yAxisID: 'y1' }
+        ]
+      },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { position: 'left', grid: { color: '#f4f1eb' } }, y1: { position: 'right', grid: { display: false }, min: 0 } } }
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+</script>
 
 </body>
 </html>
