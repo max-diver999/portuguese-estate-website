@@ -75,10 +75,10 @@ const {
       <label class="block text-xs font-medium mb-1" for="lf-message">Message (optional)</label>
       <textarea id="lf-message" name="message" rows="3" placeholder="E.g. 2-bed in Lagos, holiday let, €350k budget, non-resident buyer…"></textarea>
     </div>
-    <label class="flex items-start gap-2 text-xs text-[var(--color-muted)] cursor-pointer">
-      <input type="checkbox" name="consent" required class="mt-1 w-4 h-4" />
-      <span>I agree to be contacted about my enquiry. See our <a href="/privacy-policy/">Privacy Policy</a>.</span>
-    </label>
+    <div class="lead-form-consent">
+      <input type="checkbox" id="lf-consent" name="consent" required class="lead-form-consent__check" />
+      <label class="lead-form-consent__label" for="lf-consent">I agree to be contacted about my enquiry. See our <a href="/privacy-policy/">Privacy Policy</a>.</label>
+    </div>
     <button type="submit" class="btn-primary w-full py-3">Request shortlist →</button>
     <p id="lf-success" class="hidden text-green-700 text-sm font-medium text-center">Thank you — redirecting…</p>
     <p id="lf-error" class="hidden text-red-600 text-sm text-center">Something went wrong. Email {SITE.email} directly.</p>
