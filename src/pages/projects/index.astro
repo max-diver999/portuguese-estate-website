@@ -3,14 +3,17 @@ export const prerender = true;
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
-import { formatUsd } from '../../lib/cardImage';
+import { formatUsd, formatProjectPrice } from '../../lib/cardImage';
 
 const projects = (await getCollection('projects'))
   .filter((p) => !p.data.noindex)
-  .sort((a, b) => (a.data.priceFromUsd ?? 0) - (b.data.priceFromUsd ?? 0));
+  .sort((a, b) => (a.data.priceFromEUR ?? a.data.priceFromUsd ?? 0) - (b.data.priceFromEUR ?? b.data.priceFromUsd ?? 0));
 
-const priced = projects.map((p) => p.data.priceFromUsd).filter((v): v is number => !!v && v > 0);
+const priced = projects
+  .map((p) => p.data.priceFromEUR ?? p.data.priceFromUsd)
+  .filter((v): v is number => !!v && v > 0);
 const minPrice = priced.length ? Math.min(...priced) : 150000;
+const minPriceLabel = formatProjectPrice(minPrice, undefined) || formatUsd(minPrice) || '€150K';
 const hasProjects = projects.length > 0;
 ---
 <BaseLayout
@@ -23,7 +26,7 @@ const hasProjects = projects.length > 0;
       <h1 class="text-3xl">Portugal project reviews</h1>
       {hasProjects ? (
         <p class="text-lg text-[var(--color-muted)] mt-3">
-          <strong>{projects.length} projects</strong> with editorial analysis — from <strong>{formatUsd(minPrice) || '€150K'}</strong>, photos, and due diligence notes. Not developer marketing.
+          <strong>{projects.length} projects</strong> with editorial analysis — from <strong>{minPriceLabel}</strong>, photos, and due diligence notes. Not developer marketing.
         </p>
       ) : (
         <p class="text-lg text-[var(--color-muted)] mt-3">
@@ -43,6 +46,7 @@ const hasProjects = projects.length > 0;
             developer={project.data.developer}
             propertyType={project.data.propertyType}
             status={project.data.status}
+            priceFromEUR={project.data.priceFromEUR}
             priceFromUsd={project.data.priceFromUsd}
           />
         ))}
