@@ -14,10 +14,10 @@ export const FEATURED_GUIDE_SLUGS = [
 ] as const;
 
 export const FEATURED_AREA_SLUGS = [
+  'sintra-property-investment',
+  'madeira-property-investment-guide',
   'cascais-property-investment',
   'faro-property-investment',
-  'parque-das-nacoes-property',
-  'vila-nova-de-gaia-property-investment',
 ] as const;
 
 /** Homepage hero fallback until project MDX ship. */
