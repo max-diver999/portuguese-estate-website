@@ -1,21 +1,24 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-27T22:48:14.733Z",
+  "updatedAt": "2026-06-27T22:59:31.183Z",
   "urls": [
     "https://portuguese-estate.com",
     "https://portuguese-estate.com/about",
     "https://portuguese-estate.com/areas",
     "https://portuguese-estate.com/areas/albufeira-property-investment",
     "https://portuguese-estate.com/areas/alcantara-property-investment",
+    "https://portuguese-estate.com/areas/aveiro-property-investment",
     "https://portuguese-estate.com/areas/braga-property-investment",
     "https://portuguese-estate.com/areas/caldas-da-rainha-property-investment",
     "https://portuguese-estate.com/areas/cascais-property-investment",
     "https://portuguese-estate.com/areas/chiado-principe-real-property",
+    "https://portuguese-estate.com/areas/coimbra-property-investment",
     "https://portuguese-estate.com/areas/comporta-property-investment",
     "https://portuguese-estate.com/areas/ericeira-property-investment",
     "https://portuguese-estate.com/areas/faro-property-investment",
     "https://portuguese-estate.com/areas/lagos-property-investment",
     "https://portuguese-estate.com/areas/lourinha-property-investment",
+    "https://portuguese-estate.com/areas/madeira-property-investment-guide",
     "https://portuguese-estate.com/areas/marvila-property-investment",
     "https://portuguese-estate.com/areas/matosinhos-property-investment",
     "https://portuguese-estate.com/areas/nazare-property-investment",
@@ -23,6 +26,8 @@
     "https://portuguese-estate.com/areas/oeiras-property-investment",
     "https://portuguese-estate.com/areas/parque-das-nacoes-property",
     "https://portuguese-estate.com/areas/portimao-property-investment",
+    "https://portuguese-estate.com/areas/setubal-peninsula-property-investment",
+    "https://portuguese-estate.com/areas/sintra-property-investment",
     "https://portuguese-estate.com/areas/tavira-property-investment",
     "https://portuguese-estate.com/areas/vila-nova-de-gaia-property-investment",
     "https://portuguese-estate.com/areas/vilamoura-property-investment",
@@ -3054,6 +3059,76 @@
       "url": "https://portuguese-estate.com/guides/portugal-property-investment-guide",
       "channel": "bing",
       "at": "2026-06-27T22:48:14.733Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/sintra-property-investment",
+      "channel": "google",
+      "at": "2026-06-27T22:59:30.137Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/madeira-property-investment-guide",
+      "channel": "google",
+      "at": "2026-06-27T22:59:30.137Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/coimbra-property-investment",
+      "channel": "google",
+      "at": "2026-06-27T22:59:30.137Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/aveiro-property-investment",
+      "channel": "google",
+      "at": "2026-06-27T22:59:30.137Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/setubal-peninsula-property-investment",
+      "channel": "google",
+      "at": "2026-06-27T22:59:30.137Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/buy-property-portugal-foreigner",
+      "channel": "google",
+      "at": "2026-06-27T22:59:30.137Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-investment-guide",
+      "channel": "google",
+      "at": "2026-06-27T22:59:30.137Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/sintra-property-investment",
+      "channel": "bing",
+      "at": "2026-06-27T22:59:31.183Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/madeira-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-27T22:59:31.183Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/coimbra-property-investment",
+      "channel": "bing",
+      "at": "2026-06-27T22:59:31.183Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/aveiro-property-investment",
+      "channel": "bing",
+      "at": "2026-06-27T22:59:31.183Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/setubal-peninsula-property-investment",
+      "channel": "bing",
+      "at": "2026-06-27T22:59:31.183Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/buy-property-portugal-foreigner",
+      "channel": "bing",
+      "at": "2026-06-27T22:59:31.183Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-27T22:59:31.183Z"
     }
   ]
 }
