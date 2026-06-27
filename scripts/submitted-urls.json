@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-27T22:59:31.183Z",
+  "updatedAt": "2026-06-27T23:12:47.410Z",
   "urls": [
     "https://portuguese-estate.com",
     "https://portuguese-estate.com/about",
@@ -121,6 +121,13 @@
     "https://portuguese-estate.com/portugal-property-consultation",
     "https://portuguese-estate.com/privacy-policy",
     "https://portuguese-estate.com/projects",
+    "https://portuguese-estate.com/projects/carvalhido",
+    "https://portuguese-estate.com/projects/castilho-203",
+    "https://portuguese-estate.com/projects/infinity",
+    "https://portuguese-estate.com/projects/mar-adentro",
+    "https://portuguese-estate.com/projects/six-senses-comporta",
+    "https://portuguese-estate.com/projects/terracos-do-monte",
+    "https://portuguese-estate.com/projects/tomas-ribeiro-79",
     "https://portuguese-estate.com/segments",
     "https://portuguese-estate.com/segments/american-buyers-portugal-property",
     "https://portuguese-estate.com/segments/angolan-buyers-portugal",
@@ -3129,6 +3136,126 @@
       "url": "https://portuguese-estate.com/guides/portugal-property-investment-guide",
       "channel": "bing",
       "at": "2026-06-27T22:59:31.183Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/tomas-ribeiro-79",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/terracos-do-monte",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/castilho-203",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/infinity",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/six-senses-comporta",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/carvalhido",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/mar-adentro",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-investment-guide",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/vanguard-properties-portugal",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/vic-properties-portugal",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/faro-property-investment",
+      "channel": "google",
+      "at": "2026-06-27T23:12:46.083Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/tomas-ribeiro-79",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/terracos-do-monte",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/castilho-203",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/infinity",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/six-senses-comporta",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/carvalhido",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/mar-adentro",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/portugal-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/vanguard-properties-portugal",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/developers/vic-properties-portugal",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/faro-property-investment",
+      "channel": "bing",
+      "at": "2026-06-27T23:12:47.410Z"
     }
   ]
 }
