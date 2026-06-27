@@ -6,9 +6,11 @@ export const HOMEPAGE_HERO_PROJECT_SLUG = '' as const;
 
 export const FEATURED_GUIDE_SLUGS = [
   'how-to-buy-property-portugal-step-by-step',
-  'how-to-buy-portugal-property-remotely',
-  'imt-tax-non-resident-portugal-2026',
+  'complete-before-september-2026-imt-guide',
+  'portugal-property-deposit-guide-cpcv',
   'buy-property-portugal-foreigner',
+  'imt-tax-non-resident-portugal-2026',
+  'how-to-buy-portugal-property-remotely',
 ] as const;
 
 export const FEATURED_AREA_SLUGS = [
