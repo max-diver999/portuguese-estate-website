@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 /**
- * Full QA package — invest-spain-property.com (and template for MORE niche sites).
+ * Full QA package — mexico-invest.com (and template for MORE niche sites).
  *
  * Run this BEFORE saying "audit clean" or pushing content batches.
  * validate:content alone does NOT include em-dash, padding dupes, or live HTML.
  *
  * Usage:
  *   npm run qa:full              # live HTTP + rendered + corpus + validate + build
- *   npm run qa:full:quick        # skip build (faster mid-batch)
+ *   npm run qa:full:quick        # skip build; includes geo citability on changed MDX
  *   node scripts/qa-full.mjs --local   # rendered audit on dist only (after build)
  */
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -62,6 +62,15 @@ const steps = [
     cmd: 'node',
     args: ['scripts/qa-audit.mjs'],
   },
+  ...(existsSync(join(ROOT, 'scripts/geo-citability-audit.mjs'))
+    ? [
+        {
+          name: 'GEO citability (changed MDX, rubric v2)',
+          cmd: 'node',
+          args: ['scripts/geo-citability-audit.mjs', '--changed'],
+        },
+      ]
+    : []),
   ...(SKIP_LIVE
     ? []
     : [

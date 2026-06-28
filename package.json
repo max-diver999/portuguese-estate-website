@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "healthcheck": "node scripts/post-deploy-smoke.mjs --http-only",
     "validate:content": "node scripts/qa-audit.mjs",
+    "geo:audit": "node scripts/geo-citability-audit.mjs",
     "validate:content:changed": "node scripts/qa-audit.mjs --changed",
     "qa:corpus": "node scripts/qa-corpus-signals.mjs",
     "qa:full": "node scripts/qa-full.mjs",
