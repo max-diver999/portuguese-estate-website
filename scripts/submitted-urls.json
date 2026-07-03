@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-28T23:05:03.909Z",
+  "updatedAt": "2026-07-03T12:22:37.195Z",
   "urls": [
     "https://portuguese-estate.com",
     "https://portuguese-estate.com/about",
@@ -3636,6 +3636,111 @@
       "url": "https://portuguese-estate.com/segments/israeli-buyers-portugal-property",
       "channel": "bing",
       "at": "2026-06-28T00:09:16.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/rnal-registration-portugal",
+      "channel": "google",
+      "at": "2026-07-03T12:21:48.442Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-alojamento-local-rules",
+      "channel": "google",
+      "at": "2026-07-03T12:21:48.442Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/property-management-portugal-cost",
+      "channel": "google",
+      "at": "2026-07-03T12:21:48.442Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/moderate-rent-tax-incentives-portugal-2026",
+      "channel": "google",
+      "at": "2026-07-03T12:21:48.442Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/power-of-attorney-property-portugal",
+      "channel": "google",
+      "at": "2026-07-03T12:21:48.442Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/nif-portugal-property-purchase",
+      "channel": "google",
+      "at": "2026-07-03T12:21:48.442Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-property-investment-guide",
+      "channel": "google",
+      "at": "2026-07-03T12:21:48.442Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/rnal-registration-portugal",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:00.588Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-alojamento-local-rules",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:00.588Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/property-management-portugal-cost",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:00.588Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/moderate-rent-tax-incentives-portugal-2026",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:00.588Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/power-of-attorney-property-portugal",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:00.588Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/nif-portugal-property-purchase",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:00.588Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:00.588Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/rnal-registration-portugal",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:37.195Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-alojamento-local-rules",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:37.195Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/property-management-portugal-cost",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:37.195Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/moderate-rent-tax-incentives-portugal-2026",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:37.195Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/power-of-attorney-property-portugal",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:37.195Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/nif-portugal-property-purchase",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:37.195Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-property-investment-guide",
+      "channel": "bing",
+      "at": "2026-07-03T12:22:37.195Z"
     }
   ],
   "syncNote": "dashboard-sync-all-channels"
