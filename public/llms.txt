@@ -1,20 +1,27 @@
 # Portuguese Estate
 
-> Independent research on Portugal property investment for US, UK, and European buyers.
+> Independent research on Portugal property investment for US, UK, EU and Middle East buyers. Not a developer, not a listing portal.
 
 - Site: https://portuguese-estate.com
 - Contact: info@portuguese-estate.com
-- Markets: Lisbon, Algarve, Porto, Comporta, Cascais
-- Focus: IMT 7.5% flat for non-residents (Sep 2026), AL licensing, Golden Visa fund route (€500k), rental yields, foreign buyer share
-- Not a developer, not a listing portal
+- Markets: Lisbon, Porto, Algarve, Comporta, Cascais, Silver Coast, Madeira
+- Focus: IMT 7.5% flat for non-residents (DL 97/2026, from Sep 2026), AL/RNAL licensing, rental yields, buying process for foreigners, developer track records
+- Corpus: 126 pages, updated 2026-07-03
 
-## Collections (scaffold — content publishing next)
-- /guides/
-- /projects/
-- /areas/
-- /compare/
-- /developers/
-- /news/
+## Collections
+- https://portuguese-estate.com/guides/ - Guides (63)
+- https://portuguese-estate.com/areas/ - Area guides (26)
+- https://portuguese-estate.com/compare/ - Comparisons (14)
+- https://portuguese-estate.com/projects/ - Project reviews (7)
+- https://portuguese-estate.com/developers/ - Developer profiles (3)
+- https://portuguese-estate.com/segments/ - Buyer segments (13)
+
+## Key pages
+- https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026/ - IMT 7.5% flat rate for non-residents
+- https://portuguese-estate.com/guides/buy-property-portugal-foreigner/ - foreign buyer hub
+- https://portuguese-estate.com/guides/is-portugal-property-good-investment-2026/ - market verdict 2026
+- https://portuguese-estate.com/guides/rnal-registration-portugal/ - AL licence registration
+- https://portuguese-estate.com/guides/portugal-property-investment-guide/ - investment pillar
 
 ## Full corpus
 https://portuguese-estate.com/llms-full.txt
