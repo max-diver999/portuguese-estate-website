@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-28T00:09:16.880Z",
+  "updatedAt": "2026-06-28T23:05:03.909Z",
   "urls": [
     "https://portuguese-estate.com",
     "https://portuguese-estate.com/about",
@@ -147,7 +147,7 @@
     "https://portuguese-estate.com/tier-luxury",
     "https://portuguese-estate.com/tier-mid"
   ],
-  "syncedAt": "2026-06-17T23:32:05.609Z",
+  "syncedAt": "2026-06-28T23:05:03.909Z",
   "removedWrongDomains": 0,
   "sitemapCount": 108,
   "entries": [
@@ -3637,5 +3637,6 @@
       "channel": "bing",
       "at": "2026-06-28T00:09:16.880Z"
     }
-  ]
+  ],
+  "syncNote": "dashboard-sync-all-channels"
 }

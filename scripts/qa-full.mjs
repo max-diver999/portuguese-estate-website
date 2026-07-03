@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Full QA package — mexico-invest.com (and template for MORE niche sites).
+ * Full QA package — MORE Group niche sites (mexico-invest etalon).
  *
- * Run this BEFORE saying "audit clean" or pushing content batches.
- * validate:content alone does NOT include em-dash, padding dupes, or live HTML.
+ * Run BEFORE "audit clean", "аудит сайта", "аудитируй статьи", or content batch push.
+ * validate:content alone is NEVER sufficient.
  *
  * Usage:
- *   npm run qa:full              # live HTTP + rendered + corpus + validate + build
- *   npm run qa:full:quick        # skip build; includes geo citability on changed MDX
+ *   npm run qa:full              # full corpus GEO + images + live + build
+ *   npm run qa:full:quick        # mid-batch: GEO on --changed only, no build
  *   node scripts/qa-full.mjs --local   # rendered audit on dist only (after build)
  */
 import { spawnSync } from 'node:child_process';
@@ -51,6 +51,10 @@ const renderedArgs = LOCAL_ONLY || QUICK
   ? ['scripts/audit-rendered-live.mjs', '--local', '--fail']
   : ['scripts/audit-rendered-live.mjs', '--fail'];
 
+const geoArgs = QUICK
+  ? ['scripts/geo-citability-audit.mjs', '--changed']
+  : ['scripts/geo-citability-audit.mjs', '--min-score', '90'];
+
 const steps = [
   {
     name: 'Corpus signals (em-dash, padding dupes, fix-queue)',
@@ -58,16 +62,25 @@ const steps = [
     args: ['scripts/qa-corpus-signals.mjs'],
   },
   {
-    name: 'Content validate (qa-audit)',
+    name: 'Content validate (qa-audit, full corpus)',
     cmd: 'node',
     args: ['scripts/qa-audit.mjs'],
   },
+  ...(existsSync(join(ROOT, 'scripts/audit-all-images.mjs'))
+    ? [
+        {
+          name: 'Image URLs (HTTP 200 — all src/, not just heroImage)',
+          cmd: 'node',
+          args: ['scripts/audit-all-images.mjs', '--fail'],
+        },
+      ]
+    : []),
   ...(existsSync(join(ROOT, 'scripts/geo-citability-audit.mjs'))
     ? [
         {
-          name: 'GEO citability (changed MDX, rubric v2)',
+          name: QUICK ? 'GEO citability (--changed MDX)' : 'GEO citability (full corpus, min 90)',
           cmd: 'node',
-          args: ['scripts/geo-citability-audit.mjs', '--changed'],
+          args: geoArgs,
         },
       ]
     : []),
@@ -75,7 +88,7 @@ const steps = [
     ? []
     : [
         {
-          name: 'HTTP smoke (live)',
+          name: 'HTTP smoke (live sitemap + lead API)',
           cmd: 'node',
           args: ['scripts/post-deploy-smoke.mjs', '--http-only'],
         },

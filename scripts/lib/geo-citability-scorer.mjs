@@ -19,8 +19,51 @@ export const THIN_H2_OPEN = 35;
 
 const DEFINITION_RE =
   /\b(is|are|refers to|means|typically|costs|starts at|ranges from|allows|requires)\b/i;
-const STAT_RE =
-  /\b\d+(\.\d+)?\s*(%|percent|million|bn|billion|thousand|k\b|years?|months?|weeks?|days?|sqm|sq\.?\s*m|USD|EUR|GBP|THB|AED|MXN|ZAR)\b|\$\d|€\d|£\d|\d[\d,]*\s*(฿|₽)/i;
+
+/** Stat patterns for GEO density — supports ZAR/R prefix, glued %, and "14 business days". */
+const STAT_PATTERNS = [
+  /\b\d+(?:\.\d+)?%/g,
+  /\b\d+(?:\.\d+)?\s*(?:percent|million|bn|billion|thousand|k\b)/gi,
+  /\b\d+(?:\.\d+)?\s+(?:business\s+)?(?:years?|months?|weeks?|days?)\b/gi,
+  /\b\d+(?:\.\d+)?\s*sqm\b/gi,
+  /\b\d+(?:\.\d+)?\s*sq\.?\s*m(?:²|2)?(?!\w)/gi,
+  /\b\d+(?:\.\d+)?\s*m[²2](?!\w)/gi,
+  /\b\d[\d,]*(?:\.\d+)?\s*(?:USD|EUR|GBP|THB|AED|MXN|ZAR|SAR|SGD|CHF)\b/gi,
+  /\b(?:USD|EUR|GBP|THB|AED|MXN|ZAR|SAR|SGD|CHF)\s+[\d,]+(?:\.\d+)?/gi,
+  /\bR\s?[\d,]+(?:\.\d+)?(?:\s*(?:million|m\b|k\b|bn\b))?/gi,
+  /\$\d[\d,]*(?:\.\d+)?(?:\s*k\b)?/g,
+  /€\d[\d,]*(?:\.\d+)?/g,
+  /£\d[\d,]*(?:\.\d+)?/g,
+  /\d[\d,]*(?:\.\d+)?\s*(?:฿|₽)/g,
+];
+
+/** @deprecated Use hasStat() — kept for callers that expect a RegExp. */
+export const STAT_RE = /\b\d+(?:\.\d+)?(?:%|\s*(?:percent|million|bn|billion|thousand|k\b|years?|months?|weeks?|days?|sqm|sq\.?\s*m(?:²|2)?|USD|EUR|GBP|THB|AED|MXN|ZAR|SAR|SGD|CHF)\b)|\b(?:USD|EUR|GBP|THB|AED|MXN|ZAR|SAR|SGD|CHF|R)\s*[\d,]+|\$\d|€\d|£\d|\d[\d,]*\s*(?:฿|₽)/i;
+
+export function findStatMatches(text) {
+  const spans = [];
+  for (const re of STAT_PATTERNS) {
+    const r = new RegExp(re.source, re.flags);
+    for (const m of text.matchAll(r)) {
+      if (m.index == null) continue;
+      spans.push([m.index, m.index + m[0].length]);
+    }
+  }
+  spans.sort((a, b) => a[0] - b[0]);
+  let count = 0;
+  let lastEnd = -1;
+  for (const [start, end] of spans) {
+    if (start >= lastEnd) {
+      count += 1;
+      lastEnd = end;
+    }
+  }
+  return count;
+}
+
+export function hasStat(text) {
+  return findStatMatches(text) > 0;
+}
 const VAGUE_RE = /\b(many|several|some|often|usually|a lot|significant|various)\b/i;
 const PRONOUN_START_RE = /^(it|this|they|these|those|however|but|and|also)\b/i;
 const QUESTION_H2_RE = /^(what|how|why|when|where|who|which|can|do|does|is|are|should|will)\b/i;
@@ -94,7 +137,7 @@ export function scoreAnswerQuality(plainFirst, heading) {
   else if (words > ANSWER_FIRST_MAX && words <= 90) score += 25;
   else if (words < 15) score -= 20;
   if (DEFINITION_RE.test(plainFirst)) score += 20;
-  if (STAT_RE.test(plainFirst)) score += 15;
+  if (hasStat(plainFirst)) score += 15;
   if (QUESTION_H2_RE.test(heading) || /\?$/.test(heading.trim())) score += 5;
   if (/in this section|we will discuss|let'?s explore|overview of/i.test(plainFirst)) score -= 25;
   return Math.max(0, Math.min(100, score));
@@ -107,9 +150,9 @@ export function scoreSelfContainment(plainFirst, sectionPlain) {
   if (words >= 50 && words <= 200) score += 25;
   else if (words >= 35) score += 12;
   if (PRONOUN_START_RE.test(plainFirst)) score -= 20;
-  if (STAT_RE.test(sectionPlain)) score += 15;
+  if (hasStat(sectionPlain)) score += 15;
   if (/\b(the project|this market|the area|the developer|foreign buyers)\b/i.test(plainFirst)) score += 10;
-  if (VAGUE_RE.test(plainFirst) && !STAT_RE.test(plainFirst)) score -= 10;
+  if (VAGUE_RE.test(plainFirst) && !hasStat(plainFirst)) score -= 10;
   return Math.max(0, Math.min(100, score));
 }
 
@@ -126,7 +169,7 @@ export function scoreStructure(section, heading) {
 }
 
 export function countStats(text) {
-  return (text.match(new RegExp(STAT_RE.source, 'gi')) || []).length;
+  return findStatMatches(text);
 }
 
 export function scoreStatisticalDensity(sectionPlain) {
@@ -180,7 +223,7 @@ export function findCitabilityBlocks(body) {
       (p) =>
         p.words >= CITABILITY_BLOCK_MIN &&
         p.words <= CITABILITY_BLOCK_MAX &&
-        STAT_RE.test(p.plain) &&
+        hasStat(p.plain) &&
         !PRONOUN_START_RE.test(p.plain),
     );
 }

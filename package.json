@@ -35,7 +35,8 @@
     "images:upload:content": "python3 scripts/upload-mexico-cloudinary.py --collection all",
     "images:upload:dry": "python3 scripts/upload-mexico-cloudinary.py --collection all --dry-run",
     "images:rollout": "node scripts/rollout-mexico-cloudinary.mjs",
-    "images:rollout:content": "node scripts/rollout-mexico-cloudinary-content.mjs"
+    "images:rollout:content": "node scripts/rollout-mexico-cloudinary-content.mjs",
+    "audit:images": "node scripts/audit-all-images.mjs --fail"
   },
   "dependencies": {
     "google-auth-library": "^10.6.2",
