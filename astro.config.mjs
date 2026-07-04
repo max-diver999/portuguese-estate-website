@@ -18,7 +18,6 @@ export default defineConfig({
         const excluded = [
           '/thanks/',
           '/site-report/',
-          '/projects/',
         ];
         return !excluded.some((path) => page.includes(path));
       },

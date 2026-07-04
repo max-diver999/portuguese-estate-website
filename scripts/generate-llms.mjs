@@ -23,8 +23,14 @@ const COLLECTIONS = [
 ];
 
 function frontmatterField(src, field) {
-  const m = src.match(new RegExp(`^${field}:\\s*"(.*)"`, 'm'));
-  return m ? m[1] : null;
+  const quoted = src.match(new RegExp(`^${field}:\\s*"(.*)"`, 'm'));
+  if (quoted) return quoted[1];
+  const bare = src.match(new RegExp(`^${field}:\\s*(.+)$`, 'm'));
+  return bare ? bare[1].trim() : null;
+}
+
+function isNoindex(src) {
+  return /^noindex:\s*true\s*$/m.test(src);
 }
 
 const sections = [];
@@ -44,8 +50,9 @@ for (const [dir, label] of COLLECTIONS) {
       const slug = f.replace(/\.mdx$/, '');
       const title = frontmatterField(src, 'title') || slug;
       const desc = frontmatterField(src, 'description') || '';
-      return { slug, title, desc };
+      return { slug, title, desc, noindex: isNoindex(src) };
     })
+    .filter((entry) => !entry.noindex)
     .sort((a, b) => a.slug.localeCompare(b.slug));
   total += entries.length;
   sections.push({ dir, label, entries });
