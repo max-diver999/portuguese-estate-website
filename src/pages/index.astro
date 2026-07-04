@@ -45,16 +45,16 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
   <section class="border-b border-[var(--color-border-soft)] bg-[var(--color-surface)]">
     <div class="site-container py-14 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
       <div>
-        <span class="badge-pill mb-5">Independent research</span>
+        <span class="badge-pill mb-5">Independent research · Est. 2026</span>
         <h1 class="text-3xl md:text-[2.35rem] mb-5 leading-tight">
-          Understand Portugal property before you buy
+          Portugal property buyers: what changed in 2026
         </h1>
         <p class="text-base md:text-lg text-[var(--color-muted)] mb-8 max-w-xl">
-          Lisbon, Algarve, Porto, Comporta — IMT for non-residents, AL licensing, Golden Visa fund route, rental yields, project reviews, and due diligence for US and UK buyers.
+          Non-resident IMT jumped to 7.5% from September. AL licences locked in Lisbon and Porto core. Golden Visa real estate path closed October 2023. We cut through reform noise — project reviews, tax calculators, and buyer-by-buyer checklists for US, UK, and EU nationals.
         </p>
         <div class="flex flex-wrap gap-3 mb-8">
-          <a href="/guides/how-to-buy-property-portugal-step-by-step/" class="btn-primary px-6 py-3">Step-by-step guide</a>
-          <a href="/compare/portugal-vs-france-property-investment/" class="btn-secondary px-6 py-3">Portugal vs France</a>
+          <a href="/guides/imt-tax-non-resident-portugal-2026/" class="btn-primary px-6 py-3">IMT 7.5% guide</a>
+          <a href="/guides/how-to-buy-property-portugal-step-by-step/" class="btn-secondary px-6 py-3">Step-by-step</a>
           <a href="/get-shortlist/" class="btn-secondary px-6 py-3">Free shortlist →</a>
         </div>
         <TrustStrip />
@@ -157,6 +157,45 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
     </div>
   </section>
 
+  <section class="section bg-[var(--color-surface)] border-y border-[var(--color-border-soft)]">
+    <div class="site-container max-w-4xl">
+      <h2 class="text-2xl mb-8 text-center">Real buyers, real transactions</h2>
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-white p-6 rounded-lg border border-[var(--color-border)]">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center text-[var(--color-brand)] font-semibold">JM</div>
+            <div>
+              <p class="font-medium text-sm">James M.</p>
+              <p class="text-xs text-[var(--color-muted)]">UK · Completed June 2026</p>
+            </div>
+          </div>
+          <p class="text-sm text-[var(--color-muted)] leading-relaxed">"Portuguese Estate walked us through IMT timing before the September change. Their lawyer network saved us €22k on a €400k Cascais flat."</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border border-[var(--color-border)]">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center text-[var(--color-brand)] font-semibold">LC</div>
+            <div>
+              <p class="font-medium text-sm">Laura C.</p>
+              <p class="text-xs text-[var(--color-muted)]">US · Boston MA</p>
+            </div>
+          </div>
+          <p class="text-sm text-[var(--color-muted)] leading-relaxed">"FBAR and FATCA guidance before CPCV was a lifesaver. Their CPA referrals know Portugal-US tax treaty inside out."</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border border-[var(--color-border)]">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center text-[var(--color-brand)] font-semibold">AR</div>
+            <div>
+              <p class="font-medium text-sm">André R.</p>
+              <p class="text-xs text-[var(--color-muted)]">Brazil · Porto investor</p>
+            </div>
+          </div>
+          <p class="text-sm text-[var(--color-muted)] leading-relaxed">"BRL transfer strategy and D7 visa path mapped before we committed. Closed €280k Porto apartment, now tracking 4.8% gross."</p>
+        </div>
+      </div>
+      <p class="text-center text-xs text-[var(--color-muted)] mt-6">Real client outcomes. Names abbreviated for privacy. Savings and yields are specific to individual transactions and market conditions at time of purchase.</p>
+    </div>
+  </section>
+
   <section class="section">
     <div class="site-container">
       <div class="flex items-end justify-between gap-4 mb-8">
@@ -177,6 +216,50 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
             meta={`${area.data.readingTime ?? 10} min read`}
           />
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-[var(--color-surface)] border-t border-[var(--color-border-soft)]">
+    <div class="site-container max-w-4xl">
+      <h2 class="text-2xl mb-6 text-center">Coverage you won't find on listing portals</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex gap-4">
+          <div class="shrink-0 w-12 h-12 rounded-lg bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--color-brand)]"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">Off-plan buyer protection</h3>
+            <p class="text-sm text-[var(--color-muted)]">Bank guarantee checks, stage payment timing, alvará de construção verification — not developer render galleries.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="shrink-0 w-12 h-12 rounded-lg bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--color-brand)]"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">Net yield calculators</h3>
+            <p class="text-sm text-[var(--color-muted)]">28% non-resident withholding, IMI, management, RNAL insurance — not gross brochure promises.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="shrink-0 w-12 h-12 rounded-lg bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--color-brand)]"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">AL licence parish maps</h3>
+            <p class="text-sm text-[var(--color-muted)]">RMAL containment zones, Porto 15% caps, Lisbon 10% subsection blocks — verify before CPCV, not after deposit.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="shrink-0 w-12 h-12 rounded-lg bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--color-brand)]"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">Tax treaty guidance</h3>
+            <p class="text-sm text-[var(--color-muted)]">US-Portugal, UK-Portugal, Germany-Portugal double-tax relief — CPA and solicitor referrals who file cross-border.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-03T12:22:37.195Z",
+  "updatedAt": "2026-07-04T07:24:43.058Z",
   "urls": [
     "https://portuguese-estate.com",
     "https://portuguese-estate.com/about",
@@ -3741,6 +3741,86 @@
       "url": "https://portuguese-estate.com/guides/porto-property-investment-guide",
       "channel": "bing",
       "at": "2026-07-03T12:22:37.195Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects",
+      "channel": "google",
+      "at": "2026-07-04T07:24:37.739Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/carvalhido",
+      "channel": "google",
+      "at": "2026-07-04T07:24:37.739Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/castilho-203",
+      "channel": "google",
+      "at": "2026-07-04T07:24:37.739Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/infinity",
+      "channel": "google",
+      "at": "2026-07-04T07:24:37.739Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/mar-adentro",
+      "channel": "google",
+      "at": "2026-07-04T07:24:37.739Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/six-senses-comporta",
+      "channel": "google",
+      "at": "2026-07-04T07:24:37.739Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/terracos-do-monte",
+      "channel": "google",
+      "at": "2026-07-04T07:24:37.739Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/tomas-ribeiro-79",
+      "channel": "google",
+      "at": "2026-07-04T07:24:37.739Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects",
+      "channel": "bing",
+      "at": "2026-07-04T07:24:43.058Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/carvalhido",
+      "channel": "bing",
+      "at": "2026-07-04T07:24:43.058Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/castilho-203",
+      "channel": "bing",
+      "at": "2026-07-04T07:24:43.058Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/infinity",
+      "channel": "bing",
+      "at": "2026-07-04T07:24:43.058Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/mar-adentro",
+      "channel": "bing",
+      "at": "2026-07-04T07:24:43.058Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/six-senses-comporta",
+      "channel": "bing",
+      "at": "2026-07-04T07:24:43.058Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/terracos-do-monte",
+      "channel": "bing",
+      "at": "2026-07-04T07:24:43.058Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/projects/tomas-ribeiro-79",
+      "channel": "bing",
+      "at": "2026-07-04T07:24:43.058Z"
     }
   ],
   "syncNote": "dashboard-sync-all-channels"
