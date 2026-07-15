@@ -1,0 +1,100 @@
+<script>
+  import {
+    createLeadId,
+    getLeadAttribution,
+    initializeLeadAttribution,
+    rememberLastCta,
+  } from '../lib/lead-attribution';
+  import {
+    addRefCodeToWhatsAppHref,
+    buildWhatsAppRefCode,
+    getWhatsAppMessage,
+    isWhatsAppHref,
+    isWhatsAppPlacement,
+    type WhatsAppIntentPayload,
+  } from '../lib/whatsapp-intent';
+
+  initializeLeadAttribution();
+
+  const delay = (milliseconds: number) =>
+    new Promise<void>((resolve) => window.setTimeout(resolve, milliseconds));
+
+  function trackWhatsAppClick(placement: string, refCode: string) {
+    try {
+      const params = { wa_placement: placement, wa_ref: refCode };
+      // @ts-ignore
+      if (typeof window.investGulfTrack === 'function') {
+        // @ts-ignore
+        window.investGulfTrack('click_whatsapp', params);
+      }
+    } catch {
+      // Analytics must never block WhatsApp.
+    }
+  }
+
+  document.addEventListener('click', async (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    const link = target?.closest<HTMLAnchorElement>('a[data-wa-placement]');
+    if (!link || link.dataset.waPending === 'true') return;
+
+    const href = link.href;
+    const placement = link.dataset.waPlacement || '';
+    if (!isWhatsAppHref(href) || !isWhatsAppPlacement(placement)) return;
+
+    event.preventDefault();
+    link.dataset.waPending = 'true';
+    rememberLastCta(link);
+
+    const attribution = getLeadAttribution();
+    const intentId = createLeadId('wa');
+    const refCode = buildWhatsAppRefCode(attribution.page, placement);
+    const destination = addRefCodeToWhatsAppHref(href, refCode);
+    const ctaId = link.dataset.cta || '';
+    const ctaText = (link.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 240);
+    const payload: WhatsAppIntentPayload = {
+      intentId,
+      sessionId: attribution.sessionId,
+      placement,
+      refCode,
+      page: attribution.page,
+      currentPage: attribution.currentPage,
+      landingPage: attribution.landingPage,
+      referrer: attribution.referrer,
+      firstReferrer: attribution.firstReferrer,
+      externalAiSource: attribution.externalAiSource,
+      ctaId,
+      ctaText,
+      message: getWhatsAppMessage(destination),
+      destination,
+      utm: attribution.utm,
+      userAgent: navigator.userAgent,
+    };
+
+    link.href = destination;
+    const opensNewTab = link.target === '_blank';
+    const popup = opensNewTab ? window.open('about:blank', '_blank') : null;
+    if (popup) popup.opener = null;
+
+    try {
+      await Promise.race([
+        fetch('/api/wa-intent/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true,
+        }),
+        delay(900),
+      ]);
+      trackWhatsAppClick(placement, refCode);
+    } catch {
+      // Tracking must never block WhatsApp.
+    } finally {
+      link.dataset.waPending = 'false';
+      if (popup && !popup.closed) {
+        popup.location.href = destination;
+      } else if (!opensNewTab) {
+        window.location.assign(destination);
+      }
+    }
+  }, { capture: true });
+</script>

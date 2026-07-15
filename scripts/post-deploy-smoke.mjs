@@ -2,7 +2,7 @@
 /**
  * Post-deploy smoke test for portuguese-estate.com
  * Usage: node scripts/post-deploy-smoke.mjs [--http-only]
- *        SITE_URL=https://invest-spain-property.com node scripts/post-deploy-smoke.mjs
+ *        SITE_URL=https://portuguese-estate.com node scripts/post-deploy-smoke.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -75,6 +75,28 @@ async function runHttpChecks(site) {
   log(lead.ok || lead.status === 500, 'POST /api/lead/', String(lead.status));
   if (lead.status === 405) {
     log(false, 'lead API prerender', '405 — add export const prerender = false');
+    failed++;
+  }
+
+  const waIntent = await siteFetch(`${site}/api/wa-intent/`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      intentId: 'wa_healthcheck00000001',
+      sessionId: 'session_healthcheck',
+      placement: 'inline_cta',
+      page: '/contact/',
+      currentPage: `${site}/contact/`,
+      landingPage: `${site}/contact/`,
+      ctaId: 'healthcheck',
+      ctaText: 'WhatsApp us',
+      destination: 'https://wa.me/66651195327',
+      message: 'healthcheck',
+    }),
+  });
+  log(waIntent.ok, 'POST /api/wa-intent/', String(waIntent.status));
+  if (waIntent.status === 405) {
+    log(false, 'wa-intent API prerender', '405 — add export const prerender = false');
     failed++;
   }
 
