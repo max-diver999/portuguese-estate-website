@@ -1,6 +1,5 @@
 import type { APIRoute } from 'astro';
 import { detectExternalAiSource } from '../../lib/lead-attribution';
-import { sendLeadNotifyEmail } from '../../lib/lead-notify-email';
 import { SITE } from '../../data/site';
 import {
   buildWhatsAppRefCode,
@@ -12,8 +11,6 @@ export const prerender = false;
 
 const TG_TOKEN = import.meta.env.TG_TOKEN || process.env.TG_TOKEN || '';
 const TG_CHAT_ID = import.meta.env.TG_CHAT_ID || process.env.TG_CHAT_ID || '';
-const LEAD_FROM_EMAIL =
-  import.meta.env.LEAD_FROM_EMAIL || `Portuguese Estate <${SITE.email}>`;
 
 function cleanText(value: unknown, max = 500): string {
   return String(value || '').trim().slice(0, max);
@@ -100,9 +97,7 @@ export const POST: APIRoute = async ({ request }) => {
     const ctaId = cleanText(body.ctaId, 160);
     const ctaText = cleanText(body.ctaText, 240);
     const referrer = cleanText(body.referrer, 1000);
-    const destination = cleanText(body.destination, 1500);
     const message = cleanText(body.message, 1000);
-    const userAgent = cleanText(request.headers.get('user-agent') || body.userAgent, 500);
     const utm = body.utm && typeof body.utm === 'object' ? body.utm : {};
     const utmText = Object.entries(utm)
       .map(([key, value]) => `${cleanText(key, 80)}=${cleanText(value, 300)}`)
@@ -124,22 +119,6 @@ export const POST: APIRoute = async ({ request }) => {
       sessionId ? `🔗 <b>Session:</b> ${escapeHtml(sessionId)}` : null,
     ].filter(Boolean).join('\n');
 
-    const plainLines = [
-      'WhatsApp click | portuguese-estate.com',
-      `Ref: ${refCode}`,
-      `Placement: ${placementText}`,
-      `Page: ${currentPage || page}`,
-      landingPage ? `Landing: ${landingPage}` : null,
-      ctaText ? `CTA: ${ctaText}` : null,
-      ctaId ? `CTA ID: ${ctaId}` : null,
-      externalAiSource ? `External AI: ${externalAiSource}` : null,
-      referrer ? `Referrer: ${referrer}` : null,
-      utmText ? `UTM: ${utmText}` : null,
-      message ? `Prefill: ${message}` : null,
-      `Intent: ${intentId}`,
-      sessionId ? `Session: ${sessionId}` : null,
-      userAgent ? `User agent: ${userAgent}` : null,
-    ].filter(Boolean).join('\n');
 
     let telegram = false;
     try {
@@ -148,15 +127,7 @@ export const POST: APIRoute = async ({ request }) => {
       console.error(error);
     }
 
-    try {
-      await sendLeadNotifyEmail({
-        subject: `WhatsApp click — portuguese-estate.com (${refCode})`,
-        htmlBody: plainLines,
-        from: LEAD_FROM_EMAIL,
-      });
-    } catch (error) {
-      console.error('wa-intent email notify failed:', error);
-    }
+    // Telegram only — no owner inbox email (Kommo). Real leads: /api/lead/ with phone.
 
     return new Response(
       JSON.stringify({
