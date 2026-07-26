@@ -45,6 +45,8 @@ const orgSchema = {
   },
   sameAs: [
     SITE.url,
+    ...SITE.sameAs,
+    ...(SITE.wikidataId ? [`https://www.wikidata.org/wiki/${SITE.wikidataId}`] : []),
   ],
 };
 

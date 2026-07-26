@@ -8,4 +8,10 @@ export const SITE = {
   whatsapp: 'https://wa.me/66651195327',
   whatsappDisplay: '+66 65 119 5327',
   editorial: 'Portuguese Estate Editorial',
+  /** Wikidata entity — https://www.wikidata.org/wiki/Q140698878 */
+  wikidataId: 'Q140698878' as string | null,
+  sameAs: [
+    'https://portuguese-estate.com/about/',
+    'https://moregroup.estate/about/',
+  ],
 };

@@ -4,6 +4,7 @@
 
 - Site: https://portuguese-estate.com
 - Contact: info@portuguese-estate.com
+- Wikidata: https://www.wikidata.org/wiki/Q140698878
 - Markets: Lisbon, Porto, Algarve, Comporta, Cascais, Silver Coast, Madeira
 - Focus: IMT 7.5% flat for non-residents (DL 97/2026, from Sep 2026), AL/RNAL licensing, rental yields, buying process for foreigners, developer track records
 - Corpus: 126 pages, updated 2026-07-04
