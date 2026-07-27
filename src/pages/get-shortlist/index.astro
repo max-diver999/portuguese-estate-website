@@ -3,25 +3,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import FaqBlock from '../../components/FaqBlock.astro';
 import CommercialBudgetLadder from '../../components/CommercialBudgetLadder.astro';
+import { LEAD_OFFER_SUBTEXT } from '../../data/leadOffer';
 
 const faqItems = [
   {
     question: 'What do I receive after submitting the shortlist form?',
-    answer: 'Within one business day you get 3–5 vetted options matched to your budget band and region, with price range, yield notes where relevant, and links to our due diligence guides. No developer pressure and no buyer-side commission from Portuguese Estate.',
+    answer:
+      'Within one business day you get 3-5 vetted options matched to your budget and region, with price range, yield notes where relevant, and links to our due diligence guides. No developer pressure and no buyer-side commission from Portuguese Estate.',
   },
   {
-    question: 'Which Italian regions can you shortlist?',
-    answer: 'Tuscany, Puglia, Milan/Lombardy, Lake Como, Sicily, Sardinia, Liguria, and Rome/Lazio. Tell us your goal (yield, holiday home, off-plan, relocation) and we filter accordingly.',
+    question: 'Which Portugal regions can you shortlist?',
+    answer:
+      'Lisbon and AML fringe, Cascais, Sintra, Porto and Gaia, Algarve (Faro, Lagos, Vilamoura), Silver Coast, Comporta, and Madeira. Tell us your goal (yield, holiday home, off-plan, relocation) and we filter accordingly.',
   },
   {
     question: 'Do you sell property directly?',
-    answer: 'No. Portuguese Estate publishes independent research. When you request a shortlist we may introduce a licensed Italian agency or developer partner after you opt in. Always verify cadastral records, IMU, and STR rules before any deposit.',
+    answer:
+      'No. Portuguese Estate publishes independent research. When you request a shortlist we may introduce a licensed Portuguese lawyer or agent after you opt in. Always verify caderneta, IMT exposure, and AL rules before any deposit.',
   },
 ];
 ---
 <BaseLayout
   title="Portugal Property Shortlist for Foreign Buyers"
-  description="Free independent shortlist for Portugal property buyers. Tuscany, Puglia, Milan, Lake Como — budget-matched options within one business day. Not a portal."
+  description="Free independent shortlist for Portugal property buyers: Lisbon, Algarve, Porto, Cascais. Budget-matched options plus IMT and net yield notes within one business day."
 >
   <section class="site-container py-12 md:py-16 max-w-3xl">
     <CommercialBudgetLadder />
@@ -29,21 +33,33 @@ const faqItems = [
       <span class="badge-pill mb-4">Free · Independent</span>
       <h1 class="mb-3">Get your Portugal property shortlist</h1>
       <p class="text-lg text-[var(--color-muted)]">
-        Share budget, region, and goal. We match you with vetted resale, off-plan, and new-build options — no spam, no listing portal noise.
+        {LEAD_OFFER_SUBTEXT} Share budget, region, and residency status. No spam, no listing portal noise.
       </p>
     </header>
 
     <div class="prose mb-10 text-[var(--color-muted)]">
-      <p><strong>Quick answer:</strong> Foreign buyers can own freehold residential property across Italy subject to reciprocity checks at the notary. Entry from roughly €150k in Puglia or Sicily countryside; Milan and Lake Como start higher. Budget 10–12% on top of price for taxes, notary, and registration on a second home.</p>
-      <p>Regional landings: <a href="/invest-tuscany-property/">Invest Tuscany</a> · <a href="/invest-puglia-property/">Invest Puglia</a> · <a href="/invest-lake-como-property/">Invest Lake Como</a> · <a href="/invest-sicily-property/">Invest Sicily</a> · <a href="/portugal-property-consultation/">Cross-region consultation</a></p>
-      <p>Research: <a href="/guides/buy-property-italy-foreigner/">Buy property in Italy as a foreigner</a> · <a href="/guides/cost-of-buying-property-italy/">Closing costs</a> · <a href="/guides/due-diligence-italy-property/">Due diligence</a></p>
+      <p>
+        <strong>Quick answer:</strong> Foreign buyers can own freehold residential property in Portugal with a NIF, bank account, and lawyer-led due diligence. Non-residents completing on or after 1 September 2026 pay flat 7.5% IMT plus 0.8% stamp duty on residential purchases. Budget 10-13% on top of price for taxes, notary, and legal fees.
+      </p>
+      <p>
+        Start here:
+        <a href="/guides/how-to-buy-property-portugal-step-by-step/">Step-by-step purchase</a>
+        ·
+        <a href="/guides/imt-tax-non-resident-portugal-2026/">IMT 7.5% guide</a>
+        ·
+        <a href="/guides/portugal-property-under-300000-euros/">Under €300k</a>
+        ·
+        <a href="/guides/portugal-property-under-500000-euros/">Under €500k</a>
+      </p>
+      <p>
+        By buyer profile:
+        <a href="/segments/uk-buyers-portugal-property-brexit/">UK buyers</a>
+        ·
+        <a href="/segments/american-buyers-portugal-property/">US buyers</a>
+      </p>
     </div>
 
-    <LeadForm
-      title="Request your shortlist"
-      subtitle="Tuscany · Puglia · Milan · Lake Como · Sicily"
-      context="Get shortlist page"
-    />
+    <LeadForm title="Request your shortlist" subtitle={LEAD_OFFER_SUBTEXT} context="Get shortlist page" />
 
     <FaqBlock items={faqItems} />
 

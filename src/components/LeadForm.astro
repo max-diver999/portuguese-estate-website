@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../data/site';
+import { LEAD_OFFER_FORM_TITLE, LEAD_OFFER_SUBTEXT } from '../data/leadOffer';
 
 interface Props {
   title?: string;
@@ -8,8 +9,8 @@ interface Props {
 }
 
 const {
-  title = 'Get your Portugal property shortlist',
-  subtitle = 'Share your budget and target region — we respond within one business day.',
+  title = LEAD_OFFER_FORM_TITLE,
+  subtitle = LEAD_OFFER_SUBTEXT,
   context = '',
 } = Astro.props;
 
