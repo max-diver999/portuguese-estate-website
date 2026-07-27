@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-27T07:20:02.880Z",
+  "updatedAt": "2026-07-27T08:02:14.941Z",
   "urls": [
     "https://portuguese-estate.com",
     "https://portuguese-estate.com/about",
@@ -3921,6 +3921,61 @@
       "url": "https://portuguese-estate.com/areas/setubal-peninsula-property-investment",
       "channel": "bing",
       "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-buy-property-portugal-step-by-step",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/buy-property-portugal-foreigner",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/property-management-portugal-cost",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/porto-alojamento-local-rules",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/rnal-registration-portugal",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/nif-portugal-property-purchase",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/power-of-attorney-property-portugal",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/uk-buyers-portugal-property-brexit",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/american-buyers-portugal-property",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/get-shortlist",
+      "channel": "google",
+      "at": "2026-07-27T08:02:14.941Z"
     }
   ],
   "syncNote": "dashboard-sync-all-channels"
