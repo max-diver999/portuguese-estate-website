@@ -2,10 +2,10 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.portuguese-estate.com" }],
-      "destination": "https://portuguese-estate.com/:path*",
-      "permanent": true
+      "destination": "https://portuguese-estate.com/$1",
+      "statusCode": 308
     }
   ],
   "headers": [
