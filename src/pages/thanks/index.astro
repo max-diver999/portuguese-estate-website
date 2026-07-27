@@ -1,8 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE } from '../../data/site';
-
-const isLead = Astro.url.searchParams.get('lead') === '1';
 ---
 <BaseLayout
   title="Thank You"
@@ -11,21 +9,47 @@ const isLead = Astro.url.searchParams.get('lead') === '1';
 >
   <section class="site-container py-20 max-w-xl text-center">
     <p class="text-4xl mb-4">✓</p>
-    <h1 class="mb-4">{isLead ? 'Request received' : 'Thank you'}</h1>
-    <p class="text-[var(--color-muted)] mb-8">
-      {isLead
-        ? 'We received your shortlist request. Expect a reply by email or WhatsApp within one business day.'
-        : `Thanks for visiting ${SITE.name}.`}
-    </p>
+    <h1 class="mb-4" id="thanks-heading">Thank you</h1>
+    <p class="text-[var(--color-muted)] mb-8" id="thanks-body">Thanks for visiting {SITE.name}.</p>
     <a href="/guides/" class="btn-primary px-6 py-3">Browse guides</a>
   </section>
-  {isLead && (
-    <script is:inline>
-      if (typeof window.investGulfTrack === 'function') {
-        window.investGulfTrack('generate_lead', { lead_type: 'shortlist_form', value: 1, currency: 'USD' });
-      } else if (typeof window.gtag === 'function') {
-        window.gtag('event', 'generate_lead', { lead_type: 'shortlist_form', value: 1, currency: 'USD' });
+  {/* This page is prerendered, so lead=1 must be read in the browser, not at build time. */}
+  <script is:inline>
+    (function () {
+      var isLead = false;
+      try {
+        isLead = new URLSearchParams(window.location.search).get('lead') === '1';
+      } catch (e) {
+        isLead = false;
       }
-    </script>
-  )}
+      if (!isLead) return;
+
+      var heading = document.getElementById('thanks-heading');
+      var body = document.getElementById('thanks-body');
+      if (heading) heading.textContent = 'Request received';
+      if (body) {
+        body.textContent =
+          'We received your shortlist request. Expect a reply by email or WhatsApp within one business day.';
+      }
+
+      var track = function (name, params) {
+        if (typeof window.investGulfTrack === 'function') window.investGulfTrack(name, params);
+        else if (typeof window.gtag === 'function') window.gtag('event', name, params);
+      };
+      var params = { lead_type: 'shortlist_form', page_path: window.location.pathname };
+      track('page_view_thanks', params);
+
+      var alreadySent = false;
+      try {
+        var stamp = Number(sessionStorage.getItem('pe_lead_event_sent') || 0);
+        alreadySent = stamp > 0 && Date.now() - stamp < 120000;
+        sessionStorage.removeItem('pe_lead_event_sent');
+      } catch (e) {
+        alreadySent = false;
+      }
+      if (!alreadySent) {
+        track('generate_lead', Object.assign({ value: 1, currency: 'EUR' }, params));
+      }
+    })();
+  </script>
 </BaseLayout>

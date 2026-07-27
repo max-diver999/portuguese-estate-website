@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-04T07:24:43.058Z",
+  "updatedAt": "2026-07-27T07:20:02.880Z",
   "urls": [
     "https://portuguese-estate.com",
     "https://portuguese-estate.com/about",
@@ -3821,6 +3821,106 @@
       "url": "https://portuguese-estate.com/projects/tomas-ribeiro-79",
       "channel": "bing",
       "at": "2026-07-04T07:24:43.058Z"
+    },
+    {
+      "url": "https://portuguese-estate.com",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/get-shortlist",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-buy-property-portugal-step-by-step",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/uk-buyers-portugal-property-brexit",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/american-buyers-portugal-property",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/sintra-property-investment",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/aveiro-property-investment",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/coimbra-property-investment",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/setubal-peninsula-property-investment",
+      "channel": "google",
+      "at": "2026-07-27T07:20:00.570Z"
+    },
+    {
+      "url": "https://portuguese-estate.com",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/get-shortlist",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/guides/how-to-buy-property-portugal-step-by-step",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/uk-buyers-portugal-property-brexit",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/segments/american-buyers-portugal-property",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/sintra-property-investment",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/aveiro-property-investment",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/coimbra-property-investment",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
+    },
+    {
+      "url": "https://portuguese-estate.com/areas/setubal-peninsula-property-investment",
+      "channel": "bing",
+      "at": "2026-07-27T07:20:02.880Z"
     }
   ],
   "syncNote": "dashboard-sync-all-channels"

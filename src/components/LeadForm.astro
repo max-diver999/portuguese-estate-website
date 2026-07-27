@@ -149,6 +149,23 @@ const waHref = `${SITE.whatsapp}?text=${waText}`;
           body: JSON.stringify(payload),
         });
         if (!res.ok) throw new Error('fail');
+        const leadEvent = {
+          form_id: form.id || 'ig-lead-form',
+          page_path: window.location.pathname,
+          lead_context: form.dataset.context || '',
+          value: 1,
+          currency: 'EUR',
+        };
+        // @ts-ignore
+        if (typeof window.investGulfTrack === 'function') window.investGulfTrack('generate_lead', leadEvent);
+        // @ts-ignore
+        else if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', leadEvent);
+        try {
+          // Lets /thanks/ skip a duplicate generate_lead when this event already fired.
+          sessionStorage.setItem('pe_lead_event_sent', String(Date.now()));
+        } catch {
+          // Private mode without storage must not block the redirect.
+        }
         document.getElementById('lf-success')?.classList.remove('hidden');
         setTimeout(() => {
           window.location.assign('/thanks/?lead=1');

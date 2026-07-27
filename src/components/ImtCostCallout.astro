@@ -1,0 +1,146 @@
+---
+/** Non-resident purchase tax callout: IMT 7.5% flat + stamp duty 0.8% (DL 97/2026). */
+interface Props {
+  title?: string;
+  showCta?: boolean;
+  showGuideLink?: boolean;
+}
+
+const {
+  title = 'Non-resident purchase tax from 1 September 2026',
+  showCta = true,
+  showGuideLink = true,
+} = Astro.props;
+
+const rows = [
+  { price: '€250,000', imt: '€18,750', stamp: '€2,000', total: '€20,750' },
+  { price: '€400,000', imt: '€30,000', stamp: '€3,200', total: '€33,200' },
+  { price: '€600,000', imt: '€45,000', stamp: '€4,800', total: '€49,800' },
+];
+---
+<aside class="imt-callout">
+  <div class="imt-callout__label">IMT 7.5% + stamp duty 0.8%</div>
+  <p class="imt-callout__title">{title}</p>
+  <div class="imt-callout__scroll">
+    <table class="imt-callout__table">
+      <thead>
+        <tr>
+          <th scope="col">Purchase price</th>
+          <th scope="col">IMT 7.5%</th>
+          <th scope="col">Stamp duty 0.8%</th>
+          <th scope="col">Tax at completion</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <th scope="row">{r.price}</th>
+            <td>{r.imt}</td>
+            <td>{r.stamp}</td>
+            <td><strong>{r.total}</strong></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="imt-callout__note">
+    Flat 7.5% IMT applies to non-resident individuals completing on or after 1 September 2026 under DL 97/2026, plus 0.8% imposto do selo. Add notary and registration of 0.3-0.5% and legal fees of 1-2%, so budget 10-13% above the purchase price.
+    {showGuideLink && (
+      <> See the <a href="/guides/imt-tax-non-resident-portugal-2026/">IMT non-resident guide</a>.</>
+    )}
+  </p>
+  {showCta && (
+    <a href="/get-shortlist/" class="imt-callout__cta" data-cta="imt_callout_shortlist">
+      Get your IMT and net yield estimate
+    </a>
+  )}
+</aside>
+
+<style>
+  .imt-callout {
+    border: 1px solid var(--color-border, #e2e0d8);
+    border-left: 4px solid #b8860b;
+    background: #fdfcf7;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+    margin: 24px 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-ink, #1f2421);
+  }
+  .imt-callout__label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9a7209;
+    margin-bottom: 6px;
+  }
+  .imt-callout__title {
+    margin: 0 0 12px 0;
+    font-weight: 600;
+  }
+  .imt-callout__scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .imt-callout__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin: 0;
+  }
+  .imt-callout__table th,
+  .imt-callout__table td {
+    padding: 7px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border, #e2e0d8);
+    white-space: nowrap;
+  }
+  .imt-callout__table thead th {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-muted, #5b615c);
+  }
+  .imt-callout__table tbody th {
+    font-weight: 600;
+  }
+  @media (max-width: 520px) {
+    .imt-callout {
+      padding: 14px 12px;
+    }
+    .imt-callout__table {
+      font-size: 0.76rem;
+    }
+    .imt-callout__table th,
+    .imt-callout__table td {
+      padding: 6px 4px;
+    }
+    /* Headers wrap so all four columns stay on screen without horizontal scroll. */
+    .imt-callout__table thead th {
+      white-space: normal;
+      font-size: 0.66rem;
+    }
+  }
+  .imt-callout__note {
+    margin: 12px 0 0 0;
+    font-size: 13.5px;
+    color: var(--color-muted, #5b615c);
+  }
+  .imt-callout__cta {
+    display: inline-block;
+    margin-top: 12px;
+    background: #b8860b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .imt-callout__cta:hover {
+    background: #9a7209;
+    color: #fff;
+  }
+</style>

@@ -1,6 +1,14 @@
 # Lead analytics (GA4)
 
-Spec for production implementation. Cheap-pack documents names; expensive model wires events in layout or shared script.
+Implemented 2026-07-27. Events fire through `window.investGulfTrack` (see `src/components/GoogleAnalytics.astro`) with a `gtag` fallback.
+
+| Event | Fired from |
+|-------|------------|
+| `generate_lead` | `src/components/LeadForm.astro` on POST success, before the `/thanks/` redirect |
+| `whatsapp_click` | `src/components/WhatsAppIntentTracker.astro` for every `a[data-wa-placement]` |
+| `page_view_thanks` | `src/pages/thanks/index.astro` when `lead=1` |
+
+`/thanks/` re-fires `generate_lead` only when the form event did not land, tracked with the `pe_lead_event_sent` session flag, so a submission counts once.
 
 ## Goals
 

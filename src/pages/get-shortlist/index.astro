@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import FaqBlock from '../../components/FaqBlock.astro';
 import CommercialBudgetLadder from '../../components/CommercialBudgetLadder.astro';
+import ImtCostCallout from '../../components/ImtCostCallout.astro';
 import { LEAD_OFFER_SUBTEXT } from '../../data/leadOffer';
 
 const faqItems = [
@@ -27,9 +28,8 @@ const faqItems = [
   title="Portugal Property Shortlist for Foreign Buyers"
   description="Free independent shortlist for Portugal property buyers: Lisbon, Algarve, Porto, Cascais. Budget-matched options plus IMT and net yield notes within one business day."
 >
-  <section class="site-container py-12 md:py-16 max-w-3xl">
-    <CommercialBudgetLadder />
-    <header class="mb-8">
+  <section class="site-container py-8 md:py-16 max-w-3xl">
+    <header class="mb-6">
       <span class="badge-pill mb-4">Free · Independent</span>
       <h1 class="mb-3">Get your Portugal property shortlist</h1>
       <p class="text-lg text-[var(--color-muted)]">
@@ -37,10 +37,15 @@ const faqItems = [
       </p>
     </header>
 
+    <p class="text-[var(--color-muted)] mb-6">
+      <strong>Quick answer:</strong> Foreign buyers can own freehold residential property in Portugal with a NIF, bank account, and lawyer-led due diligence. Non-residents completing on or after 1 September 2026 pay flat 7.5% IMT plus 0.8% stamp duty on residential purchases. Budget 10-13% on top of price for taxes, notary, and legal fees.
+    </p>
+
+    <LeadForm title="Request your shortlist" subtitle={LEAD_OFFER_SUBTEXT} context="Get shortlist page" />
+
+    <ImtCostCallout showCta={false} title="What you will pay in tax as a non-resident buyer" />
+
     <div class="prose mb-10 text-[var(--color-muted)]">
-      <p>
-        <strong>Quick answer:</strong> Foreign buyers can own freehold residential property in Portugal with a NIF, bank account, and lawyer-led due diligence. Non-residents completing on or after 1 September 2026 pay flat 7.5% IMT plus 0.8% stamp duty on residential purchases. Budget 10-13% on top of price for taxes, notary, and legal fees.
-      </p>
       <p>
         Start here:
         <a href="/guides/how-to-buy-property-portugal-step-by-step/">Step-by-step purchase</a>
@@ -59,7 +64,7 @@ const faqItems = [
       </p>
     </div>
 
-    <LeadForm title="Request your shortlist" subtitle={LEAD_OFFER_SUBTEXT} context="Get shortlist page" />
+    <CommercialBudgetLadder />
 
     <FaqBlock items={faqItems} />
 

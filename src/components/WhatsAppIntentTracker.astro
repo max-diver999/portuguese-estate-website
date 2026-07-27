@@ -19,13 +19,23 @@
   const delay = (milliseconds: number) =>
     new Promise<void>((resolve) => window.setTimeout(resolve, milliseconds));
 
-  function trackWhatsAppClick(placement: string, refCode: string) {
+  function trackWhatsAppClick(placement: string, refCode: string, ctaId: string) {
     try {
-      const params = { wa_placement: placement, wa_ref: refCode };
+      const params = {
+        cta_id: ctaId,
+        placement,
+        page_path: window.location.pathname,
+        wa_placement: placement,
+        wa_ref: refCode,
+      };
       // @ts-ignore
       if (typeof window.investGulfTrack === 'function') {
         // @ts-ignore
-        window.investGulfTrack('click_whatsapp', params);
+        window.investGulfTrack('whatsapp_click', params);
+        // @ts-ignore
+      } else if (typeof window.gtag === 'function') {
+        // @ts-ignore
+        window.gtag('event', 'whatsapp_click', params);
       }
     } catch {
       // Analytics must never block WhatsApp.
@@ -85,7 +95,7 @@
         }),
         delay(900),
       ]);
-      trackWhatsAppClick(placement, refCode);
+      trackWhatsAppClick(placement, refCode, ctaId);
     } catch {
       // Tracking must never block WhatsApp.
     } finally {
