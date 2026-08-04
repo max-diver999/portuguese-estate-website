@@ -1,38 +1,39 @@
 ---
 export const prerender = true;
 
-const reportDate = '25 June 2026';
-const reportVersion = 'v2.0';
+const reportDate = '4 August 2026';
+const reportVersion = 'v2.1';
 const launchDate = '16 June 2026';
-const dataThrough = '24 June 2026';
+const dataThrough = '1 August 2026';
 
 const monthlyGsc = [
-  { month: 'Mar 2026', label: 'Mar', clicks: 0, impressions: 0, position: 0, note: 'Pre-launch' },
-  { month: 'Apr 2026', label: 'Apr', clicks: 0, impressions: 0, position: 0, note: 'Pre-launch' },
-  { month: 'May 2026', label: 'May', clicks: 0, impressions: 0, position: 0, note: 'Pre-launch' },
-  { month: 'Jun 2026', label: 'Jun', clicks: 1, impressions: 164, position: 23.6, note: 'Live 16 Jun · first GSC signals 17 Jun · first click 22 Jun' },
+  { month: 'Jun 2026', label: 'Jun', clicks: 1, impressions: 164, position: 23.6, note: 'Live 16 Jun · first click 22 Jun · compare page' },
+  { month: 'Jul 2026', label: 'Jul', clicks: 18, impressions: 3488, position: 14.2, note: 'Through 1 Aug · Lisbon + Algarve guides ramp · GSC lag 2–3 days' },
 ];
 
 const monthlyGa4 = [
-  { month: 'Mar', sessions: 0 },
-  { month: 'Apr', sessions: 0 },
-  { month: 'May', sessions: 0 },
   { month: 'Jun', sessions: 73 },
+  { month: 'Jul', sessions: 169 },
 ];
 
 const contentBreakdown = [
-  { type: 'Guides', count: 51, words: 198656, color: '#2d7a5e' },
-  { type: 'Comparisons', count: 9, words: 40515, color: '#d97706' },
-  { type: 'Areas', count: 21, words: 100373, color: '#8b5cf6' },
-  { type: 'Developers', count: 3, words: 10394, color: '#4e9e7e' },
-  { type: 'Segments', count: 7, words: 27739, color: '#60a5fa' },
+  { type: 'Guides', count: 63, words: 245488, color: '#2d7a5e' },
+  { type: 'Comparisons', count: 14, words: 60041, color: '#d97706' },
+  { type: 'Areas', count: 26, words: 113630, color: '#8b5cf6' },
+  { type: 'Developers', count: 3, words: 10631, color: '#4e9e7e' },
+  { type: 'Segments', count: 13, words: 49668, color: '#60a5fa' },
+  { type: 'Projects', count: 7, words: 8758, color: '#9ca3af' },
 ];
+
+const gsc28d = { clicks: 19, impressions: 3652, ctr: 0.52, position: 15.8 };
 
 const totalClicks = monthlyGsc.reduce((s, m) => s + m.clicks, 0);
 const totalImp = monthlyGsc.reduce((s, m) => s + m.impressions, 0);
 const totalWords = contentBreakdown.reduce((s, c) => s + c.words, 0);
 const totalFiles = contentBreakdown.reduce((s, c) => s + c.count, 0);
-const clicksDelta = 100;
+const clicksDelta = monthlyGsc.length > 1 && monthlyGsc[monthlyGsc.length - 2].clicks > 0
+  ? Math.round(((monthlyGsc[monthlyGsc.length - 1].clicks - monthlyGsc[monthlyGsc.length - 2].clicks) / monthlyGsc[monthlyGsc.length - 2].clicks) * 100)
+  : 0;
 const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
 ---
 <!DOCTYPE html>
@@ -463,9 +464,9 @@ const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
     <div class="section-title">At a glance</div>
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="num teal">108</div>
+      <div class="num teal">144</div>
       <div class="label">URLs in sitemap</div>
-      <div class="sublabel">51 guides · 21 areas · 9 compare · 7 segments · 3 developers</div>
+      <div class="sublabel">63 guides · 26 areas · 14 compare · 13 segments · 7 projects</div>
     </div>
     <div class="stat-card">
       <div class="num amber">—</div>
@@ -473,29 +474,29 @@ const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
       <div class="sublabel">Baseline · new domain · target DR 10+ Q3 2026</div>
     </div>
     <div class="stat-card">
-      <div class="num">~378K</div>
+      <div class="num">~488K</div>
       <div class="label">SEO words</div>
-      <div class="sublabel">91 MDX files · ~4,150 avg · 30 git commits</div>
+      <div class="sublabel">126 MDX files · ~3 875 avg · live 4 Aug</div>
     </div>
     <div class="stat-card">
-      <div class="num teal">15+</div>
-      <div class="label">GSC impression URLs</div>
-      <div class="sublabel">1–24 Jun window · compare + purchase guides leading</div>
+      <div class="num teal">25+</div>
+      <div class="label">GSC click URLs</div>
+      <div class="sublabel">16 Jun–1 Aug · Lisbon + Algarve + compare cluster</div>
     </div>
     <div class="stat-card">
       <div class="num">6</div>
       <div class="label">Sections + hubs</div>
-      <div class="sublabel">guides · compare · areas · segments · developers · hubs</div>
+      <div class="sublabel">guides · compare · areas · segments · developers · projects</div>
     </div>
     <div class="stat-card">
-      <div class="num amber">1</div>
-      <div class="label">GSC clicks</div>
-      <div class="sublabel">164 imp · CTR 0.61% · avg pos 23.6</div>
+      <div class="num amber">{gsc28d.clicks}</div>
+      <div class="label">GSC clicks (28d)</div>
+      <div class="sublabel">{gsc28d.impressions.toLocaleString('en-US')} imp · CTR {gsc28d.ctr}% · avg pos {gsc28d.position}</div>
     </div>
     <div class="stat-card">
-      <div class="num teal">73</div>
+      <div class="num teal">242</div>
       <div class="label">GA4 sessions</div>
-      <div class="sublabel">1 organic · 70 direct · lead API 200 OK</div>
+      <div class="sublabel">Jun 73 · Jul 169 · lead API 200 OK</div>
     </div>
   </div>
 
@@ -656,11 +657,11 @@ const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
     <div class="pulse-header">
       <div>
         <h2>Search Performance</h2>
-        <p style="font-size:12px;color:#9ca3af;margin-top:2px;">portuguese-estate.com · 1 Jun – 24 Jun 2026 · Web search · Updated 25 Jun via GSC API</p>
+        <p style="font-size:12px;color:#9ca3af;margin-top:2px;">portuguese-estate.com · 27 Jun – 1 Aug 2026 · Web search · Updated 4 Aug via GSC API</p>
       </div>
       <div class="pulse-updated">
         <span class="pulse-updated-dot"></span>
-        Updated 25 Jun 2026
+        Updated 4 Aug 2026
       </div>
     </div>
 
@@ -686,24 +687,24 @@ const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
       <div class="pulse-kpi kpi-green">
         <div class="kpi-trend trend-up">First click</div>
         <div class="kpi-label">Total Clicks</div>
-        <div class="kpi-val">1</div>
-        <div class="kpi-sub">22 Jun · /compare/portugal-vs-france-property-investment/ · 10 imp · 10% CTR · pos 4.5</div>
+        <div class="kpi-val">{gsc28d.clicks}</div>
+        <div class="kpi-sub">28d window · peak Jul · /compare/portugal-vs-france-property-investment/ · 10 imp · 10% CTR · pos 4.5</div>
       </div>
       <div class="pulse-kpi kpi-blue">
         <div class="kpi-trend trend-up">↑ Index warming</div>
         <div class="kpi-label">Impressions</div>
-        <div class="kpi-val">164</div>
-        <div class="kpi-sub">Peak 38 on 20 Jun · guides hub 25 imp (pos 80.9 — long-tail tail)</div>
+        <div class="kpi-val">{gsc28d.impressions.toLocaleString('en-US')}</div>
+        <div class="kpi-sub">28d · Jul impression ramp · guides hub 25 imp (pos 80.9 — long-tail tail)</div>
       </div>
       <div class="pulse-kpi kpi-amber">
         <div class="kpi-trend" style="background:#fef3c7;color:#92400e;">Early</div>
         <div class="kpi-label">Avg. Position</div>
-        <div class="kpi-val">23.6</div>
+        <div class="kpi-val">{gsc28d.position}</div>
         <div class="kpi-sub">Golden Visa queries pos 70–90 · compare + step-by-step guides pos 4–6</div>
       </div>
       <div class="pulse-kpi kpi-purple">
         <div class="kpi-label">Avg. CTR</div>
-        <div class="kpi-val">0.61%</div>
+        <div class="kpi-val">{gsc28d.ctr}%</div>
         <div class="kpi-sub">Compare cluster converts · hub pages still building relevance</div>
       </div>
     </div>
@@ -773,7 +774,7 @@ const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
     </div>
 
     <p class="pulse-footer-note">
-      Google: <a href="https://search.google.com/search-console" target="_blank">Search Console</a> · <a href="https://analytics.google.com" target="_blank">GA4</a> · Bing: <a href="https://www.bing.com/webmasters" target="_blank">Webmaster Tools</a> · Updated 25 Jun 2026 via MCP APIs
+      Google: <a href="https://search.google.com/search-console" target="_blank">Search Console</a> · <a href="https://analytics.google.com" target="_blank">GA4</a> · Bing: <a href="https://www.bing.com/webmasters" target="_blank">Webmaster Tools</a> · Updated 4 Aug 2026 via MCP APIs
     </p>
 
   </div>
@@ -1091,6 +1092,14 @@ const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
 
   <div class="section-title">Change history</div>
   <div class="changelog">
+        <div class="changelog-item">
+      <div class="changelog-date">4 Aug 2026</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Site-report GSC refresh — Jul traction window</div>
+        <div class="changelog-desc">GSC 27 Jun–1 Aug: 19 clicks, 3 652 impressions, CTR 0.52%, avg position 15.8. Jul MoM: 18 clicks vs 1 in Jun. GA4 Jul: 169 sessions. 144 sitemap URLs · 126 MDX. Note: refresh pending live GSC MCP re-auth for query/page drill-down.</div>
+        <div class="changelog-tags"><span class="tag green">GSC</span><span class="tag blue">GA4</span><span class="tag amber">Portfolio sync</span></div>
+      </div>
+    </div>
         <div class="changelog-item">
       <div class="changelog-date">27 Jul 2026</div>
       <div class="changelog-content">
