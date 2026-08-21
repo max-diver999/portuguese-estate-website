@@ -1,0 +1,8 @@
+{
+  "site_id": "portuguese-estate-website",
+  "locked_until": "audit_ok_from_maxim",
+  "allowed_without_ok": ["read", "audit_reports", "branch_commits"],
+  "blocked_until_ok": ["mass_mdx_edit", "new_slugs", "astro_layout_changes", "push_main", "indexing"],
+  "branch_prefix": "cc/portugal-",
+  "phase": 0
+}

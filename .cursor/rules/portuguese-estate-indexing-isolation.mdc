@@ -1,0 +1,39 @@
+---
+description: "portuguese-estate indexing isolation. Триггеры: portuguese-estate + индексация. Rules diet: glob portuguese-estate-website."
+globs: ["portuguese-estate-website/**"]
+alwaysApply: false
+---
+
+# portuguese-estate Indexing Isolation
+
+> **Правило:** любая индексация `portuguese-estate.com` — только через ключ `portuguese-estate-indexing`. Чужие квоты MORE Group — запрещено.
+
+## Единственный допустимый ключ
+
+Файл: `portuguese-estate-website/scripts/google-indexing-key.json`
+
+| Поле | Допустимо | Запрещено |
+|---|---|---|
+| `project_id` | `portuguese-estate-indexing` | `soy-braid-491510-c2`, `mexico-invest-indexing`, `greek-invest-indexing` или любой другой |
+| `client_email` | `indexing-bot-portugal@portuguese-estate-indexing.iam.gserviceaccount.com` | MORE Group SA |
+
+## Preflight перед Google Indexing API
+
+```bash
+cat portuguese-estate-website/scripts/google-indexing-key.json | python3 -c \
+  "import json,sys; d=json.load(sys.stdin); print(d['project_id'], d['client_email'])"
+```
+
+Если `project_id != portuguese-estate-indexing` → **СТОП**.
+
+## Допустимые скрипты (только после «отправляй» от Максима)
+
+- `portuguese-estate-website/scripts/google-indexing-api.mjs`
+- `portuguese-estate-website/scripts/submit-google-explicit.mjs`
+- Bing: `scripts/indexnow-submit.mjs` по `site.config.json`
+
+## MCP при аудите
+
+- GSC: `user-search-console-portuguese-estate`
+- GA4: `user-ga4-analytics-portuguese-estate`
+- Bing: `user-bing-webmaster-portuguese-estate`

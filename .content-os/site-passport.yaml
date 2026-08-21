@@ -1,0 +1,58 @@
+# Site passport — portuguese-estate.com
+
+site_id: portuguese-estate-website
+domain: portuguese-estate.com
+language: en
+program: portuguese-estate
+github: max-diver999/portuguese-estate-website
+
+collections:
+  guides: 63
+  areas: 26
+  compare: 14
+  segments: 13
+  projects: 7
+  developers: 3
+  news: 0
+
+lead_funnels:
+  primary: /portugal-property-consultation/
+  tiers: [/tier-entry/, /tier-mid/, /tier-luxury/]
+  shortlist: /get-shortlist/
+
+protected_pages:
+  - /
+  - /guides/
+  - /areas/
+  - /projects/
+  - /compare/
+  - /segments/
+  - /portugal-property-consultation/
+  - /site-report/
+
+editorial_focus:
+  - IMT / AIMI / non-resident tax
+  - D7 / D8 / residency (post–Golden Visa context)
+  - Algarve, Lisbon, Madeira, Comporta yields
+  - RNAL / short-term rental compliance
+  - Buyer segments (DE, UK, US)
+
+quality_baseline_2026_08_21:
+  validate_all: pass
+  geo_commercial_avg: 67
+  geo_grade: C
+  geo_files_below_min: 103
+  audit_priority: corpus_uniqueness_and_answer_blocks
+
+mcp:
+  gsc: user-search-console-portuguese-estate
+  ga4: user-ga4-analytics-portuguese-estate
+  bing: user-bing-webmaster-portuguese-estate
+
+reference_patterns:
+  corpus_remediation: greek-invest-website
+  hub_ux: florida-estate-website
+
+indexing:
+  gcp_project: portuguese-estate-indexing
+  policy: more-group-content-os/policies/cursor-rules/portuguese-estate-indexing-isolation.mdc
