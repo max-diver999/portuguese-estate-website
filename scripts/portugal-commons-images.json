@@ -5,8 +5,8 @@
   "rule": "One unique hero per page. Min 1600px long edge. Commercial-reuse licences only. Every URL verified HTTP 200 at generation time.",
   "attributionRequired": true,
   "deliveryWidth": 1280,
-  "total": 127,
-  "uniqueFiles": 127,
+  "total": 132,
+  "uniqueFiles": 132,
   "failures": [],
   "images": [
     {
@@ -670,6 +670,21 @@
       "altSubject": "Alfama Rooftops and Tagus River View, Lisbon"
     },
     {
+      "slug": "ifici-portugal-nhr-2-tax-regime",
+      "collection": "guides",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Sede_da_Sport_TV_01.jpg/1280px-Sede_da_Sport_TV_01.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Sede_da_Sport_TV_01.jpg",
+      "width": 4032,
+      "height": 3024,
+      "alt": "A corporate headquarters building in Parque das Nações, Lisbon — the IFICI 20% regime for relocating professionals",
+      "altSubject": "Sede da Sport TV 01",
+      "credit": "Joehawkins / Wikimedia Commons",
+      "licence": "CC0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sede_da_Sport_TV_01.jpg",
+      "commonsTitle": "File:Sede da Sport TV 01.jpg",
+      "matchedTerm": "pinned"
+    },
+    {
       "slug": "imi-property-tax-portugal",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Santana_%28Madeira%2C_Portugal%29%2C_C%C3%A2mara_Municipal_de_Santana_--_2025_--_1388.jpg/1280px-Santana_%28Madeira%2C_Portugal%29%2C_C%C3%A2mara_Municipal_de_Santana_--_2025_--_1388.jpg",
@@ -893,6 +908,21 @@
       "commonsTitle": "File:Praça do Município in Funchal. Madeira, Portugal.jpg",
       "matchedTerm": "Funchal Madeira",
       "altSubject": "Praça do Município in Funchal. Madeira, Portugal"
+    },
+    {
+      "slug": "mais-valias-portugal-capital-gains",
+      "collection": "guides",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sunset_reflection_%2834942836236%29.jpg/1280px-Sunset_reflection_%2834942836236%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Sunset_reflection_%2834942836236%29.jpg",
+      "width": 6000,
+      "height": 4000,
+      "alt": "Sunset on a Lisbon residential façade — mais-valias capital gains worked examples",
+      "altSubject": "Sunset reflection",
+      "credit": "Susanne Nilsson / Wikimedia Commons",
+      "licence": "CC BY-SA 2.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sunset_reflection_(34942836236).jpg",
+      "commonsTitle": "File:Sunset reflection (34942836236).jpg",
+      "matchedTerm": "pinned"
     },
     {
       "slug": "mar-adentro",
@@ -1148,6 +1178,21 @@
       "commonsTitle": "File:View of Porto from View of Porto from Vila Nova de Gaia.jpg",
       "matchedTerm": "Porto Vila Nova de Gaia panorama",
       "altSubject": "View of Porto from View of Porto from Vila Nova de Gaia"
+    },
+    {
+      "slug": "portugal-6-percent-vat-housing-works",
+      "collection": "guides",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Porto_DSC1006_%2853729555300%29.jpg/1280px-Porto_DSC1006_%2853729555300%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Porto_DSC1006_%2853729555300%29.jpg",
+      "width": 7952,
+      "height": 5304,
+      "alt": "Residential buildings in Lordelo do Ouro, Porto — the 6% VAT window on housing works",
+      "altSubject": "Porto DSC1006",
+      "credit": "Tom Page from London, UK / Wikimedia Commons",
+      "licence": "CC BY-SA 2.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_DSC1006_(53729555300).jpg",
+      "commonsTitle": "File:Porto DSC1006 (53729555300).jpg",
+      "matchedTerm": "pinned"
     },
     {
       "slug": "portugal-buy-to-let-investment-guide",
@@ -1675,6 +1720,21 @@
       "matchedTerm": "pinned"
     },
     {
+      "slug": "renovation-costs-portugal-per-m2",
+      "collection": "guides",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Avenida_da_Liberdade_195_01.jpg/1280px-Avenida_da_Liberdade_195_01.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Avenida_da_Liberdade_195_01.jpg",
+      "width": 4032,
+      "height": 3024,
+      "alt": "A building under renovation on Avenida da Liberdade, Lisbon — works costs per square metre",
+      "altSubject": "Avenida da Liberdade 195 01",
+      "credit": "DiogoBaptista / Wikimedia Commons",
+      "licence": "CC BY-SA 4.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Avenida_da_Liberdade_195_01.jpg",
+      "commonsTitle": "File:Avenida da Liberdade 195 01.jpg",
+      "matchedTerm": "pinned"
+    },
+    {
       "slug": "rnal-registration-portugal",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Lutecia_Hotel_Lisbon_%2823373037723%29.jpg/1280px-Lutecia_Hotel_Lisbon_%2823373037723%29.jpg",
@@ -1687,6 +1747,21 @@
       "licence": "CC BY-SA 2.0",
       "sourcePage": "https://commons.wikimedia.org/wiki/File:Lutecia_Hotel_Lisbon_(23373037723).jpg",
       "commonsTitle": "File:Lutecia Hotel Lisbon (23373037723).jpg",
+      "matchedTerm": "pinned"
+    },
+    {
+      "slug": "sell-property-portugal-non-resident",
+      "collection": "guides",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/20200206_LisbonTour_7858_%2849660059128%29.jpg/1280px-20200206_LisbonTour_7858_%2849660059128%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/20200206_LisbonTour_7858_%2849660059128%29.jpg",
+      "width": 7952,
+      "height": 5304,
+      "alt": "Residential buildings in central Lisbon — selling Portuguese property as a non-resident",
+      "altSubject": "20200206 LisbonTour 7858",
+      "credit": "Ray Swi-hymn from Sijhih-Taipei, Taiwan / Wikimedia Commons",
+      "licence": "CC BY-SA 2.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:20200206_LisbonTour_7858_(49660059128).jpg",
+      "commonsTitle": "File:20200206 LisbonTour 7858 (49660059128).jpg",
       "matchedTerm": "pinned"
     },
     {
