@@ -1,0 +1,1122 @@
+{
+  "site_id": "portuguese-estate-website",
+  "domain": "portuguese-estate.com",
+  "generated": "2026-08-21",
+  "phase": 0,
+  "status": "PROPOSAL_ONLY",
+  "slugs_created": false,
+  "mdx_written": false,
+  "note": "Proposals only. No slugs created, no MDX written, no content published. Requires explicit approval from Maxim before any article is drafted.",
+  "blocked_by": {
+    "document": ".content-os/reports/corpus-cleanup-roadmap.md",
+    "requirement": "Wave 0 (code P0 fixes) and Waves 1-2 (answer-first remediation) merged; commercial GEO >= 72 before Batch 1.",
+    "rationale": "134/146 rendered titles are truncated, 126/126 pages have duplicate H1, and 126 pages share 10 hotlinked images. Publishing onto that base multiplies the defect."
+  },
+  "strategy": {
+    "own": "Transaction mechanics, tax and compliance — where the site already ranks (RNAL pos 6.2, under-300k pos 8.1, property-management pos 9.8) and competitors are thin.",
+    "concede": "Golden Visa and residency head terms — higher-authority competitors (globalcitizensolutions.com, immigrantinvest.com, getgoldenvisa.com).",
+    "closest_competitor": "portugalpropertyinvest.com — near-identical independent-research positioning."
+  },
+  "gap_evidence": [
+    {
+      "topic": "selling / exit",
+      "files_mentioning": 22,
+      "dedicated_pages": 0
+    },
+    {
+      "topic": "renovation",
+      "files_mentioning": 55,
+      "dedicated_pages": 0
+    },
+    {
+      "topic": "NHR",
+      "files_mentioning": 33,
+      "dedicated_pages": 0
+    },
+    {
+      "topic": "IFICI",
+      "files_mentioning": 19,
+      "dedicated_pages": 0
+    },
+    {
+      "topic": "condominium fees",
+      "files_mentioning": 62,
+      "dedicated_pages": 0
+    },
+    {
+      "topic": "6% VAT on housing (DL 97/2026)",
+      "files_mentioning": 0,
+      "dedicated_pages": 0
+    },
+    {
+      "topic": "mais-valias",
+      "files_mentioning": 0,
+      "dedicated_pages": 0
+    },
+    {
+      "topic": "inflation coefficient (CGT)",
+      "files_mentioning": 1,
+      "dedicated_pages": 0
+    }
+  ],
+  "clusters": [
+    {
+      "id": "A",
+      "name": "Exit & selling",
+      "count": 9
+    },
+    {
+      "id": "B",
+      "name": "IFICI / tax residency",
+      "count": 6
+    },
+    {
+      "id": "C",
+      "name": "Renovation & construction",
+      "count": 7
+    },
+    {
+      "id": "D",
+      "name": "Financing depth",
+      "count": 6
+    },
+    {
+      "id": "E",
+      "name": "Ownership structures",
+      "count": 6
+    },
+    {
+      "id": "F",
+      "name": "Running costs",
+      "count": 6
+    },
+    {
+      "id": "G",
+      "name": "Micro-areas",
+      "count": 6
+    },
+    {
+      "id": "H",
+      "name": "Comparisons",
+      "count": 4
+    }
+  ],
+  "quality_bar": {
+    "answer_first_words": [
+      40,
+      60
+    ],
+    "citability_blocks_min": 2,
+    "citability_block_words": [
+      130,
+      170
+    ],
+    "h2_min": 4,
+    "tables_min": 3,
+    "numeric_facts_min": 8,
+    "internal_links_min": 5,
+    "rendered_title_max_chars": 60,
+    "h1_count": 1,
+    "hero_image": "unique, region-correct, Cloudinary-hosted — not one of the 10 currently shared across 126 pages",
+    "internal_links": "every link must resolve against the built slug set",
+    "sources": [
+      "AT",
+      "INE",
+      "AICCOPN",
+      "Diario da Republica"
+    ]
+  },
+  "cadence": [
+    {
+      "batch": 1,
+      "items": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prerequisite": "Waves 0-2 merged, GEO >= 72"
+    },
+    {
+      "batch": 2,
+      "items": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "prerequisite": "Batch 1 indexed; CTR measured after the title fix"
+    },
+    {
+      "batch": 3,
+      "items": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "prerequisite": "GEO >= 75 corpus-wide"
+    },
+    {
+      "batch": 4,
+      "items": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "prerequisite": null
+    },
+    {
+      "batch": 5,
+      "items": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "prerequisite": null
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "tier": 1,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "How to Sell Property in Portugal as a Non-Resident",
+      "target_collection": "guides",
+      "primary_query": "sell property portugal non resident",
+      "search_intent": "transactional",
+      "rationale": "Zero dedicated pages; 22 files mention selling. Opens the seller audience.",
+      "internal_link_targets": [
+        "guides/portugal-capital-gains-tax-property",
+        "guides/imt-tax-non-resident-portugal-2026"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 2,
+      "tier": 1,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "Mais-Valias: Portugal Capital Gains on Property, Worked",
+      "target_collection": "guides",
+      "primary_query": "mais valias portugal property",
+      "search_intent": "informational",
+      "rationale": "\"mais-valias\" appears in 0 files — the exact term Portuguese-market buyers search.",
+      "internal_link_targets": [
+        "guides/portugal-capital-gains-tax-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 3,
+      "tier": 1,
+      "cluster": "B",
+      "cluster_name": "IFICI / tax residency",
+      "subcluster": "tax-residency",
+      "working_title": "IFICI Explained: Portugal NHR 2.0 in 2026",
+      "target_collection": "guides",
+      "primary_query": "ifici portugal nhr 2.0",
+      "search_intent": "informational",
+      "rationale": "IFICI in 19 files, NHR in 33 — no dedicated page. Live 2026 question.",
+      "internal_link_targets": [
+        "guides/portugal-residency-options-without-golden-visa",
+        "guides/imt-refund-tax-resident-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 4,
+      "tier": 1,
+      "cluster": "C",
+      "cluster_name": "Renovation & construction",
+      "subcluster": "renovation",
+      "working_title": "Renovation Costs in Portugal 2026: EUR/m2 by Work Type",
+      "target_collection": "guides",
+      "primary_query": "renovation cost portugal per m2",
+      "search_intent": "commercial",
+      "rationale": "Renovation in 55 files, no page. High commercial intent.",
+      "internal_link_targets": [
+        "guides/hidden-costs-buying-property-portugal",
+        "guides/property-maintenance-costs-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 5,
+      "tier": 1,
+      "cluster": "C",
+      "cluster_name": "Renovation & construction",
+      "subcluster": "renovation",
+      "working_title": "6% VAT on Housing Works Under DL 97/2026",
+      "target_collection": "guides",
+      "primary_query": "portugal 6% vat renovation housing",
+      "search_intent": "informational",
+      "rationale": "Zero corpus coverage of a 2026 statutory change. Near-zero competition.",
+      "internal_link_targets": [
+        "guides/moderate-rent-tax-incentives-portugal-2026"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 6,
+      "tier": 1,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "UK-Portugal Double Taxation Convention 2026",
+      "target_collection": "guides",
+      "primary_query": "uk portugal double taxation treaty 2026",
+      "search_intent": "informational",
+      "rationale": "New treaty effective 1 Jan 2026; UK segment page covers DTT only generically.",
+      "internal_link_targets": [
+        "segments/uk-buyers-portugal-property-brexit"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 7,
+      "tier": 1,
+      "cluster": "F",
+      "cluster_name": "Running costs",
+      "subcluster": "running-costs",
+      "working_title": "Condominium Fees in Portugal: What Owners Actually Pay",
+      "target_collection": "guides",
+      "primary_query": "condominium fees portugal",
+      "search_intent": "commercial",
+      "rationale": "62 files mention condominium fees; no page. Feeds property-management (pos 9.8).",
+      "internal_link_targets": [
+        "guides/property-management-portugal-cost",
+        "guides/property-maintenance-costs-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 8,
+      "tier": 1,
+      "cluster": "E",
+      "cluster_name": "Ownership structures",
+      "subcluster": "ownership",
+      "working_title": "Company vs Personal Ownership for Portugal Property",
+      "target_collection": "guides",
+      "primary_query": "buy portugal property through company",
+      "search_intent": "commercial",
+      "rationale": "High-ticket intent; strong consultation bridge.",
+      "internal_link_targets": [
+        "guides/portugal-property-1-million-plus-investment"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 9,
+      "tier": 1,
+      "cluster": "D",
+      "cluster_name": "Financing depth",
+      "subcluster": "financing",
+      "working_title": "Mortgage Broker vs Bank in Portugal for Foreign Buyers",
+      "target_collection": "guides",
+      "primary_query": "portugal mortgage broker foreigners",
+      "search_intent": "commercial",
+      "rationale": "Two mortgage pages exist; the practical routing question is unanswered.",
+      "internal_link_targets": [
+        "guides/non-resident-mortgage-portugal",
+        "guides/portugal-mortgage-rates-foreigners-2026"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 10,
+      "tier": 1,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "The Full Seller Cost Stack in Portugal",
+      "target_collection": "guides",
+      "primary_query": "cost of selling property portugal",
+      "search_intent": "commercial",
+      "rationale": "Mirrors cost-of-buying, which already ranks. No seller equivalent.",
+      "internal_link_targets": [
+        "guides/cost-of-buying-property-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 11,
+      "tier": 1,
+      "cluster": "B",
+      "cluster_name": "IFICI / tax residency",
+      "subcluster": "tax-residency",
+      "working_title": "Becoming a Portuguese Tax Resident: the 183-Day Test",
+      "target_collection": "guides",
+      "primary_query": "portugal tax residency 183 days",
+      "search_intent": "informational",
+      "rationale": "Directly feeds the IMT refund route, a top-5 GSC page cluster.",
+      "internal_link_targets": [
+        "guides/imt-refund-tax-resident-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 12,
+      "tier": 1,
+      "cluster": "F",
+      "cluster_name": "Running costs",
+      "subcluster": "running-costs",
+      "working_title": "Fiscal Representative in Portugal: When You Need One",
+      "target_collection": "guides",
+      "primary_query": "fiscal representative portugal",
+      "search_intent": "commercial",
+      "rationale": "Recurring cost item flagged across the corpus; no page.",
+      "internal_link_targets": [
+        "guides/nif-portugal-property-purchase"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 13,
+      "tier": 1,
+      "cluster": "C",
+      "cluster_name": "Renovation & construction",
+      "subcluster": "renovation",
+      "working_title": "Obras Licensing: Camara Permits for Renovation",
+      "target_collection": "guides",
+      "primary_query": "obras licence portugal renovation permit",
+      "search_intent": "informational",
+      "rationale": "Compliance depth is the site edge; zero coverage.",
+      "internal_link_targets": [
+        "guides/due-diligence-portugal-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 14,
+      "tier": 1,
+      "cluster": "D",
+      "cluster_name": "Financing depth",
+      "subcluster": "financing",
+      "working_title": "Currency Transfer and FX for a Portugal Purchase",
+      "target_collection": "guides",
+      "primary_query": "currency transfer portugal property",
+      "search_intent": "commercial",
+      "rationale": "Every non-EUR buyer faces this; no page. Strong affiliate/lead fit.",
+      "internal_link_targets": [
+        "guides/cost-of-buying-property-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 15,
+      "tier": 1,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "Modelo 3: Filing IRS After a Property Sale",
+      "target_collection": "guides",
+      "primary_query": "modelo 3 property sale non resident",
+      "search_intent": "informational",
+      "rationale": "Modelo 3 in 7 files; no page. Completes the seller cluster.",
+      "internal_link_targets": [
+        "guides/non-resident-rental-income-tax-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 16,
+      "tier": 2,
+      "cluster": "B",
+      "cluster_name": "IFICI / tax residency",
+      "subcluster": "tax-residency",
+      "working_title": "IFICI Eligibility: IAPMEI and AICEP Recognised Activities",
+      "target_collection": "guides",
+      "primary_query": "ifici eligible activities portugal",
+      "search_intent": "informational",
+      "rationale": "IAPMEI/AICEP appear in 0 files — the gating detail for IFICI.",
+      "internal_link_targets": [
+        "guides/portugal-residency-options-without-golden-visa"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 17,
+      "tier": 2,
+      "cluster": "B",
+      "cluster_name": "IFICI / tax residency",
+      "subcluster": "tax-residency",
+      "working_title": "NHR vs IFICI: What Changed for Property Investors",
+      "target_collection": "compare",
+      "primary_query": "nhr vs ifici",
+      "search_intent": "informational",
+      "rationale": "High-volume comparison query with no page.",
+      "internal_link_targets": [
+        "guides/portugal-residency-options-without-golden-visa"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 18,
+      "tier": 2,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "Five Legal Routes to Reduce Portuguese Capital Gains",
+      "target_collection": "guides",
+      "primary_query": "avoid capital gains tax portugal property",
+      "search_intent": "commercial",
+      "rationale": "Inflation coefficient appears in 1 file; 50% exclusion in 2.",
+      "internal_link_targets": [
+        "guides/portugal-capital-gains-tax-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 19,
+      "tier": 2,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "Estate Agent Commission in Portugal: Rates and Negotiation",
+      "target_collection": "guides",
+      "primary_query": "estate agent fees portugal",
+      "search_intent": "commercial",
+      "rationale": "Largest single seller cost; no page.",
+      "internal_link_targets": [
+        "guides/cost-of-buying-property-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 20,
+      "tier": 2,
+      "cluster": "C",
+      "cluster_name": "Renovation & construction",
+      "subcluster": "renovation",
+      "working_title": "Buying a Ruin in Portugal: Costs and Traps",
+      "target_collection": "guides",
+      "primary_query": "buying a ruin in portugal",
+      "search_intent": "commercial",
+      "rationale": "Distinct high-interest niche; strong red-flag content fit.",
+      "internal_link_targets": [
+        "guides/portugal-property-scams-avoid",
+        "guides/due-diligence-portugal-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 21,
+      "tier": 2,
+      "cluster": "C",
+      "cluster_name": "Renovation & construction",
+      "subcluster": "renovation",
+      "working_title": "Buying Land and Building in Portugal",
+      "target_collection": "guides",
+      "primary_query": "buy land build house portugal",
+      "search_intent": "commercial",
+      "rationale": "Adjacent to renovation; no coverage.",
+      "internal_link_targets": [
+        "guides/off-plan-property-portugal-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 22,
+      "tier": 2,
+      "cluster": "C",
+      "cluster_name": "Renovation & construction",
+      "subcluster": "renovation",
+      "working_title": "Architect and Engineer Fees in Portugal",
+      "target_collection": "guides",
+      "primary_query": "architect fees portugal",
+      "search_intent": "commercial",
+      "rationale": "Completes the renovation cost stack.",
+      "internal_link_targets": [
+        "guides/hidden-costs-buying-property-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 23,
+      "tier": 2,
+      "cluster": "D",
+      "cluster_name": "Financing depth",
+      "subcluster": "financing",
+      "working_title": "Loan-to-Value by Nationality and Residency Status",
+      "target_collection": "guides",
+      "primary_query": "portugal mortgage ltv non resident",
+      "search_intent": "commercial",
+      "rationale": "The first question every financed foreign buyer asks.",
+      "internal_link_targets": [
+        "guides/non-resident-mortgage-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 24,
+      "tier": 2,
+      "cluster": "D",
+      "cluster_name": "Financing depth",
+      "subcluster": "financing",
+      "working_title": "Mortgage Life Insurance: the Compulsory Extra",
+      "target_collection": "guides",
+      "primary_query": "portugal mortgage life insurance",
+      "search_intent": "commercial",
+      "rationale": "Hidden mandatory cost; fits the hidden-costs cluster.",
+      "internal_link_targets": [
+        "guides/hidden-costs-buying-property-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 25,
+      "tier": 2,
+      "cluster": "D",
+      "cluster_name": "Financing depth",
+      "subcluster": "financing",
+      "working_title": "Refinancing a Portuguese Mortgage",
+      "target_collection": "guides",
+      "primary_query": "refinance mortgage portugal",
+      "search_intent": "commercial",
+      "rationale": "Post-purchase retention topic; no coverage.",
+      "internal_link_targets": [
+        "guides/portugal-mortgage-rates-foreigners-2026"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 26,
+      "tier": 2,
+      "cluster": "E",
+      "cluster_name": "Ownership structures",
+      "subcluster": "ownership",
+      "working_title": "Buying Through a Portuguese Lda",
+      "target_collection": "guides",
+      "primary_query": "portuguese company property purchase lda",
+      "search_intent": "commercial",
+      "rationale": "Follows #8 with the mechanics.",
+      "internal_link_targets": [
+        "guides/portugal-property-1-million-plus-investment"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 27,
+      "tier": 2,
+      "cluster": "E",
+      "cluster_name": "Ownership structures",
+      "subcluster": "ownership",
+      "working_title": "Usufruct and Bare Ownership Explained",
+      "target_collection": "guides",
+      "primary_query": "usufruct portugal property",
+      "search_intent": "informational",
+      "rationale": "Usufruct in 5 files; succession-planning intent.",
+      "internal_link_targets": [
+        "guides/portugal-property-inheritance-tax-foreigners"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 28,
+      "tier": 2,
+      "cluster": "E",
+      "cluster_name": "Ownership structures",
+      "subcluster": "ownership",
+      "working_title": "Co-Buying and Joint Ownership",
+      "target_collection": "guides",
+      "primary_query": "joint ownership property portugal",
+      "search_intent": "informational",
+      "rationale": "Links the orphaned prenuptial page.",
+      "internal_link_targets": [
+        "guides/prenuptial-agreement-portugal-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 29,
+      "tier": 2,
+      "cluster": "E",
+      "cluster_name": "Ownership structures",
+      "subcluster": "ownership",
+      "working_title": "Succession and Forced Heirship for Foreign Owners",
+      "target_collection": "guides",
+      "primary_query": "portugal inheritance law foreigners",
+      "search_intent": "informational",
+      "rationale": "Deepens a near-orphan page (1 inbound link).",
+      "internal_link_targets": [
+        "guides/portugal-property-inheritance-tax-foreigners"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 30,
+      "tier": 2,
+      "cluster": "F",
+      "cluster_name": "Running costs",
+      "subcluster": "running-costs",
+      "working_title": "Home Insurance for Portuguese Property",
+      "target_collection": "guides",
+      "primary_query": "home insurance portugal",
+      "search_intent": "commercial",
+      "rationale": "Mandatory for mortgaged property; no page.",
+      "internal_link_targets": [
+        "guides/property-maintenance-costs-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 31,
+      "tier": 2,
+      "cluster": "F",
+      "cluster_name": "Running costs",
+      "subcluster": "running-costs",
+      "working_title": "Utilities Setup for Non-Resident Owners",
+      "target_collection": "guides",
+      "primary_query": "utilities portugal non resident owner",
+      "search_intent": "informational",
+      "rationale": "Practical post-purchase gap.",
+      "internal_link_targets": [
+        "guides/property-management-portugal-cost"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 32,
+      "tier": 2,
+      "cluster": "F",
+      "cluster_name": "Running costs",
+      "subcluster": "running-costs",
+      "working_title": "The Portugal Property Tax Calendar",
+      "target_collection": "guides",
+      "primary_query": "imi payment dates portugal",
+      "search_intent": "informational",
+      "rationale": "Consolidates IMI/AIMI/IRS deadlines scattered across the tax cluster.",
+      "internal_link_targets": [
+        "guides/imi-property-tax-portugal",
+        "guides/aimi-wealth-tax-portugal-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 33,
+      "tier": 2,
+      "cluster": "G",
+      "cluster_name": "Micro-areas",
+      "subcluster": "micro-area",
+      "working_title": "Porto Ribeira: UNESCO Core Investment Guide",
+      "target_collection": "areas",
+      "primary_query": "ribeira porto property",
+      "search_intent": "commercial",
+      "rationale": "Porto has only 2 area pages despite being market #2.",
+      "internal_link_targets": [
+        "guides/porto-property-investment-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 34,
+      "tier": 2,
+      "cluster": "G",
+      "cluster_name": "Micro-areas",
+      "subcluster": "micro-area",
+      "working_title": "Foz do Douro: Porto Premium Coastal Address",
+      "target_collection": "areas",
+      "primary_query": "foz do douro property",
+      "search_intent": "commercial",
+      "rationale": "Named in porto-property-investment-guide; no page.",
+      "internal_link_targets": [
+        "guides/porto-property-investment-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 35,
+      "tier": 2,
+      "cluster": "H",
+      "cluster_name": "Comparisons",
+      "subcluster": "comparison",
+      "working_title": "Madeira vs Algarve for Yield and Lifestyle",
+      "target_collection": "compare",
+      "primary_query": "madeira vs algarve property",
+      "search_intent": "commercial",
+      "rationale": "Both pages exist and get impressions; the comparison does not.",
+      "internal_link_targets": [
+        "areas/madeira-property-investment-guide",
+        "guides/algarve-property-investment-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 36,
+      "tier": 3,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "Selling Off-Plan Before Completion (Cessao de Posicao)",
+      "target_collection": "guides",
+      "primary_query": "sell off plan before completion portugal",
+      "search_intent": "transactional",
+      "rationale": "Niche, high-value, zero competition.",
+      "internal_link_targets": [
+        "guides/off-plan-property-portugal-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 37,
+      "tier": 3,
+      "cluster": "A",
+      "cluster_name": "Exit & selling",
+      "subcluster": "exit-selling",
+      "working_title": "Portugal Property Exit Timing: Hold Periods and Coefficients",
+      "target_collection": "guides",
+      "primary_query": "when to sell portugal property",
+      "search_intent": "informational",
+      "rationale": "Ties inflation coefficient to a hold-period decision.",
+      "internal_link_targets": [
+        "guides/portugal-capital-gains-tax-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 38,
+      "tier": 3,
+      "cluster": "B",
+      "cluster_name": "IFICI / tax residency",
+      "subcluster": "tax-residency",
+      "working_title": "Tax Residency vs Residency Permit: the Costly Confusion",
+      "target_collection": "guides",
+      "primary_query": "tax resident vs resident permit portugal",
+      "search_intent": "informational",
+      "rationale": "A common and expensive buyer misconception.",
+      "internal_link_targets": [
+        "guides/portugal-d7-visa-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 39,
+      "tier": 3,
+      "cluster": "B",
+      "cluster_name": "IFICI / tax residency",
+      "subcluster": "tax-residency",
+      "working_title": "Portugal Tax Calendar for Foreign Property Owners",
+      "target_collection": "guides",
+      "primary_query": "portugal tax deadlines property owners",
+      "search_intent": "informational",
+      "rationale": "Companion to #32 from the residency side.",
+      "internal_link_targets": [
+        "guides/non-resident-rental-income-tax-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 40,
+      "tier": 3,
+      "cluster": "C",
+      "cluster_name": "Renovation & construction",
+      "subcluster": "renovation",
+      "working_title": "Renovation vs New-Build: True Cost Comparison",
+      "target_collection": "compare",
+      "primary_query": "renovate or buy new portugal",
+      "search_intent": "commercial",
+      "rationale": "Decision-stage; bridges renovation and new-build clusters.",
+      "internal_link_targets": [
+        "compare/new-build-vs-resale-property-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 41,
+      "tier": 3,
+      "cluster": "D",
+      "cluster_name": "Financing depth",
+      "subcluster": "financing",
+      "working_title": "Bridging Finance for Portuguese Purchases",
+      "target_collection": "guides",
+      "primary_query": "bridging loan portugal property",
+      "search_intent": "commercial",
+      "rationale": "Niche but high-ticket.",
+      "internal_link_targets": [
+        "guides/non-resident-mortgage-portugal"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 42,
+      "tier": 3,
+      "cluster": "E",
+      "cluster_name": "Ownership structures",
+      "subcluster": "ownership",
+      "working_title": "Why Offshore Trusts Fail for Portuguese Property",
+      "target_collection": "guides",
+      "primary_query": "trust portugal property ownership",
+      "search_intent": "informational",
+      "rationale": "Corrects a common and costly assumption.",
+      "internal_link_targets": [
+        "guides/portugal-property-inheritance-tax-foreigners"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 43,
+      "tier": 3,
+      "cluster": "F",
+      "cluster_name": "Running costs",
+      "subcluster": "running-costs",
+      "working_title": "Property Snagging and Handover Inspection",
+      "target_collection": "guides",
+      "primary_query": "snagging inspection portugal new build",
+      "search_intent": "commercial",
+      "rationale": "Completes the off-plan journey.",
+      "internal_link_targets": [
+        "guides/off-plan-property-portugal-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 44,
+      "tier": 3,
+      "cluster": "G",
+      "cluster_name": "Micro-areas",
+      "subcluster": "micro-area",
+      "working_title": "Boavista: Porto Business District",
+      "target_collection": "areas",
+      "primary_query": "boavista porto property",
+      "search_intent": "commercial",
+      "rationale": "Third Porto micro-area.",
+      "internal_link_targets": [
+        "guides/porto-property-investment-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 45,
+      "tier": 3,
+      "cluster": "G",
+      "cluster_name": "Micro-areas",
+      "subcluster": "micro-area",
+      "working_title": "Belem: Lisbon Riverside Heritage Quarter",
+      "target_collection": "areas",
+      "primary_query": "belem lisbon property",
+      "search_intent": "commercial",
+      "rationale": "Major Lisbon parish with no page.",
+      "internal_link_targets": [
+        "guides/lisbon-property-investment-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 46,
+      "tier": 3,
+      "cluster": "G",
+      "cluster_name": "Micro-areas",
+      "subcluster": "micro-area",
+      "working_title": "Estrela and Campo de Ourique: Lisbon Family Belt",
+      "target_collection": "areas",
+      "primary_query": "campo de ourique property",
+      "search_intent": "commercial",
+      "rationale": "Highest family-buyer intent in Lisbon.",
+      "internal_link_targets": [
+        "guides/lisbon-property-investment-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 47,
+      "tier": 3,
+      "cluster": "G",
+      "cluster_name": "Micro-areas",
+      "subcluster": "micro-area",
+      "working_title": "Troia Peninsula: Comporta Quieter Neighbour",
+      "target_collection": "areas",
+      "primary_query": "troia property investment",
+      "search_intent": "commercial",
+      "rationale": "Adjacent to the ultra-premium Comporta cluster.",
+      "internal_link_targets": [
+        "areas/comporta-property-investment"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 48,
+      "tier": 3,
+      "cluster": "H",
+      "cluster_name": "Comparisons",
+      "subcluster": "comparison",
+      "working_title": "Comporta vs Cascais for Ultra-Premium Buyers",
+      "target_collection": "compare",
+      "primary_query": "comporta vs cascais",
+      "search_intent": "commercial",
+      "rationale": "Both area pages exist; highest ticket size on the site.",
+      "internal_link_targets": [
+        "areas/comporta-property-investment",
+        "areas/cascais-property-investment"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 49,
+      "tier": 3,
+      "cluster": "H",
+      "cluster_name": "Comparisons",
+      "subcluster": "comparison",
+      "working_title": "Silver Coast vs Algarve: Yield, Season, Price",
+      "target_collection": "compare",
+      "primary_query": "silver coast vs algarve",
+      "search_intent": "commercial",
+      "rationale": "Silver Coast has 4 area pages plus a guide; no comparison.",
+      "internal_link_targets": [
+        "guides/silver-coast-portugal-property-guide"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    },
+    {
+      "id": 50,
+      "tier": 3,
+      "cluster": "H",
+      "cluster_name": "Comparisons",
+      "subcluster": "comparison",
+      "working_title": "Portugal vs Brazil for Lusophone Buyers",
+      "target_collection": "compare",
+      "primary_query": "portugal vs brazil property investment",
+      "search_intent": "commercial",
+      "rationale": "Only new country comparison; serves an existing segment page.",
+      "internal_link_targets": [
+        "segments/brazilian-buyers-portugal-property"
+      ],
+      "slug_candidate": null,
+      "slug_created": false,
+      "status": "proposed"
+    }
+  ]
+}

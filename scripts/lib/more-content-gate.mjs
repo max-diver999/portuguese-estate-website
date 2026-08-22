@@ -10,7 +10,16 @@ import {
   LIST_DASH_STEPS_MIN,
   analyzeHumanSignals,
 } from './human-signals.mjs';
-import { runCloudinaryDeliveryChecks } from '../../../scripts/lib/cloudinary-gate.mjs';
+// Optional: cloudinary-gate.mjs ships only in the MORE_Group template workspace.
+// The previous static import used a path relative to the template's location
+// ('../../../scripts/lib/'), which resolves outside this repo and hard-crashes
+// every consumer (qa-audit, fix:queue) on a clean clone. Degrade gracefully.
+let runCloudinaryDeliveryChecks = () => {};
+try {
+  ({ runCloudinaryDeliveryChecks } = await import('./cloudinary-gate.mjs'));
+} catch {
+  /* gate not vendored here — image delivery checks are skipped */
+}
 
 export const BANNED_PHRASES = [
   'Regional diversification',
