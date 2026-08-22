@@ -43,6 +43,12 @@ const ALLOWED_LICENCE = /^(CC0|CC BY(-SA)? [\d.]+|Public domain|PDM [\d.]+|CC BY
 const REJECT_TITLE =
   /\b(map|mapa|logo|flag|bandeira|coat of arms|bras[aã]o|diagram|chart|seal|icon|svg|blank|graffiti|grafite|mural|street ?art|statue|est[aá]tua|sculpture|escultura|plaque|placa|sign(post)?|tomb|t[uú]mulo|grave|cemet|interior|museum|museu|exhibition|exposi[cç][aã]o|portrait|retrato|festival|parade|prociss[aã]o|carnival|concert|match|stadium|car|bus|train|tram detail|locomotive|aircraft|food|dish|prato|menu|book|stamp|coin|banknote|document|close-?up|detail|detalhe|fountain detail|door detail|window detail|tile detail|MNAz|Grande Panorama|painting|pintura|quadro|gravura|engraving|lithograph|litografia|postcard|bilhete postal|postal antigo|drawing|desenho|illustration|ilustra[cç][aã]o|maquete|scale model|miniature|reproduction|reprodu[cç][aã]o|manuscript|azulejo panel|painel de azulejo)\b/i;
 
+/**
+ * Dereliction and building sites read as a warning on an investment page. Only
+ * allowed when the search term deliberately asks for them (the scams guide does).
+ */
+const DERELICT = /\b(abandoned|abandonado|derelict|devoluto|ruin|ru[ií]na|demolit|vandal|construction site|scaffold|andaime|boarded[- ]up|dilapidated|decay)\b/i;
+
 /** Words that mark a frame as scenery or architecture — what a hero needs. */
 const SCENERY = /\b(view|vista|panorama|aerial|a[eé]rea|skyline|coast|costa|beach|praia|bay|ba[ií]a|riverside|waterfront|marina|harbour|harbor|porto de|street|rua|avenida|square|pra[cç]a|old town|centro hist[oó]rico|architecture|arquitetura|building|edif[ií]cio|houses|casas|rooftops|telhados|castle|castelo|palace|pal[aá]cio|church|igreja|bridge|ponte|landscape|paisagem|countryside|hills|valley|vale|cliffs|falsias|sunset|skyview|from above|overview|geral)\b/i;
 
@@ -64,7 +70,18 @@ const FALLBACK = [
   'Portugal aerial view town',
 ];
 
+/**
+ * Free-text search collides badly on place names: "Lisboa" matched the Grand
+ * Lisboa in Macau, "Porto" matched Porto Alegre in Brazil, "Alcantara" matched
+ * a Bairro Alto viewpoint, and one query returned Phuket. Commons categories are
+ * curated, so use them as the country guard.
+ */
+const PORTUGAL_CAT = /Portugal|Portuguese|Lisboa|Lisbon|Porto\b|Algarve|Madeira|Alentejo|Douro|Minho|Aveiro|Coimbra|Braga|Cascais|Sintra|Set[uú]bal|Faro District|Leiria|Santar[eé]m|Beja|[EÉ]vora|Viseu|Guarda|Castelo Branco|Viana do Castelo|Vila Real|Bragan[cç]a/i;
+const FOREIGN_CAT = /Brazil|Brasil|Macau|Macao|Thailand|Spain|España|Espanha|Mexico|México|France(?!sa)|Italy|Italia|Angola|Mozambique|Cape Verde|Goa|Timor|India\b|China\b|Japan|United States|Argentina|Uruguay|Colombia/i;
+
 const only = process.argv.find((a) => a.startsWith('--slug='))?.split('=')[1];
+/** Re-source a subset: --replace=slug1,slug2 keeps the rest of the manifest intact. */
+const replaceList = process.argv.find((a) => a.startsWith('--replace='))?.split('=')[1]?.split(',');
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -96,16 +113,17 @@ function stripHtml(s) {
 }
 
 /** Candidate files for one search term, best (largest) first. */
-async function candidates(term) {
+async function candidates(term, opts = {}) {
   const data = await api({
     action: 'query',
     generator: 'search',
     gsrsearch: `filetype:bitmap ${term}`,
     gsrnamespace: '6',
     gsrlimit: '50',
-    prop: 'imageinfo',
+    prop: 'imageinfo|categories',
     iiprop: 'url|size|extmetadata|mime',
     iiurlwidth: String(THUMB_WIDTH),
+    cllimit: 'max',
   });
   const pages = Object.values(data?.query?.pages || {});
   return pages
@@ -125,6 +143,7 @@ async function candidates(term) {
         author: stripHtml(em.Artist?.value) || 'Unknown',
         descriptionUrl: ii.descriptionurl,
         dateRaw: stripHtml(em.DateTimeOriginal?.value || em.DateTime?.value || ''),
+        cats: (p.categories || []).map((c) => c.title.replace(/^Category:/, '')).join(' | '),
       };
     })
     .filter(Boolean)
@@ -164,6 +183,15 @@ async function candidates(term) {
       return { ...c, score, matched };
     })
     .filter((c) => c.matched > 0)
+    .filter((c) => !DERELICT.test(c.title) || DERELICT.test(term))
+    // Must be categorised in Portugal, and must not be categorised elsewhere.
+    .filter((c) => PORTUGAL_CAT.test(c.cats) || /Portugal/i.test(c.title))
+    .filter((c) => !FOREIGN_CAT.test(c.cats) && !FOREIGN_CAT.test(c.title))
+    // Place pages pin the municipality: "Faro" otherwise matched "Faro de Santa
+    // Marta", a lighthouse in Cascais, and "Alcantara" matched a Bairro Alto
+    // viewpoint named Miradouro de São Pedro de Alcântara.
+    .filter((c) => !opts.requireCat || opts.requireCat.test(`${c.cats} ${c.title}`))
+    .filter((c) => !opts.rejectCat || !opts.rejectCat.test(`${c.cats} ${c.title}`))
     .sort((a, b) => b.score - a.score);
 }
 
@@ -180,7 +208,17 @@ const used = new Set();
 const results = [];
 const failures = [];
 
-const entries = Object.entries(QUERIES).filter(([slug]) => !only || slug === only);
+let carried = [];
+if (replaceList) {
+  const prev = JSON.parse(readFileSync(OUT, 'utf8'));
+  carried = prev.images.filter((i) => !replaceList.includes(i.slug));
+  for (const i of carried) used.add(i.commonsTitle);
+  process.stdout.write(`carrying ${carried.length} existing picks, re-sourcing ${replaceList.length}\n`);
+}
+
+const entries = Object.entries(QUERIES).filter(
+  ([slug]) => (!only || slug === only) && (!replaceList || replaceList.includes(slug)),
+);
 let i = 0;
 
 for (const [slug, spec] of entries) {
@@ -189,7 +227,7 @@ for (const [slug, spec] of entries) {
   for (const term of [...spec.terms, ...FALLBACK]) {
     let list;
     try {
-      list = await candidates(term);
+      list = await candidates(term, { requireCat: spec.requireCat, rejectCat: spec.rejectCat });
     } catch (e) {
       process.stderr.write(`  ! ${slug}: query failed (${term}): ${e.message}\n`);
       continue;
@@ -232,19 +270,21 @@ for (const [slug, spec] of entries) {
   await sleep(150);
 }
 
+const merged = [...carried, ...results].sort((a, b) => a.slug.localeCompare(b.slug));
+
 const manifest = {
   rollout: 'portugal-commons-hero-images',
   generated: new Date().toISOString().slice(0, 10),
   source: 'Wikimedia Commons',
   rule: `One unique hero per page. Min ${MIN_WIDTH}px long edge. Commercial-reuse licences only. Every URL verified HTTP 200 at generation time.`,
   attributionRequired: true,
-  total: results.length,
-  uniqueFiles: new Set(results.map((r) => r.commonsTitle)).size,
+  total: merged.length,
+  uniqueFiles: new Set(merged.map((r) => r.commonsTitle)).size,
   failures,
-  images: results,
+  images: merged,
 };
 
 writeFileSync(OUT, `${JSON.stringify(manifest, null, 2)}\n`);
 process.stdout.write(
-  `\nwrote ${path.relative(ROOT, OUT)} — ${results.length} images, ${manifest.uniqueFiles} unique files, ${failures.length} unresolved\n`,
+  `\nwrote ${path.relative(ROOT, OUT)} — ${merged.length} images, ${manifest.uniqueFiles} unique files, ${failures.length} unresolved\n`,
 );

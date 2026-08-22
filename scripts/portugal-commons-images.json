@@ -9,18 +9,18 @@
   "failures": [],
   "images": [
     {
-      "slug": "portugal-capital-gains-tax-property",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Marina%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_25-30_HDR_PAN.jpg/3840px-Marina%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_25-30_HDR_PAN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Marina%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_25-30_HDR_PAN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "width": 7075,
-      "height": 3484,
-      "alt": "Cascais — capital gains on Portuguese property sales",
-      "credit": "Diego Delso / Wikimedia Commons",
+      "slug": "carvalhido",
+      "collection": "projects",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bloco_costa_cabral_porto_numero_patrimonio_imovel_328750.jpg/3840px-Bloco_costa_cabral_porto_numero_patrimonio_imovel_328750.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Bloco_costa_cabral_porto_numero_patrimonio_imovel_328750.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "width": 5616,
+      "height": 3744,
+      "alt": "Carvalhido, Porto",
+      "credit": "Francesco Caneschi / Wikimedia Commons",
       "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Marina,_Cascais,_Portugal,_2022-07-25,_DD_25-30_HDR_PAN.jpg",
-      "commonsTitle": "File:Marina, Cascais, Portugal, 2022-07-25, DD 25-30 HDR PAN.jpg",
-      "matchedTerm": "Cascais marina Portugal"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Bloco_costa_cabral_porto_numero_patrimonio_imovel_328750.jpg",
+      "commonsTitle": "File:Bloco costa cabral porto numero patrimonio imovel 328750.jpg",
+      "matchedTerm": "Porto Paranhos street"
     }
   ]
 }

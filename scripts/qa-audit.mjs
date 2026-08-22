@@ -236,11 +236,18 @@ function auditFile(c, slug) {
    */
   const REGULATORY_HISTORY_PAGES = new Set(['portugal-residency-options-without-golden-visa']);
 
+  /*
+   * Minimum-wage-derived thresholds must be checked everywhere, not only on
+   * pages whose title mentions a visa. Segment pages quote D7 and D8 figures in
+   * passing and slipped past the title-based trigger: EUR 870 (the 2025 wage)
+   * survived in two of them after the first sweep.
+   */
   const isRegulatory =
     !REGULATORY_HISTORY_PAGES.has(slug) &&
-    /visa|golden visa|investor visa|residency|nhr|ifici/i.test(
-      `${fm.title} ${(fm.tags || '').toString()} ${slug}`,
-    );
+    (/€\s?(?:760|820|870|3,040|3,480)\s*(?:per month|\/\s?month|\/mo)/i.test(body) ||
+      /visa|golden visa|investor visa|residency|nhr|ifici/i.test(
+        `${fm.title} ${(fm.tags || '').toString()} ${slug}`,
+      ));
   if (isRegulatory) {
     for (const { pattern, hint } of REGULATORY_STALE) {
       const m = body.match(pattern);
