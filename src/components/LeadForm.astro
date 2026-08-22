@@ -157,7 +157,7 @@ const waHref = `${SITE.whatsapp}?text=${waText}`;
           currency: 'EUR',
         };
         // @ts-ignore
-        if (typeof window.investGulfTrack === 'function') window.investGulfTrack('generate_lead', leadEvent);
+        if (typeof window.peTrack === 'function') window.peTrack('generate_lead', leadEvent);
         // @ts-ignore
         else if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', leadEvent);
         try {

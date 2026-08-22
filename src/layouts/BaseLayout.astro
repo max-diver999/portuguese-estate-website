@@ -27,7 +27,16 @@ const {
   schemas = [],
 } = Astro.props;
 
-const fullTitle = title.includes('Portuguese Estate') ? title : `${title} | Portuguese Estate`;
+// Frontmatter titles are gated to 50-60 chars. Appending the brand adds 20 more
+// and pushes the result past the ~60-char SERP limit, truncating the keyword tail.
+// Brand the title only when it still fits.
+const TITLE_MAX = 60;
+const withBrand = `${title} | Portuguese Estate`;
+const fullTitle = title.includes('Portuguese Estate')
+  ? title
+  : withBrand.length <= TITLE_MAX
+    ? withBrand
+    : title;
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -41,7 +50,7 @@ const orgSchema = {
     '@type': 'ContactPoint',
     email: SITE.email,
     contactType: 'customer service',
-    availableLanguage: ['English', 'Italian'],
+    availableLanguage: ['English', 'Portuguese'],
   },
   sameAs: [
     SITE.url,
