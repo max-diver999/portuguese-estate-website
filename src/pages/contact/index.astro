@@ -21,7 +21,7 @@ import { waHref as buildWaHref, hasWhatsApp, waLinkAttrs } from '../../lib/conta
             data-wa-placement="footer_contact"
             data-cta="whatsapp_contact_page"
           >
-            WhatsApp {SITE.whatsappDisplay}
+            message us on WhatsApp{SITE.whatsappDisplay ? ` (${SITE.whatsappDisplay})` : ''}
           </a>.
         </>
       )}

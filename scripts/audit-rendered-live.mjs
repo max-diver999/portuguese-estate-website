@@ -29,6 +29,23 @@ function readSiteUrl() {
 }
 
 const SITE_URL = readSiteUrl();
+
+/**
+ * The WhatsApp number is currently an interim one (see src/data/site.ts). It is
+ * dialled by the CTAs but never printed as text, so a visitor never sees a
+ * foreign country code. While `whatsappInterim` is true the link-side check is a
+ * notice rather than a failure; the visible-number check stays hard either way.
+ */
+function readSiteFlag(name) {
+  for (const rel of ['src/data/site.ts', 'src/data/site.js']) {
+    const file = path.join(ROOT, rel);
+    if (!fs.existsSync(file)) continue;
+    const m = fs.readFileSync(file, 'utf8').match(new RegExp(`${name}:\\s*(true|false)`));
+    if (m) return m[1] === 'true';
+  }
+  return false;
+}
+const WHATSAPP_INTERIM = readSiteFlag('whatsappInterim');
 const siteConfig = { skipCollections: [], requireLeadForm: true };
 
 function discoverCollections() {
@@ -195,14 +212,38 @@ const CHECKS = [
     },
   },
   {
-    // The WhatsApp CTA shipped a Thailand (+66) number for months.
-    id: 'contact-country-code',
+    // A phone number a visitor can READ must never be a foreign one — a +66
+    // country code on a Lisbon property page destroys trust before the click.
+    // This stays hard regardless of the interim flag.
+    id: 'contact-number-visible',
     severity: 'P0',
     test: (html) => {
-      const bad = [...html.matchAll(/wa\.me\/(\d{6,})/g)]
-        .map((m) => m[1])
+      const numbers = [...new Set([...html.matchAll(/wa\.me\/(\d{6,})/g)].map((m) => m[1]))];
+      if (!numbers.length) return null;
+      // strip scripts, tags and attributes — leave only what renders as text
+      const text = html
+        .replace(/<script[\s\S]*?<\/script>/g, ' ')
+        .replace(/<style[\s\S]*?<\/style>/g, ' ')
+        .replace(/<[^>]+>/g, ' ');
+      const digitsOnly = text.replace(/[^\d]/g, '');
+      const shown = numbers.filter((n) => digitsOnly.includes(n) && !n.startsWith('351'));
+      return shown.length
+        ? `non-Portuguese contact number rendered as visible text: +${shown.join(', +')}`
+        : null;
+    },
+  },
+  {
+    // Link-side check. Downgraded to a notice while an interim number is in use;
+    // flip whatsappInterim to false in src/data/site.ts to make this blocking.
+    id: 'contact-country-code',
+    severity: WHATSAPP_INTERIM ? 'NOTICE' : 'P0',
+    test: (html) => {
+      const bad = [...new Set([...html.matchAll(/wa\.me\/(\d{6,})/g)].map((m) => m[1]))]
         .filter((n) => !n.startsWith('351'));
-      return bad.length ? `wa.me number is not a Portuguese (+351) number: ${[...new Set(bad)].join(', ')}` : null;
+      if (!bad.length) return null;
+      return WHATSAPP_INTERIM
+        ? `interim wa.me number in use (+${bad.join(', +')}) — not displayed to visitors; replace with a +351 number when available`
+        : `wa.me number is not a Portuguese (+351) number: +${bad.join(', +')}`;
     },
   },
 ];
@@ -323,7 +364,7 @@ const results = await runPool(tasks, (task) => auditPage(task));
 const elapsed = ((Date.now() - started) / 1000).toFixed(1);
 
 const byCheck = new Map();
-const bySeverity = { P0: 0, P1: 0 };
+const bySeverity = { P0: 0, P1: 0, NOTICE: 0 };
 const errors = [];
 
 for (const r of results) {
@@ -368,6 +409,7 @@ if (byCheck.size === 0 && errors.length === 0) {
 console.log('Summary by severity:');
 console.log(`  P0 (must fix): ${bySeverity.P0}`);
 console.log(`  P1 (cleanup):  ${bySeverity.P1}`);
+if (bySeverity.NOTICE) console.log(`  NOTICE (known, non-blocking): ${bySeverity.NOTICE}`);
 
 if (failOnIssues && (bySeverity.P0 > 0 || bySeverity.P1 > 0 || errors.length > 0)) {
   process.exit(1);

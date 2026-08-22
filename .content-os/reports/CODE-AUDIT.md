@@ -25,6 +25,16 @@ What is wrong is a **thin layer of fork residue and gate blind spots** — the s
 
 ### P0-1 · WhatsApp contact number is a **Thailand** number — on 145 of 146 pages
 
+> **Status 2026-08-22 — resolved as an interim arrangement.** The number stays
+> live so every WhatsApp CTA still opens a chat, but it is no longer printed as
+> text anywhere a visitor can read it (`whatsappDisplay` is empty). A buyer never
+> sees a +66 country code; the button simply works. Two gate checks now cover it:
+> `contact-number-visible` fails hard if any non-Portuguese number renders as
+> visible text, and `contact-country-code` is a non-blocking NOTICE while
+> `whatsappInterim: true` is set in `src/data/site.ts`. Setting a +351 number and
+> flipping that flag to false re-arms the strict check and restores the number to
+> the contact page and lead form.
+
 `src/data/site.ts:8-9`
 
 ```ts

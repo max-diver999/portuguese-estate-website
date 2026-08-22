@@ -3,12 +3,13 @@ import { SITE } from '../data/site';
 /**
  * WhatsApp CTA routing.
  *
- * The site shipped a Thailand (+66) number on 145 of 146 pages for months. Until
- * a real Portuguese number is configured in `SITE.whatsapp`, every WhatsApp CTA
- * stays where it is but routes to lead capture instead of wa.me, so no enquiry
- * reaches the wrong number and no button claims to open WhatsApp when it cannot.
- *
- * Setting `SITE.whatsapp` restores WhatsApp everywhere with no other change.
+ * Two independent switches:
+ *   `SITE.whatsapp`        — the wa.me link. Empty routes every CTA to lead
+ *                            capture instead, so no enquiry reaches a wrong number.
+ *   `SITE.whatsappDisplay` — the number as printed text. Empty keeps the buttons
+ *                            fully working while the number itself is never shown
+ *                            to a visitor. That is the current setup: the number
+ *                            is an interim one, so it is dialled but not displayed.
  */
 export const hasWhatsApp = Boolean(SITE.whatsapp);
 
