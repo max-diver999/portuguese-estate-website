@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { SITE } from '../../data/site';
+import { sendLeadNotifyEmail } from '../../lib/lead-notify-email';
 
 export const prerender = false;
 
@@ -79,7 +80,30 @@ export const POST: APIRoute = async ({ request }) => {
     ].filter(Boolean).join('\n');
 
     await sendTelegram(lines);
-    // Owner inbox email disabled — Telegram only (no Kommo email ingest).
+
+    let notifyFailure = '';
+    try {
+      const subjectName = String(name || '').trim() || 'no name';
+      const notify = await sendLeadNotifyEmail({
+        subject: isHealthcheck
+          ? 'TEST lead: portuguese-estate.com'
+          : `New lead: ${subjectName} (${phoneText || 'no phone'})`,
+        htmlBody: lines,
+        replyTo: emailText.includes('@') ? emailText : undefined,
+      });
+      if (!notify.ok) notifyFailure = notify.reason;
+    } catch (err) {
+      notifyFailure = err instanceof Error ? err.message : 'unknown error';
+      console.error('Owner notify email failed:', err);
+    }
+
+    if (notifyFailure) {
+      try {
+        await sendTelegram(`⚠️ email notify failed: ${escapeHtml(notifyFailure)}`);
+      } catch (err) {
+        console.error('Telegram notify-failure ping failed:', err);
+      }
+    }
 
     if (!isHealthcheck && emailText) {
       try {
@@ -89,7 +113,11 @@ export const POST: APIRoute = async ({ request }) => {
       }
     }
 
-    return new Response(JSON.stringify({ success: true }), {
+    const payload = isHealthcheck
+      ? { success: true, notify: { telegram: 'ok', email: notifyFailure || 'ok' } }
+      : { success: true };
+
+    return new Response(JSON.stringify(payload), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
