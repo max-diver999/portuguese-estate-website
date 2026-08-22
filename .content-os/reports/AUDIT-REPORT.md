@@ -341,3 +341,56 @@ Stated plainly so nothing here is over-trusted:
 - **Image 403s could not be separated** into "hotlink protection" vs "proxy block". The *reuse* finding (126 pages / 10 images) is from source and is certain; the *availability* finding needs a real-network re-run.
 - GSC/GA4/Bing MCP connectors were not available; all search data is from the committed snapshot.
 - `greek-invest-website` and `florida-estate-website` are not in this session's scope, so reference-pattern comparison is based on `more-group-content-os/policies/`, not their code.
+
+---
+
+# Addendum — corrections to this report, found during cleanup (2026-08-22)
+
+Working through the fixes surfaced things the Phase 0 audit got wrong or missed.
+Recorded here rather than silently edited above, so the original findings and
+their corrections both stay visible.
+
+## Where this report was wrong
+
+| Original claim (§3.2) | Correction |
+|---|---|
+| "**10 files** quote a D8 threshold of €3,040" | **5 files.** Six of the ten matched `€3,040` as *stamp duty on a €380,000 purchase*, not a visa figure. The grep was not context-checked. |
+| Stale-figure scope framed as €820 / €3,040 / €3,480 only | **Missed €870 entirely.** €870 is the *2025* minimum wage, asserted as current in 14 places across 4 more files. Found only when the new `REGULATORY_STALE` gate rule ran. |
+
+## What this report missed completely
+
+Five defects, none visible in the Phase 0 sweep:
+
+1. **The entire lead funnel was Italian content.** `/tier-entry/`, `/tier-mid/`,
+   `/tier-luxury/` and `/portugal-property-consultation/` carried Italian markets
+   (Sicily, Puglia, Lake Como, Costa Smeralda), Italian tax rates (9% registration
+   tax, IMU) and Italian FAQ schema. §2.3 caught the two hub pages and stopped
+   there — because the rendered audit only enumerated collection pages, and I
+   checked meta tags rather than reading the funnel bodies.
+2. **26 broken internal links, not 4.** The §2.5 figure counted MDX only. The
+   `.astro` pages held 18 more, all pointing at Italian pages that never existed.
+3. **25 public H2 headings carried internal content-ops jargon** — "Wave 3
+   purchase process guides", "Wave 13 Lisbon east & west", "(citability block)".
+   One capital-gains FAQ described "Wave 3 reforms" as though it were Portuguese
+   legislation.
+4. **89 mentions of "MORE Group" across 37 files** attributed the site's own field
+   data to a brand the About page, footer and schema never introduce.
+5. **AIMI payment deadline was wrong** — stated as "Modelo 3 by March 31st" in
+   both FAQ schema and body. AIMI is assessed at 1 January, noted by end of
+   August and due by end of September, billed separately from IRS.
+
+**The common thread:** every one of these lived in a place the audit sampled
+rather than swept — non-collection pages, headings, prose-level branding. The
+gates added in Stage 3 now cover exactly these gaps, which is why items 1–3 were
+found by tooling rather than by reading.
+
+## Still open
+
+- **Capital gains position** — the guide may be stating the pre-2023 rule.
+  Documented in `CONTENT-FINDINGS-REQUIRING-EXPERT-REVIEW.md`; needs a Portuguese
+  tax professional, deliberately not edited.
+- **Wave 3 (`projects`)** — blocked on developer source data, not on writing time.
+  Same document, finding 4.
+- **Images** — 126 pages still share 10 hotlinked third-party heroes (§2.4).
+  Unchanged; needs a licensing and budget decision.
+- **Wave 1** — 9 of 25 files done. **Wave 5** — 19 of 50.
