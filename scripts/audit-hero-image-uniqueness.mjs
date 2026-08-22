@@ -1,5 +1,5 @@
 /**
- * Hero image uniqueness audit.
+ * Hero image quality audit: uniqueness and attractiveness.
  *
  * Two things can go wrong with hero images and only one of them is visible in a diff:
  *   1. Two pages pointing at the same URL — caught by the content gate, no network needed.
@@ -9,6 +9,10 @@
  *
  * This script downloads every hero in use, reduces each to a 9x8 greyscale, and computes a
  * 64-bit difference hash. Pairs within HAMMING_MAX bits are reported as near-duplicates.
+ *   3. A photograph that is accurate, licensed and unique, and still ugly. The first
+ *      image set put a grey concrete block on a page selling €660,982 property.
+ *      Attractiveness is measured, not eyeballed: see lib/image-aesthetics.mjs.
+ *
  * Hashes are cached in .content-os/cache/hero-image-hashes.json keyed by URL.
  *
  *   node scripts/audit-hero-image-uniqueness.mjs            # audit what the MDX currently uses
@@ -17,6 +21,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
+import { imageAesthetics, passesAestheticBar, AESTHETIC_BAR, UNATTRACTIVE_SUBJECT } from './lib/image-aesthetics.mjs';
 
 const ROOT = process.cwd();
 const CACHE = path.join(ROOT, '.content-os/cache/hero-image-hashes.json');
@@ -72,6 +77,9 @@ async function fetchBuffer(url) {
   throw new Error('unreachable');
 }
 
+const A_CACHE = path.join(ROOT, '.content-os/cache/image-aesthetics.json');
+const aesthetics = fs.existsSync(A_CACHE) ? JSON.parse(fs.readFileSync(A_CACHE, 'utf8')) : {};
+
 /** 64-bit dHash as a hex string. */
 async function dhash(buf) {
   const px = await sharp(buf).greyscale().resize(9, 8, { fit: 'fill' }).raw().toBuffer();
@@ -101,7 +109,9 @@ if (missing.length) {
     // eslint-disable-next-line no-await-in-loop
     await Promise.all(chunk.map(async (u) => {
       try {
-        cache[u] = await dhash(await fetchBuffer(u));
+        const buf = await fetchBuffer(u);
+        cache[u] = await dhash(buf);
+        if (!aesthetics[u]) aesthetics[u] = await imageAesthetics(buf);
       } catch (err) {
         cache[u] = null;
         process.stderr.write(`\n  unreachable: ${u} — ${err.message}\n`);
@@ -112,6 +122,7 @@ if (missing.length) {
   process.stderr.write('\n');
   fs.mkdirSync(path.dirname(CACHE), { recursive: true });
   fs.writeFileSync(CACHE, JSON.stringify(cache, null, 2) + '\n');
+  fs.writeFileSync(A_CACHE, JSON.stringify(aesthetics, null, 2) + '\n');
 }
 
 const problems = [];
@@ -138,12 +149,25 @@ for (let i = 0; i < hashed.length; i += 1) {
   }
 }
 
+// 3. Accurate, unique — and ugly.
+for (const e of entries) {
+  const m = aesthetics[e.url];
+  if (!m) continue;
+  if (!passesAestheticBar(m)) {
+    problems.push({
+      kind: 'unattractive',
+      pages: [e.id],
+      detail: `colourfulness ${m.colourfulness} (min ${AESTHETIC_BAR.minColourfulness}), grey ${m.greyMass} (max ${AESTHETIC_BAR.maxGreyMass}), brightness ${m.brightness}`,
+    });
+  }
+}
+
 const unreachable = entries.filter((e) => cache[e.url] === null);
 for (const e of unreachable) problems.push({ kind: 'unreachable', pages: [e.id], detail: e.url });
 
 console.log(`hero images: ${entries.length} references, ${urls.length} distinct URLs`);
 if (!problems.length) {
-  console.log('PASS — every page carries its own picture, and no two pictures look alike.');
+  console.log('PASS — every page carries its own picture, no two look alike, and all clear the attractiveness bar.');
   process.exit(0);
 }
 for (const p of problems) console.log(`${p.kind.toUpperCase()}  ${p.pages.join('  <->  ')}  (${p.detail})`);

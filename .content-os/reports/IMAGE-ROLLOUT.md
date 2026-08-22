@@ -22,6 +22,49 @@
 
 ---
 
+## Why a third round was needed: accurate is not attractive
+
+The second round fixed duplication and got every page its own correctly-located,
+correctly-licensed photograph. It still shipped the wrong pictures. Wikimedia Commons
+is strongest where volunteers document buildings for the record, so "a photograph of
+Porto" resolves to a grey 1970s housing block far more readily than to a beach — and a
+site selling €660,982 property was illustrating a tax guide with wet concrete.
+
+Attractiveness is now measured rather than eyeballed, in `scripts/lib/image-aesthetics.mjs`:
+
+| Metric | Bar | What it catches |
+|---|---|---|
+| Colourfulness (Hasler & Süsstrunk) | ≥ 38 | Grey façades, overcast documentary shots |
+| Grey mass (share of desaturated pixels) | ≤ 0.55 | Concrete blocks, car parks |
+| Brightness (mean value channel) | 0.42–0.95 | Murky, underexposed, blown-out frames |
+| Subject blacklist | regex | Courthouses, metro stations, social housing, night shots |
+| Subject bonus | regex | Beach, coast, cliff, villa, pool, marina, terrace, vineyard, aerial |
+
+**The metric is necessary and not sufficient.** The concrete block from the reported
+screenshot passes it: a deep blue sky supplies the colourfulness and the pale façade the
+brightness. Ten further heroes cleared every number and were still wrong for the site —
+a photograph of the Moon on a developer page, a jeep-safari snapshot, a bank façade, a
+university building, an old town hall. Those were re-picked by subject, by hand. Treat
+the numbers as a floor that catches the grey half of the corpus automatically, and the
+subject judgement as the part that still needs a person.
+
+Scored against the second image set, **58 of 121 measurable heroes failed** — the concrete
+blocks the metric was built to catch. Those, plus 11 unmeasurable, were re-sourced against
+curated Commons categories (`cat:Beaches of Albufeira`, `cat:Marinas in Portugal`,
+`cat:Villas in Portugal`) instead of free-text search.
+
+Two mechanical faults were fixed in the same pass:
+
+- **`--slug=` was destructive.** It rewrote the manifest down to the single slug being
+  debugged. It now carries the rest forward like `--replace`.
+- **Perceptual dedup read a stale cache.** Entries written before the hash field existed
+  returned `hash: undefined`, which silently disabled the near-duplicate check and let
+  three pages take three frames of the same coastal walk. A cached entry without a hash
+  is now a cache miss.
+- **Measurement fetched a 640px rendition** that Commons returns HTTP 400 for on many
+  files, so every measurement failed silently and every candidate was rejected. Measuring
+  runs on the same 1280px rendition the site serves.
+
 ## Why a second round was needed
 
 The first pass produced 126 distinct *files* and I reported it as done. It wasn't.
@@ -59,6 +102,7 @@ Exact duplicates score 0–5, so there is real headroom.
 | Missing credit on a licence that requires one | `validate:content` | every content change |
 | One photograph rendered on two content pages | `postbuild` | every build |
 | Every image URL returns HTTP 200 | `audit:images` | on demand (network) |
+| Hero clears the attractiveness bar | `audit:images:unique` | on demand (network) |
 | No two heroes *look* alike | `audit:images:unique` | on demand (network) |
 
 The rendered check exists because the frontmatter check cannot see a URL hard-coded in
