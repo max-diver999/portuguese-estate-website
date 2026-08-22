@@ -3,6 +3,19 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel';
+import { readdirSync } from 'node:fs';
+
+// The news hub is noindex while the collection is empty (see
+// src/pages/news/index.astro). A noindex page must not sit in the sitemap —
+// Google reports that as "Submitted URL marked noindex". Mirror the same
+// condition here so both flip together when the first article ships.
+const newsIsEmpty = (() => {
+  try {
+    return !readdirSync('./src/content/news').some((f) => f.endsWith('.mdx'));
+  } catch {
+    return true;
+  }
+})();
 
 export default defineConfig({
   site: 'https://portuguese-estate.com',
@@ -18,6 +31,7 @@ export default defineConfig({
         const excluded = [
           '/thanks/',
           '/site-report/',
+          ...(newsIsEmpty ? ['/news/'] : []),
         ];
         return !excluded.some((path) => page.includes(path));
       },
