@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../data/site';
+import { waHref as buildWaHref, hasWhatsApp, waLinkAttrs } from '../lib/contact';
 import { LEAD_OFFER_FORM_TITLE, LEAD_OFFER_SUBTEXT } from '../data/leadOffer';
 
 interface Props {
@@ -17,7 +18,7 @@ const {
 const waText = encodeURIComponent(
   'Hi, I need help with a Portugal property enquiry from Portuguese Estate.',
 );
-const waHref = `${SITE.whatsapp}?text=${waText}`;
+const waHref = buildWaHref(decodeURIComponent(waText));
 ---
 <section class="surface-card p-8 md:p-10" id="lead-form">
   <span class="badge-pill mb-3">Free · Independent advisory</span>
@@ -91,26 +92,24 @@ const waHref = `${SITE.whatsapp}?text=${waText}`;
       <a
         href={waHref}
         class="font-medium text-[#128C7E] hover:underline"
-        target="_blank"
-        rel="noopener noreferrer"
+        {...waLinkAttrs}
         data-wa-placement="inline_cta"
         data-cta="whatsapp_lead_form"
       >
-        Message us on WhatsApp
+        {hasWhatsApp ? 'Message us on WhatsApp' : 'Request a shortlist'}
       </a>
-      ({SITE.whatsappDisplay})
+      {hasWhatsApp && SITE.whatsappDisplay && ` (${SITE.whatsappDisplay})`}
     </p>
     <p id="lf-success" class="hidden text-green-700 text-sm font-medium text-center">Thank you — redirecting…</p>
     <p id="lf-error" class="hidden text-red-600 text-sm text-center">
       Something went wrong. Email {SITE.email} or{' '}
       <a
-        href={SITE.whatsapp}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={waHref}
+        {...waLinkAttrs}
         data-wa-placement="inline_cta"
         data-cta="whatsapp_form_error"
       >
-        WhatsApp us
+        {hasWhatsApp ? 'WhatsApp us' : 'try the shortlist form'}
       </a>.
     </p>
   </form>

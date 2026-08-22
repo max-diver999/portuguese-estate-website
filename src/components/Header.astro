@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../data/site';
+import { waHref as buildWaHref, waLabel, waLinkAttrs } from '../lib/contact';
 
 const nav = [
   { label: 'Guides', href: '/guides/' },
@@ -12,9 +13,10 @@ const nav = [
   { label: 'Contact', href: '/contact/' },
 ];
 
-const waHref = `${SITE.whatsapp}?text=${encodeURIComponent(
+const waHref = buildWaHref(
   "Hi Portuguese Estate! I'm interested in Portugal property. Please send me a free shortlist.",
-)}`;
+);
+const waText = waLabel('WhatsApp', 'Talk to us');
 ---
 <header class="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[rgba(255,255,255,0.9)] backdrop-blur-md">
   <div class="site-container flex items-center justify-between gap-4 py-4">
@@ -32,13 +34,12 @@ const waHref = `${SITE.whatsapp}?text=${encodeURIComponent(
     <div class="flex items-center gap-2 shrink-0">
       <a
         href={waHref}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...waLinkAttrs}
         class="btn-secondary text-sm px-4 py-2 shrink-0 hidden sm:inline-flex"
         data-wa-placement="header"
         data-cta="whatsapp_header"
       >
-        WhatsApp
+        {waText}
       </a>
       <a href="/get-shortlist/" class="btn-primary text-sm px-4 py-2 shrink-0">Free shortlist</a>
 
@@ -70,13 +71,12 @@ const waHref = `${SITE.whatsapp}?text=${encodeURIComponent(
           ))}
           <a
             href={waHref}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...waLinkAttrs}
             class="block px-4 py-2 text-sm text-[var(--color-ink)] hover:bg-[var(--color-surface)] no-underline sm:hidden"
             data-wa-placement="header_mobile"
             data-cta="whatsapp_header_mobile"
           >
-            WhatsApp
+            {waText}
           </a>
         </nav>
       </details>
