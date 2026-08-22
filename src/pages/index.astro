@@ -11,6 +11,10 @@ import {
   FEATURED_GUIDE_SLUGS,
   FEATURED_AREA_SLUGS,
   HOMEPAGE_HERO_IMAGE,
+  HOMEPAGE_HERO_ALT,
+  HOMEPAGE_HERO_CREDIT,
+  HOMEPAGE_HERO_LICENCE,
+  HOMEPAGE_HERO_SOURCE,
   HOMEPAGE_HERO_PROJECT_SLUG,
 } from '../data/featured';
 import { getCardImageUrl, formatAreaLabel } from '../lib/cardImage';
@@ -36,7 +40,6 @@ const heroProject = projectBySlug.get(HOMEPAGE_HERO_PROJECT_SLUG) ?? homepagePro
 const featuredAreas = FEATURED_AREA_SLUGS.map((slug) => areaBySlug.get(slug)).filter(Boolean);
 
 const heroImage = getCardImageUrl(HOMEPAGE_HERO_IMAGE, 'hero');
-const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImage, 'card') : heroImage;
 ---
 <BaseLayout
   title="Portugal Property Investment 2026 — Guides & Shortlist"
@@ -60,9 +63,11 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
         <TrustStrip />
       </div>
       <div class="hero-visual min-h-[280px] md:min-h-[380px] relative">
-        <img src={heroProjectImage} alt={heroProject ? `${heroProject.data.title} — featured Portugal project` : 'Lisbon new-build apartment, Vanguard Properties'} loading="eager" width="1400" height="560" />
+        <img src={heroImage} alt={HOMEPAGE_HERO_ALT} loading="eager" width="1400" height="560" />
         <div class="hero-visual__overlay" />
-        <p class="hero-visual__caption">Lisbon · Tomás Ribeiro 79</p>
+        <p class="hero-visual__caption">
+          Lisbon · Photo: <a href={HOMEPAGE_HERO_SOURCE} rel="noopener nofollow" target="_blank">{HOMEPAGE_HERO_CREDIT}</a> · {HOMEPAGE_HERO_LICENCE}
+        </p>
         {heroProject && (
           <div class="hero-project-card">
             <div class="hero-project-card__copy">
@@ -114,6 +119,7 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
             title={project.data.title}
             description={project.data.description}
             image={project.data.heroImage}
+            imageAlt={project.data.heroImageAlt}
             area={project.data.area}
             developer={project.data.developer}
             propertyType={project.data.propertyType}
@@ -147,6 +153,7 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
             title={guide.data.title}
             description={guide.data.description}
             image={guide.data.heroImage}
+            imageAlt={guide.data.heroImageAlt}
             badges={['Guide', ...(guide.data.tags?.slice(0, 1) ?? [])]}
             meta={`${guide.data.readingTime ?? 8} min read`}
           />
@@ -212,6 +219,7 @@ const heroProjectImage = heroProject ? getCardImageUrl(heroProject.data.heroImag
             title={area.data.title}
             description={area.data.description}
             image={area.data.heroImage}
+            imageAlt={area.data.heroImageAlt}
             badges={['Area', formatAreaLabel(area.id)]}
             meta={`${area.data.readingTime ?? 10} min read`}
           />

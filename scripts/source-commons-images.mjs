@@ -31,6 +31,8 @@ const UA = 'portuguese-estate-image-sourcing/1.0 (https://portuguese-estate.com;
 
 const MIN_WIDTH = 1600;
 const THUMB_WIDTH = 2000;
+/** Commons rejects arbitrary thumbnail widths; 1280 is on its allowed list. */
+const DELIVERY_WIDTH = 1280;
 
 /** Licences that permit commercial reuse with attribution. */
 const ALLOWED_LICENCE = /^(CC0|CC BY(-SA)? [\d.]+|Public domain|PDM [\d.]+|CC BY(-SA)? [\d.]+ [a-z]{2}|No restrictions)/i;
@@ -86,7 +88,8 @@ const FALLBACK = [
  * curated, so use them as the country guard.
  */
 const PORTUGAL_CAT = /Portugal|Portuguese|Lisboa|Lisbon|Porto\b|Algarve|Madeira|Alentejo|Douro|Minho|Aveiro|Coimbra|Braga|Cascais|Sintra|Set[uú]bal|Faro District|Leiria|Santar[eé]m|Beja|[EÉ]vora|Viseu|Guarda|Castelo Branco|Viana do Castelo|Vila Real|Bragan[cç]a/i;
-const FOREIGN_CAT = /Brazil|Brasil|Macau|Macao|Thailand|Spain|España|Espanha|Mexico|México|France(?!sa)|Italy|Italia|Angola|Mozambique|Cape Verde|Goa|Timor|India\b|China\b|Japan|United States|Argentina|Uruguay|Colombia/i;
+const FOREIGN_CAT =
+  /Brazil|Brasil|Macau|Macao|Thailand|Spain|Espa\u00f1a|Espanha|Mexico|M\u00e9xico|France(?!sa)|Italy|Italia|Angola|Mozambique|Cape Verde|Goa|Timor|India\\b|China\\b|Japan|United States|Argentina|Uruguay|Colombia|Manaus|Amazonas|Amazon(ia|as)?\\b|Rio de Janeiro|S[a\u00e3]o Paulo|Bahia|Minas Gerais|Recife|Salvador|Bel[e\u00e9]m do Par[a\u00e1]|Luanda|Maputo|Peru|Per[u\u00fa]|Tonatico/i;
 
 const only = process.argv.find((a) => a.startsWith('--slug='))?.split('=')[1];
 /** Re-source a subset: --replace=slug1,slug2 keeps the rest of the manifest intact. */
@@ -111,6 +114,17 @@ async function api(params) {
     }
   }
   return null;
+}
+
+/** Human-readable subject from a Commons filename, for alt text. */
+function subjectOf(title) {
+  return title
+    .replace(/^File:/, '')
+    .replace(/\.(jpe?g|png|webp)$/i, '')
+    .replace(/\s*\(\d{6,}\)\s*$/, '')
+    .replace(/[_]+/g, ' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
 }
 
 function stripHtml(s) {
@@ -205,6 +219,54 @@ async function candidates(term, opts = {}) {
     .sort((a, b) => b.score - a.score);
 }
 
+/**
+ * Commons search is a blunt instrument. Some pages need a specific file — either
+ * because search kept returning the wrong country (a Manaus market for an Angolan
+ * buyer guide) or because two pages ended up with two frames of the same view.
+ * `pin` in commons-queries.mjs names the file; this fetches it directly and still
+ * runs the licence and size checks.
+ */
+async function pinnedCandidate(title) {
+  const data = await api({
+    action: 'query',
+    titles: title,
+    prop: 'imageinfo|categories',
+    iiprop: 'url|size|extmetadata|mime',
+    iiurlwidth: String(THUMB_WIDTH),
+    cllimit: 'max',
+  });
+  const page = Object.values(data?.query?.pages || {})[0];
+  const ii = page?.imageinfo?.[0];
+  if (!ii) return null;
+  const em = ii.extmetadata || {};
+  const licence = stripHtml(em.LicenseShortName?.value);
+  if (!ALLOWED_LICENCE.test(licence)) throw new Error(`pinned file licence not permitted: ${licence}`);
+  if (Math.max(ii.width, ii.height) < MIN_WIDTH) throw new Error('pinned file below minimum width');
+  return {
+    title: page.title,
+    url: ii.thumburl || ii.url,
+    original: ii.url,
+    width: ii.width,
+    height: ii.height,
+    licence,
+    author: stripHtml(em.Artist?.value) || 'Unknown',
+    descriptionUrl: ii.descriptionurl,
+  };
+}
+
+/**
+ * Commons only serves a fixed set of thumbnail widths, and the width the API hands
+ * back varies by file. Rewriting every pick to one deterministic width keeps page
+ * weight predictable and makes the manifest diffable.
+ */
+function deliveryUrl(originalUrl) {
+  const clean = String(originalUrl).split('?')[0];
+  const m = clean.match(/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/(?:thumb\/)?([0-9a-f])\/([0-9a-f]{2})\/([^/]+)/);
+  if (!m) return clean;
+  const [, a, b, file] = m;
+  return `https://upload.wikimedia.org/wikipedia/commons/thumb/${a}/${b}/${file}/${DELIVERY_WIDTH}px-${file}`;
+}
+
 async function verify(url) {
   try {
     const res = await fetch(url, { method: 'GET', headers: { 'User-Agent': UA } });
@@ -234,7 +296,15 @@ let i = 0;
 for (const [slug, spec] of entries) {
   i += 1;
   let picked = null;
-  for (const term of [...spec.terms, ...FALLBACK]) {
+
+  if (spec.pin) {
+    const c = await pinnedCandidate(spec.pin);
+    if (!c) throw new Error(`${slug}: pinned file not found on Commons — ${spec.pin}`);
+    if (used.has(c.title)) throw new Error(`${slug}: pinned file already used by another page — ${spec.pin}`);
+    picked = { ...c, term: 'pinned' };
+  }
+
+  for (const term of picked ? [] : [...spec.terms, ...FALLBACK]) {
     let list;
     try {
       list = await candidates(term, { requireCat: spec.requireCat, rejectCat: spec.rejectCat });
@@ -263,11 +333,14 @@ for (const [slug, spec] of entries) {
   results.push({
     slug,
     collection: spec.collection,
-    url: picked.url,
-    originalUrl: picked.original,
+    url: deliveryUrl(picked.original),
+    originalUrl: String(picked.original).split('?')[0],
     width: picked.width,
     height: picked.height,
-    alt: spec.alt,
+    // A Commons filename is not always a description ('Rhythmic living', 'Lisboa').
+    // altText overrides the composed string where the filename says nothing useful.
+    alt: spec.altText || `${subjectOf(picked.title)} — ${spec.alt}`,
+    altSubject: subjectOf(picked.title),
     credit: `${picked.author} / Wikimedia Commons`,
     licence: picked.licence,
     sourcePage: picked.descriptionUrl,
@@ -288,6 +361,7 @@ const manifest = {
   source: 'Wikimedia Commons',
   rule: `One unique hero per page. Min ${MIN_WIDTH}px long edge. Commercial-reuse licences only. Every URL verified HTTP 200 at generation time.`,
   attributionRequired: true,
+  deliveryWidth: DELIVERY_WIDTH,
   total: merged.length,
   uniqueFiles: new Set(merged.map((r) => r.commonsTitle)).size,
   failures,

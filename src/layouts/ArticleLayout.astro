@@ -12,6 +12,10 @@ interface Props {
   author?: string;
   readingTime?: number;
   heroImage?: string;
+  heroImageAlt?: string;
+  heroImageCredit?: string;
+  heroImageLicence?: string;
+  heroImageSource?: string;
   faq?: { question: string; answer: string }[];
   canonical?: string;
   noindex?: boolean;
@@ -27,6 +31,10 @@ const {
   author = SITE.editorial,
   readingTime = 8,
   heroImage,
+  heroImageAlt,
+  heroImageCredit,
+  heroImageLicence,
+  heroImageSource,
   faq = [],
   canonical,
   noindex = false,
@@ -114,7 +122,23 @@ const schemas = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : 
     </header>
 
     {heroImage && (
-      <img src={heroImage} alt="" class="w-full max-h-[420px] object-cover rounded-2xl mb-10 border border-[var(--color-border)]" loading="eager" />
+      <figure class="mb-10">
+        <img
+          src={heroImage}
+          alt={heroImageAlt || ''}
+          class="w-full max-h-[420px] object-cover rounded-2xl border border-[var(--color-border)]"
+          loading="eager"
+          width="1280"
+          height="720"
+        />
+        {heroImageCredit && (
+          <figcaption class="mt-2 text-xs text-[var(--color-muted)]">
+            Photo: {heroImageSource ? (
+              <a href={heroImageSource} rel="noopener nofollow" target="_blank">{heroImageCredit}</a>
+            ) : heroImageCredit}{heroImageLicence ? ` · ${heroImageLicence}` : ''}
+          </figcaption>
+        )}
+      </figure>
     )}
 
     <div class="prose mx-auto">

@@ -37,6 +37,7 @@ const schemas = hubSchemas({
           title={area.data.title}
           description={area.data.description}
           image={area.data.heroImage}
+          imageAlt={area.data.heroImageAlt}
           badges={['Area', formatAreaLabel(area.id)]}
           meta={`${area.data.readingTime ?? 10} min read`}
         />

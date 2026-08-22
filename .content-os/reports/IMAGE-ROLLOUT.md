@@ -1,110 +1,144 @@
-# Hero image rollout — 126 unique images, ready for Cloudinary
+# Hero images — 127 unique photographs, live in the corpus
 
 **Date:** 2026-08-22
 **Manifest:** `scripts/portugal-commons-images.json`
 **Source:** Wikimedia Commons
-**Status:** sourced and verified. **Not yet applied to the MDX** — Cloudinary upload comes first.
+**Status:** sourced, applied to all 126 MDX files and the homepage, and enforced by two gates.
 
 ---
 
-## What this replaces
+## What changed
 
 | | Before | After |
 |---|---|---|
-| Distinct hero images | **10** | **126** |
-| Pages sharing one photo | **49** on a single image | **0** |
-| Hosting | Hotlinked from `vangproperties.com`, `sonaesierra.com`, `pinheirinhocomporta.com` | Cloudinary (after upload) |
-| Region accuracy | A Lisbon tower headed both Albufeira and Aveiro | Each page shows its own place |
-| Licence | None — third-party CMS files used without permission | CC BY / CC BY-SA / CC0 / PD, attribution captured |
+| Distinct hero photographs | **10** | **127** |
+| Pages sharing one photograph | **49** on a single image | **0** |
+| Hosting | Hotlinked from `vangproperties.com`, `sonaesierra.com`, `pinheirinhocomporta.com` | `upload.wikimedia.org` (Cloudinary after upload) |
+| Licence | None — third-party CMS files used without permission | CC BY / CC BY-SA / CC0 / PD, credit rendered on the page |
+| Alt text | Empty `alt=""` on every hero | Describes the photograph and the page subject |
+| Homepage hero | The featured project's own photograph | Its own Lisbon panorama |
+
+126 photographs belong to the 126 content pages; the 127th is the homepage hero.
 
 ---
 
-## What was enforced during sourcing
+## Why a second round was needed
 
-Each of these is checked in `scripts/source-commons-images.mjs`, not assumed:
+The first pass produced 126 distinct *files* and I reported it as done. It wasn't.
+Distinct files are not distinct pictures. Free-text Commons search kept resolving
+loosely-related terms to the same handful of viewpoints, and the fallback terms
+("Porto vista cidade", "Lisboa vista cidade") pulled eleven pages into two clusters:
 
-- **Every URL fetched and required to return HTTP 200** at generation time
-- **Minimum 1600px** on the long edge — actual range in the manifest is 2048–12000px
-- **Aspect ratio 1.2–2.2** — landscape, but no stitched panoramas (an early run returned a 24992×5035 strip)
-- **Commercial-reuse licences only** — CC0, Public Domain, CC BY, CC BY-SA
-- **No file used twice** — 126 slugs, 126 distinct Commons files
-- **Country guard via Commons categories.** Free-text search collides badly on place names: it returned Phuket for a Portuguese price guide, Porto Alegre in Brazil for a Porto yield guide, and the Grand Lisboa in **Macau** for a Lisbon developer page. Candidates must be categorised in Portugal and must not be categorised elsewhere.
-- **Municipality guard on place pages.** "Faro" matched *Faro de Santa Marta*, a lighthouse in Cascais. "Alcântara" matched *Miradouro de São Pedro de Alcântara*, which is in Bairro Alto. All 33 place pages pin the correct municipality.
-- **Capture year ≥ 2005** — removes paintings, engravings and archive scans. An early run picked a 19th-century oil painting of Lisbon for the IMT guide.
-- **Subject filter** — rejects graffiti, statues, museum interiors, transport infrastructure, food, festivals, dereliction and single objects. The first full run produced a motorway bridge for Albufeira, a beer festival for Braga and a tree for Marvila.
+- five frames of the **Vista da Cidade do Porto** series across five unrelated guides
+- three **Castelo de São Jorge** shots
+- three views of **Porto from Vila Nova de Gaia**
+- two **Tram 28** frames, two **Nazaré** frames, two **Lisboa panorâmica I/II** frames
+
+Plus outright wrong subjects that every filter had missed: a **Mercedes C-Class** on
+the CPCV deposit guide, and the **Mercado Adolpho Lisboa in Manaus, Brazil** on the
+Angolan buyers page (the country guard matched the word "Lisboa" in the market's name).
+
+28 images were re-picked by hand and pinned; a 29th was sourced for the homepage.
+
+## How duplicates are detected now
+
+`npm run audit:images:unique` downloads every hero, reduces it to a 9×8 greyscale and
+computes a 64-bit difference hash. Any two pages whose heroes are within 12 bits fail.
+Hashes cache in `.content-os/cache/hero-image-hashes.json`.
+
+The closest surviving pair is **13 bits apart** (two different Lisbon tower blocks).
+Exact duplicates score 0–5, so there is real headroom.
+
+## What is enforced, and where
+
+| Check | Gate | Runs |
+|---|---|---|
+| Two MDX files sharing a `heroImage` | `validate:content` | every content change |
+| `heroImage` host is Cloudinary or Wikimedia | `validate:content` | every content change |
+| Missing `heroImageAlt` | `validate:content` | every content change |
+| Missing credit on a licence that requires one | `validate:content` | every content change |
+| One photograph rendered on two content pages | `postbuild` | every build |
+| Every image URL returns HTTP 200 | `audit:images` | on demand (network) |
+| No two heroes *look* alike | `audit:images:unique` | on demand (network) |
+
+The rendered check exists because the frontmatter check cannot see a URL hard-coded in
+a component or a data file — which is exactly how the homepage came to display a
+project's hero as its own.
+
+## Sourcing rules
+
+Enforced in `scripts/source-commons-images.mjs`, not assumed:
+
+- Every URL fetched and required to return HTTP 200 at generation time
+- Minimum 1600px on the long edge (actual range 1600–11656px)
+- Delivered at a fixed **1280px** width. Commons rejects arbitrary thumbnail widths, so
+  the URL is built deterministically from the file name
+- Aspect ratio 1.2–2.2 — landscape, but no stitched panoramas
+- Commercial-reuse licences only: CC0, public domain, CC BY, CC BY-SA
+- No file used twice across all 127 slugs
+- Country guard via Commons categories, now including Brazilian and Angolan place names
+- Municipality guard on all 33 place pages
+- Capture year ≥ 2005 — removes paintings, engravings and archive scans
+- Subject filter — rejects graffiti, statues, museum interiors, transport infrastructure,
+  food, festivals, dereliction and single objects
+- `pin:` in `scripts/lib/commons-queries.mjs` names an exact file where search cannot be
+  trusted. 29 pages use one
 
 ## Licence mix
 
 | Licence | Count |
 |---|---|
-| CC BY-SA 4.0 | 34 |
-| CC BY 2.0 | 28 |
-| CC BY-SA 2.0 | 20 |
-| CC BY-SA 3.0 | 15 |
-| CC BY 4.0 | 14 |
-| CC0 | 7 |
+| CC BY-SA 4.0 | 38 |
+| CC BY 2.0 | 25 |
+| CC BY-SA 2.0 | 23 |
+| CC BY 4.0 | 20 |
+| CC BY-SA 3.0 | 9 |
+| CC0 | 6 |
 | CC BY 3.0 | 3 |
-| CC BY-SA 3.0 (cz/de) | 3 |
-| Public domain | 2 |
+| CC BY-SA 3.0 (de) | 1 |
+| CC BY-SA 3.0 (cz) | 1 |
+| Public domain | 1 |
 
-**117 of 126 require visible attribution.** Only the CC0 and public-domain images do not.
-
----
-
-## Rollout steps
-
-### 1. Upload to Cloudinary
-
-Each manifest entry carries `url` (a 2000px-wide Commons thumbnail) and `originalUrl` (full resolution). Upload the original where you want maximum quality, otherwise the 2000px rendition is already sized for a hero.
-
-Suggested public ID: `portuguese-estate/hero/<slug>`.
-
-The repo already has `npm run images:upload:content`, but that script is wired to the old Mexico manifest (`scripts/upload-mexico-cloudinary.py`) and expects a different shape. Either point it at this manifest or upload directly — the JSON is deliberately simple.
-
-### 2. Rewrite `heroImage` in the MDX
-
-126 frontmatter fields, one per slug, pointing at the Cloudinary URL. **Do not point them at the Commons URLs** — that would just move the hotlinking from one third party to another.
-
-### 3. Render attribution
-
-`credit`, `licence` and `sourcePage` are in the manifest for every image. CC BY-SA requires the credit to be visible to the reader — a small caption under the hero, or a page-level credits line, both satisfy it. A `<meta>` tag does not.
-
-Suggested caption format:
-
-```
-Photo: {credit} · {licence} · via Wikimedia Commons
-```
-
-### 4. Re-arm the gate
-
-Once Cloudinary URLs are in place, add a `heroImage` check to the content gate: host must be `res.cloudinary.com`, and no two files may share a URL. That closes the hole that let one photo reach 49 pages.
+**120 of 127 require visible attribution.** All 127 carry it: `ArticleLayout` renders a
+`<figcaption>` under the hero linking the photographer to the Commons file page, and the
+homepage renders the same credit in its hero caption. A `<meta>` tag would not satisfy
+CC BY-SA; a caption does.
 
 ---
 
-## Alt text
+## Cloudinary migration
 
-`alt` is generated **after** sourcing, from the Commons file title plus the page context:
+The images are on Wikimedia's own CDN, which permits hotlinking — unlike the developer
+CMSs the site was using before. Moving them to Cloudinary is a performance and control
+decision, not a licensing one, so it is no longer urgent.
 
-> `Algarve Coast near Albufeira — Albufeira, Algarve`
+When you do it:
 
-This ordering is deliberate. The first draft wrote alt text before knowing which image would be selected, which produced alt describing the article rather than the photograph — on the off-plan guide it would have described "new-build residential stock" under a photograph of a castle.
-
----
+1. Upload from the manifest. Each entry carries `url` (1280px, what the site serves) and
+   `originalUrl` (full resolution). Suggested public ID: `portuguese-estate/hero/<slug>`.
+   `npm run images:upload:content` still points at the old Mexico manifest — repoint it or
+   upload directly; the JSON is deliberately flat.
+2. Rewrite `heroImage` in the MDX and `HOMEPAGE_HERO_IMAGE` in `src/data/featured.ts`.
+   `node scripts/apply-hero-images.mjs` does the MDX half once the manifest holds
+   Cloudinary URLs.
+3. Keep `heroImageCredit`, `heroImageLicence` and `heroImageSource` unchanged — the licence
+   obligation follows the photograph, not the host.
+4. Narrow `ALLOWED_IMAGE_HOST` in `scripts/qa-audit.mjs` to `res.cloudinary.com` only.
 
 ## Known limitations
 
-- **These are location photographs, not property photography.** They are accurate to the place and correctly licensed, but they are not interiors, developments or the specific buildings a listing would show. For the seven `projects` pages in particular, developer-supplied photography of the actual scheme would be better; the manifest gives each one its correct parish instead.
-- **Verified at generation time.** Commons URLs are stable, but re-run `node scripts/source-commons-images.mjs` before the upload if significant time has passed.
-- **Not applied to MDX.** The corpus still points at the old hotlinked URLs until step 2 runs.
+- **These are location photographs, not property photography.** Accurate to the place and
+  correctly licensed, but not interiors, developments, or the specific buildings a listing
+  would show. For the seven `projects` pages, developer-supplied photography of the actual
+  scheme would be better; the manifest gives each one its correct parish instead.
+- **Verified at generation time.** Commons URLs are stable, but re-run
+  `npm run audit:images` before any long-delayed deploy.
 
----
-
-## Re-sourcing
-
-To replace individual images without disturbing the rest:
+## Re-sourcing one page
 
 ```bash
 node scripts/source-commons-images.mjs --replace=slug-one,slug-two
 ```
 
-Existing picks are carried forward and their files stay reserved, so uniqueness is preserved. Search terms and per-page guards live in `scripts/lib/commons-queries.mjs`.
+Existing picks are carried forward and their files stay reserved, so uniqueness holds.
+Search terms, municipality guards and pinned files live in `scripts/lib/commons-queries.mjs`.

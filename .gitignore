@@ -19,3 +19,6 @@ scripts/google-indexing-key-moregroup-backup.json
 __pycache__/
 scripts/__pycache__/
 _drafts/
+
+# Perceptual hashes for the hero-image uniqueness audit — regenerated on demand.
+.content-os/cache/

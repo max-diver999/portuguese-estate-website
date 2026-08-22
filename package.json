@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/audit-rendered-live.mjs --local --fail",
+    "postbuild": "node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs",
     "preview": "astro preview",
     "healthcheck": "node scripts/post-deploy-smoke.mjs --http-only",
     "validate:content": "node scripts/qa-audit.mjs",
@@ -36,7 +36,9 @@
     "images:upload:dry": "python3 scripts/upload-mexico-cloudinary.py --collection all --dry-run",
     "images:rollout": "node scripts/rollout-mexico-cloudinary.mjs",
     "images:rollout:content": "node scripts/rollout-mexico-cloudinary-content.mjs",
-    "audit:images": "node scripts/audit-all-images.mjs --fail"
+    "audit:images": "node scripts/audit-all-images.mjs --fail",
+    "audit:images:unique": "node scripts/audit-hero-image-uniqueness.mjs",
+    "audit:images:rendered": "node scripts/audit-rendered-image-uniqueness.mjs"
   },
   "dependencies": {
     "google-auth-library": "^10.6.2",
