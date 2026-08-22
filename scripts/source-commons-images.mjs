@@ -47,6 +47,15 @@ const REJECT_TITLE =
  * Dereliction and building sites read as a warning on an investment page. Only
  * allowed when the search term deliberately asks for them (the scams guide does).
  */
+/**
+ * Subjects that pass every other filter but make a poor property hero: transport
+ * infrastructure, people-centred snapshots, produce, single objects. The first
+ * full run surfaced a motorway bridge for Albufeira, a beer festival for Braga
+ * and a tree for Marvila.
+ */
+const WEAK_SUBJECT =
+  /\b(motorway|highway|bridge over|railway|linha do|viaduct|roundabout|rotunda|parking|car park|port cranes|industrial|warehouse|petrol|antenna|pylon|substation|landfill|quarry|fisherman|pescador|lifeguard|beer|cerveja|fest\b|feira|banana|charcutaria|stairs|escalator|platform|terminal|ferry|autocarro|tree\b|[aá]rvore|storefront|shopfront|caf[eé]lia|lobster|lagosta|farm\b|sidewalk|passeio|metro station|esta[cç][aã]o de metro)\b/i;
+
 const DERELICT = /\b(abandoned|abandonado|derelict|devoluto|ruin|ru[ií]na|demolit|vandal|construction site|scaffold|andaime|boarded[- ]up|dilapidated|decay)\b/i;
 
 /** Words that mark a frame as scenery or architecture — what a hero needs. */
@@ -184,6 +193,7 @@ async function candidates(term, opts = {}) {
     })
     .filter((c) => c.matched > 0)
     .filter((c) => !DERELICT.test(c.title) || DERELICT.test(term))
+    .filter((c) => !WEAK_SUBJECT.test(c.title))
     // Must be categorised in Portugal, and must not be categorised elsewhere.
     .filter((c) => PORTUGAL_CAT.test(c.cats) || /Portugal/i.test(c.title))
     .filter((c) => !FOREIGN_CAT.test(c.cats) && !FOREIGN_CAT.test(c.title))
