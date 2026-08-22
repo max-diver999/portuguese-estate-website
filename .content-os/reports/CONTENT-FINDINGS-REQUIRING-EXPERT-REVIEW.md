@@ -91,3 +91,48 @@ The gate now pins minimum-wage-derived figures (`REGULATORY_STALE` in
 `scripts/qa-audit.mjs`), so the January uplift will be caught automatically.
 `portugal-residency-options-without-golden-visa` documents the historical
 progression on purpose and is exempted by name.
+
+---
+
+## 4. Wave 3 (de-template `projects`) is blocked on source data — not on writing time
+
+**Files:** all 7 in `src/content/projects/`
+
+The measurement stands: 55% shared prose, all 21 file pairs above 69% 5-gram
+similarity, roughly 420 unique words per review.
+
+**What was tried and reverted.** Extracting the two verbatim closing sections
+("Mortgage, payment schedule and foreign buyer timing", "National market context
+for project underwriting") into a shared Astro component. It was reverted for
+two reasons:
+
+1. **It does not fix the SEO problem.** A shared component still renders the same
+   paragraphs into all seven pages. Google sees the rendered HTML, so measured
+   duplication in the output is unchanged. It is a maintainability win only.
+2. **It breaks the content gate.** Body word count fell from ~1,530 to ~1,060
+   against a 1,200-word minimum for the collection, because the gate counts MDX
+   source words and the extracted prose no longer lives there.
+
+**What Wave 3 actually needs, and why it was not done here:** the fix is to
+replace shared prose with project-specific substance — real unit mix, current
+developer price list, actual delivery status and longstop dates, parish-level
+comparables, the specific condominium and AL position for that building.
+
+None of that is in the repository, and it cannot be inferred. These are seven
+real developments — Infinity, Castilho 203, Tomás Ribeiro 79, Terraços do Monte,
+Mar Adentro, Six Senses Comporta, Carvalhido — and writing plausible-sounding
+unit mixes or price points for them would be fabrication about identifiable
+third-party projects. That is worse than boilerplate.
+
+**To unblock:** supply, per project, the developer price list or fact sheet, the
+current delivery status, and the unit schedule. With those, each review can carry
+~1,200 genuinely distinct words and duplication falls below 15% without touching
+the shared national context.
+
+**Note on sequencing:** `six-senses-comporta` is a GSC page (position 9.1), so it
+should be rewritten last and tracked before/after, per the corpus roadmap.
+
+**Also worth deciding:** whether the 1,200-word minimum should measure rendered
+output rather than MDX source. As written, the gate rewards storing duplicated
+prose in every file — the same class of mismatch as the title-length check, which
+validated frontmatter while the layout appended a brand suffix.
