@@ -67,8 +67,14 @@ export function hasStat(text) {
 const VAGUE_RE = /\b(many|several|some|often|usually|a lot|significant|various)\b/i;
 const PRONOUN_START_RE = /^(it|this|they|these|those|however|but|and|also)\b/i;
 const QUESTION_H2_RE = /^(what|how|why|when|where|who|which|can|do|does|is|are|should|will)\b/i;
+// NOTE: this is a keyword-presence proxy, not a cross-document duplication
+// measure — it never compares two files. A low `unique` score means a page lacks
+// first-hand framing, not that it is duplicated. Do not remediate by pasting
+// "Insider tip:" everywhere; that games the metric with no reader value.
+// The brand alternative previously read "MORE Group", which this site never uses,
+// so that branch could never match.
 const UNIQUE_RE =
-  /\b(MORE Group|our (analysis|data|clients|underwriting)|insider tip|underwriting snapshot|we (surveyed|analyzed|tracked))\b/i;
+  /\b(Portuguese Estate|MORE Group|our (analysis|data|clients|underwriting)|insider tip|underwriting snapshot|we (surveyed|analyzed|tracked))\b/i;
 
 export function wordCount(text) {
   return (text.match(/\b[\w']+\b/g) || []).length;

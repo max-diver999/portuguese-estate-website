@@ -3,16 +3,19 @@ import { formatAreaLabel, formatProjectPrice } from './cardImage';
 
 type ProjectEntry = CollectionEntry<'projects'>;
 
+/**
+ * Homepage curation order. This list was inherited from a Mexico site and held
+ * Mexican areas, so no project ever matched and the priority pass was dead code —
+ * the homepage silently fell through to price-ascending order. Values must match
+ * the `area` field in src/content/projects/*.mdx.
+ */
 const AREA_PRIORITY = [
-  'tulum',
-  'playa-del-carmen',
-  'aldea-zama-tulum',
-  'cabo-san-lucas',
-  'san-jose-del-cabo',
-  'cabo-corridor',
-  'puerto-vallarta',
-  'punta-de-mita',
-  'puerto-morelos',
+  'lisbon-avenidas-novas',
+  'lisbon-sete-rios',
+  'lisbon-graca',
+  'comporta',
+  'porto-carvalhido',
+  'faro',
 ];
 
 export function pickHomepageProjects(

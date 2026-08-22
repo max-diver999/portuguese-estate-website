@@ -2,13 +2,23 @@
 export const prerender = true;
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { hubSchemas } from '../../lib/hubSchema';
+import InlineCta from '../../components/InlineCta.astro';
 import ContentCard from '../../components/ContentCard.astro';
 
 const segments = (await getCollection('segments'))
   .filter((g) => !g.data.noindex)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const schemas = hubSchemas({
+  path: '/segments/',
+  name: 'Buyer segments',
+  description: 'Country-specific Portugal property guidance covering tax domicile, banking and residency by nationality.',
+  itemCount: segments.length,
+});
+
 ---
 <BaseLayout
+  schemas={schemas}
   title="Buyer Guides by Nationality"
   description="Portugal property guides for Brazilian, Angolan, French, UK, and US buyers. Tax, banking, residency, and regional market data for 2026."
 >
@@ -33,5 +43,13 @@ const segments = (await getCollection('segments'))
         />
       ))}
     </div>
+
+    <InlineCta
+      headline='Buying from outside the EU?'
+      subtext='Tell us your tax residence — we flag the banking, NIF and IMT steps that apply to you.'
+      buttonHref="/get-shortlist/"
+      ctaId='segments_hub_inline'
+      whatsappMessage="Hi Portuguese Estate! I'd like guidance for buyers from my country."
+    />
   </section>
 </BaseLayout>

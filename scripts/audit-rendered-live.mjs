@@ -57,10 +57,11 @@ const CHECKS = [
   {
     id: 'multi-lead-form',
     severity: 'P0',
-    test: (html) => {
+    test: (html, ctx = {}) => {
       const n = (html.match(/id="lead-form"/g) || []).length;
       if (n > 1) return `${n} elements with id="lead-form" (expected 1)`;
-      if (n === 0 && siteConfig.requireLeadForm) return 'no #lead-form on page';
+      const required = ctx.requireLeadForm ?? siteConfig.requireLeadForm;
+      if (n === 0 && required) return 'no #lead-form on page';
       return null;
     },
   },
@@ -128,6 +129,108 @@ const CHECKS = [
       return n >= 1 ? 'template "holding and exit notes" block' : null;
     },
   },
+  {
+    // The content gate caps frontmatter titles at 60 chars, but the layout can
+    // append a brand suffix. Only the rendered string decides SERP truncation.
+    id: 'title-too-long',
+    severity: 'P0',
+    test: (html) => {
+      const m = html.match(/<title[^>]*>([\s\S]*?)<\/title>/);
+      if (!m) return 'no <title>';
+      const title = m[1]
+        .replace(/&amp;/g, '&')
+        .replace(/&#39;/g, "'")
+        .replace(/&quot;/g, '"')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .trim();
+      return title.length > 60 ? `rendered <title> is ${title.length} chars (max 60): "${title}"` : null;
+    },
+  },
+  {
+    // A layout H1 plus an "# " heading in the MDX body ships two competing H1s.
+    id: 'h1-count',
+    severity: 'P0',
+    test: (html) => {
+      const n = (html.match(/<h1[\s>]/g) || []).length;
+      return n === 1 ? null : `page has ${n} <h1> elements (expected exactly 1)`;
+    },
+  },
+  {
+    // This codebase was forked through several MORE Group sites (Mexico, Italy,
+    // UAE, Thailand) and copy from those markets repeatedly survived into
+    // production. Two tiers, because Portugal-vs-X pages legitimately discuss
+    // other markets in prose:
+    //   HARD  — markets this site never covers, or known broken strings. Anywhere.
+    //   SOFT  — other-market regions. Only a defect in <title>, meta description
+    //           or a heading, which is where every instance of fork residue sat.
+    id: 'foreign-market-copy',
+    severity: 'P0',
+    test: (html) => {
+      const HARD = [
+        /Riviera Maya/i, /Los Cabos/i, /Puerto Vallarta/i, /Playa del Carmen/i,
+        /\bTulum\b/i, /\bCancun\b/i, /\bPhuket\b/i, /\bPattaya\b/i,
+        /Portuguese Estatement/i, /Spain Property Market Comparisons/i,
+        /other Gulf markets/i, /investGulfTrack\s*=\s*function/i,
+        // UAE is a legitimate buyer-origin market here (see /segments/uae-buyers-…),
+        // so only flag UAE as the *subject* market, which is what the fork left behind.
+        /UAE (property|government)/i, /licensed UAE/i, /emirate-level/i,
+      ];
+      const SOFT = [
+        /Costa Smeralda/i, /Lake Como/i, /\bPuglia\b/i, /\bTuscany\b/i,
+        /\bSicily\b/i, /\bPortofino\b/i, /\bTrulli\b/i,
+      ];
+      const body = html.replace(/<script[\s\S]*?<\/script>/g, ' ');
+      const head = [
+        html.match(/<title[^>]*>([\s\S]*?)<\/title>/)?.[1] ?? '',
+        html.match(/<meta[^>]+name="description"[^>]+content="([^"]*)"/)?.[1] ?? '',
+        ...[...html.matchAll(/<h[1-3][^>]*>([\s\S]*?)<\/h[1-3]>/g)].map((m) => m[1]),
+      ].join(' \n ');
+
+      const hits = [
+        ...HARD.filter((re) => re.test(body)).map((re) => re.source),
+        ...SOFT.filter((re) => re.test(head)).map((re) => `${re.source} (in title/description/heading)`),
+      ];
+      return hits.length ? `foreign-market copy: ${hits.join(', ')}` : null;
+    },
+  },
+  {
+    // The WhatsApp CTA shipped a Thailand (+66) number for months.
+    id: 'contact-country-code',
+    severity: 'P0',
+    test: (html) => {
+      const bad = [...html.matchAll(/wa\.me\/(\d{6,})/g)]
+        .map((m) => m[1])
+        .filter((n) => !n.startsWith('351'));
+      return bad.length ? `wa.me number is not a Portuguese (+351) number: ${[...new Set(bad)].join(', ')}` : null;
+    },
+  },
+];
+
+/**
+ * Non-collection pages. These are NOT under src/content, so the collection walk
+ * never reached them — which is exactly where Mexico/Italy fork copy survived.
+ * requireLeadForm is false where a lead form is not expected.
+ */
+const STANDALONE_PAGES = [
+  { urlPath: '/', requireLeadForm: true },
+  { urlPath: '/guides/', requireLeadForm: true },
+  { urlPath: '/areas/', requireLeadForm: false },
+  { urlPath: '/compare/', requireLeadForm: false },
+  { urlPath: '/segments/', requireLeadForm: false },
+  { urlPath: '/projects/', requireLeadForm: false },
+  { urlPath: '/developers/', requireLeadForm: false },
+  { urlPath: '/portugal-property-consultation/', requireLeadForm: true },
+  { urlPath: '/tier-entry/', requireLeadForm: true },
+  { urlPath: '/tier-mid/', requireLeadForm: true },
+  { urlPath: '/tier-luxury/', requireLeadForm: true },
+  { urlPath: '/get-shortlist/', requireLeadForm: true },
+  { urlPath: '/contact/', requireLeadForm: false },
+  { urlPath: '/about/', requireLeadForm: false },
+  { urlPath: '/methodology/', requireLeadForm: false },
+  { urlPath: '/news/', requireLeadForm: false },
+  { urlPath: '/privacy-policy/', requireLeadForm: false },
+  { urlPath: '/terms/', requireLeadForm: false },
 ];
 
 function listSlugs(collection) {
@@ -148,24 +251,25 @@ async function fetchHtml(url) {
   return res.text();
 }
 
-function readLocalHtml(collection, slug) {
-  const p = path.join(ROOT, 'dist/client', collection, slug, 'index.html');
+function readLocalHtml(urlPath) {
+  const p = path.join(ROOT, 'dist/client', urlPath, 'index.html');
   if (!fs.existsSync(p)) throw new Error('missing dist HTML');
   return fs.readFileSync(p, 'utf8');
 }
 
-async function auditPage(collection, slug) {
-  const urlPath = `/${collection}/${slug}/`;
+async function auditPage(task) {
+  const { collection, slug, urlPath } = task;
   const url = `${SITE_URL}${urlPath}`;
   let html;
   try {
-    html = useLocal ? readLocalHtml(collection, slug) : await fetchHtml(url);
+    html = useLocal ? readLocalHtml(urlPath) : await fetchHtml(url);
   } catch (e) {
     return { collection, slug, url, error: String(e.message || e) };
   }
+  const ctx = { urlPath, requireLeadForm: task.requireLeadForm };
   const issues = [];
   for (const check of CHECKS) {
-    const detail = check.test(html);
+    const detail = check.test(html, ctx);
     if (detail) issues.push({ id: check.id, severity: check.severity, detail });
   }
   return { collection, slug, url, issues };
@@ -192,7 +296,17 @@ const collections = collectionFilter
 const tasks = [];
 for (const { name } of collections) {
   for (const slug of listSlugs(name)) {
-    tasks.push({ collection: name, slug });
+    tasks.push({ collection: name, slug, urlPath: `/${name}/${slug}/` });
+  }
+}
+if (!collectionFilter) {
+  for (const page of STANDALONE_PAGES) {
+    tasks.push({
+      collection: '(page)',
+      slug: page.urlPath,
+      urlPath: page.urlPath,
+      requireLeadForm: page.requireLeadForm,
+    });
   }
 }
 
@@ -205,7 +319,7 @@ if (!tasks.length) {
 }
 
 const started = Date.now();
-const results = await runPool(tasks, ({ collection, slug }) => auditPage(collection, slug));
+const results = await runPool(tasks, (task) => auditPage(task));
 const elapsed = ((Date.now() - started) / 1000).toFixed(1);
 
 const byCheck = new Map();

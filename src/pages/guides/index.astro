@@ -2,6 +2,7 @@
 export const prerender = true;
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { hubSchemas } from '../../lib/hubSchema';
 import ContentCard from '../../components/ContentCard.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import InlineCta from '../../components/InlineCta.astro';
@@ -12,8 +13,62 @@ const guides = (await getCollection('guides'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const priority = FEATURED_GUIDE_SLUGS.map((slug) => guides.find((g) => g.id === slug)).filter(Boolean);
+
+/**
+ * The hub previously rendered all 63 guides as one flat card wall, which gave a
+ * reader no route in and Google no topical structure (hub sat at position ~73).
+ * Cluster by intent. Frontmatter tags are absent on most guides, so match on the
+ * slug, which is reliable. First match wins, so order matters: the more specific
+ * clusters are listed before the catch-all.
+ */
+const GUIDE_CLUSTERS: { name: string; blurb: string; pattern: RegExp }[] = [
+  {
+    name: 'Tax & purchase costs',
+    blurb: 'IMT, IMI, AIMI, stamp duty and the full cash-to-close stack for non-residents.',
+    pattern: /imt|imi|aimi|stamp-duty|capital-gains|inheritance|moderate-rent|hidden-costs|cost-of-buying|buying-costs|tax/,
+  },
+  {
+    name: 'Buying process & due diligence',
+    blurb: 'NIF, CPCV, escritura, power of attorney, mortgages and the checks to run before a deposit.',
+    pattern: /how-to-buy|cpcv|escritura|nif|due-diligence|power-of-attorney|deposit|remotely|foreigner|scams|prenuptial|off-plan|mortgage/,
+  },
+  {
+    name: 'Rentals, yields & licensing',
+    blurb: 'Gross versus net yield, AL and RNAL licensing, containment zones and management costs.',
+    pattern: /yield|rental|buy-to-let|airbnb|alojamento|rnal|al-license|long-term-vs|property-management|maintenance-costs/,
+  },
+  {
+    name: 'Residency & visas',
+    blurb: 'D7, D8 and what remains after the Golden Visa real estate route closed.',
+    pattern: /golden-visa|d7-visa|digital-nomad|residency/,
+  },
+  {
+    name: 'Markets, budgets & data',
+    blurb: 'Regional guides, budget bands and INE market data for 2026.',
+    pattern: /./,
+  },
+];
+
+const assigned = new Set<string>();
+const clusters = GUIDE_CLUSTERS.map((cluster) => {
+  const items = guides.filter((guide) => {
+    if (assigned.has(guide.id)) return false;
+    if (!cluster.pattern.test(guide.id)) return false;
+    assigned.add(guide.id);
+    return true;
+  });
+  return { ...cluster, items };
+}).filter((cluster) => cluster.items.length > 0);
+const schemas = hubSchemas({
+  path: '/guides/',
+  name: 'Guides',
+  description: 'Independent Portugal property guides for foreign buyers — IMT, yields, buying process and due diligence.',
+  itemCount: guides.length,
+});
+
 ---
 <BaseLayout
+  schemas={schemas}
   title="Portugal Property Guides 2026 — IMT, Yields, Golden Visa"
   description="63 independent guides for foreign buyers: IMT 7.5%, deposit, maintenance, step-by-step purchase, Algarve yields — updated June 2026."
 >
@@ -51,18 +106,35 @@ const priority = FEATURED_GUIDE_SLUGS.map((slug) => guides.find((g) => g.id === 
       whatsappMessage="Hi Portuguese Estate! I'm browsing your guides and want help picking the right Portugal market for my budget."
     />
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      {guides.map((guide) => (
-        <ContentCard
-          href={`/guides/${guide.id}/`}
-          title={guide.data.title}
-          description={guide.data.description}
-          image={guide.data.heroImage}
-          badges={guide.data.tags?.slice(0, 2) ?? []}
-          meta={`${guide.data.readingTime ?? 8} min read`}
-        />
+    <nav class="mb-12 flex flex-wrap gap-2" aria-label="Guide categories">
+      {clusters.map((cluster) => (
+        <a
+          href={`#${cluster.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
+          class="inline-block text-sm font-medium px-4 py-2 rounded-full no-underline bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-teal)] hover:border-[var(--color-teal)]"
+        >
+          {cluster.name} ({cluster.items.length})
+        </a>
       ))}
-    </div>
+    </nav>
+
+    {clusters.map((cluster) => (
+      <section class="mb-14" id={cluster.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}>
+        <h2 class="text-xl mb-1">{cluster.name}</h2>
+        <p class="text-sm text-[var(--color-muted)] mb-5">{cluster.blurb}</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {cluster.items.map((guide) => (
+            <ContentCard
+              href={`/guides/${guide.id}/`}
+              title={guide.data.title}
+              description={guide.data.description}
+              image={guide.data.heroImage}
+              badges={guide.data.tags?.slice(0, 2) ?? []}
+              meta={`${guide.data.readingTime ?? 8} min read`}
+            />
+          ))}
+        </div>
+      </section>
+    ))}
 
     <div class="max-w-xl mx-auto mt-16">
       <LeadForm context="Guides hub shortlist" />

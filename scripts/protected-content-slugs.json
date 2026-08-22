@@ -1,0 +1,36 @@
+{
+  "source": "GSC refresh 2026-08-22",
+  "rule": "Never noindex — upgrade only",
+  "slugs": {
+    "imt-tax-non-resident-portugal-2026": {
+      "collection": "guides",
+      "clicks": 10,
+      "impressions": 798
+    },
+    "portugal-property-under-300000-euros": {
+      "collection": "guides",
+      "clicks": 8,
+      "impressions": 256
+    },
+    "six-senses-comporta": {
+      "collection": "projects",
+      "clicks": 3,
+      "impressions": 126
+    },
+    "property-management-portugal-cost": {
+      "collection": "guides",
+      "clicks": 1,
+      "impressions": 267
+    },
+    "rnal-registration-portugal": {
+      "collection": "guides",
+      "clicks": 1,
+      "impressions": 203
+    },
+    "madeira-property-investment-guide": {
+      "collection": "areas",
+      "clicks": 0,
+      "impressions": 169
+    }
+  }
+}

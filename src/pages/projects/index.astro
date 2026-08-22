@@ -2,6 +2,8 @@
 export const prerender = true;
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { hubSchemas } from '../../lib/hubSchema';
+import InlineCta from '../../components/InlineCta.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { formatUsd, formatProjectPrice } from '../../lib/cardImage';
 
@@ -15,8 +17,16 @@ const priced = projects
 const minPrice = priced.length ? Math.min(...priced) : 150000;
 const minPriceLabel = formatProjectPrice(minPrice, undefined) || formatUsd(minPrice) || '€150K';
 const hasProjects = projects.length > 0;
+const schemas = hubSchemas({
+  path: '/projects/',
+  name: 'Project reviews',
+  description: 'Independent Portugal new-build and resort project reviews with due diligence notes.',
+  itemCount: projects.length,
+});
+
 ---
 <BaseLayout
+  schemas={schemas}
   title="Portugal Property Project Reviews"
   description="Independent Portugal new-build and resort project reviews for foreign buyers — Lisbon, Algarve, and Porto developments with due diligence notes."
   noindex={!hasProjects}
@@ -34,6 +44,32 @@ const hasProjects = projects.length > 0;
         </p>
       )}
     </header>
+
+    {hasProjects && (
+      <div class="prose max-w-2xl mb-12 text-[var(--color-muted)]">
+        <h2 class="text-xl text-[var(--color-ink)]">How these reviews are written</h2>
+        <p>
+          Every review separates the developer's render from the registered plan. We cover location
+          context, unit mix, delivery status, acquisition cost for a non-resident, and the specific
+          checks to run before a deposit leaves your account. Portugal recorded 169,812 transactions
+          worth €41.2 billion in 2025 with prices up 17.6% (INE), while non-resident purchases fell
+          13.3% to 8,471 — a market where supply narratives and buyer demand are moving in opposite
+          directions, which is exactly when project-level due diligence pays.
+        </p>
+        <h2 class="text-xl text-[var(--color-ink)]">What to verify before a deposit</h2>
+        <p>
+          Any payment before escritura on off-plan stock requires independent legal review.
+          Decreto-Lei 67/2003 mandates a bank guarantee or insurance equal to sums paid where the
+          licença de utilização does not yet exist. Confirm the seller's legal name against the land
+          registry, the calendar longstop date and its refund mechanics, the condominium position on
+          short-term rental, and model IMT at the flat 7.5% non-resident rate if you complete after
+          1 September 2026. Start with the
+          <a href="/guides/off-plan-property-portugal-guide/" class="text-[var(--color-accent)]">off-plan guide</a>
+          and the <a href="/developers/" class="text-[var(--color-accent)]">developer profiles</a>.
+        </p>
+      </div>
+    )}
+
     {hasProjects && (
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {projects.map((project) => (
@@ -52,5 +88,13 @@ const hasProjects = projects.length > 0;
         ))}
       </div>
     )}
+
+    <InlineCta
+      headline='Want the full project shortlist?'
+      subtext='We send matching developments with price lists, delivery status and the CPCV checks to run.'
+      buttonHref="/get-shortlist/"
+      ctaId='projects_hub_inline'
+      whatsappMessage='Hi Portuguese Estate! Please send me a shortlist of Portugal new-build projects.'
+    />
   </section>
 </BaseLayout>

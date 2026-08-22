@@ -2,14 +2,24 @@
 export const prerender = true;
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { hubSchemas } from '../../lib/hubSchema';
+import InlineCta from '../../components/InlineCta.astro';
 import ContentCard from '../../components/ContentCard.astro';
 import { formatAreaLabel } from '../../lib/cardImage';
 
 const areas = (await getCollection('areas'))
   .filter((a) => !a.data.noindex)
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
+const schemas = hubSchemas({
+  path: '/areas/',
+  name: 'Investment areas',
+  description: 'Micro-market research for foreign buyers across Portugal — prices per m², yields and local risk.',
+  itemCount: areas.length,
+});
+
 ---
 <BaseLayout
+  schemas={schemas}
   title="Portugal Investment Areas — Micro-Market Guides"
   description="Micro-market research for foreign buyers across Lisbon, Porto, the Algarve, Silver Coast, Comporta and Madeira — prices per m², gross yields, buyer profile and local risk."
 >
@@ -35,5 +45,13 @@ const areas = (await getCollection('areas'))
         <p class="text-[var(--color-muted)] col-span-full">Area guides publishing with Wave 1.</p>
       )}
     </div>
+
+    <InlineCta
+      headline='Not sure which Portuguese region fits your budget?'
+      subtext='Tell us budget and goal — we send matching areas with yield and tax notes.'
+      buttonHref="/get-shortlist/"
+      ctaId='areas_hub_inline'
+      whatsappMessage="Hi Portuguese Estate! I'm comparing Portugal regions and want help picking the right area for my budget."
+    />
   </section>
 </BaseLayout>
