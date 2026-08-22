@@ -1,4 +1,4 @@
-// QA audit for mexico-invest content — hard gate before publish
+// QA audit for portuguese-estate content — hard gate before publish
 // Usage:
 //   node scripts/qa-audit.mjs
 //   node scripts/qa-audit.mjs --changed
@@ -26,9 +26,36 @@ const BANNED_PHRASES = [
   'source needed',
 ];
 
+/**
+ * Portugal regulatory staleness. These fired on Dubai/DLD rules inherited from
+ * another site and could never match this corpus. Figures derived from the
+ * national minimum wage move every January, which is how a D8 threshold two
+ * years out of date survived in production.
+ *
+ * 2026 reference: minimum wage EUR 920/month. D7 ~= 1x, D8 = 4x = EUR 3,680.
+ * Update these on each January uplift.
+ */
 const REGULATORY_STALE = [
-  { pattern: /AED\s*750[,\s]?000.*(?:minimum|sole|single)\s*owner/i, hint: 'Dubai sole-owner AED 750K floor removed 2026 — verify DLD Cube' },
-  { pattern: /750k.*investor visa.*minimum/i, hint: 'Investor visa minimum may be outdated — verify 2026 rules' },
+  {
+    pattern: /€\s?3,040\s*(?:per month|\/\s?month|\/mo)/i,
+    hint: 'D8 threshold EUR 3,040 is 4x the 2023 minimum wage (EUR 760) — 2026 value is EUR 3,680',
+  },
+  {
+    pattern: /€\s?3,480\s*(?:per month|\/\s?month|\/mo)/i,
+    hint: 'D8 threshold EUR 3,480 is 4x the 2025 minimum wage (EUR 870) — 2026 value is EUR 3,680',
+  },
+  {
+    pattern: /(?:D7|passive income)[^.]{0,80}€\s?(?:760|820|870)\s*(?:per month|\/\s?month|\/mo)/i,
+    hint: 'D7 threshold below EUR 920 predates the 2026 minimum wage uplift',
+  },
+  {
+    pattern: /golden visa[^.]{0,60}(?:buy|purchase|invest in)[^.]{0,40}(?:real estate|property)[^.]{0,30}(?:qualif|eligib|available)/i,
+    hint: 'Golden Visa real estate route closed by Law 56/2023 in October 2023 — verify wording',
+  },
+  {
+    pattern: /NHR[^.]{0,60}(?:still (?:available|open)|you can (?:apply|register))/i,
+    hint: 'NHR closed to new applicants end-2024; IFICI (NHR 2.0) replaced it — verify wording',
+  },
 ];
 
 const args = process.argv.slice(2);
@@ -165,6 +192,20 @@ function auditFile(c, slug) {
   const noTrail = internal.filter((l) => !/\/\)$/.test(l));
   if (noTrail.length) prob.push(`noTrailingSlash:${noTrail.length}`);
 
+  // Counting links is not enough: four links shipped pointing at the right slug
+  // under the wrong collection prefix and 404'd in production. Resolve targets.
+  for (const raw of internal) {
+    const target = raw.replace(/^\]\(/, '').replace(/\)$/, '');
+    const m = target.match(/^\/([a-z]+)\/([^/]+)\/?$/i);
+    if (!m) continue;
+    const [, coll, slug] = m;
+    if (!COLLECTIONS.includes(coll)) continue;
+    if (!(slugsByCollection[coll] || []).includes(slug)) {
+      const actual = COLLECTIONS.find((c) => (slugsByCollection[c] || []).includes(slug));
+      prob.push(actual ? `brokenLink:${target}→/${actual}/${slug}/` : `brokenLink:${target}`);
+    }
+  }
+
   if (/<\d|[\s(]>\d/.test(body)) prob.push('mdx-angle-digit');
   if (/faqs=\{/.test(body)) prob.push('FaqBlock-faqs-prop');
 
@@ -188,9 +229,25 @@ function auditFile(c, slug) {
   });
   for (const e of extErr) prob.push(e.replace(`[${c}/${slug}]: `, '').replace(`[${c}/${slug}] `, ''));
 
-  const isRegulatory = /visa|golden visa|investor visa|dld|residency/i.test(
-    `${fm.title} ${(fm.tags || '').toString()} ${slug}`,
-  );
+  /**
+   * Pages that deliberately document the historical progression of a threshold
+   * would otherwise trip every staleness rule by design. Keep this list short —
+   * it is an exemption from a correctness gate, not a convenience.
+   */
+  const REGULATORY_HISTORY_PAGES = new Set(['portugal-residency-options-without-golden-visa']);
+
+  /*
+   * Minimum-wage-derived thresholds must be checked everywhere, not only on
+   * pages whose title mentions a visa. Segment pages quote D7 and D8 figures in
+   * passing and slipped past the title-based trigger: EUR 870 (the 2025 wage)
+   * survived in two of them after the first sweep.
+   */
+  const isRegulatory =
+    !REGULATORY_HISTORY_PAGES.has(slug) &&
+    (/€\s?(?:760|820|870|3,040|3,480)\s*(?:per month|\/\s?month|\/mo)/i.test(body) ||
+      /visa|golden visa|investor visa|residency|nhr|ifici/i.test(
+        `${fm.title} ${(fm.tags || '').toString()} ${slug}`,
+      ));
   if (isRegulatory) {
     for (const { pattern, hint } of REGULATORY_STALE) {
       const m = body.match(pattern);
@@ -246,7 +303,7 @@ for (const { coll, slug } of filesToAudit) {
   auditFile(coll, slug);
 }
 
-console.log('=== MEXICO-INVEST QA AUDIT ===');
+console.log('=== PORTUGUESE ESTATE QA AUDIT ===');
 console.log(`Scope: ${changedOnly ? 'changed only' : singleFile ? singleFile : 'full corpus'}`);
 console.log(`Files audited: ${stats.total}`);
 if (stats.total) console.log(`Avg words: ${Math.round(stats.wordSum / stats.total)}`);

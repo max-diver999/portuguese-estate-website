@@ -1,15 +1,22 @@
 ---
 import { SITE } from '../data/site';
+import { waHref as buildWaHref, waLabel, waLinkAttrs } from '../lib/contact';
 
 const nav = [
   { label: 'Guides', href: '/guides/' },
-  { label: 'Segments', href: '/segments/' },
-  { label: 'Developers', href: '/developers/' },
   { label: 'Areas', href: '/areas/' },
   { label: 'Compare', href: '/compare/' },
+  { label: 'Projects', href: '/projects/' },
+  { label: 'Segments', href: '/segments/' },
+  { label: 'Developers', href: '/developers/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
 ];
+
+const waHref = buildWaHref(
+  "Hi Portuguese Estate! I'm interested in Portugal property. Please send me a free shortlist.",
+);
+const waText = waLabel('WhatsApp', 'Talk to us');
 ---
 <header class="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[rgba(255,255,255,0.9)] backdrop-blur-md">
   <div class="site-container flex items-center justify-between gap-4 py-4">
@@ -17,21 +24,82 @@ const nav = [
       <img src="/favicon.svg?v=3" alt="" width="32" height="32" class="rounded-lg" />
       <span class="text-lg font-semibold text-[var(--color-ink)]">{SITE.name}</span>
     </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+
+    <nav class="hidden lg:flex items-center gap-5 text-sm font-medium" aria-label="Primary">
       {nav.map((item) => (
         <a href={item.href} class="text-[var(--color-muted)] hover:text-[var(--color-ink)] no-underline">{item.label}</a>
       ))}
     </nav>
-    <a
-      href={`${SITE.whatsapp}?text=${encodeURIComponent("Hi Portuguese Estate! I'm interested in Portugal property. Please send me a free shortlist.")}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn-secondary text-sm px-4 py-2 shrink-0 hidden sm:inline-flex"
-      data-wa-placement="header"
-      data-cta="whatsapp_header"
-    >
-      WhatsApp
-    </a>
-    <a href="/get-shortlist/" class="btn-primary text-sm px-4 py-2 shrink-0">Free shortlist</a>
+
+    <div class="flex items-center gap-2 shrink-0">
+      <a
+        href={waHref}
+        {...waLinkAttrs}
+        class="btn-secondary text-sm px-4 py-2 shrink-0 hidden sm:inline-flex"
+        data-wa-placement="header"
+        data-cta="whatsapp_header"
+      >
+        {waText}
+      </a>
+      <a href="/get-shortlist/" class="btn-primary text-sm px-4 py-2 shrink-0">Free shortlist</a>
+
+      <!--
+        Below lg the primary nav is hidden. Without this disclosure every hub and
+        all 126 content pages were unreachable from navigation on mobile.
+        <details> keeps it working with JavaScript disabled.
+      -->
+      <details class="lg:hidden relative" id="mobile-nav">
+        <summary
+          class="list-none cursor-pointer select-none rounded-lg border border-[var(--color-border)] p-2 flex items-center justify-center"
+          aria-label="Open navigation menu"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </summary>
+        <nav
+          class="absolute right-0 mt-2 w-56 rounded-xl border border-[var(--color-border)] bg-white shadow-lg py-2"
+          aria-label="Mobile"
+        >
+          {nav.map((item) => (
+            <a
+              href={item.href}
+              class="block px-4 py-2 text-sm text-[var(--color-ink)] hover:bg-[var(--color-surface)] no-underline"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a
+            href={waHref}
+            {...waLinkAttrs}
+            class="block px-4 py-2 text-sm text-[var(--color-ink)] hover:bg-[var(--color-surface)] no-underline sm:hidden"
+            data-wa-placement="header_mobile"
+            data-cta="whatsapp_header_mobile"
+          >
+            {waText}
+          </a>
+        </nav>
+      </details>
+    </div>
   </div>
 </header>
+
+<style>
+  /* Safari still paints the default disclosure triangle without this. */
+  #mobile-nav > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
+
+<script>
+  // Close the disclosure on outside click and on Escape.
+  const details = document.getElementById('mobile-nav');
+  if (details instanceof HTMLDetailsElement) {
+    document.addEventListener('click', (event) => {
+      if (details.open && !details.contains(event.target as Node)) details.open = false;
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && details.open) details.open = false;
+    });
+  }
+</script>

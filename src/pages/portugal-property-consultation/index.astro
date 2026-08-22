@@ -5,44 +5,49 @@ import FaqBlock from '../../components/FaqBlock.astro';
 
 const faqItems = [
   {
-    question: 'What happens in an Portugal property consultation?',
-    answer: 'You share budget, timeline, residency goals, and preferred regions. We map options against tax residency, STR rules, and yield expectations, then route to a licensed partner if you want viewings or off-plan terms.',
+    question: 'What happens in a Portugal property consultation?',
+    answer: 'You share budget, timeline, residency goal and preferred regions. We map the options against non-resident tax exposure, RNAL and short-term rental rules, and realistic yield, then route to a licensed Portuguese partner if you want viewings or off-plan terms.',
   },
   {
-    question: 'Can you compare Tuscany, Puglia, and Milan in one call?',
-    answer: 'Yes. Many buyers narrow three regions before visiting. We use our compare guides and market data so you understand trade-offs on price, yield, and compliance before flying to Italy.',
+    question: 'Can you compare Lisbon, Porto and the Algarve in one request?',
+    answer: 'Yes. Most buyers narrow to two or three regions before flying out. We use our own comparison research and INE market data so you understand the trade-offs on price per square metre, gross yield and licensing before committing to a CPCV deposit.',
   },
   {
     question: 'Do you charge for consultations?',
-    answer: 'Initial shortlist and consultation requests are free. Portuguese Estate earns no buyer-side commission; partners may pay a referral fee disclosed in our methodology page.',
+    answer: 'No. Shortlist and consultation requests are free. Portuguese Estate takes no buyer-side commission; partners may pay a referral fee, which is disclosed on our methodology page.',
   },
   {
-    question: 'How is this different from Gate-away or Idealista?',
-    answer: 'Portals list inventory; we publish independent due diligence and filter options to your budget band and goal. You receive curated matches plus links to tax, legal, and yield research on portuguese-estate.com.',
+    question: 'How is this different from Idealista or Imovirtual?',
+    answer: 'Portals list inventory. We publish independent due diligence and filter options to your budget band and goal, then hand you the tax, legal and yield research behind each match on portuguese-estate.com.',
+  },
+  {
+    question: 'Does buying property still give me Portuguese residency?',
+    answer: 'No. Law 56/2023 closed the real estate route to the Golden Visa in October 2023. Property can support a D7 or D8 application by satisfying the accommodation requirement, but the purchase itself confers no immigration status.',
   },
 ];
 ---
 <BaseLayout
-  title="Portugal Property Consultation for Foreign Buyers 2026"
-  description="Cross-region Portugal property consultation for foreign buyers. Compare Tuscany, Puglia, Milan, and Lake Como in one request. Independent research, licensed partner referral."
+  title="Portugal Property Consultation for Foreign Buyers"
+  description="Independent Portugal property consultation for foreign buyers. Compare Lisbon, Porto, the Algarve and Comporta in one request — tax, yield and partner referral."
 >
   <section class="site-container py-12 md:py-16 max-w-3xl">
     <header class="mb-8">
       <span class="badge-pill mb-4">Cross-region</span>
       <h1 class="mb-4">Portugal property consultation</h1>
       <p class="text-lg text-[var(--color-muted)]">
-        Not sure which region fits? Tell us budget, hold period, and residency goal — we route to the right market and partner.
+        Not sure which region fits? Tell us budget, hold period and residency goal — we route to the right market and partner.
       </p>
     </header>
 
     <div class="prose mb-10 text-[var(--color-muted)]">
-      <p><strong>Quick answer:</strong> Italy is not one market. Lombardy skews corporate rental and off-plan; Puglia and Sicily skew holiday yield; Lake Como and Costa Smeralda skew luxury lifestyle. A single consultation request helps you compare regions before committing to flights or a compromesso deposit.</p>
-      <p>Regional landings: <a href="/invest-tuscany-property/">Tuscany</a> · <a href="/invest-puglia-property/">Puglia</a> · <a href="/invest-lake-como-property/">Lake Como</a> · <a href="/invest-sicily-property/">Sicily</a></p>
-      <p>Core guides: <a href="/guides/italy-property-investment-guide/">Portugal property investment</a> · <a href="/guides/best-regions-invest-italy-property-2026/">Best regions 2026</a> · <a href="/guides/italy-elective-residence-visa-property/">Elective residence</a> · <a href="/compare/italy-vs-spain-property-investment/">Italy vs Spain</a></p>
+      <p><strong>Quick answer:</strong> Portugal is not one market. Porto and Lisbon fringe skew year-round rental yield; the Algarve skews seasonal short-let and took 42.4% of non-resident deal value in 2025 (INE); Cascais and Comporta skew lifestyle and capital preservation. One consultation request lets you compare regions before committing to flights or a CPCV deposit.</p>
+      <p>Browse by budget: <a href="/tier-entry/">Under €200k</a> · <a href="/tier-mid/">€200k–€500k</a> · <a href="/tier-luxury/">Luxury €500k+</a></p>
+      <p>Core guides: <a href="/guides/portugal-property-investment-guide/">Portugal property investment</a> · <a href="/guides/best-regions-invest-portugal-property-2026/">Best regions 2026</a> · <a href="/guides/imt-tax-non-resident-portugal-2026/">IMT for non-residents</a> · <a href="/guides/portugal-residency-options-without-golden-visa/">Residency without Golden Visa</a></p>
+      <p>Compare markets: <a href="/compare/porto-vs-lisbon-property-investment/">Porto vs Lisbon</a> · <a href="/compare/algarve-vs-lisbon-property-investment/">Algarve vs Lisbon</a> · <a href="/compare/portugal-vs-spain-property-investment/">Portugal vs Spain</a></p>
     </div>
 
     <LeadForm
-      title="Book an Portugal property consultation"
+      title="Book a Portugal property consultation"
       subtitle="Budget · regions · yield or lifestyle goal"
       context="Portugal property consultation landing"
     />

@@ -6,10 +6,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const articles = (await getCollection('news'))
   .filter((n) => !n.data.noindex)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// The news collection is currently empty. An indexable hub with no articles is
+// thin content, so keep it out of the index until the first piece ships —
+// same pattern as the projects hub.
+const hasArticles = articles.length > 0;
 ---
 <BaseLayout
+  noindex={!hasArticles}
   title="Portugal Property Market News"
-  description="Market updates for foreign buyers — OMI transaction data, foreign capital flows, Gate-away demand signals, and Milan living sector trends."
+  description="Portugal property market updates for foreign buyers — INE transaction data, non-resident capital flows, AICCOPN licensing and regional yield shifts."
 >
   <section class="site-container py-14 md:py-20">
     <header class="max-w-2xl mb-12">
@@ -28,6 +34,14 @@ const articles = (await getCollection('news'))
           <p class="text-sm text-[var(--color-muted)]">{article.data.description}</p>
         </a>
       ))}
+      {!hasArticles && (
+        <p class="text-[var(--color-muted)]">
+          Market notes are published as INE and AICCOPN releases land. In the meantime, the
+          research is in the <a href="/guides/" class="text-[var(--color-accent)]">guides</a> —
+          start with <a href="/guides/portugal-property-market-record-2025-ine-data/" class="text-[var(--color-accent)]">the 2025 INE market record</a>
+          and <a href="/guides/portugal-property-market-forecast-2026-2027/" class="text-[var(--color-accent)]">the 2026–2027 forecast</a>.
+        </p>
+      )}
     </div>
   </section>
 </BaseLayout>

@@ -1,6 +1,6 @@
 # Lead analytics (GA4)
 
-Implemented 2026-07-27. Events fire through `window.investGulfTrack` (see `src/components/GoogleAnalytics.astro`) with a `gtag` fallback.
+Implemented 2026-07-27. Events fire through `window.peTrack` (see `src/components/GoogleAnalytics.astro`) with a `gtag` fallback. `window.investGulfTrack` remains as a back-compat alias and can be dropped once no GTM tag references it.
 
 | Event | Fired from |
 |-------|------------|

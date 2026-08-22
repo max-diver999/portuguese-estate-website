@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import { SITE } from '../../data/site';
+import { waHref as buildWaHref, hasWhatsApp, waLinkAttrs } from '../../lib/contact';
 ---
 <BaseLayout
   title="Contact Portuguese Estate"
@@ -11,16 +12,19 @@ import { SITE } from '../../data/site';
     <h1 class="mb-4">Contact</h1>
     <p class="text-[var(--color-muted)] mb-8">
       Editorial questions: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
-      For property shortlists, use the form below or{' '}
-      <a
-        href={`${SITE.whatsapp}?text=${encodeURIComponent('Hi, I need help with a Portugal property enquiry from Portuguese Estate.')}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        data-wa-placement="footer_contact"
-        data-cta="whatsapp_contact_page"
-      >
-        WhatsApp {SITE.whatsappDisplay}
-      </a>.
+      For property shortlists, use the form below{hasWhatsApp ? ' or' : '.'}{hasWhatsApp && (
+        <>
+          {' '}
+          <a
+            href={buildWaHref('Hi, I need help with a Portugal property enquiry from Portuguese Estate.')}
+            {...waLinkAttrs}
+            data-wa-placement="footer_contact"
+            data-cta="whatsapp_contact_page"
+          >
+            message us on WhatsApp{SITE.whatsappDisplay ? ` (${SITE.whatsappDisplay})` : ''}
+          </a>.
+        </>
+      )}
       We usually reply within one business day.
     </p>
     <LeadForm context="Contact page" />

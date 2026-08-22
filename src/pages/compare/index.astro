@@ -2,15 +2,25 @@
 export const prerender = true;
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { hubSchemas } from '../../lib/hubSchema';
+import InlineCta from '../../components/InlineCta.astro';
 import ContentCard from '../../components/ContentCard.astro';
 
 const comparisons = (await getCollection('compare'))
   .filter((c) => !c.data.noindex)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const schemas = hubSchemas({
+  path: '/compare/',
+  name: 'Market comparisons',
+  description: 'Side-by-side breakdowns of Portugal against other markets, plus intra-Portugal regional comparisons.',
+  itemCount: comparisons.length,
+});
+
 ---
 <BaseLayout
-  title="Spain Property Market Comparisons"
-  description="Side-by-side comparisons of Riviera Maya, Los Cabos, and other Gulf markets for property investors."
+  schemas={schemas}
+  title="Portugal Property Market Comparisons 2026"
+  description="Side-by-side breakdowns of Portugal against Spain, Greece, Italy, Dubai and the UK, plus Lisbon vs Porto and Algarve vs Lisbon — fees, yields and buyer fit."
 >
   <section class="site-container py-14 md:py-20">
     <header class="max-w-2xl mb-12">
@@ -31,5 +41,13 @@ const comparisons = (await getCollection('compare'))
         />
       ))}
     </div>
+
+    <InlineCta
+      headline='Still deciding between two markets?'
+      subtext='Send your shortlist of regions — we return a like-for-like cost and yield comparison.'
+      buttonHref="/get-shortlist/"
+      ctaId='compare_hub_inline'
+      whatsappMessage="Hi Portuguese Estate! I'm comparing two property markets and want an independent view."
+    />
   </section>
 </BaseLayout>

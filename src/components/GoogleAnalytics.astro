@@ -17,7 +17,7 @@ const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID as string | undef
         anonymize_ip: true,
       });
 
-      window.investGulfTrack = function investGulfTrack(eventName, params = {}) {
+      window.peTrack = function peTrack(eventName, params = {}) {
         const payload = {
           page_location: window.location.href,
           page_path: window.location.pathname,
@@ -28,6 +28,9 @@ const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID as string | undef
           window.gtag('event', eventName, payload);
         }
       };
+      // Back-compat alias: the tracker was named after another MORE Group site.
+      // Safe to remove once no GTM tag or external script references it.
+      window.investGulfTrack = window.peTrack;
     </script>
   </>
 )}

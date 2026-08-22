@@ -33,7 +33,7 @@ import { SITE } from '../../data/site';
       }
 
       var track = function (name, params) {
-        if (typeof window.investGulfTrack === 'function') window.investGulfTrack(name, params);
+        if (typeof window.peTrack === 'function') window.peTrack(name, params);
         else if (typeof window.gtag === 'function') window.gtag('event', name, params);
       };
       var params = { lead_type: 'shortlist_form', page_path: window.location.pathname };

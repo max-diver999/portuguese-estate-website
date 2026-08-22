@@ -29,9 +29,9 @@
         wa_ref: refCode,
       };
       // @ts-ignore
-      if (typeof window.investGulfTrack === 'function') {
+      if (typeof window.peTrack === 'function') {
         // @ts-ignore
-        window.investGulfTrack('whatsapp_click', params);
+        window.peTrack('whatsapp_click', params);
         // @ts-ignore
       } else if (typeof window.gtag === 'function') {
         // @ts-ignore
