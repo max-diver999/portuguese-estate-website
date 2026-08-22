@@ -11,7 +11,7 @@
     "postbuild": "node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs",
     "preview": "astro preview",
     "healthcheck": "node scripts/post-deploy-smoke.mjs --http-only",
-    "validate:content": "node scripts/qa-audit.mjs",
+    "validate:content": "node scripts/qa-audit.mjs && node scripts/qa-duplicate-prose.mjs",
     "geo:audit": "node scripts/geo-citability-audit.mjs",
     "validate:content:changed": "node scripts/qa-audit.mjs --changed",
     "qa:corpus": "node scripts/qa-corpus-signals.mjs",
@@ -38,7 +38,8 @@
     "images:rollout:content": "node scripts/rollout-mexico-cloudinary-content.mjs",
     "audit:images": "node scripts/audit-all-images.mjs --fail",
     "audit:images:unique": "node scripts/audit-hero-image-uniqueness.mjs",
-    "audit:images:rendered": "node scripts/audit-rendered-image-uniqueness.mjs"
+    "audit:images:rendered": "node scripts/audit-rendered-image-uniqueness.mjs",
+    "qa:duplicates": "node scripts/qa-duplicate-prose.mjs"
   },
   "dependencies": {
     "google-auth-library": "^10.6.2",
