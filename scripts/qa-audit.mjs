@@ -133,6 +133,10 @@ for (const c of COLLECTIONS) {
 }
 
 const issues = [];
+/** heroImage URL -> the page that claimed it, so the second claimant fails. */
+const heroImageOwners = new Map();
+/** Hosts allowed to serve a hero: our own Cloudinary, or Wikimedia until the upload lands. */
+const ALLOWED_IMAGE_HOST = /^https:\/\/(res\.cloudinary\.com|upload\.wikimedia\.org)\//;
 const stats = { total: 0, byColl: {}, wordSum: 0 };
 const reportRows = [];
 
@@ -276,6 +280,23 @@ function auditFile(c, slug) {
   ].map((m) => m[1]);
   const badLinks = [...new Set(bodySlugs.filter((s) => !allSlugs.has(s)))];
   if (badLinks.length) prob.push(`brokenInternalLinks:${badLinks.join('|')}`);
+
+  // Hero images. One photograph shipped to 49 pages before this check existed, and
+  // the files were hotlinked from developer CMSs that never granted permission.
+  const hero = (fmRaw.match(/^heroImage:\s*["']?([^"'\n]+)["']?/m) || [])[1];
+  if (!hero) {
+    prob.push('heroImageMissing');
+  } else {
+    if (!ALLOWED_IMAGE_HOST.test(hero)) prob.push(`heroImageHost:${hero.replace(/^https?:\/\//, '').split('/')[0]}`);
+    if (heroImageOwners.has(hero)) prob.push(`heroImageDuplicate:${heroImageOwners.get(hero)}`);
+    else heroImageOwners.set(hero, `${c}/${slug}`);
+    const licence = (fmRaw.match(/^heroImageLicence:\s*["']?([^"'\n]+)["']?/m) || [])[1];
+    const credit = (fmRaw.match(/^heroImageCredit:\s*["']?([^"'\n]+)["']?/m) || [])[1];
+    const alt = (fmRaw.match(/^heroImageAlt:\s*["']?([^"'\n]+)["']?/m) || [])[1];
+    if (!alt) prob.push('heroImageAltMissing');
+    // CC0 and public domain are the only licences here that do not require a credit.
+    if (!/^(CC0|Public domain|PDM)/i.test(licence || '') && !credit) prob.push('heroImageCreditMissing');
+  }
 
   reportRows.push({ coll: c, slug, words, faq: fm.__faqCount, prob });
   if (prob.length) issues.push(`[${c}/${slug}] (${words}w) ${prob.join(', ')}`);

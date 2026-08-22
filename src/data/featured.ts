@@ -28,6 +28,13 @@ export const FEATURED_AREA_SLUGS = [
   'faro-property-investment',
 ] as const;
 
-/** Homepage hero fallback until project MDX ship. */
-export const HOMEPAGE_HERO_IMAGE =
-  'https://www.vangproperties.com/media/6903/tomas-ribeiro-79-quiet_18_final_2_2.jpg?anchor=center&mode=crop&rnd=133740018570000000&preset=socialShare';
+/**
+ * Homepage hero. Its own photograph, not a project's — the featured project is
+ * named in the card overlay, and reusing that project's hero here would put the
+ * same picture on two pages.
+ */
+export const HOMEPAGE_HERO_IMAGE = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_%2823901472335%29.jpg/1280px-A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_%2823901472335%29.jpg';
+export const HOMEPAGE_HERO_ALT = "Panorama of Lisbon from the Miradouro Sophia de Mello Breyner Andresen";
+export const HOMEPAGE_HERO_CREDIT = "Andreas Manessinger / Wikimedia Commons";
+export const HOMEPAGE_HERO_LICENCE = "CC BY-SA 2.0";
+export const HOMEPAGE_HERO_SOURCE = "https://commons.wikimedia.org/wiki/File:A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_(23901472335).jpg";
