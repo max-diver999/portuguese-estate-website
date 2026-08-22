@@ -25,7 +25,7 @@ const META = {
     quick:
       'Quick Answer: Portugal recorded 169,812 residential sales in 2025 (+8.6%) worth €41.2B, with gross yields near 4–6% in Lisbon, Porto, and the Algarve. Non-residents pay flat 7.5% IMT from 1 September 2026 under DL 97/2026, while direct Golden Visa real estate ended in October 2023.',
     tldr:
-      'TL;DR: Strong domestic market, selective foreign demand; budget 6–11% closing costs; flat 7.5% IMT for non-residents from Sep 2026; fund-route Golden Visa remains at €500k.',
+      'Strong domestic market, selective foreign demand; budget 6–11% closing costs; flat 7.5% IMT for non-residents from Sep 2026; fund-route Golden Visa remains at €500k.',
   },
   'buy-property-portugal-foreigner': {
     title: 'Buy Property in Portugal as a Foreigner — 2026 Guide',
@@ -34,7 +34,7 @@ const META = {
     quick:
       'Quick Answer: Foreigners buy freely in Portugal after obtaining a NIF, opening a bank account, and hiring independent legal counsel. Expect a CPCV with 10–30% deposit, escritura at a notary, and total closing costs of roughly 6–11% including the September 2026 non-resident IMT flat rate of 7.5%.',
     tldr:
-      'TL;DR: NIF first, then CPCV deposit, due diligence, escritura; non-residents face 7.5% IMT from Sep 2026; legal fees 1–2%; no foreign ownership ban.',
+      'NIF first, then CPCV deposit, due diligence, escritura; non-residents face 7.5% IMT from Sep 2026; legal fees 1–2%; no foreign ownership ban.',
   },
   'can-foreigners-buy-property-portugal': {
     title: 'Can Foreigners Buy Property in Portugal? 2026 Rules',
@@ -43,7 +43,7 @@ const META = {
     quick:
       'Quick Answer: Yes. Portugal imposes no nationality restriction on residential freehold. EU citizens and non-EU buyers follow the same ownership rights once they hold a NIF and complete escritura; residency visas are separate from title transfer.',
     tldr:
-      'TL;DR: No foreign ownership ban; NIF mandatory; Golden Visa no longer accepts direct real estate; tax residency determines IMT rate after Sep 2026.',
+      'No foreign ownership ban; NIF mandatory; Golden Visa no longer accepts direct real estate; tax residency determines IMT rate after Sep 2026.',
   },
   'cost-of-buying-property-portugal': {
     title: 'Cost of Buying Property in Portugal — 2026 Guide',
@@ -52,7 +52,7 @@ const META = {
     quick:
       'Quick Answer: Budget 6–11% on top of the purchase price for a typical residential deal — IMT (7.5% flat for non-residents from 1 Sep 2026), stamp duty 0.8%, legal and notary fees, plus registration. Annual IMI runs 0.3–0.45% of fiscal value.',
     tldr:
-      'TL;DR: Non-resident IMT 7.5% from Sep 2026; stamp duty 0.8%; legal 1–2%; total closing 6–11%; IMI annual 0.3–0.45%.',
+      'Non-resident IMT 7.5% from Sep 2026; stamp duty 0.8%; legal 1–2%; total closing 6–11%; IMI annual 0.3–0.45%.',
   },
   'imt-tax-non-resident-portugal-2026': {
     title: 'Portugal IMT Tax for Non-Residents — 2026 Reform Guide',
@@ -61,7 +61,7 @@ const META = {
     quick:
       'Quick Answer: From 1 September 2026, non-resident buyers pay flat 7.5% IMT on residential property under DL 97/2026, replacing progressive bands. You may recover IMT if you become Portuguese tax resident within 24 months or lease under approved affordable-housing programs.',
     tldr:
-      'TL;DR: Flat 7.5% IMT for non-residents from Sep 2026; residents keep progressive scale; 24-month residency refund pathway; stamp duty 0.8% still applies.',
+      'Flat 7.5% IMT for non-residents from Sep 2026; residents keep progressive scale; 24-month residency refund pathway; stamp duty 0.8% still applies.',
   },
   'portugal-rental-yield-guide': {
     title: 'Portugal Rental Yield Guide — Lisbon, Porto, Algarve 2026',
@@ -70,7 +70,7 @@ const META = {
     quick:
       'Quick Answer: Gross yields in 2026 typically run 4.3–4.6% in Lisbon, about 5% in Porto, and 4–6% in the Algarve depending on short-term versus long-term strategy. Net yields fall after IMI, condominium fees, management, and AL licensing constraints in containment zones.',
     tldr:
-      'TL;DR: Gross 4–6% in prime markets; net lower after tax and fees; AL rules tightened in Lisbon; Algarve leads non-resident deal value share at 42.4%.',
+      'Gross 4–6% in prime markets; net lower after tax and fees; AL rules tightened in Lisbon; Algarve leads non-resident deal value share at 42.4%.',
   },
   'portugal-golden-visa-real-estate-ended': {
     title: 'Portugal Golden Visa Real Estate Route — Ended 2023',
@@ -79,7 +79,7 @@ const META = {
     quick:
       'Quick Answer: Portugal closed the Golden Visa real estate route in October 2023 under Law 56/2023. Property buyers may still invest via CMVM-regulated funds (€500,000 minimum) or pursue D7/D8 visas separately from any home purchase.',
     tldr:
-      'TL;DR: No direct RE Golden Visa since Oct 2023; €500k fund route remains; 7-day average stay rule; buying a home does not automatically grant residency.',
+      'No direct RE Golden Visa since Oct 2023; €500k fund route remains; 7-day average stay rule; buying a home does not automatically grant residency.',
   },
 };
 
@@ -139,12 +139,12 @@ function ensureQuickAnswer(body, quick, title) {
   const h1 = `# ${title}`;
   if (!/quick answer|tl;dr/i.test(body)) {
     if (body.includes(h1)) {
-      body = body.replace(h1, `${h1}\n\n${quick}\n\n<TldrBlock text="${tldrEscape(quick.replace(/^Quick Answer:\s*/i, 'TL;DR: '))}" />`);
+      body = body.replace(h1, `${h1}\n\n${quick}\n\n<TldrBlock text="${tldrEscape(quick.replace(/^Quick Answer:\s*/i, ''))}" />`);
     } else {
-      body = `${h1}\n\n${quick}\n\n<TldrBlock text="${tldrEscape(quick.replace(/^Quick Answer:\s*/i, 'TL;DR: '))}" />\n\n${body}`;
+      body = `${h1}\n\n${quick}\n\n<TldrBlock text="${tldrEscape(quick.replace(/^Quick Answer:\s*/i, ''))}" />\n\n${body}`;
     }
   } else if (!/<TldrBlock text=/.test(body)) {
-    const tldr = quick.replace(/^Quick Answer:\s*/i, 'TL;DR: ');
+    const tldr = quick.replace(/^Quick Answer:\s*/i, '');
     body = body.replace(/(<TldrBlock[\s\S]*?\/>)/, `<TldrBlock text="${tldrEscape(tldr)}" />`);
   }
   return body;

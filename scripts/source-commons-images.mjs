@@ -19,10 +19,20 @@
  *   node scripts/source-commons-images.mjs            # resolve + verify + write
  *   node scripts/source-commons-images.mjs --slug=x   # single slug, for debugging
  */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { QUERIES } from './lib/commons-queries.mjs';
+import {
+  imageAesthetics,
+  passesAestheticBar,
+  AESTHETIC_BAR,
+  UNATTRACTIVE_SUBJECT,
+  ASPIRATIONAL_SUBJECT,
+  perceptualHash,
+  hashDistance,
+  NEAR_DUPLICATE_BITS,
+} from './lib/image-aesthetics.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'scripts', 'portugal-commons-images.json');
@@ -68,17 +78,24 @@ const SCENERY = /\b(view|vista|panorama|aerial|a[eé]rea|skyline|coast|costa|bea
  * they resolve; these guarantee full coverage without ever reusing a file,
  * because the dedup set spreads results across slugs.
  */
+/**
+ * Broad fallbacks, deliberately spread across regions and subjects. An earlier
+ * list leaned on one "Coasts of Portugal" category, and three pages ended up with
+ * three frames from the same photographer's walk.
+ */
 const FALLBACK = [
-  'Lisboa vista cidade',
-  'Porto vista cidade',
-  'Algarve costa Portugal',
-  'Portugal paisagem costa',
-  'Portugal arquitetura edificio',
-  'Lisboa rua bairro',
-  'Porto rua casas',
-  'Portugal cidade centro historico',
-  'Portugal vila praia',
-  'Portugal aerial view town',
+  'cat:Beaches of the Algarve',
+  'cat:Marinas in Portugal',
+  'cat:Villas in Portugal',
+  'cat:Aerial photographs of beaches of Portugal',
+  'cat:Beaches of Madeira',
+  'cat:Beaches of the Azores',
+  'cat:Sunsets in Portugal',
+  'cat:Swimming pools in Portugal',
+  'Algarve praia falesia dourada',
+  'Portugal moradia piscina jardim',
+  'Portugal vila costeira colorida',
+  'Portugal miradouro vista mar',
 ];
 
 /**
@@ -137,12 +154,15 @@ function stripHtml(s) {
 
 /** Candidate files for one search term, best (largest) first. */
 async function candidates(term, opts = {}) {
+  // "cat:Beaches of Albufeira" reads a curated category; free-text search returns
+  // whatever shares a word with the query, which is how a courthouse ended up
+  // illustrating a power-of-attorney guide.
+  const generator = term.startsWith('cat:')
+    ? { generator: 'categorymembers', gcmtitle: `Category:${term.slice(4)}`, gcmtype: 'file', gcmlimit: '200' }
+    : { generator: 'search', gsrsearch: `filetype:bitmap ${term}`, gsrnamespace: '6', gsrlimit: '50' };
   const data = await api({
     action: 'query',
-    generator: 'search',
-    gsrsearch: `filetype:bitmap ${term}`,
-    gsrnamespace: '6',
-    gsrlimit: '50',
+    ...generator,
     prop: 'imageinfo|categories',
     iiprop: 'url|size|extmetadata|mime',
     iiurlwidth: String(THUMB_WIDTH),
@@ -193,14 +213,20 @@ async function candidates(term, opts = {}) {
       const title = c.title.replace(/^File:/, '');
       // The place or subject must actually appear in the filename. Commons search
       // happily returns loosely-related files otherwise.
-      const tokens = term
-        .split(/\s+/)
-        .filter((t) => t.length > 3)
-        .map((t) => t.toLowerCase());
+      const tokens = term.startsWith('cat:')
+        ? []
+        : term
+            .split(/\s+/)
+            .filter((t) => t.length > 3)
+            .map((t) => t.toLowerCase());
       const hay = title.toLowerCase();
-      const matched = tokens.filter((t) => hay.includes(t)).length;
+      // Category membership is itself the subject guarantee, so a category query
+      // starts at 1 rather than failing the filename-token test below.
+      const matched = tokens.length ? tokens.filter((t) => hay.includes(t)).length : 1;
       const score =
         matched * 10 +
+        (ASPIRATIONAL_SUBJECT.test(`${title} ${c.cats}`) ? 14 : 0) +
+        (/Quality images|Featured pictures|Valued images/i.test(c.cats) ? 8 : 0) +
         (SCENERY.test(title) ? 6 : 0) +
         Math.min(4, Math.floor((c.width * c.height) / 6e6));
       return { ...c, score, matched };
@@ -208,6 +234,9 @@ async function candidates(term, opts = {}) {
     .filter((c) => c.matched > 0)
     .filter((c) => !DERELICT.test(c.title) || DERELICT.test(term))
     .filter((c) => !WEAK_SUBJECT.test(c.title))
+    // A premium property site cannot illustrate itself with courthouses, metro
+    // stations and social housing, however well those photograph.
+    .filter((c) => !UNATTRACTIVE_SUBJECT.test(`${c.title} ${c.cats}`))
     // Must be categorised in Portugal, and must not be categorised elsewhere.
     .filter((c) => PORTUGAL_CAT.test(c.cats) || /Portugal/i.test(c.title))
     .filter((c) => !FOREIGN_CAT.test(c.cats) && !FOREIGN_CAT.test(c.title))
@@ -276,7 +305,57 @@ async function verify(url) {
   }
 }
 
+/**
+ * Measure on the same rendition the site will serve. Commons only generates a
+ * per-file set of thumbnail widths, and 640px returns HTTP 400 on many files —
+ * which silently failed every measurement and rejected every candidate.
+ */
+function measureUrl(originalUrl) {
+  return deliveryUrl(originalUrl);
+}
+
+const AESTHETIC_CACHE = path.join(ROOT, '.content-os/cache/image-aesthetics.json');
+let aestheticCache = {};
+try {
+  aestheticCache = JSON.parse(readFileSync(AESTHETIC_CACHE, 'utf8'));
+} catch { /* first run */ }
+
+function saveAestheticCache() {
+  mkdirSync(path.dirname(AESTHETIC_CACHE), { recursive: true });
+  writeFileSync(AESTHETIC_CACHE, `${JSON.stringify(aestheticCache, null, 2)}\n`);
+}
+
+/**
+ * Accuracy is not attractiveness. A candidate that is correctly located, properly
+ * licensed and unique can still be a grey concrete block, which is exactly what the
+ * first image set shipped. Measure the pixels before accepting the file.
+ */
+async function aestheticsFor(originalUrl) {
+  const key = deliveryUrl(originalUrl);
+  // Entries cached before the perceptual hash existed carry no `hash`, and a
+  // silently-undefined hash disables the near-duplicate check. Re-measure those.
+  if (aestheticCache[key]?.hash) return aestheticCache[key];
+  let metrics = null;
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    try {
+      const res = await fetch(measureUrl(originalUrl), { headers: { 'User-Agent': UA } });
+      if (res.ok) {
+        const buf = Buffer.from(await res.arrayBuffer());
+        metrics = await imageAesthetics(buf);
+        metrics.hash = await perceptualHash(buf);
+        break;
+      }
+      if (res.status !== 429 && res.status < 500) break;
+    } catch { /* retry */ }
+    await sleep(700 * (attempt + 1));
+  }
+  aestheticCache[key] = metrics;
+  return metrics;
+}
+
 const used = new Set();
+/** Hashes of pictures already spoken for, so a second frame of the same view loses. */
+const usedHashes = [];
 const results = [];
 const failures = [];
 
@@ -284,12 +363,26 @@ let carried = [];
 if (replaceList) {
   const prev = JSON.parse(readFileSync(OUT, 'utf8'));
   carried = prev.images.filter((i) => !replaceList.includes(i.slug));
-  for (const i of carried) used.add(i.commonsTitle);
+  for (const i of carried) {
+    used.add(i.commonsTitle);
+    if (i.aesthetics?.hash) usedHashes.push(i.aesthetics.hash);
+  }
   process.stdout.write(`carrying ${carried.length} existing picks, re-sourcing ${replaceList.length}\n`);
 }
 
+// --slug= is a debugging view: it must never rewrite the manifest down to one row,
+// which is exactly what it did once. Treat it as a single-slug replace instead.
+const targeted = only ? [only] : replaceList;
+if (only && !replaceList) {
+  const prev = JSON.parse(readFileSync(OUT, 'utf8'));
+  carried = prev.images.filter((i) => i.slug !== only);
+  for (const i of carried) {
+    used.add(i.commonsTitle);
+    if (i.aesthetics?.hash) usedHashes.push(i.aesthetics.hash);
+  }
+}
 const entries = Object.entries(QUERIES).filter(
-  ([slug]) => (!only || slug === only) && (!replaceList || replaceList.includes(slug)),
+  ([slug]) => !targeted || targeted.includes(slug),
 );
 let i = 0;
 
@@ -301,7 +394,16 @@ for (const [slug, spec] of entries) {
     const c = await pinnedCandidate(spec.pin);
     if (!c) throw new Error(`${slug}: pinned file not found on Commons — ${spec.pin}`);
     if (used.has(c.title)) throw new Error(`${slug}: pinned file already used by another page — ${spec.pin}`);
-    picked = { ...c, term: 'pinned' };
+    const metrics = await aestheticsFor(c.original);
+    if (passesAestheticBar(metrics)) {
+      picked = { ...c, term: 'pinned', metrics };
+    } else {
+      // A hand-pick that fails the measured bar is a stale hand-pick, not a reason
+      // to abort the run. Fall through to search and report it.
+      process.stdout.write(
+        `    pin dropped (below attractiveness bar): ${spec.pin.replace('File:', '')}\n`,
+      );
+    }
   }
 
   for (const term of picked ? [] : [...spec.terms, ...FALLBACK]) {
@@ -316,7 +418,10 @@ for (const [slug, spec] of entries) {
       if (used.has(c.title)) continue;
       const status = await verify(c.url);
       if (status !== 200) continue;
-      picked = { ...c, term };
+      const metrics = await aestheticsFor(c.original);
+      if (!passesAestheticBar(metrics)) continue;
+      if (metrics.hash && usedHashes.some((h) => hashDistance(h, metrics.hash) <= NEAR_DUPLICATE_BITS)) continue;
+      picked = { ...c, term, metrics };
       break;
     }
     if (picked) break;
@@ -330,6 +435,7 @@ for (const [slug, spec] of entries) {
   }
 
   used.add(picked.title);
+  if (picked.metrics?.hash) usedHashes.push(picked.metrics.hash);
   results.push({
     slug,
     collection: spec.collection,
@@ -346,10 +452,14 @@ for (const [slug, spec] of entries) {
     sourcePage: picked.descriptionUrl,
     commonsTitle: picked.title,
     matchedTerm: picked.term,
+    aesthetics: picked.metrics || null,
   });
   process.stdout.write(
     `[${i}/${entries.length}] ${slug}\n    ${picked.title.replace('File:', '').slice(0, 72)}\n    ${picked.width}x${picked.height} · ${picked.licence}\n`,
   );
+  // Measurements are the expensive part of a run; a crash at slug 24 should not
+  // throw away the 23 before it.
+  saveAestheticCache();
   await sleep(150);
 }
 
@@ -362,12 +472,14 @@ const manifest = {
   rule: `One unique hero per page. Min ${MIN_WIDTH}px long edge. Commercial-reuse licences only. Every URL verified HTTP 200 at generation time.`,
   attributionRequired: true,
   deliveryWidth: DELIVERY_WIDTH,
+  aestheticBar: AESTHETIC_BAR,
   total: merged.length,
   uniqueFiles: new Set(merged.map((r) => r.commonsTitle)).size,
   failures,
   images: merged,
 };
 
+saveAestheticCache();
 writeFileSync(OUT, `${JSON.stringify(manifest, null, 2)}\n`);
 process.stdout.write(
   `\nwrote ${path.relative(ROOT, OUT)} — ${merged.length} images, ${manifest.uniqueFiles} unique files, ${failures.length} unresolved\n`,

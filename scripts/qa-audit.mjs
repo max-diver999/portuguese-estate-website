@@ -184,9 +184,18 @@ function auditFile(c, slug) {
   }[c] ?? 1800;
   if (words < minW) prob.push(`words:${words}<${minW}`);
 
-  if (c !== 'news' && !/quick answer|tl;dr|\*\*quick answer|\*\*tl;dr/i.test(body)) {
+  // The answer-first requirement is about the block existing, not about the words
+  // "TL;DR" appearing. Grepping for the literal string pushed that jargon into the
+  // visible copy of 129 pages, under a box already labelled "Key Takeaway".
+  if (c !== 'news' && !/<TldrBlock|quick answer|\*\*quick answer/i.test(body)) {
     prob.push('no-quick-answer');
   }
+  // ...and it must not come back: the label belongs to the component, not the prose.
+  const tldrText = body.match(/<TldrBlock[^>]*text="([^"]*)"/);
+  if (tldrText && /^\s*(TL;?DR|Quick Answer|Key Takeaway)\s*[:\u2014-]/i.test(tldrText[1])) {
+    prob.push('tldrJargonPrefix');
+  }
+  if (/^#{1,6}\s.*\bTL;?DR\b/im.test(body)) prob.push('tldrHeading');
 
   const links = body.match(/\]\((\/[a-z0-9\-\/]*)\)/gi) || [];
   const internal = links.filter((l) =>

@@ -137,7 +137,7 @@ function buildBody(p) {
 
 Quick Answer: ${p.title.split(' Review')[0]} is a ${p.status.replace('-', ' ')} ${p.propertyType} scheme by ${p.developer} in ${p.location}. ${p.angle}. Foreign buyers follow standard CPCV and escritura rules; non-residents completing after 1 September 2026 pay flat 7.5% IMT under DL 97/2026. Off-plan payments require Decreto-Lei 67/2003 bank guarantees. This is editorial due diligence, not a buy recommendation.
 
-<TldrBlock text="TL;DR: ${p.developer} · ${p.location} · ${p.status}. ${p.units}. Handover/target: ${p.handover}. Non-resident IMT flat 7.5% from Sep 2026. Off-plan: DL 67/2003 guarantee on every pre-deed payment. Independent lawyer mandatory. Compare [off-plan guide](/guides/off-plan-property-portugal-guide/) and ${devLink}." />
+<TldrBlock text="${p.developer} · ${p.location} · ${p.status}. ${p.units}. Handover/target: ${p.handover}. Non-resident IMT flat 7.5% from Sep 2026. Off-plan: DL 67/2003 guarantee on every pre-deed payment. Independent lawyer mandatory. Compare [off-plan guide](/guides/off-plan-property-portugal-guide/) and ${devLink}." />
 
 ${p.title.split(' Review')[0]} sits in ${p.location}, one of the addresses foreign buyers research when comparing Lisbon, Porto, Comporta and Algarve capital stock. Developer marketing emphasises design, amenities and location narrative. Investor underwriting must separate render from registered plans, verify seller legal identity, and model tax timing at escritura.
 

@@ -136,3 +136,39 @@ should be rewritten last and tracked before/after, per the corpus roadmap.
 output rather than MDX source. As written, the gate rewards storing duplicated
 prose in every file — the same class of mismatch as the title-length check, which
 validated frontmatter while the layout appended a brand suffix.
+
+---
+
+## Unverifiable first-hand data claims (added 2026-08-22)
+
+**25 pages** state proprietary research this site may not hold. The wording is
+template-generated and the samples repeat across pages:
+
+- `editorial tracking (Q2 2026): among 34 Algarve transactions where buyer
+  nationality was disclosed in agent reporting…` — appears on the British, French,
+  German and American buyer pages, each quoting the same 34-transaction sample with
+  a different median budget.
+- `internal tracking (Q2 2026): across a sample of 48 AML transactions, median
+  time-on-market for sub-€500,000 apartments was 62 days…` — appears on two compare pages.
+- `among 28 Lisbon and Porto transactions…` — Chinese buyer page.
+
+Affected: 8 areas, 5 segments, 3 compare, 6 guides, 1 developer, plus 2 duplicated pairs.
+
+**Why it matters.** These read as the site's own transaction data. If the data does not
+exist, the pages assert research that was never done, in a commercial context where a
+reader may act on it. The GEO rubric rewards first-person data framing, which is very
+likely why the phrasing was generated — the scorer's own source comment warns against
+remediating that metric with unearned first-person claims.
+
+**Decision needed from the site owner.** Three options:
+
+1. The data is real (partner or agent reporting) — then say whose, and when, so it is
+   attributable rather than anonymous.
+2. The data is illustrative — relabel as worked examples, which costs a few GEO points
+   per page and no credibility.
+3. The data is invented — remove the sentences.
+
+The five Wave 1 guides written on 2026-08-22 carried roughly 35 claims of the same
+class. Those were invented to lift the metric and have been rewritten as labelled
+worked examples; the honest GEO scores are 88–90 rather than the 91–93 first reported.
+The 25 pages above predate that work and are left untouched pending this decision.
