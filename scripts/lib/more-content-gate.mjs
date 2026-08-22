@@ -38,6 +38,15 @@ export const AI_FLUFF_RE =
 export const DRAFT_MARKERS_RE =
   /\[VERIFY\b|\*\*VERIFY:\*\*|Knowledge base|KB §|\bTODO\b|source needed/i;
 
+/**
+ * Content-ops jargon leaked into client-facing copy. 25 public H2 headings once
+ * read "Wave 3 purchase process guides" / "Wave 13 Lisbon east & west", and one
+ * FAQ answer described "Wave 3 reforms" as if it were Portuguese legislation.
+ * "Completion wave" is ordinary English and is deliberately not matched.
+ */
+export const OPS_JARGON_RE =
+  /\b(?<!completion )wave\s+\d+\b|\bP[0-9]\s+batch\b|\(citability block\)|corpus stamp|uniquify/i;
+
 /** Internal DB/filter syntax leaked into client-facing MDX */
 export const INTERNAL_CORPUS_RE =
   /lotsof feed|lotsof project database|lotsof pricing|lotsof\.properties|location\.beach\s*=|location\.area\s*=|`location\.|pipeline median|Programmatic listing pages|commission disclosure|Curated from MORE Group project database/i;
@@ -115,6 +124,10 @@ export function runStructuralChecks(opts) {
   }
   if (INTERNAL_CORPUS_RE.test(body)) {
     errors.push(`${prefix} internal corpus/DB filter syntax (lotsof feed, location.beach=) — not for clients`);
+  }
+  const jargon = body.match(OPS_JARGON_RE);
+  if (jargon) {
+    errors.push(`${prefix} content-ops jargon in client-facing copy: "${jargon[0]}"`);
   }
   for (const phrase of BANNED_PHRASES) {
     if (body.includes(phrase) || (raw && raw.includes(phrase))) {
@@ -205,6 +218,8 @@ export function runExtendedChecks(opts) {
   if (isNews) return;
 
   if (AI_FLUFF_RE.test(body)) errors.push(`${prefix} AI fluff`);
+  const jargon = body.match(OPS_JARGON_RE);
+  if (jargon) errors.push(`${prefix} ops-jargon:"${jargon[0]}"`);
   if (!/<TldrBlock\b/.test(body)) errors.push(`${prefix} missing TldrBlock`);
   if (!/<FaqBlock/.test(body)) errors.push(`${prefix} missing FaqBlock in body`);
   if (!/(pros|cons|плюс|минус|advantages|disadvantages)/i.test(body)) {
