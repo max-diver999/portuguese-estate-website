@@ -1,0 +1,26 @@
+{
+  "rollout": "portugal-commons-hero-images",
+  "generated": "2026-08-22",
+  "source": "Wikimedia Commons",
+  "rule": "One unique hero per page. Min 1600px long edge. Commercial-reuse licences only. Every URL verified HTTP 200 at generation time.",
+  "attributionRequired": true,
+  "total": 1,
+  "uniqueFiles": 1,
+  "failures": [],
+  "images": [
+    {
+      "slug": "portugal-capital-gains-tax-property",
+      "collection": "guides",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Marina%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_25-30_HDR_PAN.jpg/3840px-Marina%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_25-30_HDR_PAN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Marina%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_25-30_HDR_PAN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "width": 7075,
+      "height": 3484,
+      "alt": "Cascais — capital gains on Portuguese property sales",
+      "credit": "Diego Delso / Wikimedia Commons",
+      "licence": "CC BY-SA 4.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Marina,_Cascais,_Portugal,_2022-07-25,_DD_25-30_HDR_PAN.jpg",
+      "commonsTitle": "File:Marina, Cascais, Portugal, 2022-07-25, DD 25-30 HDR PAN.jpg",
+      "matchedTerm": "Cascais marina Portugal"
+    }
+  ]
+}
