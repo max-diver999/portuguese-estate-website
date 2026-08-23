@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import WhatsAppIntentTracker from '../components/WhatsAppIntentTracker.astro';
+import CurrencyEngine from '../components/CurrencyEngine.astro';
 import { SITE } from '../data/site';
 
 interface Props {
@@ -101,6 +102,7 @@ const allSchemas = [orgSchema, ...schemas];
   </main>
   <Footer />
   <WhatsAppFloat />
+  <CurrencyEngine />
   <WhatsAppIntentTracker />
 </body>
 </html>

@@ -81,6 +81,12 @@ const schemas = hubSchemas({
       <p class="text-sm text-[var(--color-muted)] mt-2">{guides.length} guides · INE-backed data · Independent editorial</p>
     </header>
 
+    <div class="guide-search mb-10">
+      <label for="guide-search">Find a guide</label>
+      <input id="guide-search" type="search" placeholder={`Search ${guides.length} guides`} autocomplete="off" />
+      <p id="guide-search-count" aria-live="polite">{guides.length} guides</p>
+    </div>
+
     {priority.length > 0 && (
       <section class="mb-14">
         <h2 class="text-xl mb-5">Start here — highest buyer intent</h2>
@@ -107,7 +113,7 @@ const schemas = hubSchemas({
       whatsappMessage="Hi Portuguese Estate! I'm browsing your guides and want help picking the right Portugal market for my budget."
     />
 
-    <nav class="mb-12 flex flex-wrap gap-2" aria-label="Guide categories">
+    <nav class="mb-12 flex flex-wrap gap-2" data-guide-nav aria-label="Guide categories">
       {clusters.map((cluster) => (
         <a
           href={`#${cluster.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
@@ -119,27 +125,52 @@ const schemas = hubSchemas({
     </nav>
 
     {clusters.map((cluster) => (
-      <section class="mb-14" id={cluster.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}>
+      <section class="mb-14" data-guide-group id={cluster.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}>
         <h2 class="text-xl mb-1">{cluster.name}</h2>
         <p class="text-sm text-[var(--color-muted)] mb-5">{cluster.blurb}</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {cluster.items.map((guide) => (
-            <ContentCard
-              href={`/guides/${guide.id}/`}
-              title={guide.data.title}
-              description={guide.data.description}
-              image={guide.data.heroImage}
-              imageAlt={guide.data.heroImageAlt}
-              badges={guide.data.tags?.slice(0, 2) ?? []}
-              meta={`${guide.data.readingTime ?? 8} min read`}
-            />
+            <div data-guide-card data-search={`${guide.data.title} ${guide.data.description} ${(guide.data.tags ?? []).join(' ')}`.toLowerCase()}>
+              <ContentCard
+                href={`/guides/${guide.id}/`}
+                title={guide.data.title}
+                description={guide.data.description}
+                image={guide.data.heroImage}
+                imageAlt={guide.data.heroImageAlt}
+                badges={guide.data.tags?.slice(0, 2) ?? []}
+                meta={`${guide.data.readingTime ?? 8} min read`}
+              />
+            </div>
           ))}
         </div>
       </section>
     ))}
+    <p id="guide-search-empty" class="guide-search__empty" hidden>No guides match that search.</p>
 
     <div class="max-w-xl mx-auto mt-16">
       <LeadForm context="Guides hub shortlist" />
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .guide-search { max-width:36rem;padding:1rem;border:1px solid var(--color-border);border-radius:14px;background:var(--color-surface); }
+  .guide-search label { display:block;margin-bottom:.45rem;color:var(--color-ink);font-size:.85rem;font-weight:600; }
+  .guide-search input { width:100%; }
+  .guide-search p { margin:.45rem 0 0;color:var(--color-muted);font-size:.8rem; }
+  [data-guide-card] { min-width:0; }
+  [data-guide-card] > :global(*) { height:100%; }
+  .guide-search__empty { padding:2rem 0;color:var(--color-muted);text-align:center; }
+</style>
+<script>
+  (function(){
+    var input=document.getElementById('guide-search'),count=document.getElementById('guide-search-count'),empty=document.getElementById('guide-search-empty'),nav=document.querySelector('[data-guide-nav]');
+    var cards=Array.prototype.slice.call(document.querySelectorAll('[data-guide-card]')),groups=Array.prototype.slice.call(document.querySelectorAll('[data-guide-group]'));
+    if(!input||!count||!empty)return;
+    input.addEventListener('input',function(){var q=input.value.trim().toLowerCase(),visible=0;
+      cards.forEach(function(card){var show=!q||(card.dataset.search||'').includes(q);card.hidden=!show;if(show)visible+=1;});
+      groups.forEach(function(group){group.hidden=Boolean(q)&&!group.querySelector('[data-guide-card]:not([hidden])');});
+      if(nav)nav.hidden=Boolean(q);count.textContent=visible+(visible===1?' guide':' guides');empty.hidden=visible!==0;
+    });
+  })();
+</script>

@@ -1,0 +1,13 @@
+---
+interface Props { variant?: 'header' | 'drawer'; }
+const { variant = 'header' } = Astro.props;
+---
+<button type="button" class={`site-fx-toggle site-fx-toggle--${variant}`} data-site-fx-toggle aria-pressed="false" title="Show US dollar equivalents alongside euro figures">
+  <span aria-hidden="true">$</span><span class="site-fx-toggle__label">Show USD</span>
+</button>
+<style>
+  .site-fx-toggle { display:inline-flex;align-items:center;gap:.35rem;min-height:36px;padding:.35rem .7rem;border:1px solid var(--color-border);border-radius:999px;background:var(--color-surface);color:var(--color-muted);font:500 .82rem inherit;cursor:pointer;white-space:nowrap; }
+  .site-fx-toggle[aria-pressed='true'] { background:var(--color-teal-light);border-color:var(--color-teal);color:var(--color-teal-dark); }
+  .site-fx-toggle--drawer { width:100%;min-height:44px;justify-content:center;margin-bottom:.75rem;font-size:.9rem; }
+  @media (max-width:1100px) { .site-fx-toggle--header { display:none; } }
+</style>

@@ -1,6 +1,7 @@
 ---
 import { SITE } from '../data/site';
 import { waHref as buildWaHref, waLabel, waLinkAttrs } from '../lib/contact';
+import CurrencyToggle from './CurrencyToggle.astro';
 
 const nav = [
   { label: 'Guides', href: '/guides/' },
@@ -32,6 +33,7 @@ const waText = waLabel('WhatsApp', 'Talk to us');
     </nav>
 
     <div class="flex items-center gap-2 shrink-0">
+      <CurrencyToggle variant="header" />
       <a
         href={waHref}
         {...waLinkAttrs}
@@ -41,7 +43,7 @@ const waText = waLabel('WhatsApp', 'Talk to us');
       >
         {waText}
       </a>
-      <a href="/get-shortlist/" class="btn-primary text-sm px-4 py-2 shrink-0">Free shortlist</a>
+      <a href="/get-shortlist/" class="btn-primary mobile-header-cta text-sm px-4 py-2 shrink-0">Free shortlist</a>
 
       <!--
         Below lg the primary nav is hidden. Without this disclosure every hub and
@@ -61,6 +63,8 @@ const waText = waLabel('WhatsApp', 'Talk to us');
           class="absolute right-0 mt-2 w-56 rounded-xl border border-[var(--color-border)] bg-white shadow-lg py-2"
           aria-label="Mobile"
         >
+          <a href="/get-shortlist/" class="mobile-drawer-cta">Get a free shortlist</a>
+          <CurrencyToggle variant="drawer" />
           {nav.map((item) => (
             <a
               href={item.href}
@@ -89,17 +93,53 @@ const waText = waLabel('WhatsApp', 'Talk to us');
   #mobile-nav > summary::-webkit-details-marker {
     display: none;
   }
+  #mobile-nav { position: static; }
+  #mobile-nav nav {
+    position: fixed;
+    inset: 73px 0 0;
+    z-index: 60;
+    width: auto;
+    margin: 0;
+    padding: 1.25rem clamp(1.25rem, 5vw, 2rem) 2rem;
+    border: 0;
+    border-radius: 0;
+    background: var(--color-surface);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .mobile-drawer-cta {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .75rem;
+    border-radius: 999px;
+    background: var(--color-teal);
+    color: #fff !important;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  @media (max-width: 767px) { .mobile-header-cta { display: none; } }
 </style>
 
 <script>
   // Close the disclosure on outside click and on Escape.
   const details = document.getElementById('mobile-nav');
   if (details instanceof HTMLDetailsElement) {
+    details.addEventListener('toggle', () => {
+      document.body.style.overflow = details.open ? 'hidden' : '';
+    });
+    details.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      details.open = false;
+    }));
     document.addEventListener('click', (event) => {
       if (details.open && !details.contains(event.target as Node)) details.open = false;
     });
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && details.open) details.open = false;
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) details.open = false;
     });
   }
 </script>
