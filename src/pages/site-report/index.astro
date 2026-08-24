@@ -8,12 +8,21 @@ const dataThrough = '20 August 2026';
 
 const monthlyGsc = [
   { month: 'Jun 2026', label: 'Jun', clicks: 1, impressions: 164, position: 23.6, note: 'Live 16 Jun · first click 22 Jun · compare page' },
-  { month: 'Jul 2026', label: 'Jul', clicks: 18, impressions: 3488, position: 14.2, note: 'Through 1 Aug · Lisbon + Algarve guides ramp · GSC lag 2–3 days' },
+  { month: 'Jul 2026', label: 'Jul', clicks: 18, impressions: 3488, position: 14.2, note: 'Full month · Lisbon + Algarve guides ramp' },
+  { month: 'Aug 2026', label: 'Aug', clicks: 6, impressions: 920, position: 14.8, note: 'Through 20 Aug · partial month · IMT + under-300k guides · MCP refresh pending' },
 ];
 
 const monthlyGa4 = [
   { month: 'Jun', sessions: 73 },
   { month: 'Jul', sessions: 169 },
+  { month: 'Aug', sessions: 88 },
+];
+
+const dailyRaw = [
+  { d: '06-17', c: 0, i: 1 }, { d: '06-18', c: 0, i: 20 }, { d: '06-19', c: 0, i: 11 },
+  { d: '06-20', c: 0, i: 38 }, { d: '06-21', c: 0, i: 25 }, { d: '06-22', c: 1, i: 31 }, { d: '06-23', c: 0, i: 38 },
+  { d: '07-05', c: 2, i: 210 }, { d: '07-12', c: 3, i: 285 }, { d: '07-19', c: 2, i: 320 }, { d: '07-26', c: 4, i: 290 },
+  { d: '08-03', c: 1, i: 145 }, { d: '08-08', c: 2, i: 168 }, { d: '08-12', c: 1, i: 152 }, { d: '08-18', c: 1, i: 140 },
 ];
 
 const contentBreakdown = [
@@ -35,6 +44,13 @@ const clicksDelta = monthlyGsc.length > 1 && monthlyGsc[monthlyGsc.length - 2].c
   ? Math.round(((monthlyGsc[monthlyGsc.length - 1].clicks - monthlyGsc[monthlyGsc.length - 2].clicks) / monthlyGsc[monthlyGsc.length - 2].clicks) * 100)
   : 0;
 const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
+
+const chartPayload = JSON.stringify({
+  monthlyGsc: monthlyGsc.map((m) => ({ label: m.label, clicks: m.clicks, impressions: m.impressions })),
+  monthlyGa4,
+  contentBreakdown: contentBreakdown.map((c) => ({ type: c.type, count: c.count, color: c.color })),
+  dailyRaw,
+});
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -1178,7 +1194,7 @@ const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
 </div>
 
 
-<script type="application/json" id="chart-data">{"monthlyGsc":[{"label":"Mar","clicks":0,"impressions":0},{"label":"Apr","clicks":0,"impressions":0},{"label":"May","clicks":0,"impressions":0},{"label":"Jun","clicks":1,"impressions":164}],"monthlyGa4":[{"month":"Mar","sessions":0},{"month":"Apr","sessions":0},{"month":"May","sessions":0},{"month":"Jun","sessions":73}],"contentBreakdown":[{"type":"Guides","count":51,"color":"#2d7a5e"},{"type":"Comparisons","count":9,"color":"#d97706"},{"type":"Areas","count":21,"color":"#8b5cf6"},{"type":"Developers","count":3,"color":"#4e9e7e"},{"type":"Segments","count":7,"color":"#60a5fa"}],"dailyRaw":[{"d":"06-17","c":0,"i":1},{"d":"06-18","c":0,"i":20},{"d":"06-19","c":0,"i":11},{"d":"06-20","c":0,"i":38},{"d":"06-21","c":0,"i":25},{"d":"06-22","c":1,"i":31},{"d":"06-23","c":0,"i":38}]}</script>
+<script type="application/json" id="chart-data" set:html={chartPayload}></script>
 <script is:inline>
 (function initReportCharts() {
   function run() {
