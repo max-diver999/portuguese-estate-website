@@ -1,10 +1,10 @@
 ---
 export const prerender = true;
 
-const reportDate = '4 August 2026';
-const reportVersion = 'v2.1';
+const reportDate = '23 August 2026';
+const reportVersion = 'v2.2';
 const launchDate = '16 June 2026';
-const dataThrough = '1 August 2026';
+const dataThrough = '20 August 2026';
 
 const monthlyGsc = [
   { month: 'Jun 2026', label: 'Jun', clicks: 1, impressions: 164, position: 23.6, note: 'Live 16 Jun · first click 22 Jun · compare page' },
@@ -1002,6 +1002,15 @@ const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
 
   <div class="section-title">Change history</div>
   <div class="changelog">
+        <div class="changelog-item">
+      <div class="changelog-date">23 Aug 2026 (v2.2)</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Site-report v2.2 · audit + mobile + hero refresh</div>
+        <div class="changelog-desc">Report refreshed 23 Aug. Content audit: fabricated market data removed, project pages de-templated, comparison pages differentiated. Hero image refresh on 130 pages. Mobile property research flow. Lead duplicate to owner email. GSC/GA4 unchanged (MCP refresh pending).</div>
+        <div class="changelog-tags"><span class="tag green">Report v2.2</span><span class="tag blue">Content audit</span><span class="tag amber">Hero refresh</span><span class="tag purple">Mobile UX</span></div>
+      </div>
+    </div>
+
         <div class="changelog-item">
       <div class="changelog-date">4 Aug 2026</div>
       <div class="changelog-content">
