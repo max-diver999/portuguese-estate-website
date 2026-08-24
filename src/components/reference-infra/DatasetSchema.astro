@@ -1,0 +1,28 @@
+---
+import { buildDatasetSchema } from './dataset-schema.mjs'
+
+interface Organization {
+  id: string
+  name: string
+  url: string | URL
+  sameAs?: string[]
+}
+
+interface Props {
+  name: string
+  description: string
+  url: string | URL
+  language?: string
+  organization?: Organization
+  license?: string
+  temporalCoverage?: string
+  spatialCoverage?: string
+  keywords?: string[]
+  downloadUrl?: string
+  encodingFormat?: string
+}
+
+const schema = buildDatasetSchema(Astro.props)
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

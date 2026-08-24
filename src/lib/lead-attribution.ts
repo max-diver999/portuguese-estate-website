@@ -1,10 +1,9 @@
-export type ExternalAiSource =
-  | 'Perplexity'
-  | 'ChatGPT'
-  | 'Bing Copilot'
-  | 'Claude'
-  | 'Other AI'
-  | '';
+import {
+  detectExternalAiSource as detectSharedExternalAiSource,
+  type ExternalAiSource as SharedExternalAiSource,
+} from './external-ai-sources';
+
+export type ExternalAiSource = SharedExternalAiSource | '';
 
 export type LeadAttribution = {
   page: string;
@@ -25,45 +24,8 @@ const STORAGE_KEYS = {
   lastCta: 'pe_last_cta',
 } as const;
 
-function safeHostname(value: string): string {
-  if (!value) return '';
-  try {
-    return new URL(value).hostname.toLowerCase().replace(/^www\./, '');
-  } catch {
-    return value.toLowerCase();
-  }
-}
-
 export function detectExternalAiSource(referrer: string): ExternalAiSource {
-  const value = referrer.trim().toLowerCase();
-  const hostname = safeHostname(referrer);
-  if (!value) return '';
-
-  if (hostname.includes('perplexity.ai') || value.includes('perplexity')) {
-    return 'Perplexity';
-  }
-  if (hostname.includes('chatgpt.com') || hostname.includes('chat.openai.com')) {
-    return 'ChatGPT';
-  }
-  if (
-    hostname.includes('copilot.microsoft.com') ||
-    hostname === 'copilot.com' ||
-    (hostname.includes('bing.com') && value.includes('/chat'))
-  ) {
-    return 'Bing Copilot';
-  }
-  if (hostname.includes('claude.ai')) {
-    return 'Claude';
-  }
-  if (
-    hostname.includes('gemini.google.com') ||
-    hostname.includes('poe.com') ||
-    hostname.includes('you.com') ||
-    hostname.includes('phind.com')
-  ) {
-    return 'Other AI';
-  }
-  return '';
+  return detectSharedExternalAiSource(referrer) ?? '';
 }
 
 export function createLeadId(prefix: 'form' | 'wa' | 'ai' | 'session' = 'form'): string {

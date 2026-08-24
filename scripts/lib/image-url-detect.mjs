@@ -1,13 +1,24 @@
 /** Detect image-like URLs for audit-all-images.mjs (all MORE niche sites). */
 export function isImageUrl(url) {
   if (!url?.startsWith('http')) return false;
+  if (url.includes('${') || url.includes('{{')) return false;
+  let parsed;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return false;
+  }
+  if (
+    parsed.hostname === 'commons.wikimedia.org' &&
+    parsed.pathname.startsWith('/wiki/File:')
+  ) {
+    return false;
+  }
+  const hasAssetPath = parsed.pathname !== '/' && parsed.pathname !== '';
   return (
-    url.includes('cloudinary.com') ||
-    // upload.wikimedia.org serves files; commons.wikimedia.org/wiki/File:... is the
-    // human-readable licence page we link to for attribution, not an image.
-    url.includes('upload.wikimedia.org') ||
-    url.includes('unsplash') ||
-    url.includes('images.unsplash') ||
+    (parsed.hostname.endsWith('cloudinary.com') && hasAssetPath) ||
+    (parsed.hostname === 'upload.wikimedia.org' && hasAssetPath) ||
+    (parsed.hostname === 'images.unsplash.com' && hasAssetPath) ||
     /\.(jpg|jpeg|png|webp|gif|svg|avif)(\?|$)/i.test(url)
   );
 }

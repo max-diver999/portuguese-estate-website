@@ -4,6 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel';
 import { readdirSync } from 'node:fs';
+import referenceConfig from './reference-infra.config.json' with { type: 'json' };
+import { collectContentLastmod } from './scripts/reference-infra/content-lastmod.mjs';
 
 // The news hub is noindex while the collection is empty (see
 // src/pages/news/index.astro). A noindex page must not sit in the sitemap —
@@ -16,6 +18,11 @@ const newsIsEmpty = (() => {
     return true;
   }
 })();
+
+const contentLastmod = await collectContentLastmod(referenceConfig, {
+  root: process.cwd(),
+});
+const lastmodByUrl = new Map(contentLastmod.map((item) => [item.url, item.lastmod]));
 
 export default defineConfig({
   site: 'https://portuguese-estate.com',
@@ -36,6 +43,8 @@ export default defineConfig({
         return !excluded.some((path) => page.includes(path));
       },
       serialize(item) {
+        const lastmod = lastmodByUrl.get(item.url);
+        if (lastmod) item = { ...item, lastmod: new Date(`${lastmod}T00:00:00Z`) };
         if (item.url === 'https://portuguese-estate.com/') {
           return { ...item, priority: 1.0, changefreq: 'weekly' };
         }
