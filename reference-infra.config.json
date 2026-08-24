@@ -1,0 +1,39 @@
+{
+  "siteUrl": "https://portuguese-estate.com",
+  "brand": "Portuguese Estate",
+  "language": "en",
+  "trailingSlash": true,
+  "organization": {
+    "id": "https://portuguese-estate.com/#organization",
+    "name": "Portuguese Estate",
+    "url": "https://portuguese-estate.com",
+    "sameAs": [
+      "https://portuguese-estate.com/about/",
+      "https://moregroup.estate/about/",
+      "https://www.wikidata.org/wiki/Q140698878"
+    ]
+  },
+  "collections": [
+    { "dir": "src/content/areas", "urlPrefix": "/areas", "label": "Areas" },
+    { "dir": "src/content/compare", "urlPrefix": "/compare", "label": "Compare" },
+    { "dir": "src/content/developers", "urlPrefix": "/developers", "label": "Developers" },
+    { "dir": "src/content/guides", "urlPrefix": "/guides", "label": "Guides" },
+    { "dir": "src/content/news", "urlPrefix": "/news", "label": "News" },
+    { "dir": "src/content/projects", "urlPrefix": "/projects", "label": "Projects" },
+    { "dir": "src/content/segments", "urlPrefix": "/segments", "label": "Segments" }
+  ],
+  "robots": {
+    "disallow": ["/api/", "/thanks/", "/site-report/"],
+    "allowSearchCrawlers": true,
+    "allowTrainingCrawlers": false
+  },
+  "markdownStructure": {
+    "prefixes": []
+  },
+  "llms": {
+    "enabled": false,
+    "path": "/llms.txt",
+    "title": "Portuguese Estate reference content",
+    "description": "Optional machine-readable index of selected public content."
+  }
+}

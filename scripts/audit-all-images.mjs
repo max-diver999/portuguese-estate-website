@@ -24,6 +24,8 @@ const SLOW_HOSTS = new Set(['upload.wikimedia.org', 'commons.wikimedia.org']);
 const SLOW_CONCURRENCY = 2;
 const FAST_CONCURRENCY = 12;
 const UA = 'Mozilla/5.0 (compatible; MOREGroupImageAudit/1.0; +https://portuguese-estate.com)';
+const REQUEST_TIMEOUT_MS = 10_000;
+const MAX_ATTEMPTS = 2;
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
@@ -37,12 +39,13 @@ function walk(dir, out = []) {
 }
 
 async function checkUrl(url) {
-  for (let attempt = 0; attempt < 6; attempt++) {
+  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     try {
       const r = await fetch(url, {
         method: 'GET',
         headers: { 'User-Agent': UA, Range: 'bytes=0-0' },
         redirect: 'follow',
+        signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
       });
       if (r.status === 429) {
         await new Promise((resolve) => setTimeout(resolve, 1500 * (attempt + 1) ** 2));
@@ -54,13 +57,14 @@ async function checkUrl(url) {
           method: 'GET',
           headers: { 'User-Agent': UA },
           redirect: 'follow',
+          signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
         });
         if (r2.status === 200) return { ok: true, status: 200 };
         return { ok: false, status: r2.status };
       }
       return { ok: false, status: r.status };
     } catch {
-      if (attempt === 5) return { ok: false, status: 'ERR' };
+      if (attempt === MAX_ATTEMPTS - 1) return { ok: false, status: 'ERR' };
       await new Promise((resolve) => setTimeout(resolve, 800));
     }
   }

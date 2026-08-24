@@ -1,19 +1,97 @@
 User-agent: *
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
+
+# Search indexing and user-requested fetchers
+
+User-agent: Googlebot
 Allow: /
 Disallow: /api/
 Disallow: /thanks/
 Disallow: /site-report/
 
-User-agent: GPTBot
+User-agent: Bingbot
 Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
-User-agent: ClaudeBot
+User-agent: ChatGPT-User
 Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
+
+User-agent: MistralAI-User
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
+
+# Model-training crawlers
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
 
 Sitemap: https://portuguese-estate.com/sitemap-index.xml

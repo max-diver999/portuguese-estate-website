@@ -39,7 +39,12 @@
     "audit:images": "node scripts/audit-all-images.mjs --fail",
     "audit:images:unique": "node scripts/audit-hero-image-uniqueness.mjs",
     "audit:images:rendered": "node scripts/audit-rendered-image-uniqueness.mjs",
-    "qa:duplicates": "node scripts/qa-duplicate-prose.mjs"
+    "qa:duplicates": "node scripts/qa-duplicate-prose.mjs",
+    "aeo:verify": "node scripts/reference-infra/verify-reference-infra.mjs --config reference-infra.config.json --robots public/robots.txt",
+    "aeo:dates": "node scripts/reference-infra/restore-real-updated-dates.mjs --config reference-infra.config.json",
+    "aeo:markdown": "node scripts/reference-infra/fix-markdown-structure.mjs --config reference-infra.config.json",
+    "aeo:robots": "node scripts/reference-infra/generate-robots.mjs --config reference-infra.config.json",
+    "aeo:llms": "node scripts/reference-infra/generate-agent-markdown.mjs --config reference-infra.config.json --output-dir public"
   },
   "dependencies": {
     "google-auth-library": "^10.6.2",
