@@ -1,5 +1,6 @@
 ---
 import { getCardImageUrl } from '../lib/cardImage';
+import { responsiveImage } from '../lib/responsiveImage';
 
 interface Props {
   href: string;
@@ -26,18 +27,21 @@ const {
 } = Astro.props;
 
 const photo = getCardImageUrl(image);
+const responsive = photo ? responsiveImage(photo, 'card') : null;
 ---
 
 <a href={href} class="content-card surface-card is-link block no-underline overflow-hidden h-full">
-  {photo ? (
+  {responsive ? (
     <div class="content-card__media">
       <img
-        src={photo}
+        src={responsive.src}
+        srcset={responsive.srcset}
+        sizes={responsive.sizes}
         alt={imageAlt || title}
         loading="lazy"
         decoding="async"
-        width="640"
-        height="360"
+        width={responsive.width}
+        height={responsive.height}
       />
     </div>
   ) : (

@@ -33,7 +33,7 @@ export const FEATURED_AREA_SLUGS = [
  * named in the card overlay, and reusing that project's hero here would put the
  * same picture on two pages.
  */
-export const HOMEPAGE_HERO_IMAGE = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_%2823901472335%29.jpg/1280px-A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_%2823901472335%29.jpg';
+export const HOMEPAGE_HERO_IMAGE = "https://res.cloudinary.com/dlrrtf6bq/image/upload/f_auto,q_auto,w_1280/more-group/portugal/site/homepage/hero";
 export const HOMEPAGE_HERO_ALT = "Panorama of Lisbon from the Miradouro Sophia de Mello Breyner Andresen";
 export const HOMEPAGE_HERO_CREDIT = "Andreas Manessinger / Wikimedia Commons";
 export const HOMEPAGE_HERO_LICENCE = "CC BY-SA 2.0";
