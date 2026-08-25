@@ -18,6 +18,7 @@ import {
   HOMEPAGE_HERO_PROJECT_SLUG,
 } from '../data/featured';
 import { getCardImageUrl, formatAreaLabel } from '../lib/cardImage';
+import { responsiveImage } from '../lib/responsiveImage';
 import { pickHomepageProjects, projectHeroLine, projectStatusLabel } from '../lib/homeProjects';
 
 const [guides, projects, areas] = await Promise.all([
@@ -40,6 +41,7 @@ const heroProject = projectBySlug.get(HOMEPAGE_HERO_PROJECT_SLUG) ?? homepagePro
 const featuredAreas = FEATURED_AREA_SLUGS.map((slug) => areaBySlug.get(slug)).filter(Boolean);
 
 const heroImage = getCardImageUrl(HOMEPAGE_HERO_IMAGE, 'hero');
+const hero = responsiveImage(heroImage, 'hero');
 ---
 <BaseLayout
   title="Portugal Property Investment 2026 — Guides & Shortlist"
@@ -63,7 +65,16 @@ const heroImage = getCardImageUrl(HOMEPAGE_HERO_IMAGE, 'hero');
         <TrustStrip />
       </div>
       <div class="hero-visual min-h-[280px] md:min-h-[380px] relative">
-        <img src={heroImage} alt={HOMEPAGE_HERO_ALT} loading="eager" width="1400" height="560" />
+        <img
+          src={hero.src}
+          srcset={hero.srcset}
+          sizes={hero.sizes}
+          alt={HOMEPAGE_HERO_ALT}
+          loading="eager"
+          fetchpriority="high"
+          width={hero.width}
+          height={hero.height}
+        />
         <div class="hero-visual__overlay" />
         <p class="hero-visual__caption">
           Lisbon · Photo: <a href={HOMEPAGE_HERO_SOURCE} rel="noopener nofollow" target="_blank">{HOMEPAGE_HERO_CREDIT}</a> · {HOMEPAGE_HERO_LICENCE}

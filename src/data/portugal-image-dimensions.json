@@ -1,0 +1,530 @@
+{
+  "more-group/portugal/areas/albufeira-property-investment/hero": {
+    "width": 1920,
+    "height": 1279
+  },
+  "more-group/portugal/areas/alcantara-property-investment/hero": {
+    "width": 1280,
+    "height": 854
+  },
+  "more-group/portugal/areas/aveiro-property-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/areas/braga-property-investment/hero": {
+    "width": 1280,
+    "height": 720
+  },
+  "more-group/portugal/areas/caldas-da-rainha-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/areas/cascais-property-investment/hero": {
+    "width": 1920,
+    "height": 1279
+  },
+  "more-group/portugal/areas/chiado-principe-real-property/hero": {
+    "width": 1280,
+    "height": 852
+  },
+  "more-group/portugal/areas/coimbra-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/areas/comporta-property-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/areas/ericeira-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/areas/faro-property-investment/hero": {
+    "width": 1280,
+    "height": 885
+  },
+  "more-group/portugal/areas/lagos-property-investment/hero": {
+    "width": 1280,
+    "height": 753
+  },
+  "more-group/portugal/areas/lourinha-property-investment/hero": {
+    "width": 1280,
+    "height": 863
+  },
+  "more-group/portugal/areas/madeira-property-investment-guide/hero": {
+    "width": 1280,
+    "height": 719
+  },
+  "more-group/portugal/areas/marvila-property-investment/hero": {
+    "width": 1280,
+    "height": 848
+  },
+  "more-group/portugal/areas/matosinhos-property-investment/hero": {
+    "width": 1280,
+    "height": 819
+  },
+  "more-group/portugal/areas/nazare-property-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/areas/obidos-property-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/areas/oeiras-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/areas/parque-das-nacoes-property/hero": {
+    "width": 1280,
+    "height": 809
+  },
+  "more-group/portugal/areas/portimao-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/areas/setubal-peninsula-property-investment/hero": {
+    "width": 1280,
+    "height": 720
+  },
+  "more-group/portugal/areas/sintra-property-investment/hero": {
+    "width": 1280,
+    "height": 608
+  },
+  "more-group/portugal/areas/tavira-property-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/areas/vila-nova-de-gaia-property-investment/hero": {
+    "width": 1280,
+    "height": 848
+  },
+  "more-group/portugal/areas/vilamoura-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/compare/algarve-vs-lisbon-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/compare/lagos-vs-vilamoura-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/compare/lisbon-vs-cascais-property/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/compare/new-build-vs-resale-property-portugal/hero": {
+    "width": 1280,
+    "height": 939
+  },
+  "more-group/portugal/compare/porto-vs-lisbon-property-investment/hero": {
+    "width": 1280,
+    "height": 600
+  },
+  "more-group/portugal/compare/portugal-vs-cyprus-property-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/compare/portugal-vs-dubai-property-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/compare/portugal-vs-france-property-investment/hero": {
+    "width": 1280,
+    "height": 720
+  },
+  "more-group/portugal/compare/portugal-vs-greece-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/compare/portugal-vs-italy-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/compare/portugal-vs-malta-property-investment/hero": {
+    "width": 1280,
+    "height": 722
+  },
+  "more-group/portugal/compare/portugal-vs-spain-property-investment/hero": {
+    "width": 1280,
+    "height": 941
+  },
+  "more-group/portugal/compare/portugal-vs-turkey-property-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/compare/portugal-vs-uk-property-investment/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/developers/farinvest-properties-portugal/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/developers/vanguard-properties-portugal/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/developers/vic-properties-portugal/hero": {
+    "width": 1280,
+    "height": 842
+  },
+  "more-group/portugal/guides/aimi-wealth-tax-portugal-property/hero": {
+    "width": 1920,
+    "height": 1248
+  },
+  "more-group/portugal/guides/al-license-transfer-portugal-sale/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/algarve-airbnb-investment-guide/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/algarve-property-investment-guide/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/alojamento-local-license-portugal/hero": {
+    "width": 1280,
+    "height": 778
+  },
+  "more-group/portugal/guides/best-portugal-property-under-4000-euro-m2/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/best-regions-invest-portugal-property-2026/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/buy-property-portugal-foreigner/hero": {
+    "width": 1920,
+    "height": 1545
+  },
+  "more-group/portugal/guides/can-foreigners-buy-property-portugal/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/complete-before-september-2026-imt-guide/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/cost-of-buying-property-portugal/hero": {
+    "width": 1280,
+    "height": 915
+  },
+  "more-group/portugal/guides/cpcv-promissory-contract-portugal/hero": {
+    "width": 1280,
+    "height": 755
+  },
+  "more-group/portugal/guides/due-diligence-portugal-property/hero": {
+    "width": 1280,
+    "height": 852
+  },
+  "more-group/portugal/guides/escritura-notary-portugal-property/hero": {
+    "width": 1280,
+    "height": 852
+  },
+  "more-group/portugal/guides/gross-vs-net-yield-portugal/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/hidden-costs-buying-property-portugal/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/highest-rental-yield-areas-portugal/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/how-to-buy-portugal-property-remotely/hero": {
+    "width": 1280,
+    "height": 854
+  },
+  "more-group/portugal/guides/how-to-buy-property-portugal-step-by-step/hero": {
+    "width": 1280,
+    "height": 856
+  },
+  "more-group/portugal/guides/how-to-calculate-rental-yield-portugal/hero": {
+    "width": 1280,
+    "height": 720
+  },
+  "more-group/portugal/guides/ifici-portugal-nhr-2-tax-regime/hero": {
+    "width": 1280,
+    "height": 841
+  },
+  "more-group/portugal/guides/imi-property-tax-portugal/hero": {
+    "width": 1280,
+    "height": 1024
+  },
+  "more-group/portugal/guides/imt-refund-tax-resident-portugal/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/imt-tax-non-resident-portugal-2026/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/is-portugal-property-good-investment-2026/hero": {
+    "width": 1280,
+    "height": 863
+  },
+  "more-group/portugal/guides/lisbon-alojamento-local-containment-zones/hero": {
+    "width": 1280,
+    "height": 691
+  },
+  "more-group/portugal/guides/lisbon-property-investment-guide/hero": {
+    "width": 1280,
+    "height": 850
+  },
+  "more-group/portugal/guides/long-term-vs-holiday-rental-portugal/hero": {
+    "width": 1280,
+    "height": 893
+  },
+  "more-group/portugal/guides/mais-valias-portugal-capital-gains/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/moderate-rent-tax-incentives-portugal-2026/hero": {
+    "width": 1280,
+    "height": 720
+  },
+  "more-group/portugal/guides/nif-portugal-property-purchase/hero": {
+    "width": 1280,
+    "height": 909
+  },
+  "more-group/portugal/guides/non-resident-mortgage-portugal/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/non-resident-rental-income-tax-portugal/hero": {
+    "width": 1280,
+    "height": 856
+  },
+  "more-group/portugal/guides/off-plan-property-portugal-guide/hero": {
+    "width": 1280,
+    "height": 842
+  },
+  "more-group/portugal/guides/porto-alojamento-local-rules/hero": {
+    "width": 1280,
+    "height": 823
+  },
+  "more-group/portugal/guides/porto-property-investment-guide/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/portugal-6-percent-vat-housing-works/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/portugal-buy-to-let-investment-guide/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/portugal-buying-costs-calculator-examples/hero": {
+    "width": 1280,
+    "height": 732
+  },
+  "more-group/portugal/guides/portugal-capital-gains-tax-property/hero": {
+    "width": 1280,
+    "height": 630
+  },
+  "more-group/portugal/guides/portugal-d7-visa-property/hero": {
+    "width": 1280,
+    "height": 959
+  },
+  "more-group/portugal/guides/portugal-digital-nomad-visa-property/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/portugal-golden-visa-fund-investment-2026/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/portugal-golden-visa-real-estate-ended/hero": {
+    "width": 1280,
+    "height": 964
+  },
+  "more-group/portugal/guides/portugal-golden-visa-vs-property-purchase/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/portugal-housing-supply-licensing-2025/hero": {
+    "width": 1280,
+    "height": 993
+  },
+  "more-group/portugal/guides/portugal-mortgage-rates-foreigners-2026/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/portugal-property-1-million-plus-investment/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/portugal-property-deposit-guide-cpcv/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/portugal-property-developers-guide-2026/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/portugal-property-inheritance-tax-foreigners/hero": {
+    "width": 1280,
+    "height": 849
+  },
+  "more-group/portugal/guides/portugal-property-investment-guide/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/portugal-property-market-forecast-2026-2027/hero": {
+    "width": 1280,
+    "height": 851
+  },
+  "more-group/portugal/guides/portugal-property-market-record-2025-ine-data/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/portugal-property-scams-avoid/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/portugal-property-under-300000-euros/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/portugal-property-under-500000-euros/hero": {
+    "width": 1280,
+    "height": 708
+  },
+  "more-group/portugal/guides/portugal-rental-yield-guide/hero": {
+    "width": 1280,
+    "height": 898
+  },
+  "more-group/portugal/guides/portugal-residency-options-without-golden-visa/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/power-of-attorney-property-portugal/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/prenuptial-agreement-portugal-property/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/property-maintenance-costs-portugal/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/guides/property-management-portugal-cost/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/renovation-costs-portugal-per-m2/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/rnal-registration-portugal/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/sell-property-portugal-non-resident/hero": {
+    "width": 1280,
+    "height": 848
+  },
+  "more-group/portugal/guides/silver-coast-portugal-property-guide/hero": {
+    "width": 1280,
+    "height": 826
+  },
+  "more-group/portugal/guides/stamp-duty-portugal-property/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/projects/carvalhido/hero": {
+    "width": 1920,
+    "height": 1446
+  },
+  "more-group/portugal/projects/castilho-203/hero": {
+    "width": 1920,
+    "height": 1279
+  },
+  "more-group/portugal/projects/infinity/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/projects/mar-adentro/hero": {
+    "width": 1280,
+    "height": 854
+  },
+  "more-group/portugal/projects/six-senses-comporta/hero": {
+    "width": 1280,
+    "height": 1036
+  },
+  "more-group/portugal/projects/terracos-do-monte/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/projects/tomas-ribeiro-79/hero": {
+    "width": 1280,
+    "height": 966
+  },
+  "more-group/portugal/segments/american-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 897
+  },
+  "more-group/portugal/segments/angolan-buyers-portugal/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/segments/australian-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 854
+  },
+  "more-group/portugal/segments/brazilian-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 633
+  },
+  "more-group/portugal/segments/canadian-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 816
+  },
+  "more-group/portugal/segments/chinese-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/segments/french-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/segments/german-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 854
+  },
+  "more-group/portugal/segments/indian-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 960
+  },
+  "more-group/portugal/segments/israeli-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/segments/south-african-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/segments/uae-buyers-portugal-property/hero": {
+    "width": 1280,
+    "height": 801
+  },
+  "more-group/portugal/segments/uk-buyers-portugal-property-brexit/hero": {
+    "width": 1280,
+    "height": 715
+  },
+  "more-group/portugal/site/homepage/hero": {
+    "width": 1920,
+    "height": 1269
+  }
+}

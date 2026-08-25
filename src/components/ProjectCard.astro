@@ -7,6 +7,7 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
   area?: string;
   developer?: string;
   propertyType?: string;
@@ -20,6 +21,7 @@ const {
   title,
   description,
   image,
+  imageAlt,
   area,
   developer,
   propertyType,
@@ -43,6 +45,7 @@ const meta = [price && `From ${price}`, developer].filter(Boolean).join(' · ');
   title={title}
   description={description}
   image={image}
+  imageAlt={imageAlt}
   badges={badges}
   meta={meta}
   metaAccent={!!price}

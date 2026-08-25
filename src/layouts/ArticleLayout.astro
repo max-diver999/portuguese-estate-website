@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import { SITE } from '../data/site';
+import { responsiveImage } from '../lib/responsiveImage';
 
 interface Props {
   title: string;
@@ -48,6 +49,7 @@ const dateStr = (updatedDate || pubDate).toLocaleDateString('en-US', {
   day: 'numeric',
 });
 const pageUrl = canonical || Astro.url.href;
+const hero = heroImage ? responsiveImage(heroImage, 'hero') : null;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -121,15 +123,18 @@ const schemas = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : 
       </p>
     </header>
 
-    {heroImage && (
+    {hero && (
       <figure class="mb-10">
         <img
-          src={heroImage}
+          src={hero.src}
+          srcset={hero.srcset}
+          sizes={hero.sizes}
           alt={heroImageAlt || ''}
           class="w-full max-h-[420px] object-cover rounded-2xl border border-[var(--color-border)]"
           loading="eager"
-          width="1280"
-          height="720"
+          fetchpriority="high"
+          width={hero.width}
+          height={hero.height}
         />
         {heroImageCredit && (
           <figcaption class="mt-2 text-xs text-[var(--color-muted)]">

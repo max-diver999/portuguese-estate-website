@@ -14,6 +14,8 @@ const articleSchema = z.object({
   heroImageCredit: z.string().optional(),
   heroImageLicence: z.string().optional(),
   heroImageSource: z.string().optional(),
+  heroImageWidth: z.number().int().positive().optional(),
+  heroImageHeight: z.number().int().positive().optional(),
   readingTime: z.number().optional(),
   relatedSlugs: z.array(z.string()).default([]),
   noindex: z.boolean().default(false),
