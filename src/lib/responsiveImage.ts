@@ -1,12 +1,13 @@
 import dimensions from '../data/portugal-image-dimensions.json';
 
-type Variant = 'hero' | 'card';
+type Variant = 'hero' | 'homepage' | 'card';
 type Dimension = { width: number; height: number };
 
 const CLOUD = 'dlrrtf6bq';
 const WIDTHS = {
-  hero: [480, 768, 1024, 1280],
-  card: [320, 480, 640],
+  hero: [360, 480, 768, 1024, 1280],
+  homepage: [360, 480, 768, 1024],
+  card: [360, 480, 640],
 } as const;
 
 function publicIdFromUrl(src: string): string | null {
@@ -42,8 +43,10 @@ export function responsiveImage(src: string, variant: Variant = 'hero') {
     src: deliveryUrl(publicId, largest),
     srcset: widths.map((width) => `${deliveryUrl(publicId, width)} ${width}w`).join(', '),
     sizes: variant === 'card'
-      ? '(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 320px'
-      : '(max-width: 767px) 100vw, 1280px',
+      ? '(max-width: 639px) calc(100vw - 3rem), (max-width: 1023px) 50vw, 320px'
+      : variant === 'homepage'
+        ? '(max-width: 1023px) calc(100vw - 3rem), 500px'
+        : '(max-width: 767px) calc(100vw - 3rem), (max-width: 1199px) calc(100vw - 7rem), 1088px',
     width: native.width,
     height: native.height,
   };

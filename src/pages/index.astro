@@ -41,7 +41,7 @@ const heroProject = projectBySlug.get(HOMEPAGE_HERO_PROJECT_SLUG) ?? homepagePro
 const featuredAreas = FEATURED_AREA_SLUGS.map((slug) => areaBySlug.get(slug)).filter(Boolean);
 
 const heroImage = getCardImageUrl(HOMEPAGE_HERO_IMAGE, 'hero');
-const hero = responsiveImage(heroImage, 'hero');
+const hero = responsiveImage(heroImage, 'homepage');
 ---
 <BaseLayout
   title="Portugal Property Investment 2026 — Guides & Shortlist"
