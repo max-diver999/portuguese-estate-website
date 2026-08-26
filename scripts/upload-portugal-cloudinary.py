@@ -241,8 +241,14 @@ def main() -> None:
     cloud, key, secret = credentials()
     source = json.loads(SOURCE_MANIFEST.read_text(encoding="utf-8"))
     items = source["images"]
-    if source.get("total") != 132 or len(items) != 132 or len({x["commonsTitle"] for x in items}) != 132:
-        raise SystemExit("Source manifest inventory is not exactly 132 unique images")
+    declared_total = int(source.get("total", 0))
+    unique_files = len({x["commonsTitle"] for x in items})
+    unique_slugs = len({x["slug"] for x in items})
+    if declared_total != len(items) or unique_files != len(items) or unique_slugs != len(items):
+        raise SystemExit(
+            f"Source manifest inventory mismatch: declared={declared_total}, rows={len(items)}, "
+            f"unique_files={unique_files}, unique_slugs={unique_slugs}"
+        )
     if args.slug:
         requested = set(args.slug)
         items = [item for item in items if item["slug"] in requested]

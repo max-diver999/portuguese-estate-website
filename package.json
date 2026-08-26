@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "npm run images:verify",
     "build": "astro build",
     "postbuild": "node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs",
     "preview": "astro preview",
