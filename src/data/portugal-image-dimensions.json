@@ -203,6 +203,10 @@
     "width": 1920,
     "height": 1545
   },
+  "more-group/portugal/guides/buy-property-portugal-through-company/hero": {
+    "width": 1280,
+    "height": 960
+  },
   "more-group/portugal/guides/can-foreigners-buy-property-portugal/hero": {
     "width": 1280,
     "height": 960
@@ -211,13 +215,25 @@
     "width": 1280,
     "height": 853
   },
+  "more-group/portugal/guides/condominium-fees-portugal/hero": {
+    "width": 1280,
+    "height": 941
+  },
   "more-group/portugal/guides/cost-of-buying-property-portugal/hero": {
     "width": 1280,
     "height": 915
   },
+  "more-group/portugal/guides/cost-of-selling-property-portugal/hero": {
+    "width": 1280,
+    "height": 853
+  },
   "more-group/portugal/guides/cpcv-promissory-contract-portugal/hero": {
     "width": 1280,
     "height": 755
+  },
+  "more-group/portugal/guides/currency-transfer-portugal-property/hero": {
+    "width": 1280,
+    "height": 863
   },
   "more-group/portugal/guides/due-diligence-portugal-property/hero": {
     "width": 1280,
@@ -226,6 +242,10 @@
   "more-group/portugal/guides/escritura-notary-portugal-property/hero": {
     "width": 1280,
     "height": 852
+  },
+  "more-group/portugal/guides/fiscal-representative-portugal/hero": {
+    "width": 1280,
+    "height": 853
   },
   "more-group/portugal/guides/gross-vs-net-yield-portugal/hero": {
     "width": 1280,
@@ -287,9 +307,17 @@
     "width": 1280,
     "height": 853
   },
+  "more-group/portugal/guides/modelo-3-anexo-g-property-sale/hero": {
+    "width": 1280,
+    "height": 959
+  },
   "more-group/portugal/guides/moderate-rent-tax-incentives-portugal-2026/hero": {
     "width": 1280,
     "height": 720
+  },
+  "more-group/portugal/guides/mortgage-broker-vs-bank-portugal/hero": {
+    "width": 1280,
+    "height": 853
   },
   "more-group/portugal/guides/nif-portugal-property-purchase/hero": {
     "width": 1280,
@@ -302,6 +330,10 @@
   "more-group/portugal/guides/non-resident-rental-income-tax-portugal/hero": {
     "width": 1280,
     "height": 856
+  },
+  "more-group/portugal/guides/obras-licence-portugal-renovation/hero": {
+    "width": 1280,
+    "height": 960
   },
   "more-group/portugal/guides/off-plan-property-portugal-guide/hero": {
     "width": 1280,
@@ -407,6 +439,10 @@
     "width": 1280,
     "height": 960
   },
+  "more-group/portugal/guides/portugal-tax-residency-183-days/hero": {
+    "width": 1280,
+    "height": 853
+  },
   "more-group/portugal/guides/power-of-attorney-property-portugal/hero": {
     "width": 1280,
     "height": 853
@@ -440,6 +476,10 @@
     "height": 826
   },
   "more-group/portugal/guides/stamp-duty-portugal-property/hero": {
+    "width": 1280,
+    "height": 853
+  },
+  "more-group/portugal/guides/uk-portugal-double-taxation-treaty/hero": {
     "width": 1280,
     "height": 853
   },

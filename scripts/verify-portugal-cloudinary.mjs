@@ -8,12 +8,24 @@ const source = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/portugal-comm
 const uploaded = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/portugal-cloudinary-manifest.json'), 'utf8')).uploaded || {};
 const dimensions = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/portugal-image-dimensions.json'), 'utf8'));
 const errors = [];
+const expectedCount = source.images.length;
 
-if (source.images.length !== 132 || new Set(source.images.map((item) => item.commonsTitle)).size !== 132) {
-  errors.push('source manifest is not 132 unique Wikimedia files');
+if (
+  source.total !== expectedCount ||
+  new Set(source.images.map((item) => item.commonsTitle)).size !== expectedCount ||
+  new Set(source.images.map((item) => item.slug)).size !== expectedCount
+) {
+  errors.push(
+    `source manifest inventory mismatch: declared=${source.total}, rows=${expectedCount}, ` +
+    `unique files=${new Set(source.images.map((item) => item.commonsTitle)).size}`,
+  );
 }
-if (Object.keys(uploaded).length !== 132) errors.push(`uploaded manifest has ${Object.keys(uploaded).length}/132 entries`);
-if (Object.keys(dimensions).length !== 132) errors.push(`dimensions cache has ${Object.keys(dimensions).length}/132 entries`);
+if (Object.keys(uploaded).length !== expectedCount) {
+  errors.push(`uploaded manifest has ${Object.keys(uploaded).length}/${expectedCount} entries`);
+}
+if (Object.keys(dimensions).length !== expectedCount) {
+  errors.push(`dimensions cache has ${Object.keys(dimensions).length}/${expectedCount} entries`);
+}
 
 for (const item of source.images) {
   const upload = uploaded[item.slug];
@@ -57,7 +69,10 @@ function walk(dir) {
 for (const file of walk(path.join(ROOT, 'src')).filter((file) => /\.(astro|mdx?|tsx?|json)$/.test(file))) {
   const text = fs.readFileSync(file, 'utf8');
   if (/https:\/\/upload\.wikimedia\.org\/[^\s"'<>)]*/.test(text)) {
-    errors.push(`Wikimedia delivery URL remains in ${path.relative(ROOT, file)}`);
+    errors.push(
+      `unmapped Wikimedia image delivery remains in ${path.relative(ROOT, file)}; ` +
+      'upload and rollout the hero before build',
+    );
   }
   const urls = text.match(/https:\/\/res\.cloudinary\.com\/[^\s"'<>)]*/g) || [];
   for (const url of urls) {
@@ -73,4 +88,7 @@ if (errors.length) {
   console.error(`Portugal Cloudinary verification failed: ${errors.length} issue(s)`);
   process.exit(1);
 }
-console.log('Portugal Cloudinary verification passed: 132/132 uploads, dimensions and attribution sources');
+console.log(
+  `Portugal Cloudinary verification passed: ${expectedCount}/${expectedCount} uploads, ` +
+  'dimensions, delivery mappings and attribution sources',
+);

@@ -17,13 +17,30 @@ const FEATURED_PATH = path.join(ROOT, 'src/data/featured.ts');
 const CLOUD = 'dlrrtf6bq';
 const PREFIX = 'more-group/portugal/';
 const dryRun = process.argv.includes('--dry-run');
+const selectedSlugs = new Set();
+for (let index = 2; index < process.argv.length; index += 1) {
+  const arg = process.argv[index];
+  if (arg === '--slug' && process.argv[index + 1]) selectedSlugs.add(process.argv[++index]);
+  else if (arg.startsWith('--slug=')) selectedSlugs.add(arg.slice('--slug='.length));
+}
 
 const source = JSON.parse(fs.readFileSync(SOURCE_PATH, 'utf8'));
 const uploads = JSON.parse(fs.readFileSync(UPLOAD_PATH, 'utf8'));
 const expected = source.images;
 
-if (expected.length !== 132 || Object.keys(uploads.uploaded || {}).length !== 132) {
-  throw new Error(`Expected 132 source and uploaded entries; got ${expected.length} and ${Object.keys(uploads.uploaded || {}).length}`);
+if (
+  source.total !== expected.length ||
+  new Set(expected.map((item) => item.slug)).size !== expected.length ||
+  new Set(expected.map((item) => item.commonsTitle)).size !== expected.length ||
+  Object.keys(uploads.uploaded || {}).length !== expected.length
+) {
+  throw new Error(
+    `Inventory mismatch: source=${expected.length}, declared=${source.total}, uploaded=${Object.keys(uploads.uploaded || {}).length}`,
+  );
+}
+const knownSlugs = new Set(expected.map((item) => item.slug));
+for (const slug of selectedSlugs) {
+  if (!knownSlugs.has(slug)) throw new Error(`Unknown --slug: ${slug}`);
 }
 
 const yaml = (value) => `"${String(value).replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
@@ -101,9 +118,11 @@ for (const item of expected) {
 
   if (item.collection === 'site') {
     if (item.slug !== 'homepage') throw new Error(`Unknown site asset: ${item.slug}`);
+    if (selectedSlugs.size && !selectedSlugs.has(item.slug)) continue;
     if (updateFeatured(item, upload)) changed += 1;
     continue;
   }
+  if (selectedSlugs.size && !selectedSlugs.has(item.slug)) continue;
 
   const file = ['mdx', 'md']
     .map((extension) => path.join(ROOT, 'src/content', item.collection, `${item.slug}.${extension}`))
