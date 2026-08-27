@@ -1,0 +1,113 @@
+{
+  "_readme": "Claims about jurisdictions outside Portugal. These sit in a separate file from facts.json for two reasons. First, facts.json is keyed by the bare figure and feeds GEO scoring, and several of these claims turn on numbers that mean something else elsewhere in this corpus (10% is a Spanish ITP band here and the CPCV deposit convention on forty other pages), so registering them there would hand unrelated articles a provenance they have not earned. Second, and the actual point: nobody on this project monitors HMRC, the IRS, the Spanish autonomous communities or Greek ENFIA the way Portuguese law is followed here. These figures will go out of date without anyone noticing. Each carries a reviewBy date; npm run facts:review fails once one is overdue, which is the whole mechanism. Reviewing means re-reading the primary source and either moving the dates forward or correcting every file the claim names.\n\nWhy this file matters more here than on most sites: the two worst-scoring collections in this corpus, segments (13 pages) and compare (14 pages), exist entirely to describe foreign jurisdictions. That is 27 of 141 pages whose central claims nobody here watches. This is a seed set covering the claims that are load-bearing today; the rewrite waves are expected to add to it, because a segment page rewritten to hold what the buyer's OWN country does to them is by definition a page built on an external claim.",
+  "claims": [
+    {
+      "id": "uk-pt-treaty-1968",
+      "jurisdiction": "GB",
+      "claim": "The UK-Portugal double taxation convention dates from 1968 and relieves double taxation by the credit method, not by exemption, so Portuguese tax paid on Portuguese-source income is credited against the UK bill rather than removing the UK charge",
+      "source": "UK/Portugal Double Taxation Convention 1968, HMRC Double Taxation Relief manual",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["guides/uk-portugal-double-taxation-treaty.mdx"]
+    },
+    {
+      "id": "uk-government-service-pensions",
+      "jurisdiction": "GB",
+      "claim": "Under the 1968 convention, UK government-service pensions remain taxable only in the UK, unlike other occupational and state pensions which move to the residence country",
+      "source": "UK/Portugal Double Taxation Convention 1968, government service article",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["guides/uk-portugal-double-taxation-treaty.mdx"]
+    },
+    {
+      "id": "uk-fig-regime-2025",
+      "jurisdiction": "GB",
+      "claim": "The UK replaced the remittance basis with the four-year foreign income and gains regime from April 2025, which changes the arithmetic for returners and for new UK arrivals holding Portuguese property",
+      "source": "UK Finance Act provisions on the foreign income and gains regime, HMRC guidance",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["guides/uk-portugal-double-taxation-treaty.mdx"]
+    },
+    {
+      "id": "us-citizenship-based-taxation",
+      "jurisdiction": "US",
+      "claim": "The United States taxes its citizens on worldwide income regardless of residence, so a US citizen who becomes Portuguese tax resident continues to file a US return on Portuguese rental income and gains",
+      "source": "US Internal Revenue Code; IRS Publication 54",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["segments/american-buyers-portugal-property.mdx"]
+    },
+    {
+      "id": "us-fbar-threshold",
+      "jurisdiction": "US",
+      "claim": "A US person must file an FBAR once the aggregate value of foreign financial accounts exceeds USD 10,000 at any point in the calendar year, a threshold a Portuguese purchase account crosses immediately",
+      "source": "FinCEN Form 114 instructions; 31 CFR 1010.350",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["segments/american-buyers-portugal-property.mdx"]
+    },
+    {
+      "id": "us-form-8938",
+      "jurisdiction": "US",
+      "claim": "Form 8938 reporting under FATCA applies in addition to the FBAR, at higher and residence-dependent thresholds, and directly held foreign real estate is not itself a specified foreign financial asset",
+      "source": "IRS Form 8938 instructions; IRC section 6038D",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["segments/american-buyers-portugal-property.mdx"]
+    },
+    {
+      "id": "us-1031-domestic-only",
+      "jurisdiction": "US",
+      "claim": "A section 1031 like-kind exchange cannot defer gain between US and non-US real property, so a US owner cannot roll a Portuguese sale into a US purchase tax-deferred",
+      "source": "IRC section 1031(h)",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["segments/american-buyers-portugal-property.mdx"]
+    },
+    {
+      "id": "de-progressionsvorbehalt",
+      "jurisdiction": "DE",
+      "claim": "Germany relieves foreign rental income by exemption with progression rather than by credit, so exempt Portuguese income still raises the German rate applied to the rest of the taxpayer's income",
+      "source": "German Einkommensteuergesetz section 32b; Germany-Portugal double taxation treaty",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["segments/german-buyers-portugal-property.mdx"]
+    },
+    {
+      "id": "ca-departure-tax",
+      "jurisdiction": "CA",
+      "claim": "Canada taxes residents on worldwide income and applies a deemed disposition on ceasing residence, so the timing of a move interacts with a Portuguese purchase differently from the US citizenship-based rule",
+      "source": "Canadian Income Tax Act section 128.1; CRA guidance on emigrants",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["segments/canadian-buyers-portugal-property.mdx"]
+    },
+    {
+      "id": "es-itp-regional",
+      "jurisdiction": "ES",
+      "claim": "Spanish transfer tax on resale property (ITP) is set by each autonomous community rather than nationally, so a single Spain-wide rate cannot be quoted against a single Portuguese one",
+      "source": "Spanish Ley del ITP y AJD; autonomous community tax schedules",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["compare/portugal-vs-spain-property-investment.mdx"]
+    },
+    {
+      "id": "it-registration-tax",
+      "jurisdiction": "IT",
+      "claim": "Italian purchase taxation turns on registration tax computed from cadastral value rather than price for private resale purchases, which makes headline-rate comparison with Portuguese IMT misleading",
+      "source": "Italian Testo Unico dell'imposta di registro (DPR 131/1986); Agenzia delle Entrate guidance",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["compare/portugal-vs-italy-property-investment.mdx"]
+    },
+    {
+      "id": "gr-enfia",
+      "jurisdiction": "GR",
+      "claim": "Greece levies ENFIA as its recurring property tax, structured as a main tax per square metre plus a supplementary charge on higher-value holdings, which is not comparable line-for-line with Portuguese IMI plus AIMI",
+      "source": "Greek Law 4223/2013 on ENFIA; AADE guidance",
+      "asOf": "2026-08-27",
+      "reviewBy": "2027-02-27",
+      "files": ["compare/portugal-vs-greece-property-investment.mdx"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# Text that is deliberately identical across articles.
+#
+# The duplication detector treats every repeated passage as evidence of
+# mechanical writing, which is what catches template families. Legal
+# disclaimers and standing method notes are legitimately repeated, so they are
+# declared here instead of being silently exempted. One line per sentence,
+# matched after normalisation. Keep this file short: every line you add is a
+# passage the duplication detector stops looking at, and a reviewer should be
+# able to read the whole list in under a minute. The loader caps the file at
+# eight declared passages and throws rather than exempting beyond that.
+#
+# PORT NOTE (portuguese-estate.com, 2026-08-27). Exactly one line qualified.
+# The corpus scan for sentences repeated on ten or more pages returned mostly
+# template output, not boilerplate, and none of it is exempted here:
+#
+#   22x  "At the 5.0% mid-point of the local gross range the unit lets for
+#         about EUR 1,462 a month, EUR 17,550 a year."
+#   22x  "Deducting IMI of EUR 983, condominium charges of EUR 1,200, ..."
+#   21x  "The following conservative scenario illustrates how national tax
+#         reform and <PLACE> yields interact over a medium hold."
+#
+# The first two are one worked example, with identical euro amounts, stamped
+# onto twenty-two different towns - so on twenty-two pages the arithmetic is
+# right for at most one of them. The third is the noun-swap template itself.
+# Declaring any of them here would hide the single clearest piece of evidence
+# the scorer has. They are rewrite work, not exemptions.
+It is not a promise of future performance.

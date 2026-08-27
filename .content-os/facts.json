@@ -1,0 +1,113 @@
+{
+  "_readme": "Load-bearing figures for portuguese-estate.com. A figure phrase carried by five or more articles is a claim about the world and must be registered here with a source and a date; a figure used once is a local worked example and needs no entry. Entries are grouped by figure because one number means several things: 24 months is both the DL 97/2026 destination condition and the IMT-refund residency window, and both meanings are registered separately. Adding an entry is a claim, so the scorer reports every entry a change introduces and a reviewer sees them.\n\nDELIBERATELY PARTIAL. The corpus carries 204 figures in eight or more files. Registered here are only those whose primary source can be named exactly. The bare ratios the corpus leans on most - 10%, 5%, 30%, 3% - are NOT registered and should not be: 10% is the CPCV deposit convention on some pages, a management fee on others and a rent-cap arithmetic step on others again, so a single entry would hand unrelated pages a provenance they have not earned. Those pages need rewriting so the figure carries its meaning, not a registry entry. The registry gate arms itself at 80% coverage of load-bearing figures, so this file is meant to grow with the rewrite waves rather than be filled in one pass.",
+  "facts": [
+    {
+      "figure": "7.5%",
+      "statement": "Flat IMT rate applied to a non-resident individual buyer completing on or after 1 September 2026, replacing the progressive scale",
+      "source": "Decreto-Lei 97/2026 of 20 May, Diario da Republica",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "0.8%",
+      "statement": "Imposto do Selo (stamp duty) on the acquisition of property, charged on the higher of price and VPT",
+      "source": "Codigo do Imposto do Selo, Tabela Geral verba 1.1",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "6%",
+      "statement": "Reduced VAT rate on construction and rehabilitation empreitadas on housing, for projects initiated 25 September 2025 to 31 December 2029, in force from 1 July 2026",
+      "source": "Decreto-Lei 97/2026 of 20 May, Diario da Republica",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "24 months",
+      "statement": "Window within which a non-resident IMT payer must become Portuguese tax resident to claim the refund of the flat 7.5% rate",
+      "source": "Decreto-Lei 97/2026 of 20 May, Diario da Republica",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "24 months",
+      "statement": "Destination condition on 6% VAT housing works: sale as permanent own housing, or letting within the rent cap, within 24 months of the occupancy licence",
+      "source": "Decreto-Lei 97/2026 of 20 May, Diario da Republica",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "€2,300",
+      "statement": "Monthly rent ceiling for the 6% VAT housing-works regime, set at 2.5 times the 2026 national minimum wage of €920",
+      "source": "Decreto-Lei 97/2026 of 20 May; minimum wage set by Decreto-Lei on the retribuicao minima mensal garantida for 2026",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "€660,982",
+      "statement": "Sale-value ceiling for the 6% VAT housing-works regime",
+      "source": "Decreto-Lei 97/2026 of 20 May, Diario da Republica",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "€600,000",
+      "statement": "AIMI allowance per individual owner: the additional municipal tax applies only to taxable value above this threshold",
+      "source": "Codigo do IMI, artigo 135.-C",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "0.7%",
+      "statement": "AIMI rate for an individual owner on taxable value between €600,000 and €1,000,000",
+      "source": "Codigo do IMI, artigo 135.-F",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "0.4%",
+      "statement": "AIMI rate applied to a company holding residential property, charged from the first euro of taxable value with no allowance",
+      "source": "Codigo do IMI, artigo 135.-F",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "20%",
+      "statement": "IFICI flat rate on qualifying Portuguese employment and self-employment income, for ten consecutive years; excludes pensions and Portuguese rental income",
+      "source": "Lei 82/2023 artigo 236; Portaria 352/2024/1",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "17.6%",
+      "statement": "Year-on-year rise in Portuguese national residential prices recorded for 2025",
+      "source": "Instituto Nacional de Estatistica, 2025 housing statistics",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "13.3%",
+      "statement": "Fall in the number of purchases by non-residents in 2025 against 2024, to 8,471 transactions",
+      "source": "Instituto Nacional de Estatistica, 2025 housing statistics",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "42.4%",
+      "statement": "Algarve share of non-resident residential purchases in 2025",
+      "source": "Instituto Nacional de Estatistica, 2025 housing statistics",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "€41.2",
+      "statement": "Aggregate value in billions of euro of Portuguese residential transactions in 2025, across 169,812 transactions",
+      "source": "Instituto Nacional de Estatistica, 2025 housing statistics",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "50%",
+      "statement": "Share of a net capital gain on Portuguese property included in taxable income for an individual, applied to residents and non-residents alike since the 2023 change",
+      "source": "Codigo do IRS artigo 43.; Lei 12/2022; CJEU C-388/19",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "28%",
+      "statement": "Withholding rate on dividends distributed by a Portuguese company to an individual shareholder",
+      "source": "Codigo do IRS artigo 71.",
+      "asOf": "2026-08-27"
+    },
+    {
+      "figure": "€920",
+      "statement": "Portuguese national minimum monthly wage for 2026, the base for the 2.5x rent ceiling in the housing-works VAT regime",
+      "source": "Decreto-Lei setting the retribuicao minima mensal garantida for 2026",
+      "asOf": "2026-08-27"
+    }
+  ]
+}
