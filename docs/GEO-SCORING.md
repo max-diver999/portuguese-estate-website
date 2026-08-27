@@ -282,6 +282,7 @@ number behind it.
 | `CONTENT_ROOT` | Unchanged: this site also publishes from `src/content`. |
 | `UNIT_TYPE_RULES` | Unchanged, and **inert**. Measured zero hits across all 141 files at HEAD and zero across the pre-cleanup state. This corpus's generator did not make that class of error; its number-plus-noun constructions ("70% gross", "0.8% stamp duty", "85% occupancy") are all legitimate. Kept as a regression tripwire and documented as inert in the source, so that a clean unit-type score is not misread as a check that passed. |
 | `.content-os/boilerplate.txt` | Rewritten. Exactly one line qualified. |
+| — | One page (`compare/portugal-vs-turkey-property-investment.mdx`) writes `EUR500,000` rather than `€500,000`, 28 times. The regex deliberately does not match a three-letter prefix, so those figures are invisible to the detector. Fixed editorially in a wave, not by widening the regex: matching `EUR` would also match `EURIBOR` and any other token beginning those letters. |
 | `.content-os/facts.json`, `external-claims.json` | Created. See below. |
 
 ## The labelling mistake that looked like a broken scorer

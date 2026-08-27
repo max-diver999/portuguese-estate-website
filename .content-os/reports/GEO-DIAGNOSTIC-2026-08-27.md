@@ -142,9 +142,17 @@ Not scoring artefacts — these are wrong on the page.
 2. **The noun-swap template in the open.** "The following conservative scenario
    illustrates how national tax reform and *‹PLACE›* yields interact over a medium
    hold" — 21 pages, place name substituted.
-3. **59 South African rand amounts** (`R500,000`, `R400,000`, `R250,000` …) still
-   in the corpus: fork residue from the Cape Town template that earlier passes
-   missed.
+3. **`compare/portugal-vs-turkey-property-investment.mdx` writes `EUR500,000`
+   instead of `€500,000`, 28 times.** Every other page uses the sign. This is not
+   cosmetic: the figure detector matches `€`, `£` and `$` and does not match a
+   `EUR` prefix, so all 28 money figures on that page are invisible to saturation
+   detection and to provenance. The page is scored as though it quoted no money
+   at all.
+
+   *Correction.* An earlier pass of this report claimed 59 leftover South African
+   rand amounts. That was wrong — a false positive from a `R[0-9]` search matching
+   the R in `EUR500,000`. Checked with a negative lookbehind, the corpus contains
+   **no rand at all**. The finding above is what was actually there.
 
 ## Registries
 
