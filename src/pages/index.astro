@@ -324,6 +324,9 @@ const hero = responsiveImage(heroImage, 'homepage');
     position: relative;
     border: 1px solid var(--color-ink);
     overflow: hidden;
+    /* Softened corners on the hero only. Kept small: the direction is built on
+       square modules, and a large radius would read as a different system. */
+    border-radius: 10px;
     aspect-ratio: 4 / 3;
   }
   .home-hero__frame img {
@@ -334,6 +337,9 @@ const hero = responsiveImage(heroImage, 'homepage');
     height: 100%;
     object-fit: cover;
     object-position: 50% 45%;
+    /* Safari can paint an absolutely-positioned child past a clipped parent's
+       radius, so the image carries the same corner itself. */
+    border-radius: inherit;
   }
   @media (min-width: 900px) {
     /* On desktop the column height is set by the copy beside it. */
