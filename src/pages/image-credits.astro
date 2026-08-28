@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { HOMEPAGE_HERO_IMAGE, HOMEPAGE_HERO_ALT } from '../data/featured';
+
+/**
+ * Attribution page. Photographs used under CC BY / CC BY-SA carry an
+ * attribution requirement; the licences allow it to be satisfied "in any manner
+ * reasonable to the medium", which is what this page is for. It keeps captions
+ * off the pages themselves.
+ */
+const collections = ['guides', 'areas', 'projects', 'compare', 'segments', 'developers', 'news'];
+const entries = (await Promise.all(collections.map((c) => getCollection(c)))).flat();
+
+const credited = entries
+  .filter((e) => e.data.heroImageCredit)
+  .map((e) => ({
+    title: e.data.title,
+    href: `/${e.collection}/${e.id}/`,
+    author: e.data.heroImageCredit,
+    licence: e.data.heroImageLicence ?? '',
+    licenceUrl: e.data.heroImageLicenceUrl ?? '',
+    sourceUrl: e.data.heroImageSource ?? '',
+  }))
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+const homepage = {
+  title: 'Homepage',
+  href: '/',
+  what: HOMEPAGE_HERO_ALT,
+  author: 'Mam2710',
+  licence: 'CC BY-SA 3.0',
+  licenceUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+  sourceUrl: 'https://commons.wikimedia.org/wiki/File:Baixa_Pombalina.jpg',
+};
+---
+<BaseLayout
+  title="Image credits — Portuguese Estate"
+  description="Photographers and licences for every photograph used on this site."
+  noindex={true}
+>
+  <section class="credits module-grid">
+    <div class="site-container py-12 md:py-16">
+      <span class="eyebrow">Attribution</span>
+      <h1>Image credits</h1>
+      <p class="credits__deck">
+        Photographs on this site come from Wikimedia Commons under Creative Commons licences.
+        Each licence requires attribution; it is collected here so the pages themselves stay clear.
+      </p>
+
+      <table class="credits__table">
+        <thead>
+          <tr><th>Page</th><th>Photograph</th><th>Photographer</th><th>Licence</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href={homepage.href}>{homepage.title}</a></td>
+            <td>
+              <a href={homepage.sourceUrl} rel="noopener nofollow" target="_blank">{homepage.what}</a>
+            </td>
+            <td>{homepage.author}</td>
+            <td><a href={homepage.licenceUrl} rel="license noopener nofollow" target="_blank">{homepage.licence}</a></td>
+          </tr>
+          {credited.map((c) => (
+            <tr>
+              <td><a href={c.href}>{c.title}</a></td>
+              <td>
+                {c.sourceUrl
+                  ? <a href={c.sourceUrl} rel="noopener nofollow" target="_blank">Source</a>
+                  : '—'}
+              </td>
+              <td>{c.author}</td>
+              <td>
+                {c.licence && c.licenceUrl
+                  ? <a href={c.licenceUrl} rel="license noopener nofollow" target="_blank">{c.licence}</a>
+                  : c.licence || '—'}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <p class="credits__note">
+        Spotted an attribution that is wrong or missing? Write to us and we will correct it.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .credits__deck {
+    margin: 1.1rem 0 0;
+    max-width: 62ch;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--color-muted);
+  }
+  .credits__table {
+    width: 100%;
+    margin-top: 2.5rem;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .credits__table th {
+    border-bottom: 2px solid var(--color-ink);
+    padding: 0.6rem 0.9rem 0.6rem 0;
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    white-space: nowrap;
+  }
+  .credits__table td {
+    border-bottom: 1px solid var(--color-border-soft);
+    padding: 0.6rem 0.9rem 0.6rem 0;
+    vertical-align: top;
+  }
+  .credits__note { margin-top: 2rem; font-size: 0.85rem; color: var(--color-muted); }
+  @media (max-width: 767px) {
+    .credits__table, .credits__table tbody, .credits__table tr, .credits__table td { display: block; width: 100%; }
+    .credits__table thead { display: none; }
+    .credits__table tr { padding: 0.8rem 0; border-bottom: 1px solid var(--color-border); }
+    .credits__table td { border: 0; padding: 0.1rem 0; }
+  }
+</style>

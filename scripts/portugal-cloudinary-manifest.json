@@ -4,17 +4,13 @@
   "uploaded": {
     "homepage": {
       "public_id": "more-group/portugal/site/homepage/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_%2823901472335%29.jpg/1280px-A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_%2823901472335%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_%2823901472335%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:A_Cheesy_Panorama_from_Miradouro_Sophia_de_Mello_Breyner_Andresen_(23901472335).jpg",
-      "source_sha256": "1df3941649c1f0b225bec9724021358354061da8ffe7198238fbfa8a77a58fd0",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787700954/more-group/portugal/site/homepage/hero.jpg",
-      "version": 1787700954,
+      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787922628/more-group/portugal/site/homepage/hero.jpg",
+      "width": 1280,
+      "height": 853,
       "format": "jpg",
-      "width": 1920,
-      "height": 1269,
-      "bytes": 970522,
-      "uploaded_at": "2026-08-25T23:35:54Z"
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Baixa_Pombalina.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Baixa_Pombalina.jpg",
+      "source_sha256": "54d2490082b8dd93b4a95a9340176995adc9c006ce122ecfc8bb68a72ff85e83"
     },
     "aimi-wealth-tax-portugal-property": {
       "public_id": "more-group/portugal/guides/aimi-wealth-tax-portugal-property/hero",
@@ -2174,5 +2170,5 @@
       "transformation_credits": 5.9
     }
   ],
-  "updated_at": "2026-08-26T02:57:51Z"
+  "updated_at": "2026-08-28T13:10:29Z"
 }

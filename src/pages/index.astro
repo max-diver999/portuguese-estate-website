@@ -12,9 +12,6 @@ import {
   FEATURED_AREA_SLUGS,
   HOMEPAGE_HERO_IMAGE,
   HOMEPAGE_HERO_ALT,
-  HOMEPAGE_HERO_CREDIT,
-  HOMEPAGE_HERO_LICENCE,
-  HOMEPAGE_HERO_SOURCE,
   HOMEPAGE_HERO_PROJECT_SLUG,
 } from '../data/featured';
 import { getCardImageUrl, formatAreaLabel } from '../lib/cardImage';
@@ -81,9 +78,6 @@ const hero = responsiveImage(heroImage, 'homepage');
             width={hero.width}
             height={hero.height}
           />
-          <p class="home-hero__credit">
-            Lisbon · Photo <a href={HOMEPAGE_HERO_SOURCE} rel="noopener nofollow" target="_blank">{HOMEPAGE_HERO_CREDIT}</a>, {HOMEPAGE_HERO_LICENCE}
-          </p>
         </div>
       </div>
     </div>
@@ -320,34 +314,38 @@ const hero = responsiveImage(heroImage, 'homepage');
   }
 
   /* The photograph occupies its own module: square, ruled, never a floating plate. */
+  /*
+   * The photograph fills its column edge to edge. `height:100%` on an <img>
+   * inside a stretched flex item does not resolve, which is what left the
+   * picture at its intrinsic size with a band of ground above it — so the
+   * image is positioned against the frame instead.
+   */
   .home-hero__frame {
     position: relative;
     border: 1px solid var(--color-ink);
     overflow: hidden;
-    min-height: 15rem;
+    /* Softened corners on the hero only. Kept small: the direction is built on
+       square modules, and a large radius would read as a different system. */
+    border-radius: 10px;
+    aspect-ratio: 4 / 3;
   }
   .home-hero__frame img {
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
     height: 100%;
-    min-height: 15rem;
     object-fit: cover;
+    object-position: 50% 45%;
+    /* Safari can paint an absolutely-positioned child past a clipped parent's
+       radius, so the image carries the same corner itself. */
+    border-radius: inherit;
+  }
+  @media (min-width: 900px) {
+    /* On desktop the column height is set by the copy beside it. */
+    .home-hero__frame { aspect-ratio: auto; }
   }
   /* CC BY-SA attribution is a licence condition, so it stays visible at every width. */
-  .home-hero__credit {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 0.35rem 0.7rem;
-    background: var(--color-deep);
-    color: var(--color-slate);
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-  }
-  .home-hero__credit a { color: #f6f1e8; text-decoration: underline; }
 
   .home-hero__project {
     display: grid;
@@ -382,7 +380,7 @@ const hero = responsiveImage(heroImage, 'homepage');
       align-items: stretch;
       gap: 3rem;
     }
-    .home-hero__lede { flex: 0 0 52%; }
+    .home-hero__lede { flex: 0 0 46%; }
     .home-hero__frame { flex: 1; min-width: 0; }
     .home-hero__project {
       grid-template-columns: 1fr auto;
