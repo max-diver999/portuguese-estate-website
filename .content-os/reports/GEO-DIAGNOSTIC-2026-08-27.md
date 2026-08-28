@@ -132,13 +132,22 @@ national mechanics, which is what the UK page also does.
 
 Not scoring artefacts — these are wrong on the page.
 
-1. **One worked example, identical euro amounts, stamped onto 22 towns.**
-   "At the 5.0% mid-point of the local gross range the unit lets for about €1,462
-   a month, €17,550 a year", followed by "Deducting IMI of €983, condominium
-   charges of €1,200, management at 10% (€1,755) and a maintenance reserve of
-   €1,053 leaves €12,559 net, or 3.2% cash-on-cash". Same numbers on 22 different
-   area pages, so the arithmetic is right for at most one of them. Introduced by
-   `ece70b6`, "add worked cash-to-close blocks to 19 area guides".
+1. **A worked-example skeleton on 18–22 area pages.** "At the N% mid-point of the
+   local gross range the unit lets for about €X a month … deducting IMI of €Y,
+   condominium charges … leaves €Z net, or N% cash-on-cash. That gap between the
+   headline and the realised figure is the number to underwrite on." The sentences
+   are identical; the numbers are substituted per town. Introduced by `ece70b6`,
+   "add worked cash-to-close blocks to 19 area guides". This is a template family,
+   which is why these pages carry template-family penalties of 216–348 — it is not
+   an arithmetic error.
+
+   *Correction.* An earlier pass of this report said the euro amounts were
+   identical across 22 towns and therefore right for at most one of them. That was
+   wrong. The sentence-frequency script that produced it stripped digits from its
+   comparison key, so €1,462 and €1,131 counted as the same sentence. Checked
+   directly, each town carries its own figures: Albufeira €1,462 a month, Faro
+   €1,131, and every one of the values is distinct.
+
 2. **The noun-swap template in the open.** "The following conservative scenario
    illustrates how national tax reform and *‹PLACE›* yields interact over a medium
    hold" — 21 pages, place name substituted.

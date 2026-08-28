@@ -3,7 +3,7 @@
 Diagnosis: `.content-os/reports/GEO-DIAGNOSTIC-2026-08-27.md`.
 Method and rejected signals: `docs/GEO-SCORING.md`.
 
-**Awaiting approval. Nothing in this plan has been written.**
+**Status: P0 fixed and R0 executed on 27 August (approved). R1–R10 awaiting the go-ahead.**
 
 ## What the waves are actually fixing
 
@@ -53,6 +53,84 @@ cluster wave lands. Nothing from R0 ships on its own. The second risk is that
 seven canonical guides written in one sitting become the next template family, and
 that a guide absorbing six pages' material simply concatenates them — which
 converts a duplicated-text penalty into a duplicated-volume one on a single file.
+
+---
+
+## R0 — executed 27 August. What it did, and what it did not
+
+### The honesty pass was far larger than the two items reported
+
+The plan listed two fabricated first-hand claims. A systematic sweep found **an
+entire family** of them that the August "fabricated data" pass had missed:
+
+| claim family | pages | disposition |
+|---|---|---|
+| "Portuguese Estate ranks *‹PLACE›* as/within *‹TIER›* … using INE data, not promotional developer brochures" | 23 | deleted — no such ranking exists, and the sentence also stuffed the page's own slug |
+| "…the Portuguese Estate desk, which stress-tests deals … before clients sign CPCV deposits" | 23 | deleted — no such desk service |
+| "When municipal AL rules change, we update guidance against Câmara sources" | 22 | deleted — unverifiable process claim, identical across pages |
+| "Portuguese Estate Field Note(s)" sections, each resting on client files, transactions or tracking | ~20 | headings renamed to their actual subject, each differently; every first-hand claim inside rewritten |
+| a fabricated survey: "Q2 2026 sample (n=37): 54% prioritised Lisbon primary home…" | 1 | deleted |
+| "internal median winter occupancy … across 28 reviewed files" | 1 | deleted |
+| "Portuguese Estate tracking suggests roughly 30% of Lisbon resale transactions…" | 1 | deleted |
+| "in our files", "our clients", "we routinely see", "in our modelling", "across our transactions" | 9 | rewritten to the mechanism, keeping the substance |
+
+Two pages also published **a double taxation convention that does not exist**
+("the 2026 UK–Portugal convention"). The instrument in force is the 1968 one,
+correctly stated on the site's own treaty guide, so the corpus contradicted
+itself. Both corrected.
+
+Kept deliberately: offers of service ("send your brief, we reply within one
+business day") and editorial positions ("Portuguese Estate treats X as…"). The
+line drawn is claims about **data we hold or work we have done** versus **what we
+offer to do**.
+
+### The spine pass moved less than hoped
+
+The 2025 INE paragraph was removed from the pages that restated it verbatim, and
+57 pages that cited the series without one were given a route to the canonical
+guide. The pointer is deliberately six words long, so it cannot itself contain a
+nine-word sequence and become the next template family.
+
+Measured, before and after:
+
+| | before | after |
+|---|---|---|
+| corpus mean | 19.2 | 19.1 |
+| pages scoring zero | 45 | 46 |
+| template-family penalty mass | 7,023 | 6,816 |
+| duplicated-volume | 4,225 | 3,981 |
+| duplicated-text | 3,791 | 3,654 |
+| cannibal pairs | 201 | 200 |
+
+**That is the honest result: the spine was worth about 5% of the duplication
+mass.** A shared paragraph of 60–90 words is small against pages of 3,000–5,000
+words whose seventeen H2 headings are themselves one skeleton with the town name
+substituted. The template families are the mass, and they are R1–R5 work. R0's
+value is that the cluster waves now have canonical pages to link to, and that the
+corpus no longer publishes claims about work nobody did.
+
+### Two self-inflicted errors, recorded because they cost real time
+
+1. A regex written as `Portugal recorded 169,812[^.]*?\.` stopped at the decimal
+   point inside "€41.2 billion", truncating sentences on 58 pages and leaving
+   fragments like "2 billion and national residential prices rose 17.6%".
+2. The repair for that then deleted whole paragraphs beginning with a digit —
+   which inside YAML frontmatter, where there are no blank lines, took out FAQ
+   entries, `relatedSlugs` and `heroImage` on three compare pages.
+
+Both were caught by gates and diffing against HEAD, and both were repaired: 6
+files of truncation, 3 of frontmatter, 2 pages that had fallen under the
+word-count minimum. The lesson for R1–R5 is that this corpus's figures contain
+decimal points and its frontmatter contains prose, so sentence-level edits must be
+made by reading, not by regex.
+
+### Also corrected in the diagnostic report
+
+Two of my own earlier claims were wrong and are struck: there is **no leftover
+South African rand** in the corpus (a `R[0-9]` search was matching the R in
+`EUR500,000`), and the worked example is **not** identical across 22 towns (the
+sentence-frequency script stripped digits from its comparison key; each town
+carries its own figures). The real defects behind both are recorded in their place.
 
 ---
 
@@ -206,9 +284,10 @@ being written down.
 
    There is no such tracking and no such file review. Both must be deleted, not
    softened.
-3. **One worked example with identical euro amounts stamped onto 22 towns**
-   ("€1,462 a month, €17,550 a year … leaves €12,559 net, or 3.2% cash-on-cash").
-   The arithmetic is right for at most one of them.
+3. **A worked-example skeleton on 18–22 area pages**, with per-town numbers
+   substituted into identical sentences. The numbers are each town's own — an
+   earlier draft of this plan wrongly called them identical — so this is a template
+   family to break, not an arithmetic error to correct.
 4. **The noun-swap sentence on 21 pages**: "The following conservative scenario
    illustrates how national tax reform and *‹PLACE›* yields interact over a medium
    hold."
