@@ -31,7 +31,7 @@ const contentBreakdown = [
   { type: 'Areas', count: 26, words: 113630, color: '#8b5cf6' },
   { type: 'Developers', count: 3, words: 10631, color: '#4e9e7e' },
   { type: 'Segments', count: 13, words: 49668, color: '#60a5fa' },
-  { type: 'Projects', count: 7, words: 8758, color: '#9ca3af' },
+  { type: 'Projects', count: 7, words: 8758, color: '#5f6672' },
 ];
 
 const gsc28d = { clicks: 19, impressions: 3652, ctr: 0.52, position: 15.8 };
@@ -65,7 +65,7 @@ const chartPayload = JSON.stringify({
 
     .header { background: #1a2e2a; color: white; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .header-brand { display: flex; align-items: center; gap: 12px; }
-    .header-logo { width: 36px; height: 36px; background: #4e9e7e; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: white; }
+    .header-logo { width: 36px; height: 36px; background: #2d7a5e; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: white; }
     .header h1 { font-size: 22px; font-weight: 700; }
     .header-sub { font-size: 13px; color: #9dbfb3; margin-top: 2px; }
     .header-meta { text-align: right; }
@@ -77,7 +77,7 @@ const chartPayload = JSON.stringify({
 
     .container { max-width: 1280px; margin: 0 auto; padding: 32px 24px; }
 
-    .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #7a7a6e; margin-bottom: 16px; margin-top: 40px; }
+    .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #5c5c52; margin-bottom: 16px; margin-top: 40px; }
     .section-title:first-child { margin-top: 0; }
 
     .stats-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
@@ -85,8 +85,8 @@ const chartPayload = JSON.stringify({
     .stat-card .num { font-size: 26px; font-weight: 800; color: #1a2e2a; line-height: 1.05; letter-spacing: -0.02em; }
     .stat-card .num.teal { color: #2d7a5e; }
     .stat-card .num.amber { color: #b45309; }
-    .stat-card .label { font-size: 11px; color: #7a7a6e; margin-top: 5px; line-height: 1.25; }
-    .stat-card .sublabel { font-size: 9px; color: #aaa; margin-top: 3px; line-height: 1.35; }
+    .stat-card .label { font-size: 11px; color: #5c5c52; margin-top: 5px; line-height: 1.25; }
+    .stat-card .sublabel { font-size: 9px; color: #6b6b61; margin-top: 3px; line-height: 1.35; }
     @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
     .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -95,7 +95,7 @@ const chartPayload = JSON.stringify({
     .info-card h3 { font-size: 14px; font-weight: 700; color: #1a2e2a; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #f0ece4; }
     .info-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid #f7f4ef; gap: 16px; }
     .info-row:last-child { border-bottom: none; }
-    .info-row .key { font-size: 13px; color: #7a7a6e; flex-shrink: 0; }
+    .info-row .key { font-size: 13px; color: #5c5c52; flex-shrink: 0; }
     .info-row .val { font-size: 13px; font-weight: 600; color: #2c2c2c; text-align: right; }
     .info-row .val a { color: #2d7a5e; text-decoration: none; }
     .info-row .val a:hover { text-decoration: underline; }
@@ -103,12 +103,12 @@ const chartPayload = JSON.stringify({
     .content-card { background: white; border-radius: 12px; border: 1px solid #e8e4dc; overflow: hidden; }
     .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .content-table { width: 100%; border-collapse: collapse; }
-    .content-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #7a7a6e; font-weight: 700; padding: 12px 20px; text-align: left; background: #faf8f4; border-bottom: 1px solid #e8e4dc; }
+    .content-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #5c5c52; font-weight: 700; padding: 12px 20px; text-align: left; background: #faf8f4; border-bottom: 1px solid #e8e4dc; }
     .content-table td { padding: 12px 20px; font-size: 13px; border-bottom: 1px solid #f4f1eb; vertical-align: top; }
     .content-table tr:last-child td { border-bottom: none; }
     .content-table tr:hover td { background: #faf8f4; }
     .content-table .count { font-weight: 800; color: #2d7a5e; font-size: 18px; }
-    .content-table .words { color: #7a7a6e; font-size: 12px; }
+    .content-table .words { color: #5c5c52; font-size: 12px; }
     .tag { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
     .tag.green { background: #dcfce7; color: #166534; }
     .tag.blue { background: #dbeafe; color: #1e40af; }
@@ -119,34 +119,34 @@ const chartPayload = JSON.stringify({
     .changelog-item { background: white; border-radius: 0; border: 1px solid #e8e4dc; border-bottom: none; padding: 16px 20px; display: flex; gap: 16px; align-items: flex-start; }
     .changelog-item:first-child { border-radius: 12px 12px 0 0; }
     .changelog-item:last-child { border-radius: 0 0 12px 12px; border-bottom: 1px solid #e8e4dc; }
-    .changelog-date { font-size: 11px; color: #9ca3af; min-width: 80px; padding-top: 2px; }
+    .changelog-date { font-size: 11px; color: #5f6672; min-width: 80px; padding-top: 2px; }
     .changelog-content { flex: 1; }
     .changelog-title { font-size: 13px; font-weight: 600; color: #1a2e2a; }
-    .changelog-desc { font-size: 12px; color: #7a7a6e; margin-top: 3px; }
+    .changelog-desc { font-size: 12px; color: #5c5c52; margin-top: 3px; }
     .changelog-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
 
     .next-steps { display: flex; flex-direction: column; gap: 10px; }
     .next-item { background: white; border-radius: 10px; border: 1px solid #e8e4dc; padding: 14px 18px; display: flex; align-items: flex-start; gap: 12px; }
     .next-item .priority { font-size: 11px; font-weight: 700; min-width: 50px; padding-top: 1px; }
-    .priority.high { color: #dc2626; }
-    .priority.medium { color: #d97706; }
-    .priority.low { color: #059669; }
+    .priority.high { color: #b91c1c; }
+    .priority.medium { color: #a15c07; }
+    .priority.low { color: #046c4e; }
     .next-item .text { font-size: 13px; color: #2c2c2c; }
-    .next-item .subtext { font-size: 12px; color: #9ca3af; margin-top: 2px; }
+    .next-item .subtext { font-size: 12px; color: #5f6672; margin-top: 2px; }
 
     .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
     .link-card { background: white; border-radius: 10px; border: 1px solid #e8e4dc; padding: 16px; text-decoration: none; color: #2c2c2c; transition: border-color 0.2s; display: block; }
     .link-card:hover { border-color: #2d7a5e; }
-    .link-card .link-label { font-size: 11px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.06em; }
+    .link-card .link-label { font-size: 11px; color: #5f6672; text-transform: uppercase; letter-spacing: 0.06em; }
     .link-card .link-url { font-size: 13px; font-weight: 600; color: #2d7a5e; margin-top: 4px; word-break: break-all; }
 
-    .footer { text-align: center; padding: 32px 24px; color: #9ca3af; font-size: 12px; }
-    .footer strong { color: #7a7a6e; }
+    .footer { text-align: center; padding: 32px 24px; color: #5f6672; font-size: 12px; }
+    .footer strong { color: #5c5c52; }
 
     /* ── SEO PULSE DASHBOARD ── */
     .pulse-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
     .pulse-header h2 { font-size: 16px; font-weight: 800; color: #1a2e2a; }
-    .pulse-updated { font-size: 11px; color: #9ca3af; background: #f4f1eb; border-radius: 20px; padding: 4px 12px; display: flex; align-items: center; gap: 6px; }
+    .pulse-updated { font-size: 11px; color: #5f6672; background: #f4f1eb; border-radius: 20px; padding: 4px 12px; display: flex; align-items: center; gap: 6px; }
     .pulse-updated-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; animation: pulse 2s infinite; }
 
     .pulse-kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
@@ -158,8 +158,8 @@ const chartPayload = JSON.stringify({
     .pulse-kpi.kpi-amber::before { background: linear-gradient(90deg, #fbbf24, #d97706); }
     .pulse-kpi.kpi-orange::before { background: linear-gradient(90deg, #fb923c, #c2410c); }
     .pulse-kpi .kpi-val { font-size: 36px; font-weight: 900; color: #1a2e2a; line-height: 1; margin-top: 4px; }
-    .pulse-kpi .kpi-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #7a7a6e; }
-    .pulse-kpi .kpi-sub { font-size: 11px; color: #aaa; margin-top: 4px; }
+    .pulse-kpi .kpi-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #5c5c52; }
+    .pulse-kpi .kpi-sub { font-size: 11px; color: #6b6b61; margin-top: 4px; }
     .pulse-kpi .kpi-trend { position: absolute; top: 18px; right: 18px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
     .trend-up { background: #dcfce7; color: #166534; }
     .trend-new { background: #dbeafe; color: #1e40af; }
@@ -168,17 +168,17 @@ const chartPayload = JSON.stringify({
     @media (max-width: 700px) { .pulse-grid { grid-template-columns: 1fr; } }
 
     .pulse-card { background: white; border-radius: 12px; border: 1px solid #e8e4dc; padding: 18px 20px; }
-    .pulse-card-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #7a7a6e; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .pulse-card-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #5c5c52; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
     .pulse-card-title span { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
     .span-green { background: #4ade80; }
     .span-blue { background: #60a5fa; }
 
     .pulse-query-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid #f4f1eb; }
     .pulse-query-row:last-child { border-bottom: none; }
-    .pulse-query-rank { font-size: 11px; font-weight: 700; color: #aaa; min-width: 20px; }
+    .pulse-query-rank { font-size: 11px; font-weight: 700; color: #6b6b61; min-width: 20px; }
     .pulse-query-text { flex: 1; min-width: 0; font-size: 12px; color: #2c2c2c; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
     .pulse-query-pos { font-size: 11px; font-weight: 700; color: #2d7a5e; background: #f0faf5; border-radius: 6px; padding: 2px 7px; }
-    .pulse-query-imp { font-size: 11px; color: #aaa; min-width: 50px; text-align: right; }
+    .pulse-query-imp { font-size: 11px; color: #6b6b61; min-width: 50px; text-align: right; }
 
     .pulse-page-row { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; border-bottom: 1px solid #f4f1eb; }
     .pulse-page-row:last-child { border-bottom: none; }
@@ -195,14 +195,14 @@ const chartPayload = JSON.stringify({
     .chart-bar { width: 100%; border-radius: 3px 3px 0 0; min-height: 2px; transition: height 0.3s; }
     .chart-bar.bar-impr { background: #bfdbfe; }
     .chart-bar.bar-click { background: #4ade80; }
-    .chart-label { font-size: 9px; color: #aaa; }
+    .chart-label { font-size: 9px; color: #6b6b61; }
 
     .pulse-insight { background: #f0faf5; border: 1px solid #c6e8da; border-radius: 10px; padding: 12px 16px; margin-top: 16px; display: flex; gap: 12px; align-items: flex-start; }
     .pulse-insight-icon { font-size: 18px; flex-shrink: 0; }
     .pulse-insight-text { font-size: 12px; color: #1a4f3a; line-height: 1.5; }
     .pulse-insight-text strong { font-weight: 700; }
 
-    .pulse-footer-note { font-size: 11px; color: #aaa; margin-top: 16px; text-align: center; }
+    .pulse-footer-note { font-size: 11px; color: #6b6b61; margin-top: 16px; text-align: center; }
     .pulse-footer-note a { color: #2d7a5e; text-decoration: none; }
     .pulse-table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .pulse-table-scroll table { min-width: 720px; }
@@ -249,8 +249,8 @@ const chartPayload = JSON.stringify({
       --paper-2: #faf8f4;
       --card: #ffffff;
       --border: #e8e4dc;
-      --muted: #7a7a6e;
-      --up: #16a34a;
+      --muted: #5c5c52;
+      --up: #166534;
       --down: #dc2626;
       --shadow: 0 4px 24px rgba(26, 46, 42, 0.06);
       --radius: 14px;
@@ -299,7 +299,7 @@ const chartPayload = JSON.stringify({
     .kpi-delta.up { background: #dcfce7; color: var(--up); }
     .kpi-delta.down { background: #fee2e2; color: var(--down); }
     .kpi-delta.neutral { background: #f3f4f6; color: var(--muted); }
-    .kpi-sub { font-size: 10px; color: #aaa; margin-top: 6px; line-height: 1.35; }
+    .kpi-sub { font-size: 10px; color: #6b6b61; margin-top: 6px; line-height: 1.35; }
 
     /* ── Sections ── */
     .section { margin-bottom: 48px; }
@@ -601,7 +601,7 @@ const chartPayload = JSON.stringify({
                   </td>
                   <td>{m.position.toFixed(1)}</td>
                   <td><span class={`pill ${mom.startsWith('+') ? 'pill-green' : 'pill-amber'}`}>{mom}</span></td>
-                  <td style="color:#7a7a6e;font-size:12px;">{m.note}</td>
+                  <td style="color:#5c5c52;font-size:12px;">{m.note}</td>
                 </tr>
               );
             })}
@@ -673,7 +673,7 @@ const chartPayload = JSON.stringify({
     <div class="pulse-header">
       <div>
         <h2>Search Performance</h2>
-        <p style="font-size:12px;color:#9ca3af;margin-top:2px;">portuguese-estate.com · 27 Jun – 1 Aug 2026 · Web search · Updated 4 Aug via GSC API</p>
+        <p style="font-size:12px;color:#5f6672;margin-top:2px;">portuguese-estate.com · 27 Jun – 1 Aug 2026 · Web search · Updated 4 Aug via GSC API</p>
       </div>
       <div class="pulse-updated">
         <span class="pulse-updated-dot"></span>
@@ -683,19 +683,19 @@ const chartPayload = JSON.stringify({
 
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
       <div style="background:#f0faf5;border:1px solid #c6e8da;border-radius:10px;padding:14px 16px;">
-        <div style="font-size:11px;font-weight:700;color:#7a7a6e;text-transform:uppercase;">17–20 Jun 2026</div>
+        <div style="font-size:11px;font-weight:700;color:#5c5c52;text-transform:uppercase;">17–20 Jun 2026</div>
         <div style="font-size:22px;font-weight:900;color:#1a2e2a;margin-top:4px;">0 clicks</div>
-        <div style="font-size:12px;color:#7a7a6e;">70 impressions · index warming · peak day 20 Jun (38 imp, pos 8.7)</div>
+        <div style="font-size:12px;color:#5c5c52;">70 impressions · index warming · peak day 20 Jun (38 imp, pos 8.7)</div>
       </div>
       <div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:14px 16px;">
-        <div style="font-size:11px;font-weight:700;color:#7a7a6e;text-transform:uppercase;">21–24 Jun 2026</div>
+        <div style="font-size:11px;font-weight:700;color:#5c5c52;text-transform:uppercase;">21–24 Jun 2026</div>
         <div style="font-size:22px;font-weight:900;color:#1a2e2a;margin-top:4px;">1 click</div>
-        <div style="font-size:12px;color:#7a7a6e;">94 impressions · CTR 1.06% · first click 22 Jun (compare page)</div>
+        <div style="font-size:12px;color:#5c5c52;">94 impressions · CTR 1.06% · first click 22 Jun (compare page)</div>
       </div>
       <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:14px 16px;">
-        <div style="font-size:11px;font-weight:700;color:#7a7a6e;text-transform:uppercase;">Launch baseline</div>
+        <div style="font-size:11px;font-weight:700;color:#5c5c52;text-transform:uppercase;">Launch baseline</div>
         <div style="font-size:22px;font-weight:900;color:#1a2e2a;margin-top:4px;">164 imp</div>
-        <div style="font-size:12px;color:#7a7a6e;">Site live 16 Jun · 108 sitemap URLs · indexing pause on new MDX until GSC &gt;100 imp on pillar</div>
+        <div style="font-size:12px;color:#5c5c52;">Site live 16 Jun · 108 sitemap URLs · indexing pause on new MDX until GSC &gt;100 imp on pillar</div>
       </div>
     </div>
 
@@ -738,7 +738,7 @@ const chartPayload = JSON.stringify({
             <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:82%"></div><div class="chart-label">22</div></div>
             <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:100%"></div><div class="chart-label">23</div></div>
           </div>
-          <p style="font-size:10px;color:#aaa;margin-top:8px;">Jun 17–23 · bars = daily GSC impressions · first click 22 Jun · site deployed 16 Jun</p>
+          <p style="font-size:10px;color:#6b6b61;margin-top:8px;">Jun 17–23 · bars = daily GSC impressions · first click 22 Jun · site deployed 16 Jun</p>
         </div>
         <div class="pulse-insight" style="margin-top:16px;">
           <div class="pulse-insight-icon">📈</div>
@@ -802,7 +802,7 @@ const chartPayload = JSON.stringify({
     <div class="pulse-header">
       <div>
         <h2>Bing / Yahoo Search Performance</h2>
-        <p style="font-size:12px;color:#9ca3af;margin-top:2px;">portuguese-estate.com · awaiting first Bing Webmaster pull</p>
+        <p style="font-size:12px;color:#5f6672;margin-top:2px;">portuguese-estate.com · awaiting first Bing Webmaster pull</p>
       </div>
     </div>
     <p class="pulse-footer-note">
@@ -854,35 +854,35 @@ const chartPayload = JSON.stringify({
       </thead>
       <tbody>
         <tr>
-          <td><strong>Investment &amp; process guides</strong><br><span style="font-size:11px;color:#9ca3af">Golden Visa, IMT, CPCV/escritura, foreigners buying, remote purchase, yields, AIMI, rental licensing — tier-A pillar cluster</span></td>
+          <td><strong>Investment &amp; process guides</strong><br><span style="font-size:11px;color:#5f6672">Golden Visa, IMT, CPCV/escritura, foreigners buying, remote purchase, yields, AIMI, rental licensing — tier-A pillar cluster</span></td>
           <td><span class="count">51</span></td>
           <td><span class="words">~3,895 words</span></td>
           <td><span class="tag blue">Head keywords</span></td>
           <td><span class="tag green">Live</span></td>
         </tr>
         <tr>
-          <td><strong>Area guides — Lisbon, Porto, Algarve &amp; coast</strong><br><span style="font-size:11px;color:#9ca3af">Chiado, Alfama, Cascais, Sintra, Faro, Lagos, Óbidos, Gaia, Parque das Nações and 12 more micro-markets</span></td>
+          <td><strong>Area guides — Lisbon, Porto, Algarve &amp; coast</strong><br><span style="font-size:11px;color:#5f6672">Chiado, Alfama, Cascais, Sintra, Faro, Lagos, Óbidos, Gaia, Parque das Nações and 12 more micro-markets</span></td>
           <td><span class="count">21</span></td>
           <td><span class="words">~4,780 words</span></td>
           <td><span class="tag blue">Location intent</span></td>
           <td><span class="tag green">Live</span></td>
         </tr>
         <tr>
-          <td><strong>Market comparisons</strong><br><span style="font-size:11px;color:#9ca3af">Portugal vs Spain, France, Italy, Greece, Dubai, UK — plus Lisbon vs Porto and Algarve vs Lisbon</span></td>
+          <td><strong>Market comparisons</strong><br><span style="font-size:11px;color:#5f6672">Portugal vs Spain, France, Italy, Greece, Dubai, UK — plus Lisbon vs Porto and Algarve vs Lisbon</span></td>
           <td><span class="count">9</span></td>
           <td><span class="words">~4,502 words</span></td>
           <td><span class="tag amber">Comparison intent</span></td>
           <td><span class="tag green">Live</span></td>
         </tr>
         <tr>
-          <td><strong>Buyer segments</strong><br><span style="font-size:11px;color:#9ca3af">US, UK, EU, retirees, digital nomads, HNWI — persona-specific entry pages</span></td>
+          <td><strong>Buyer segments</strong><br><span style="font-size:11px;color:#5f6672">US, UK, EU, retirees, digital nomads, HNWI — persona-specific entry pages</span></td>
           <td><span class="count">7</span></td>
           <td><span class="words">~3,963 words</span></td>
           <td><span class="tag blue">Persona intent</span></td>
           <td><span class="tag green">Live</span></td>
         </tr>
         <tr>
-          <td><strong>Developer profiles</strong><br><span style="font-size:11px;color:#9ca3af">Farinvest Properties, Domus Development, Vanguard Properties — agency/developer hub pages</span></td>
+          <td><strong>Developer profiles</strong><br><span style="font-size:11px;color:#5f6672">Farinvest Properties, Domus Development, Vanguard Properties — agency/developer hub pages</span></td>
           <td><span class="count">3</span></td>
           <td><span class="words">~3,465 words</span></td>
           <td><span class="tag amber">Entity SEO</span></td>
@@ -1203,7 +1203,7 @@ const chartPayload = JSON.stringify({
     if (!el) return;
     var data = JSON.parse(el.textContent);
     Chart.defaults.font = { family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", size: 11 };
-    Chart.defaults.color = '#7a7a6e';
+    Chart.defaults.color = '#5c5c52';
 
     var monthly = data.monthlyGsc;
     var ga4 = data.monthlyGa4;

@@ -51,9 +51,31 @@ const waHref = buildWaHref(waMessage);
 </a>
 
 <style>
+  /*
+   * Hidden over the first screen. A fixed CTA in the corner sat on top of the
+   * hero's figures rail — on the homepage it covered the IMT rate, the one number
+   * the site is built around. The header already carries a WhatsApp link, so
+   * nothing is lost above the fold.
+   */
+  .pe-wa-float {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.5rem);
+  }
+  .pe-wa-float.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pe-wa-float { transition: none; }
+  }
+
   .pe-wa-float {
     position: fixed;
-    left: 1.25rem;
+    /* Right, not left: body copy is left-aligned, so a left-hand float sat on
+       top of headings and figures. */
+    right: 1.25rem;
     bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
     z-index: 9998;
     display: flex;
@@ -71,7 +93,7 @@ const waHref = buildWaHref(waMessage);
     border-radius: 0;
     text-decoration: none;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease, visibility .2s;
   }
   .pe-wa-float--lead {
     background: var(--color-deep);
@@ -93,3 +115,15 @@ const waHref = buildWaHref(waMessage);
     .pe-wa-float__label { display: none; }
   }
 </style>
+
+<script>
+  // Reveal the floating CTA once the visitor has scrolled past the hero.
+  (function () {
+    const el = document.getElementById('pe-wa-float');
+    if (!el) return;
+    const show = () => el.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.7);
+    show();
+    window.addEventListener('scroll', show, { passive: true });
+    window.addEventListener('resize', show);
+  })();
+</script>

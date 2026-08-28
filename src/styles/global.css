@@ -10,7 +10,7 @@
  * diagonals and no rounded corners anywhere. Figures live in module-wide cells
  * that line up with the grid above them.
  *
- * Fonts are self-hosted, as DM Sans already was — the visitor's browser never
+ * Fonts are self-hosted, as the previous face was — the visitor's browser never
  * calls a font CDN.
  */
 

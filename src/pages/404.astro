@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const [guides, areas, projects] = await Promise.all([
+  getCollection('guides'),
+  getCollection('areas'),
+  getCollection('projects'),
+]);
+
+const counts = {
+  guides: guides.filter((g) => !g.data.noindex).length,
+  areas: areas.filter((a) => !a.data.noindex).length,
+  projects: projects.filter((p) => !p.data.noindex).length,
+};
+
+/** The routes a lost visitor is most likely to have been looking for. */
+const routes = [
+  { href: '/guides/', label: 'Buyer guides', note: `${counts.guides} research articles on tax, purchase and yield` },
+  { href: '/areas/', label: 'Investment areas', note: `${counts.areas} area reports with prices per m² and gross yields` },
+  { href: '/projects/', label: 'Project reviews', note: `${counts.projects} developments with due diligence notes` },
+  { href: '/compare/', label: 'Market comparisons', note: 'Portugal against the markets buyers weigh it against' },
+  { href: '/guides/imt-tax-non-resident-portugal-2026/', label: 'IMT 7.5% guide', note: 'What a non-resident actually pays from September 2026' },
+  { href: '/get-shortlist/', label: 'Free shortlist', note: 'Budget-matched options within one business day' },
+];
+---
+<BaseLayout
+  title="Page not found — Portuguese Estate"
+  description="That page does not exist. Jump to the buyer guides, area reports, project reviews or the IMT guide."
+  noindex={true}
+>
+  <section class="notfound module-grid">
+    <div class="site-container py-14 md:py-20">
+      <span class="eyebrow">Error 404</span>
+      <h1>That page is not here</h1>
+      <p class="notfound__deck">
+        The address may have changed, or the link that brought you here is out of date.
+        Everything below is a live section of the site.
+      </p>
+
+      <ul class="notfound__routes">
+        {routes.map((r) => (
+          <li>
+            <a href={r.href}>
+              <span class="notfound__label">{r.label}</span>
+              <span class="notfound__note">{r.note}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .notfound__deck {
+    margin: 1.1rem 0 0;
+    max-width: 46rem;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--color-muted);
+  }
+  /* One module per route, matching the grid the rest of the site is built on. */
+  .notfound__routes {
+    display: grid;
+    gap: 0;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid var(--color-ink);
+  }
+  .notfound__routes li { border-bottom: 1px solid var(--color-border); }
+  .notfound__routes a {
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+  }
+  .notfound__routes a:hover { background: var(--color-surface); }
+  .notfound__label {
+    display: block;
+    font-weight: 700;
+    font-stretch: 108%;
+    color: var(--color-ink);
+  }
+  .notfound__note {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.88rem;
+    color: var(--color-muted);
+  }
+  @media (min-width: 768px) {
+    .notfound__routes { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; }
+  }
+</style>
