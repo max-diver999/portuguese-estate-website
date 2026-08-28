@@ -136,13 +136,11 @@ const schemas = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : 
           width={hero.width}
           height={hero.height}
         />
-        {heroImageCredit && (
-          <figcaption class="mt-2 text-xs text-[var(--color-muted)]">
-            Photo: {heroImageSource ? (
-              <a href={heroImageSource} rel="noopener nofollow" target="_blank">{heroImageCredit}</a>
-            ) : heroImageCredit}{heroImageLicence ? ` · ${heroImageLicence}` : ''}
-          </figcaption>
-        )}
+        {/*
+          No caption over the photograph. The CC BY / CC BY-SA attribution these
+          images carry is collected on /image-credits/, linked from the footer,
+          which the licences allow ("in any manner reasonable to the medium").
+        */}
       </figure>
     )}
 
