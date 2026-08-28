@@ -19,15 +19,16 @@ const waHref = buildWaHref(
 );
 const waText = waLabel('WhatsApp', 'Talk to us');
 ---
-<header class="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[rgba(255,255,255,0.9)] backdrop-blur-md">
+<header class="site-header sticky top-0 z-50 border-b border-[var(--color-ink)]">
   <div class="site-container flex items-center justify-between gap-4 py-4">
-    <a href="/" class="flex items-center gap-2 no-underline">
+    <a href="/" class="flex items-center gap-2 no-underline min-w-0 shrink-0">
       <img src="/favicon.svg?v=3" alt="" width="32" height="32" class="rounded-lg" />
-      <span class="text-lg font-semibold text-[var(--color-ink)]">{SITE.name}</span>
+      <span class="site-wordmark text-[var(--color-ink)]">{SITE.name}</span>
     </a>
 
-    <nav class="hidden lg:flex items-center gap-5 text-sm font-medium" aria-label="Primary">
-      {nav.map((item) => (
+    <!-- Desktop keeps the highest-intent sections; the rest stay in the panel and footer. -->
+    <nav class="hidden lg:flex items-center gap-4 text-sm font-medium min-w-0" aria-label="Primary">
+      {nav.slice(0, 5).map((item) => (
         <a href={item.href} class="text-[var(--color-muted)] hover:text-[var(--color-ink)] no-underline">{item.label}</a>
       ))}
     </nav>
@@ -52,7 +53,7 @@ const waText = waLabel('WhatsApp', 'Talk to us');
       -->
       <details class="lg:hidden relative" id="mobile-nav">
         <summary
-          class="list-none cursor-pointer select-none rounded-lg border border-[var(--color-border)] p-2 flex items-center justify-center"
+          class="list-none cursor-pointer select-none border border-[var(--color-ink)] p-2 flex items-center justify-center"
           aria-label="Open navigation menu"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -93,19 +94,51 @@ const waText = waLabel('WhatsApp', 'Talk to us');
   #mobile-nav > summary::-webkit-details-marker {
     display: none;
   }
+
+  /*
+   * No backdrop-filter on the header. A filtered element becomes the containing
+   * block for `position: fixed` descendants, which pinned this panel inside the
+   * 73px header and collapsed it to a 32px column at the right edge.
+   */
+  .site-header { background: var(--color-page); }
+  .site-wordmark {
+    font-weight: 700;
+    font-stretch: 108%;
+    font-size: 1.05rem;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
   #mobile-nav { position: static; }
-  #mobile-nav nav {
+
+  /*
+   * A `position: fixed` child escapes the hiding <details> applies to its
+   * contents, so a closed menu stayed painted — visible, un-clickable and
+   * underneath the page. Keeping the panel out of the layout until the
+   * disclosure is open is what actually closes it.
+   */
+  #mobile-nav:not([open]) nav { display: none; }
+
+  #mobile-nav[open] nav {
     position: fixed;
-    inset: 73px 0 0;
+    left: 0;
+    right: 0;
+    top: var(--site-header-h, 73px);
+    bottom: 0;
     z-index: 60;
     width: auto;
     margin: 0;
     padding: 1.25rem clamp(1.25rem, 5vw, 2rem) 2rem;
     border: 0;
+    border-top: 1px solid var(--color-ink);
     border-radius: 0;
-    background: var(--color-surface);
+    background: var(--color-page);
+    box-shadow: none;
     overflow-y: auto;
     overscroll-behavior: contain;
+  }
+  #mobile-nav[open] nav a {
+    border-top: 1px solid var(--color-border-soft);
   }
   .mobile-drawer-cta {
     display: flex;
@@ -113,10 +146,15 @@ const waText = waLabel('WhatsApp', 'Talk to us');
     align-items: center;
     justify-content: center;
     margin-bottom: .75rem;
-    border-radius: 999px;
-    background: var(--color-teal);
-    color: #fff !important;
-    font-weight: 600;
+    border-radius: 0;
+    border-top: 0 !important;
+    background: var(--color-deep);
+    color: #f6f1e8 !important;
+    font-weight: 700;
+    font-stretch: 108%;
+    font-size: .88rem;
+    letter-spacing: .07em;
+    text-transform: uppercase;
     text-decoration: none;
   }
   @media (max-width: 767px) { .mobile-header-cta { display: none; } }
@@ -126,7 +164,16 @@ const waText = waLabel('WhatsApp', 'Talk to us');
   // Close the disclosure on outside click and on Escape.
   const details = document.getElementById('mobile-nav');
   if (details instanceof HTMLDetailsElement) {
+    const header = details.closest('header');
+    // Publish the real header height so the panel starts exactly below it.
+    const syncHeight = () => {
+      if (header) {
+        document.documentElement.style.setProperty('--site-header-h', header.offsetHeight + 'px');
+      }
+    };
+    syncHeight();
     details.addEventListener('toggle', () => {
+      if (details.open) syncHeight();
       document.body.style.overflow = details.open ? 'hidden' : '';
     });
     details.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
@@ -140,6 +187,7 @@ const waText = waLabel('WhatsApp', 'Talk to us');
     });
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 1024) details.open = false;
+      else if (details.open) syncHeight();
     });
   }
 </script>

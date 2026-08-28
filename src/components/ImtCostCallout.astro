@@ -59,9 +59,9 @@ const rows = [
 <style>
   .imt-callout {
     border: 1px solid var(--color-border, #e2e0d8);
-    border-left: 4px solid #b8860b;
+    border-left: 4px solid var(--color-accent);
     background: #fdfcf7;
-    border-radius: 0 12px 12px 0;
+    border-radius: 0;
     padding: 16px 18px;
     margin: 24px 0;
     font-size: 15px;
@@ -73,7 +73,7 @@ const rows = [
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #9a7209;
+    color: var(--color-accent-strong);
     margin-bottom: 6px;
   }
   .imt-callout__title {
@@ -131,16 +131,16 @@ const rows = [
   .imt-callout__cta {
     display: inline-block;
     margin-top: 12px;
-    background: #b8860b;
+    background: var(--color-accent);
     color: #fff;
     font-size: 14px;
     font-weight: 600;
     padding: 10px 18px;
-    border-radius: 8px;
+    border-radius: 0;
     text-decoration: none;
   }
   .imt-callout__cta:hover {
-    background: #9a7209;
+    background: var(--color-accent-strong);
     color: #fff;
   }
 </style>
