@@ -37,10 +37,15 @@ export const FEATURED_AREA_SLUGS = [
  * Homepage hero: the Pombaline roofscape of the Baixa, shot from above — the
  * frame the design direction is named for.
  *
- * CC BY-SA 3.0 (Mam2710). The attribution requirement is met on
- * /image-credits/, linked from the footer, so no caption sits on the homepage.
+ * Bundled into the build rather than hotlinked. The upstream Wikimedia thumb
+ * URLs 400 for most widths and are rate-limited, so an external hero could go
+ * blank without any change on our side.
+ *
+ * CC BY-SA 3.0 (Mam2710). Attribution is on /image-credits/, linked from the
+ * footer, so no caption sits on the homepage.
  */
-export const HOMEPAGE_HERO_IMAGE =
-  'https://res.cloudinary.com/dlrrtf6bq/image/upload/f_auto,q_auto,w_1280/more-group/portugal/site/homepage/hero';
+export const HOMEPAGE_HERO_IMAGE = '/images/lisbon-baixa-rooftops.jpg';
+export const HOMEPAGE_HERO_WIDTH = 1200;
+export const HOMEPAGE_HERO_HEIGHT = 800;
 export const HOMEPAGE_HERO_ALT =
   "The Pombaline roofscape of Lisbon's Baixa seen from above";

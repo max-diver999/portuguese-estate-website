@@ -12,6 +12,8 @@ import {
   FEATURED_AREA_SLUGS,
   HOMEPAGE_HERO_IMAGE,
   HOMEPAGE_HERO_ALT,
+  HOMEPAGE_HERO_WIDTH,
+  HOMEPAGE_HERO_HEIGHT,
   HOMEPAGE_HERO_PROJECT_SLUG,
 } from '../data/featured';
 import { getCardImageUrl, formatAreaLabel } from '../lib/cardImage';
@@ -37,8 +39,16 @@ const homepageProjects = pickHomepageProjects(publishedProjects, FEATURED_PROJEC
 const heroProject = projectBySlug.get(HOMEPAGE_HERO_PROJECT_SLUG) ?? homepageProjects[0];
 const featuredAreas = FEATURED_AREA_SLUGS.map((slug) => areaBySlug.get(slug)).filter(Boolean);
 
-const heroImage = getCardImageUrl(HOMEPAGE_HERO_IMAGE, 'hero');
-const hero = responsiveImage(heroImage, 'homepage');
+/*
+ * Served straight from the build. responsiveImage() only rewrites Cloudinary
+ * public IDs and otherwise falls back to a hardcoded 1280x720, which did not
+ * match this photograph and left bands of ground inside the frame.
+ */
+const hero = {
+  src: HOMEPAGE_HERO_IMAGE,
+  width: HOMEPAGE_HERO_WIDTH,
+  height: HOMEPAGE_HERO_HEIGHT,
+};
 ---
 <BaseLayout
   title="Portugal Property Investment 2026 — Guides & Shortlist"
@@ -70,8 +80,6 @@ const hero = responsiveImage(heroImage, 'homepage');
         <div class="home-hero__frame">
           <img
             src={hero.src}
-            srcset={hero.srcset}
-            sizes={hero.sizes}
             alt={HOMEPAGE_HERO_ALT}
             loading="eager"
             fetchpriority="high"
@@ -327,7 +335,8 @@ const hero = responsiveImage(heroImage, 'homepage');
     /* Softened corners on the hero only. Kept small: the direction is built on
        square modules, and a large radius would read as a different system. */
     border-radius: 10px;
-    aspect-ratio: 4 / 3;
+    /* The photograph's own ratio, so the frame can never show ground around it. */
+    aspect-ratio: 3 / 2;
   }
   .home-hero__frame img {
     position: absolute;
@@ -341,10 +350,7 @@ const hero = responsiveImage(heroImage, 'homepage');
        radius, so the image carries the same corner itself. */
     border-radius: inherit;
   }
-  @media (min-width: 900px) {
-    /* On desktop the column height is set by the copy beside it. */
-    .home-hero__frame { aspect-ratio: auto; }
-  }
+
   /* CC BY-SA attribution is a licence condition, so it stays visible at every width. */
 
   .home-hero__project {
