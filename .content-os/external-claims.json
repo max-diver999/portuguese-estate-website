@@ -8,7 +8,9 @@
       "source": "UK/Portugal Double Taxation Convention 1968, HMRC Double Taxation Relief manual",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["guides/uk-portugal-double-taxation-treaty.mdx"]
+      "files": [
+        "guides/uk-portugal-double-taxation-treaty.mdx"
+      ]
     },
     {
       "id": "uk-government-service-pensions",
@@ -17,7 +19,9 @@
       "source": "UK/Portugal Double Taxation Convention 1968, government service article",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["guides/uk-portugal-double-taxation-treaty.mdx"]
+      "files": [
+        "guides/uk-portugal-double-taxation-treaty.mdx"
+      ]
     },
     {
       "id": "uk-fig-regime-2025",
@@ -26,7 +30,9 @@
       "source": "UK Finance Act provisions on the foreign income and gains regime, HMRC guidance",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["guides/uk-portugal-double-taxation-treaty.mdx"]
+      "files": [
+        "guides/uk-portugal-double-taxation-treaty.mdx"
+      ]
     },
     {
       "id": "us-citizenship-based-taxation",
@@ -35,7 +41,9 @@
       "source": "US Internal Revenue Code; IRS Publication 54",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["segments/american-buyers-portugal-property.mdx"]
+      "files": [
+        "segments/american-buyers-portugal-property.mdx"
+      ]
     },
     {
       "id": "us-fbar-threshold",
@@ -44,7 +52,9 @@
       "source": "FinCEN Form 114 instructions; 31 CFR 1010.350",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["segments/american-buyers-portugal-property.mdx"]
+      "files": [
+        "segments/american-buyers-portugal-property.mdx"
+      ]
     },
     {
       "id": "us-form-8938",
@@ -53,7 +63,9 @@
       "source": "IRS Form 8938 instructions; IRC section 6038D",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["segments/american-buyers-portugal-property.mdx"]
+      "files": [
+        "segments/american-buyers-portugal-property.mdx"
+      ]
     },
     {
       "id": "us-1031-domestic-only",
@@ -62,7 +74,9 @@
       "source": "IRC section 1031(h)",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["segments/american-buyers-portugal-property.mdx"]
+      "files": [
+        "segments/american-buyers-portugal-property.mdx"
+      ]
     },
     {
       "id": "de-progressionsvorbehalt",
@@ -71,7 +85,9 @@
       "source": "German Einkommensteuergesetz section 32b; Germany-Portugal double taxation treaty",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["segments/german-buyers-portugal-property.mdx"]
+      "files": [
+        "segments/german-buyers-portugal-property.mdx"
+      ]
     },
     {
       "id": "ca-departure-tax",
@@ -80,7 +96,9 @@
       "source": "Canadian Income Tax Act section 128.1; CRA guidance on emigrants",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["segments/canadian-buyers-portugal-property.mdx"]
+      "files": [
+        "segments/canadian-buyers-portugal-property.mdx"
+      ]
     },
     {
       "id": "es-itp-regional",
@@ -89,7 +107,9 @@
       "source": "Spanish Ley del ITP y AJD; autonomous community tax schedules",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["compare/portugal-vs-spain-property-investment.mdx"]
+      "files": [
+        "compare/portugal-vs-spain-property-investment.mdx"
+      ]
     },
     {
       "id": "it-registration-tax",
@@ -98,7 +118,9 @@
       "source": "Italian Testo Unico dell'imposta di registro (DPR 131/1986); Agenzia delle Entrate guidance",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["compare/portugal-vs-italy-property-investment.mdx"]
+      "files": [
+        "compare/portugal-vs-italy-property-investment.mdx"
+      ]
     },
     {
       "id": "gr-enfia",
@@ -107,7 +129,108 @@
       "source": "Greek Law 4223/2013 on ENFIA; AADE guidance",
       "asOf": "2026-08-27",
       "reviewBy": "2027-02-27",
-      "files": ["compare/portugal-vs-greece-property-investment.mdx"]
+      "files": [
+        "compare/portugal-vs-greece-property-investment.mdx"
+      ]
+    },
+    {
+      "id": "us-treaty-saving-clause",
+      "jurisdiction": "US",
+      "claim": "US income tax treaties contain a saving clause under which the United States reserves the right to tax its own citizens and residents as if the treaty had not entered into force, subject to stated exceptions, so a US citizen becoming Portuguese tax resident continues to file in the United States",
+      "source": "US Model Income Tax Convention, saving clause article; IRS Publication 901",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/american-buyers-portugal-property.mdx"
+      ]
+    },
+    {
+      "id": "us-credit-income-taxes-only",
+      "jurisdiction": "US",
+      "claim": "The US foreign tax credit is available for foreign income taxes, so Portuguese tax on rental income and gains can be creditable while IMT, IMI, AIMI and stamp duty, being transfer and property taxes, are not",
+      "source": "IRC sections 901 and 903; IRS Publication 514",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/american-buyers-portugal-property.mdx"
+      ]
+    },
+    {
+      "id": "gb-schengen-90-180",
+      "jurisdiction": "GB",
+      "claim": "Since the end of free movement, British citizens are third-country nationals in the Schengen area and limited to 90 days of presence in any rolling 180-day period, counted across all Schengen states with entry and exit days counting in full",
+      "source": "Regulation (EU) 2016/399, Schengen Borders Code, article 6",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/uk-buyers-portugal-property-brexit.mdx"
+      ]
+    },
+    {
+      "id": "eu-entry-exit-system",
+      "jurisdiction": "EU",
+      "claim": "The EU Entry/Exit System registers third-country nationals' entries and exits electronically in place of manual passport stamping, so the 90/180 calculation is held as a record rather than reconstructed",
+      "source": "Regulation (EU) 2017/2226 establishing the Entry/Exit System",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/uk-buyers-portugal-property-brexit.mdx"
+      ]
+    },
+    {
+      "id": "fr-ifi-worldwide",
+      "jurisdiction": "FR",
+      "claim": "French tax residents are assessed to the impot sur la fortune immobiliere on worldwide real estate, so a Portuguese property enters the French wealth-tax base while a non-resident is assessed on French property only",
+      "source": "Code general des impots, articles 964 and following",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/french-buyers-portugal-property.mdx"
+      ]
+    },
+    {
+      "id": "de-no-inheritance-treaty-pt",
+      "jurisdiction": "DE",
+      "claim": "Germany taxes inheritance and gift on a worldwide basis where the deceased or the heir is German-resident, has concluded inheritance tax treaties with only a small number of states not including Portugal, and relieves double taxation by crediting foreign inheritance tax actually paid",
+      "source": "Erbschaftsteuer- und Schenkungsteuergesetz, sections 2 and 21; German Federal Ministry of Finance list of inheritance tax treaties",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/german-buyers-portugal-property.mdx"
+      ]
+    },
+    {
+      "id": "ca-t1135-personal-use",
+      "jurisdiction": "CA",
+      "claim": "Canadian residents must file Form T1135 where the total cost amount of specified foreign property exceeds CAD 100,000, and property held primarily for personal use and enjoyment is excluded from that definition, so use rather than value decides whether a foreign home is reportable",
+      "source": "Canadian Income Tax Act section 233.3; CRA Form T1135 instructions",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/canadian-buyers-portugal-property.mdx"
+      ]
+    },
+    {
+      "id": "ca-deemed-disposition-emigration",
+      "jurisdiction": "CA",
+      "claim": "On ceasing Canadian residence, most property is deemed disposed of at fair market value, and foreign real property falls within that deemed disposition, so a Portuguese house can crystallise a Canadian gain on departure",
+      "source": "Canadian Income Tax Act section 128.1(4); CRA guidance for emigrants",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/canadian-buyers-portugal-property.mdx"
+      ]
+    },
+    {
+      "id": "ae-no-personal-income-tax",
+      "jurisdiction": "AE",
+      "claim": "The United Arab Emirates levies no personal income tax on individuals, so a UAE-resident individual has no home income tax liability against which Portuguese tax on rent or gains could be credited",
+      "source": "UAE federal tax legislation; UAE Ministry of Finance guidance on the scope of corporate tax and the absence of personal income tax",
+      "asOf": "2026-08-28",
+      "reviewBy": "2027-02-27",
+      "files": [
+        "segments/uae-buyers-portugal-property.mdx"
+      ]
     }
   ]
 }
