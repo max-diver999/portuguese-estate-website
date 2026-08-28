@@ -24,13 +24,13 @@ const {
 } = Astro.props;
 
 const variants = {
-  teal: 'bg-gradient-to-r from-[var(--color-brand)] to-[#3d7a62] text-white',
-  gold: 'bg-gradient-to-r from-[#b8860b] to-[#9a7209] text-white',
+  teal: 'bg-[var(--color-deep)] text-[#f6f1e8]',
+  gold: 'bg-[var(--color-accent-strong)] text-[#f6f1e8]',
   sand: 'bg-[var(--color-surface)] text-[var(--color-ink)] border border-[var(--color-border)]',
 };
 const btnVariants = {
-  teal: 'bg-white text-[var(--color-brand)] hover:bg-[var(--color-surface)]',
-  gold: 'bg-white text-[#9a7209] hover:bg-[var(--color-surface)]',
+  teal: 'bg-[#f6f1e8] text-[var(--color-deep)] hover:bg-white',
+  gold: 'bg-[#f6f1e8] text-[var(--color-accent-strong)] hover:bg-white',
   sand: 'btn-primary',
 };
 
@@ -54,7 +54,7 @@ const waHref = buildWaHref(whatsappMessage);
         href={waHref}
         {...waLinkAttrs}
         class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg font-medium text-sm whitespace-nowrap text-white no-underline transition-colors"
-        style={hasWhatsApp ? 'background:#25D366;' : 'background:var(--color-brand);'}
+        style={hasWhatsApp ? 'background:#0b6b3a;' : 'background:var(--color-deep);'}
         data-cta={`${ctaId}_whatsapp`}
         data-wa-placement="guide_commercial"
         aria-label={hasWhatsApp ? 'Message Portuguese Estate on WhatsApp' : 'Talk to Portuguese Estate'}

@@ -47,69 +47,72 @@ const hero = responsiveImage(heroImage, 'homepage');
   title="Portugal Property Investment 2026 — Guides & Shortlist"
   description="Independent Portugal property research for foreign buyers: IMT 7.5%, step-by-step purchase, Algarve yields, Golden Visa funds. Free shortlist within 1 business day."
 >
-  <section class="border-b border-[var(--color-border-soft)] bg-[var(--color-surface)]">
-    <div class="site-container py-14 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-      <div>
-        <span class="badge-pill mb-5">Independent research · Est. 2026</span>
-        <h1 class="text-3xl md:text-[2.35rem] mb-5 leading-tight">
-          Portugal property buyers: what changed in 2026
-        </h1>
-        <p class="text-base md:text-lg text-[var(--color-muted)] mb-8 max-w-xl">
-          Non-resident IMT jumped to 7.5% from September. AL licences locked in Lisbon and Porto core. Golden Visa real estate path closed October 2023. We cut through reform noise: project reviews, tax calculators, and buyer checklists for US, UK, and EU nationals.
-        </p>
-        <div class="flex flex-wrap gap-3 mb-8">
-          <a href="/guides/imt-tax-non-resident-portugal-2026/" class="btn-primary px-6 py-3">IMT 7.5% guide</a>
-          <a href="/guides/how-to-buy-property-portugal-step-by-step/" class="btn-secondary px-6 py-3">Step-by-step</a>
-          <a href="/get-shortlist/" class="btn-secondary px-6 py-3">Free shortlist</a>
-        </div>
-        <TrustStrip />
-      </div>
-      <div class="hero-visual min-h-[280px] md:min-h-[380px] relative">
-        <img
-          src={hero.src}
-          srcset={hero.srcset}
-          sizes={hero.sizes}
-          alt={HOMEPAGE_HERO_ALT}
-          loading="eager"
-          fetchpriority="high"
-          width={hero.width}
-          height={hero.height}
-        />
-        <div class="hero-visual__overlay" />
-        <p class="hero-visual__caption">
-          Lisbon · Photo: <a href={HOMEPAGE_HERO_SOURCE} rel="noopener nofollow" target="_blank">{HOMEPAGE_HERO_CREDIT}</a> · {HOMEPAGE_HERO_LICENCE}
-        </p>
-        {heroProject && (
-          <div class="hero-project-card">
-            <div class="hero-project-card__copy">
-              <p class="hero-project-card__eyebrow">Featured · {formatAreaLabel(heroProject.data.area)}</p>
-              <p class="hero-project-card__title">{heroProject.data.title.replace(/ Review:.*$/, '').replace(/ 2026.*$/, '')}</p>
-              <p class="hero-project-card__meta">{projectHeroLine(heroProject)}</p>
-            </div>
-            <a href={`/projects/${heroProject.id}/`} class="hero-project-card__cta">View project →</a>
+  <!--
+    The hero is one block of the Baixa grid: copy in the left modules, the
+    photograph in the right ones, and the figures in module-wide cells that line
+    up with the columns above them.
+  -->
+  <section class="home-hero module-grid">
+    <div class="site-container py-12 md:py-16">
+      <div class="home-hero__row">
+        <div class="home-hero__lede">
+          <span class="badge-pill">Independent research · Est. 2026</span>
+          <h1>Portugal property buyers: what changed in 2026</h1>
+          <p class="home-hero__deck">
+            Non-resident IMT jumped to 7.5% from September. AL licences locked in Lisbon and Porto
+            core. Golden Visa real estate path closed October 2023. We cut through reform noise:
+            project reviews, tax calculators, and buyer checklists for US, UK, and EU nationals.
+          </p>
+          <div class="home-hero__acts">
+            <a href="/guides/imt-tax-non-resident-portugal-2026/" class="btn-primary px-6 py-3">IMT 7.5% guide</a>
+            <a href="/guides/how-to-buy-property-portugal-step-by-step/" class="btn-secondary px-6 py-3">Step-by-step</a>
           </div>
-        )}
+          <TrustStrip />
+        </div>
+
+        <div class="home-hero__frame">
+          <img
+            src={hero.src}
+            srcset={hero.srcset}
+            sizes={hero.sizes}
+            alt={HOMEPAGE_HERO_ALT}
+            loading="eager"
+            fetchpriority="high"
+            width={hero.width}
+            height={hero.height}
+          />
+          <p class="home-hero__credit">
+            Lisbon · Photo <a href={HOMEPAGE_HERO_SOURCE} rel="noopener nofollow" target="_blank">{HOMEPAGE_HERO_CREDIT}</a>, {HOMEPAGE_HERO_LICENCE}
+          </p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section class="border-b border-[var(--color-border-soft)] bg-[var(--color-brand)] text-white py-8">
-    <div class="site-container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div>
-        <p class="text-2xl md:text-3xl font-semibold">{publishedProjects.length}+</p>
-        <p class="text-sm opacity-85 mt-1">Projects reviewed</p>
+    {heroProject && (
+      <a href={`/projects/${heroProject.id}/`} class="home-hero__project">
+        <span class="home-hero__project-eyebrow">Featured project · {formatAreaLabel(heroProject.data.area)}</span>
+        <span class="home-hero__project-title">{heroProject.data.title.replace(/ Review:.*$/, '').replace(/ 2026.*$/, '')}</span>
+        <span class="home-hero__project-meta">{projectHeroLine(heroProject)}</span>
+        <span class="home-hero__project-cta">View project →</span>
+      </a>
+    )}
+
+    <div class="figure-cells">
+      <div class="figure-cells__cell">
+        <p class="figure-cells__value">{publishedProjects.length}+</p>
+        <p class="figure-cells__label">Projects reviewed</p>
       </div>
-      <div>
-        <p class="text-2xl md:text-3xl font-semibold">{publishedGuides.length}</p>
-        <p class="text-sm opacity-85 mt-1">Buyer guides</p>
+      <div class="figure-cells__cell">
+        <p class="figure-cells__value">{publishedGuides.length}</p>
+        <p class="figure-cells__label">Buyer guides</p>
       </div>
-      <div>
-        <p class="text-2xl md:text-3xl font-semibold">{publishedAreas.length}</p>
-        <p class="text-sm opacity-85 mt-1">Investment areas</p>
+      <div class="figure-cells__cell">
+        <p class="figure-cells__value">{publishedAreas.length}</p>
+        <p class="figure-cells__label">Investment areas</p>
       </div>
-      <div>
-        <p class="text-2xl md:text-3xl font-semibold">7.5%</p>
-        <p class="text-sm opacity-85 mt-1">IMT flat (non-resident, 2026)</p>
+      <div class="figure-cells__cell">
+        <p class="figure-cells__value">7.5%</p>
+        <p class="figure-cells__label">IMT flat · non-resident 2026</p>
       </div>
     </div>
   </section>
@@ -179,9 +182,9 @@ const hero = responsiveImage(heroImage, 'homepage');
     <div class="site-container max-w-4xl">
       <h2 class="text-2xl mb-8 text-center">Real buyers, real transactions</h2>
       <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-        <div class="bg-white p-6 rounded-lg border border-[var(--color-border)]">
+        <div class="surface-card p-6">
           <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-full bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center text-[var(--color-brand)] font-semibold">JM</div>
+            <div class="w-10 h-10 bg-[var(--color-accent-soft)] flex items-center justify-center text-[var(--color-accent-strong)] font-bold">JM</div>
             <div>
               <p class="font-medium text-sm">James M.</p>
               <p class="text-xs text-[var(--color-muted)]">UK · Completed June 2026</p>
@@ -189,9 +192,9 @@ const hero = responsiveImage(heroImage, 'homepage');
           </div>
           <p class="text-sm text-[var(--color-muted)] leading-relaxed">"Portuguese Estate walked us through IMT timing before the September change and matched us with a licensed lawyer before we signed CPCV on a Cascais resale."</p>
         </div>
-        <div class="bg-white p-6 rounded-lg border border-[var(--color-border)]">
+        <div class="surface-card p-6">
           <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-full bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center text-[var(--color-brand)] font-semibold">LC</div>
+            <div class="w-10 h-10 bg-[var(--color-accent-soft)] flex items-center justify-center text-[var(--color-accent-strong)] font-bold">LC</div>
             <div>
               <p class="font-medium text-sm">Laura C.</p>
               <p class="text-xs text-[var(--color-muted)]">US · Boston MA</p>
@@ -199,9 +202,9 @@ const hero = responsiveImage(heroImage, 'homepage');
           </div>
           <p class="text-sm text-[var(--color-muted)] leading-relaxed">"FBAR and FATCA guidance before CPCV was a lifesaver. Their CPA referrals know Portugal-US tax treaty inside out."</p>
         </div>
-        <div class="bg-white p-6 rounded-lg border border-[var(--color-border)]">
+        <div class="surface-card p-6">
           <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-full bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center text-[var(--color-brand)] font-semibold">AR</div>
+            <div class="w-10 h-10 bg-[var(--color-accent-soft)] flex items-center justify-center text-[var(--color-accent-strong)] font-bold">AR</div>
             <div>
               <p class="font-medium text-sm">André R.</p>
               <p class="text-xs text-[var(--color-muted)]">Brazil · Porto investor</p>
@@ -244,7 +247,7 @@ const hero = responsiveImage(heroImage, 'homepage');
       <h2 class="text-2xl mb-6 text-center">Coverage you won't find on listing portals</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="flex gap-4">
-          <div class="shrink-0 w-12 h-12 rounded-lg bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center">
+          <div class="shrink-0 w-12 h-12 bg-[var(--color-accent-soft)] text-[var(--color-accent-strong)] flex items-center justify-center">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--color-brand)]"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <div>
@@ -253,7 +256,7 @@ const hero = responsiveImage(heroImage, 'homepage');
           </div>
         </div>
         <div class="flex gap-4">
-          <div class="shrink-0 w-12 h-12 rounded-lg bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center">
+          <div class="shrink-0 w-12 h-12 bg-[var(--color-accent-soft)] text-[var(--color-accent-strong)] flex items-center justify-center">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--color-brand)]"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <div>
@@ -262,7 +265,7 @@ const hero = responsiveImage(heroImage, 'homepage');
           </div>
         </div>
         <div class="flex gap-4">
-          <div class="shrink-0 w-12 h-12 rounded-lg bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center">
+          <div class="shrink-0 w-12 h-12 bg-[var(--color-accent-soft)] text-[var(--color-accent-strong)] flex items-center justify-center">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--color-brand)]"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
           <div>
@@ -271,7 +274,7 @@ const hero = responsiveImage(heroImage, 'homepage');
           </div>
         </div>
         <div class="flex gap-4">
-          <div class="shrink-0 w-12 h-12 rounded-lg bg-[var(--color-brand)] bg-opacity-10 flex items-center justify-center">
+          <div class="shrink-0 w-12 h-12 bg-[var(--color-accent-soft)] text-[var(--color-accent-strong)] flex items-center justify-center">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--color-brand)]"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
           </div>
           <div>
@@ -293,3 +296,101 @@ const hero = responsiveImage(heroImage, 'homepage');
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .home-hero__row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .home-hero__lede { display: flex; flex-direction: column; align-items: flex-start; }
+  .home-hero__lede h1 { margin: 1.1rem 0 0; }
+  .home-hero__deck {
+    margin: 1.1rem 0 0;
+    max-width: 40rem;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--color-muted);
+  }
+  .home-hero__acts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.6rem 0 1.4rem;
+  }
+
+  /* The photograph occupies its own module: square, ruled, never a floating plate. */
+  .home-hero__frame {
+    position: relative;
+    border: 1px solid var(--color-ink);
+    overflow: hidden;
+    min-height: 15rem;
+  }
+  .home-hero__frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 15rem;
+    object-fit: cover;
+  }
+  /* CC BY-SA attribution is a licence condition, so it stays visible at every width. */
+  .home-hero__credit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0.35rem 0.7rem;
+    background: var(--color-deep);
+    color: var(--color-slate);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+  }
+  .home-hero__credit a { color: #f6f1e8; text-decoration: underline; }
+
+  .home-hero__project {
+    display: grid;
+    gap: 0.15rem 1.5rem;
+    padding: 1rem clamp(1.25rem, 4vw, 3.5rem);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    text-decoration: none;
+  }
+  .home-hero__project-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent-strong);
+  }
+  .home-hero__project-title { font-weight: 700; color: var(--color-ink); }
+  .home-hero__project-meta { font-size: 0.85rem; color: var(--color-muted); }
+  .home-hero__project-cta {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent-strong);
+    font-weight: 700;
+  }
+  .home-hero__project:hover { background: #fbf7f0; }
+
+  @media (min-width: 900px) {
+    .home-hero__row {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 3rem;
+    }
+    .home-hero__lede { flex: 0 0 52%; }
+    .home-hero__frame { flex: 1; min-width: 0; }
+    .home-hero__project {
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+    .home-hero__project-eyebrow { grid-column: 1; }
+    .home-hero__project-title { grid-column: 1; }
+    .home-hero__project-meta { grid-column: 1; }
+    .home-hero__project-cta { grid-column: 2; grid-row: 1 / span 3; }
+  }
+</style>

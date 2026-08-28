@@ -38,14 +38,18 @@ const {
   .trust-strip__item {
     background: white;
     border: 1px solid var(--color-border-soft);
-    border-radius: 12px;
-    padding: 14px 16px;
-    text-align: center;
+    border-radius: 0;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
   }
   .trust-strip__item strong {
     display: block;
-    font-size: 0.95rem;
-    color: var(--color-brand);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-ink);
     margin-bottom: 4px;
   }
   .trust-strip__item span {

@@ -59,18 +59,22 @@ const waHref = buildWaHref(waMessage);
     display: flex;
     align-items: center;
     gap: 0.45rem;
-    background: #25D366;
+    /*
+     * WhatsApp's dark brand green, not #25D366. The label is real visible text and
+     * white on #25D366 is 1.9:1; on this it is 7.7:1 and still unmistakably WhatsApp.
+     */
+    background: #075E54;
     color: #fff;
     font-size: 0.85rem;
     font-weight: 600;
     padding: 0.75rem 1rem;
-    border-radius: 999px;
+    border-radius: 0;
     text-decoration: none;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .pe-wa-float--lead {
-    background: var(--color-brand);
+    background: var(--color-deep);
     box-shadow: 0 4px 20px rgba(45, 106, 79, 0.45);
   }
   .pe-wa-float--lead:hover {
@@ -84,7 +88,7 @@ const waHref = buildWaHref(waMessage);
   @media (max-width: 768px) {
     .pe-wa-float {
       padding: 0.7rem;
-      border-radius: 50%;
+      border-radius: 0;
     }
     .pe-wa-float__label { display: none; }
   }
