@@ -22,7 +22,7 @@ const {
   title,
   description = SITE.description,
   canonical = Astro.url.href,
-  ogImage = `${SITE.url}/og-default.png`,
+  ogImage = `${SITE.url}/og-default.png?v=2`,
   type = 'website',
   noindex = false,
   schemas = [],
@@ -80,6 +80,7 @@ const allSchemas = [orgSchema, ...schemas];
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:alt" content={fullTitle} />
   <meta name="twitter:image" content={ogImage} />
   <meta property="og:site_name" content={SITE.name} />
