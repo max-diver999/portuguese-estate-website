@@ -1,21 +1,21 @@
 ---
 export const prerender = true;
 
-const reportDate = '23 August 2026';
-const reportVersion = 'v2.2';
+const reportDate = '1 September 2026';
+const reportVersion = 'v2.3';
 const launchDate = '16 June 2026';
-const dataThrough = '20 August 2026';
+const dataThrough = '31 August 2026';
 
 const monthlyGsc = [
   { month: 'Jun 2026', label: 'Jun', clicks: 1, impressions: 164, position: 23.6, note: 'Live 16 Jun · first click 22 Jun · compare page' },
   { month: 'Jul 2026', label: 'Jul', clicks: 18, impressions: 3488, position: 14.2, note: 'Full month · Lisbon + Algarve guides ramp' },
-  { month: 'Aug 2026', label: 'Aug', clicks: 6, impressions: 920, position: 14.8, note: 'Through 20 Aug · partial month · IMT + under-300k guides · MCP refresh pending' },
+  { month: 'Aug 2026', label: 'Aug', clicks: 12, impressions: 2649, position: 14.5, note: 'Full month · IMT + under-300k guides · Aug imp +188% vs partial prior window' },
 ];
 
 const monthlyGa4 = [
   { month: 'Jun', sessions: 73 },
   { month: 'Jul', sessions: 169 },
-  { month: 'Aug', sessions: 88 },
+  { month: 'Aug', sessions: 256 },
 ];
 
 const dailyRaw = [
@@ -26,7 +26,7 @@ const dailyRaw = [
 ];
 
 const contentBreakdown = [
-  { type: 'Guides', count: 63, words: 245488, color: '#2d7a5e' },
+  { type: 'Guides', count: 78, words: 245488, color: '#2d7a5e' },
   { type: 'Comparisons', count: 14, words: 60041, color: '#d97706' },
   { type: 'Areas', count: 26, words: 113630, color: '#8b5cf6' },
   { type: 'Developers', count: 3, words: 10631, color: '#4e9e7e' },
@@ -34,7 +34,7 @@ const contentBreakdown = [
   { type: 'Projects', count: 7, words: 8758, color: '#5f6672' },
 ];
 
-const gsc28d = { clicks: 19, impressions: 3652, ctr: 0.52, position: 15.8 };
+const gsc28d = { clicks: 12, impressions: 2649, ctr: 0.45, position: 14.5 };
 
 const totalClicks = monthlyGsc.reduce((s, m) => s + m.clicks, 0);
 const totalImp = monthlyGsc.reduce((s, m) => s + m.impressions, 0);
@@ -492,7 +492,7 @@ const chartPayload = JSON.stringify({
     <div class="stat-card">
       <div class="num">~488K</div>
       <div class="label">SEO words</div>
-      <div class="sublabel">126 MDX files · ~3 875 avg · live 4 Aug</div>
+      <div class="sublabel">141 MDX files · ~3 460 avg · live 1 Sep</div>
     </div>
     <div class="stat-card">
       <div class="num teal">25+</div>
@@ -510,9 +510,9 @@ const chartPayload = JSON.stringify({
       <div class="sublabel">{gsc28d.impressions.toLocaleString('en-US')} imp · CTR {gsc28d.ctr}% · avg pos {gsc28d.position}</div>
     </div>
     <div class="stat-card">
-      <div class="num teal">242</div>
+      <div class="num teal">498</div>
       <div class="label">GA4 sessions</div>
-      <div class="sublabel">Jun 73 · Jul 169 · lead API 200 OK</div>
+      <div class="sublabel">Jun 73 · Jul 169 · Aug 256 · lead API 200 OK</div>
     </div>
   </div>
 
@@ -673,11 +673,11 @@ const chartPayload = JSON.stringify({
     <div class="pulse-header">
       <div>
         <h2>Search Performance</h2>
-        <p style="font-size:12px;color:#5f6672;margin-top:2px;">portuguese-estate.com · 27 Jun – 1 Aug 2026 · Web search · Updated 4 Aug via GSC API</p>
+        <p style="font-size:12px;color:#5f6672;margin-top:2px;">portuguese-estate.com · {launchDate} → {dataThrough} · Web search · Updated {reportDate} via GSC API</p>
       </div>
       <div class="pulse-updated">
         <span class="pulse-updated-dot"></span>
-        Updated 4 Aug 2026
+        Updated {reportDate}
       </div>
     </div>
 
@@ -781,7 +781,7 @@ const chartPayload = JSON.stringify({
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
       <div class="pulse-insight" style="background:#f0faf5;border-color:#c6e8da;margin-top:0;">
         <div class="pulse-insight-icon">📊</div>
-        <div class="pulse-insight-text"><strong>GA4 (25 May – 24 Jun):</strong> 73 sessions · 81 pageviews · 1 organic search session · 70 direct (pre-launch QA + team). Top page: homepage 63 pv. Lead API smoke: 200 OK.</div>
+        <div class="pulse-insight-text"><strong>GA4 (Jun–Aug):</strong> 498 sessions · Jun 73 · Jul 169 · Aug 256. Organic share growing post-launch. Lead API smoke: 200 OK.</div>
       </div>
       <div class="pulse-insight" style="background:#eef2ff;border-color:#c7d2fe;margin-top:0;">
         <div class="pulse-insight-icon">🔍</div>
@@ -790,7 +790,7 @@ const chartPayload = JSON.stringify({
     </div>
 
     <p class="pulse-footer-note">
-      Google: <a href="https://search.google.com/search-console" target="_blank">Search Console</a> · <a href="https://analytics.google.com" target="_blank">GA4</a> · Bing: <a href="https://www.bing.com/webmasters" target="_blank">Webmaster Tools</a> · Updated 4 Aug 2026 via MCP APIs
+      Google: <a href="https://search.google.com/search-console" target="_blank">Search Console</a> · <a href="https://analytics.google.com" target="_blank">GA4</a> · Bing: <a href="https://www.bing.com/webmasters" target="_blank">Webmaster Tools</a> · Updated {reportDate} via MCP APIs
     </p>
 
   </div>
@@ -1019,6 +1019,15 @@ const chartPayload = JSON.stringify({
   <div class="section-title">Change history</div>
   <div class="changelog">
         <div class="changelog-item">
+      <div class="changelog-date">1 Sep 2026 (v2.3)</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Site-report v2.3 · August MCP refresh</div>
+        <div class="changelog-desc">GSC Aug full month: 12 clicks / 2,649 imp. GA4 Aug: 256 sessions (498 cumulative). 141 MDX. Data through 31 Aug 2026.</div>
+        <div class="changelog-tags"><span class="tag green">Report v2.3</span><span class="tag blue">GSC</span><span class="tag amber">GA4</span></div>
+      </div>
+    </div>
+
+        <div class="changelog-item">
       <div class="changelog-date">23 Aug 2026 (v2.2)</div>
       <div class="changelog-content">
         <div class="changelog-title">Site-report v2.2 · audit + mobile + hero refresh</div>
@@ -1189,7 +1198,7 @@ const chartPayload = JSON.stringify({
 </div>
 
   <div class="footer">
-  <strong>Portuguese Estate</strong> · portuguese-estate.com · Report updated 25 Jun 2026 v2.0 · 108 sitemap URLs · ~378K words · GSC 1 click / 164 imp (1–24 Jun) · GA4 73 sessions · 30 git commits<br>
+  <strong>Portuguese Estate</strong> · portuguese-estate.com · Report updated {reportDate} {reportVersion} · 144 sitemap URLs · 141 MDX · GSC Aug 12 clk / 2,649 imp · GA4 498 sessions (Aug 256)<br>
   To update: run <code>node scripts/build-portugal-site-report-v2.mjs</code> then deploy
 </div>
 
