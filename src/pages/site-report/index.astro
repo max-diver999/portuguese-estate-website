@@ -2,7 +2,7 @@
 export const prerender = true;
 
 const reportDate = '1 September 2026';
-const reportVersion = 'v2.3';
+const reportVersion = 'v2.4';
 const launchDate = '16 June 2026';
 const dataThrough = '31 August 2026';
 
@@ -44,6 +44,21 @@ const clicksDelta = monthlyGsc.length > 1 && monthlyGsc[monthlyGsc.length - 2].c
   ? Math.round(((monthlyGsc[monthlyGsc.length - 1].clicks - monthlyGsc[monthlyGsc.length - 2].clicks) / monthlyGsc[monthlyGsc.length - 2].clicks) * 100)
   : 0;
 const maxImp = Math.max(...monthlyGsc.map(m => m.impressions), 1);
+const maxMonthlyImp = Math.max(...monthlyGsc.map((m) => m.impressions), 1);
+function momPill(i) {
+  if (i === 0) return { cls: 'pill-blue', text: 'Launch' };
+  const curr = monthlyGsc[i].clicks;
+  const prev = monthlyGsc[i - 1].clicks;
+  if (prev === 0) return { cls: 'pill-blue', text: 'new' };
+  const pct = Math.round(((curr - prev) / prev) * 100);
+  if (pct > 0) return { cls: 'pill-green', text: `+${pct}%` };
+  if (pct < 0) return { cls: 'pill-amber', text: `${pct}%` };
+  return { cls: 'pill-gray', text: '0%' };
+}
+function barPx(impressions) {
+  return Math.max(20, Math.round((impressions / maxMonthlyImp) * 120));
+}
+
 
 const chartPayload = JSON.stringify({
   monthlyGsc: monthlyGsc.map((m) => ({ label: m.label, clicks: m.clicks, impressions: m.impressions })),
@@ -584,11 +599,7 @@ const chartPayload = JSON.stringify({
           </thead>
           <tbody>
             {monthlyGsc.map((m, i) => {
-              const prev = i > 0 ? monthlyGsc[i - 1] : null;
-              const mom = prev && prev.clicks > 0
-                ? `+${Math.round(((m.clicks - prev.clicks) / prev.clicks) * 100)}%`
-                : '—';
-              const barW = Math.round((m.impressions / maxImp) * 120);
+              const pill = momPill(i);
               return (
                 <tr>
                   <td><strong>{m.month}</strong></td>
@@ -596,11 +607,11 @@ const chartPayload = JSON.stringify({
                   <td>
                     <div class="bar-cell">
                       <span>{m.impressions.toLocaleString('en-US')}</span>
-                      <div class="mini-bar" style={`width:${barW}px`}></div>
+                      <div class="mini-bar" style={`width:${barPx(m.impressions)}px`}></div>
                     </div>
                   </td>
                   <td>{m.position.toFixed(1)}</td>
-                  <td><span class={`pill ${mom.startsWith('+') ? 'pill-green' : 'pill-amber'}`}>{mom}</span></td>
+                  <td><span class={`pill ${pill.cls}`}>{pill.text}</span></td>
                   <td style="color:#5c5c52;font-size:12px;">{m.note}</td>
                 </tr>
               );
@@ -1019,7 +1030,16 @@ const chartPayload = JSON.stringify({
   <div class="section-title">Change history</div>
   <div class="changelog">
         <div class="changelog-item">
-      <div class="changelog-date">1 Sep 2026 (v2.3)</div>
+              <div class="changelog-item">
+      <div class="changelog-date">1 Sep 2026 (v2.4)</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Site-report v2.4 · dynamic MoM table sync</div>
+        <div class="changelog-desc">MoM table uses momPill(i) fixing inline MoM percent bug on negative deltas. chartPayload verified with Aug from monthlyGsc.</div>
+        <div class="changelog-tags"><span class="tag green">Report v2.4</span><span class="tag blue">MoM table</span><span class="tag amber">Charts</span></div>
+      </div>
+    </div>
+
+        <div class="changelog-date">1 Sep 2026 (v2.3)</div>
       <div class="changelog-content">
         <div class="changelog-title">Site-report v2.3 · August MCP refresh</div>
         <div class="changelog-desc">GSC Aug full month: 12 clicks / 2,649 imp. GA4 Aug: 256 sessions (498 cumulative). 141 MDX. Data through 31 Aug 2026.</div>
