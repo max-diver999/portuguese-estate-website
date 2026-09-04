@@ -17,7 +17,7 @@ import {
   HOMEPAGE_HERO_PROJECT_SLUG,
 } from '../data/featured';
 import { getCardImageUrl, formatAreaLabel } from '../lib/cardImage';
-import { responsiveImage } from '../lib/responsiveImage';
+import { responsiveImage, lcpPreloadFromResponsive } from '../lib/responsiveImage';
 import { pickHomepageProjects, projectHeroLine, projectStatusLabel } from '../lib/homeProjects';
 
 const [guides, projects, areas] = await Promise.all([
@@ -44,15 +44,15 @@ const featuredAreas = FEATURED_AREA_SLUGS.map((slug) => areaBySlug.get(slug)).fi
  * public IDs and otherwise falls back to a hardcoded 1280x720, which did not
  * match this photograph and left bands of ground inside the frame.
  */
-const hero = {
-  src: HOMEPAGE_HERO_IMAGE,
-  width: HOMEPAGE_HERO_WIDTH,
-  height: HOMEPAGE_HERO_HEIGHT,
-};
+const hero = responsiveImage(HOMEPAGE_HERO_IMAGE, 'homepage');
+const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
 ---
 <BaseLayout
   title="Portugal Property Investment 2026 — Guides & Shortlist"
   description="Independent Portugal property research for foreign buyers: IMT 7.5%, step-by-step purchase, Algarve yields, Golden Visa funds. Free shortlist within 1 business day."
+  preloadImage={heroPreload.src}
+  preloadImageSrcset={heroPreload.srcset}
+  preloadImageSizes={heroPreload.sizes ?? '100vw'}
 >
   <!--
     The hero is one block of the Baixa grid: copy in the left modules, the
@@ -80,11 +80,13 @@ const hero = {
         <div class="home-hero__frame">
           <img
             src={hero.src}
+            srcset={hero.srcset}
+            sizes={hero.sizes ?? '(max-width: 1023px) calc(100vw - 3rem), 500px'}
             alt={HOMEPAGE_HERO_ALT}
             loading="eager"
             fetchpriority="high"
-            width={hero.width}
-            height={hero.height}
+            width={HOMEPAGE_HERO_WIDTH}
+            height={HOMEPAGE_HERO_HEIGHT}
           />
         </div>
       </div>

@@ -3,7 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import { SITE } from '../data/site';
-import { responsiveImage } from '../lib/responsiveImage';
+import { responsiveImage, lcpPreloadFromResponsive } from '../lib/responsiveImage';
 
 interface Props {
   title: string;
@@ -50,6 +50,7 @@ const dateStr = (updatedDate || pubDate).toLocaleDateString('en-US', {
 });
 const pageUrl = canonical || Astro.url.href;
 const hero = heroImage ? responsiveImage(heroImage, 'hero') : null;
+const heroPreload = heroImage ? lcpPreloadFromResponsive(heroImage, 'hero') : null;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -112,6 +113,9 @@ const schemas = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : 
   type="article"
   {noindex}
   {schemas}
+  preloadImage={heroPreload?.src}
+  preloadImageSrcset={heroPreload?.srcset}
+  preloadImageSizes={heroPreload?.sizes}
 >
   <article class="site-container py-10 md:py-14">
     <header class="max-w-3xl mb-8">

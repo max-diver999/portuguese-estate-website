@@ -2,6 +2,7 @@ import dimensions from '../data/portugal-image-dimensions.json';
 
 type Variant = 'hero' | 'homepage' | 'card';
 type Dimension = { width: number; height: number };
+type LocalCandidate = { url: string; width: number };
 
 const CLOUD = 'dlrrtf6bq';
 const WIDTHS = {
@@ -9,6 +10,14 @@ const WIDTHS = {
   homepage: [360, 480, 768, 1024],
   card: [360, 480, 640],
 } as const;
+
+const LOCAL_HOMEPAGE_HERO: LocalCandidate[] = [
+  { url: '/images/lisbon-baixa-rooftops-360.webp', width: 360 },
+  { url: '/images/lisbon-baixa-rooftops-480.webp', width: 480 },
+  { url: '/images/lisbon-baixa-rooftops-768.webp', width: 768 },
+  { url: '/images/lisbon-baixa-rooftops-1024.webp', width: 1024 },
+  { url: '/images/lisbon-baixa-rooftops.jpg', width: 1200 },
+];
 
 function publicIdFromUrl(src: string): string | null {
   const marker = '/more-group/portugal/';
@@ -18,10 +27,39 @@ function publicIdFromUrl(src: string): string | null {
 }
 
 function deliveryUrl(publicId: string, width: number): string {
-  return `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,w_${width}/${publicId}`;
+  return `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto:eco,g_auto,w_${width}/${publicId}`;
+}
+
+function localHomepageHero(src: string, variant: Variant) {
+  if (variant !== 'homepage' || src !== '/images/lisbon-baixa-rooftops.jpg') return null;
+  return {
+    src: LOCAL_HOMEPAGE_HERO.at(-1)!.url,
+    srcset: LOCAL_HOMEPAGE_HERO.map(({ url, width }) => `${url} ${width}w`).join(', '),
+    sizes: '(max-width: 1023px) calc(100vw - 3rem), 500px',
+    width: 1200,
+    height: 800,
+  };
+}
+
+/** Smallest variant for LCP preload (mobile-first). */
+export function lcpPreloadFromResponsive(src: string, variant: Variant = 'hero') {
+  const img = responsiveImage(src, variant);
+  let href = img.src;
+  if (img.srcset) {
+    const firstEntry = img.srcset.split(/,\s+/)[0]?.trim() ?? '';
+    href = firstEntry.replace(/\s+\d+w$/, '') || href;
+  }
+  return {
+    src: href,
+    srcset: img.srcset,
+    sizes: img.sizes,
+  };
 }
 
 export function responsiveImage(src: string, variant: Variant = 'hero') {
+  const localHero = localHomepageHero(src, variant);
+  if (localHero) return localHero;
+
   const publicId = publicIdFromUrl(src);
   if (!publicId) {
     return {

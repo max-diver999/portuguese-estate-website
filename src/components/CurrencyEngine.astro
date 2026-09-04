@@ -4,6 +4,19 @@
   :global(.site-fx-value) { color:var(--color-muted);white-space:nowrap; }
 </style>
 <script>
+  function runAfterPageLoad(fn) {
+    if (document.readyState === 'complete') {
+      if ('requestIdleCallback' in window) requestIdleCallback(fn, { timeout: 4000 });
+      else setTimeout(fn, 0);
+    } else {
+      window.addEventListener('load', function () {
+        if ('requestIdleCallback' in window) requestIdleCallback(fn, { timeout: 4000 });
+        else setTimeout(fn, 0);
+      }, { once: true });
+    }
+  }
+
+  runAfterPageLoad(function () {
   (function () {
     var RATE_KEY='portuguese-estate-fx-eur-usd-v1', PREF_KEY='portuguese-estate-show-usd', DAY=86400000, FALLBACK=1.17;
     var toggles=Array.prototype.slice.call(document.querySelectorAll('[data-site-fx-toggle]'));
@@ -31,4 +44,5 @@
     var on=false;try{on=localStorage.getItem(PREF_KEY)==='1';}catch(e){}if(on)activate();
     toggles.forEach(function(t){t.addEventListener('click',async function(){on=!on;try{localStorage.setItem(PREF_KEY,on?'1':'0');}catch(e){}if(on)await activate();else paint(false);});});
   })();
+  });
 </script>

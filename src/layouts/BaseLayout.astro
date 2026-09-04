@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import globalStyles from '../styles/global.css?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
@@ -16,6 +16,9 @@ interface Props {
   type?: 'website' | 'article';
   noindex?: boolean;
   schemas?: object[];
+  preloadImage?: string;
+  preloadImageSrcset?: string;
+  preloadImageSizes?: string;
 }
 
 const {
@@ -26,11 +29,11 @@ const {
   type = 'website',
   noindex = false,
   schemas = [],
+  preloadImage,
+  preloadImageSrcset,
+  preloadImageSizes,
 } = Astro.props;
 
-// Frontmatter titles are gated to 50-60 chars. Appending the brand adds 20 more
-// and pushes the result past the ~60-char SERP limit, truncating the keyword tail.
-// Brand the title only when it still fits.
 const TITLE_MAX = 60;
 const withBrand = `${title} | Portuguese Estate`;
 const fullTitle = title.includes('Portuguese Estate')
@@ -67,6 +70,7 @@ const allSchemas = [orgSchema, ...schemas];
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1c2740" />
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
   {noindex
@@ -92,19 +96,76 @@ const allSchemas = [orgSchema, ...schemas];
   <link rel="icon" href="/favicon-16.png?v=3" type="image/png" sizes="16x16" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" sizes="180x180" />
   <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+
   <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
-  <!-- Archivo carries every heading, so it is the one face worth preloading. -->
-  <link
-    rel="preload"
-    href="/fonts/archivo-latin.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
+  <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+
+  {preloadImage && (
+    <link
+      rel="preload"
+      as="image"
+      href={preloadImage}
+      fetchpriority="high"
+      {...(preloadImageSrcset ? { imagesrcset: preloadImageSrcset, imagesizes: preloadImageSizes } : {})}
+    />
+  )}
+
+  <style is:inline>
+    :root {
+      --color-page: #ede6da;
+      --color-surface: #f6f1e8;
+      --color-ink: #1c2740;
+      --color-muted: #4b5361;
+      --color-deep: #1c2740;
+      --color-border: #cfc5b3;
+      --font-sans: 'Archivo', system-ui, sans-serif;
+    }
+    html { -webkit-font-smoothing: antialiased; }
+    body {
+      margin: 0;
+      background: var(--color-page);
+      color: var(--color-muted);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      font-size: 1rem;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+    body > main { flex: 1 0 auto; }
+    h1, h2, h3 {
+      font-family: var(--font-sans);
+      color: var(--color-ink);
+      line-height: 1.25;
+      font-weight: 600;
+    }
+    .home-hero__frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      min-height: 280px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-deep);
+      color: #f6f1e8;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  </style>
+
+  <link rel="preload" href={globalStyles} as="style" />
+  <link rel="stylesheet" href={globalStyles} media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href={globalStyles} /></noscript>
+
   {allSchemas.map((s) => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
   ))}
-  <GoogleAnalytics />
 </head>
 <body>
   <Header />
@@ -115,5 +176,6 @@ const allSchemas = [orgSchema, ...schemas];
   <WhatsAppFloat />
   <CurrencyEngine />
   <WhatsAppIntentTracker />
+  <GoogleAnalytics />
 </body>
 </html>
