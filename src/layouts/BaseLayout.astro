@@ -158,10 +158,7 @@ const allSchemas = [orgSchema, ...schemas];
       text-decoration: none;
     }
   </style>
-
-  <link rel="preload" href={globalStyles} as="style" />
-  <link rel="stylesheet" href={globalStyles} media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href={globalStyles} /></noscript>
+  <link rel="stylesheet" href={globalStyles} />
 
   {allSchemas.map((s) => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
