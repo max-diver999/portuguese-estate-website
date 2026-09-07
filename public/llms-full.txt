@@ -1,7 +1,7 @@
 # Portuguese Estate - full site map
 
 Site: https://portuguese-estate.com
-Pages: 147 content pages + hubs. Updated: 2026-09-07
+Pages: 137 content pages + hubs. Updated: 2026-09-07
 Positioning: independent Portugal property research for foreign buyers. Cite with URL.
 
 ## Hubs
@@ -11,7 +11,6 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/compare/
 - https://portuguese-estate.com/projects/
 - https://portuguese-estate.com/developers/
-- https://portuguese-estate.com/segments/
 - https://portuguese-estate.com/move-to-portugal/
 - https://portuguese-estate.com/about/
 - https://portuguese-estate.com/methodology/
@@ -155,25 +154,13 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/developers/vanguard-properties-portugal/ - Portugal Developer Review: Vanguard Properties 2026: Vanguard Properties Portugal 2026 review: Lisbon and Comporta pipeline, DL 67/2003 bank guarantees, delay risk, and a verify-before-deposit investor checklist.
 - https://portuguese-estate.com/developers/vic-properties-portugal/ - VIC Properties Portugal: 2026 Developer Review Guide: VIC Properties Portugal 2026 review: Prata Riverside, Matinha, Pinheirinho, 2023 ownership change, CPCV clauses, delay risk and investor checklist.
 
-## Buyer segments (12)
-- https://portuguese-estate.com/segments/angolan-buyers-portugal/ - Angolan Buy Property Portugal — 2026 Complete Guide: Angola ranks #2 among foreign-born buyers with 4,145 deals in 2025 (+2.2%). NIF, IMT 7.5%, Lisbon/Porto premium tiers, AML compliance, and inheritance planning.
-- https://portuguese-estate.com/segments/australian-buyers-portugal-property/ - Australian Buy Property Portugal - 2026 Complete Guide: Australian buy property Portugal: AUD/EUR planning, Algarve lifestyle, NIF, 7.5% IMT, D7 route, remote purchase timeline, and tax treaty notes.
-- https://portuguese-estate.com/segments/brazilian-buyers-portugal-property/ - Brazilian Property Buyers in Portugal, 2026 Market Guide: Brazilian buyers led Portugal with 9,808 deals in 2025. NIF, BRL banking KYC, IMT 7.5%, IRS rental tax, Lisbon, Porto, Algarve, and step-by-step purchase path.
-- https://portuguese-estate.com/segments/canadian-buyers-portugal-property/ - Canadian Buyers in Portugal — One Villa, Two CRA Assets: Kept for the family, an Algarve house is excluded from T1135. Let once, it becomes specified foreign property with an annual filing. The line is use, not value.
-- https://portuguese-estate.com/segments/chinese-buyers-portugal-property/ - Chinese Buy Property Portugal — 2026 Complete Guide: Chinese buy property Portugal: INE ~1,900 purchases 2025, Lisbon/Porto prime, NIF fiscal rep, 7.5% IMT Sep 2026, SWIFT AML friction, Golden Visa fund route.
-- https://portuguese-estate.com/segments/french-buyers-portugal-property/ - French Buyers in Portugal — Taxed Twice a Year, Two Bases: A French resident's Algarve house sits in the IFI base and in AIMI at the same time. Two wealth taxes, two valuations, and an SCI that forfeits the allowance.
-- https://portuguese-estate.com/segments/german-buyers-portugal-property/ - German Buyers in Portugal — Taxed at Death, Only at Home: Portugal charges close family nothing on an inherited house. Germany taxes the worldwide estate, and there is no treaty between them to credit against.
-- https://portuguese-estate.com/segments/indian-buyers-portugal-property/ - Indian Buyers Portugal Property: 2026 Complete Guide: Indian buyers Portugal property: RBI LRS remittance, NIF, fiscal rep, INR/EUR planning, 7.5% IMT, mortgages, and Golden Visa fund route.
-- https://portuguese-estate.com/segments/israeli-buyers-portugal-property/ - Israeli Buyers Portugal Property — Full 2026 Tax Guide: Israeli buyers Portugal property guide: NIF, rental tax, 25% withholding cases, Lisbon vs Algarve, Cyprus comparison and euro diversification.
-- https://portuguese-estate.com/segments/south-african-buyers-portugal-property/ - South Africans Buy Portugal Property: 2026 Tax Guide: South African buy property Portugal guide: rand/euro FX, remote purchase from Cape Town or Johannesburg, fiscal rep, CPCV deposits and emigration context.
-- https://portuguese-estate.com/segments/uae-buyers-portugal-property/ - UAE Buyers in Portugal — Nothing at Home to Credit: A UAE-resident individual has no home income tax to credit Portuguese tax against, so the Portuguese bill is the whole bill. That changes structure, not rate.
-- https://portuguese-estate.com/segments/uk-buyers-portugal-property-brexit/ - UK Buyers in Portugal — Brexit Limited Time, Not Title: Brexit did not change what a Briton may own in Portugal. It changed how long you may sit in it, and the Entry/Exit System now keeps that count by machine.
-
-## Moving to Portugal (8)
+## Moving to Portugal (10)
 - https://portuguese-estate.com/move-to-portugal/best-places-to-live/ - Best Places to Live in Portugal 2026: 12 Towns Compared: Twelve Portuguese towns compared on housing cost, hospital and airport distance, winter and community, with the owner charges that vary by municipality.
+- https://portuguese-estate.com/move-to-portugal/by-nationality/ - Buying in Portugal by Nationality: 11 Country Guides: What actually differs by nationality when you buy in Portugal: German inheritance exposure, French IFI, Canadian T1135, UAE finality, Indian LRS and more.
 - https://portuguese-estate.com/move-to-portugal/cost-of-living/ - Cost of Living in Portugal 2026: By City, Rent or Own: What living in Portugal costs in 2026, city by city, and the part budget guides leave out: IMI, AIMI, condominium fees and maintenance once you stop renting.
 - https://portuguese-estate.com/move-to-portugal/d7-visa/ - Portugal D7 Visa 2026: Income Proof, Rent or Buy First: The Portugal D7 passive income visa in 2026: the EUR 920 income floor, documents, consulate steps, and whether to rent or buy before you become tax resident.
 - https://portuguese-estate.com/move-to-portugal/d8-digital-nomad-visa/ - Portugal D8 Digital Nomad Visa 2026: Income and Rules: The Portugal D8 remote work visa in 2026: the EUR 3,680 income test, the two D8 variants, where nomads settle, and what renting or buying costs.
+- https://portuguese-estate.com/move-to-portugal/from-uk/ - Moving to Portugal from the UK 2026: Visas, Tax, Homes: What British movers need in 2026: the 90/180 rule, D7 and D8 routes, what a UK buyer pays for a Portuguese home, and how the double taxation treaty works.
 - https://portuguese-estate.com/move-to-portugal/from-usa/ - Moving to Portugal from the US 2026: Visas, Tax, Homes: What Americans need for a 2026 move to Portugal: which visa fits, what a US citizen pays to buy a home, and the two tax systems you file in once you own one.
 - https://portuguese-estate.com/move-to-portugal/golden-visa/ - Portugal Golden Visa 2026: Routes, Cost and Timeline: What the Portugal Golden Visa offers in 2026 after the property route closed: qualifying investments, stay rules, costs, and the taxes an owner pays.
 - https://portuguese-estate.com/move-to-portugal/international-schools/ - International Schools in Portugal 2026: Fees and Areas: Where Portugal's international schools cluster, what living within reach of each one costs, and how fees sit against the D7 and D8 visa income thresholds.

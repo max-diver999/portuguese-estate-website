@@ -31,6 +31,136 @@
       "source": "/guides/portugal-golden-visa-vs-property-purchase/",
       "destination": "/move-to-portugal/golden-visa/",
       "statusCode": 301
+    },
+    {
+      "source": "/segments/chinese-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/chinese-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/uk-buyers-portugal-property-brexit",
+      "destination": "/move-to-portugal/from-uk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/uk-buyers-portugal-property-brexit/",
+      "destination": "/move-to-portugal/from-uk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/israeli-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/israeli-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/german-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/german-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/australian-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/australian-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/brazilian-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/brazilian-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/uae-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/uae-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/indian-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/indian-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/canadian-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/canadian-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/south-african-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/south-african-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/angolan-buyers-portugal",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/angolan-buyers-portugal/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/french-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/french-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
     }
   ],
   "headers": [

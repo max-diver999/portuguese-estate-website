@@ -32,12 +32,6 @@
       "minWords": 1800,
       "faqMin": 4
     },
-    "segments": {
-      "dir": "segments",
-      "urlPrefix": "/segments/",
-      "minWords": 2000,
-      "faqMin": 5
-    },
     "projects": {
       "dir": "projects",
       "urlPrefix": "/projects/",
@@ -76,10 +70,6 @@
       {
         "hubPath": "/compare/",
         "contentDir": "compare"
-      },
-      {
-        "hubPath": "/segments/",
-        "contentDir": "segments"
       },
       {
         "hubPath": "/move-to-portugal/",

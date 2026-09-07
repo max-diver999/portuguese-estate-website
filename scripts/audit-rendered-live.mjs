@@ -189,7 +189,7 @@ const CHECKS = [
         /\bTulum\b/i, /\bCancun\b/i, /\bPhuket\b/i, /\bPattaya\b/i,
         /Portuguese Estatement/i, /Spain Property Market Comparisons/i,
         /other Gulf markets/i, /investGulfTrack\s*=\s*function/i,
-        // UAE is a legitimate buyer-origin market here (see /segments/uae-buyers-…),
+        // UAE is a legitimate buyer-origin market here (see /move-to-portugal/by-nationality/),
         // so only flag UAE as the *subject* market, which is what the fork left behind.
         /UAE (property|government)/i, /licensed UAE/i, /emirate-level/i,
       ];
@@ -258,7 +258,7 @@ const STANDALONE_PAGES = [
   { urlPath: '/guides/', requireLeadForm: true },
   { urlPath: '/areas/', requireLeadForm: false },
   { urlPath: '/compare/', requireLeadForm: false },
-  { urlPath: '/segments/', requireLeadForm: false },
+  { urlPath: '/move-to-portugal/', requireLeadForm: false },
   { urlPath: '/projects/', requireLeadForm: false },
   { urlPath: '/developers/', requireLeadForm: false },
   { urlPath: '/portugal-property-consultation/', requireLeadForm: true },
