@@ -1,7 +1,7 @@
 # Portuguese Estate - full site map
 
 Site: https://portuguese-estate.com
-Pages: 146 content pages + hubs. Updated: 2026-09-07
+Pages: 144 content pages + hubs. Updated: 2026-09-07
 Positioning: independent Portugal property research for foreign buyers. Cite with URL.
 
 ## Hubs
@@ -18,7 +18,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/contact/
 - https://portuguese-estate.com/get-shortlist/
 
-## Guides (78)
+## Guides (77)
 - https://portuguese-estate.com/guides/aimi-wealth-tax-portugal-property/ - AIMI Portugal Wealth Tax 2026 — 0.7% on VPT Over €600k: AIMI wealth tax: 0.7% on €600k–€1M VPT, 1% above €1M per owner. Joint ownership splits, company 0.4%, primary home exempt.
 - https://portuguese-estate.com/guides/al-license-transfer-portugal-sale/ - AL Licence Transfer on Portugal Property Sale Guide: AL licence transfer on Portugal property sale: DL 76/2024 RNAL rules, Lisbon containment expiry, Algarve steps, CPCV clauses, insurance, Finanças Category B.
 - https://portuguese-estate.com/guides/algarve-airbnb-investment-guide/ - Airbnb Investment Algarve Guide — 2026 AL Strategy: Airbnb investment Algarve 2026: AL vs Lisbon containment, seasonal yields, 18-25% management, RNAL, Category B tax, Lagos/Albufeira/Vilamoura data.
@@ -67,11 +67,10 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/guides/portugal-buy-to-let-investment-guide/ - Buy to Let Portugal: The Complete 2026 Strategy Guide: Buy-to-let Portugal 2026: gross yields 4.3–7%, AL licensing post-DL 76/2024, tax stack, mortgage rules, and what changed for landlords since 2024.
 - https://portuguese-estate.com/guides/portugal-buying-costs-calculator-examples/ - Portugal Buying Costs Calculator: Worked Examples 2026: Cash-to-close examples for Portugal property buyers at €200k to €1M. Compare resident vs non-resident IMT, stamp duty, legal fees and hidden costs.
 - https://portuguese-estate.com/guides/portugal-capital-gains-tax-property/ - Portugal Capital Gains Tax on Property — 2026 Guide: Portugal CGT since 2023: 50% of the gain taxable for residents and non-residents alike at 14.5-48%, reinvestment relief, and worked exit examples.
-- https://portuguese-estate.com/guides/portugal-d7-visa-property/ - Portugal D7 Visa Property — 2026 Buy or Rent Guide: D7 passive income visa plus buying or renting Portugal property: €920/month income proof, NIF, CPCV, 7.5% IMT, 183-day tax residency, and IMT refund rules.
-- https://portuguese-estate.com/guides/portugal-digital-nomad-visa-property/ - Portugal Digital Nomad Visa Property — 2026 D8 Guide: D8 visa property guide: €3,680/month income, 1-year permit, buy while remote, tax residency rules, D7 vs GV fund, Lisbon Porto Algarve scenarios.
-- https://portuguese-estate.com/guides/portugal-golden-visa-fund-investment-2026/ - Portugal Golden Visa 500k Fund Investment Guide 2026: The €500,000 CMVM-regulated fund route for Portugal Golden Visa in 2026: 5-year hold, 7-day stay, costs, and how it differs from buying property.
+- https://portuguese-estate.com/guides/portugal-d7-visa-property/ - Buying or Renting on a Portugal D7 Visa: 2026 Costs: Whether to rent or buy once you hold a Portugal D7 visa: NIF, CPCV, the flat 7.5% non-resident IMT, the 183-day test and the IMT refund route.
+- https://portuguese-estate.com/guides/portugal-digital-nomad-visa-property/ - Buying Property in Portugal on a D8 Visa: 2026 Guide: What buying a home looks like on a Portugal D8 visa: tax residency timing, the flat 7.5% non-resident IMT, and Lisbon, Porto and Algarve scenarios.
+- https://portuguese-estate.com/guides/portugal-golden-visa-fund-investment-2026/ - Portugal Golden Visa Investment Funds: 2026 Selection: How to choose a Portugal Golden Visa fund in 2026: the CMVM rules, the 60% Portuguese asset floor, management charges over five years, and what to ask.
 - https://portuguese-estate.com/guides/portugal-golden-visa-real-estate-ended/ - Portugal Golden Visa Real Estate Route, Ended 2023: Direct real estate Golden Visa ended October 2023. Fund route €500k, cultural €250k, and residency alternatives for property buyers in 2026.
-- https://portuguese-estate.com/guides/portugal-golden-visa-vs-property-purchase/ - Golden Visa vs Property Purchase Portugal 2026 Guide: Golden visa vs buying property Portugal: €500k fund route, property without residency, ended RE path, costs, timelines, and UK/US/Brazil decision matrix.
 - https://portuguese-estate.com/guides/portugal-housing-supply-licensing-2025/ - Portugal Housing Supply Crisis: Investor Guide 2026: Simplex Urbanístico and Mais Habitação reshaped licensing. 169,812 sales in 2025, +17.6% prices. How supply bottlenecks affect off-plan vs resale investors.
 - https://portuguese-estate.com/guides/portugal-mortgage-rates-foreigners-2026/ - Portugal Mortgage Rates for Foreigners — 2026 Guide: Portugal mortgage rates for foreigners in 2026: Euribor, bank tiers, LTV by nationality, non-resident spreads, and €300k-€600k payment examples.
 - https://portuguese-estate.com/guides/portugal-property-1-million-plus-investment/ - Portugal Property €1M+ Investment — 2026 Luxury Guide: Luxury property Portugal €1M+: Cascais, Comporta, Chiado, Quinta do Lago. AIMI wealth tax, cash-to-close, liquidity, yields — HNWI buyer guide 2026.
@@ -156,8 +155,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/developers/vanguard-properties-portugal/ - Portugal Developer Review: Vanguard Properties 2026: Vanguard Properties Portugal 2026 review: Lisbon and Comporta pipeline, DL 67/2003 bank guarantees, delay risk, and a verify-before-deposit investor checklist.
 - https://portuguese-estate.com/developers/vic-properties-portugal/ - VIC Properties Portugal: 2026 Developer Review Guide: VIC Properties Portugal 2026 review: Prata Riverside, Matinha, Pinheirinho, 2023 ownership change, CPCV clauses, delay risk and investor checklist.
 
-## Buyer segments (13)
-- https://portuguese-estate.com/segments/american-buyers-portugal-property/ - American Buyers in Portugal — The Treaty's Saving Clause: A US citizen never leaves the US tax system. The saving clause keeps the IRS in place, and IMT and IMI are not creditable against it. What that changes.
+## Buyer segments (12)
 - https://portuguese-estate.com/segments/angolan-buyers-portugal/ - Angolan Buy Property Portugal — 2026 Complete Guide: Angola ranks #2 among foreign-born buyers with 4,145 deals in 2025 (+2.2%). NIF, IMT 7.5%, Lisbon/Porto premium tiers, AML compliance, and inheritance planning.
 - https://portuguese-estate.com/segments/australian-buyers-portugal-property/ - Australian Buy Property Portugal - 2026 Complete Guide: Australian buy property Portugal: AUD/EUR planning, Algarve lifestyle, NIF, 7.5% IMT, D7 route, remote purchase timeline, and tax treaty notes.
 - https://portuguese-estate.com/segments/brazilian-buyers-portugal-property/ - Brazilian Property Buyers in Portugal, 2026 Market Guide: Brazilian buyers led Portugal with 9,808 deals in 2025. NIF, BRL banking KYC, IMT 7.5%, IRS rental tax, Lisbon, Porto, Algarve, and step-by-step purchase path.
