@@ -40,20 +40,6 @@
       "bytes": 587602,
       "uploaded_at": "2026-08-25T23:36:14Z"
     },
-    "buy-property-portugal-foreigner": {
-      "public_id": "more-group/portugal/guides/buy-property-portugal-foreigner/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/View_of_Baixa_from_Chiado._Lisbon%2C_Portugal.jpg/1280px-View_of_Baixa_from_Chiado._Lisbon%2C_Portugal.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/View_of_Baixa_from_Chiado._Lisbon%2C_Portugal.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:View_of_Baixa_from_Chiado._Lisbon,_Portugal.jpg",
-      "source_sha256": "6379bee958e12022e4453b147f360eba6572e1a4b4f5bece84b3c4c2e5e27b58",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787700975/more-group/portugal/guides/buy-property-portugal-foreigner/hero.jpg",
-      "version": 1787700975,
-      "format": "jpg",
-      "width": 1920,
-      "height": 1545,
-      "bytes": 1464345,
-      "uploaded_at": "2026-08-25T23:36:15Z"
-    },
     "carvalhido": {
       "public_id": "more-group/portugal/projects/carvalhido/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porto_-_Pal%C3%A1cio_da_Bolsa_%2854938113921%29.jpg/1280px-Porto_-_Pal%C3%A1cio_da_Bolsa_%2854938113921%29.jpg",
@@ -95,20 +81,6 @@
       "height": 1279,
       "bytes": 1061884,
       "uploaded_at": "2026-08-25T23:36:17Z"
-    },
-    "al-license-transfer-portugal-sale": {
-      "public_id": "more-group/portugal/guides/al-license-transfer-portugal-sale/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cascais%2C_Praia_de_Cascais_%283%29.jpg/1280px-Cascais%2C_Praia_de_Cascais_%283%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Cascais%2C_Praia_de_Cascais_%283%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Cascais,_Praia_de_Cascais_(3).jpg",
-      "source_sha256": "5d9f24affbd174f01fc885095e55a91e013ef71eb4f763a62852d2b1232a418b",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701045/more-group/portugal/guides/al-license-transfer-portugal-sale/hero.jpg",
-      "version": 1787701045,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 286736,
-      "uploaded_at": "2026-08-25T23:37:25Z"
     },
     "alcantara-property-investment": {
       "public_id": "more-group/portugal/areas/alcantara-property-investment/hero",
@@ -193,20 +165,6 @@
       "height": 853,
       "bytes": 477957,
       "uploaded_at": "2026-08-25T23:40:01Z"
-    },
-    "best-portugal-property-under-4000-euro-m2": {
-      "public_id": "more-group/portugal/guides/best-portugal-property-under-4000-euro-m2/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Praia_da_Falca_-_Portugal_%286970470884%29.jpg/1280px-Praia_da_Falca_-_Portugal_%286970470884%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Praia_da_Falca_-_Portugal_%286970470884%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Praia_da_Falca_-_Portugal_(6970470884).jpg",
-      "source_sha256": "99fea287324825186404fda31056b0b19163c2bcd6888dd11e0ec2afd7a29d0c",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701204/more-group/portugal/guides/best-portugal-property-under-4000-euro-m2/hero.jpg",
-      "version": 1787701204,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 266444,
-      "uploaded_at": "2026-08-25T23:40:04Z"
     },
     "best-regions-invest-portugal-property-2026": {
       "public_id": "more-group/portugal/guides/best-regions-invest-portugal-property-2026/hero",
@@ -418,48 +376,6 @@
       "bytes": 440228,
       "uploaded_at": "2026-08-25T23:41:47Z"
     },
-    "gross-vs-net-yield-portugal": {
-      "public_id": "more-group/portugal/guides/gross-vs-net-yield-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Amieira_Marina_-_Portugal_%284075471083%29.jpg/1280px-Amieira_Marina_-_Portugal_%284075471083%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Amieira_Marina_-_Portugal_%284075471083%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Amieira_Marina_-_Portugal_(4075471083).jpg",
-      "source_sha256": "95598854b9910e06665003e5dd5854542ac3f0d5e90e5ec93684b69c026165dd",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701364/more-group/portugal/guides/gross-vs-net-yield-portugal/hero.jpg",
-      "version": 1787701364,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 554877,
-      "uploaded_at": "2026-08-25T23:42:44Z"
-    },
-    "hidden-costs-buying-property-portugal": {
-      "public_id": "more-group/portugal/guides/hidden-costs-buying-property-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Strand_Praia_do_camilo_Lagos_%2827711818845%29.jpg/1280px-Strand_Praia_do_camilo_Lagos_%2827711818845%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Strand_Praia_do_camilo_Lagos_%2827711818845%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Strand_Praia_do_camilo_Lagos_(27711818845).jpg",
-      "source_sha256": "b8c8ef9b76f0bc61edac9182d80cd91c4c70bf25d2a957d95ff45cff64769634",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701367/more-group/portugal/guides/hidden-costs-buying-property-portugal/hero.jpg",
-      "version": 1787701367,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 342300,
-      "uploaded_at": "2026-08-25T23:42:47Z"
-    },
-    "highest-rental-yield-areas-portugal": {
-      "public_id": "more-group/portugal/guides/highest-rental-yield-areas-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Praia_do_Amado_-_Portugal_%2851960919311%29.jpg/1280px-Praia_do_Amado_-_Portugal_%2851960919311%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Praia_do_Amado_-_Portugal_%2851960919311%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Praia_do_Amado_-_Portugal_(51960919311).jpg",
-      "source_sha256": "3244de26367019772d89846ceabc37f54a0a32d9977f5b99f9d79aad5a628382",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701370/more-group/portugal/guides/highest-rental-yield-areas-portugal/hero.jpg",
-      "version": 1787701370,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 440440,
-      "uploaded_at": "2026-08-25T23:42:50Z"
-    },
     "how-to-buy-portugal-property-remotely": {
       "public_id": "more-group/portugal/guides/how-to-buy-portugal-property-remotely/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Bel%C3%A9m_Tower_in_Lisbon%2C_Portugal.jpg/1280px-Bel%C3%A9m_Tower_in_Lisbon%2C_Portugal.jpg",
@@ -487,20 +403,6 @@
       "height": 856,
       "bytes": 254850,
       "uploaded_at": "2026-08-25T23:42:58Z"
-    },
-    "how-to-calculate-rental-yield-portugal": {
-      "public_id": "more-group/portugal/guides/how-to-calculate-rental-yield-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Alfama_Rooftops_and_Tagus_River_View%2C_Lisbon_%2854733828355%29.jpg/1280px-Alfama_Rooftops_and_Tagus_River_View%2C_Lisbon_%2854733828355%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Alfama_Rooftops_and_Tagus_River_View%2C_Lisbon_%2854733828355%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Alfama_Rooftops_and_Tagus_River_View,_Lisbon_(54733828355).jpg",
-      "source_sha256": "7390dc5785869765f94e08d12d58cee49cb67bac95879b77b0c20cb0ffe1bace",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701382/more-group/portugal/guides/how-to-calculate-rental-yield-portugal/hero.jpg",
-      "version": 1787701382,
-      "format": "jpg",
-      "width": 1280,
-      "height": 720,
-      "bytes": 205606,
-      "uploaded_at": "2026-08-25T23:43:02Z"
     },
     "ifici-portugal-nhr-2-tax-regime": {
       "public_id": "more-group/portugal/guides/ifici-portugal-nhr-2-tax-regime/hero",
@@ -571,20 +473,6 @@
       "height": 960,
       "bytes": 411575,
       "uploaded_at": "2026-08-25T23:44:06Z"
-    },
-    "is-portugal-property-good-investment-2026": {
-      "public_id": "more-group/portugal/guides/is-portugal-property-good-investment-2026/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ribeira_from_Dom_Luis_I_bridge_%281%29.jpg/1280px-Ribeira_from_Dom_Luis_I_bridge_%281%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Ribeira_from_Dom_Luis_I_bridge_%281%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Ribeira_from_Dom_Luis_I_bridge_(1).jpg",
-      "source_sha256": "bafe866e343d54bb3a6081250cd49a6aa3055e853dbc455c0a5b59b447fa9eb7",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701449/more-group/portugal/guides/is-portugal-property-good-investment-2026/hero.jpg",
-      "version": 1787701449,
-      "format": "jpg",
-      "width": 1280,
-      "height": 863,
-      "bytes": 317294,
-      "uploaded_at": "2026-08-25T23:44:09Z"
     },
     "lagos-property-investment": {
       "public_id": "more-group/portugal/areas/lagos-property-investment/hero",
@@ -698,20 +586,6 @@
       "bytes": 242713,
       "uploaded_at": "2026-08-25T23:44:37Z"
     },
-    "mais-valias-portugal-capital-gains": {
-      "public_id": "more-group/portugal/guides/mais-valias-portugal-capital-gains/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Quinta_Dona_Matilde_-_Vale_do_Rio_Douro_-_Portugal_%2814928976369%29.jpg/1280px-Quinta_Dona_Matilde_-_Vale_do_Rio_Douro_-_Portugal_%2814928976369%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Quinta_Dona_Matilde_-_Vale_do_Rio_Douro_-_Portugal_%2814928976369%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Quinta_Dona_Matilde_-_Vale_do_Rio_Douro_-_Portugal_(14928976369).jpg",
-      "source_sha256": "cdb06d862cef18a3b499430a8f6892e6b7ba0acbc269493e907236c5ce244bcb",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701480/more-group/portugal/guides/mais-valias-portugal-capital-gains/hero.jpg",
-      "version": 1787701480,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 362425,
-      "uploaded_at": "2026-08-25T23:44:40Z"
-    },
     "mar-adentro": {
       "public_id": "more-group/portugal/projects/mar-adentro/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Faro_Harbour_-_The_Algarve%2C_Portugal_%281469527209%29.jpg/1280px-Faro_Harbour_-_The_Algarve%2C_Portugal_%281469527209%29.jpg",
@@ -809,20 +683,6 @@
       "height": 909,
       "bytes": 210840,
       "uploaded_at": "2026-08-25T23:45:03Z"
-    },
-    "non-resident-mortgage-portugal": {
-      "public_id": "more-group/portugal/guides/non-resident-mortgage-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Praia_da_Falca_-_Portugal_%286970471496%29.jpg/1280px-Praia_da_Falca_-_Portugal_%286970471496%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Praia_da_Falca_-_Portugal_%286970471496%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Praia_da_Falca_-_Portugal_(6970471496).jpg",
-      "source_sha256": "a5bbb0c0bffc23ef4ab665bf71d1b12238cc217bff43a4b14f06f3616e0b3538",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701506/more-group/portugal/guides/non-resident-mortgage-portugal/hero.jpg",
-      "version": 1787701506,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 314858,
-      "uploaded_at": "2026-08-25T23:45:06Z"
     },
     "non-resident-rental-income-tax-portugal": {
       "public_id": "more-group/portugal/guides/non-resident-rental-income-tax-portugal/hero",
@@ -964,20 +824,6 @@
       "bytes": 394232,
       "uploaded_at": "2026-08-25T23:45:35Z"
     },
-    "portugal-buy-to-let-investment-guide": {
-      "public_id": "more-group/portugal/guides/portugal-buy-to-let-investment-guide/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Panorama-Lisbon-Graca.jpg/1280px-Panorama-Lisbon-Graca.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Panorama-Lisbon-Graca.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Panorama-Lisbon-Graca.jpg",
-      "source_sha256": "25c9dc7791bfa8c986c48634c4deafa87e7e93797ab107982e0de5206f6cfaf2",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701538/more-group/portugal/guides/portugal-buy-to-let-investment-guide/hero.jpg",
-      "version": 1787701538,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 350482,
-      "uploaded_at": "2026-08-25T23:45:38Z"
-    },
     "portugal-buying-costs-calculator-examples": {
       "public_id": "more-group/portugal/guides/portugal-buying-costs-calculator-examples/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Praia_dos_Tesos_-_Tavira_-_Portugal_%F0%9F%87%B5%F0%9F%87%B9_%2854941176556%29.jpg/1280px-Praia_dos_Tesos_-_Tavira_-_Portugal_%F0%9F%87%B5%F0%9F%87%B9_%2854941176556%29.jpg",
@@ -1103,20 +949,6 @@
       "height": 853,
       "bytes": 1134355,
       "uploaded_at": "2026-08-25T23:46:16Z"
-    },
-    "portugal-property-deposit-guide-cpcv": {
-      "public_id": "more-group/portugal/guides/portugal-property-deposit-guide-cpcv/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Portuguese_village_houses_%2813352188934%29.jpg/1280px-Portuguese_village_houses_%2813352188934%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portuguese_village_houses_%2813352188934%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Portuguese_village_houses_(13352188934).jpg",
-      "source_sha256": "efdc0049ceefab0caa31677ca987e3745c7b9b423dfc1cf320c8510f504aae1c",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701580/more-group/portugal/guides/portugal-property-deposit-guide-cpcv/hero.jpg",
-      "version": 1787701580,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 233427,
-      "uploaded_at": "2026-08-25T23:46:20Z"
     },
     "portugal-property-developers-guide-2026": {
       "public_id": "more-group/portugal/guides/portugal-property-developers-guide-2026/hero",
@@ -1412,20 +1244,6 @@
       "bytes": 219343,
       "uploaded_at": "2026-08-25T23:47:51Z"
     },
-    "property-maintenance-costs-portugal": {
-      "public_id": "more-group/portugal/guides/property-maintenance-costs-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Coasts_of_Portugal_%2831015346564%29.jpg/1280px-Coasts_of_Portugal_%2831015346564%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Coasts_of_Portugal_%2831015346564%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Coasts_of_Portugal_(31015346564).jpg",
-      "source_sha256": "75459095437a92273e7d540a314ab1c0c6006e67cbb3b9a1f246dafa8be7d271",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701674/more-group/portugal/guides/property-maintenance-costs-portugal/hero.jpg",
-      "version": 1787701674,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 300683,
-      "uploaded_at": "2026-08-25T23:47:54Z"
-    },
     "property-management-portugal-cost": {
       "public_id": "more-group/portugal/guides/property-management-portugal-cost/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/EDIF%C3%8DCIO_LOUL%C3%89.jpg/1280px-EDIF%C3%8DCIO_LOUL%C3%89.jpg",
@@ -1439,20 +1257,6 @@
       "height": 853,
       "bytes": 537543,
       "uploaded_at": "2026-08-25T23:47:58Z"
-    },
-    "renovation-costs-portugal-per-m2": {
-      "public_id": "more-group/portugal/guides/renovation-costs-portugal-per-m2/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Gardens_of_the_Pal%C3%A1cio_de_Cristal_%28Porto%29_28.jpg/1280px-Gardens_of_the_Pal%C3%A1cio_de_Cristal_%28Porto%29_28.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Gardens_of_the_Pal%C3%A1cio_de_Cristal_%28Porto%29_28.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Gardens_of_the_Pal%C3%A1cio_de_Cristal_(Porto)_28.jpg",
-      "source_sha256": "58d4901fce0b1bb6a4c05a16849cebcb4f096e636cf65a9f6ebdccd1f23d9b76",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701681/more-group/portugal/guides/renovation-costs-portugal-per-m2/hero.jpg",
-      "version": 1787701681,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 492682,
-      "uploaded_at": "2026-08-25T23:48:01Z"
     },
     "rnal-registration-portugal": {
       "public_id": "more-group/portugal/guides/rnal-registration-portugal/hero",
@@ -1678,20 +1482,6 @@
       "bytes": 458450,
       "uploaded_at": "2026-08-26T02:57:19Z"
     },
-    "cost-of-selling-property-portugal": {
-      "public_id": "more-group/portugal/guides/cost-of-selling-property-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/004_Benagil_Beach_%28Praia_Benagil%29_sea_kayaking_recreational_activity_in_Algarve%2C_Portugal.jpg/1280px-004_Benagil_Beach_%28Praia_Benagil%29_sea_kayaking_recreational_activity_in_Algarve%2C_Portugal.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/004_Benagil_Beach_%28Praia_Benagil%29_sea_kayaking_recreational_activity_in_Algarve%2C_Portugal.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:004_Benagil_Beach_(Praia_Benagil)_sea_kayaking_recreational_activity_in_Algarve,_Portugal.jpg",
-      "source_sha256": "817083989fd09092af543883d2495626c644a5235d9211ea93badaee93ef1bae",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787713041/more-group/portugal/guides/cost-of-selling-property-portugal/hero.jpg",
-      "version": 1787713041,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 366091,
-      "uploaded_at": "2026-08-26T02:57:21Z"
-    },
     "currency-transfer-portugal-property": {
       "public_id": "more-group/portugal/guides/currency-transfer-portugal-property/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hotel_PORTO_BAY_FAL%C3%89SIA_-_access_to_beach_%22Praia_da_Fal%C3%A9sia%22_%288660914786%29.jpg/1280px-Hotel_PORTO_BAY_FAL%C3%89SIA_-_access_to_beach_%22Praia_da_Fal%C3%A9sia%22_%288660914786%29.jpg",
@@ -1733,20 +1523,6 @@
       "height": 959,
       "bytes": 569119,
       "uploaded_at": "2026-08-26T02:57:39Z"
-    },
-    "mortgage-broker-vs-bank-portugal": {
-      "public_id": "more-group/portugal/guides/mortgage-broker-vs-bank-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Strand_Praia_do_Pinh%C3%A3o_Lagos_%2827637252461%29.jpg/1280px-Strand_Praia_do_Pinh%C3%A3o_Lagos_%2827637252461%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Strand_Praia_do_Pinh%C3%A3o_Lagos_%2827637252461%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Strand_Praia_do_Pinh%C3%A3o_Lagos_(27637252461).jpg",
-      "source_sha256": "d16efb101715ee7d9fa8c80e57f7d24a0d1582fb553ccd5840909038cbcf2909",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787713062/more-group/portugal/guides/mortgage-broker-vs-bank-portugal/hero.jpg",
-      "version": 1787713062,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 279423,
-      "uploaded_at": "2026-08-26T02:57:42Z"
     },
     "obras-licence-portugal-renovation": {
       "public_id": "more-group/portugal/guides/obras-licence-portugal-renovation/hero",

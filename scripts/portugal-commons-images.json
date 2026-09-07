@@ -11,8 +11,8 @@
     "minBrightness": 0.42,
     "maxBrightness": 0.95
   },
-  "total": 128,
-  "uniqueFiles": 128,
+  "total": 112,
+  "uniqueFiles": 112,
   "failures": [],
   "images": [
     {
@@ -34,28 +34,6 @@
         "saturation": 0.42,
         "brightness": 0.63,
         "greyMass": 0.214
-      }
-    },
-    {
-      "slug": "al-license-transfer-portugal-sale",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cascais%2C_Praia_de_Cascais_%283%29.jpg/1280px-Cascais%2C_Praia_de_Cascais_%283%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Cascais%2C_Praia_de_Cascais_%283%29.jpg",
-      "width": 3968,
-      "height": 2976,
-      "alt": "Cascais, Praia de Cascais (3) — Lisbon apartment building — AL licence transfer on sale",
-      "altSubject": "Cascais, Praia de Cascais (3)",
-      "credit": "Palickap / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cascais,_Praia_de_Cascais_(3).jpg",
-      "commonsTitle": "File:Cascais, Praia de Cascais (3).jpg",
-      "matchedTerm": "cat:Beaches of Cascais",
-      "aesthetics": {
-        "colourfulness": 56.8,
-        "saturation": 0.293,
-        "brightness": 0.66,
-        "greyMass": 0.23,
-        "hash": "ffffff94f7b599cd"
       }
     },
     {
@@ -202,27 +180,6 @@
       }
     },
     {
-      "slug": "best-portugal-property-under-4000-euro-m2",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Praia_da_Falca_-_Portugal_%286970470884%29.jpg/1280px-Praia_da_Falca_-_Portugal_%286970470884%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Praia_da_Falca_-_Portugal_%286970470884%29.jpg",
-      "width": 7596,
-      "height": 5064,
-      "alt": "Praia da Falca - Portugal — Portuguese residential street — value bands under €4,000 per square metre",
-      "altSubject": "Praia da Falca - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_da_Falca_-_Portugal_(6970470884).jpg",
-      "commonsTitle": "File:Praia da Falca - Portugal (6970470884).jpg",
-      "matchedTerm": "cat:Beaches of Nazaré",
-      "aesthetics": {
-        "colourfulness": 72,
-        "saturation": 0.367,
-        "brightness": 0.75,
-        "greyMass": 0.157
-      }
-    },
-    {
       "slug": "best-regions-invest-portugal-property-2026",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Vista_aerea_da_Mexilhoeira_Grande_-_Algarve%2C_Portugal_1_-_17-02-2024.jpg/1280px-Vista_aerea_da_Mexilhoeira_Grande_-_Algarve%2C_Portugal_1_-_17-02-2024.jpg",
@@ -251,21 +208,6 @@
       "commonsTitle": "File:Azulejos, Braga, Portugal 25.jpg",
       "matchedTerm": "Braga Portugal",
       "altSubject": "Azulejos, Braga, Portugal 25"
-    },
-    {
-      "slug": "buy-property-portugal-foreigner",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/View_of_Baixa_from_Chiado._Lisbon%2C_Portugal.jpg/1280px-View_of_Baixa_from_Chiado._Lisbon%2C_Portugal.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/View_of_Baixa_from_Chiado._Lisbon%2C_Portugal.jpg",
-      "width": 3095,
-      "height": 2491,
-      "alt": "View of Baixa from Chiado. Lisbon, Portugal — buying property in Portugal as a foreigner",
-      "credit": "Ввласенко / Wikimedia Commons",
-      "licence": "CC BY-SA 3.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:View_of_Baixa_from_Chiado._Lisbon,_Portugal.jpg",
-      "commonsTitle": "File:View of Baixa from Chiado. Lisbon, Portugal.jpg",
-      "matchedTerm": "Lisbon Baixa street",
-      "altSubject": "View of Baixa from Chiado. Lisbon, Portugal"
     },
     {
       "slug": "buy-property-portugal-through-company",
@@ -492,28 +434,6 @@
       "altSubject": "The top of Lisbon Santa Justa Lift"
     },
     {
-      "slug": "cost-of-selling-property-portugal",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/004_Benagil_Beach_%28Praia_Benagil%29_sea_kayaking_recreational_activity_in_Algarve%2C_Portugal.jpg/1280px-004_Benagil_Beach_%28Praia_Benagil%29_sea_kayaking_recreational_activity_in_Algarve%2C_Portugal.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/004_Benagil_Beach_%28Praia_Benagil%29_sea_kayaking_recreational_activity_in_Algarve%2C_Portugal.jpg",
-      "width": 3600,
-      "height": 2400,
-      "alt": "Benagil beach from the clifftop, Algarve — the full cost of selling property in Portugal",
-      "altSubject": "004 Benagil Beach (Praia Benagil) sea kayaking recreational activity in Algarve, Portugal",
-      "credit": "Marek Ślusarczyk (Tupungato) Photo portfolio / Wikimedia Commons",
-      "licence": "CC BY 3.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:004_Benagil_Beach_(Praia_Benagil)_sea_kayaking_recreational_activity_in_Algarve,_Portugal.jpg",
-      "commonsTitle": "File:004 Benagil Beach (Praia Benagil) sea kayaking recreational activity in Algarve, Portugal.jpg",
-      "matchedTerm": "Praia de Benagil Algarve",
-      "aesthetics": {
-        "colourfulness": 64.8,
-        "saturation": 0.27,
-        "brightness": 0.698,
-        "greyMass": 0.42,
-        "hash": "fcfabadb73fbf9f1"
-      }
-    },
-    {
       "slug": "cpcv-promissory-contract-portugal",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Marina_Povoa2.jpg/1280px-Marina_Povoa2.jpg",
@@ -674,69 +594,6 @@
       }
     },
     {
-      "slug": "gross-vs-net-yield-portugal",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Amieira_Marina_-_Portugal_%284075471083%29.jpg/1280px-Amieira_Marina_-_Portugal_%284075471083%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Amieira_Marina_-_Portugal_%284075471083%29.jpg",
-      "width": 7616,
-      "height": 5078,
-      "alt": "Amieira Marina - Portugal — Porto residential stock — gross versus net rental yield",
-      "altSubject": "Amieira Marina - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Amieira_Marina_-_Portugal_(4075471083).jpg",
-      "commonsTitle": "File:Amieira Marina - Portugal (4075471083).jpg",
-      "matchedTerm": "Lagos marina barcos",
-      "aesthetics": {
-        "colourfulness": 54.9,
-        "saturation": 0.335,
-        "brightness": 0.699,
-        "greyMass": 0.136
-      }
-    },
-    {
-      "slug": "hidden-costs-buying-property-portugal",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Strand_Praia_do_camilo_Lagos_%2827711818845%29.jpg/1280px-Strand_Praia_do_camilo_Lagos_%2827711818845%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Strand_Praia_do_camilo_Lagos_%2827711818845%29.jpg",
-      "width": 5578,
-      "height": 3719,
-      "alt": "Rua da Palmeira in Lisbon — the hidden costs of buying",
-      "altSubject": "Strand Praia do camilo Lagos",
-      "credit": "dronepicr / Wikimedia Commons",
-      "licence": "CC BY 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Strand_Praia_do_camilo_Lagos_(27711818845).jpg",
-      "commonsTitle": "File:Strand Praia do camilo Lagos (27711818845).jpg",
-      "matchedTerm": "Praia do Camilo Lagos",
-      "aesthetics": {
-        "colourfulness": 64,
-        "saturation": 0.288,
-        "brightness": 0.609,
-        "greyMass": 0.322
-      }
-    },
-    {
-      "slug": "highest-rental-yield-areas-portugal",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Praia_do_Amado_-_Portugal_%2851960919311%29.jpg/1280px-Praia_do_Amado_-_Portugal_%2851960919311%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Praia_do_Amado_-_Portugal_%2851960919311%29.jpg",
-      "width": 2048,
-      "height": 1365,
-      "alt": "Praia do Amado - Portugal — Braga — among the highest rental yield markets in Portugal",
-      "altSubject": "Praia do Amado - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_do_Amado_-_Portugal_(51960919311).jpg",
-      "commonsTitle": "File:Praia do Amado - Portugal (51960919311).jpg",
-      "matchedTerm": "cat:Beaches of Portimão",
-      "aesthetics": {
-        "colourfulness": 72.6,
-        "saturation": 0.398,
-        "brightness": 0.686,
-        "greyMass": 0.27
-      }
-    },
-    {
       "slug": "homepage",
       "collection": "site",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Baixa_Pombalina.jpg/1280px-Baixa_Pombalina.jpg",
@@ -786,21 +643,6 @@
         "brightness": 0.613,
         "greyMass": 0.44
       }
-    },
-    {
-      "slug": "how-to-calculate-rental-yield-portugal",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Alfama_Rooftops_and_Tagus_River_View%2C_Lisbon_%2854733828355%29.jpg/1280px-Alfama_Rooftops_and_Tagus_River_View%2C_Lisbon_%2854733828355%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Alfama_Rooftops_and_Tagus_River_View%2C_Lisbon_%2854733828355%29.jpg",
-      "width": 11656,
-      "height": 6556,
-      "alt": "Alfama Rooftops and Tagus River View, Lisbon — calculating rental yield",
-      "credit": "Dale Cruse - 10M views from San Francisco, CA, USA / Wikimedia Commons",
-      "licence": "CC BY 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Alfama_Rooftops_and_Tagus_River_View,_Lisbon_(54733828355).jpg",
-      "commonsTitle": "File:Alfama Rooftops and Tagus River View, Lisbon (54733828355).jpg",
-      "matchedTerm": "Lisbon rooftops view",
-      "altSubject": "Alfama Rooftops and Tagus River View, Lisbon"
     },
     {
       "slug": "ifici-portugal-nhr-2-tax-regime",
@@ -907,21 +749,6 @@
         "brightness": 0.589,
         "greyMass": 0.426
       }
-    },
-    {
-      "slug": "is-portugal-property-good-investment-2026",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ribeira_from_Dom_Luis_I_bridge_%281%29.jpg/1280px-Ribeira_from_Dom_Luis_I_bridge_%281%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Ribeira_from_Dom_Luis_I_bridge_%281%29.jpg",
-      "width": 5169,
-      "height": 3486,
-      "alt": "Ribeira from Dom Luis I bridge — is Portuguese property a good investment",
-      "credit": "Krzysztof Golik / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Ribeira_from_Dom_Luis_I_bridge_(1).jpg",
-      "commonsTitle": "File:Ribeira from Dom Luis I bridge (1).jpg",
-      "matchedTerm": "Porto Dom Luis bridge",
-      "altSubject": "Ribeira from Dom Luis I bridge"
     },
     {
       "slug": "lagos-property-investment",
@@ -1068,27 +895,6 @@
       "altSubject": "Praça do Município in Funchal. Madeira, Portugal"
     },
     {
-      "slug": "mais-valias-portugal-capital-gains",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Quinta_Dona_Matilde_-_Vale_do_Rio_Douro_-_Portugal_%2814928976369%29.jpg/1280px-Quinta_Dona_Matilde_-_Vale_do_Rio_Douro_-_Portugal_%2814928976369%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Quinta_Dona_Matilde_-_Vale_do_Rio_Douro_-_Portugal_%2814928976369%29.jpg",
-      "width": 3888,
-      "height": 2592,
-      "alt": "Sunset on a Lisbon residential façade — mais-valias capital gains worked examples",
-      "altSubject": "Quinta Dona Matilde - Vale do Rio Douro - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Quinta_Dona_Matilde_-_Vale_do_Rio_Douro_-_Portugal_(14928976369).jpg",
-      "commonsTitle": "File:Quinta Dona Matilde - Vale do Rio Douro - Portugal (14928976369).jpg",
-      "matchedTerm": "Douro vinha socalcos rio",
-      "aesthetics": {
-        "colourfulness": 91.7,
-        "saturation": 0.467,
-        "brightness": 0.652,
-        "greyMass": 0.066
-      }
-    },
-    {
       "slug": "mar-adentro",
       "collection": "projects",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Faro_Harbour_-_The_Algarve%2C_Portugal_%281469527209%29.jpg/1280px-Faro_Harbour_-_The_Algarve%2C_Portugal_%281469527209%29.jpg",
@@ -1178,28 +984,6 @@
       "altSubject": "Eclectic Streetfront on Rua 5 de Outubro, Porto, Portugal"
     },
     {
-      "slug": "mortgage-broker-vs-bank-portugal",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Strand_Praia_do_Pinh%C3%A3o_Lagos_%2827637252461%29.jpg/1280px-Strand_Praia_do_Pinh%C3%A3o_Lagos_%2827637252461%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Strand_Praia_do_Pinh%C3%A3o_Lagos_%2827637252461%29.jpg",
-      "width": 6000,
-      "height": 4000,
-      "alt": "The cliffs of Praia do Pinhão in Lagos — mortgage broker versus bank for a Portuguese loan",
-      "altSubject": "Strand Praia do Pinhão Lagos",
-      "credit": "dronepicr / Wikimedia Commons",
-      "licence": "CC BY 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Strand_Praia_do_Pinh%C3%A3o_Lagos_(27637252461).jpg",
-      "commonsTitle": "File:Strand Praia do Pinhão Lagos (27637252461).jpg",
-      "matchedTerm": "Lagos Algarve praia",
-      "aesthetics": {
-        "colourfulness": 66.1,
-        "saturation": 0.332,
-        "brightness": 0.559,
-        "greyMass": 0.311,
-        "hash": "88c27c3e367669bf"
-      }
-    },
-    {
       "slug": "nazare-property-investment",
       "collection": "areas",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nazare%2C_Portugal_%2852960130417%29.jpg/1280px-Nazare%2C_Portugal_%2852960130417%29.jpg",
@@ -1254,28 +1038,6 @@
         "saturation": 0.402,
         "brightness": 0.62,
         "greyMass": 0.145
-      }
-    },
-    {
-      "slug": "non-resident-mortgage-portugal",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Praia_da_Falca_-_Portugal_%286970471496%29.jpg/1280px-Praia_da_Falca_-_Portugal_%286970471496%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Praia_da_Falca_-_Portugal_%286970471496%29.jpg",
-      "width": 7412,
-      "height": 4940,
-      "alt": "Praia da Falca - Portugal — Portuguese banking — non-resident mortgages",
-      "altSubject": "Praia da Falca - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_da_Falca_-_Portugal_(6970471496).jpg",
-      "commonsTitle": "File:Praia da Falca - Portugal (6970471496).jpg",
-      "matchedTerm": "cat:Beaches of Nazaré",
-      "aesthetics": {
-        "colourfulness": 72,
-        "saturation": 0.398,
-        "brightness": 0.678,
-        "greyMass": 0.167,
-        "hash": "82a280f058c484e0"
       }
     },
     {
@@ -1482,21 +1244,6 @@
       }
     },
     {
-      "slug": "portugal-buy-to-let-investment-guide",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Panorama-Lisbon-Graca.jpg/1280px-Panorama-Lisbon-Graca.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Panorama-Lisbon-Graca.jpg",
-      "width": 4100,
-      "height": 3075,
-      "alt": "Panorama-Lisbon-Graca — buy-to-let investment",
-      "credit": "acediscovery / Wikimedia Commons",
-      "licence": "CC BY 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Panorama-Lisbon-Graca.jpg",
-      "commonsTitle": "File:Panorama-Lisbon-Graca.jpg",
-      "matchedTerm": "Lisbon Graca neighbourhood",
-      "altSubject": "Panorama-Lisbon-Graca"
-    },
-    {
       "slug": "portugal-buying-costs-calculator-examples",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Praia_dos_Tesos_-_Tavira_-_Portugal_%F0%9F%87%B5%F0%9F%87%B9_%2854941176556%29.jpg/1280px-Praia_dos_Tesos_-_Tavira_-_Portugal_%F0%9F%87%B5%F0%9F%87%B9_%2854941176556%29.jpg",
@@ -1665,21 +1412,6 @@
       "licence": "CC BY-SA 4.0",
       "sourcePage": "https://commons.wikimedia.org/wiki/File:Quinta_do_Lago.jpg",
       "commonsTitle": "File:Quinta do Lago.jpg",
-      "matchedTerm": "pinned"
-    },
-    {
-      "slug": "portugal-property-deposit-guide-cpcv",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Portuguese_village_houses_%2813352188934%29.jpg/1280px-Portuguese_village_houses_%2813352188934%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portuguese_village_houses_%2813352188934%29.jpg",
-      "width": 4752,
-      "height": 3168,
-      "alt": "Traditional Portuguese village houses — the CPCV deposit stage",
-      "altSubject": "Portuguese village houses",
-      "credit": "muffinn from Worcester, UK / Wikimedia Commons",
-      "licence": "CC BY 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Portuguese_village_houses_(13352188934).jpg",
-      "commonsTitle": "File:Portuguese village houses (13352188934).jpg",
       "matchedTerm": "pinned"
     },
     {
@@ -2089,27 +1821,6 @@
       }
     },
     {
-      "slug": "property-maintenance-costs-portugal",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Coasts_of_Portugal_%2831015346564%29.jpg/1280px-Coasts_of_Portugal_%2831015346564%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Coasts_of_Portugal_%2831015346564%29.jpg",
-      "width": 3264,
-      "height": 2448,
-      "alt": "Coasts of Portugal — Portuguese building maintenance and renovation",
-      "altSubject": "Coasts of Portugal",
-      "credit": "Sergei Gussev / Wikimedia Commons",
-      "licence": "CC BY 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Coasts_of_Portugal_(31015346564).jpg",
-      "commonsTitle": "File:Coasts of Portugal (31015346564).jpg",
-      "matchedTerm": "cat:Coasts of Portugal",
-      "aesthetics": {
-        "colourfulness": 70.3,
-        "saturation": 0.379,
-        "brightness": 0.612,
-        "greyMass": 0.147
-      }
-    },
-    {
       "slug": "property-management-portugal-cost",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/EDIF%C3%8DCIO_LOUL%C3%89.jpg/1280px-EDIF%C3%8DCIO_LOUL%C3%89.jpg",
@@ -2123,27 +1834,6 @@
       "sourcePage": "https://commons.wikimedia.org/wiki/File:EDIF%C3%8DCIO_LOUL%C3%89.jpg",
       "commonsTitle": "File:EDIFÍCIO LOULÉ.jpg",
       "matchedTerm": "pinned"
-    },
-    {
-      "slug": "renovation-costs-portugal-per-m2",
-      "collection": "guides",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Gardens_of_the_Pal%C3%A1cio_de_Cristal_%28Porto%29_28.jpg/1280px-Gardens_of_the_Pal%C3%A1cio_de_Cristal_%28Porto%29_28.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Gardens_of_the_Pal%C3%A1cio_de_Cristal_%28Porto%29_28.jpg",
-      "width": 4272,
-      "height": 2848,
-      "alt": "A building under renovation on Avenida da Liberdade, Lisbon — works costs per square metre",
-      "altSubject": "Gardens of the Palácio de Cristal (Porto) 28",
-      "credit": "John Samuel / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Gardens_of_the_Pal%C3%A1cio_de_Cristal_(Porto)_28.jpg",
-      "commonsTitle": "File:Gardens of the Palácio de Cristal (Porto) 28.jpg",
-      "matchedTerm": "cat:Azulejos in Porto",
-      "aesthetics": {
-        "colourfulness": 43.8,
-        "saturation": 0.243,
-        "brightness": 0.54,
-        "greyMass": 0.423
-      }
     },
     {
       "slug": "rnal-registration-portugal",
