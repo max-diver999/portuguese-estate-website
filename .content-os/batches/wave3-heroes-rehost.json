@@ -1,0 +1,62 @@
+{
+  "rollout": "portugal-wave3-town-rehost",
+  "generated": "2026-09-07",
+  "source": "Wikimedia Commons",
+  "rule": "Same photograph as the retired area page, re-hosted under the new slug.",
+  "deliveryWidth": 1280,
+  "total": 3,
+  "images": [
+    {
+      "slug": "cascais",
+      "alt": "The Castro Guimaraes palace and gardens at Cascais",
+      "credit": "Diego Delso / Wikimedia Commons",
+      "licence": "CC BY-SA 4.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Palacio_de_los_condes_de_Castro_Guimar%C3%A3es,_Cascais,_Portugal,_2022-07-25,_DD_12.jpg",
+      "collection": "property-for-sale",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "width": 7746,
+      "height": 5164,
+      "commonsTitle": "File:Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "subject": "cascais",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/cascais/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1280
+    },
+    {
+      "slug": "tavira",
+      "alt": "Santa Maria do Castelo church above the old town of Tavira",
+      "credit": "Bextrel / Wikimedia Commons",
+      "licence": "CC BY 4.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Igreja_de_Santa_Maria_do_Castelo_em_Tavira,_Algarve,_Portugal_-_10.09.2020.jpg",
+      "collection": "property-for-sale",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "width": 6000,
+      "height": 4000,
+      "commonsTitle": "File:Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "subject": "tavira",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/tavira/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1280
+    },
+    {
+      "slug": "lagos",
+      "alt": "The cliffs and coves of the western Algarve coast at Lagos",
+      "credit": "Freebird from Madrid, Spain / Wikimedia Commons",
+      "licence": "CC BY-SA 2.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Algarve,_Portugal_2015_-_Lagos_(20765921760).jpg",
+      "collection": "property-for-sale",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "width": 3495,
+      "height": 2055,
+      "commonsTitle": "File:Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "subject": "lagos",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/lagos/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1129
+    }
+  ],
+  "cloud": "bwppi9gc"
+}
