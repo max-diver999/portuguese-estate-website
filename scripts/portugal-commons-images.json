@@ -11,8 +11,8 @@
     "minBrightness": 0.42,
     "maxBrightness": 0.95
   },
-  "total": 98,
-  "uniqueFiles": 98,
+  "total": 90,
+  "uniqueFiles": 90,
   "failures": [],
   "images": [
     {
@@ -137,27 +137,6 @@
       }
     },
     {
-      "slug": "aveiro-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Aveiro%2C_Part_I_-_Aveiro5616.jpg/1280px-Aveiro%2C_Part_I_-_Aveiro5616.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Aveiro%2C_Part_I_-_Aveiro5616.jpg",
-      "width": 5184,
-      "height": 3456,
-      "alt": "Aveiro, Part I - Aveiro5616 — Aveiro and its canals",
-      "altSubject": "Aveiro, Part I - Aveiro5616",
-      "credit": "lumoplank / Wikimedia Commons",
-      "licence": "CC0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Aveiro,_Part_I_-_Aveiro5616.jpg",
-      "commonsTitle": "File:Aveiro, Part I - Aveiro5616.jpg",
-      "matchedTerm": "Aveiro canal moliceiro colourful",
-      "aesthetics": {
-        "colourfulness": 44.4,
-        "saturation": 0.346,
-        "brightness": 0.464,
-        "greyMass": 0.266
-      }
-    },
-    {
       "slug": "best-regions-invest-portugal-property-2026",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Vista_aerea_da_Mexilhoeira_Grande_-_Algarve%2C_Portugal_1_-_17-02-2024.jpg/1280px-Vista_aerea_da_Mexilhoeira_Grande_-_Algarve%2C_Portugal_1_-_17-02-2024.jpg",
@@ -171,21 +150,6 @@
       "sourcePage": "https://commons.wikimedia.org/wiki/File:Vista_aerea_da_Mexilhoeira_Grande_-_Algarve,_Portugal_1_-_17-02-2024.jpg",
       "commonsTitle": "File:Vista aerea da Mexilhoeira Grande - Algarve, Portugal 1 - 17-02-2024.jpg",
       "matchedTerm": "pinned"
-    },
-    {
-      "slug": "braga-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Azulejos%2C_Braga%2C_Portugal_25.jpg/1280px-Azulejos%2C_Braga%2C_Portugal_25.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Azulejos%2C_Braga%2C_Portugal_25.jpg",
-      "width": 4080,
-      "height": 2296,
-      "alt": "Azulejos, Braga, Portugal 25 — Braga, Norte",
-      "credit": "Lessormore / Wikimedia Commons",
-      "licence": "CC BY 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Azulejos,_Braga,_Portugal_25.jpg",
-      "commonsTitle": "File:Azulejos, Braga, Portugal 25.jpg",
-      "matchedTerm": "Braga Portugal",
-      "altSubject": "Azulejos, Braga, Portugal 25"
     },
     {
       "slug": "buy-property-portugal-through-company",
@@ -267,21 +231,6 @@
       }
     },
     {
-      "slug": "coimbra-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Rua_Adelino_Veiga%2C_Coimbra%2C_Portugal.jpg/1280px-Rua_Adelino_Veiga%2C_Coimbra%2C_Portugal.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Rua_Adelino_Veiga%2C_Coimbra%2C_Portugal.jpg",
-      "width": 4032,
-      "height": 3024,
-      "alt": "Rua Adelino Veiga, Coimbra, Portugal — Coimbra",
-      "credit": "Iuliana Prus / Wikimedia Commons",
-      "licence": "CC BY 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rua_Adelino_Veiga,_Coimbra,_Portugal.jpg",
-      "commonsTitle": "File:Rua Adelino Veiga, Coimbra, Portugal.jpg",
-      "matchedTerm": "Coimbra Portugal",
-      "altSubject": "Rua Adelino Veiga, Coimbra, Portugal"
-    },
-    {
       "slug": "complete-before-september-2026-imt-guide",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Portugal_Coast_%2848415017011%29.jpg/1280px-Portugal_Coast_%2848415017011%29.jpg",
@@ -301,21 +250,6 @@
         "brightness": 0.478,
         "greyMass": 0.515
       }
-    },
-    {
-      "slug": "comporta-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Litotal_entre_a_Praia_da_Comporta_e_a_Praia_da_Torre_-_Portugal_%2848096627873%29.jpg/1280px-Litotal_entre_a_Praia_da_Comporta_e_a_Praia_da_Torre_-_Portugal_%2848096627873%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Litotal_entre_a_Praia_da_Comporta_e_a_Praia_da_Torre_-_Portugal_%2848096627873%29.jpg",
-      "width": 3888,
-      "height": 2592,
-      "alt": "Litotal entre a Praia da Comporta e a Praia da Torre - Portugal — Comporta",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Litotal_entre_a_Praia_da_Comporta_e_a_Praia_da_Torre_-_Portugal_(48096627873).jpg",
-      "commonsTitle": "File:Litotal entre a Praia da Comporta e a Praia da Torre - Portugal (48096627873).jpg",
-      "matchedTerm": "Comporta Portugal",
-      "altSubject": "Litotal entre a Praia da Comporta e a Praia da Torre - Portugal"
     },
     {
       "slug": "condominium-fees-portugal",
@@ -817,21 +751,6 @@
       "altSubject": "Eclectic Streetfront on Rua 5 de Outubro, Porto, Portugal"
     },
     {
-      "slug": "nazare-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nazare%2C_Portugal_%2852960130417%29.jpg/1280px-Nazare%2C_Portugal_%2852960130417%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Nazare%2C_Portugal_%2852960130417%29.jpg",
-      "width": 6960,
-      "height": 4640,
-      "alt": "Nazare, Portugal — Nazaré",
-      "credit": "thirdsphoto / Wikimedia Commons",
-      "licence": "CC BY 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Nazare,_Portugal_(52960130417).jpg",
-      "commonsTitle": "File:Nazare, Portugal (52960130417).jpg",
-      "matchedTerm": "Nazare Portugal",
-      "altSubject": "Nazare, Portugal"
-    },
-    {
       "slug": "new-build-vs-resale-property-portugal",
       "collection": "compare",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Parque_das_Na%C3%A7%C3%B5es_-_Lisboa_-_Portugal_%2853449723482%29.jpg/1280px-Parque_das_Na%C3%A7%C3%B5es_-_Lisboa_-_Portugal_%2853449723482%29.jpg",
@@ -892,27 +811,6 @@
         "saturation": 0.225,
         "brightness": 0.648,
         "greyMass": 0.507
-      }
-    },
-    {
-      "slug": "obidos-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Castelo_de_%C3%93bidos_-_Portugal_%2851329763253%29.jpg/1280px-Castelo_de_%C3%93bidos_-_Portugal_%2851329763253%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Castelo_de_%C3%93bidos_-_Portugal_%2851329763253%29.jpg",
-      "width": 4604,
-      "height": 3069,
-      "alt": "Castelo de Óbidos - Portugal — Óbidos",
-      "altSubject": "Castelo de Óbidos - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Castelo_de_%C3%93bidos_-_Portugal_(51329763253).jpg",
-      "commonsTitle": "File:Castelo de Óbidos - Portugal (51329763253).jpg",
-      "matchedTerm": "Obidos Portugal muralha castelo",
-      "aesthetics": {
-        "colourfulness": 104.6,
-        "saturation": 0.459,
-        "brightness": 0.67,
-        "greyMass": 0.418
       }
     },
     {
@@ -1661,21 +1559,6 @@
       }
     },
     {
-      "slug": "setubal-peninsula-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Setubal%2C_Portugal_%2848915791026%29.jpg/1280px-Setubal%2C_Portugal_%2848915791026%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Setubal%2C_Portugal_%2848915791026%29.jpg",
-      "width": 2048,
-      "height": 1152,
-      "alt": "Setubal, Portugal — The Setúbal peninsula",
-      "credit": "celeumo.Brazil from RIO DE JANEIRO, BRAZIL / Wikimedia Commons",
-      "licence": "CC BY 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Setubal,_Portugal_(48915791026).jpg",
-      "commonsTitle": "File:Setubal, Portugal (48915791026).jpg",
-      "matchedTerm": "Setubal Portugal",
-      "altSubject": "Setubal, Portugal"
-    },
-    {
       "slug": "silver-coast-portugal-property-guide",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/A_Golden_Beach_%28131401413%29.jpeg/1280px-A_Golden_Beach_%28131401413%29.jpeg",
@@ -1695,21 +1578,6 @@
         "brightness": 0.592,
         "greyMass": 0.092
       }
-    },
-    {
-      "slug": "sintra-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Palacio_Nacional%2C_Sintra%2C_Portugal%2C_2022-07-25%2C_DD_19.jpg/1280px-Palacio_Nacional%2C_Sintra%2C_Portugal%2C_2022-07-25%2C_DD_19.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Palacio_Nacional%2C_Sintra%2C_Portugal%2C_2022-07-25%2C_DD_19.jpg",
-      "width": 7281,
-      "height": 3460,
-      "alt": "Palacio Nacional, Sintra, Portugal — Sintra",
-      "credit": "Diego Delso / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Palacio_Nacional,_Sintra,_Portugal,_2022-07-25,_DD_19.jpg",
-      "commonsTitle": "File:Palacio Nacional, Sintra, Portugal, 2022-07-25, DD 19.jpg",
-      "matchedTerm": "Sintra Portugal",
-      "altSubject": "Palacio Nacional, Sintra, Portugal"
     },
     {
       "slug": "six-senses-comporta",

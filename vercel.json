@@ -461,6 +461,86 @@
       "source": "/areas/lagos-property-investment/",
       "destination": "/property-for-sale/lagos/",
       "statusCode": 301
+    },
+    {
+      "source": "/areas/comporta-property-investment",
+      "destination": "/property-for-sale/alentejo-comporta/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/comporta-property-investment/",
+      "destination": "/property-for-sale/alentejo-comporta/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/aveiro-property-investment",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/aveiro-property-investment/",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/braga-property-investment",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/braga-property-investment/",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/coimbra-property-investment",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/coimbra-property-investment/",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/nazare-property-investment",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/nazare-property-investment/",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/obidos-property-investment",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/obidos-property-investment/",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/setubal-peninsula-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/setubal-peninsula-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/sintra-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/sintra-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
     }
   ],
   "headers": [
