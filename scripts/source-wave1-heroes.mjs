@@ -16,10 +16,8 @@ const used = new Set(
 );
 
 const WANT = [
-  { slug: 'citizenship-by-investment', terms: ['Belém Lisboa Portugal', 'Torre de Belém', 'Jerónimos Lisboa'] },
-  { slug: 'retire-in-portugal',        terms: ['Tavira Portugal', 'Óbidos Portugal', 'Lagos Algarve Portugal'] },
-  { slug: 'best-places-to-live',       terms: ['Coimbra Portugal', 'Aveiro Portugal', 'Braga Portugal'] },
-  { slug: 'international-schools',     terms: ['Estoril Portugal', 'Oeiras Portugal', 'Carcavelos Portugal'] },
+  { slug: 'from-uk',        terms: ['Algarve Portugal coast', 'Lagos Portugal Algarve', 'Carvoeiro Algarve', 'Tavira Algarve Portugal'] },
+  { slug: 'by-nationality', terms: ['Braga Portugal', 'Guimarães Portugal', 'Aveiro Portugal'] },
 ];
 
 const JUNK = /ecoponto|placa|plaque|sign(age)?\b|logo|coat of arms|bras[ãa]o|\bmap\b|mapa|diagram|graffiti|detalhe|close-?up|manhole|construction site|scaffold|roadworks|parking/i;

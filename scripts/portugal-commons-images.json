@@ -11,8 +11,8 @@
     "minBrightness": 0.42,
     "maxBrightness": 0.95
   },
-  "total": 140,
-  "uniqueFiles": 140,
+  "total": 128,
+  "uniqueFiles": 128,
   "failures": [],
   "images": [
     {
@@ -181,42 +181,6 @@
       }
     },
     {
-      "slug": "angolan-buyers-portugal",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Almada%2C_Cristo_Rei%2C_ponto_de_vista.jpg/1280px-Almada%2C_Cristo_Rei%2C_ponto_de_vista.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Almada%2C_Cristo_Rei%2C_ponto_de_vista.jpg",
-      "width": 3968,
-      "height": 2976,
-      "alt": "Lisbon and the Tagus seen from Cristo Rei in Almada — guidance for Angolan buyers",
-      "altSubject": "Almada, Cristo Rei, ponto de vista",
-      "credit": "Palickap / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Almada,_Cristo_Rei,_ponto_de_vista.jpg",
-      "commonsTitle": "File:Almada, Cristo Rei, ponto de vista.jpg",
-      "matchedTerm": "pinned"
-    },
-    {
-      "slug": "australian-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Portugal-Praia_do_Rodanho-P1160828_%2825893489275%29.jpg/1280px-Portugal-Praia_do_Rodanho-P1160828_%2825893489275%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Portugal-Praia_do_Rodanho-P1160828_%2825893489275%29.jpg",
-      "width": 1618,
-      "height": 1080,
-      "alt": "Portugal-Praia do Rodanho-P1160828 — The Portuguese surf coast — guidance for Australian buyers",
-      "altSubject": "Portugal-Praia do Rodanho-P1160828",
-      "credit": "mmmmngai@rogers.com / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Portugal-Praia_do_Rodanho-P1160828_(25893489275).jpg",
-      "commonsTitle": "File:Portugal-Praia do Rodanho-P1160828 (25893489275).jpg",
-      "matchedTerm": "cat:Surfing in Portugal",
-      "aesthetics": {
-        "colourfulness": 69.2,
-        "saturation": 0.381,
-        "brightness": 0.628,
-        "greyMass": 0.179
-      }
-    },
-    {
       "slug": "aveiro-property-investment",
       "collection": "areas",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Aveiro%2C_Part_I_-_Aveiro5616.jpg/1280px-Aveiro%2C_Part_I_-_Aveiro5616.jpg",
@@ -287,27 +251,6 @@
       "commonsTitle": "File:Azulejos, Braga, Portugal 25.jpg",
       "matchedTerm": "Braga Portugal",
       "altSubject": "Azulejos, Braga, Portugal 25"
-    },
-    {
-      "slug": "brazilian-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Playa_de_Set%C3%BAbal%2C_Portugal%2C_2012-08-17%2C_DD_01.JPG/1280px-Playa_de_Set%C3%BAbal%2C_Portugal%2C_2012-08-17%2C_DD_01.JPG",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Playa_de_Set%C3%BAbal%2C_Portugal%2C_2012-08-17%2C_DD_01.JPG",
-      "width": 5182,
-      "height": 2563,
-      "alt": "Playa de Setúbal, Portugal, 2012-08-17, DD 01 — Rossio, Lisbon — guidance for Brazilian buyers",
-      "altSubject": "Playa de Setúbal, Portugal, 2012-08-17, DD 01",
-      "credit": "Diego Delso / Wikimedia Commons",
-      "licence": "CC BY-SA 3.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Playa_de_Set%C3%BAbal,_Portugal,_2012-08-17,_DD_01.JPG",
-      "commonsTitle": "File:Playa de Setúbal, Portugal, 2012-08-17, DD 01.JPG",
-      "matchedTerm": "cat:Beaches of Setúbal",
-      "aesthetics": {
-        "colourfulness": 79,
-        "saturation": 0.323,
-        "brightness": 0.865,
-        "greyMass": 0.393
-      }
     },
     {
       "slug": "buy-property-portugal-foreigner",
@@ -381,27 +324,6 @@
       "commonsTitle": "File:Houses in Porto (38089511162).jpg",
       "matchedTerm": "Porto Ribeira houses",
       "altSubject": "Houses in Porto"
-    },
-    {
-      "slug": "canadian-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Praia_das_Pedras_do_Corgo_-_Portugal_%2832659894978%29.jpg/1280px-Praia_das_Pedras_do_Corgo_-_Portugal_%2832659894978%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Praia_das_Pedras_do_Corgo_-_Portugal_%2832659894978%29.jpg",
-      "width": 3875,
-      "height": 2470,
-      "alt": "Praia das Pedras do Corgo - Portugal — Porto — guidance for Canadian buyers",
-      "altSubject": "Praia das Pedras do Corgo - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_das_Pedras_do_Corgo_-_Portugal_(32659894978).jpg",
-      "commonsTitle": "File:Praia das Pedras do Corgo - Portugal (32659894978).jpg",
-      "matchedTerm": "cat:Beaches of Matosinhos",
-      "aesthetics": {
-        "colourfulness": 89.5,
-        "saturation": 0.464,
-        "brightness": 0.782,
-        "greyMass": 0.076
-      }
     },
     {
       "slug": "carvalhido",
@@ -479,27 +401,6 @@
         "saturation": 0.269,
         "brightness": 0.533,
         "greyMass": 0.415
-      }
-    },
-    {
-      "slug": "chinese-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Marina_de_Vilamoura_-_Portugal_%283841747853%29.jpg/1280px-Marina_de_Vilamoura_-_Portugal_%283841747853%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Marina_de_Vilamoura_-_Portugal_%283841747853%29.jpg",
-      "width": 5148,
-      "height": 3862,
-      "alt": "Marina de Vilamoura - Portugal — Vilamoura — guidance for Chinese buyers",
-      "altSubject": "Marina de Vilamoura - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Marina_de_Vilamoura_-_Portugal_(3841747853).jpg",
-      "commonsTitle": "File:Marina de Vilamoura - Portugal (3841747853).jpg",
-      "matchedTerm": "cat:Marina de Vilamoura",
-      "aesthetics": {
-        "colourfulness": 38.6,
-        "saturation": 0.229,
-        "brightness": 0.668,
-        "greyMass": 0.362
       }
     },
     {
@@ -773,43 +674,6 @@
       }
     },
     {
-      "slug": "french-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Loule_Castle_-_The_Algarve%2C_Portugal_%281399497720%29.jpg/1280px-Loule_Castle_-_The_Algarve%2C_Portugal_%281399497720%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Loule_Castle_-_The_Algarve%2C_Portugal_%281399497720%29.jpg",
-      "width": 1600,
-      "height": 1200,
-      "alt": "Loule Castle - The Algarve, Portugal — guidance for French buyers",
-      "credit": "Glen Bowman from Newcastle, England / Wikimedia Commons",
-      "licence": "CC BY 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Loule_Castle_-_The_Algarve,_Portugal_(1399497720).jpg",
-      "commonsTitle": "File:Loule Castle - The Algarve, Portugal (1399497720).jpg",
-      "matchedTerm": "Loule Algarve",
-      "altSubject": "Loule Castle - The Algarve, Portugal"
-    },
-    {
-      "slug": "german-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Praia_da_Marinha-Algarve-Portugal.jpg/1280px-Praia_da_Marinha-Algarve-Portugal.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Praia_da_Marinha-Algarve-Portugal.jpg",
-      "width": 6016,
-      "height": 4016,
-      "alt": "Praia da Marinha-Algarve-Portugal — The Algarve interior — guidance for German buyers",
-      "altSubject": "Praia da Marinha-Algarve-Portugal",
-      "credit": "Tobi 87 / Wikimedia Commons",
-      "licence": "CC BY-SA 3.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_da_Marinha-Algarve-Portugal.jpg",
-      "commonsTitle": "File:Praia da Marinha-Algarve-Portugal.jpg",
-      "matchedTerm": "Carvoeiro Algarve praia",
-      "aesthetics": {
-        "colourfulness": 64.2,
-        "saturation": 0.511,
-        "brightness": 0.509,
-        "greyMass": 0.054,
-        "hash": "e0a8a8c2d96122a4"
-      }
-    },
-    {
       "slug": "gross-vs-net-yield-portugal",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Amieira_Marina_-_Portugal_%284075471083%29.jpg/1280px-Amieira_Marina_-_Portugal_%284075471083%29.jpg",
@@ -1024,27 +888,6 @@
       }
     },
     {
-      "slug": "indian-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Parque_de_Santa_Catarina_-_Funchal_-_Portugal_%287156686592%29.jpg/1280px-Parque_de_Santa_Catarina_-_Funchal_-_Portugal_%287156686592%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Parque_de_Santa_Catarina_-_Funchal_-_Portugal_%287156686592%29.jpg",
-      "width": 5184,
-      "height": 3888,
-      "alt": "Parque de Santa Catarina - Funchal - Portugal — Lisbon docks — guidance for Indian buyers",
-      "altSubject": "Parque de Santa Catarina - Funchal - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Parque_de_Santa_Catarina_-_Funchal_-_Portugal_(7156686592).jpg",
-      "commonsTitle": "File:Parque de Santa Catarina - Funchal - Portugal (7156686592).jpg",
-      "matchedTerm": "Madeira Funchal baia vista",
-      "aesthetics": {
-        "colourfulness": 66.7,
-        "saturation": 0.485,
-        "brightness": 0.58,
-        "greyMass": 0.095
-      }
-    },
-    {
       "slug": "infinity",
       "collection": "projects",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Aqueduto-Campolide.jpg/1280px-Aqueduto-Campolide.jpg",
@@ -1079,21 +922,6 @@
       "commonsTitle": "File:Ribeira from Dom Luis I bridge (1).jpg",
       "matchedTerm": "Porto Dom Luis bridge",
       "altSubject": "Ribeira from Dom Luis I bridge"
-    },
-    {
-      "slug": "israeli-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Guincho%2C_Cascais%2C_Portugal_%28Unsplash%29.jpg/1280px-Guincho%2C_Cascais%2C_Portugal_%28Unsplash%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Guincho%2C_Cascais%2C_Portugal_%28Unsplash%29.jpg",
-      "width": 5616,
-      "height": 3744,
-      "alt": "The Atlantic coast at Guincho, Cascais — guidance for Israeli buyers",
-      "altSubject": "Guincho, Cascais, Portugal (Unsplash)",
-      "credit": "Manuel Inglez manuelinglez / Wikimedia Commons",
-      "licence": "CC0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Guincho,_Cascais,_Portugal_(Unsplash).jpg",
-      "commonsTitle": "File:Guincho, Cascais, Portugal (Unsplash).jpg",
-      "matchedTerm": "pinned"
     },
     {
       "slug": "lagos-property-investment",
@@ -2427,21 +2255,6 @@
       "altSubject": "Carvalhal village in Comporta"
     },
     {
-      "slug": "south-african-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Marina_de_Albufeira_-_Portugal_%284754531121%29.jpg/1280px-Marina_de_Albufeira_-_Portugal_%284754531121%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Marina_de_Albufeira_-_Portugal_%284754531121%29.jpg",
-      "width": 7676,
-      "height": 5118,
-      "alt": "Marina de Albufeira - Portugal — guidance for South African buyers",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Marina_de_Albufeira_-_Portugal_(4754531121).jpg",
-      "commonsTitle": "File:Marina de Albufeira - Portugal (4754531121).jpg",
-      "matchedTerm": "Albufeira marina Algarve",
-      "altSubject": "Marina de Albufeira - Portugal"
-    },
-    {
       "slug": "stamp-duty-portugal-property",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Castelo_de_Guimar%C3%A3es_-_Portugal_%2812217992163%29.jpg/1280px-Castelo_de_Guimar%C3%A3es_-_Portugal_%2812217992163%29.jpg",
@@ -2506,42 +2319,6 @@
         "brightness": 0.615,
         "greyMass": 0.286
       }
-    },
-    {
-      "slug": "uae-buyers-portugal-property",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Serra_da_Arr%C3%A1bida_-_Praia_nascente_e_Pen%C3%ADnsula_de_Tr%C3%B3ia.jpg/1280px-Serra_da_Arr%C3%A1bida_-_Praia_nascente_e_Pen%C3%ADnsula_de_Tr%C3%B3ia.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Serra_da_Arr%C3%A1bida_-_Praia_nascente_e_Pen%C3%ADnsula_de_Tr%C3%B3ia.jpg",
-      "width": 5096,
-      "height": 3187,
-      "alt": "The beach on the Tróia peninsula, Setúbal — guidance for UAE buyers",
-      "altSubject": "Serra da Arrábida - Praia nascente e Península de Tróia",
-      "credit": "António Ernesto Martins / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Serra_da_Arr%C3%A1bida_-_Praia_nascente_e_Pen%C3%ADnsula_de_Tr%C3%B3ia.jpg",
-      "commonsTitle": "File:Serra da Arrábida - Praia nascente e Península de Tróia.jpg",
-      "matchedTerm": "Troia praia peninsula",
-      "aesthetics": {
-        "colourfulness": 41,
-        "saturation": 0.323,
-        "brightness": 0.513,
-        "greyMass": 0.186
-      }
-    },
-    {
-      "slug": "uk-buyers-portugal-property-brexit",
-      "collection": "segments",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Carvoeiro_Portugal_February_2015_01.jpg/1280px-Carvoeiro_Portugal_February_2015_01.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Carvoeiro_Portugal_February_2015_01.jpg",
-      "width": 6332,
-      "height": 3539,
-      "alt": "Carvoeiro on the Algarve coast — guidance for UK buyers after Brexit",
-      "altSubject": "Carvoeiro Portugal February 2015 01",
-      "credit": "Bengt Nyman / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Carvoeiro_Portugal_February_2015_01.jpg",
-      "commonsTitle": "File:Carvoeiro Portugal February 2015 01.jpg",
-      "matchedTerm": "pinned"
     },
     {
       "slug": "uk-portugal-double-taxation-treaty",

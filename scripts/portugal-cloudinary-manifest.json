@@ -180,34 +180,6 @@
       "bytes": 200453,
       "uploaded_at": "2026-08-25T23:39:49Z"
     },
-    "angolan-buyers-portugal": {
-      "public_id": "more-group/portugal/segments/angolan-buyers-portugal/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Almada%2C_Cristo_Rei%2C_ponto_de_vista.jpg/1280px-Almada%2C_Cristo_Rei%2C_ponto_de_vista.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Almada%2C_Cristo_Rei%2C_ponto_de_vista.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Almada,_Cristo_Rei,_ponto_de_vista.jpg",
-      "source_sha256": "140abc3492d7423811a137b385f67fec27aa47084141585d65673e211cfbe05b",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701195/more-group/portugal/segments/angolan-buyers-portugal/hero.jpg",
-      "version": 1787701195,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 300216,
-      "uploaded_at": "2026-08-25T23:39:55Z"
-    },
-    "australian-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/australian-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Portugal-Praia_do_Rodanho-P1160828_%2825893489275%29.jpg/1280px-Portugal-Praia_do_Rodanho-P1160828_%2825893489275%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Portugal-Praia_do_Rodanho-P1160828_%2825893489275%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Portugal-Praia_do_Rodanho-P1160828_(25893489275).jpg",
-      "source_sha256": "cad6e8d36e8e07de160f4ea39f64ebecd5c898756716985e8f8eae617f18efb7",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701198/more-group/portugal/segments/australian-buyers-portugal-property/hero.jpg",
-      "version": 1787701198,
-      "format": "jpg",
-      "width": 1280,
-      "height": 854,
-      "bytes": 304056,
-      "uploaded_at": "2026-08-25T23:39:58Z"
-    },
     "aveiro-property-investment": {
       "public_id": "more-group/portugal/areas/aveiro-property-investment/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Aveiro%2C_Part_I_-_Aveiro5616.jpg/1280px-Aveiro%2C_Part_I_-_Aveiro5616.jpg",
@@ -264,20 +236,6 @@
       "bytes": 313224,
       "uploaded_at": "2026-08-25T23:40:12Z"
     },
-    "brazilian-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/brazilian-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Playa_de_Set%C3%BAbal%2C_Portugal%2C_2012-08-17%2C_DD_01.JPG/1280px-Playa_de_Set%C3%BAbal%2C_Portugal%2C_2012-08-17%2C_DD_01.JPG",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Playa_de_Set%C3%BAbal%2C_Portugal%2C_2012-08-17%2C_DD_01.JPG",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Playa_de_Set%C3%BAbal,_Portugal,_2012-08-17,_DD_01.JPG",
-      "source_sha256": "2ceba18b67d2d53decaaea22e220ade25a737be9e2eb3bddb63e404e1b27cca7",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701215/more-group/portugal/segments/brazilian-buyers-portugal-property/hero.jpg",
-      "version": 1787701215,
-      "format": "jpg",
-      "width": 1280,
-      "height": 633,
-      "bytes": 188210,
-      "uploaded_at": "2026-08-25T23:40:15Z"
-    },
     "caldas-da-rainha-property-investment": {
       "public_id": "more-group/portugal/areas/caldas-da-rainha-property-investment/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Parque_D._Carlos_I_-_Caldas_da_Rainha_-_Portugal_%284820349779%29.jpg/1280px-Parque_D._Carlos_I_-_Caldas_da_Rainha_-_Portugal_%284820349779%29.jpg",
@@ -306,20 +264,6 @@
       "bytes": 485822,
       "uploaded_at": "2026-08-25T23:40:22Z"
     },
-    "canadian-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/canadian-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Praia_das_Pedras_do_Corgo_-_Portugal_%2832659894978%29.jpg/1280px-Praia_das_Pedras_do_Corgo_-_Portugal_%2832659894978%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Praia_das_Pedras_do_Corgo_-_Portugal_%2832659894978%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Praia_das_Pedras_do_Corgo_-_Portugal_(32659894978).jpg",
-      "source_sha256": "a147c0b42a74c16c231dbaf54ba78959cde13230d960f2be0b3fc4968db20a97",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701225/more-group/portugal/segments/canadian-buyers-portugal-property/hero.jpg",
-      "version": 1787701225,
-      "format": "jpg",
-      "width": 1280,
-      "height": 816,
-      "bytes": 240921,
-      "uploaded_at": "2026-08-25T23:40:25Z"
-    },
     "chiado-principe-real-property": {
       "public_id": "more-group/portugal/areas/chiado-principe-real-property/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Jardim_Praca_do_Principe_Real_-_panoramio.jpg/1280px-Jardim_Praca_do_Principe_Real_-_panoramio.jpg",
@@ -333,20 +277,6 @@
       "height": 852,
       "bytes": 528370,
       "uploaded_at": "2026-08-25T23:40:58Z"
-    },
-    "chinese-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/chinese-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Marina_de_Vilamoura_-_Portugal_%283841747853%29.jpg/1280px-Marina_de_Vilamoura_-_Portugal_%283841747853%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Marina_de_Vilamoura_-_Portugal_%283841747853%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Marina_de_Vilamoura_-_Portugal_(3841747853).jpg",
-      "source_sha256": "0a6614947fb53bc1651a8e212c6115007e13c372772fa76445544221a12fb9d1",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701261/more-group/portugal/segments/chinese-buyers-portugal-property/hero.jpg",
-      "version": 1787701261,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 461415,
-      "uploaded_at": "2026-08-25T23:41:01Z"
     },
     "coimbra-property-investment": {
       "public_id": "more-group/portugal/areas/coimbra-property-investment/hero",
@@ -488,34 +418,6 @@
       "bytes": 440228,
       "uploaded_at": "2026-08-25T23:41:47Z"
     },
-    "french-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/french-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Loule_Castle_-_The_Algarve%2C_Portugal_%281399497720%29.jpg/1280px-Loule_Castle_-_The_Algarve%2C_Portugal_%281399497720%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Loule_Castle_-_The_Algarve%2C_Portugal_%281399497720%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Loule_Castle_-_The_Algarve,_Portugal_(1399497720).jpg",
-      "source_sha256": "e2dcd12b803a9c7645d136e955fdcaf1c41846e6ec64fcb3eeb1566736506e08",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701311/more-group/portugal/segments/french-buyers-portugal-property/hero.jpg",
-      "version": 1787701311,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 366328,
-      "uploaded_at": "2026-08-25T23:41:51Z"
-    },
-    "german-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/german-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Praia_da_Marinha-Algarve-Portugal.jpg/1280px-Praia_da_Marinha-Algarve-Portugal.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Praia_da_Marinha-Algarve-Portugal.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Praia_da_Marinha-Algarve-Portugal.jpg",
-      "source_sha256": "8405864b1647e1012b5260fae7e46aae50b951b42784157ded2e8479a52d9a1c",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701315/more-group/portugal/segments/german-buyers-portugal-property/hero.jpg",
-      "version": 1787701315,
-      "format": "jpg",
-      "width": 1280,
-      "height": 854,
-      "bytes": 381680,
-      "uploaded_at": "2026-08-25T23:41:55Z"
-    },
     "gross-vs-net-yield-portugal": {
       "public_id": "more-group/portugal/guides/gross-vs-net-yield-portugal/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Amieira_Marina_-_Portugal_%284075471083%29.jpg/1280px-Amieira_Marina_-_Portugal_%284075471083%29.jpg",
@@ -656,20 +558,6 @@
       "bytes": 591868,
       "uploaded_at": "2026-08-25T23:43:15Z"
     },
-    "indian-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/indian-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Parque_de_Santa_Catarina_-_Funchal_-_Portugal_%287156686592%29.jpg/1280px-Parque_de_Santa_Catarina_-_Funchal_-_Portugal_%287156686592%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Parque_de_Santa_Catarina_-_Funchal_-_Portugal_%287156686592%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Parque_de_Santa_Catarina_-_Funchal_-_Portugal_(7156686592).jpg",
-      "source_sha256": "58da97cdf7a9539b3c354b2f586bbef6287a8f62f3f5a53b302a318ea2aab9c8",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701398/more-group/portugal/segments/indian-buyers-portugal-property/hero.jpg",
-      "version": 1787701398,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 539315,
-      "uploaded_at": "2026-08-25T23:43:18Z"
-    },
     "infinity": {
       "public_id": "more-group/portugal/projects/infinity/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Aqueduto-Campolide.jpg/1280px-Aqueduto-Campolide.jpg",
@@ -697,20 +585,6 @@
       "height": 863,
       "bytes": 317294,
       "uploaded_at": "2026-08-25T23:44:09Z"
-    },
-    "israeli-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/israeli-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Guincho%2C_Cascais%2C_Portugal_%28Unsplash%29.jpg/1280px-Guincho%2C_Cascais%2C_Portugal_%28Unsplash%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Guincho%2C_Cascais%2C_Portugal_%28Unsplash%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Guincho,_Cascais,_Portugal_(Unsplash).jpg",
-      "source_sha256": "ad9a0effdd25c7c6e340de5ffc6f5d2b999bff7069f2475965e9228882a946a1",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701453/more-group/portugal/segments/israeli-buyers-portugal-property/hero.jpg",
-      "version": 1787701453,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 261894,
-      "uploaded_at": "2026-08-25T23:44:13Z"
     },
     "lagos-property-investment": {
       "public_id": "more-group/portugal/areas/lagos-property-investment/hero",
@@ -1664,20 +1538,6 @@
       "bytes": 490500,
       "uploaded_at": "2026-08-25T23:48:18Z"
     },
-    "south-african-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/south-african-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Marina_de_Albufeira_-_Portugal_%284754531121%29.jpg/1280px-Marina_de_Albufeira_-_Portugal_%284754531121%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Marina_de_Albufeira_-_Portugal_%284754531121%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Marina_de_Albufeira_-_Portugal_(4754531121).jpg",
-      "source_sha256": "b6e732f40a90a28f7ee7606994979e28a1e39a93d148734602b48ce8cd74796c",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701701/more-group/portugal/segments/south-african-buyers-portugal-property/hero.jpg",
-      "version": 1787701701,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 337054,
-      "uploaded_at": "2026-08-25T23:48:21Z"
-    },
     "stamp-duty-portugal-property": {
       "public_id": "more-group/portugal/guides/stamp-duty-portugal-property/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Castelo_de_Guimar%C3%A3es_-_Portugal_%2812217992163%29.jpg/1280px-Castelo_de_Guimar%C3%A3es_-_Portugal_%2812217992163%29.jpg",
@@ -1733,34 +1593,6 @@
       "height": 966,
       "bytes": 660995,
       "uploaded_at": "2026-08-25T23:48:33Z"
-    },
-    "uae-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/uae-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Serra_da_Arr%C3%A1bida_-_Praia_nascente_e_Pen%C3%ADnsula_de_Tr%C3%B3ia.jpg/1280px-Serra_da_Arr%C3%A1bida_-_Praia_nascente_e_Pen%C3%ADnsula_de_Tr%C3%B3ia.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Serra_da_Arr%C3%A1bida_-_Praia_nascente_e_Pen%C3%ADnsula_de_Tr%C3%B3ia.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Serra_da_Arr%C3%A1bida_-_Praia_nascente_e_Pen%C3%ADnsula_de_Tr%C3%B3ia.jpg",
-      "source_sha256": "9ecb67e227f82b0983f5d7c29792d2b98d31c68f64aeb15e2dbd9cd95e484b70",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701716/more-group/portugal/segments/uae-buyers-portugal-property/hero.jpg",
-      "version": 1787701716,
-      "format": "jpg",
-      "width": 1280,
-      "height": 801,
-      "bytes": 224807,
-      "uploaded_at": "2026-08-25T23:48:36Z"
-    },
-    "uk-buyers-portugal-property-brexit": {
-      "public_id": "more-group/portugal/segments/uk-buyers-portugal-property-brexit/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Carvoeiro_Portugal_February_2015_01.jpg/1280px-Carvoeiro_Portugal_February_2015_01.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Carvoeiro_Portugal_February_2015_01.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Carvoeiro_Portugal_February_2015_01.jpg",
-      "source_sha256": "1c60da8c75116ac4e8893727a021a185482ed1d66b5f85ab797deb1000e099d6",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701719/more-group/portugal/segments/uk-buyers-portugal-property-brexit/hero.jpg",
-      "version": 1787701719,
-      "format": "jpg",
-      "width": 1280,
-      "height": 715,
-      "bytes": 348532,
-      "uploaded_at": "2026-08-25T23:48:39Z"
     },
     "vanguard-properties-portugal": {
       "public_id": "more-group/portugal/developers/vanguard-properties-portugal/hero",
