@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * MORE Group — sync shared content-gate from the single template source.
+ * MORE Group: sync shared content-gate from the single template source.
  *
  * Copies the canonical files from 08_Идеи/_templates/scripts/ into THIS site's
  * scripts/ so every site runs the exact same checks and queue. Run from a site
@@ -77,4 +77,4 @@ for (const [from, to] of jobs) {
   copied += 1;
 }
 
-console.log(`[sync] done — ${copied} updated, ${unchanged} already current (source: ${TPL})`);
+console.log(`[sync] done, ${copied} updated, ${unchanged} already current (source: ${TPL})`);

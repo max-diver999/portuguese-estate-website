@@ -49,7 +49,7 @@ if (mdxFiles.length) {
   console.log('→ npm run build');
   run('npm', ['run', 'build']);
 } else {
-  console.log('No MDX in outgoing commits — skipping content validate/build');
+  console.log('No MDX in outgoing commits, skipping content validate/build');
 }
 
 console.log('✅ prepush gate passed');

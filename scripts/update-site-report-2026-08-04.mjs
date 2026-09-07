@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Refresh site-report GSC/GA4 frontmatter + glance stats — 4 Aug 2026 */
+/** Refresh site-report GSC/GA4 frontmatter + glance stats: 4 Aug 2026 */
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -54,7 +54,7 @@ const glance = `  <div class="stats-grid">
       <div class="sublabel">63 guides · 26 areas · 14 compare · 13 segments · 7 projects</div>
     </div>
     <div class="stat-card">
-      <div class="num amber">—</div>
+      <div class="num amber">, </div>
       <div class="label">Ahrefs DR</div>
       <div class="sublabel">Baseline · new domain · target DR 10+ Q3 2026</div>
     </div>
@@ -101,7 +101,7 @@ const changelog = `  <div class="changelog">
         <div class="changelog-item">
       <div class="changelog-date">4 Aug 2026</div>
       <div class="changelog-content">
-        <div class="changelog-title">Site-report GSC refresh — Jul traction window</div>
+        <div class="changelog-title">Site-report GSC refresh, Jul traction window</div>
         <div class="changelog-desc">GSC 27 Jun–1 Aug: 19 clicks, 3 652 impressions, CTR 0.52%, avg position 15.8. Jul MoM: 18 clicks vs 1 in Jun. GA4 Jul: 169 sessions. 144 sitemap URLs · 126 MDX. Note: refresh pending live GSC MCP re-auth for query/page drill-down.</div>
         <div class="changelog-tags"><span class="tag green">GSC</span><span class="tag blue">GA4</span><span class="tag amber">Portfolio sync</span></div>
       </div>

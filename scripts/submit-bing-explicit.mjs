@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Bing IndexNow — explicit URLs only (portuguese-estate.com). Never api.indexnow.org. */
+/** Bing IndexNow: explicit URLs only (portuguese-estate.com). Never api.indexnow.org. */
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Corpus signal gate — catches what validate:content alone misses.
+ * Corpus signal gate: catches what validate:content alone misses.
  * Exit 1 on: em-dash overload, duplicate padding H2s, MDX hard-fail patterns, fix-queue blockers.
  *
  * Usage: node scripts/qa-corpus-signals.mjs [--json]
@@ -142,9 +142,9 @@ if (jsonOut) {
   console.log('\n=== CORPUS SIGNALS GATE ===');
   console.log(`MDX scanned: ${summary.files}`);
   if (!failures.length) {
-    console.log('✅ PASS — em-dash, padding dupes, fix-queue, MDX patterns OK\n');
+    console.log('✅ PASS, em-dash, padding dupes, fix-queue, MDX patterns OK\n');
   } else {
-    console.log(`❌ FAIL — ${failures.length} issue(s)\n`);
+    console.log(`❌ FAIL, ${failures.length} issue(s)\n`);
     for (const [k, n] of Object.entries(summary.byKind).sort((a, b) => b[1] - a[1])) {
       console.log(`  ${n}× ${k}`);
     }

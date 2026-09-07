@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * MORE Group — universal fix-batch queue (single source; synced to every site).
+ * MORE Group: universal fix-batch queue (single source; synced to every site).
  *
  * Prioritises EXISTING pages to fix (not new content). Works on any MORE Group
  * site (EN guides/areas/... or RU gajdy/rajony/...). No HTTP, no paid models.
  *
  * `ready` = aligned with validate:strict blockers (not just score >= 90).
- * Run validate:strict on tier A before showing Maksim — queue is a pre-filter only.
+ * Run validate:strict on tier A before showing Maksim: queue is a pre-filter only.
  *
  * Usage:
  *   node scripts/fix-batch-queue.mjs                 # tier A, top 15
@@ -340,7 +340,7 @@ if (verifyMode) {
   let falseReady = 0;
   let falseBlock = 0;
 
-  console.log(`\n=== QUEUE vs VALIDATE:STRICT VERIFY — ${isRu ? 'RU' : 'EN'} ===`);
+  console.log(`\n=== QUEUE vs VALIDATE:STRICT VERIFY, ${isRu ? 'RU' : 'EN'} ===`);
   console.log(`Checking ${toVerify.length} URL(s)…\n`);
 
   for (const r of toVerify) {
@@ -365,9 +365,9 @@ if (verifyMode) {
     );
     if (!isAligned) {
       if (r.ready && !v.pass) {
-        console.log(`        └ FALSE READY — validator: ${v.errors.slice(0, 2).join('; ')}`);
+        console.log(`        └ FALSE READY, validator: ${v.errors.slice(0, 2).join('; ')}`);
       } else if (!r.ready && v.pass) {
-        console.log('        └ FALSE BLOCK — queue too strict or drift');
+        console.log('        └ FALSE BLOCK, queue too strict or drift');
       }
     } else if (drift.length) {
       console.log(`        └ validator-only: ${drift.join(', ')}`);
@@ -406,7 +406,7 @@ if (jsonOut) {
 }
 
 const mode = recoverMode ? 'NOINDEX RECOVERY' : 'FIX-BATCH';
-console.log(`\n=== ${mode} QUEUE — ${isRu ? 'RU' : 'EN'} site ===`);
+console.log(`\n=== ${mode} QUEUE, ${isRu ? 'RU' : 'EN'} site ===`);
 console.log(`Scanned: ${records.length} | in queue: ${rows.length}${tierFilter ? ` | tier ${tierFilter}` : ''}\n`);
 
 const counts = rows.reduce((a, r) => ((a[r.tier] = (a[r.tier] || 0) + 1), a), {});

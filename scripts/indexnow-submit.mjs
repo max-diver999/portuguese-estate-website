@@ -1,4 +1,4 @@
-// IndexNow — submit portuguese-estate.com URLs to Bing ONLY (never api.indexnow.org / Yandex)
+// IndexNow: submit portuguese-estate.com URLs to Bing ONLY (never api.indexnow.org / Yandex)
 // Run: node scripts/indexnow-submit.mjs
 //   or: node scripts/indexnow-submit.mjs --explicit URL URL ...
 
@@ -52,7 +52,7 @@ function buildAllUrls() {
         }
       }
     } catch {
-      // collection missing — skip
+      // collection missing: skip
     }
   }
 

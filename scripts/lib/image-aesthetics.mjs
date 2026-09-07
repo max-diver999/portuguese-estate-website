@@ -6,10 +6,10 @@
  * villas and sea views. Accuracy is necessary and not sufficient. These metrics
  * make "attractive" a measured property that the pipeline can enforce.
  *
- * colourfulness — Hasler & Süsstrunk (2003) metric. Beaches, sunsets and tiled
+ * colourfulness: Hasler & Süsstrunk (2003) metric. Beaches, sunsets and tiled
  *   façades score high; wet concrete scores low.
- * greyMass — fraction of desaturated pixels. A brutalist block runs above 0.6.
- * brightness — mean value channel. Rejects murky, underexposed frames.
+ * greyMass: fraction of desaturated pixels. A brutalist block runs above 0.6.
+ * brightness: mean value channel. Rejects murky, underexposed frames.
  */
 import sharp from 'sharp';
 

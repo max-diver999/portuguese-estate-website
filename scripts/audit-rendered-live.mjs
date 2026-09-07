@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rendered-page audit — LIVE or local dist HTML (layout + MDX combined).
+ * Rendered-page audit: LIVE or local dist HTML (layout + MDX combined).
  * Auto-discovers collections from src/content/*.mdx
  *
  * Usage:
@@ -178,8 +178,8 @@ const CHECKS = [
     // UAE, Thailand) and copy from those markets repeatedly survived into
     // production. Two tiers, because Portugal-vs-X pages legitimately discuss
     // other markets in prose:
-    //   HARD  — markets this site never covers, or known broken strings. Anywhere.
-    //   SOFT  — other-market regions. Only a defect in <title>, meta description
+    //   HARD : markets this site never covers, or known broken strings. Anywhere.
+    //   SOFT : other-market regions. Only a defect in <title>, meta description
     //           or a heading, which is where every instance of fork residue sat.
     id: 'foreign-market-copy',
     severity: 'P0',
@@ -212,7 +212,7 @@ const CHECKS = [
     },
   },
   {
-    // A phone number a visitor can READ must never be a foreign one — a +66
+    // A phone number a visitor can READ must never be a foreign one, a +66
     // country code on a Lisbon property page destroys trust before the click.
     // This stays hard regardless of the interim flag.
     id: 'contact-number-visible',
@@ -220,7 +220,7 @@ const CHECKS = [
     test: (html) => {
       const numbers = [...new Set([...html.matchAll(/wa\.me\/(\d{6,})/g)].map((m) => m[1]))];
       if (!numbers.length) return null;
-      // strip scripts, tags and attributes — leave only what renders as text
+      // strip scripts, tags and attributes: leave only what renders as text
       const text = html
         .replace(/<script[\s\S]*?<\/script>/g, ' ')
         .replace(/<style[\s\S]*?<\/style>/g, ' ')
@@ -242,7 +242,7 @@ const CHECKS = [
         .filter((n) => !n.startsWith('351'));
       if (!bad.length) return null;
       return WHATSAPP_INTERIM
-        ? `interim wa.me number in use (+${bad.join(', +')}) — not displayed to visitors; replace with a +351 number when available`
+        ? `interim wa.me number in use (+${bad.join(', +')}), not displayed to visitors; replace with a +351 number when available`
         : `wa.me number is not a Portuguese (+351) number: +${bad.join(', +')}`;
     },
   },
@@ -250,7 +250,7 @@ const CHECKS = [
 
 /**
  * Non-collection pages. These are NOT under src/content, so the collection walk
- * never reached them — which is exactly where Mexico/Italy fork copy survived.
+ * never reached them: which is exactly where Mexico/Italy fork copy survived.
  * requireLeadForm is false where a lead form is not expected.
  */
 const STANDALONE_PAGES = [
@@ -355,7 +355,7 @@ console.log(`Rendered audit: ${useLocal ? 'local dist' : SITE_URL}`);
 console.log(`Site: ${path.basename(ROOT)} | pages: ${tasks.length} | checks: ${CHECKS.length}\n`);
 
 if (!tasks.length) {
-  console.log('No MDX pages found — skip.');
+  console.log('No MDX pages found, skip.');
   process.exit(0);
 }
 
@@ -396,7 +396,7 @@ if (byCheck.size === 0 && errors.length === 0) {
 } else {
   for (const [checkId, hits] of [...byCheck.entries()].sort((a, b) => b[1].length - a[1].length)) {
     const sev = hits[0]?.severity || 'P1';
-    console.log(`=== [${sev}] ${checkId} — ${hits.length} page(s) ===`);
+    console.log(`=== [${sev}] ${checkId}, ${hits.length} page(s) ===`);
     for (const h of hits.slice(0, 6)) {
       console.log(`  ${h.url}`);
       console.log(`    → ${h.detail}`);

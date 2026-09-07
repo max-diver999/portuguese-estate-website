@@ -1,10 +1,10 @@
-// Google Indexing API — portuguese-estate.com
+// Google Indexing API: portuguese-estate.com
 // Usage:
 //   node scripts/google-indexing-api.mjs [--batch N] [--offset N]
 //   node scripts/google-indexing-api.mjs --explicit URL URL ...
 //
 // Daily quota: 200 URL/day. Use --offset for multi-day batches.
-// NEVER run without explicit approval — prefer submit-google-explicit.mjs for new URLs.
+// NEVER run without explicit approval: prefer submit-google-explicit.mjs for new URLs.
 
 import { readFileSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
@@ -124,12 +124,12 @@ async function main() {
         }
       } else {
         errors++;
-        console.log(`  [${i + 1}] ${url} — ${res.status} ${res.statusText}`);
+        console.log(`  [${i + 1}] ${url}, ${res.status} ${res.statusText}`);
       }
     } catch (e) {
       errors++;
       const msg = e.response?.data?.error?.message || e.message;
-      console.log(`  [${i + 1}] FAIL ${url} — ${msg}`);
+      console.log(`  [${i + 1}] FAIL ${url}, ${msg}`);
 
       if (e.response?.status === 429) {
         console.log('\n⚠ Daily quota exceeded. Run again tomorrow with:');

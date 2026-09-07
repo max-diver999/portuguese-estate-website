@@ -1,4 +1,4 @@
-// QA audit for portuguese-estate content — hard gate before publish
+// QA audit for portuguese-estate content: hard gate before publish
 // Usage:
 //   node scripts/qa-audit.mjs
 //   node scripts/qa-audit.mjs --changed
@@ -38,11 +38,11 @@ const BANNED_PHRASES = [
 const REGULATORY_STALE = [
   {
     pattern: /€\s?3,040\s*(?:per month|\/\s?month|\/mo)/i,
-    hint: 'D8 threshold EUR 3,040 is 4x the 2023 minimum wage (EUR 760) — 2026 value is EUR 3,680',
+    hint: 'D8 threshold EUR 3,040 is 4x the 2023 minimum wage (EUR 760), 2026 value is EUR 3,680',
   },
   {
     pattern: /€\s?3,480\s*(?:per month|\/\s?month|\/mo)/i,
-    hint: 'D8 threshold EUR 3,480 is 4x the 2025 minimum wage (EUR 870) — 2026 value is EUR 3,680',
+    hint: 'D8 threshold EUR 3,480 is 4x the 2025 minimum wage (EUR 870), 2026 value is EUR 3,680',
   },
   {
     pattern: /(?:D7|passive income)[^.]{0,80}€\s?(?:760|820|870)\s*(?:per month|\/\s?month|\/mo)/i,
@@ -50,11 +50,11 @@ const REGULATORY_STALE = [
   },
   {
     pattern: /golden visa[^.]{0,60}(?:buy|purchase|invest in)[^.]{0,40}(?:real estate|property)[^.]{0,30}(?:qualif|eligib|available)/i,
-    hint: 'Golden Visa real estate route closed by Law 56/2023 in October 2023 — verify wording',
+    hint: 'Golden Visa real estate route closed by Law 56/2023 in October 2023, verify wording',
   },
   {
     pattern: /NHR[^.]{0,60}(?:still (?:available|open)|you can (?:apply|register))/i,
-    hint: 'NHR closed to new applicants end-2024; IFICI (NHR 2.0) replaced it — verify wording',
+    hint: 'NHR closed to new applicants end-2024; IFICI (NHR 2.0) replaced it, verify wording',
   },
 ];
 
@@ -244,7 +244,7 @@ function auditFile(c, slug) {
 
   /**
    * Pages that deliberately document the historical progression of a threshold
-   * would otherwise trip every staleness rule by design. Keep this list short —
+   * would otherwise trip every staleness rule by design. Keep this list short,
    * it is an exemption from a correctness gate, not a convenience.
    */
   const REGULATORY_HISTORY_PAGES = new Set(['portugal-residency-options-without-golden-visa']);
@@ -318,7 +318,7 @@ if (singleFile) {
 } else if (changedOnly) {
   filesToAudit = getChangedFiles();
   if (!filesToAudit.length) {
-    console.log('No changed MDX files — skipping audit.');
+    console.log('No changed MDX files, skipping audit.');
     process.exit(0);
   }
 } else {

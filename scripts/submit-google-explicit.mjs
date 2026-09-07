@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Google Indexing API — explicit URLs only (portuguese-estate.com). */
+/** Google Indexing API: explicit URLs only (portuguese-estate.com). */
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -63,7 +63,7 @@ for (const url of urls) {
   } catch (e) {
     fail++;
     const msg = e.response?.data?.error?.message || e.message;
-    console.log(`FAIL ${url} — ${msg}`);
+    console.log(`FAIL ${url}, ${msg}`);
     if (e.response?.status === 429) break;
   }
 }

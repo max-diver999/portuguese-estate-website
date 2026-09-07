@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** QA audit for _drafts/wave8-10 — Tier A gate before publish move */
+/** QA audit for _drafts/wave8-10: Tier A gate before publish move */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';

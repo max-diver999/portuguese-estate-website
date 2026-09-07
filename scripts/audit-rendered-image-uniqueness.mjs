@@ -3,7 +3,7 @@
  *
  * The frontmatter gate already blocks two MDX files sharing a heroImage. This runs
  * against the built output instead, because a duplicate can also arrive from a
- * hard-coded URL in a component or a data file — which is exactly how the homepage
+ * hard-coded URL in a component or a data file: which is exactly how the homepage
  * ended up showing a project's hero photograph as its own.
  *
  * Hub and listing pages are exempt: a card is *supposed* to show the photograph of
@@ -17,7 +17,7 @@ import path from 'node:path';
 
 const root = process.argv[2] || '.vercel/output/static';
 if (!fs.existsSync(root)) {
-  console.error(`no build output at ${root} — run npm run build first`);
+  console.error(`no build output at ${root}, run npm run build first`);
   process.exit(1);
 }
 
@@ -52,9 +52,9 @@ for (const file of pages) {
 const shared = [...owners].filter(([, ps]) => ps.length > 1);
 console.log(`content pages: ${contentPages} · distinct images: ${owners.size}`);
 if (!shared.length) {
-  console.log('PASS — no photograph appears on more than one content page.');
+  console.log('PASS, no photograph appears on more than one content page.');
   process.exit(0);
 }
 for (const [u, ps] of shared) console.log(`SHARED  ${ps.join('  ')}\n        ${u}`);
-console.log(`\nFAIL — ${shared.length} image(s) on more than one content page.`);
+console.log(`\nFAIL, ${shared.length} image(s) on more than one content page.`);
 process.exit(1);

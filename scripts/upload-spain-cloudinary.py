@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Upload Spain project images to Cloudinary — more-group/spain/projects/{slug}/"""
+"""Upload Spain project images to Cloudinary, more-group/spain/projects/{slug}/"""
 from __future__ import annotations
 
 import argparse
@@ -214,7 +214,7 @@ def main() -> None:
             else:
                 fail += 1
                 existing.setdefault("failed", []).append(res)
-                print(f"  ✗ {res['kid']} — {res.get('error')}")
+                print(f"  ✗ {res['kid']}, {res.get('error')}")
 
     existing["uploaded"] = uploaded
     existing["cloud"] = cloud

@@ -14,8 +14,8 @@
 ### Current snippet
 
 ```yaml
-title: "Portugal IMT for Non-Residents — 7.5% Flat Rate 2026"
-description: "Non-resident IMT flat 7.5% from Sep 2026 (DL 97/2026). Worked €400k examples, refund rules, resident bands — Lisbon and Algarve."
+title: "Portugal IMT for Non-Residents, 7.5% Flat Rate 2026"
+description: "Non-resident IMT flat 7.5% from Sep 2026 (DL 97/2026). Worked €400k examples, refund rules, resident bands, Lisbon and Algarve."
 ```
 
 **Strengths:**
@@ -31,7 +31,7 @@ description: "Non-resident IMT flat 7.5% from Sep 2026 (DL 97/2026). Worked €4
 ### Variant A: Urgency + Savings
 
 ```yaml
-title: "Portugal IMT 7.5% Non-Resident — Sep 2026 Tax Calculator"
+title: "Portugal IMT 7.5% Non-Resident, Sep 2026 Tax Calculator"
 description: "€30,000 tax on €400k from Sep 2026 (DL 97/2026). Get full refund in 24 months via tax residency. Worked examples Lisbon/Porto/Algarve."
 ```
 
@@ -40,7 +40,7 @@ description: "€30,000 tax on €400k from Sep 2026 (DL 97/2026). Get full refu
 ### Variant B: Comparison Frame
 
 ```yaml
-title: "Portugal IMT Non-Resident 2026 — 7.5% Flat vs Resident 0-6%"
+title: "Portugal IMT Non-Resident 2026, 7.5% Flat vs Resident 0-6%"
 description: "Non-residents: 7.5% flat from Sep 2026. Residents: 0-6% progressive (DL 97/2026). €400k examples, refund path, timing strategy."
 ```
 
@@ -49,7 +49,7 @@ description: "Non-residents: 7.5% flat from Sep 2026. Residents: 0-6% progressiv
 ### Variant C: Solution-First
 
 ```yaml
-title: "IMT Refund Portugal — Get Back 7.5% in 24 Months"
+title: "IMT Refund Portugal, Get Back 7.5% in 24 Months"
 description: "Non-residents pay 7.5% IMT upfront (DL 97/2026). Become tax resident within 24 months = full refund. €400k case, documents, timeline."
 ```
 
