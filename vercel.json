@@ -431,6 +431,36 @@
       "source": "/areas/madeira-property-investment-guide/",
       "destination": "/property-for-sale/madeira/",
       "statusCode": 301
+    },
+    {
+      "source": "/areas/cascais-property-investment",
+      "destination": "/property-for-sale/cascais/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/cascais-property-investment/",
+      "destination": "/property-for-sale/cascais/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/tavira-property-investment",
+      "destination": "/property-for-sale/tavira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/tavira-property-investment/",
+      "destination": "/property-for-sale/tavira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/lagos-property-investment",
+      "destination": "/property-for-sale/lagos/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/lagos-property-investment/",
+      "destination": "/property-for-sale/lagos/",
+      "statusCode": 301
     }
   ],
   "headers": [

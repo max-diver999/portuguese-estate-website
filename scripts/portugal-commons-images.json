@@ -11,8 +11,8 @@
     "minBrightness": 0.42,
     "maxBrightness": 0.95
   },
-  "total": 101,
-  "uniqueFiles": 101,
+  "total": 98,
+  "uniqueFiles": 98,
   "failures": [],
   "images": [
     {
@@ -244,21 +244,6 @@
         "brightness": 0.565,
         "greyMass": 0.187
       }
-    },
-    {
-      "slug": "cascais-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg/1280px-Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg",
-      "width": 7746,
-      "height": 5164,
-      "alt": "Palacio de los condes de Castro Guimarães, Cascais, Portugal — Cascais",
-      "credit": "Diego Delso / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Palacio_de_los_condes_de_Castro_Guimar%C3%A3es,_Cascais,_Portugal,_2022-07-25,_DD_12.jpg",
-      "commonsTitle": "File:Palacio de los condes de Castro Guimarães, Cascais, Portugal, 2022-07-25, DD 12.jpg",
-      "matchedTerm": "Cascais Portugal",
-      "altSubject": "Palacio de los condes de Castro Guimarães, Cascais, Portugal"
     },
     {
       "slug": "castilho-203",
@@ -684,27 +669,6 @@
         "saturation": 0.262,
         "brightness": 0.589,
         "greyMass": 0.426
-      }
-    },
-    {
-      "slug": "lagos-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg/1280px-Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg",
-      "width": 3495,
-      "height": 2055,
-      "alt": "Algarve, Portugal 2015 - Lagos — Lagos, western Algarve",
-      "altSubject": "Algarve, Portugal 2015 - Lagos",
-      "credit": "Freebird from Madrid, Spain / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Algarve,_Portugal_2015_-_Lagos_(20765921760).jpg",
-      "commonsTitle": "File:Algarve, Portugal 2015 - Lagos (20765921760).jpg",
-      "matchedTerm": "Lagos Algarve Portugal",
-      "aesthetics": {
-        "colourfulness": 43.1,
-        "saturation": 0.431,
-        "brightness": 0.42,
-        "greyMass": 0.161
       }
     },
     {
@@ -1776,21 +1740,6 @@
       "commonsTitle": "File:Castelo de Guimarães - Portugal (12217992163).jpg",
       "matchedTerm": "Portugal historic archive building",
       "altSubject": "Castelo de Guimarães - Portugal"
-    },
-    {
-      "slug": "tavira-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg/1280px-Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg",
-      "width": 6000,
-      "height": 4000,
-      "alt": "Igreja de Santa Maria do Castelo em Tavira, Algarve, Portugal - 10.09.2020 — Tavira, eastern Algarve",
-      "credit": "Bextrel / Wikimedia Commons",
-      "licence": "CC BY 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Igreja_de_Santa_Maria_do_Castelo_em_Tavira,_Algarve,_Portugal_-_10.09.2020.jpg",
-      "commonsTitle": "File:Igreja de Santa Maria do Castelo em Tavira, Algarve, Portugal - 10.09.2020.jpg",
-      "matchedTerm": "Tavira Algarve",
-      "altSubject": "Igreja de Santa Maria do Castelo em Tavira, Algarve, Portugal - 10.09.2020"
     },
     {
       "slug": "terracos-do-monte",
