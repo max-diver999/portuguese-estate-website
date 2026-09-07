@@ -74,7 +74,7 @@ async function runHttpChecks(site) {
   });
   log(lead.ok || lead.status === 500, 'POST /api/lead/', String(lead.status));
   if (lead.status === 405) {
-    log(false, 'lead API prerender', '405 — add export const prerender = false');
+    log(false, 'lead API prerender', '405, add export const prerender = false');
     failed++;
   }
 
@@ -96,7 +96,7 @@ async function runHttpChecks(site) {
   });
   log(waIntent.ok, 'POST /api/wa-intent/', String(waIntent.status));
   if (waIntent.status === 405) {
-    log(false, 'wa-intent API prerender', '405 — add export const prerender = false');
+    log(false, 'wa-intent API prerender', '405, add export const prerender = false');
     failed++;
   }
 

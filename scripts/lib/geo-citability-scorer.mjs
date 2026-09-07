@@ -20,7 +20,7 @@ export const THIN_H2_OPEN = 35;
 const DEFINITION_RE =
   /\b(is|are|refers to|means|typically|costs|starts at|ranges from|allows|requires)\b/i;
 
-/** Stat patterns for GEO density — supports ZAR/R prefix, glued %, and "14 business days". */
+/** Stat patterns for GEO density: supports ZAR/R prefix, glued %, and "14 business days". */
 const STAT_PATTERNS = [
   /\b\d+(?:\.\d+)?%/g,
   /\b\d+(?:\.\d+)?\s*(?:percent|million|bn|billion|thousand|k\b)/gi,
@@ -37,7 +37,7 @@ const STAT_PATTERNS = [
   /\d[\d,]*(?:\.\d+)?\s*(?:฿|₽)/g,
 ];
 
-/** @deprecated Use hasStat() — kept for callers that expect a RegExp. */
+/** @deprecated Use hasStat(): kept for callers that expect a RegExp. */
 export const STAT_RE = /\b\d+(?:\.\d+)?(?:%|\s*(?:percent|million|bn|billion|thousand|k\b|years?|months?|weeks?|days?|sqm|sq\.?\s*m(?:²|2)?|USD|EUR|GBP|THB|AED|MXN|ZAR|SAR|SGD|CHF)\b)|\b(?:USD|EUR|GBP|THB|AED|MXN|ZAR|SAR|SGD|CHF|R)\s*[\d,]+|\$\d|€\d|£\d|\d[\d,]*\s*(?:฿|₽)/i;
 
 export function findStatMatches(text) {
@@ -68,7 +68,7 @@ const VAGUE_RE = /\b(many|several|some|often|usually|a lot|significant|various)\
 const PRONOUN_START_RE = /^(it|this|they|these|those|however|but|and|also)\b/i;
 const QUESTION_H2_RE = /^(what|how|why|when|where|who|which|can|do|does|is|are|should|will)\b/i;
 // NOTE: this is a keyword-presence proxy, not a cross-document duplication
-// measure — it never compares two files. A low `unique` score means a page lacks
+// measure: it never compares two files. A low `unique` score means a page lacks
 // first-hand framing, not that it is duplicated. Do not remediate by pasting
 // "Insider tip:" everywhere; that games the metric with no reader value.
 // The brand alternative previously read "MORE Group", which this site never uses,

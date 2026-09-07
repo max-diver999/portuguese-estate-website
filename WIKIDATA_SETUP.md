@@ -1,4 +1,4 @@
-# Portuguese Estate — Wikidata Entity Creation
+# Portuguese Estate: Wikidata Entity Creation
 
 > **Контекст:** P1 task из SEO-аудита. Wikidata entity = AEO boost для цитирования в ChatGPT/Perplexity/Claude.
 
@@ -69,9 +69,9 @@ https://www.wikidata.org/wiki/QXXXXXXX
 
 Если organization (Q43229) не подходит по UI, попробовать:
 
-- **website (Q35127)** — если Wikidata считает что это скорее веб-ресурс
-- **information source (Q24634210)** — если акцент на research platform
-- **business (Q4830453)** — общее определение
+- **website (Q35127)**, если Wikidata считает что это скорее веб-ресурс
+- **information source (Q24634210)**, если акцент на research platform
+- **business (Q4830453)**, общее определение
 
 Главное чтобы property-набор был заполнен, `instance of` можно уточнить потом.
 

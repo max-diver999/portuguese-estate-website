@@ -87,7 +87,7 @@ function stripKbMarkers(text) {
     .replace(/KB §\d+[:\s—-]*/g, '')
     .replace(/ — KB §\d+[^.\n]*/g, '')
     .replace(/\*Draft v1[^*]*KB §\d+[^*]*\*/g, '');
-  // Do NOT collapse whitespace — breaks YAML if applied to frontmatter
+  // Do NOT collapse whitespace: breaks YAML if applied to frontmatter
 }
 
 function countTableCols(line) {

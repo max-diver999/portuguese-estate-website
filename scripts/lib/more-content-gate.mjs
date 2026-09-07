@@ -1,5 +1,5 @@
 /**
- * MORE Group — shared P0 structural checks (single source).
+ * MORE Group: shared P0 structural checks (single source).
  * Import from validate-content-quality.mjs and qa-audit.mjs.
  * Goal: cheap models fix everything scripts can catch; expensive model only polishes.
  */
@@ -18,7 +18,7 @@ let runCloudinaryDeliveryChecks = () => {};
 try {
   ({ runCloudinaryDeliveryChecks } = await import('./cloudinary-gate.mjs'));
 } catch {
-  /* gate not vendored here — image delivery checks are skipped */
+  /* gate not vendored here: image delivery checks are skipped */
 }
 
 export const BANNED_PHRASES = [
@@ -51,9 +51,9 @@ export const OPS_JARGON_RE =
 export const INTERNAL_CORPUS_RE =
   /lotsof feed|lotsof project database|lotsof pricing|lotsof\.properties|location\.beach\s*=|location\.area\s*=|`location\.|pipeline median|Programmatic listing pages|commission disclosure|Curated from MORE Group project database/i;
 
-/** wave17 uniquify stamps — break MDX tables when glued to pipe rows */
+/** wave17 uniquify stamps: break MDX tables when glued to pipe rows */
 export const STAMP_PREFIX_RE =
-  /^(Studio Condos|1-Bedroom Condos|2-Bedroom Condos|3 Bedroom Apartments|Villas) [^\n]+ Phuket — /m;
+  /^(Studio Condos|1-Bedroom Condos|2-Bedroom Condos|3 Bedroom Apartments|Villas) [^\n]+ Phuket, /m;
 
 export function countMarkdownTableRows(body) {
   return (body.match(/^\|[^|\n]+\|/gm) || []).length;
@@ -63,7 +63,7 @@ export function countBoldSpans(body) {
   return (body.match(/\*\*[^*]+\*\*/g) || []).length;
 }
 
-/** Rough fact density for GEO — prices, %, ranges, years */
+/** Rough fact density for GEO: prices, %, ranges, years */
 export function countNumericFacts(body) {
   const hits = body.match(
     /\$[\d,]+(?:\.\d+)?|\d{1,3}(?:,\d{3})*(?:\.\d+)?\s*%|\d+\s*[–-]\s*\d+\s*%|\d{4}|\d+\s*(?:m²|sqm|km|min|minutes|years?|months?)/gi,
@@ -123,7 +123,7 @@ export function runStructuralChecks(opts) {
     errors.push(`${prefix} contains draft/source marker ([VERIFY], Knowledge base, TODO, etc.)`);
   }
   if (INTERNAL_CORPUS_RE.test(body)) {
-    errors.push(`${prefix} internal corpus/DB filter syntax (lotsof feed, location.beach=) — not for clients`);
+    errors.push(`${prefix} internal corpus/DB filter syntax (lotsof feed, location.beach=), not for clients`);
   }
   const jargon = body.match(OPS_JARGON_RE);
   if (jargon) {
@@ -141,15 +141,15 @@ export function runStructuralChecks(opts) {
   if (/[<>][0-9]/.test(text)) errors.push(`${prefix} contains MDX-breaking angle-bracket number pattern`);
   const boldMarkers = (body.match(/\*\*/g) || []).length;
   if (boldMarkers % 2 !== 0) {
-    errors.push(`${prefix} unclosed ** bold — breaks MDX rendering below the typo`);
+    errors.push(`${prefix} unclosed ** bold, breaks MDX rendering below the typo`);
   }
   if (/☐/.test(body)) errors.push(`${prefix} empty checklist box ☐ — use ✓ in Verified/DD tables`);
-  if (/\{\/\* corpus:/.test(body)) errors.push(`${prefix} corpus uniquify stamp comment — remove`);
+  if (/\{\/\* corpus:/.test(body)) errors.push(`${prefix} corpus uniquify stamp comment, remove`);
   if (/^[^\n|]+ — \| /m.test(body)) {
-    errors.push(`${prefix} glued markdown table (text + pipes on one line) — breaks rendering`);
+    errors.push(`${prefix} glued markdown table (text + pipes on one line), breaks rendering`);
   }
   if (STAMP_PREFIX_RE.test(body)) {
-    errors.push(`${prefix} wave17 area stamp prefix on paragraph — remove`);
+    errors.push(`${prefix} wave17 area stamp prefix on paragraph, remove`);
 
   runCloudinaryDeliveryChecks({ prefix, text, errors, legacyExempt });
   }
@@ -166,15 +166,15 @@ export function runStructuralChecks(opts) {
   }
 
   if (/Related guide [1-9]/i.test(body)) {
-    errors.push(`${prefix} placeholder related-guide links (Related guide 1-6) — use RelatedGuides via relatedSlugs or real anchor text`);
+    errors.push(`${prefix} placeholder related-guide links (Related guide 1-6), use RelatedGuides via relatedSlugs or real anchor text`);
   }
   if (/: holding and exit notes/i.test(body) || /: extra context \d+/i.test(body)) {
-    errors.push(`${prefix} SEO padding block (holding and exit notes / extra context N) — remove`);
+    errors.push(`${prefix} SEO padding block (holding and exit notes / extra context N), remove`);
   }
   const leadForms = (body.match(/<LeadForm\b/g) || []).length;
   if (leadForms >= 1) {
     errors.push(
-      `${prefix} inline LeadForm forbidden (${leadForms}) — ArticleLayout injects one bottom form; use InlineCta or sidebar CTA only`,
+      `${prefix} inline LeadForm forbidden (${leadForms}), ArticleLayout injects one bottom form; use InlineCta or sidebar CTA only`,
     );
   }
 
@@ -210,7 +210,7 @@ export function runStructuralChecks(opts) {
   }
 }
 
-/** Checks not always present in qa-audit.mjs — avoid duplicate prob noise */
+/** Checks not always present in qa-audit.mjs: avoid duplicate prob noise */
 export function runExtendedChecks(opts) {
   const { prefix, body, cfg, legacyExempt, errors } = opts;
   if (legacyExempt) return;

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Remove inline <LeadForm /> from MDX — ArticleLayout injects a single bottom form.
+ * Remove inline <LeadForm /> from MDX: ArticleLayout injects a single bottom form.
  * Run: node scripts/fix-inline-leadforms.mjs [--dry-run] [--root=/path/to/site]
  */
 import fs from 'node:fs';

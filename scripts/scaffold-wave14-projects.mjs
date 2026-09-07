@@ -10,7 +10,7 @@ const OUT = join(__dir, '../src/content/projects');
 const PROJECTS = [
   {
     slug: 'tomas-ribeiro-79',
-    title: 'Tomás Ribeiro 79 Review — Avenidas Novas Lisbon 2026',
+    title: 'Tomás Ribeiro 79 Review, Avenidas Novas Lisbon 2026',
     description: 'Tomás Ribeiro 79 Lisbon review: Vanguard off-plan in Avenidas Novas, unit mix, DL 67/2003 guarantees, IMT 7.5% and foreign buyer checklist.',
     heroImage:
       'https://www.vangproperties.com/media/6903/tomas-ribeiro-79-quiet_18_final_2_2.jpg?anchor=center&mode=crop&rnd=133740018570000000&preset=socialShare',
@@ -26,7 +26,7 @@ const PROJECTS = [
   },
   {
     slug: 'terracos-do-monte',
-    title: 'Terraços do Monte Review — Graça Lisbon Off-Plan 2026',
+    title: 'Terraços do Monte Review, Graça Lisbon Off-Plan 2026',
     description: 'Terraços do Monte Graça review: Vanguard Lisbon hilltop scheme, terraces, completion timeline, bank guarantees and investor due diligence.',
     heroImage:
       'https://www.vangproperties.com/media/6658/terracos-do-monte_2.png?anchor=center&mode=crop&width=390&height=844&format=webp&quality=90&rnd=133602640930000000&preset=sliderheromax600',
@@ -42,7 +42,7 @@ const PROJECTS = [
   },
   {
     slug: 'castilho-203',
-    title: 'Castilho 203 Review — Avenidas Novas Completed 2026',
+    title: 'Castilho 203 Review, Avenidas Novas Completed 2026',
     description: 'Castilho 203 Lisbon review: completed Vanguard ultra-premium building, resale liquidity, service charges and benchmark for off-plan buyers.',
     heroImage:
       'https://www.vangproperties.com/media/3350/vp-castilho-203.png?anchor=center&mode=crop&rnd=133470292310000000&preset=socialShare',
@@ -58,7 +58,7 @@ const PROJECTS = [
   },
   {
     slug: 'infinity',
-    title: 'Infinity Lisbon Review — Sete Rios Tower Completed 2026',
+    title: 'Infinity Lisbon Review, Sete Rios Tower Completed 2026',
     description: 'Infinity Sete Rios review: completed Vanguard high-rise, BREEAM context, yields, IMT for resale buyers and comparison with off-plan pipeline.',
     heroImage:
       'https://www.vangproperties.com/media/3351/vp-infinity.png?anchor=center&mode=crop&rnd=133470292310000000&preset=socialShare',
@@ -74,7 +74,7 @@ const PROJECTS = [
   },
   {
     slug: 'six-senses-comporta',
-    title: 'Six Senses Comporta Review — Branded Residences 2026',
+    title: 'Six Senses Comporta Review, Branded Residences 2026',
     description: 'Six Senses Residences Comporta review: VIC branded villas, hospitality operator, handover timeline and luxury buyer due diligence.',
     heroImage: 'https://pinheirinhocomporta.com/wp-content/uploads/2025/07/pin.png',
     developer: 'VIC Properties',
@@ -89,7 +89,7 @@ const PROJECTS = [
   },
   {
     slug: 'carvalhido',
-    title: 'Carvalhido BTR Review — Porto Build-to-Rent 2026',
+    title: 'Carvalhido BTR Review, Porto Build-to-Rent 2026',
     description: 'Carvalhido Porto BTR review: Sonae Sierra build-to-rent, ~200 units, institutional tenancy model and foreign buyer limitations.',
     heroImage: 'https://www.sonaesierra.com/wp-content/uploads/2023/03/Imagem3.png',
     developer: 'Sonae Sierra Developments',
@@ -100,11 +100,11 @@ const PROJECTS = [
     handover: '2026',
     location: 'Carvalhido, Porto',
     units: 'Approx. 200 T0–T2 build-to-rent units',
-    angle: 'Institutional BTR model — verify if individual foreign freehold sales apply',
+    angle: 'Institutional BTR model, verify if individual foreign freehold sales apply',
   },
   {
     slug: 'mar-adentro',
-    title: 'Mar Adentro Faro Review — Waterfront Regeneration 2026',
+    title: 'Mar Adentro Faro Review, Waterfront Regeneration 2026',
     description: 'Mar Adentro Faro review: Lantia Ria Formosa regeneration, ~200 units, sales from 2026, moderately priced housing mix and off-plan checks.',
     heroImage:
       'https://www.vangproperties.com/media/6903/tomas-ribeiro-79-quiet_18_final_2_2.jpg?anchor=center&mode=crop&rnd=133740018570000000&preset=socialShare',
@@ -183,7 +183,7 @@ Non-resident buyers completing after 1 September 2026 pay **flat 7.5% IMT** plus
 
 Any payment before escritura on ${p.status.includes('off') || p.status === 'delivering' ? 'off-plan or pre-completion' : 'resale'} stock requires independent legal review. Decreto-Lei 67/2003 mandates bank guarantee or insurance equal to sums paid if licença de utilização does not yet exist.
 
-**Insider tip:** Match guarantee certificate amount and beneficiary to the exact seller entity on the CPCV — not the marketing brand alone. Read [CPCV promissory contract guide](/guides/cpcv-promissory-contract-portugal/) and [deposit guide](/guides/portugal-property-deposit-guide-cpcv/) before transfer.
+**Insider tip:** Match guarantee certificate amount and beneficiary to the exact seller entity on the CPCV, not the marketing brand alone. Read [CPCV promissory contract guide](/guides/cpcv-promissory-contract-portugal/) and [deposit guide](/guides/portugal-property-deposit-guide-cpcv/) before transfer.
 
 Verify: licença de construção, IMPIC promotional filing, longstop calendar date, unit plan vs marketing render, condominium draft budget, IMT timing, and seller NIPC on registry.
 
@@ -227,13 +227,13 @@ Compare national framing in [new-build vs resale Portugal](/compare/new-build-vs
 
 ## Mortgage, payment schedule and foreign buyer timing
 
-Non-resident mortgage origination remains selective in 2026. Many foreign buyers purchase ${p.propertyType} stock with cash or low LTV. If financing, start [non-resident mortgage](/guides/non-resident-mortgage-portugal/) and [mortgage rates foreigners 2026](/guides/portugal-mortgage-rates-foreigners-2026/) early — bank valuation may lag developer list price.
+Non-resident mortgage origination remains selective in 2026. Many foreign buyers purchase ${p.propertyType} stock with cash or low LTV. If financing, start [non-resident mortgage](/guides/non-resident-mortgage-portugal/) and [mortgage rates foreigners 2026](/guides/portugal-mortgage-rates-foreigners-2026/) early, bank valuation may lag developer list price.
 
-Off-plan payment schedules typically follow CPCV milestones tied to construction certificates. Never transfer a tranche without updated guarantee coverage for cumulative paid amounts. If targeting escritura before 1 September 2026 for progressive IMT bands, model dates in [complete before September 2026 IMT](/guides/complete-before-september-2026-imt-guide/) — calendar risk is buyer's unless longstop protects you.
+Off-plan payment schedules typically follow CPCV milestones tied to construction certificates. Never transfer a tranche without updated guarantee coverage for cumulative paid amounts. If targeting escritura before 1 September 2026 for progressive IMT bands, model dates in [complete before September 2026 IMT](/guides/complete-before-september-2026-imt-guide/), calendar risk is buyer's unless longstop protects you.
 
 ## National market context for project underwriting
 
-INE 2025: 169,812 transactions, €41.2B value, +17.6% residential index, 8,471 non-resident purchases (-13.3%). Non-resident concentration remains highest in AML and Algarve by value share. ${p.developer} pipeline adds supply in ${p.location.split(',')[0]} but single-scheme risk is idiosyncratic — permit delays, contractor disputes and fit-out complexity affect one building independent of national averages.
+INE 2025: 169,812 transactions, €41.2B value, +17.6% residential index, 8,471 non-resident purchases (-13.3%). Non-resident concentration remains highest in AML and Algarve by value share. ${p.developer} pipeline adds supply in ${p.location.split(',')[0]} but single-scheme risk is idiosyncratic, permit delays, contractor disputes and fit-out complexity affect one building independent of national averages.
 
 AICCOPN licensing at 41,592 units (+20.1%) moderates extreme scarcity narratives in some belts while leaving premium addresses supply-constrained. Underwrite this asset on parish comps, not national headlines alone. See [Portugal property market record 2025](/guides/portugal-property-market-record-2025-ine-data/) for release context.
 
@@ -258,11 +258,11 @@ function buildFaq(p) {
     },
     {
       question: `What should I verify before a CPCV on ${name}?`,
-      answer: `Verify licença de construção or utilização, guarantee certificates, longstop date, seller identity, unit plans vs render, condominium budget, and IMT timing. Use an independent lawyer — not the developer's counsel.`,
+      answer: `Verify licença de construção or utilização, guarantee certificates, longstop date, seller identity, unit plans vs render, condominium budget, and IMT timing. Use an independent lawyer, not the developer's counsel.`,
     },
     {
       question: `Does ${name} guarantee rental yield or capital growth?`,
-      answer: `No developer can guarantee investment returns. Underwrite gross and net yield with your own rent comps and [gross vs net yield guide](/guides/gross-vs-net-yield-portugal/). INE recorded +17.6% national price growth in 2025 — past performance does not predict future results.`,
+      answer: `No developer can guarantee investment returns. Underwrite gross and net yield with your own rent comps and [gross vs net yield guide](/guides/gross-vs-net-yield-portugal/). INE recorded +17.6% national price growth in 2025, past performance does not predict future results.`,
     },
   ];
 }

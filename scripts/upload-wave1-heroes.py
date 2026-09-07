@@ -32,7 +32,7 @@ CLOUD = os.environ.get("CLOUDINARY_CLOUD_NAME", "")
 KEY = os.environ.get("CLOUDINARY_API_KEY", "")
 SECRET = os.environ.get("CLOUDINARY_API_SECRET", "")
 if CLOUD == LEGACY_CLOUD:
-    sys.exit(f"Refusing upload to legacy {LEGACY_CLOUD} — it is read-only")
+    sys.exit(f"Refusing upload to legacy {LEGACY_CLOUD}, it is read-only")
 if not (CLOUD and KEY and SECRET):
     sys.exit("Missing Cloudinary credentials")
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Append words to existing Closing verification checklist — no duplicate H2.
+ * Append words to existing Closing verification checklist: no duplicate H2.
  * Targets fix-queue thin-content blockers only.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -31,12 +31,12 @@ function wordPadParagraphs(slug, gap) {
   const sentences = [
     `When comparing ${topic}, treat developer renderings as marketing, verify construction stage, trust account (fideicomiso de garantía), and AMPI broker licence before reservation.`,
     `HOA fees in Quintana Roo often run $0.80–$2.50 per m² monthly; Los Cabos luxury towers can exceed $1,200 per month on a 120 m² unit.`,
-    `Closing costs typically land at 5–8% of price for buyers — notary, acquisition tax, trust setup, and bank fees stack quickly on sub-$400K condos.`,
+    `Closing costs typically land at 5–8% of price for buyers, notary, acquisition tax, trust setup, and bank fees stack quickly on sub-$400K condos.`,
     `ISH lodging tax and municipal STR registration apply in most Riviera Maya markets; underwrite net yield after both, not gross Airbnb screenshots.`,
     `Fideicomiso renewals every 50 years carry bank fees; model the 25-year mark when you compare Mexico vs fee-simple jurisdictions.`,
-    `Ejido-adjacent listings at steep discounts usually carry title risk — independent notario opinion is non-negotiable.`,
+    `Ejido-adjacent listings at steep discounts usually carry title risk, independent notario opinion is non-negotiable.`,
     `Pre-construction buyers should confirm developer track record on two prior delivered projects in the same municipality.`,
-    `USD/MXN moves of 5–10% in a year can shift your effective entry price — stress-test FX on both purchase and eventual exit.`,
+    `USD/MXN moves of 5–10% in a year can shift your effective entry price, stress-test FX on both purchase and eventual exit.`,
   ];
   let hash = 0;
   for (const c of slug) hash = (hash + c.charCodeAt(0)) % sentences.length;

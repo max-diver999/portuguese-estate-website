@@ -86,9 +86,9 @@ for (const row of normalizeRows(raw)) {
 
 const out = {
   source: `GSC refresh ${new Date().toISOString().slice(0, 10)}`,
-  rule: 'Never noindex — upgrade only',
+  rule: 'Never noindex, upgrade only',
   slugs,
 };
 
 writeFileSync(OUT, `${JSON.stringify(out, null, 2)}\n`);
-console.log(`[refresh-protected] wrote ${OUT} — ${Object.keys(slugs).length} slugs (${added} rows processed)`);
+console.log(`[refresh-protected] wrote ${OUT}, ${Object.keys(slugs).length} slugs (${added} rows processed)`);

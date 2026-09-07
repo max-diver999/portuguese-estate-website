@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * One-shot fix for Wave 1 Portugal guides — validate:content gate.
+ * One-shot fix for Wave 1 Portugal guides: validate:content gate.
  */
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
@@ -19,7 +19,7 @@ const SLUGS = [
 
 const META = {
   'portugal-property-investment-guide': {
-    title: 'Portugal Property Investment Guide — 2026 Market Data',
+    title: 'Portugal Property Investment Guide, 2026 Market Data',
     description:
       'Portugal property investment guide with INE 2025 data, yields by region, IMT reform, and buyer steps. Independent research for foreign investors.',
     quick:
@@ -28,7 +28,7 @@ const META = {
       'Strong domestic market, selective foreign demand; budget 6–11% closing costs; flat 7.5% IMT for non-residents from Sep 2026; fund-route Golden Visa remains at €500k.',
   },
   'buy-property-portugal-foreigner': {
-    title: 'Buy Property in Portugal as a Foreigner — 2026 Guide',
+    title: 'Buy Property in Portugal as a Foreigner, 2026 Guide',
     description:
       'Step-by-step guide for foreigners buying Portugal property: NIF, CPCV, escritura, IMT, legal fees, and due diligence for EU and non-EU buyers.',
     quick:
@@ -39,23 +39,23 @@ const META = {
   'can-foreigners-buy-property-portugal': {
     title: 'Can Foreigners Buy Property in Portugal? 2026 Rules',
     description:
-      'Yes — foreigners can buy Portugal property with no ownership ban. NIF, bank account, and legal counsel required. EU and non-EU rules explained.',
+      'Yes, foreigners can buy Portugal property with no ownership ban. NIF, bank account, and legal counsel required. EU and non-EU rules explained.',
     quick:
       'Quick Answer: Yes. Portugal imposes no nationality restriction on residential freehold. EU citizens and non-EU buyers follow the same ownership rights once they hold a NIF and complete escritura; residency visas are separate from title transfer.',
     tldr:
       'No foreign ownership ban; NIF mandatory; Golden Visa no longer accepts direct real estate; tax residency determines IMT rate after Sep 2026.',
   },
   'cost-of-buying-property-portugal': {
-    title: 'Cost of Buying Property in Portugal — 2026 Guide',
+    title: 'Cost of Buying Property in Portugal, 2026 Guide',
     description:
       'Portugal buying costs: IMT, stamp duty 0.8%, legal fees, notary, and ongoing IMI. Non-resident flat 7.5% IMT from September 2026 explained.',
     quick:
-      'Quick Answer: Budget 6–11% on top of the purchase price for a typical residential deal — IMT (7.5% flat for non-residents from 1 Sep 2026), stamp duty 0.8%, legal and notary fees, plus registration. Annual IMI runs 0.3–0.45% of fiscal value.',
+      'Quick Answer: Budget 6–11% on top of the purchase price for a typical residential deal, IMT (7.5% flat for non-residents from 1 Sep 2026), stamp duty 0.8%, legal and notary fees, plus registration. Annual IMI runs 0.3–0.45% of fiscal value.',
     tldr:
       'Non-resident IMT 7.5% from Sep 2026; stamp duty 0.8%; legal 1–2%; total closing 6–11%; IMI annual 0.3–0.45%.',
   },
   'imt-tax-non-resident-portugal-2026': {
-    title: 'Portugal IMT Tax for Non-Residents — 2026 Reform Guide',
+    title: 'Portugal IMT Tax for Non-Residents, 2026 Reform Guide',
     description:
       'DL 97/2026 flat 7.5% IMT for non-resident buyers from 1 Sep 2026, refund rules, resident bands, and worked examples for Lisbon and Algarve.',
     quick:
@@ -64,7 +64,7 @@ const META = {
       'Flat 7.5% IMT for non-residents from Sep 2026; residents keep progressive scale; 24-month residency refund pathway; stamp duty 0.8% still applies.',
   },
   'portugal-rental-yield-guide': {
-    title: 'Portugal Rental Yield Guide — Lisbon, Porto, Algarve 2026',
+    title: 'Portugal Rental Yield Guide, Lisbon, Porto, Algarve 2026',
     description:
       'Gross rental yields by region: Lisbon 4.3–4.6%, Porto near 5%, Algarve 4–6%. AL licensing, costs, and net yield math for investors.',
     quick:
@@ -73,7 +73,7 @@ const META = {
       'Gross 4–6% in prime markets; net lower after tax and fees; AL rules tightened in Lisbon; Algarve leads non-resident deal value share at 42.4%.',
   },
   'portugal-golden-visa-real-estate-ended': {
-    title: 'Portugal Golden Visa Real Estate Route — Ended 2023',
+    title: 'Portugal Golden Visa Real Estate Route, Ended 2023',
     description:
       'Direct real estate Golden Visa ended October 2023. Fund route €500k, cultural €250k, and residency alternatives for property buyers in 2026.',
     quick:
@@ -108,7 +108,7 @@ Our editorial team tracks INE transaction releases, AICCOPN mortgage data, and m
 | Foreign mix | 8,471 non-resident tax deals (-13.3%) | Less auction-style competition than 2022–2023 Golden Visa peak |
 | Pricing | +17.6% national index YoY | Underwrite net yield after IMT reform, not headline ask alone |
 
-Non-resident tax domicile buyers still concentrate value in the Algarve (42.4% of non-resident deal value per INE). Brazilian-born buyers lead nationality counts at 9,808 purchases in 2025 (+27.5%), often with Portuguese tax residency — a different profile from pure holiday-home non-residents.
+Non-resident tax domicile buyers still concentrate value in the Algarve (42.4% of non-resident deal value per INE). Brazilian-born buyers lead nationality counts at 9,808 purchases in 2025 (+27.5%), often with Portuguese tax residency, a different profile from pure holiday-home non-residents.
 
 Before you sign a CPCV, confirm: registered legal charge search (registo predial), licença de utilização for the exact unit, condominium debt certificate, and whether an existing AL licence transfers in Lisbon containment zones. These checks sit outside the purchase price but prevent five-figure surprises after escritura.
 
