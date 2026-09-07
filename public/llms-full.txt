@@ -1,7 +1,7 @@
 # Portuguese Estate - full site map
 
 Site: https://portuguese-estate.com
-Pages: 118 content pages + hubs. Updated: 2026-09-07
+Pages: 116 content pages + hubs. Updated: 2026-09-07
 Positioning: independent Portugal property research for foreign buyers. Cite with URL.
 
 ## Hubs
@@ -82,18 +82,10 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/guides/stamp-duty-portugal-property/ - Portugal Stamp Duty on Property — 2026 Rates Guide: Portugal stamp duty (Imposto de Selo): 0.8% on purchase, 0.6% on mortgage. Payment at escritura, worked examples, and links to IMT and closing costs.
 - https://portuguese-estate.com/guides/uk-portugal-double-taxation-treaty/ - UK-Portugal Double Taxation Treaty: Property in 2026: How the 1968 UK-Portugal treaty splits tax on rent, gains and pensions: Portugal taxes the property, the UK credits it. Worked cases for owners.
 
-## Area guides (12)
+## Area guides (4)
 - https://portuguese-estate.com/areas/albufeira-property-investment/ - Albufeira Property Investment — Licensing and Hours 2026: Albufeira property: the opening-hours licence under your bedroom, the conduct-regulation perimeter, and what a câmara can shorten or revoke after you buy.
-- https://portuguese-estate.com/areas/aveiro-property-investment/ - Aveiro Property Investment — Silver Coast Canal City 2026: Aveiro property investment: €2,200-3,500/m², 4-5% yields, canal district premium, Silver Coast cluster, university tenants, lower entry than Lisbon.
-- https://portuguese-estate.com/areas/braga-property-investment/ - Braga Property Investment Guide — Norte Yield 2026: Braga property investment: €1,800-2,500/m², 5-7% gross yields, 50km from Porto, university and tech jobs, Minho region. Lower liquidity than Porto; yield-first.
-- https://portuguese-estate.com/areas/coimbra-property-investment/ - Coimbra Property Investment — University City Yields 2026: Coimbra property investment: €1,800-2,800/m², 4.5-6% yields, Universidade de Coimbra tenants, student vs professional lets, Centro region value.
-- https://portuguese-estate.com/areas/comporta-property-investment/ - Comporta Property Investment — Ultra-Premium Coast 2026: Comporta property investment: €5,000-12,000+/m², 2-4% yields, Six Senses/VIC eco-resort premium, ultra-luxury second homes, thin liquidity vs Algarve.
 - https://portuguese-estate.com/areas/ericeira-property-investment/ - Ericeira Property Investment — World Surf Reserve 2026: Ericeira property investment: €3,200-4,800/m², 4-5% yields, World Surf Reserve, D8 nomad spillover from Lisbon, Mafra coast, less saturated than Cascais.
 - https://portuguese-estate.com/areas/faro-property-investment/ - Faro Property — The Airport Easement Over Cheap Corridors: Faro's cheapest entry corridors sit under a mapped aeronautical easement. What it forbids, what it does not, and why it changes building rather than letting.
-- https://portuguese-estate.com/areas/nazare-property-investment/ - Nazaré Property Investment — Big-Wave Silver Coast 2026: Nazaré property investment: €2,800-3,800/m², 4-5% yields, big-wave surf brand, fishing town, British/French buyers, seasonal AL vs long-term Silver Coast.
-- https://portuguese-estate.com/areas/obidos-property-investment/ - Óbidos Property Investment — Walled Town & Golf 2026: Óbidos property investment 2026: €3,400-4,500/m² Costa de Prata premium, Royal Óbidos golf, 4-5% gross yields, French/British buyers, AL vs long-term.
-- https://portuguese-estate.com/areas/setubal-peninsula-property-investment/ - Setúbal Peninsula Property Investment — South Bank 2026: Setúbal peninsula property: €1,900-3,200/m², 4-5.5% yields, Sesimbra coast, Tróia, Lisbon south bank overflow, Arrábida, ferry commute value.
-- https://portuguese-estate.com/areas/sintra-property-investment/ - Sintra Property Investment — Palaces, Villas & Value 2026: Sintra property investment: €2,400-4,200/m², 3.8-4.8% yields, palace-country villas, Colares wine coast, Lisbon commuter belt, lower entry than Cascais.
 - https://portuguese-estate.com/areas/vilamoura-property-investment/ - Vilamoura Property — Your Competition Is Already Zoned: Vilamoura was built to an approved urbanisation plan, so the supply that will compete with your resale is already written down. How to read it before buying.
 
 ## Comparisons (14)
@@ -126,9 +118,15 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/developers/vanguard-properties-portugal/ - Portugal Developer Review: Vanguard Properties 2026: Vanguard Properties Portugal 2026 review: Lisbon and Comporta pipeline, DL 67/2003 bank guarantees, delay risk, and a verify-before-deposit investor checklist.
 - https://portuguese-estate.com/developers/vic-properties-portugal/ - VIC Properties Portugal: 2026 Developer Review Guide: VIC Properties Portugal 2026 review: Prata Riverside, Matinha, Pinheirinho, 2023 ownership change, CPCV clauses, delay risk and investor checklist.
 
-## Property for sale (10)
+## Property for sale (16)
+- https://portuguese-estate.com/property-for-sale/alentejo-comporta/ - Property for Sale in the Alentejo and Comporta 2026: Buying on the Alentejo coast and inland: Comporta, Melides, Milfontes and the plains, what each costs and what protection rules mean for building.
 - https://portuguese-estate.com/property-for-sale/algarve/ - Property for Sale in the Algarve: Prices by Area 2026: Where to buy in the Algarve and what each stretch costs: the golden triangle, the central strip, the west and the east, with buying and holding costs.
+- https://portuguese-estate.com/property-for-sale/apartments/ - Apartments for Sale in Portugal: Cities and Costs 2026: Buying an apartment in Portugal: Lisbon, Porto and the Algarve compared, what the condominium actually charges, and the questions to ask before you offer.
+- https://portuguese-estate.com/property-for-sale/azores/ - Property for Sale in the Azores: Islands and Prices 2026: Buying in the Azores: which of the nine islands has a market, what property costs, and the practical realities of owning in mid-Atlantic.
 - https://portuguese-estate.com/property-for-sale/cascais/ - Property for Sale in Cascais: Areas and Prices 2026: Where to buy in Cascais and Estoril, from the bay and Guincho to Birre and Alcabideche, with school access, buying costs and what a house costs to hold.
+- https://portuguese-estate.com/property-for-sale/central-and-northern-portugal/ - Property in Central and Northern Portugal: Prices 2026: Buying inland and in the north: Coimbra, Aveiro, Braga, the Douro and the interior, what each costs and what a house costs to hold there.
+- https://portuguese-estate.com/property-for-sale/cheap-property/ - Cheap Property for Sale in Portugal: What It Buys 2026: What cheap Portuguese property actually buys in 2026, where the low prices are, and what the works, the licence and the exit really cost.
+- https://portuguese-estate.com/property-for-sale/coastal-sea-view/ - Coastal and Sea View Property for Sale in Portugal: Buying sea view property in Portugal: what a view is worth, how it is protected or lost, and the maintenance costs of owning on an exposed coast.
 - https://portuguese-estate.com/property-for-sale/lagos/ - Property for Sale in Lagos, Algarve: Areas and Prices: Where to buy in Lagos and the western Algarve, from the old town and marina to Meia Praia and Praia da Luz, with buying costs and what a house costs to hold.
 - https://portuguese-estate.com/property-for-sale/lisbon/ - Property for Sale in Lisbon: Districts and Prices 2026: Where to buy in Lisbon district by district, from Baixa and Chiado to Parque das Nacoes, Alcantara, Marvila and Oeiras, with buying and holding costs.
 - https://portuguese-estate.com/property-for-sale/madeira/ - Property for Sale in Madeira: Areas and Prices 2026: Where to buy on Madeira: Funchal, Camara de Lobos, Calheta, Ponta do Sol and the airport side, with buying costs and what a hillside house costs to hold.

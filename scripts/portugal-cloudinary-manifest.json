@@ -124,20 +124,6 @@
       "bytes": 200453,
       "uploaded_at": "2026-08-25T23:39:49Z"
     },
-    "aveiro-property-investment": {
-      "public_id": "more-group/portugal/areas/aveiro-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Aveiro%2C_Part_I_-_Aveiro5616.jpg/1280px-Aveiro%2C_Part_I_-_Aveiro5616.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Aveiro%2C_Part_I_-_Aveiro5616.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Aveiro,_Part_I_-_Aveiro5616.jpg",
-      "source_sha256": "1f80510b673e8d38c4f0fe36a30f00e239f9d4549358b2d3992e052e14577786",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701201/more-group/portugal/areas/aveiro-property-investment/hero.jpg",
-      "version": 1787701201,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 477957,
-      "uploaded_at": "2026-08-25T23:40:01Z"
-    },
     "best-regions-invest-portugal-property-2026": {
       "public_id": "more-group/portugal/guides/best-regions-invest-portugal-property-2026/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Vista_aerea_da_Mexilhoeira_Grande_-_Algarve%2C_Portugal_1_-_17-02-2024.jpg/1280px-Vista_aerea_da_Mexilhoeira_Grande_-_Algarve%2C_Portugal_1_-_17-02-2024.jpg",
@@ -151,20 +137,6 @@
       "height": 960,
       "bytes": 457863,
       "uploaded_at": "2026-08-25T23:40:09Z"
-    },
-    "braga-property-investment": {
-      "public_id": "more-group/portugal/areas/braga-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Azulejos%2C_Braga%2C_Portugal_25.jpg/1280px-Azulejos%2C_Braga%2C_Portugal_25.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Azulejos%2C_Braga%2C_Portugal_25.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Azulejos,_Braga,_Portugal_25.jpg",
-      "source_sha256": "78d4f98b6eb9ba61561bc43c48100ee48465509e00cd94d1755c8b9759b9fd93",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701212/more-group/portugal/areas/braga-property-investment/hero.jpg",
-      "version": 1787701212,
-      "format": "jpg",
-      "width": 1280,
-      "height": 720,
-      "bytes": 313224,
-      "uploaded_at": "2026-08-25T23:40:12Z"
     },
     "can-foreigners-buy-property-portugal": {
       "public_id": "more-group/portugal/guides/can-foreigners-buy-property-portugal/hero",
@@ -180,20 +152,6 @@
       "bytes": 485822,
       "uploaded_at": "2026-08-25T23:40:22Z"
     },
-    "coimbra-property-investment": {
-      "public_id": "more-group/portugal/areas/coimbra-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Rua_Adelino_Veiga%2C_Coimbra%2C_Portugal.jpg/1280px-Rua_Adelino_Veiga%2C_Coimbra%2C_Portugal.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Rua_Adelino_Veiga%2C_Coimbra%2C_Portugal.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Rua_Adelino_Veiga,_Coimbra,_Portugal.jpg",
-      "source_sha256": "58503d2412e209b1b6e3a0baedff4913dacb509b8ed78eb5a84bbe01d9ae1e08",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701264/more-group/portugal/areas/coimbra-property-investment/hero.jpg",
-      "version": 1787701264,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 353498,
-      "uploaded_at": "2026-08-25T23:41:04Z"
-    },
     "complete-before-september-2026-imt-guide": {
       "public_id": "more-group/portugal/guides/complete-before-september-2026-imt-guide/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Portugal_Coast_%2848415017011%29.jpg/1280px-Portugal_Coast_%2848415017011%29.jpg",
@@ -207,20 +165,6 @@
       "height": 853,
       "bytes": 247340,
       "uploaded_at": "2026-08-25T23:41:07Z"
-    },
-    "comporta-property-investment": {
-      "public_id": "more-group/portugal/areas/comporta-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Litotal_entre_a_Praia_da_Comporta_e_a_Praia_da_Torre_-_Portugal_%2848096627873%29.jpg/1280px-Litotal_entre_a_Praia_da_Comporta_e_a_Praia_da_Torre_-_Portugal_%2848096627873%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Litotal_entre_a_Praia_da_Comporta_e_a_Praia_da_Torre_-_Portugal_%2848096627873%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Litotal_entre_a_Praia_da_Comporta_e_a_Praia_da_Torre_-_Portugal_(48096627873).jpg",
-      "source_sha256": "a398b6c0c477a6bac80c06a1cc2ca148dd7ac24f0d4681cd306efd3bd0cddda3",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701271/more-group/portugal/areas/comporta-property-investment/hero.jpg",
-      "version": 1787701271,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 372926,
-      "uploaded_at": "2026-08-25T23:41:11Z"
     },
     "cost-of-buying-property-portugal": {
       "public_id": "more-group/portugal/guides/cost-of-buying-property-portugal/hero",
@@ -516,20 +460,6 @@
       "bytes": 359237,
       "uploaded_at": "2026-08-25T23:44:53Z"
     },
-    "nazare-property-investment": {
-      "public_id": "more-group/portugal/areas/nazare-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nazare%2C_Portugal_%2852960130417%29.jpg/1280px-Nazare%2C_Portugal_%2852960130417%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Nazare%2C_Portugal_%2852960130417%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Nazare,_Portugal_(52960130417).jpg",
-      "source_sha256": "d2287ec01b44b855e4f3288fab439aebc1cd273853949e2190eb2d3dd304b0a1",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701496/more-group/portugal/areas/nazare-property-investment/hero.jpg",
-      "version": 1787701496,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 283107,
-      "uploaded_at": "2026-08-25T23:44:56Z"
-    },
     "new-build-vs-resale-property-portugal": {
       "public_id": "more-group/portugal/compare/new-build-vs-resale-property-portugal/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Parque_das_Na%C3%A7%C3%B5es_-_Lisboa_-_Portugal_%2853449723482%29.jpg/1280px-Parque_das_Na%C3%A7%C3%B5es_-_Lisboa_-_Portugal_%2853449723482%29.jpg",
@@ -571,20 +501,6 @@
       "height": 856,
       "bytes": 195016,
       "uploaded_at": "2026-08-25T23:45:09Z"
-    },
-    "obidos-property-investment": {
-      "public_id": "more-group/portugal/areas/obidos-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Castelo_de_%C3%93bidos_-_Portugal_%2851329763253%29.jpg/1280px-Castelo_de_%C3%93bidos_-_Portugal_%2851329763253%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Castelo_de_%C3%93bidos_-_Portugal_%2851329763253%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Castelo_de_%C3%93bidos_-_Portugal_(51329763253).jpg",
-      "source_sha256": "b5ec02df85192db27649c96b6e4b3fb8fbfbed2893d9dc7b7bbb934048d04036",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701512/more-group/portugal/areas/obidos-property-investment/hero.jpg",
-      "version": 1787701512,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 444808,
-      "uploaded_at": "2026-08-25T23:45:12Z"
     },
     "off-plan-property-portugal-guide": {
       "public_id": "more-group/portugal/guides/off-plan-property-portugal-guide/hero",
@@ -1118,20 +1034,6 @@
       "bytes": 428084,
       "uploaded_at": "2026-08-25T23:48:08Z"
     },
-    "setubal-peninsula-property-investment": {
-      "public_id": "more-group/portugal/areas/setubal-peninsula-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Setubal%2C_Portugal_%2848915791026%29.jpg/1280px-Setubal%2C_Portugal_%2848915791026%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Setubal%2C_Portugal_%2848915791026%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Setubal,_Portugal_(48915791026).jpg",
-      "source_sha256": "6cf780597c8c00d1eda34a8e32937b649431384a58d3b2de71813ed6c50adc16",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701690/more-group/portugal/areas/setubal-peninsula-property-investment/hero.jpg",
-      "version": 1787701690,
-      "format": "jpg",
-      "width": 1280,
-      "height": 720,
-      "bytes": 229200,
-      "uploaded_at": "2026-08-25T23:48:10Z"
-    },
     "silver-coast-portugal-property-guide": {
       "public_id": "more-group/portugal/guides/silver-coast-portugal-property-guide/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/A_Golden_Beach_%28131401413%29.jpeg/1280px-A_Golden_Beach_%28131401413%29.jpeg",
@@ -1145,20 +1047,6 @@
       "height": 826,
       "bytes": 357296,
       "uploaded_at": "2026-08-25T23:48:13Z"
-    },
-    "sintra-property-investment": {
-      "public_id": "more-group/portugal/areas/sintra-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Palacio_Nacional%2C_Sintra%2C_Portugal%2C_2022-07-25%2C_DD_19.jpg/1280px-Palacio_Nacional%2C_Sintra%2C_Portugal%2C_2022-07-25%2C_DD_19.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Palacio_Nacional%2C_Sintra%2C_Portugal%2C_2022-07-25%2C_DD_19.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Palacio_Nacional,_Sintra,_Portugal,_2022-07-25,_DD_19.jpg",
-      "source_sha256": "68b4c1460ee70c74174034bebd66dc122d4df03230b7dc646eb76e83c4a193d0",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701696/more-group/portugal/areas/sintra-property-investment/hero.jpg",
-      "version": 1787701696,
-      "format": "jpg",
-      "width": 1280,
-      "height": 608,
-      "bytes": 178498,
-      "uploaded_at": "2026-08-25T23:48:16Z"
     },
     "six-senses-comporta": {
       "public_id": "more-group/portugal/projects/six-senses-comporta/hero",
