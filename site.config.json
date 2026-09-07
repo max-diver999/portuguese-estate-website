@@ -55,6 +55,12 @@
       "urlPrefix": "/move-to-portugal/",
       "minWords": 2000,
       "faqMin": 5
+    },
+    "property-for-sale": {
+      "dir": "property-for-sale",
+      "urlPrefix": "/property-for-sale/",
+      "minWords": 1800,
+      "faqMin": 5
     }
   },
   "smoke": {
@@ -74,6 +80,10 @@
       {
         "hubPath": "/move-to-portugal/",
         "contentDir": "move-to-portugal"
+      },
+      {
+        "hubPath": "/property-for-sale/",
+        "contentDir": "property-for-sale"
       }
     ],
     "contactPath": "/contact/",

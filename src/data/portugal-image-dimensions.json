@@ -3,10 +3,6 @@
     "width": 1920,
     "height": 1279
   },
-  "more-group/portugal/areas/alcantara-property-investment/hero": {
-    "width": 1280,
-    "height": 854
-  },
   "more-group/portugal/areas/aveiro-property-investment/hero": {
     "width": 1280,
     "height": 853
@@ -15,17 +11,9 @@
     "width": 1280,
     "height": 720
   },
-  "more-group/portugal/areas/caldas-da-rainha-property-investment/hero": {
-    "width": 1280,
-    "height": 960
-  },
   "more-group/portugal/areas/cascais-property-investment/hero": {
     "width": 1920,
     "height": 1279
-  },
-  "more-group/portugal/areas/chiado-principe-real-property/hero": {
-    "width": 1280,
-    "height": 852
   },
   "more-group/portugal/areas/coimbra-property-investment/hero": {
     "width": 1280,
@@ -47,22 +35,6 @@
     "width": 1280,
     "height": 753
   },
-  "more-group/portugal/areas/lourinha-property-investment/hero": {
-    "width": 1280,
-    "height": 863
-  },
-  "more-group/portugal/areas/madeira-property-investment-guide/hero": {
-    "width": 1280,
-    "height": 719
-  },
-  "more-group/portugal/areas/marvila-property-investment/hero": {
-    "width": 1280,
-    "height": 848
-  },
-  "more-group/portugal/areas/matosinhos-property-investment/hero": {
-    "width": 1280,
-    "height": 819
-  },
   "more-group/portugal/areas/nazare-property-investment/hero": {
     "width": 1280,
     "height": 853
@@ -70,18 +42,6 @@
   "more-group/portugal/areas/obidos-property-investment/hero": {
     "width": 1280,
     "height": 853
-  },
-  "more-group/portugal/areas/oeiras-property-investment/hero": {
-    "width": 1280,
-    "height": 960
-  },
-  "more-group/portugal/areas/parque-das-nacoes-property/hero": {
-    "width": 1280,
-    "height": 809
-  },
-  "more-group/portugal/areas/portimao-property-investment/hero": {
-    "width": 1280,
-    "height": 960
   },
   "more-group/portugal/areas/setubal-peninsula-property-investment/hero": {
     "width": 1280,
@@ -94,10 +54,6 @@
   "more-group/portugal/areas/tavira-property-investment/hero": {
     "width": 1280,
     "height": 853
-  },
-  "more-group/portugal/areas/vila-nova-de-gaia-property-investment/hero": {
-    "width": 1280,
-    "height": 848
   },
   "more-group/portugal/areas/vilamoura-property-investment/hero": {
     "width": 1280,

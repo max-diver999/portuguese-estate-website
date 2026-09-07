@@ -321,6 +321,116 @@
       "source": "/guides/best-portugal-property-under-4000-euro-m2/",
       "destination": "/guides/portugal-property-under-500000-euros/",
       "statusCode": 301
+    },
+    {
+      "source": "/areas/alcantara-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/alcantara-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/chiado-principe-real-property",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/chiado-principe-real-property/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/marvila-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/marvila-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/parque-das-nacoes-property",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/parque-das-nacoes-property/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/oeiras-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/oeiras-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/matosinhos-property-investment",
+      "destination": "/property-for-sale/porto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/matosinhos-property-investment/",
+      "destination": "/property-for-sale/porto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/vila-nova-de-gaia-property-investment",
+      "destination": "/property-for-sale/porto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/vila-nova-de-gaia-property-investment/",
+      "destination": "/property-for-sale/porto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/portimao-property-investment",
+      "destination": "/property-for-sale/algarve/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/portimao-property-investment/",
+      "destination": "/property-for-sale/algarve/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/caldas-da-rainha-property-investment",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/caldas-da-rainha-property-investment/",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/lourinha-property-investment",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/lourinha-property-investment/",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/madeira-property-investment-guide",
+      "destination": "/property-for-sale/madeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/madeira-property-investment-guide/",
+      "destination": "/property-for-sale/madeira/",
+      "statusCode": 301
     }
   ],
   "headers": [

@@ -16,7 +16,9 @@ const used = new Set(
 );
 
 const WANT = [
-  { slug: 'portugal-house-prices', terms: ['Alfama Lisboa Portugal', 'Setúbal Portugal city', 'Matosinhos Portugal', 'Viana do Castelo Portugal'] },
+  { slug: 'algarve', terms: ['Praia da Marinha Algarve', 'Algarve Portugal cliffs', 'Lagos Algarve coast'] },
+  { slug: 'lisbon',  terms: ['Baixa Chiado Lisboa view', 'Lisboa Baixa Portugal', 'Lisboa view Portugal'] },
+  { slug: 'porto',   terms: ['Ponte Dom Luis Porto', 'Porto Portugal bridge', 'Porto Portugal skyline'] },
 ];
 
 const JUNK = /ecoponto|placa|plaque|sign(age)?\b|logo|coat of arms|bras[ãa]o|\bmap\b|mapa|diagram|graffiti|detalhe|close-?up|manhole|construction site|scaffold|roadworks|parking/i;

@@ -18,6 +18,7 @@ const COLLECTIONS = [
   ['compare', 'Comparisons', 'Portugal vs other markets, city vs city, structure vs structure'],
   ['projects', 'Project reviews', 'Independent reviews of named new-build developments'],
   ['developers', 'Developer profiles', 'Track-record profiles of Portugal developers'],
+  ['property-for-sale', 'Property for sale', 'Where to buy by region and town, with prices and the costs of owning'],
   ['move-to-portugal', 'Moving to Portugal', 'Residence visas, relocation costs, where to live and what it costs to own'],
   ['news', 'News', 'Market and regulatory news'],
 ];

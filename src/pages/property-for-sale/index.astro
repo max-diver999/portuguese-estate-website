@@ -1,0 +1,61 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { hubSchemas } from '../../lib/hubSchema';
+import InlineCta from '../../components/InlineCta.astro';
+import ContentCard from '../../components/ContentCard.astro';
+import LeadForm from '../../components/LeadForm.astro';
+
+const entries = (await getCollection('property-for-sale'))
+  .filter((g) => !g.data.noindex && g.id !== 'portugal')
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const schemas = hubSchemas({
+  path: '/property-for-sale/',
+  name: 'Property for sale in Portugal',
+  description:
+    'Where to buy in Portugal by region and town, with what each market costs and what the property costs to own.',
+  itemCount: entries.length,
+});
+---
+<BaseLayout
+  schemas={schemas}
+  title="Property for Sale in Portugal by Region"
+  description="Where to buy in Portugal, region by region and town by town: what each market costs, what buying costs on top, and what the house costs to hold."
+>
+  <section class="site-container py-14 md:py-20">
+    <header class="max-w-2xl mb-12">
+      <h1 class="text-3xl">Property for sale in Portugal</h1>
+      <p class="text-lg text-[var(--color-muted)] mt-3">
+        Portals show you what is listed today. These pages tell you what each market actually costs,
+        what you pay on top to buy as a non-resident, and what the house costs every year after that.
+      </p>
+      <p class="text-sm text-[var(--color-muted)] mt-2">{entries.length} regional and town guides.</p>
+    </header>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {entries.map((item) => (
+        <ContentCard
+          href={`/property-for-sale/${item.id}/`}
+          title={item.data.title}
+          description={item.data.description}
+          image={item.data.heroImage}
+          imageAlt={item.data.heroImageAlt}
+          badges={item.data.tags?.slice(0, 2) ?? []}
+          meta={`${item.data.readingTime ?? 8} min read`}
+        />
+      ))}
+    </div>
+
+    <LeadForm context="Property for sale hub shortlist" />
+
+    <InlineCta
+      headline='Know the region, not the property yet?'
+      subtext='Tell us the budget and what the house is for. We come back with a shortlist and the real cost of each one.'
+      buttonHref="/get-shortlist/"
+      ctaId='pfs_hub_inline'
+      whatsappMessage="Hi Portuguese Estate! I'm looking for property in Portugal and want a shortlist."
+    />
+  </section>
+</BaseLayout>

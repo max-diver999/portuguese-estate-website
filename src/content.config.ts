@@ -58,6 +58,10 @@ export const collections = {
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/news' }),
     schema: articleSchema,
   }),
+  'property-for-sale': defineCollection({
+    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/property-for-sale' }),
+    schema: articleSchema,
+  }),
   'move-to-portugal': defineCollection({
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/move-to-portugal' }),
     schema: articleSchema,
