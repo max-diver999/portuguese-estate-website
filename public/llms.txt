@@ -1,11 +1,11 @@
 # Portuguese Estate
 
-> Independent research on Portugal property investment for US, UK, EU and Middle East buyers. Not a developer, not a listing portal.
+> Independent research on buying property in Portugal and moving there, for US, UK, EU and Middle East buyers. Not a developer, not a listing portal.
 
 - Site: https://portuguese-estate.com
 - Contact: info@portuguese-estate.com
-- Markets: Lisbon, Porto, Algarve, Comporta, Cascais, Silver Coast, Madeira
-- Focus: IMT 7.5% flat for non-residents (DL 97/2026, from Sep 2026), AL/RNAL licensing, rental yields, buying process for foreigners, developer track records
+- Markets: Lisbon, Porto, the Algarve, Cascais, the Silver Coast, Madeira, the Azores, Alentejo and Comporta
+- Focus: IMT 7.5% flat for non-residents (DL 97/2026, from Sep 2026), the D7, D8 and Golden Visa routes, naturalisation under Lei Organica 1/2026, AL/RNAL licensing, buying process and running costs for foreign owners
 - Corpus: 113 pages, updated 2026-09-07
 
 ## Collections
@@ -18,8 +18,10 @@
 
 ## Key pages
 - https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026/ - IMT 7.5% flat rate for non-residents
-- https://portuguese-estate.com/guides/buy-property-portugal-foreigner/ - foreign buyer hub
-- https://portuguese-estate.com/guides/is-portugal-property-good-investment-2026/ - market verdict 2026
+- https://portuguese-estate.com/guides/how-to-buy-property-portugal-step-by-step/ - the purchase, step by step
+- https://portuguese-estate.com/property-for-sale/ - where to buy, by region and town
+- https://portuguese-estate.com/move-to-portugal/ - visas, cost of living, relocation
+- https://portuguese-estate.com/move-to-portugal/citizenship-by-investment/ - naturalisation after the 2026 law
 - https://portuguese-estate.com/guides/rnal-registration-portugal/ - AL licence registration
 - https://portuguese-estate.com/guides/portugal-property-investment-guide/ - investment pillar
 
