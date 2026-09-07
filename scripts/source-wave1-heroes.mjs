@@ -16,8 +16,7 @@ const used = new Set(
 );
 
 const WANT = [
-  { slug: 'from-uk',        terms: ['Algarve Portugal coast', 'Lagos Portugal Algarve', 'Carvoeiro Algarve', 'Tavira Algarve Portugal'] },
-  { slug: 'by-nationality', terms: ['Braga Portugal', 'Guimarães Portugal', 'Aveiro Portugal'] },
+  { slug: 'portugal-house-prices', terms: ['Alfama Lisboa Portugal', 'Setúbal Portugal city', 'Matosinhos Portugal', 'Viana do Castelo Portugal'] },
 ];
 
 const JUNK = /ecoponto|placa|plaque|sign(age)?\b|logo|coat of arms|bras[ãa]o|\bmap\b|mapa|diagram|graffiti|detalhe|close-?up|manhole|construction site|scaffold|roadworks|parking/i;

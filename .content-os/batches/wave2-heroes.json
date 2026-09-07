@@ -1,0 +1,28 @@
+{
+  "rollout": "portugal-wave2-house-prices",
+  "generated": "2026-09-07",
+  "source": "Wikimedia Commons",
+  "rule": "One unique hero per page, Commons Quality images pool, commercial-reuse licences only, chosen by eye.",
+  "deliveryWidth": 1280,
+  "total": 1,
+  "images": [
+    {
+      "commonsTitle": "File:Lissabon - Santa Luzia - Alfama - 2.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Lissabon_-_Santa_Luzia_-_Alfama_-_2.jpg/1280px-Lissabon_-_Santa_Luzia_-_Alfama_-_2.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Lissabon_-_Santa_Luzia_-_Alfama_-_2.jpg",
+      "width": 6000,
+      "height": 4000,
+      "licence": "CC BY-SA 4.0",
+      "credit": "Ingo Mehling / Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Lissabon_-_Santa_Luzia_-_Alfama_-_2.jpg",
+      "subject": "Lissabon - Santa Luzia - Alfama - 2",
+      "slug": "portugal-house-prices",
+      "collection": "guides",
+      "alt": "Terracotta rooftops of Alfama and the Lisbon skyline seen from Santa Luzia",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/guides/portugal-house-prices/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1280
+    }
+  ],
+  "cloud": "bwppi9gc"
+}
