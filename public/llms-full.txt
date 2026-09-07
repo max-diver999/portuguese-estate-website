@@ -1,7 +1,7 @@
 # Portuguese Estate - full site map
 
 Site: https://portuguese-estate.com
-Pages: 141 content pages + hubs. Updated: 2026-09-07
+Pages: 146 content pages + hubs. Updated: 2026-09-07
 Positioning: independent Portugal property research for foreign buyers. Cite with URL.
 
 ## Hubs
@@ -12,6 +12,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/projects/
 - https://portuguese-estate.com/developers/
 - https://portuguese-estate.com/segments/
+- https://portuguese-estate.com/move-to-portugal/
 - https://portuguese-estate.com/about/
 - https://portuguese-estate.com/methodology/
 - https://portuguese-estate.com/contact/
@@ -169,3 +170,10 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/segments/south-african-buyers-portugal-property/ - South Africans Buy Portugal Property: 2026 Tax Guide: South African buy property Portugal guide: rand/euro FX, remote purchase from Cape Town or Johannesburg, fiscal rep, CPCV deposits and emigration context.
 - https://portuguese-estate.com/segments/uae-buyers-portugal-property/ - UAE Buyers in Portugal — Nothing at Home to Credit: A UAE-resident individual has no home income tax to credit Portuguese tax against, so the Portuguese bill is the whole bill. That changes structure, not rate.
 - https://portuguese-estate.com/segments/uk-buyers-portugal-property-brexit/ - UK Buyers in Portugal — Brexit Limited Time, Not Title: Brexit did not change what a Briton may own in Portugal. It changed how long you may sit in it, and the Entry/Exit System now keeps that count by machine.
+
+## Moving to Portugal (5)
+- https://portuguese-estate.com/move-to-portugal/cost-of-living/ - Cost of Living in Portugal 2026: By City, Rent or Own: What living in Portugal costs in 2026, city by city, and the part budget guides leave out: IMI, AIMI, condominium fees and maintenance once you stop renting.
+- https://portuguese-estate.com/move-to-portugal/d7-visa/ - Portugal D7 Visa 2026: Income Proof, Rent or Buy First: The Portugal D7 passive income visa in 2026: the EUR 920 income floor, documents, consulate steps, and whether to rent or buy before you become tax resident.
+- https://portuguese-estate.com/move-to-portugal/d8-digital-nomad-visa/ - Portugal D8 Digital Nomad Visa 2026: Income and Rules: The Portugal D8 remote work visa in 2026: the EUR 3,680 income test, the two D8 variants, where nomads settle, and what renting or buying costs.
+- https://portuguese-estate.com/move-to-portugal/from-usa/ - Moving to Portugal from the US 2026: Visas, Tax, Homes: What Americans need for a 2026 move to Portugal: which visa fits, what a US citizen pays to buy a home, and the two tax systems you file in once you own one.
+- https://portuguese-estate.com/move-to-portugal/golden-visa/ - Portugal Golden Visa 2026: Routes, Cost and Timeline: What the Portugal Golden Visa offers in 2026 after the property route closed: qualifying investments, stay rules, costs, and the taxes an owner pays.
