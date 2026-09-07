@@ -180,20 +180,6 @@
       "bytes": 200453,
       "uploaded_at": "2026-08-25T23:39:49Z"
     },
-    "american-buyers-portugal-property": {
-      "public_id": "more-group/portugal/segments/american-buyers-portugal-property/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Praia_do_Garr%C3%A3o_-_Portugal_%282989528311%29.jpg/1280px-Praia_do_Garr%C3%A3o_-_Portugal_%282989528311%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Praia_do_Garr%C3%A3o_-_Portugal_%282989528311%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Praia_do_Garr%C3%A3o_-_Portugal_(2989528311).jpg",
-      "source_sha256": "414dac19b813d89841a68d8c64eeea886592d11a501df01ac2ad2dc21a723a0f",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701192/more-group/portugal/segments/american-buyers-portugal-property/hero.jpg",
-      "version": 1787701192,
-      "format": "jpg",
-      "width": 1280,
-      "height": 897,
-      "bytes": 496183,
-      "uploaded_at": "2026-08-25T23:39:52Z"
-    },
     "angolan-buyers-portugal": {
       "public_id": "more-group/portugal/segments/angolan-buyers-portugal/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Almada%2C_Cristo_Rei%2C_ponto_de_vista.jpg/1280px-Almada%2C_Cristo_Rei%2C_ponto_de_vista.jpg",
@@ -1201,20 +1187,6 @@
       "height": 964,
       "bytes": 371393,
       "uploaded_at": "2026-08-25T23:46:03Z"
-    },
-    "portugal-golden-visa-vs-property-purchase": {
-      "public_id": "more-group/portugal/guides/portugal-golden-visa-vs-property-purchase/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Torres_das_Amoreiras_09.jpg/1280px-Torres_das_Amoreiras_09.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Torres_das_Amoreiras_09.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Torres_das_Amoreiras_09.jpg",
-      "source_sha256": "462706e5cc8bd115c6845e42c3e47136697c8dd4031509fef0eb4d2f13665a4d",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701567/more-group/portugal/guides/portugal-golden-visa-vs-property-purchase/hero.jpg",
-      "version": 1787701567,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 284963,
-      "uploaded_at": "2026-08-25T23:46:07Z"
     },
     "portugal-housing-supply-licensing-2025": {
       "public_id": "more-group/portugal/guides/portugal-housing-supply-licensing-2025/hero",
