@@ -6,7 +6,7 @@
 - Contact: info@portuguese-estate.com
 - Markets: Lisbon, Porto, Algarve, Comporta, Cascais, Silver Coast, Madeira
 - Focus: IMT 7.5% flat for non-residents (DL 97/2026, from Sep 2026), AL/RNAL licensing, rental yields, buying process for foreigners, developer track records
-- Corpus: 119 pages, updated 2026-09-07
+- Corpus: 120 pages, updated 2026-09-07
 
 ## Collections
 - https://portuguese-estate.com/guides/ - Guides (62)
@@ -14,7 +14,7 @@
 - https://portuguese-estate.com/projects/ - Project reviews (7)
 - https://portuguese-estate.com/developers/ - Developer profiles (3)
 - https://portuguese-estate.com/property-for-sale/ - Property for sale (23)
-- https://portuguese-estate.com/move-to-portugal/ - Moving to Portugal (10)
+- https://portuguese-estate.com/move-to-portugal/ - Moving to Portugal (11)
 
 ## Key pages
 - https://portuguese-estate.com/guides/imt-tax-non-resident-portugal-2026/ - IMT 7.5% flat rate for non-residents
