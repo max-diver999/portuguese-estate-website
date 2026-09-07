@@ -86,6 +86,17 @@ const waHref = buildWaHref(decodeURIComponent(waText));
       <input type="checkbox" id="lf-consent" name="consent" required class="lead-form-consent__check" />
       <label class="lead-form-consent__label" for="lf-consent">I agree to be contacted about my enquiry. See our <a href="/privacy-policy/">Privacy Policy</a>.</label>
     </div>
+    <p id="lf-error" role="alert" class="hidden text-red-600 text-sm text-center">
+      Something went wrong. Email {SITE.email} or{' '}
+      <a
+        href={waHref}
+        {...waLinkAttrs}
+        data-wa-placement="inline_cta"
+        data-cta="whatsapp_form_error"
+      >
+        {hasWhatsApp ? 'WhatsApp us' : 'try the shortlist form'}
+      </a>.
+    </p>
     <button type="submit" class="btn-primary w-full py-3">Request shortlist →</button>
     <p class="text-center text-sm text-[var(--color-muted)]">
       Prefer WhatsApp?
@@ -101,33 +112,79 @@ const waHref = buildWaHref(decodeURIComponent(waText));
       {hasWhatsApp && SITE.whatsappDisplay && ` (${SITE.whatsappDisplay})`}
     </p>
     <p id="lf-success" class="hidden text-green-700 text-sm font-medium text-center">Thank you — redirecting…</p>
-    <p id="lf-error" class="hidden text-red-600 text-sm text-center">
-      Something went wrong. Email {SITE.email} or{' '}
-      <a
-        href={waHref}
-        {...waLinkAttrs}
-        data-wa-placement="inline_cta"
-        data-cta="whatsapp_form_error"
-      >
-        {hasWhatsApp ? 'WhatsApp us' : 'try the shortlist form'}
-      </a>.
-    </p>
   </form>
 </section>
 
 <script>
+  import { track } from '../lib/track';
+
+  function pageIdentity() {
+    const parts = window.location.pathname.split('/').filter(Boolean);
+    return {
+      collection: parts.length > 1 ? parts[0] : 'root',
+      slug: parts.length > 0 ? parts[parts.length - 1] : 'home',
+    };
+  }
+
   document.querySelectorAll('form.ig-lead-form').forEach((formEl) => {
     const form = formEl as HTMLFormElement;
+    let started = false;
+
+    // A real field, not any focusin: the consent label carries a privacy link.
+    form.querySelectorAll('input:not([tabindex="-1"]), select, textarea').forEach((field) => {
+      field.addEventListener(
+        'focus',
+        () => {
+          if (started) return;
+          started = true;
+          const { collection, slug } = pageIdentity();
+          track('form_start', {
+            form_id: form.id,
+            form_context: form.dataset.context || '',
+            form_location: 'article',
+            page_path: window.location.pathname,
+            collection,
+            slug,
+          });
+        },
+        { once: true },
+      );
+    });
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const data = new FormData(form);
       const phone = String(data.get('phone') || '').trim();
       const email = String(data.get('email') || '').trim();
-      if (phone.replace(/\D/g, '').length < 8) {
+      const { collection, slug } = pageIdentity();
+
+      /* A rejected submit used to return in silence, so the gap between a
+       * form_start and a submission could not be read. */
+      const fail = (reason: string, message: string, focusId: string) => {
         const err = document.getElementById('lf-error');
-        if (err) { err.textContent = 'Please enter a valid phone or WhatsApp number.'; err.classList.remove('hidden'); }
+        if (err) { err.textContent = message; err.classList.remove('hidden'); }
+        (document.getElementById(focusId) as HTMLElement | null)?.focus();
+        track('form_validation_error', {
+          form_id: form.id,
+          form_location: 'article',
+          reason,
+          page_path: window.location.pathname,
+          collection,
+          slug,
+        });
+      };
+
+      if (phone.replace(/\D/g, '').length < 8) {
+        fail('bad-phone', 'Please enter a valid phone or WhatsApp number.', 'lf-phone');
         return;
       }
+      /* `novalidate` turns off the browser check, so the required consent box
+       * was never enforced by anything. */
+      if (!data.get('consent')) {
+        fail('no-consent', 'Please tick the box so we know we may reply to you.', 'lf-consent');
+        return;
+      }
+      document.getElementById('lf-error')?.classList.add('hidden');
       const payload = {
         name: data.get('name'),
         phone,
@@ -141,6 +198,16 @@ const waHref = buildWaHref(decodeURIComponent(waText));
         source: window.location.href,
         page: window.location.pathname,
       };
+      track('form_submit_attempt', {
+        form_id: form.id,
+        form_location: 'article',
+        market: String(payload.market || 'not_set'),
+        budget: String(payload.budget || 'not_set'),
+        page_path: window.location.pathname,
+        collection,
+        slug,
+      });
+
       try {
         const res = await fetch('/api/lead/', {
           method: 'POST',

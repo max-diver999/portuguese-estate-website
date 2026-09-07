@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
+import InlineLeadCta from '../components/InlineLeadCta.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import { SITE } from '../data/site';
 import { responsiveImage, lcpPreloadFromResponsive } from '../lib/responsiveImage';
@@ -151,6 +152,10 @@ const schemas = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : 
     <div class="prose">
       <slot />
     </div>
+
+    {/* Rendered here, then relocated by its own inline script to sit between the
+        first and second H2 of the prose. */}
+    <InlineLeadCta context={contextLabel} />
 
     {!hasInlineFaqBlock && faq.length > 0 && (
       <div class="max-w-3xl mt-10">
