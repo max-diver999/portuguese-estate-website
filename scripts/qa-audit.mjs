@@ -10,7 +10,7 @@ import { join, relative } from 'node:path';
 import { runExtendedChecks } from './lib/more-content-gate.mjs';
 
 const ROOT = decodeURIComponent(new URL('../src/content/', import.meta.url).pathname);
-const COLLECTIONS = ['guides', 'compare', 'areas', 'projects', 'developers', 'news', 'segments'];
+const COLLECTIONS = ['guides', 'compare', 'projects', 'developers', 'news', 'move-to-portugal', 'property-for-sale'];
 
 const BANNED_PHRASES = [
   'Regional diversification',
@@ -177,10 +177,10 @@ function auditFile(c, slug) {
     guides: 2000,
     projects: 1200,
     compare: 1800,
-    areas: 1800,
     developers: 1200,
     news: 600,
-    segments: 2000,
+    'move-to-portugal': 2000,
+    'property-for-sale': 1800,
   }[c] ?? 1800;
   if (words < minW) prob.push(`words:${words}<${minW}`);
 
@@ -199,7 +199,7 @@ function auditFile(c, slug) {
 
   const links = body.match(/\]\((\/[a-z0-9\-\/]*)\)/gi) || [];
   const internal = links.filter((l) =>
-    /\]\(\/(guides|compare|areas|projects|developers|news|segments)\//i.test(l),
+    /\]\(\/(guides|compare|projects|developers|news|move-to-portugal|property-for-sale)\//i.test(l),
   );
   if (internal.length < 5) prob.push(`intLinks:${internal.length}<5`);
   const noTrail = internal.filter((l) => !/\/\)$/.test(l));
@@ -209,7 +209,7 @@ function auditFile(c, slug) {
   // under the wrong collection prefix and 404'd in production. Resolve targets.
   for (const raw of internal) {
     const target = raw.replace(/^\]\(/, '').replace(/\)$/, '');
-    const m = target.match(/^\/([a-z]+)\/([^/]+)\/?$/i);
+    const m = target.match(/^\/([a-z][a-z-]*)\/([^/]+)\/?$/i);
     if (!m) continue;
     const [, coll, slug] = m;
     if (!COLLECTIONS.includes(coll)) continue;
@@ -285,7 +285,7 @@ function auditFile(c, slug) {
   }
 
   const bodySlugs = [
-    ...body.matchAll(/\]\(\/(?:guides|compare|areas|projects|developers|news)\/([a-z0-9\-]+)\/?\)/gi),
+    ...body.matchAll(/\]\(\/(?:guides|compare|projects|developers|news)\/([a-z0-9\-]+)\/?\)/gi),
   ].map((m) => m[1]);
   const badLinks = [...new Set(bodySlugs.filter((s) => !allSlugs.has(s)))];
   if (badLinks.length) prob.push(`brokenInternalLinks:${badLinks.join('|')}`);

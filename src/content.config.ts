@@ -42,10 +42,6 @@ export const collections = {
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/compare' }),
     schema: articleSchema,
   }),
-  areas: defineCollection({
-    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/areas' }),
-    schema: articleSchema,
-  }),
   projects: defineCollection({
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
     schema: projectSchema,
@@ -58,8 +54,12 @@ export const collections = {
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/news' }),
     schema: articleSchema,
   }),
-  segments: defineCollection({
-    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/segments' }),
+  'property-for-sale': defineCollection({
+    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/property-for-sale' }),
+    schema: articleSchema,
+  }),
+  'move-to-portugal': defineCollection({
+    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/move-to-portugal' }),
     schema: articleSchema,
   }),
 };

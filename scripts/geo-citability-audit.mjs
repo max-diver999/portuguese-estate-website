@@ -36,11 +36,14 @@ const COMMERCIAL = new Set([
   'gajdy',
   'comparisons',
   'sravneniya',
-  'areas',
   'rajony',
   'compare',
   'projects',
   'proekty',
+  // The two collections that replaced areas and segments carry the commercial
+  // spine now, so they are held to the same citability bar as the guides.
+  'move-to-portugal',
+  'property-for-sale',
 ]);
 
 function listMdx() {

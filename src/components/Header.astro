@@ -4,11 +4,11 @@ import { waHref as buildWaHref, waLabel, waLinkAttrs } from '../lib/contact';
 import CurrencyToggle from './CurrencyToggle.astro';
 
 const nav = [
+  { label: 'Property for sale', href: '/property-for-sale/' },
   { label: 'Guides', href: '/guides/' },
-  { label: 'Areas', href: '/areas/' },
+  { label: 'Move to Portugal', href: '/move-to-portugal/' },
   { label: 'Compare', href: '/compare/' },
   { label: 'Projects', href: '/projects/' },
-  { label: 'Segments', href: '/segments/' },
   { label: 'Developers', href: '/developers/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
@@ -113,7 +113,7 @@ const waText = waLabel('WhatsApp', 'Talk to us');
 
   /*
    * A `position: fixed` child escapes the hiding <details> applies to its
-   * contents, so a closed menu stayed painted — visible, un-clickable and
+   * contents, so a closed menu stayed painted, visible, un-clickable and
    * underneath the page. Keeping the panel out of the layout until the
    * disclosure is open is what actually closes it.
    */

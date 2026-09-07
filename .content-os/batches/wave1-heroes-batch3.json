@@ -1,0 +1,45 @@
+{
+  "rollout": "portugal-wave1-move-to-portugal-batch3",
+  "generated": "2026-09-07",
+  "source": "Wikimedia Commons",
+  "rule": "One unique hero per page, Commons Quality images pool, commercial-reuse licences only, chosen by eye from a contact sheet.",
+  "deliveryWidth": 1280,
+  "total": 2,
+  "images": [
+    {
+      "commonsTitle": "File:Albufeira coast in Portugal.JPG",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Albufeira_coast_in_Portugal.JPG/1280px-Albufeira_coast_in_Portugal.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Albufeira_coast_in_Portugal.JPG",
+      "width": 2100,
+      "height": 1500,
+      "licence": "CC BY 3.0 de",
+      "credit": "High Contrast / Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Albufeira_coast_in_Portugal.JPG",
+      "subject": "Albufeira coast in Portugal",
+      "slug": "from-uk",
+      "collection": "move-to-portugal",
+      "alt": "Red sandstone cliffs and pines on the coast at Albufeira in the Algarve",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/from-uk/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1371
+    },
+    {
+      "commonsTitle": "File:Guimaraes Portugal Praça da Oliveira-01.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Guimaraes_Portugal_Pra%C3%A7a_da_Oliveira-01.jpg/1280px-Guimaraes_Portugal_Pra%C3%A7a_da_Oliveira-01.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Guimaraes_Portugal_Pra%C3%A7a_da_Oliveira-01.jpg",
+      "width": 3800,
+      "height": 2533,
+      "licence": "CC BY-SA 3.0",
+      "credit": "CEphoto, Uwe Aranas / Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Guimaraes_Portugal_Pra%C3%A7a_da_Oliveira-01.jpg",
+      "subject": "Guimaraes Portugal Praça da Oliveira-01",
+      "slug": "by-nationality",
+      "collection": "move-to-portugal",
+      "alt": "Praca da Oliveira in Guimaraes, with cafe tables under the arcades",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/by-nationality/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1280
+    }
+  ],
+  "cloud": "bwppi9gc"
+}

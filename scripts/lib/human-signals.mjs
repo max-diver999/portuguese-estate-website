@@ -3,18 +3,21 @@
  */
 
 export const EM_DASH_LIMIT = {
-  guides: 8,
-  gajdy: 8,
-  comparisons: 8,
-  sravneniya: 8,
-  areas: 8,
-  rajony: 8,
-  projects: 9,
-  proekty: 9,
-  news: 10,
-  novosti: 10,
-  segments: 8,
-  default: 8,
+  // Zero everywhere. The em dash is banned in MORE Group copy; the corpus was
+  // swept clean on 7 Sep 2026 and this gate keeps it that way.
+  guides: 0,
+  gajdy: 0,
+  comparisons: 0,
+  sravneniya: 0,
+  compare: 0,
+  rajony: 0,
+  projects: 0,
+  proekty: 0,
+  news: 0,
+  novosti: 0,
+  'move-to-portugal': 0,
+  'property-for-sale': 0,
+  default: 0,
 };
 
 export const SCENARIO_SPAM_MIN = 4;

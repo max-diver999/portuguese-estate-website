@@ -3,36 +3,743 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.portuguese-estate.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.portuguese-estate.com"
+        }
+      ],
       "destination": "https://portuguese-estate.com/$1",
       "statusCode": 308
+    },
+    {
+      "source": "/segments/american-buyers-portugal-property",
+      "destination": "/move-to-portugal/from-usa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/american-buyers-portugal-property/",
+      "destination": "/move-to-portugal/from-usa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/portugal-golden-visa-vs-property-purchase",
+      "destination": "/move-to-portugal/golden-visa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/portugal-golden-visa-vs-property-purchase/",
+      "destination": "/move-to-portugal/golden-visa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/chinese-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/chinese-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/uk-buyers-portugal-property-brexit",
+      "destination": "/move-to-portugal/from-uk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/uk-buyers-portugal-property-brexit/",
+      "destination": "/move-to-portugal/from-uk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/israeli-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/israeli-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/german-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/german-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/australian-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/australian-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/brazilian-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/brazilian-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/uae-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/uae-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/indian-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/indian-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/canadian-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/canadian-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/south-african-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/south-african-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/angolan-buyers-portugal",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/angolan-buyers-portugal/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/french-buyers-portugal-property",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/french-buyers-portugal-property/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/segments/",
+      "destination": "/move-to-portugal/by-nationality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/buy-property-portugal-foreigner",
+      "destination": "/guides/how-to-buy-property-portugal-step-by-step/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/buy-property-portugal-foreigner/",
+      "destination": "/guides/how-to-buy-property-portugal-step-by-step/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/hidden-costs-buying-property-portugal",
+      "destination": "/guides/cost-of-buying-property-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/hidden-costs-buying-property-portugal/",
+      "destination": "/guides/cost-of-buying-property-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/non-resident-mortgage-portugal",
+      "destination": "/guides/portugal-mortgage-rates-foreigners-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/non-resident-mortgage-portugal/",
+      "destination": "/guides/portugal-mortgage-rates-foreigners-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/mortgage-broker-vs-bank-portugal",
+      "destination": "/guides/portugal-mortgage-rates-foreigners-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/mortgage-broker-vs-bank-portugal/",
+      "destination": "/guides/portugal-mortgage-rates-foreigners-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/property-maintenance-costs-portugal",
+      "destination": "/guides/property-management-portugal-cost/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/property-maintenance-costs-portugal/",
+      "destination": "/guides/property-management-portugal-cost/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/renovation-costs-portugal-per-m2",
+      "destination": "/guides/property-management-portugal-cost/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/renovation-costs-portugal-per-m2/",
+      "destination": "/guides/property-management-portugal-cost/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/al-license-transfer-portugal-sale",
+      "destination": "/guides/alojamento-local-license-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/al-license-transfer-portugal-sale/",
+      "destination": "/guides/alojamento-local-license-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/gross-vs-net-yield-portugal",
+      "destination": "/guides/portugal-rental-yield-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/gross-vs-net-yield-portugal/",
+      "destination": "/guides/portugal-rental-yield-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/how-to-calculate-rental-yield-portugal",
+      "destination": "/guides/portugal-rental-yield-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/how-to-calculate-rental-yield-portugal/",
+      "destination": "/guides/portugal-rental-yield-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/highest-rental-yield-areas-portugal",
+      "destination": "/guides/portugal-rental-yield-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/highest-rental-yield-areas-portugal/",
+      "destination": "/guides/portugal-rental-yield-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/portugal-buy-to-let-investment-guide",
+      "destination": "/guides/portugal-property-investment-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/portugal-buy-to-let-investment-guide/",
+      "destination": "/guides/portugal-property-investment-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/is-portugal-property-good-investment-2026",
+      "destination": "/guides/portugal-property-investment-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/is-portugal-property-good-investment-2026/",
+      "destination": "/guides/portugal-property-investment-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/mais-valias-portugal-capital-gains",
+      "destination": "/guides/portugal-capital-gains-tax-property/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/mais-valias-portugal-capital-gains/",
+      "destination": "/guides/portugal-capital-gains-tax-property/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/portugal-property-deposit-guide-cpcv",
+      "destination": "/guides/cpcv-promissory-contract-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/portugal-property-deposit-guide-cpcv/",
+      "destination": "/guides/cpcv-promissory-contract-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/cost-of-selling-property-portugal",
+      "destination": "/guides/sell-property-portugal-non-resident/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/cost-of-selling-property-portugal/",
+      "destination": "/guides/sell-property-portugal-non-resident/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/best-portugal-property-under-4000-euro-m2",
+      "destination": "/guides/portugal-property-under-500000-euros/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/best-portugal-property-under-4000-euro-m2/",
+      "destination": "/guides/portugal-property-under-500000-euros/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/alcantara-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/alcantara-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/chiado-principe-real-property",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/chiado-principe-real-property/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/marvila-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/marvila-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/parque-das-nacoes-property",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/parque-das-nacoes-property/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/oeiras-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/oeiras-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/matosinhos-property-investment",
+      "destination": "/property-for-sale/porto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/matosinhos-property-investment/",
+      "destination": "/property-for-sale/porto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/vila-nova-de-gaia-property-investment",
+      "destination": "/property-for-sale/porto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/vila-nova-de-gaia-property-investment/",
+      "destination": "/property-for-sale/porto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/portimao-property-investment",
+      "destination": "/property-for-sale/algarve/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/portimao-property-investment/",
+      "destination": "/property-for-sale/algarve/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/caldas-da-rainha-property-investment",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/caldas-da-rainha-property-investment/",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/lourinha-property-investment",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/lourinha-property-investment/",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/madeira-property-investment-guide",
+      "destination": "/property-for-sale/madeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/madeira-property-investment-guide/",
+      "destination": "/property-for-sale/madeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/cascais-property-investment",
+      "destination": "/property-for-sale/cascais/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/cascais-property-investment/",
+      "destination": "/property-for-sale/cascais/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/tavira-property-investment",
+      "destination": "/property-for-sale/tavira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/tavira-property-investment/",
+      "destination": "/property-for-sale/tavira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/lagos-property-investment",
+      "destination": "/property-for-sale/lagos/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/lagos-property-investment/",
+      "destination": "/property-for-sale/lagos/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/comporta-property-investment",
+      "destination": "/property-for-sale/alentejo-comporta/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/comporta-property-investment/",
+      "destination": "/property-for-sale/alentejo-comporta/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/aveiro-property-investment",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/aveiro-property-investment/",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/braga-property-investment",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/braga-property-investment/",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/coimbra-property-investment",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/coimbra-property-investment/",
+      "destination": "/property-for-sale/central-and-northern-portugal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/nazare-property-investment",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/nazare-property-investment/",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/obidos-property-investment",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/obidos-property-investment/",
+      "destination": "/property-for-sale/silver-coast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/setubal-peninsula-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/setubal-peninsula-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/sintra-property-investment",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/sintra-property-investment/",
+      "destination": "/property-for-sale/lisbon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/albufeira-property-investment",
+      "destination": "/property-for-sale/albufeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/albufeira-property-investment/",
+      "destination": "/property-for-sale/albufeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/vilamoura-property-investment",
+      "destination": "/property-for-sale/vilamoura/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/vilamoura-property-investment/",
+      "destination": "/property-for-sale/vilamoura/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/faro-property-investment",
+      "destination": "/property-for-sale/faro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/faro-property-investment/",
+      "destination": "/property-for-sale/faro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/ericeira-property-investment",
+      "destination": "/property-for-sale/ericeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/ericeira-property-investment/",
+      "destination": "/property-for-sale/ericeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas",
+      "destination": "/property-for-sale/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/",
+      "destination": "/property-for-sale/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-cyprus-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-cyprus-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-dubai-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-dubai-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-france-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-france-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-greece-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-greece-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-italy-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-italy-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-malta-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-malta-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-spain-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-spain-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-turkey-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-turkey-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-uk-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-uk-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
     }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     },
     {
       "source": "/api/(.*)",
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     },
     {
       "source": "/_astro/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/images/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/fonts/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }

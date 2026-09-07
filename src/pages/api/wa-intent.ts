@@ -127,7 +127,7 @@ export const POST: APIRoute = async ({ request }) => {
       console.error(error);
     }
 
-    // Telegram only — no owner inbox email (Kommo). Real leads: /api/lead/ with phone.
+    // Telegram only, no owner inbox email (Kommo). Real leads: /api/lead/ with phone.
 
     return new Response(
       JSON.stringify({

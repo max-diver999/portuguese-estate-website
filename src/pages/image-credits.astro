@@ -9,7 +9,7 @@ import { HOMEPAGE_HERO_IMAGE, HOMEPAGE_HERO_ALT } from '../data/featured';
  * reasonable to the medium", which is what this page is for. It keeps captions
  * off the pages themselves.
  */
-const collections = ['guides', 'areas', 'projects', 'compare', 'segments', 'developers', 'news'];
+const collections = ['guides', 'projects', 'compare', 'developers', 'news', 'move-to-portugal', 'property-for-sale'];
 const entries = (await Promise.all(collections.map((c) => getCollection(c)))).flat();
 
 const credited = entries
@@ -35,7 +35,7 @@ const homepage = {
 };
 ---
 <BaseLayout
-  title="Image credits — Portuguese Estate"
+  title="Image credits | Portuguese Estate"
   description="Photographers and licences for every photograph used on this site."
   noindex={true}
 >
@@ -67,13 +67,13 @@ const homepage = {
               <td>
                 {c.sourceUrl
                   ? <a href={c.sourceUrl} rel="noopener nofollow" target="_blank">Source</a>
-                  : '—'}
+                  : ', '}
               </td>
               <td>{c.author}</td>
               <td>
                 {c.licence && c.licenceUrl
                   ? <a href={c.licenceUrl} rel="license noopener nofollow" target="_blank">{c.licence}</a>
-                  : c.licence || '—'}
+                  : c.licence || 'n/a'}
               </td>
             </tr>
           ))}

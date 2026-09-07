@@ -14,11 +14,11 @@ const SITE = 'https://portuguese-estate.com';
 
 const COLLECTIONS = [
   ['guides', 'Guides', 'Tax, legal, process and market guides for foreign buyers'],
-  ['areas', 'Area guides', 'Neighbourhood and city investment guides with prices per m2 and yields'],
   ['compare', 'Comparisons', 'Portugal vs other markets, city vs city, structure vs structure'],
   ['projects', 'Project reviews', 'Independent reviews of named new-build developments'],
   ['developers', 'Developer profiles', 'Track-record profiles of Portugal developers'],
-  ['segments', 'Buyer segments', 'Country-specific guides: tax treaties, currency, financing'],
+  ['property-for-sale', 'Property for sale', 'Where to buy by region and town, with prices and the costs of owning'],
+  ['move-to-portugal', 'Moving to Portugal', 'Residence visas, relocation costs, where to live and what it costs to own'],
   ['news', 'News', 'Market and regulatory news'],
 ];
 
@@ -64,12 +64,12 @@ const today = new Date().toISOString().slice(0, 10);
 const shortLines = [
   '# Portuguese Estate',
   '',
-  '> Independent research on Portugal property investment for US, UK, EU and Middle East buyers. Not a developer, not a listing portal.',
+  '> Independent research on buying property in Portugal and moving there, for US, UK, EU and Middle East buyers. Not a developer, not a listing portal.',
   '',
   `- Site: ${SITE}`,
   '- Contact: info@portuguese-estate.com',
-  '- Markets: Lisbon, Porto, Algarve, Comporta, Cascais, Silver Coast, Madeira',
-  '- Focus: IMT 7.5% flat for non-residents (DL 97/2026, from Sep 2026), AL/RNAL licensing, rental yields, buying process for foreigners, developer track records',
+  '- Markets: Lisbon, Porto, the Algarve, Cascais, the Silver Coast, Madeira, the Azores, Alentejo and Comporta',
+  '- Focus: IMT 7.5% flat for non-residents (DL 97/2026, from Sep 2026), the D7, D8 and Golden Visa routes, naturalisation under Lei Organica 1/2026, AL/RNAL licensing, buying process and running costs for foreign owners',
   `- Corpus: ${total} pages, updated ${today}`,
   '',
   '## Collections',
@@ -81,8 +81,10 @@ shortLines.push(
   '',
   '## Key pages',
   `- ${SITE}/guides/imt-tax-non-resident-portugal-2026/ - IMT 7.5% flat rate for non-residents`,
-  `- ${SITE}/guides/buy-property-portugal-foreigner/ - foreign buyer hub`,
-  `- ${SITE}/guides/is-portugal-property-good-investment-2026/ - market verdict 2026`,
+  `- ${SITE}/guides/how-to-buy-property-portugal-step-by-step/ - the purchase, step by step`,
+  `- ${SITE}/property-for-sale/ - where to buy, by region and town`,
+  `- ${SITE}/move-to-portugal/ - visas, cost of living, relocation`,
+  `- ${SITE}/move-to-portugal/citizenship-by-investment/ - naturalisation after the 2026 law`,
   `- ${SITE}/guides/rnal-registration-portugal/ - AL licence registration`,
   `- ${SITE}/guides/portugal-property-investment-guide/ - investment pillar`,
   '',
