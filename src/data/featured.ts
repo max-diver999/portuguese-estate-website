@@ -9,7 +9,7 @@ export const FEATURED_PROJECT_SLUGS = [
   'mar-adentro',
 ] as const;
 
-/** Hero spotlight — links to full project review from homepage banner. */
+/** Hero spotlight, links to full project review from homepage banner. */
 export const HOMEPAGE_HERO_PROJECT_SLUG = 'tomas-ribeiro-79' as const;
 
 export const FEATURED_GUIDE_SLUGS = [
@@ -29,12 +29,12 @@ export const FEATURED_FOR_SALE_SLUGS = [
 ] as const;
 
 /**
- * Homepage hero. Its own photograph, not a project's — the featured project is
+ * Homepage hero. Its own photograph, not a project's, the featured project is
  * named in the card overlay, and reusing that project's hero here would put the
  * same picture on two pages.
  */
 /**
- * Homepage hero: the Pombaline roofscape of the Baixa, shot from above — the
+ * Homepage hero: the Pombaline roofscape of the Baixa, shot from above, the
  * frame the design direction is named for.
  *
  * Bundled into the build rather than hotlinked. The upstream Wikimedia thumb

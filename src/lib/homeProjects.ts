@@ -5,7 +5,7 @@ type ProjectEntry = CollectionEntry<'projects'>;
 
 /**
  * Homepage curation order. This list was inherited from a Mexico site and held
- * Mexican areas, so no project ever matched and the priority pass was dead code —
+ * Mexican areas, so no project ever matched and the priority pass was dead code , 
  * the homepage silently fell through to price-ascending order. Values must match
  * the `area` field in src/content/projects/*.mdx.
  */

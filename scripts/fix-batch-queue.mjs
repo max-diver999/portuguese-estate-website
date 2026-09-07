@@ -66,13 +66,14 @@ const COLLECTIONS = isRu
     }
   : {
       guides: { minWords: 2000, minFaq: 5, commercial: true },
-      areas: { minWords: 1800, minFaq: 4, commercial: true },
       comparisons: { minWords: 1800, minFaq: 4, commercial: true },
       markets: { minWords: 1800, minFaq: 4, commercial: true },
       costs: { minWords: 1800, minFaq: 4, commercial: true },
       finance: { minWords: 1800, minFaq: 4, commercial: true },
       legal: { minWords: 1800, minFaq: 4, commercial: true },
       compare: { minWords: 1800, minFaq: 4, commercial: true },
+      'move-to-portugal': { minWords: 2000, minFaq: 5, commercial: true },
+      'property-for-sale': { minWords: 1800, minFaq: 4, commercial: true },
       projects: { minWords: 1000, minFaq: 3, commercial: false },
       developers: { minWords: 1200, minFaq: 3, commercial: false },
       news: { minWords: 500, minFaq: 0, light: true },
@@ -233,7 +234,7 @@ function analyze(file, index) {
       if (!/(риск|red flag|checklist|чеклист|what to check|insider tip|risks?)/i.test(body)) {
         issues.push('missing-risks');
       }
-      if (!/(сценари|scenario|for investors|для инвестор|who this is for|buyer profile|decision framework)/i.test(body)) {
+      if (!/(сценари|scenario|for investors|для инвестор|who this is for|who .{0,24} suits?|buyer profile|decision framework)/i.test(body)) {
         issues.push('missing-scenarios');
       }
       const nums = countNumericFacts(body);

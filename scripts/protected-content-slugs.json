@@ -1,6 +1,6 @@
 {
   "source": "GSC refresh 2026-08-22",
-  "rule": "Never noindex — upgrade only",
+  "rule": "Never noindex, upgrade only",
   "slugs": {
     "imt-tax-non-resident-portugal-2026": {
       "collection": "guides",

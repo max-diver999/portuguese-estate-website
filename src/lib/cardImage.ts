@@ -1,5 +1,5 @@
 /**
- * Card thumbnail URLs — Cloudinary crop when available; external CDN as-is.
+ * Card thumbnail URLs: Cloudinary crop when available; external CDN as-is.
  */
 export function getCardImageUrl(src: string | undefined, size: 'card' | 'hero' = 'card'): string {
   if (!src?.trim()) return '';
