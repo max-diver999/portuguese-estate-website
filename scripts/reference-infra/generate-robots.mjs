@@ -157,6 +157,15 @@ export function generateRobots(config) {
   if (contentSignal) {
     blocks.push(`Content-Signal: ${contentSignal}`)
   }
+  // Answer engines look for a corpus index; point at it from robots so the
+  // pointer survives regeneration instead of being hand-added and then lost.
+  blocks.push(
+    [
+      '# Corpus index for answer engines',
+      `# ${new URL('/llms.txt', config.siteUrl).href}`,
+      `# ${new URL('/llms-full.txt', config.siteUrl).href}`,
+    ].join('\n'),
+  )
   blocks.push(`Sitemap: ${new URL('/sitemap-index.xml', config.siteUrl).href}`)
   return `${blocks.join('\n\n')}\n`
 }
