@@ -1,7 +1,7 @@
 # Portuguese Estate - full site map
 
 Site: https://portuguese-estate.com
-Pages: 116 content pages + hubs. Updated: 2026-09-07
+Pages: 118 content pages + hubs. Updated: 2026-09-07
 Positioning: independent Portugal property research for foreign buyers. Cite with URL.
 
 ## Hubs
@@ -126,15 +126,17 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/developers/vanguard-properties-portugal/ - Portugal Developer Review: Vanguard Properties 2026: Vanguard Properties Portugal 2026 review: Lisbon and Comporta pipeline, DL 67/2003 bank guarantees, delay risk, and a verify-before-deposit investor checklist.
 - https://portuguese-estate.com/developers/vic-properties-portugal/ - VIC Properties Portugal: 2026 Developer Review Guide: VIC Properties Portugal 2026 review: Prata Riverside, Matinha, Pinheirinho, 2023 ownership change, CPCV clauses, delay risk and investor checklist.
 
-## Property for sale (8)
+## Property for sale (10)
 - https://portuguese-estate.com/property-for-sale/algarve/ - Property for Sale in the Algarve: Prices by Area 2026: Where to buy in the Algarve and what each stretch costs: the golden triangle, the central strip, the west and the east, with buying and holding costs.
 - https://portuguese-estate.com/property-for-sale/cascais/ - Property for Sale in Cascais: Areas and Prices 2026: Where to buy in Cascais and Estoril, from the bay and Guincho to Birre and Alcabideche, with school access, buying costs and what a house costs to hold.
 - https://portuguese-estate.com/property-for-sale/lagos/ - Property for Sale in Lagos, Algarve: Areas and Prices: Where to buy in Lagos and the western Algarve, from the old town and marina to Meia Praia and Praia da Luz, with buying costs and what a house costs to hold.
 - https://portuguese-estate.com/property-for-sale/lisbon/ - Property for Sale in Lisbon: Districts and Prices 2026: Where to buy in Lisbon district by district, from Baixa and Chiado to Parque das Nacoes, Alcantara, Marvila and Oeiras, with buying and holding costs.
 - https://portuguese-estate.com/property-for-sale/madeira/ - Property for Sale in Madeira: Areas and Prices 2026: Where to buy on Madeira: Funchal, Camara de Lobos, Calheta, Ponta do Sol and the airport side, with buying costs and what a hillside house costs to hold.
 - https://portuguese-estate.com/property-for-sale/porto/ - Property for Sale in Porto: Districts and Prices 2026: Where to buy in Porto and across the Douro: the historic centre, Boavista, Foz, Matosinhos and Vila Nova de Gaia, with buying and holding costs.
+- https://portuguese-estate.com/property-for-sale/rural-and-land/ - Rural Property and Land for Sale in Portugal 2026: Buying a quinta, a farmhouse or land in Portugal: rustic versus urban classification, water, access, boundaries, building rights and what it costs.
 - https://portuguese-estate.com/property-for-sale/silver-coast/ - Property for Sale on the Silver Coast: Towns and Prices: Where to buy on Portugal's Silver Coast, from Ericeira and Nazare to Peniche, Obidos and Caldas da Rainha, with buying costs and what a house costs to hold.
 - https://portuguese-estate.com/property-for-sale/tavira/ - Property for Sale in Tavira: Areas and Prices 2026: Where to buy in Tavira and the eastern Algarve, from the old town to Cabanas and the island, with year-round living, buying costs and holding costs.
+- https://portuguese-estate.com/property-for-sale/villas/ - Villas for Sale in Portugal: Prices and Running Costs: Buying a villa in Portugal: where they are, what they cost by region, and the pool, garden and maintenance bills that never appear in the listing.
 
 ## Moving to Portugal (10)
 - https://portuguese-estate.com/move-to-portugal/best-places-to-live/ - Best Places to Live in Portugal 2026: 12 Towns Compared: Twelve Portuguese towns compared on housing cost, hospital and airport distance, winter and community, with the owner charges that vary by municipality.

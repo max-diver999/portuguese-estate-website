@@ -29,8 +29,7 @@ for (const f of [
 }
 
 const WANT = [
-  { slug: 'olhao',                    terms: ['Olhao Portugal', 'Olhão Portugal market', 'Ria Formosa Olhao'] },
-  { slug: 'loule-almancil-quarteira', terms: ['Loule Portugal market', 'Quarteira Portugal beach', 'Almancil Portugal'] },
+  { slug: 'rural-and-land', terms: ['Alentejo landscape Portugal', 'Portugal farmland countryside', 'Evora countryside Portugal', 'Portugal rural landscape hills'] },
 ];
 
 const JUNK = /ecoponto|placa|plaque|sign(age)?\b|logo|coat of arms|bras[ãa]o|\bmap\b|mapa|diagram|graffiti|detalhe|close-?up|manhole|construction site|scaffold|roadworks|parking/i;
