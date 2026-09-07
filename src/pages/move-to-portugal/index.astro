@@ -1,0 +1,58 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { hubSchemas } from '../../lib/hubSchema';
+import InlineCta from '../../components/InlineCta.astro';
+import ContentCard from '../../components/ContentCard.astro';
+
+const entries = (await getCollection('move-to-portugal'))
+  .filter((g) => !g.data.noindex)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const schemas = hubSchemas({
+  path: '/move-to-portugal/',
+  name: 'Moving to Portugal',
+  description:
+    'Residence visas, relocation costs and where to live in Portugal, with the ownership taxes each route triggers.',
+  itemCount: entries.length,
+});
+---
+<BaseLayout
+  schemas={schemas}
+  title="Moving to Portugal: Visas, Costs and Places"
+  description="Portugal residence routes for 2026: Golden Visa, D7, D8, citizenship timelines, living costs by city, and the property taxes each route triggers."
+>
+  <section class="site-container py-14 md:py-20">
+    <header class="max-w-2xl mb-12">
+      <h1 class="text-3xl">Moving to Portugal</h1>
+      <p class="text-lg text-[var(--color-muted)] mt-3">
+        Every residence route has a tax consequence the visa pages rarely mention. These guides pair the
+        immigration rules with what you actually pay to buy, hold and sell a Portuguese home under each one.
+      </p>
+      <p class="text-sm text-[var(--color-muted)] mt-2">{entries.length} relocation guides.</p>
+    </header>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {entries.map((item) => (
+        <ContentCard
+          href={`/move-to-portugal/${item.id}/`}
+          title={item.data.title}
+          description={item.data.description}
+          image={item.data.heroImage}
+          imageAlt={item.data.heroImageAlt}
+          badges={item.data.tags?.slice(0, 2) ?? []}
+          meta={`${item.data.readingTime ?? 8} min read`}
+        />
+      ))}
+    </div>
+
+    <InlineCta
+      headline='Moving and buying at the same time?'
+      subtext='Tell us your visa route and timing — we flag the IMT, NIF and tax-residency steps in the order they hit.'
+      buttonHref="/get-shortlist/"
+      ctaId='move_hub_inline'
+      whatsappMessage="Hi Portuguese Estate! I'm planning a move to Portugal and want to buy."
+    />
+  </section>
+</BaseLayout>

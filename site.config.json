@@ -55,6 +55,12 @@
       "urlPrefix": "/news/",
       "minWords": 600,
       "faqMin": 0
+    },
+    "move-to-portugal": {
+      "dir": "move-to-portugal",
+      "urlPrefix": "/move-to-portugal/",
+      "minWords": 2000,
+      "faqMin": 5
     }
   },
   "smoke": {
@@ -74,6 +80,10 @@
       {
         "hubPath": "/segments/",
         "contentDir": "segments"
+      },
+      {
+        "hubPath": "/move-to-portugal/",
+        "contentDir": "move-to-portugal"
       }
     ],
     "contactPath": "/contact/",
