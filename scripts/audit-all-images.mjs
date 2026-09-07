@@ -12,8 +12,8 @@ import { isImageUrl } from './lib/image-url-detect.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = join(ROOT, 'src');
-// Commons filenames routinely contain parentheses — "Faro - Portugal (10392376105).jpg"
-// — so a pattern that stops at the first ')' truncates the URL and reports a false 404.
+// Commons filenames routinely contain parentheses: "Faro - Portugal (10392376105).jpg"
+//: so a pattern that stops at the first ')' truncates the URL and reports a false 404.
 // Allow balanced parentheses inside the URL, the way autolinkers do.
 const URL_RE = /https?:\/\/(?:\([^\s()]*\)|[^\s"'`<>\]\[)])+/g;
 const FAIL = process.argv.includes('--fail');

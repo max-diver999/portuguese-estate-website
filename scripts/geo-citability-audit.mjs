@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * GEO citability audit v2 — geo-seo rubric scoring for MDX corpus.
+ * GEO citability audit v2: geo-seo rubric scoring for MDX corpus.
  *
  * Usage:
  *   node scripts/geo-citability-audit.mjs [--json] [--today|--changed] [--min-score 60] [--top 20]
@@ -174,7 +174,7 @@ console.log(`\n=== GEO CITABILITY AUDIT v2 (${todayOnly ? 'today' : changedOnly 
 console.log(`Scanned: ${summary.filesScanned} | commercial: ${summary.commercialScanned}`);
 console.log(`Avg commercial score: ${avgScore}/100 (min ${minScore}) | grade ${scoreToGrade(avgScore)}`);
 console.log(
-  `Rubric avg — answer ${categoryAvgs.answer} | self ${categoryAvgs.selfContain} | structure ${categoryAvgs.structure} | stats ${categoryAvgs.stats} | unique ${categoryAvgs.unique}`,
+  `Rubric avg, answer ${categoryAvgs.answer} | self ${categoryAvgs.selfContain} | structure ${categoryAvgs.structure} | stats ${categoryAvgs.stats} | unique ${categoryAvgs.unique}`,
 );
 
 if (siteGaps.length) {

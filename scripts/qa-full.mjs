@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Full QA package — MORE Group niche sites (mexico-invest etalon).
+ * Full QA package: MORE Group niche sites (mexico-invest etalon).
  *
  * Run BEFORE "audit clean", "аудит сайта", "аудитируй статьи", or content batch push.
  * validate:content alone is NEVER sufficient.
@@ -69,7 +69,7 @@ const steps = [
   ...(existsSync(join(ROOT, 'scripts/audit-all-images.mjs'))
     ? [
         {
-          name: 'Image URLs (HTTP 200 — all src/, not just heroImage)',
+          name: 'Image URLs (HTTP 200, all src/, not just heroImage)',
           cmd: 'node',
           args: ['scripts/audit-all-images.mjs', '--fail'],
         },
@@ -110,7 +110,7 @@ const steps = [
 ];
 
 console.log('\n═══════════════════════════════════════════');
-console.log(`  QA FULL — ${siteName()}`);
+console.log(`  QA FULL, ${siteName()}`);
 console.log(
   `  quick: ${QUICK} | local-rendered: ${LOCAL_ONLY} | live-http: ${!SKIP_LIVE && !QUICK}`,
 );

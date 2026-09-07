@@ -40,7 +40,7 @@ for (const c of ['guides', 'compare']) {
     } else {
       // 2) last comma / semicolon / em-dash boundary <=MAX (clean list-item end)
       const seg = text.slice(0, MAX);
-      let b = Math.max(seg.lastIndexOf(','), seg.lastIndexOf(';'), seg.lastIndexOf(' — '));
+      let b = Math.max(seg.lastIndexOf(','), seg.lastIndexOf(';'), seg.lastIndexOf(', '));
       if (b >= MIN) {
         out = stripDangling(seg.slice(0, b));
       } else {

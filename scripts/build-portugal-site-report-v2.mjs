@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Build site-report/index.astro v2 — full moregroup.estate layout, Portugal data.
+ * Build site-report/index.astro v2: full moregroup.estate layout, Portugal data.
  * Run: node scripts/build-portugal-site-report-v2.mjs
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
@@ -96,35 +96,35 @@ function slugListHtml(c, prefix) {
 
 const contentBreakdownRows = `
         <tr>
-          <td><strong>Investment &amp; process guides</strong><br><span style="font-size:11px;color:#9ca3af">Golden Visa, IMT, CPCV/escritura, foreigners buying, remote purchase, yields, AIMI, rental licensing — tier-A pillar cluster</span></td>
+          <td><strong>Investment &amp; process guides</strong><br><span style="font-size:11px;color:#9ca3af">Golden Visa, IMT, CPCV/escritura, foreigners buying, remote purchase, yields, AIMI, rental licensing, tier-A pillar cluster</span></td>
           <td><span class="count">${counts.guides.n}</span></td>
           <td><span class="words">~${Math.round(counts.guides.words / counts.guides.n).toLocaleString('en-US')} words</span></td>
           <td><span class="tag blue">Head keywords</span></td>
           <td><span class="tag green">Live</span></td>
         </tr>
         <tr>
-          <td><strong>Area guides — Lisbon, Porto, Algarve &amp; coast</strong><br><span style="font-size:11px;color:#9ca3af">Chiado, Alfama, Cascais, Sintra, Faro, Lagos, Óbidos, Gaia, Parque das Nações and 12 more micro-markets</span></td>
+          <td><strong>Area guides, Lisbon, Porto, Algarve &amp; coast</strong><br><span style="font-size:11px;color:#9ca3af">Chiado, Alfama, Cascais, Sintra, Faro, Lagos, Óbidos, Gaia, Parque das Nações and 12 more micro-markets</span></td>
           <td><span class="count">${counts.areas.n}</span></td>
           <td><span class="words">~${Math.round(counts.areas.words / counts.areas.n).toLocaleString('en-US')} words</span></td>
           <td><span class="tag blue">Location intent</span></td>
           <td><span class="tag green">Live</span></td>
         </tr>
         <tr>
-          <td><strong>Market comparisons</strong><br><span style="font-size:11px;color:#9ca3af">Portugal vs Spain, France, Italy, Greece, Dubai, UK — plus Lisbon vs Porto and Algarve vs Lisbon</span></td>
+          <td><strong>Market comparisons</strong><br><span style="font-size:11px;color:#9ca3af">Portugal vs Spain, France, Italy, Greece, Dubai, UK, plus Lisbon vs Porto and Algarve vs Lisbon</span></td>
           <td><span class="count">${counts.compare.n}</span></td>
           <td><span class="words">~${Math.round(counts.compare.words / counts.compare.n).toLocaleString('en-US')} words</span></td>
           <td><span class="tag amber">Comparison intent</span></td>
           <td><span class="tag green">Live</span></td>
         </tr>
         <tr>
-          <td><strong>Buyer segments</strong><br><span style="font-size:11px;color:#9ca3af">US, UK, EU, retirees, digital nomads, HNWI — persona-specific entry pages</span></td>
+          <td><strong>Buyer segments</strong><br><span style="font-size:11px;color:#9ca3af">US, UK, EU, retirees, digital nomads, HNWI, persona-specific entry pages</span></td>
           <td><span class="count">${counts.segments.n}</span></td>
           <td><span class="words">~${Math.round(counts.segments.words / counts.segments.n).toLocaleString('en-US')} words</span></td>
           <td><span class="tag blue">Persona intent</span></td>
           <td><span class="tag green">Live</span></td>
         </tr>
         <tr>
-          <td><strong>Developer profiles</strong><br><span style="font-size:11px;color:#9ca3af">Farinvest Properties, Domus Development, Vanguard Properties — agency/developer hub pages</span></td>
+          <td><strong>Developer profiles</strong><br><span style="font-size:11px;color:#9ca3af">Farinvest Properties, Domus Development, Vanguard Properties, agency/developer hub pages</span></td>
           <td><span class="count">${counts.developers.n}</span></td>
           <td><span class="words">~${Math.round(counts.developers.words / counts.developers.n).toLocaleString('en-US')} words</span></td>
           <td><span class="tag amber">Entity SEO</span></td>
@@ -141,7 +141,7 @@ const contentBreakdownRows = `
 const inventorySection = collections
   .map(
     (c) => `
-  <div class="section-title">${c.charAt(0).toUpperCase() + c.slice(1)} — full slug list (${slugInventory[c].length})</div>
+  <div class="section-title">${c.charAt(0).toUpperCase() + c.slice(1)}, full slug list (${slugInventory[c].length})</div>
   <div class="content-card" style="margin-bottom:24px;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
       ${slugListHtml(c, `/${c}`)}
@@ -150,8 +150,8 @@ const inventorySection = collections
   )
   .join('');
 
-const seoPulse = `  <!-- SEO PULSE — Google Search Console, GA4 and available analytics data -->
-  <div class="section-title" style="margin-top:40px;">SEO Pulse — Google Search Console</div>
+const seoPulse = `  <!-- SEO PULSE, Google Search Console, GA4 and available analytics data -->
+  <div class="section-title" style="margin-top:40px;">SEO Pulse, Google Search Console</div>
 
   <div style="background:white;border-radius:16px;border:1px solid #e8e4dc;padding:24px 28px;">
 
@@ -195,7 +195,7 @@ const seoPulse = `  <!-- SEO PULSE — Google Search Console, GA4 and available 
         <div class="kpi-trend trend-up">↑ Index warming</div>
         <div class="kpi-label">Impressions</div>
         <div class="kpi-val">164</div>
-        <div class="kpi-sub">Peak 38 on 20 Jun · guides hub 25 imp (pos 80.9 — long-tail tail)</div>
+        <div class="kpi-sub">Peak 38 on 20 Jun · guides hub 25 imp (pos 80.9, long-tail tail)</div>
       </div>
       <div class="pulse-kpi kpi-amber">
         <div class="kpi-trend" style="background:#fef3c7;color:#92400e;">Early</div>
@@ -212,7 +212,7 @@ const seoPulse = `  <!-- SEO PULSE — Google Search Console, GA4 and available 
 
     <div class="pulse-grid">
       <div class="pulse-card">
-        <div class="pulse-card-title"><span class="span-blue"></span> Daily Impressions — Jun 2026 (GSC)</div>
+        <div class="pulse-card-title"><span class="span-blue"></span> Daily Impressions, Jun 2026 (GSC)</div>
         <div class="pulse-chart">
           <div class="chart-bars">
             <div class="chart-bar-wrap"><div class="chart-bar bar-impr" style="height:3%"></div><div class="chart-label">17</div></div>
@@ -228,7 +228,7 @@ const seoPulse = `  <!-- SEO PULSE — Google Search Console, GA4 and available 
         <div class="pulse-insight" style="margin-top:16px;">
           <div class="pulse-insight-icon">📈</div>
           <div class="pulse-insight-text">
-            <strong>Early index signals — compare pages lead:</strong> Portugal vs France comparison earned the first click at 10% CTR. Step-by-step purchase guides and Faro area page show strong positions (pos 2–6). Golden Visa head terms still on page 7–9 — expected at launch; CTR sprint when impressions exceed 100 on pillar URLs.
+            <strong>Early index signals, compare pages lead:</strong> Portugal vs France comparison earned the first click at 10% CTR. Step-by-step purchase guides and Faro area page show strong positions (pos 2–6). Golden Visa head terms still on page 7–9, expected at launch; CTR sprint when impressions exceed 100 on pillar URLs.
           </div>
         </div>
       </div>
@@ -280,8 +280,8 @@ const seoPulse = `  <!-- SEO PULSE — Google Search Console, GA4 and available 
 
   </div>`;
 
-const bingPulse = `  <!-- BING PULSE — Bing Webmaster Tools -->
-  <div class="section-title" style="margin-top:40px;">Bing Pulse — Bing Webmaster Tools</div>
+const bingPulse = `  <!-- BING PULSE, Bing Webmaster Tools -->
+  <div class="section-title" style="margin-top:40px;">Bing Pulse, Bing Webmaster Tools</div>
 
   <div style="background:white;border-radius:16px;border:1px solid #e8e4dc;padding:24px 28px;">
 
@@ -301,7 +301,7 @@ const bingPulse = `  <!-- BING PULSE — Bing Webmaster Tools -->
         <div class="kpi-trend">Launch</div>
         <div class="kpi-label">Bing Clicks</div>
         <div class="kpi-val">0</div>
-        <div class="kpi-sub">Expected — site live 16 Jun · IndexNow via bing.com/indexnow only</div>
+        <div class="kpi-sub">Expected, site live 16 Jun · IndexNow via bing.com/indexnow only</div>
       </div>
       <div class="pulse-kpi kpi-blue">
         <div class="kpi-label">Bing Impressions</div>
@@ -325,7 +325,7 @@ const bingPulse = `  <!-- BING PULSE — Bing Webmaster Tools -->
       <div class="pulse-insight-text"><strong>Bing lags Google on new domains:</strong> Normal for a 9-day-old EN property site. Monitor weekly; comparison + Golden Visa guides are the expected first Bing converters once crawl completes.</div>
     </div>
 
-    <p class="pulse-footer-note">Bing data via <code>bing-webmaster-portuguese-estate</code> MCP · EN site — IndexNow direct to Bing only (no Yandex hub)</p>
+    <p class="pulse-footer-note">Bing data via <code>bing-webmaster-portuguese-estate</code> MCP · EN site, IndexNow direct to Bing only (no Yandex hub)</p>
   </div>`;
 
 const technicalSetup = `  <div class="section-title">Technical setup</div>
@@ -357,7 +357,7 @@ const changelog = `  <div class="section-title">Change history</div>
     <div class="changelog-item">
       <div class="changelog-date">25 Jun 2026</div>
       <div class="changelog-content">
-        <div class="changelog-title">Site report v2.0 — full moregroup layout + GSC/GA4 refresh</div>
+        <div class="changelog-title">Site report v2.0, full moregroup layout + GSC/GA4 refresh</div>
         <div class="changelog-desc">Copied complete report structure from moregroup.estate v19.1: growth dashboard, SEO Pulse, Bing Pulse, content breakdown, full 91-slug inventory, changelog. Data through 24 Jun: GSC 1 click / 164 imp, GA4 73 sessions, Bing 0/0 launch baseline.</div>
         <div class="changelog-tags"><span class="tag green">Site-report v2</span><span class="tag blue">GSC MCP</span></div>
       </div>
@@ -373,7 +373,7 @@ const changelog = `  <div class="section-title">Change history</div>
     <div class="changelog-item">
       <div class="changelog-date">16 Jun 2026</div>
       <div class="changelog-content">
-        <div class="changelog-title">Wave 13 shipped — 91 MDX total · production launch</div>
+        <div class="changelog-title">Wave 13 shipped, 91 MDX total · production launch</div>
         <div class="changelog-desc">7 tier-A articles (3 areas, compare, hub, segment, developer). qa:full 5/5 PASS. Explicit indexing for wave URLs. Domain live on Vercel.</div>
         <div class="changelog-tags"><span class="tag green">Launch</span><span class="tag blue">Wave 13</span></div>
       </div>
@@ -381,7 +381,7 @@ const changelog = `  <div class="section-title">Change history</div>
     <div class="changelog-item">
       <div class="changelog-date">Waves 1–12</div>
       <div class="changelog-content">
-        <div class="changelog-title">Corpus build — 84 articles across guides, areas, compare, segments, developers</div>
+        <div class="changelog-title">Corpus build, 84 articles across guides, areas, compare, segments, developers</div>
         <div class="changelog-desc">Tier-A standard: TldrBlock, FaqBlock, LeadForm, 5+ internal links, validate:content pass. Golden Visa, IMT, CPCV, Lisbon/Porto/Algarve area cluster, 9 market comparisons.</div>
         <div class="changelog-tags"><span class="tag green">Content</span><span class="tag gray">91 MDX</span></div>
       </div>
@@ -396,26 +396,26 @@ const changelog = `  <div class="section-title">Change history</div>
     </div>
   </div>`;
 
-const nextSteps = `      <div class="section-title">Next steps — 25 Jun 2026</div>
+const nextSteps = `      <div class="section-title">Next steps, 25 Jun 2026</div>
   <div class="next-steps">
     <div class="next-item" style="background:#fef2f2;border-color:#fecaca;">
       <div class="priority high">P0</div>
       <div>
-        <div class="text" style="font-weight:700;">Indexing pause — no new MDX until GSC pillar &gt;100 impressions</div>
+        <div class="text" style="font-weight:700;">Indexing pause, no new MDX until GSC pillar &gt;100 impressions</div>
         <div class="subtext">Let Google consolidate 91 URLs. Weekly GSC refresh via MCP. Then CTR sprint on compare + step-by-step guides.</div>
       </div>
     </div>
     <div class="next-item" style="background:#fff7ed;border-color:#fed7aa;">
       <div class="priority medium">P1</div>
       <div>
-        <div class="text" style="font-weight:700;">CTR sprint when data allows — Portugal vs France (10% CTR proof)</div>
+        <div class="text" style="font-weight:700;">CTR sprint when data allows, Portugal vs France (10% CTR proof)</div>
         <div class="subtext">Scale title/meta pattern to Golden Visa + IMT + foreigners-buy pillars once impressions grow.</div>
       </div>
     </div>
     <div class="next-item">
       <div class="priority medium">P1</div>
       <div>
-        <div class="text" style="font-weight:700;">Wave 14 — project reviews (when indexing stable)</div>
+        <div class="text" style="font-weight:700;">Wave 14, project reviews (when indexing stable)</div>
         <div class="subtext">Lotsof Portugal projects · /projects/ hub stays noindex until catalog populated.</div>
       </div>
     </div>
@@ -482,7 +482,7 @@ const statsGrid = `  <div class="section-title">At a glance</div>
       <div class="sublabel">${counts.guides.n} guides · ${counts.areas.n} areas · ${counts.compare.n} compare · ${counts.segments.n} segments · ${counts.developers.n} developers</div>
     </div>
     <div class="stat-card">
-      <div class="num amber">—</div>
+      <div class="num amber">, </div>
       <div class="label">Ahrefs DR</div>
       <div class="sublabel">Baseline · new domain · target DR 10+ Q3 2026</div>
     </div>
@@ -520,8 +520,8 @@ src = src.replace(/^---[\s\S]*?---/, frontmatter);
 
 // Head
 src = src.replace(
-  /<title>moregroup\.estate — Site Report<\/title>/,
-  `<title>portuguese-estate.com — Site Report</title>\n  <meta name="robots" content="noindex, nofollow" />`
+  /<title>moregroup\.estate, Site Report<\/title>/,
+  `<title>portuguese-estate.com, Site Report</title>\n  <meta name="robots" content="noindex, nofollow" />`
 );
 
 // Header
@@ -551,22 +551,22 @@ src = src.replace(
 // Growth insights
 src = src.replace(
   /<strong>May traffic spike:<\/strong>[\s\S]*?<\/div>\n      <\/div>\n    <\/div>/,
-  `<strong>Launch phase:</strong> Site live 16 Jun. First GSC impressions 17 Jun, first click 22 Jun on Portugal vs France comparison. GA4 73 sessions mostly direct (QA + pre-launch). Organic search begins — monitor weekly.</div>\n      </div>\n    </div>`
+  `<strong>Launch phase:</strong> Site live 16 Jun. First GSC impressions 17 Jun, first click 22 Jun on Portugal vs France comparison. GA4 73 sessions mostly direct (QA + pre-launch). Organic search begins, monitor weekly.</div>\n      </div>\n    </div>`
 );
 src = src.replace(
   /<strong>Position widened as index scaled:<\/strong>[\s\S]*?<\/div>\n    <\/div>\n  <\/section>/,
-  `<strong>Early tail vs winners:</strong> Guides hub averages pos 80.9 (broad index) while compare and step-by-step purchase guides sit pos 4–6. Golden Visa head terms still page 7–9 — normal at 9 days. CTR sprint when pillar impressions exceed 100.</div>\n    </div>\n  </section>`
+  `<strong>Early tail vs winners:</strong> Guides hub averages pos 80.9 (broad index) while compare and step-by-step purchase guides sit pos 4–6. Golden Visa head terms still page 7–9, normal at 9 days. CTR sprint when pillar impressions exceed 100.</div>\n    </div>\n  </section>`
 );
 
 // SEO Pulse through end of block
 src = src.replace(
-  /  <!-- SEO PULSE — Google Search Console, GA4 and available analytics data -->[\s\S]*?  <!-- BING PULSE — Bing Webmaster Tools -->/,
+  /  <!-- SEO PULSE, Google Search Console, GA4 and available analytics data -->[\s\S]*?  <!-- BING PULSE, Bing Webmaster Tools -->/,
   `${seoPulse}\n\n`
 );
 
 // Bing Pulse
 src = src.replace(
-  /  <!-- BING PULSE — Bing Webmaster Tools -->[\s\S]*?  <div class="section-title">Technical setup<\/div>/,
+  /  <!-- BING PULSE, Bing Webmaster Tools -->[\s\S]*?  <div class="section-title">Technical setup<\/div>/,
   `${bingPulse}\n\n${technicalSetup}`
 );
 

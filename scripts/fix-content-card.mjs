@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * MORE Group — article card for fix-batch (content_enforcement.mdc format).
+ * MORE Group: article card for fix-batch (content_enforcement.mdc format).
  *
  * Combines fix:queue row + validate:strict in one command.
  *
@@ -131,7 +131,7 @@ if (!validation.pass) {
   process.exit(1);
 }
 if (!row.ready) {
-  console.log('\n→ validate pass, но queue_ready=no — проверь расхождение (`fix:queue --verify`).');
+  console.log('\n→ validate pass, но queue_ready=no, проверь расхождение (`fix:queue --verify`).');
   process.exit(1);
 }
 console.log('\n→ Карточка готова к показу Максиму (ответ: ок / fable на URL / доработай cheap).');

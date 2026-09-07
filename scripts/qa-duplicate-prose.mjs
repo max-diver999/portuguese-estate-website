@@ -59,9 +59,9 @@ if (jsonOut) {
   console.log(`Shared paragraph groups: ${shared.length} (${instances} instances)`);
   console.log(`Limit: a paragraph may appear on at most ${MAX_PAGES} pages`);
   if (!failures.length) {
-    console.log('✅ PASS — no paragraph exceeds the limit\n');
+    console.log('✅ PASS, no paragraph exceeds the limit\n');
   } else {
-    console.log(`❌ FAIL — ${failures.length} paragraph(s) over the limit\n`);
+    console.log(`❌ FAIL, ${failures.length} paragraph(s) over the limit\n`);
     for (const g of failures.sort((a, b) => b.pages.length - a.pages.length).slice(0, 20)) {
       console.log(`  [${new Set(g.pages).size} pages] ${g.sample.slice(0, 100).replace(/\n/g, ' ')}`);
       console.log(`      ${[...new Set(g.pages)].slice(0, 6).join(', ')}`);

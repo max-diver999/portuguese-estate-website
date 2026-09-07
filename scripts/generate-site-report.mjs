@@ -18,8 +18,8 @@ const collections = [
   { key: 'areas', label: 'Areas', path: '/areas/', min: '1 800+', desc: 'Lisbon, Porto, Algarve, Silver Coast, Comporta micro-markets' },
   { key: 'segments', label: 'Segments', path: '/segments/', min: '2 000+', desc: 'US, UK, DE, FR, BR, CN, AO buyer guides' },
   { key: 'developers', label: 'Developers & agencies', path: '/developers/', min: '1 200+', desc: 'Vanguard, VIC, Farinvest agency DD profiles' },
-  { key: 'projects', label: 'Projects', path: '/projects/', min: '1 200+', desc: 'Empty — noindex until reviews launch' },
-  { key: 'news', label: 'News', path: '/news/', min: '600+', desc: 'Not started — add 3/day when indexing stabilises' },
+  { key: 'projects', label: 'Projects', path: '/projects/', min: '1 200+', desc: 'Empty, noindex until reviews launch' },
+  { key: 'news', label: 'News', path: '/news/', min: '600+', desc: 'Not started, add 3/day when indexing stabilises' },
 ];
 
 function bodyWords(raw) {
@@ -106,11 +106,11 @@ const waves = [
   { wave: 'Wave 11', commit: '457411b', shipped: '7', focus: 'Supply/INE data, off-plan hub, Italy compare, Gaia/Óbidos/Nazaré', indexing: '7/7 OK' },
   { wave: 'Wave 12', commit: '29a83e2', shipped: '7', focus: 'Ericeira/Caldas/Braga, France compare, Vanguard/VIC developers', indexing: '7/7 OK' },
   { wave: 'Wave 13', commit: '193baab', shipped: '7', focus: 'Marvila/Alcântara/Lourinhá, Greece compare, developers hub, CN segment, Farinvest', indexing: '7/7 OK' },
-  { wave: 'Quality pass', commit: '74df066', shipped: '—', focus: 'Hero diversity, /projects/ noindex, Farinvest agency label, hub copy fixes', indexing: 'Farinvest re-index' },
+  { wave: 'Quality pass', commit: '74df066', shipped: ', ', focus: 'Hero diversity, /projects/ noindex, Farinvest agency label, hub copy fixes', indexing: 'Farinvest re-index' },
 ];
 
 const html = `---
-/** Portuguese Estate — live site report. Regenerate: node scripts/generate-site-report.mjs */
+/** Portuguese Estate: live site report. Regenerate: node scripts/generate-site-report.mjs */
 export const prerender = true;
 ---
 <!DOCTYPE html>
@@ -119,7 +119,7 @@ export const prerender = true;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>portuguese-estate.com — Site Report</title>
+  <title>portuguese-estate.com, Site Report</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f3ef; color: #1c1917; min-height: 100vh; }
@@ -211,7 +211,7 @@ export const prerender = true;
   <div class="header-brand">
     <div class="header-logo">PT</div>
     <div>
-      <div class="header-sub">Website Performance Report — Portugal RE</div>
+      <div class="header-sub">Website Performance Report, Portugal RE</div>
       <h1>portuguese-estate.com</h1>
     </div>
   </div>
@@ -258,7 +258,7 @@ export const prerender = true;
     </div>
   </div>
 
-  <div class="section-title">SEO Pulse — Google Search Console</div>
+  <div class="section-title">SEO Pulse, Google Search Console</div>
   <div class="pulse-wrap">
     <div class="baseline-box">
       <strong>Early index phase (${REPORT_DATE}).</strong> GSC MCP <code>sc-domain:portuguese-estate.com</code> · Jan–14 Jun 2026: <strong>0 clicks, 0 impressions</strong> on queries/pages. Site content batch published 16–17 Jun; ${submitted} URLs pinged via Indexing API + Bing IndexNow. Sitemap resubmitted 16 Jun: <strong>0 errors</strong>, last downloaded 16 Jun 22:27 UTC. First query data expected ~27 Jun–4 Jul.
@@ -266,14 +266,14 @@ export const prerender = true;
     <div class="pulse-kpi-row">
       <div class="pulse-kpi"><div class="kpi-label">Total Clicks</div><div class="kpi-val">0</div><div class="kpi-sub">Baseline · monitor weekly</div></div>
       <div class="pulse-kpi"><div class="kpi-label">Impressions</div><div class="kpi-val">0</div><div class="kpi-sub">${submitted} URLs in API log</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Avg. Position</div><div class="kpi-val">—</div><div class="kpi-sub">Awaiting first query data</div></div>
-      <div class="pulse-kpi"><div class="kpi-label">Avg. CTR</div><div class="kpi-val">—</div><div class="kpi-sub">CTR sprint when 50+ imp/query</div></div>
+      <div class="pulse-kpi"><div class="kpi-label">Avg. Position</div><div class="kpi-val">, </div><div class="kpi-sub">Awaiting first query data</div></div>
+      <div class="pulse-kpi"><div class="kpi-label">Avg. CTR</div><div class="kpi-val">, </div><div class="kpi-sub">CTR sprint when 50+ imp/query</div></div>
     </div>
-    <div class="insight"><strong>Quick wins pipeline (when data arrives):</strong> Priority URLs — <code>/guides/portugal-property-investment-guide/</code>, <code>/guides/can-foreigners-buy-property-portugal/</code>, <code>/guides/imt-tax-non-resident-portugal-2026/</code>, <code>/guides/portugal-golden-visa-fund-investment-2026/</code>, <code>/compare/portugal-vs-spain-property-investment/</code>. Pages at pos 8–15 with 50+ impressions → expand FAQ + retitle for CTR. Monitor via <code>search-console-portuguese-estate</code> MCP.</div>
-    <p style="font-size:11px;color:#a8a29e;text-align:center;margin-top:16px;">Updated ${REPORT_DATE} via GSC API · EN site — Google + Bing only · never Yandex</p>
+    <div class="insight"><strong>Quick wins pipeline (when data arrives):</strong> Priority URLs, <code>/guides/portugal-property-investment-guide/</code>, <code>/guides/can-foreigners-buy-property-portugal/</code>, <code>/guides/imt-tax-non-resident-portugal-2026/</code>, <code>/guides/portugal-golden-visa-fund-investment-2026/</code>, <code>/compare/portugal-vs-spain-property-investment/</code>. Pages at pos 8–15 with 50+ impressions → expand FAQ + retitle for CTR. Monitor via <code>search-console-portuguese-estate</code> MCP.</div>
+    <p style="font-size:11px;color:#a8a29e;text-align:center;margin-top:16px;">Updated ${REPORT_DATE} via GSC API · EN site, Google + Bing only · never Yandex</p>
   </div>
 
-  <div class="section-title">Analytics — GA4</div>
+  <div class="section-title">Analytics, GA4</div>
   <div class="pulse-wrap">
     <div class="pulse-kpi-row">
       <div class="pulse-kpi"><div class="kpi-label">Users (16 Jun)</div><div class="kpi-val">9</div><div class="kpi-sub">Homepage only · post-deploy crawl/bot traffic</div></div>
@@ -359,18 +359,18 @@ ${waves
     </table>
   </div>
 
-  <div class="section-title">Full article inventory — all ${totalFiles} pages</div>
+  <div class="section-title">Full article inventory, all ${totalFiles} pages</div>
   <p style="font-size:12px;color:#78716c;margin-bottom:16px;">Every indexable slug with live link. Word counts = body-only after frontmatter.</p>
 ${['guides', 'compare', 'areas', 'segments', 'developers']
   .map(
     (col) => `  <div class="slug-block">
-    <h4>${corpus[col].label} (${corpus[col].count}) — ${corpus[col].words.toLocaleString()} words</h4>
+    <h4>${corpus[col].label} (${corpus[col].count}), ${corpus[col].words.toLocaleString()} words</h4>
     <div class="slug-list">${slugListHtml(col, true)}</div>
   </div>`
   )
   .join('\n')}
 
-  <div class="section-title">Full SEO audit — ${REPORT_DATE}</div>
+  <div class="section-title">Full SEO audit, ${REPORT_DATE}</div>
   <div class="pulse-wrap">
     <div class="audit-grid">
       <div class="audit-item"><strong>Technical SEO: 9/10</strong>Sitemap 200, lead API 200, robots OK, /projects/ noindex + excluded from sitemap, API prerender=false verified.</div>
@@ -388,12 +388,12 @@ ${['guides', 'compare', 'areas', 'segments', 'developers']
       <thead><tr><th>Priority</th><th>Action</th><th>Expected outcome</th></tr></thead>
       <tbody>
         <tr><td><span class="tag green">DONE</span></td><td>91 tier-A corpus + qa:full 5/5 + ${submitted} URL indexing batch + sitemap hygiene</td><td>Clean launch baseline before pause</td></tr>
-        <tr><td><span class="tag red">P0</span></td><td><strong>Indexing pause 2–3 weeks</strong> — no new MDX until GSC shows 100+ impressions on pillar URLs</td><td>Avoid crawl budget dilution; let Google process explicit batch</td></tr>
-        <tr><td><span class="tag amber">P1</span></td><td>Weekly GSC refresh via MCP — when pos 8–15 + 50 imp: CTR sprint on IMT, foreigners-buy, Golden Visa fund guides</td><td>First clicks from high-intent legal/tax queries</td></tr>
+        <tr><td><span class="tag red">P0</span></td><td><strong>Indexing pause 2–3 weeks</strong>, no new MDX until GSC shows 100+ impressions on pillar URLs</td><td>Avoid crawl budget dilution; let Google process explicit batch</td></tr>
+        <tr><td><span class="tag amber">P1</span></td><td>Weekly GSC refresh via MCP, when pos 8–15 + 50 imp: CTR sprint on IMT, foreigners-buy, Golden Visa fund guides</td><td>First clicks from high-intent legal/tax queries</td></tr>
         <tr><td><span class="tag amber">P1</span></td><td>Start news collection: 3 short news MDX/day (INE, AL law, Golden Visa fund flows)</td><td>Freshness signal + NewsArticle schema</td></tr>
         <tr><td><span class="tag blue">P2</span></td><td>Project reviews batch (10–15 off-plan) → then re-enable /projects/ in sitemap</td><td>Commercial project-intent traffic like moregroup.estate /projects/</td></tr>
         <tr><td><span class="tag blue">P2</span></td><td>Wikidata entity Portuguese Estate + Q-id in Organization sameAs</td><td>GEO citability in ChatGPT/Perplexity</td></tr>
-        <tr><td><span class="tag gray">P3</span></td><td>Wave 14+ only after GSC baseline — expand developer profiles (Liberdade, SEV, etc.)</td><td>Entity authority without cannibalizing hub</td></tr>
+        <tr><td><span class="tag gray">P3</span></td><td>Wave 14+ only after GSC baseline, expand developer profiles (Liberdade, SEV, etc.)</td><td>Entity authority without cannibalizing hub</td></tr>
       </tbody>
     </table>
   </div>
@@ -444,7 +444,7 @@ ${['guides', 'compare', 'areas', 'segments', 'developers']
     <div class="changelog-item">
       <div class="changelog-date">${REPORT_DATE} ${REPORT_VERSION}</div>
       <div>
-        <div class="changelog-title">Full site-report rebuilt — Portugal data, all ${totalFiles} slugs, MCP baseline</div>
+        <div class="changelog-title">Full site-report rebuilt, Portugal data, all ${totalFiles} slugs, MCP baseline</div>
         <div class="changelog-desc">Replaced Mexico template copy. GSC/GA4/Bing MCP pull. Corpus inventory with word counts. Promotion roadmap for indexing pause.</div>
         <div class="changelog-tags"><span class="tag blue">Report</span><span class="tag green">MCP</span></div>
       </div>
@@ -452,7 +452,7 @@ ${['guides', 'compare', 'areas', 'segments', 'developers']
     <div class="changelog-item">
       <div class="changelog-date">17 Jun 2026</div>
       <div>
-        <div class="changelog-title">Indexing gap fix — 74df066</div>
+        <div class="changelog-title">Indexing gap fix, 74df066</div>
         <div class="changelog-desc">/projects/ noindex + Portugal copy · /developers/ hub fix · hero diversity · Farinvest agency title · VIC hero 404 fix · Farinvest re-indexed.</div>
         <div class="changelog-tags"><span class="tag green">SEO</span></div>
       </div>
@@ -460,7 +460,7 @@ ${['guides', 'compare', 'areas', 'segments', 'developers']
     <div class="changelog-item">
       <div class="changelog-date">17 Jun 2026</div>
       <div>
-        <div class="changelog-title">Wave 13 — 193baab (7 tier-A)</div>
+        <div class="changelog-title">Wave 13, 193baab (7 tier-A)</div>
         <div class="changelog-desc">Marvila, Alcântara, Lourinhá · Greece compare · developers hub · Chinese segment · Farinvest agency DD.</div>
         <div class="changelog-tags"><span class="tag green">Wave 13</span></div>
       </div>
@@ -468,7 +468,7 @@ ${['guides', 'compare', 'areas', 'segments', 'developers']
     <div class="changelog-item">
       <div class="changelog-date">17 Jun 2026</div>
       <div>
-        <div class="changelog-title">Waves 10–12 — a6f510f → 29a83e2 (21 tier-A)</div>
+        <div class="changelog-title">Waves 10–12, a6f510f → 29a83e2 (21 tier-A)</div>
         <div class="changelog-desc">Country compares, Silver Coast, segments US/DE/CN, off-plan hub, INE data, Vanguard/VIC developers, France/Greece compares.</div>
         <div class="changelog-tags"><span class="tag green">Waves 10–12</span></div>
       </div>
@@ -476,7 +476,7 @@ ${['guides', 'compare', 'areas', 'segments', 'developers']
     <div class="changelog-item">
       <div class="changelog-date">16–17 Jun 2026</div>
       <div>
-        <div class="changelog-title">Waves 1–9 — corpus foundation (~63 articles)</div>
+        <div class="changelog-title">Waves 1–9, corpus foundation (~63 articles)</div>
         <div class="changelog-desc">National pillar, tax/legal/AL cluster, Lisbon/Porto/Algarve areas, residency, yields, nationality segments UK/FR/BR/AO.</div>
         <div class="changelog-tags"><span class="tag blue">Waves 1–9</span></div>
       </div>
@@ -493,7 +493,7 @@ ${['guides', 'compare', 'areas', 'segments', 'developers']
 
   <div class="section-title">Next steps</div>
   <div>
-    <div class="next-item"><div class="priority high">HIGH</div><div><div class="text">Wait for GSC first impressions (~27 Jun) — refresh SEO Pulse weekly</div><div class="subtext">search-console-portuguese-estate MCP · no new content batch until 100+ impressions on pillar</div></div></div>
+    <div class="next-item"><div class="priority high">HIGH</div><div><div class="text">Wait for GSC first impressions (~27 Jun), refresh SEO Pulse weekly</div><div class="subtext">search-console-portuguese-estate MCP · no new content batch until 100+ impressions on pillar</div></div></div>
     <div class="next-item"><div class="priority medium">MED</div><div><div class="text">CTR sprint when data arrives: IMT, foreigners-buy, Golden Visa fund, Portugal vs Spain</div><div class="subtext">Target pos 8–15 with 50+ impressions · FAQ + title refresh</div></div></div>
     <div class="next-item"><div class="priority medium">MED</div><div><div class="text">Launch news cadence (3/day) after first GSC clicks</div><div class="subtext">INE releases · AL containment updates · fund route news</div></div></div>
     <div class="next-item"><div class="priority low">LOW</div><div><div class="text">Project review batch + Wikidata entity</div><div class="subtext">Re-enable /projects/ in sitemap when 10+ reviews live</div></div></div>
@@ -518,7 +518,7 @@ ${['guides', 'compare', 'areas', 'segments', 'developers']
   <strong>Portuguese Estate Site Report ${REPORT_VERSION}</strong> · ${REPORT_DATE} ·
   <a href="https://portuguese-estate.com/site-report/">portuguese-estate.com/site-report/</a><br />
   Data: GSC + GA4 + Bing MCP · Content: generate-site-report.mjs + qa:full · ${totalFiles} MDX · ${fmtNum(totalWords)} words<br />
-  EN site — Google + Bing only · never Yandex
+  EN site, Google + Bing only · never Yandex
 </div>
 
 </body>

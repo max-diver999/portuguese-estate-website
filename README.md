@@ -1,6 +1,6 @@
 # portuguese-estate-website
 
-Independent Portugal property investment research site — **portuguese-estate.com**.
+Independent Portugal property investment research site, **portuguese-estate.com**.
 
 ## Stack
 
@@ -34,4 +34,4 @@ See `08_Идеи/PORTUGUESE_ESTATE_MAKSIM_STEPS.md`.
 Research + 100 URL map: `08_Идеи/PORTUGAL_RE_CONTENT_MAP_100.md`  
 Parser pipeline: `08_Идеи/portugal-re-projects/`
 
-Batch 1 HUB guides (7 articles) — publishing next.
+Batch 1 HUB guides (7 articles), publishing next.

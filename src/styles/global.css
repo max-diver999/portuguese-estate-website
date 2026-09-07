@@ -10,7 +10,7 @@
  * diagonals and no rounded corners anywhere. Figures live in module-wide cells
  * that line up with the grid above them.
  *
- * Fonts are self-hosted, as the previous face was — the visitor's browser never
+ * Fonts are self-hosted, as the previous face was: the visitor's browser never
  * calls a font CDN.
  */
 
@@ -22,7 +22,7 @@
   --color-surface: #f6f1e8;
   --color-surface-muted: #ddd4c4;
 
-  /* Deep indigo — the azulejo blue taken down to ink */
+  /* Deep indigo: the azulejo blue taken down to ink */
   --color-ink: #1c2740;
   --color-muted: #4b5361;
 
@@ -40,7 +40,7 @@
 
   /*
    * Templates reference these names. They are kept as defined aliases because an
-   * undefined var in `background: var(--x)` is invalid at computed-value time —
+   * undefined var in `background: var(--x)` is invalid at computed-value time, 
    * the band paints transparent and white text lands on the page ground, which is
    * exactly how the homepage figures strip was rendering at 1.07:1.
    */
@@ -94,7 +94,7 @@
 
   /*
    * Tailwind's reset sets headings to `font-size: inherit`. These are plain
-   * element selectors, NOT :where() — inside @layer base a zero-specificity
+   * element selectors, NOT :where(): inside @layer base a zero-specificity
    * selector loses to Preflight's own `h1,h2,...` rule and the scale never
    * applies. Utilities still win, since @layer utilities outranks @layer base.
    */
@@ -126,7 +126,7 @@
 .section + .section { border-top: 1px solid var(--color-border-soft); }
 
 /*
- * The module grid itself — the mechanic made visible. Drawn on a container so
+ * The module grid itself: the mechanic made visible. Drawn on a container so
  * it costs no extra markup, and hidden below the width where 12 columns stop
  * reading as a grid and start reading as noise.
  */

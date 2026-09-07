@@ -84,7 +84,7 @@ async function check() {
     });
     console.log('Verified resources:');
     for (const r of res.data.items || []) {
-      console.log(`  ${r.site?.identifier} — owners: ${r.owners?.join(', ')}`);
+      console.log(`  ${r.site?.identifier}, owners: ${r.owners?.join(', ')}`);
     }
     if (!res.data.items?.length) console.log('  (none)');
   } catch (e) {

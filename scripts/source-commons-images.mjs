@@ -70,7 +70,7 @@ const WEAK_SUBJECT =
 
 const DERELICT = /\b(abandoned|abandonado|derelict|devoluto|ruin|ru[ií]na|demolit|vandal|construction site|scaffold|andaime|boarded[- ]up|dilapidated|decay)\b/i;
 
-/** Words that mark a frame as scenery or architecture — what a hero needs. */
+/** Words that mark a frame as scenery or architecture: what a hero needs. */
 const SCENERY = /\b(view|vista|panorama|aerial|a[eé]rea|skyline|coast|costa|beach|praia|bay|ba[ií]a|riverside|waterfront|marina|harbour|harbor|porto de|street|rua|avenida|square|pra[cç]a|old town|centro hist[oó]rico|architecture|arquitetura|building|edif[ií]cio|houses|casas|rooftops|telhados|castle|castelo|palace|pal[aá]cio|church|igreja|bridge|ponte|landscape|paisagem|countryside|hills|valley|vale|cliffs|falsias|sunset|skyview|from above|overview|geral)\b/i;
 
 /**
@@ -195,7 +195,7 @@ async function candidates(term, opts = {}) {
     .filter((c) => ALLOWED_LICENCE.test(c.licence))
     .filter((c) => !REJECT_TITLE.test(c.title))
     // A property site needs contemporary photography. Filtering on the capture
-    // year removes paintings, engravings and archive scans in one rule — the
+    // year removes paintings, engravings and archive scans in one rule, the
     // title-based artwork filter kept missing things like "escola portuguesa,
     // séc. XIX". Undated files are kept; only a detectably old one is dropped.
     .filter((c) => {
@@ -249,7 +249,7 @@ async function candidates(term, opts = {}) {
 }
 
 /**
- * Commons search is a blunt instrument. Some pages need a specific file — either
+ * Commons search is a blunt instrument. Some pages need a specific file, either
  * because search kept returning the wrong country (a Manaus market for an Angolan
  * buyer guide) or because two pages ended up with two frames of the same view.
  * `pin` in commons-queries.mjs names the file; this fetches it directly and still
@@ -307,7 +307,7 @@ async function verify(url) {
 
 /**
  * Measure on the same rendition the site will serve. Commons only generates a
- * per-file set of thumbnail widths, and 640px returns HTTP 400 on many files —
+ * per-file set of thumbnail widths, and 640px returns HTTP 400 on many files,
  * which silently failed every measurement and rejected every candidate.
  */
 function measureUrl(originalUrl) {
@@ -392,8 +392,8 @@ for (const [slug, spec] of entries) {
 
   if (spec.pin) {
     const c = await pinnedCandidate(spec.pin);
-    if (!c) throw new Error(`${slug}: pinned file not found on Commons — ${spec.pin}`);
-    if (used.has(c.title)) throw new Error(`${slug}: pinned file already used by another page — ${spec.pin}`);
+    if (!c) throw new Error(`${slug}: pinned file not found on Commons, ${spec.pin}`);
+    if (used.has(c.title)) throw new Error(`${slug}: pinned file already used by another page, ${spec.pin}`);
     const metrics = await aestheticsFor(c.original);
     if (passesAestheticBar(metrics)) {
       picked = { ...c, term: 'pinned', metrics };
@@ -445,7 +445,7 @@ for (const [slug, spec] of entries) {
     height: picked.height,
     // A Commons filename is not always a description ('Rhythmic living', 'Lisboa').
     // altText overrides the composed string where the filename says nothing useful.
-    alt: spec.altText || `${subjectOf(picked.title)} — ${spec.alt}`,
+    alt: spec.altText || `${subjectOf(picked.title)}, ${spec.alt}`,
     altSubject: subjectOf(picked.title),
     credit: `${picked.author} / Wikimedia Commons`,
     licence: picked.licence,
@@ -482,5 +482,5 @@ const manifest = {
 saveAestheticCache();
 writeFileSync(OUT, `${JSON.stringify(manifest, null, 2)}\n`);
 process.stdout.write(
-  `\nwrote ${path.relative(ROOT, OUT)} — ${merged.length} images, ${manifest.uniqueFiles} unique files, ${failures.length} unresolved\n`,
+  `\nwrote ${path.relative(ROOT, OUT)}, ${merged.length} images, ${manifest.uniqueFiles} unique files, ${failures.length} unresolved\n`,
 );

@@ -1,4 +1,4 @@
-# P1 CTR Optimization Status — Portuguese Estate
+# P1 CTR Optimization Status: Portuguese Estate
 
 ## Проблема: сайт слишком молодой для CTR-анализа
 

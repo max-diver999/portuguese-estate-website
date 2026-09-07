@@ -2,8 +2,8 @@
  * Hero image quality audit: uniqueness and attractiveness.
  *
  * Two things can go wrong with hero images and only one of them is visible in a diff:
- *   1. Two pages pointing at the same URL — caught by the content gate, no network needed.
- *   2. Two pages pointing at *different* URLs that show the same thing — a second shot from
+ *   1. Two pages pointing at the same URL: caught by the content gate, no network needed.
+ *   2. Two pages pointing at *different* URLs that show the same thing, a second shot from
  *      the same viewpoint, another frame from the same photo walk. That is what a reader sees
  *      as a duplicate, and it needs the pixels.
  *
@@ -114,7 +114,7 @@ if (missing.length) {
         if (!aesthetics[u]) aesthetics[u] = await imageAesthetics(buf);
       } catch (err) {
         cache[u] = null;
-        process.stderr.write(`\n  unreachable: ${u} — ${err.message}\n`);
+        process.stderr.write(`\n  unreachable: ${u}, ${err.message}\n`);
       }
     }));
     process.stderr.write('.');
@@ -149,7 +149,7 @@ for (let i = 0; i < hashed.length; i += 1) {
   }
 }
 
-// 3. Accurate, unique — and ugly.
+// 3. Accurate, unique: and ugly.
 for (const e of entries) {
   const m = aesthetics[e.url];
   if (!m) continue;
@@ -167,9 +167,9 @@ for (const e of unreachable) problems.push({ kind: 'unreachable', pages: [e.id],
 
 console.log(`hero images: ${entries.length} references, ${urls.length} distinct URLs`);
 if (!problems.length) {
-  console.log('PASS — every page carries its own picture, no two look alike, and all clear the attractiveness bar.');
+  console.log('PASS, every page carries its own picture, no two look alike, and all clear the attractiveness bar.');
   process.exit(0);
 }
 for (const p of problems) console.log(`${p.kind.toUpperCase()}  ${p.pages.join('  <->  ')}  (${p.detail})`);
-console.log(`\nFAIL — ${problems.length} problem(s).`);
+console.log(`\nFAIL, ${problems.length} problem(s).`);
 process.exit(1);

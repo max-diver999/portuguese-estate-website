@@ -160,7 +160,7 @@ export function sentences(text) {
     .filter((s) => words(s).length > 3);
 }
 
-/** Figure phrases: "R620,000", "7.5%", "14 business days" — the unit matters, the bare digit does not. */
+/** Figure phrases: "R620,000", "7.5%", "14 business days": the unit matters, the bare digit does not. */
 export function figurePhrases(text) {
   const re =
     /(?:[€£$]\s?\d[\d,]*(?:\.\d+)?(?:\s*(?:million|bn|k))?|\d+(?:\.\d+)?%|\d[\d,]*(?:\.\d+)?\s*(?:business\s+)?(?:days?|weeks?|months?|years?))/gi;
