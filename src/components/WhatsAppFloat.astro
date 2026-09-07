@@ -17,8 +17,8 @@ function buildDefaultMessage(pathname: string): string {
     const slug = pathname.replace(/^\/guides\/|\/$/g, '').replace(/-/g, ' ');
     return `Hi Portuguese Estate! I read your guide about ${slug} and want a property shortlist. Budget ~€___`;
   }
-  if (pathname.startsWith('/areas/')) {
-    return "Hi Portuguese Estate! I'm researching Portugal areas and want a shortlist in my preferred region. Budget ~€___";
+  if (pathname.startsWith('/property-for-sale/')) {
+    return "Hi Portuguese Estate! I'm looking at property for sale in Portugal and want a shortlist in my preferred region. Budget ~€___";
   }
   if (pathname.startsWith('/get-shortlist')) {
     return "Hi Portuguese Estate! I'd like a free Portugal property shortlist. Budget ~€___";

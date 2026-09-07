@@ -11,7 +11,7 @@
     "minBrightness": 0.42,
     "maxBrightness": 0.95
   },
-  "total": 88,
+  "total": 86,
   "uniqueFiles": 88,
   "failures": [],
   "images": [
@@ -333,21 +333,6 @@
       }
     },
     {
-      "slug": "ericeira-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Igreja_de_Santa_Marta_-_Ericeira_-_Portugal_%2851869590392%29.jpg/1280px-Igreja_de_Santa_Marta_-_Ericeira_-_Portugal_%2851869590392%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Igreja_de_Santa_Marta_-_Ericeira_-_Portugal_%2851869590392%29.jpg",
-      "width": 3923,
-      "height": 2942,
-      "alt": "Igreja de Santa Marta - Ericeira - Portugal — Ericeira",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Igreja_de_Santa_Marta_-_Ericeira_-_Portugal_(51869590392).jpg",
-      "commonsTitle": "File:Igreja de Santa Marta - Ericeira - Portugal (51869590392).jpg",
-      "matchedTerm": "Ericeira vila casas",
-      "altSubject": "Igreja de Santa Marta - Ericeira - Portugal"
-    },
-    {
       "slug": "escritura-notary-portugal-property",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Boats_at_Cascais_beach_-_panoramio.jpg/1280px-Boats_at_Cascais_beach_-_panoramio.jpg",
@@ -389,21 +374,6 @@
         "greyMass": 0.47,
         "hash": "e0e0c002041b1882"
       }
-    },
-    {
-      "slug": "faro-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Faro_-_Portugal_%2810392376105%29.jpg/1280px-Faro_-_Portugal_%2810392376105%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Faro_-_Portugal_%2810392376105%29.jpg",
-      "width": 5622,
-      "height": 3888,
-      "alt": "Faro - Portugal — Faro, Algarve",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Faro_-_Portugal_(10392376105).jpg",
-      "commonsTitle": "File:Faro - Portugal (10392376105).jpg",
-      "matchedTerm": "Faro Portugal",
-      "altSubject": "Faro - Portugal"
     },
     {
       "slug": "fiscal-representative-portugal",

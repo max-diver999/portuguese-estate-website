@@ -14,7 +14,6 @@ const SITE = 'https://portuguese-estate.com';
 
 const COLLECTIONS = [
   ['guides', 'Guides', 'Tax, legal, process and market guides for foreign buyers'],
-  ['areas', 'Area guides', 'Neighbourhood and city investment guides with prices per m2 and yields'],
   ['compare', 'Comparisons', 'Portugal vs other markets, city vs city, structure vs structure'],
   ['projects', 'Project reviews', 'Independent reviews of named new-build developments'],
   ['developers', 'Developer profiles', 'Track-record profiles of Portugal developers'],

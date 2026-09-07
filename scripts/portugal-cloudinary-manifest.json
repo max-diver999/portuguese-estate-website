@@ -194,20 +194,6 @@
       "bytes": 475013,
       "uploaded_at": "2026-08-25T23:41:35Z"
     },
-    "ericeira-property-investment": {
-      "public_id": "more-group/portugal/areas/ericeira-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Igreja_de_Santa_Marta_-_Ericeira_-_Portugal_%2851869590392%29.jpg/1280px-Igreja_de_Santa_Marta_-_Ericeira_-_Portugal_%2851869590392%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Igreja_de_Santa_Marta_-_Ericeira_-_Portugal_%2851869590392%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Igreja_de_Santa_Marta_-_Ericeira_-_Portugal_(51869590392).jpg",
-      "source_sha256": "791c72e0415aa023aa5627f6be39603a51ef46c1fcca5cf330953775296d00c8",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701298/more-group/portugal/areas/ericeira-property-investment/hero.jpg",
-      "version": 1787701298,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 311920,
-      "uploaded_at": "2026-08-25T23:41:38Z"
-    },
     "escritura-notary-portugal-property": {
       "public_id": "more-group/portugal/guides/escritura-notary-portugal-property/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Boats_at_Cascais_beach_-_panoramio.jpg/1280px-Boats_at_Cascais_beach_-_panoramio.jpg",
@@ -235,20 +221,6 @@
       "height": 960,
       "bytes": 494113,
       "uploaded_at": "2026-08-25T23:41:44Z"
-    },
-    "faro-property-investment": {
-      "public_id": "more-group/portugal/areas/faro-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Faro_-_Portugal_%2810392376105%29.jpg/1280px-Faro_-_Portugal_%2810392376105%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Faro_-_Portugal_%2810392376105%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Faro_-_Portugal_(10392376105).jpg",
-      "source_sha256": "458aab05226028cd951eb1c6ba844a45e752177232bd6a236a76391490d03709",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701307/more-group/portugal/areas/faro-property-investment/hero.jpg",
-      "version": 1787701307,
-      "format": "jpg",
-      "width": 1280,
-      "height": 885,
-      "bytes": 440228,
-      "uploaded_at": "2026-08-25T23:41:47Z"
     },
     "how-to-buy-portugal-property-remotely": {
       "public_id": "more-group/portugal/guides/how-to-buy-portugal-property-remotely/hero",

@@ -561,6 +561,36 @@
       "source": "/areas/vilamoura-property-investment/",
       "destination": "/property-for-sale/vilamoura/",
       "statusCode": 301
+    },
+    {
+      "source": "/areas/faro-property-investment",
+      "destination": "/property-for-sale/faro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/faro-property-investment/",
+      "destination": "/property-for-sale/faro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/ericeira-property-investment",
+      "destination": "/property-for-sale/ericeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/ericeira-property-investment/",
+      "destination": "/property-for-sale/ericeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas",
+      "destination": "/property-for-sale/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/",
+      "destination": "/property-for-sale/",
+      "statusCode": 301
     }
   ],
   "headers": [

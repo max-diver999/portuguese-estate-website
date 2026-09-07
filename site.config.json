@@ -20,12 +20,6 @@
       "minWords": 2000,
       "faqMin": 5
     },
-    "areas": {
-      "dir": "areas",
-      "urlPrefix": "/areas/",
-      "minWords": 1800,
-      "faqMin": 4
-    },
     "compare": {
       "dir": "compare",
       "urlPrefix": "/compare/",
@@ -68,10 +62,6 @@
       {
         "hubPath": "/guides/",
         "contentDir": "guides"
-      },
-      {
-        "hubPath": "/areas/",
-        "contentDir": "areas"
       },
       {
         "hubPath": "/compare/",

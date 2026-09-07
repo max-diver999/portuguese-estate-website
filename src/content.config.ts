@@ -42,10 +42,6 @@ export const collections = {
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/compare' }),
     schema: articleSchema,
   }),
-  areas: defineCollection({
-    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/areas' }),
-    schema: articleSchema,
-  }),
   projects: defineCollection({
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
     schema: projectSchema,
