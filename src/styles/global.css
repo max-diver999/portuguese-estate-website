@@ -466,7 +466,9 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea {
   border-radius: 0;
   padding: 0.6rem 0;
   background: transparent;
-  font-size: 0.95rem;
+  /* 16px exactly: Safari on iOS zooms a focused field under this and never
+     zooms back, which puts the submit button off screen. */
+  font-size: 1rem;
   font-family: var(--font-sans);
   color: var(--color-ink);
 }
@@ -488,6 +490,26 @@ textarea:focus {
   border-bottom-color: var(--color-ink);
   border-bottom-width: 2px;
 }
+
+/* Mid-article lead band. Sits between the first and second H2 of the prose,
+ * so it has to read as an interruption the reader accepts, not as an ad. */
+.inline-cta {
+  margin: 2.5rem 0;
+  padding: 1.25rem 1.25rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0.625rem;
+  background: var(--color-surface);
+}
+.inline-cta__lead { margin: 0 0 0.9rem; font-size: 0.9rem; line-height: 1.45; color: var(--color-muted); }
+.inline-cta__lead strong { display: block; font-size: 1.02rem; color: var(--color-ink); margin-bottom: 0.2rem; }
+.inline-cta__row { display: grid; grid-template-columns: 1fr; gap: 0.6rem; align-items: end; }
+.inline-cta__label { display: block; font-size: 0.72rem; font-weight: 500; margin-bottom: 0.25rem; color: var(--color-muted); }
+.inline-cta__btn { white-space: nowrap; padding: 0.65rem 1.1rem; }
+.inline-cta__consent { margin-top: 0.8rem; font-size: 0.78rem; }
+.inline-cta__error { margin: 0.7rem 0 0; font-size: 0.82rem; color: #b91c1c; }
+.inline-cta__success { margin: 0.7rem 0 0; font-size: 0.82rem; font-weight: 500; color: #15803d; }
+@media (min-width: 640px) { .inline-cta__row { grid-template-columns: 1.1fr 1fr auto; } }
 
 .lead-form-consent { display: flex; align-items: flex-start; gap: 0.625rem; }
 .lead-form-consent__check { margin-top: 0.125rem; }

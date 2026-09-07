@@ -1,0 +1,197 @@
+---
+/**
+ * Compact lead capture placed inside the article body.
+ *
+ * The single LeadForm sits after the prose and the related blocks: measured at
+ * 84 % of page depth, 14 screens down on a 375 px screen. Rendered after the
+ * prose and relocated by the inline script below to sit between the first and
+ * second H2.
+ *
+ * Region and phone, matching the contact field the desk replies on.
+ */
+interface Props {
+  context?: string;
+}
+
+const { context = '' } = Astro.props;
+---
+<div class="inline-cta" data-inline-cta>
+  <form class="inline-cta__form" id="pe-inline-lead-form" data-context={context} novalidate>
+    <p class="inline-cta__lead">
+      <strong>Want this priced for your budget?</strong>
+      Tell us the region and how to reach you. Independent research first, then 3 to 5 matched options with the numbers behind each one.
+    </p>
+
+    <div class="inline-cta__row">
+      <div class="inline-cta__field">
+        <label class="inline-cta__label" for="il-market">Region</label>
+        <select id="il-market" name="market">
+        <option value="">— Select —</option>
+        <option value="lisbon">Lisbon</option>
+        <option value="algarve">Algarve</option>
+        <option value="porto">Porto / Gaia</option>
+        <option value="cascais">Cascais / Estoril</option>
+        <option value="comporta">Comporta / Alentejo coast</option>
+        <option value="silver-coast">Silver Coast / Óbidos</option>
+        <option value="multi">Multiple / not sure</option>
+        </select>
+      </div>
+      <div class="inline-cta__field">
+        <label class="inline-cta__label" for="il-phone">WhatsApp / Phone</label>
+        <input type="tel" id="il-phone" name="phone" placeholder="+351 912 345 678" autocomplete="tel" />
+      </div>
+      <button type="submit" class="btn-primary inline-cta__btn">Request shortlist →</button>
+    </div>
+
+    <p id="il-error" class="inline-cta__error hidden" role="alert"></p>
+
+    <div class="lead-form-consent inline-cta__consent">
+      <input type="checkbox" id="il-consent" name="consent" class="lead-form-consent__check" />
+      <label class="lead-form-consent__label" for="il-consent">I agree to be contacted about my enquiry. See our <a href="/privacy-policy/">Privacy Policy</a>.</label>
+    </div>
+
+    <p id="il-success" class="inline-cta__success hidden">Thank you. Redirecting…</p>
+  </form>
+</div>
+
+<script is:inline>
+  /*
+   * Runs during parsing, immediately after the prose has been read, so the band
+   * is in its final position before first paint.
+   */
+  (function relocateInlineCta() {
+    var band = document.querySelector('[data-inline-cta]');
+    var prose = document.querySelector('.prose');
+    if (!band || !prose) return;
+    var headings = prose.querySelectorAll(':scope > h2');
+    if (headings.length < 3) return;
+    var anchor = headings[1];
+    var separator = anchor.previousElementSibling;
+    prose.insertBefore(band, separator && separator.tagName === 'HR' ? separator : anchor);
+  })();
+</script>
+
+<script>
+  import { track } from '../lib/track';
+
+  const form = document.getElementById('pe-inline-lead-form') as HTMLFormElement | null;
+  if (form) {
+    const errorEl = document.getElementById('il-error');
+    let started = false;
+
+    function pageIdentity() {
+      const parts = window.location.pathname.split('/').filter(Boolean);
+      return {
+        collection: parts.length > 1 ? parts[0] : 'root',
+        slug: parts.length > 0 ? parts[parts.length - 1] : 'home',
+      };
+    }
+
+    form.querySelectorAll('input:not([tabindex="-1"]), select, textarea').forEach((field) => {
+      field.addEventListener(
+        'focus',
+        () => {
+          if (started) return;
+          started = true;
+          const { collection, slug } = pageIdentity();
+          track('form_start', {
+            form_id: form!.id,
+            form_context: form!.dataset.context || '',
+            form_location: 'inline',
+            page_path: window.location.pathname,
+            collection,
+            slug,
+          });
+        },
+        { once: true },
+      );
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const phone = String(data.get('phone') || '').trim();
+      const { collection, slug } = pageIdentity();
+
+      function reportInvalid(reason: string, message: string, focusId: string) {
+        if (errorEl) {
+          errorEl.textContent = message;
+          errorEl.classList.remove('hidden');
+        }
+        (document.getElementById(focusId) as HTMLElement | null)?.focus();
+        track('form_validation_error', {
+          form_id: form!.id,
+          form_location: 'inline',
+          reason,
+          page_path: window.location.pathname,
+          collection,
+          slug,
+        });
+      }
+
+      if (phone.replace(/\D/g, '').length < 8) {
+        reportInvalid('bad-phone', 'Please enter a phone or WhatsApp number we can reach you on.', 'il-phone');
+        return;
+      }
+      if (!data.get('consent')) {
+        reportInvalid('no-consent', 'Please tick the box so we know we may reply to you.', 'il-consent');
+        return;
+      }
+      errorEl?.classList.add('hidden');
+
+      const payload = {
+        phone,
+        contact: phone,
+        market: data.get('market'),
+        context: form.dataset.context || '',
+        source: window.location.href,
+        page: window.location.pathname,
+        collection,
+        slug,
+        formLocation: 'inline',
+      };
+
+      track('form_submit_attempt', {
+        form_id: form.id,
+        form_location: 'inline',
+        market: String(payload.market || 'not_set'),
+        page_path: window.location.pathname,
+        collection,
+        slug,
+      });
+
+      try {
+        const res = await fetch('/api/lead/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('fail');
+        document.getElementById('il-success')?.classList.remove('hidden');
+        track('generate_lead', {
+          form_id: form.id,
+          form_location: 'inline',
+          lead_context: form.dataset.context || '',
+          value: 1,
+          currency: 'EUR',
+          page_path: window.location.pathname,
+          collection,
+          slug,
+        });
+        setTimeout(() => window.location.assign('/thanks/?lead=1'), 400);
+      } catch {
+        if (errorEl) {
+          errorEl.textContent = 'Something went wrong. Please try the full form at the end of this page.';
+          errorEl.classList.remove('hidden');
+        }
+        track('form_submit_error', {
+          form_id: form.id,
+          form_location: 'inline',
+          page_path: window.location.pathname,
+          collection,
+          slug,
+        });
+      }
+    });
+  }
+</script>
