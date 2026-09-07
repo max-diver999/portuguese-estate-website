@@ -1,0 +1,28 @@
+{
+  "rollout": "portugal-wave3-rural-fix",
+  "generated": "2026-09-07",
+  "source": "Wikimedia Commons",
+  "rule": "Replaces a mis-picked church image on the rural land page.",
+  "deliveryWidth": 1280,
+  "total": 1,
+  "images": [
+    {
+      "commonsTitle": "File:Portugal Alentejo January 2022 (51850489252).jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Portugal_Alentejo_January_2022_%2851850489252%29.jpg/1280px-Portugal_Alentejo_January_2022_%2851850489252%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Portugal_Alentejo_January_2022_%2851850489252%29.jpg",
+      "width": 4032,
+      "height": 2268,
+      "licence": "CC BY 2.0",
+      "credit": "tjabeljan / Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Portugal_Alentejo_January_2022_(51850489252).jpg",
+      "subject": "Portugal Alentejo January 2022 (51850489252)",
+      "slug": "rural-and-land",
+      "collection": "property-for-sale",
+      "alt": "Rolling Alentejo farmland with cork oaks at the end of the day",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/rural-and-land/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1080
+    }
+  ],
+  "cloud": "bwppi9gc"
+}
