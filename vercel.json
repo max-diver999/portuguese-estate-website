@@ -591,6 +591,96 @@
       "source": "/areas/",
       "destination": "/property-for-sale/",
       "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-cyprus-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-cyprus-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-dubai-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-dubai-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-france-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-france-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-greece-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-greece-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-italy-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-italy-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-malta-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-malta-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-spain-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-spain-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-turkey-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-turkey-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-uk-property-investment",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/portugal-vs-uk-property-investment/",
+      "destination": "/compare/golden-visa-portugal-spain-greece/",
+      "statusCode": 301
     }
   ],
   "headers": [

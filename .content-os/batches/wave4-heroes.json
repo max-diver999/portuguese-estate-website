@@ -1,0 +1,40 @@
+{
+  "images": [
+    {
+      "commonsTitle": "File:Arco Triunfal da Rua Augusta, Plaza del Comercio, Lisboa, Portugal, 2012-05-12, DD 02.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Arco_Triunfal_da_Rua_Augusta%2C_Plaza_del_Comercio%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_02.JPG/1280px-Arco_Triunfal_da_Rua_Augusta%2C_Plaza_del_Comercio%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_02.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Arco_Triunfal_da_Rua_Augusta%2C_Plaza_del_Comercio%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_02.JPG",
+      "width": 4924,
+      "height": 3340,
+      "licence": "CC BY-SA 3.0",
+      "credit": "Diego Delso / Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Arco_Triunfal_da_Rua_Augusta,_Plaza_del_Comercio,_Lisboa,_Portugal,_2012-05-12,_DD_02.JPG",
+      "subject": "Arco Triunfal da Rua Augusta",
+      "slug": "golden-visa-portugal-spain-greece",
+      "collection": "compare",
+      "alt": "The Rua Augusta triumphal arch on Praca do Comercio in Lisbon",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/compare/golden-visa-portugal-spain-greece/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1302
+    },
+    {
+      "commonsTitle": "File:Lisboa DSCF1212 (11268641786).jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Lisboa_DSCF1212_%2811268641786%29.jpg/1280px-Lisboa_DSCF1212_%2811268641786%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Lisboa_DSCF1212_%2811268641786%29.jpg",
+      "width": 4896,
+      "height": 3264,
+      "licence": "CC BY 2.0",
+      "credit": "Petteri Sulonen from Helsinki, Finland / Wikimedia Commons",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Lisboa_DSCF1212_(11268641786).jpg",
+      "subject": "Lisboa DSCF1212 (11268641786)",
+      "slug": "portugal-estate-agents",
+      "collection": "guides",
+      "alt": "A green azulejo-tiled corner building on a Lisbon street",
+      "cloudinaryUrl": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/guides/portugal-estate-agents/hero",
+      "cloudWidth": 1920,
+      "cloudHeight": 1280
+    }
+  ],
+  "deliveryWidth": 1280,
+  "cloud": "bwppi9gc"
+}
