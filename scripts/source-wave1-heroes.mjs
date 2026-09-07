@@ -14,11 +14,23 @@ const MIN_EDGE = 1600;
 const used = new Set(
   JSON.parse(readFileSync('scripts/portugal-commons-images.json', 'utf8')).images.map((i) => i.commonsTitle),
 );
+// Heroes claimed by this session's batches are on the new cloud and are not in the
+// legacy manifest, so read them too or the picker hands out the same file twice.
+for (const f of [
+  '.content-os/batches/wave1-heroes.json',
+  '.content-os/batches/wave1-heroes-batch2.json',
+  '.content-os/batches/wave1-heroes-batch3.json',
+  '.content-os/batches/wave2-heroes.json',
+  '.content-os/batches/wave3-heroes.json',
+]) {
+  try {
+    for (const i of JSON.parse(readFileSync(f, 'utf8')).images) used.add(i.commonsTitle);
+  } catch {}
+}
 
 const WANT = [
-  { slug: 'algarve', terms: ['Praia da Marinha Algarve', 'Algarve Portugal cliffs', 'Lagos Algarve coast'] },
-  { slug: 'lisbon',  terms: ['Baixa Chiado Lisboa view', 'Lisboa Baixa Portugal', 'Lisboa view Portugal'] },
-  { slug: 'porto',   terms: ['Ponte Dom Luis Porto', 'Porto Portugal bridge', 'Porto Portugal skyline'] },
+  { slug: 'olhao',                    terms: ['Olhao Portugal', 'Olhão Portugal market', 'Ria Formosa Olhao'] },
+  { slug: 'loule-almancil-quarteira', terms: ['Loule Portugal market', 'Quarteira Portugal beach', 'Almancil Portugal'] },
 ];
 
 const JUNK = /ecoponto|placa|plaque|sign(age)?\b|logo|coat of arms|bras[ãa]o|\bmap\b|mapa|diagram|graffiti|detalhe|close-?up|manhole|construction site|scaffold|roadworks|parking/i;
@@ -87,18 +99,20 @@ function usable(pages) {
 // Title heuristics can only reject the obvious. A replica aeroplane and a beach
 // in Benidorm both passed every filter, so the last call is made by eye:
 // shortlist six per page, render a contact sheet, choose from that.
+const POOLS = ['Quality images', 'Featured pictures', null];
 const shortlist = {};
 for (const w of WANT) {
   const seen = new Set();
   const cands = [];
-  for (const term of w.terms) {
-    for (const c of usable(await search(term, 'Quality images'))) {
-      if (seen.has(c.commonsTitle)) continue;
-      seen.add(c.commonsTitle);
-      cands.push({ ...c, term });
-      if (cands.length >= 6) break;
+  outer: for (const pool of POOLS) {
+    for (const term of w.terms) {
+      for (const c of usable(await search(term, pool))) {
+        if (seen.has(c.commonsTitle)) continue;
+        seen.add(c.commonsTitle);
+        cands.push({ ...c, term, pool: pool ?? 'open search' });
+        if (cands.length >= 6) break outer;
+      }
     }
-    if (cands.length >= 6) break;
   }
   shortlist[w.slug] = cands;
   console.log(`${w.slug.padEnd(24)} ${cands.length} candidates`);

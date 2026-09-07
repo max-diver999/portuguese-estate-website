@@ -54,20 +54,6 @@
       "bytes": 998781,
       "uploaded_at": "2026-08-25T23:36:16Z"
     },
-    "cascais-property-investment": {
-      "public_id": "more-group/portugal/areas/cascais-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg/1280px-Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Palacio_de_los_condes_de_Castro_Guimar%C3%A3es%2C_Cascais%2C_Portugal%2C_2022-07-25%2C_DD_12.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Palacio_de_los_condes_de_Castro_Guimar%C3%A3es,_Cascais,_Portugal,_2022-07-25,_DD_12.jpg",
-      "source_sha256": "6c7c7da914b4ee33a3f91e9f44a9d0140210fbee6fb029b473f9d39804f1c232",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787700976/more-group/portugal/areas/cascais-property-investment/hero.jpg",
-      "version": 1787700976,
-      "format": "jpg",
-      "width": 1920,
-      "height": 1279,
-      "bytes": 741724,
-      "uploaded_at": "2026-08-25T23:36:16Z"
-    },
     "castilho-203": {
       "public_id": "more-group/portugal/projects/castilho-203/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Jardim_da_Estrela_-_Lisboa_-_Portugal_%2815227514472%29.jpg/1280px-Jardim_da_Estrela_-_Lisboa_-_Portugal_%2815227514472%29.jpg",
@@ -431,20 +417,6 @@
       "height": 960,
       "bytes": 411575,
       "uploaded_at": "2026-08-25T23:44:06Z"
-    },
-    "lagos-property-investment": {
-      "public_id": "more-group/portugal/areas/lagos-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg/1280px-Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Algarve%2C_Portugal_2015_-_Lagos_%2820765921760%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Algarve,_Portugal_2015_-_Lagos_(20765921760).jpg",
-      "source_sha256": "6576a1543147ef26c359f4af2679b4a0e5a388352702ea4bd7eb418d01b2f19b",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701456/more-group/portugal/areas/lagos-property-investment/hero.jpg",
-      "version": 1787701456,
-      "format": "jpg",
-      "width": 1280,
-      "height": 753,
-      "bytes": 266388,
-      "uploaded_at": "2026-08-25T23:44:16Z"
     },
     "lagos-vs-vilamoura-investment": {
       "public_id": "more-group/portugal/compare/lagos-vs-vilamoura-investment/hero",
@@ -1215,20 +1187,6 @@
       "height": 853,
       "bytes": 440872,
       "uploaded_at": "2026-08-25T23:48:25Z"
-    },
-    "tavira-property-investment": {
-      "public_id": "more-group/portugal/areas/tavira-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg/1280px-Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Igreja_de_Santa_Maria_do_Castelo_em_Tavira%2C_Algarve%2C_Portugal_-_10.09.2020.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Igreja_de_Santa_Maria_do_Castelo_em_Tavira,_Algarve,_Portugal_-_10.09.2020.jpg",
-      "source_sha256": "34ee94839404c2c11fb0a15f6d315b830fa1f68a75e5a309418597bfc1ee4bd5",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701707/more-group/portugal/areas/tavira-property-investment/hero.jpg",
-      "version": 1787701707,
-      "format": "jpg",
-      "width": 1280,
-      "height": 853,
-      "bytes": 235486,
-      "uploaded_at": "2026-08-25T23:48:27Z"
     },
     "terracos-do-monte": {
       "public_id": "more-group/portugal/projects/terracos-do-monte/hero",
