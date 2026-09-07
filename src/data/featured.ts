@@ -21,11 +21,11 @@ export const FEATURED_GUIDE_SLUGS = [
   'imt-tax-non-resident-portugal-2026',
 ] as const;
 
-export const FEATURED_AREA_SLUGS = [
-  'sintra-property-investment',
-  'madeira-property-investment-guide',
-  'cascais-property-investment',
-  'faro-property-investment',
+export const FEATURED_FOR_SALE_SLUGS = [
+  'algarve',
+  'lisbon',
+  'porto',
+  'silver-coast',
 ] as const;
 
 /**

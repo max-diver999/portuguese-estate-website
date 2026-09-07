@@ -256,7 +256,6 @@ const CHECKS = [
 const STANDALONE_PAGES = [
   { urlPath: '/', requireLeadForm: true },
   { urlPath: '/guides/', requireLeadForm: true },
-  { urlPath: '/areas/', requireLeadForm: false },
   { urlPath: '/compare/', requireLeadForm: false },
   { urlPath: '/move-to-portugal/', requireLeadForm: false },
   { urlPath: '/property-for-sale/', requireLeadForm: true },

@@ -9,7 +9,7 @@ import { HOMEPAGE_HERO_IMAGE, HOMEPAGE_HERO_ALT } from '../data/featured';
  * reasonable to the medium", which is what this page is for. It keeps captions
  * off the pages themselves.
  */
-const collections = ['guides', 'areas', 'projects', 'compare', 'segments', 'developers', 'news'];
+const collections = ['guides', 'projects', 'compare', 'developers', 'news', 'move-to-portugal', 'property-for-sale'];
 const entries = (await Promise.all(collections.map((c) => getCollection(c)))).flat();
 
 const credited = entries

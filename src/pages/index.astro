@@ -9,7 +9,7 @@ import { SITE } from '../data/site';
 import {
   FEATURED_PROJECT_SLUGS,
   FEATURED_GUIDE_SLUGS,
-  FEATURED_AREA_SLUGS,
+  FEATURED_FOR_SALE_SLUGS,
   HOMEPAGE_HERO_IMAGE,
   HOMEPAGE_HERO_ALT,
   HOMEPAGE_HERO_WIDTH,
@@ -20,24 +20,24 @@ import { getCardImageUrl, formatAreaLabel } from '../lib/cardImage';
 import { responsiveImage, lcpPreloadFromResponsive } from '../lib/responsiveImage';
 import { pickHomepageProjects, projectHeroLine, projectStatusLabel } from '../lib/homeProjects';
 
-const [guides, projects, areas] = await Promise.all([
+const [guides, projects, forSale] = await Promise.all([
   getCollection('guides'),
   getCollection('projects'),
-  getCollection('areas'),
+  getCollection('property-for-sale'),
 ]);
 
 const publishedGuides = guides.filter((g) => !g.data.noindex);
 const publishedProjects = projects.filter((p) => !p.data.noindex);
-const publishedAreas = areas.filter((a) => !a.data.noindex);
+const publishedForSale = forSale.filter((a) => !a.data.noindex);
 
 const guideBySlug = new Map(publishedGuides.map((g) => [g.id, g]));
 const projectBySlug = new Map(publishedProjects.map((p) => [p.id, p]));
-const areaBySlug = new Map(publishedAreas.map((a) => [a.id, a]));
+const forSaleBySlug = new Map(publishedForSale.map((a) => [a.id, a]));
 
 const featuredGuides = FEATURED_GUIDE_SLUGS.map((slug) => guideBySlug.get(slug)).filter(Boolean);
 const homepageProjects = pickHomepageProjects(publishedProjects, FEATURED_PROJECT_SLUGS, 12);
 const heroProject = projectBySlug.get(HOMEPAGE_HERO_PROJECT_SLUG) ?? homepageProjects[0];
-const featuredAreas = FEATURED_AREA_SLUGS.map((slug) => areaBySlug.get(slug)).filter(Boolean);
+const featuredForSale = FEATURED_FOR_SALE_SLUGS.map((slug) => forSaleBySlug.get(slug)).filter(Boolean);
 
 /*
  * Served straight from the build. responsiveImage() only rewrites Cloudinary
@@ -111,8 +111,8 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
         <p class="figure-cells__label">Buyer guides</p>
       </div>
       <div class="figure-cells__cell">
-        <p class="figure-cells__value">{publishedAreas.length}</p>
-        <p class="figure-cells__label">Investment areas</p>
+        <p class="figure-cells__value">{publishedForSale.length}</p>
+        <p class="figure-cells__label">Buying guides by region</p>
       </div>
       <div class="figure-cells__cell">
         <p class="figure-cells__value">7.5%</p>
@@ -225,20 +225,20 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
     <div class="site-container">
       <div class="flex items-end justify-between gap-4 mb-8">
         <div>
-          <h2 class="text-2xl mb-2">Investment areas</h2>
-          <p class="text-[var(--color-muted)]">Micro-market guides — yields, buyer fit, and red flags.</p>
+          <h2 class="text-2xl mb-2">Property for sale</h2>
+          <p class="text-[var(--color-muted)]">Where to buy, what it costs to run, and the red flags per region.</p>
         </div>
-        <a href="/areas/" class="link-arrow shrink-0 hidden sm:inline">All areas →</a>
+        <a href="/property-for-sale/" class="link-arrow shrink-0 hidden sm:inline">All regions →</a>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {featuredAreas.map((area) => (
+        {featuredForSale.map((area) => (
           <ContentCard
-            href={`/areas/${area.id}/`}
+            href={`/property-for-sale/${area.id}/`}
             title={area.data.title}
             description={area.data.description}
             image={area.data.heroImage}
             imageAlt={area.data.heroImageAlt}
-            badges={['Area', formatAreaLabel(area.id)]}
+            badges={['For sale', formatAreaLabel(area.id)]}
             meta={`${area.data.readingTime ?? 10} min read`}
           />
         ))}

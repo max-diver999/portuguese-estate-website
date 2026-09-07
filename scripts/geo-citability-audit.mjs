@@ -36,7 +36,6 @@ const COMMERCIAL = new Set([
   'gajdy',
   'comparisons',
   'sravneniya',
-  'areas',
   'rajony',
   'compare',
   'projects',
