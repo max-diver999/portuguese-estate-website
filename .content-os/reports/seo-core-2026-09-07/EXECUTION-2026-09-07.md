@@ -123,13 +123,13 @@ to its own page rather than restated advice. No paragraph appears on more than t
 
 | Collection | Pages | Words | Average |
 |---|---:|---:|---:|
-| guides | 63 | 235,351 | 3,735 |
-| property-for-sale | 23 | 59,160 | 2,572 |
-| move-to-portugal | 11 | 28,842 | 2,622 |
-| compare | 6 | 26,469 | 4,411 |
+| guides | 63 | 242,197 | 3,844 |
+| property-for-sale | 23 | 65,753 | 2,858 |
+| move-to-portugal | 11 | 32,474 | 2,952 |
+| compare | 6 | 27,089 | 4,514 |
 | developers | 3 | 10,930 | 3,643 |
 | projects | 7 | 8,668 | 1,238 |
-| **Total** | **113** | **369,420** | **3,269** |
+| **Total** | **113** | **387,111** | **3,426** |
 
 ---
 
@@ -146,7 +146,7 @@ to its own page rather than restated advice. No paragraph appears on more than t
 | `audit:images:rendered` | no photograph on more than one content page |
 | `aeo:verify` | pass, 113 files, 0 errors |
 | `speed:verify` | pass |
-| GEO citability | **fail**, see section 7 |
+| GEO citability | 69/100 average, 41 pages at 70+, 9 below 60; see section 7 |
 | Rendered HTML (live) | 92 notices, all the interim wa.me number; P0 and P1 both 0 |
 
 ---
@@ -182,17 +182,68 @@ unanonymised, picks up the citizenship and golden visa comparison pages.
 
 ---
 
+## 6b. Citability pass
+
+The GEO rubric scores every H2 block on how quotable its opening paragraph is. The house style
+opened sections with a 15 to 30 word lead-in before a table, which scores 10 to 55 on answer
+quality. Every section on all 86 failing pages was rewritten to open with 40 to 60 words that state
+the answer, carry a real figure where one exists, and do not begin with a pronoun.
+
+| | Before | After |
+|---|---:|---:|
+| Average commercial score | 64 | 69 |
+| Answer quality | 67 | 79 |
+| Self-containment | 62 | 68 |
+| Statistical density | 66 | 70 |
+| Pages at 70 or above | 24 | 41 |
+| Pages below 60 | 41 | 9 |
+
+Largest individual moves: golden-visa 58 to 80, moderate-rent-tax-incentives 59 to 71,
+imi-property-tax 59 to 71, aimi-wealth-tax 64 to 71, porto-alojamento-local 61 to 72,
+citizenship-by-investment 59 to 70, escritura 60 to 70, d7-visa 53 to 68, cost-of-living 47 to 67.
+
+Three structural problems surfaced during the pass and are fixed.
+
+**Twelve pages put an H2 straight into an H3**, 51 sections in total, so a reader landing there met
+a stack of headings and no orientation. Each now opens with the figures: the 0.3% to 0.45% IMI band,
+the EUR 5.00 and EUR 7.50 rent caps, the 4% interest and 20% penalty on a broken 8-year commitment.
+
+**An unverifiable client claim.** The moderate-rent page stated that "several Portuguese Estate
+clients from the UK have successfully recovered full IMT". That is the class of assertion purged
+corpus-wide in PR 41. The sentence now describes the pathway without asserting the outcome.
+
+**A page contradicting itself on DL 97/2026**, describing an IMT surcharge above EUR 550,000 in one
+section and the flat 7.5% in another. The flat rate is correct from 1 September 2026.
+
+**Three paragraphs running verbatim across all four surviving compare pages.** They passed
+qa-duplicate-prose because the sentences diverge after the opening clause, which is how templated
+writing hides from a paragraph-level check. Each page now opens those sections on its own terms. No
+opening paragraph now repeats across three or more pages anywhere in the corpus.
+
+Two helper scripts were added: `geo-inspect.mjs` for the per-section score breakdown and
+`geo-thin.mjs` for the exact text of every opener under 40 words. The audit's COMMERCIAL set now
+includes move-to-portugal and property-for-sale, which had been unscored entirely.
+
+---
+
 ## 7. The honest block
 
-**GEO citability is the one gate still failing, and it is a real gap.** Average commercial score
-69/100, grade C, with 60 of 113 files below the minimum. The rubric breaks down as answer 72, self
-67, structure 72, stats 80, **unique 42**. Uniqueness is the weak dimension by a wide margin.
+**GEO citability was addressed and is now partly capped by content rather than by effort.** All
+86 pages below the bar were rewritten. The average moved from 64 to 69, answer quality from 67 to
+79, and the number of pages at 70 or above from 24 to 41. Nine pages remain below 60.
 
-The flagged pattern is `thin-h2-open`: a heading followed by a short lead-in before a table, rather
-than a self-contained paragraph an answer engine can quote. Three of the newest pages score worst on
-it, including two written this week, so this is a house-style problem rather than a legacy one.
-Fixing it means rewriting the opening paragraph under most H2s across the corpus to 130 to 170 words
-carrying a statistic. That is a larger job than the word-count expansion and it is not started.
+Those nine are all place pages: central-and-northern-portugal, rural-and-land, alvor,
+coastal-sea-view, lagos, best-places-to-live, by-nationality, azores, ericeira. Their answer quality
+now sits at 72 to 82, so the openers are fixed. What holds them down is statistical density at 21 to
+31, because their sections describe wind, ferries, granite, steps and levadas. The rubric rewards
+percentages, euro figures and durations, and those sections have none that are true. The relative
+price tables on the town pages are deliberately qualitative, "above 100" rather than a fabricated
+index, because verified parish-level series do not exist for them. Converting those bands into
+invented percentages would lift the score and reintroduce exactly the defect purged in PR 41.
+
+Uniqueness sits at 37 and was left there on purpose. The scorer's own source comment warns that
+pasting "insider tip" games that proxy with no reader value, so the work went into answer quality,
+self-containment and real figures instead.
 
 **The commercial ceiling has not moved.** The for-sale SERPs are still held by idealista, Kyero,
 Rightmove and the agencies. Nothing in this work changes that, and the realistic outcome on those
