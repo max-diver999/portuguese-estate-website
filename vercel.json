@@ -541,6 +541,26 @@
       "source": "/areas/sintra-property-investment/",
       "destination": "/property-for-sale/lisbon/",
       "statusCode": 301
+    },
+    {
+      "source": "/areas/albufeira-property-investment",
+      "destination": "/property-for-sale/albufeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/albufeira-property-investment/",
+      "destination": "/property-for-sale/albufeira/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/vilamoura-property-investment",
+      "destination": "/property-for-sale/vilamoura/",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas/vilamoura-property-investment/",
+      "destination": "/property-for-sale/vilamoura/",
+      "statusCode": 301
     }
   ],
   "headers": [
