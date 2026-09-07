@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "npm run images:verify",
+    "prebuild": "npm run images:verify && node scripts/generate-llms.mjs",
     "build": "astro build",
     "postbuild": "node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs && npm run speed:verify",
     "preview": "astro preview",
@@ -47,7 +47,8 @@
     "facts:review": "node scripts/facts-review.mjs",
     "geo:score": "node scripts/geo-score.mjs",
     "geo:calibrate": "node scripts/geo-calibrate.mjs",
-    "geo:cannibals": "node scripts/geo-cannibals.mjs"
+    "geo:cannibals": "node scripts/geo-cannibals.mjs",
+    "gen:llms": "node scripts/generate-llms.mjs"
   },
   "dependencies": {
     "google-auth-library": "^10.6.2",

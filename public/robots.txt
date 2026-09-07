@@ -94,4 +94,8 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
+# Corpus index for answer engines
+# https://portuguese-estate.com/llms.txt
+# https://portuguese-estate.com/llms-full.txt
+
 Sitemap: https://portuguese-estate.com/sitemap-index.xml
