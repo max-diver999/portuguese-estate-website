@@ -11,8 +11,8 @@
     "minBrightness": 0.42,
     "maxBrightness": 0.95
   },
-  "total": 112,
-  "uniqueFiles": 112,
+  "total": 101,
+  "uniqueFiles": 101,
   "failures": [],
   "images": [
     {
@@ -55,28 +55,6 @@
         "saturation": 0.326,
         "brightness": 0.562,
         "greyMass": 0.264
-      }
-    },
-    {
-      "slug": "alcantara-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Docas_%282231587104%29.jpg/1280px-Docas_%282231587104%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Docas_%282231587104%29.jpg",
-      "width": 3343,
-      "height": 2230,
-      "alt": "Docas — Alcântara, Lisbon",
-      "altSubject": "Docas",
-      "credit": "Ricardo Liberato / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Docas_(2231587104).jpg",
-      "commonsTitle": "File:Docas (2231587104).jpg",
-      "matchedTerm": "cat:Doca de Santo Amaro",
-      "aesthetics": {
-        "colourfulness": 65.6,
-        "saturation": 0.396,
-        "brightness": 0.593,
-        "greyMass": 0.266,
-        "hash": "f0d0e0b8d1f1e5cd"
       }
     },
     {
@@ -232,27 +210,6 @@
       }
     },
     {
-      "slug": "caldas-da-rainha-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Parque_D._Carlos_I_-_Caldas_da_Rainha_-_Portugal_%284820349779%29.jpg/1280px-Parque_D._Carlos_I_-_Caldas_da_Rainha_-_Portugal_%284820349779%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Parque_D._Carlos_I_-_Caldas_da_Rainha_-_Portugal_%284820349779%29.jpg",
-      "width": 5115,
-      "height": 3836,
-      "alt": "Parque D. Carlos I - Caldas da Rainha - Portugal — Caldas da Rainha, Silver Coast",
-      "altSubject": "Parque D. Carlos I - Caldas da Rainha - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Parque_D._Carlos_I_-_Caldas_da_Rainha_-_Portugal_(4820349779).jpg",
-      "commonsTitle": "File:Parque D. Carlos I - Caldas da Rainha - Portugal (4820349779).jpg",
-      "matchedTerm": "Caldas da Rainha parque lago",
-      "aesthetics": {
-        "colourfulness": 62.8,
-        "saturation": 0.36,
-        "brightness": 0.551,
-        "greyMass": 0.222
-      }
-    },
-    {
       "slug": "can-foreigners-buy-property-portugal",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Houses_in_Porto_%2838089511162%29.jpg/1280px-Houses_in_Porto_%2838089511162%29.jpg",
@@ -322,27 +279,6 @@
         "saturation": 0.35,
         "brightness": 0.52,
         "greyMass": 0.206
-      }
-    },
-    {
-      "slug": "chiado-principe-real-property",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Jardim_Praca_do_Principe_Real_-_panoramio.jpg/1280px-Jardim_Praca_do_Principe_Real_-_panoramio.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Jardim_Praca_do_Principe_Real_-_panoramio.jpg",
-      "width": 3600,
-      "height": 2397,
-      "alt": "Buildings beside the Jardim do Príncipe Real, Lisbon — Chiado and Príncipe Real",
-      "altSubject": "Jardim Praca do Principe Real - panoramio",
-      "credit": "Mister No / Wikimedia Commons",
-      "licence": "CC BY 3.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Jardim_Praca_do_Principe_Real_-_panoramio.jpg",
-      "commonsTitle": "File:Jardim Praca do Principe Real - panoramio.jpg",
-      "matchedTerm": "cat:Jardim do Príncipe Real (Lisbon)",
-      "aesthetics": {
-        "colourfulness": 60.8,
-        "saturation": 0.269,
-        "brightness": 0.533,
-        "greyMass": 0.415
       }
     },
     {
@@ -865,36 +801,6 @@
       "altSubject": "January Beaches Sagres Portugal - Magic Portugal Photography 1991 Sagres Town Atlantic Ocean - panoramio"
     },
     {
-      "slug": "lourinha-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Cruzeiro_do_Castelo_-_Lourinh%C3%A3_-_Portugal_%2852742393585%29.jpg/1280px-Cruzeiro_do_Castelo_-_Lourinh%C3%A3_-_Portugal_%2852742393585%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Cruzeiro_do_Castelo_-_Lourinh%C3%A3_-_Portugal_%2852742393585%29.jpg",
-      "width": 2048,
-      "height": 1381,
-      "alt": "Cruzeiro do Castelo - Lourinhã - Portugal — Lourinhã, Silver Coast",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cruzeiro_do_Castelo_-_Lourinh%C3%A3_-_Portugal_(52742393585).jpg",
-      "commonsTitle": "File:Cruzeiro do Castelo - Lourinhã - Portugal (52742393585).jpg",
-      "matchedTerm": "Lourinha Portugal",
-      "altSubject": "Cruzeiro do Castelo - Lourinhã - Portugal"
-    },
-    {
-      "slug": "madeira-property-investment-guide",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Pra%C3%A7a_do_Munic%C3%ADpio_in_Funchal._Madeira%2C_Portugal.jpg/1280px-Pra%C3%A7a_do_Munic%C3%ADpio_in_Funchal._Madeira%2C_Portugal.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Pra%C3%A7a_do_Munic%C3%ADpio_in_Funchal._Madeira%2C_Portugal.jpg",
-      "width": 5921,
-      "height": 3326,
-      "alt": "Praça do Município in Funchal. Madeira, Portugal — Funchal, Madeira",
-      "credit": "Ввласенко / Wikimedia Commons",
-      "licence": "CC BY-SA 3.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_do_Munic%C3%ADpio_in_Funchal._Madeira,_Portugal.jpg",
-      "commonsTitle": "File:Praça do Município in Funchal. Madeira, Portugal.jpg",
-      "matchedTerm": "Funchal Madeira",
-      "altSubject": "Praça do Município in Funchal. Madeira, Portugal"
-    },
-    {
       "slug": "mar-adentro",
       "collection": "projects",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Faro_Harbour_-_The_Algarve%2C_Portugal_%281469527209%29.jpg/1280px-Faro_Harbour_-_The_Algarve%2C_Portugal_%281469527209%29.jpg",
@@ -908,43 +814,6 @@
       "commonsTitle": "File:Faro Harbour - The Algarve, Portugal (1469527209).jpg",
       "matchedTerm": "Faro Algarve marina",
       "altSubject": "Faro Harbour - The Algarve, Portugal"
-    },
-    {
-      "slug": "marvila-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marvila_-_Lisboa_-_Portugal_%2851727992580%29.jpg/1280px-Marvila_-_Lisboa_-_Portugal_%2851727992580%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Marvila_-_Lisboa_-_Portugal_%2851727992580%29.jpg",
-      "width": 3823,
-      "height": 2532,
-      "alt": "Marvila - Lisboa - Portugal — Marvila, Lisbon",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Marvila_-_Lisboa_-_Portugal_(51727992580).jpg",
-      "commonsTitle": "File:Marvila - Lisboa - Portugal (51727992580).jpg",
-      "matchedTerm": "Marvila Lisboa edificios",
-      "altSubject": "Marvila - Lisboa - Portugal"
-    },
-    {
-      "slug": "matosinhos-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Praia_das_Salinas_-_Portugal_%2848078818357%29.jpg/1280px-Praia_das_Salinas_-_Portugal_%2848078818357%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Praia_das_Salinas_-_Portugal_%2848078818357%29.jpg",
-      "width": 3804,
-      "height": 2434,
-      "alt": "Praia das Salinas - Portugal — Matosinhos",
-      "altSubject": "Praia das Salinas - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_das_Salinas_-_Portugal_(48078818357).jpg",
-      "commonsTitle": "File:Praia das Salinas - Portugal (48078818357).jpg",
-      "matchedTerm": "cat:Beaches of Matosinhos",
-      "aesthetics": {
-        "colourfulness": 93,
-        "saturation": 0.448,
-        "brightness": 0.739,
-        "greyMass": 0.051,
-        "hash": "e0c0e0c0f8f08004"
-      }
     },
     {
       "slug": "modelo-3-anexo-g-property-sale",
@@ -1105,27 +974,6 @@
       }
     },
     {
-      "slug": "oeiras-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Praia_de_Santo_Amaro_de_Oeiras_-_Portugal_%285910051000%29.jpg/1280px-Praia_de_Santo_Amaro_de_Oeiras_-_Portugal_%285910051000%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Praia_de_Santo_Amaro_de_Oeiras_-_Portugal_%285910051000%29.jpg",
-      "width": 5184,
-      "height": 3888,
-      "alt": "Praia de Santo Amaro de Oeiras - Portugal — Oeiras",
-      "altSubject": "Praia de Santo Amaro de Oeiras - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_de_Santo_Amaro_de_Oeiras_-_Portugal_(5910051000).jpg",
-      "commonsTitle": "File:Praia de Santo Amaro de Oeiras - Portugal (5910051000).jpg",
-      "matchedTerm": "Praia de Santo Amaro de Oeiras",
-      "aesthetics": {
-        "colourfulness": 61.4,
-        "saturation": 0.299,
-        "brightness": 0.692,
-        "greyMass": 0.235
-      }
-    },
-    {
       "slug": "off-plan-property-portugal-guide",
       "collection": "guides",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Castelo_de_S%C3%A3o_Jorge_-_Lisboa_-_Portugal_%2831891063787%29.jpg/1280px-Castelo_de_S%C3%A3o_Jorge_-_Lisboa_-_Portugal_%2831891063787%29.jpg",
@@ -1139,36 +987,6 @@
       "commonsTitle": "File:Castelo de São Jorge - Lisboa - Portugal (31891063787).jpg",
       "matchedTerm": "Lisboa novo edificio residencial",
       "altSubject": "Castelo de São Jorge - Lisboa - Portugal"
-    },
-    {
-      "slug": "parque-das-nacoes-property",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Distant_view_of_Pavilh%C3%A3o_de_Portugal_with_park_benches_in_the_foreground%2C_Parque_das_Na%C3%A7%C3%B5es%2C_Lisbon%2C_Portugal_julesvernex2.jpg/1280px-Distant_view_of_Pavilh%C3%A3o_de_Portugal_with_park_benches_in_the_foreground%2C_Parque_das_Na%C3%A7%C3%B5es%2C_Lisbon%2C_Portugal_julesvernex2.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Distant_view_of_Pavilh%C3%A3o_de_Portugal_with_park_benches_in_the_foreground%2C_Parque_das_Na%C3%A7%C3%B5es%2C_Lisbon%2C_Portugal_julesvernex2.jpg",
-      "width": 9393,
-      "height": 5936,
-      "alt": "Distant view of Pavilhão de Portugal with park benches in the foreground, Parque das Nações, Lisbon, Portugal — Parque das Nações, Lisbon",
-      "credit": "Jules Verne Times Two / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Distant_view_of_Pavilh%C3%A3o_de_Portugal_with_park_benches_in_the_foreground,_Parque_das_Na%C3%A7%C3%B5es,_Lisbon,_Portugal_julesvernex2.jpg",
-      "commonsTitle": "File:Distant view of Pavilhão de Portugal with park benches in the foreground, Parque das Nações, Lisbon, Portugal julesvernex2.jpg",
-      "matchedTerm": "Parque das Nacoes Lisbon",
-      "altSubject": "Distant view of Pavilhão de Portugal with park benches in the foreground, Parque das Nações, Lisbon, Portugal"
-    },
-    {
-      "slug": "portimao-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Igreja_Matriz_de_Portimao_2_-_Portimao%2C_Algarve_-_Portugal.jpg/1280px-Igreja_Matriz_de_Portimao_2_-_Portimao%2C_Algarve_-_Portugal.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Igreja_Matriz_de_Portimao_2_-_Portimao%2C_Algarve_-_Portugal.jpg",
-      "width": 4000,
-      "height": 3000,
-      "alt": "Igreja Matriz de Portimao 2 - Portimao, Algarve - Portugal — Portimão, Algarve",
-      "credit": "Bextrel / Wikimedia Commons",
-      "licence": "CC BY 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Igreja_Matriz_de_Portimao_2_-_Portimao,_Algarve_-_Portugal.jpg",
-      "commonsTitle": "File:Igreja Matriz de Portimao 2 - Portimao, Algarve - Portugal.jpg",
-      "matchedTerm": "Portimao Algarve",
-      "altSubject": "Igreja Matriz de Portimao 2 - Portimao, Algarve - Portugal"
     },
     {
       "slug": "porto-alojamento-local-rules",
@@ -2073,27 +1891,6 @@
         "saturation": 0.303,
         "brightness": 0.719,
         "greyMass": 0.076
-      }
-    },
-    {
-      "slug": "vila-nova-de-gaia-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Barcos_Rabelos_sur_le_Douro.JPG/1280px-Barcos_Rabelos_sur_le_Douro.JPG",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Barcos_Rabelos_sur_le_Douro.JPG",
-      "width": 4928,
-      "height": 3264,
-      "alt": "Barcos Rabelos sur le Douro — Vila Nova de Gaia",
-      "altSubject": "Barcos Rabelos sur le Douro",
-      "credit": "Waxilexlilarose / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Barcos_Rabelos_sur_le_Douro.JPG",
-      "commonsTitle": "File:Barcos Rabelos sur le Douro.JPG",
-      "matchedTerm": "Gaia cais barcos rabelos Douro",
-      "aesthetics": {
-        "colourfulness": 52.9,
-        "saturation": 0.31,
-        "brightness": 0.585,
-        "greyMass": 0.232
       }
     },
     {

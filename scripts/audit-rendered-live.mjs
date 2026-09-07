@@ -259,6 +259,7 @@ const STANDALONE_PAGES = [
   { urlPath: '/areas/', requireLeadForm: false },
   { urlPath: '/compare/', requireLeadForm: false },
   { urlPath: '/move-to-portugal/', requireLeadForm: false },
+  { urlPath: '/property-for-sale/', requireLeadForm: true },
   { urlPath: '/projects/', requireLeadForm: false },
   { urlPath: '/developers/', requireLeadForm: false },
   { urlPath: '/portugal-property-consultation/', requireLeadForm: true },
