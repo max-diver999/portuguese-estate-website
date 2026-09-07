@@ -10,7 +10,7 @@ import base64, hashlib, json, os, sys, time, urllib.error, urllib.request, urlli
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / ".content-os" / "batches" / "wave1-heroes.json"
+MANIFEST = ROOT / ".content-os" / "batches" / (sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "wave1-heroes.json")
 PREFIX = "more-group/portugal"
 LEGACY_CLOUD = "dlrrtf6bq"
 

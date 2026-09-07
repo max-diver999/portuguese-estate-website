@@ -16,11 +16,10 @@ const used = new Set(
 );
 
 const WANT = [
-  { slug: 'golden-visa',           terms: ['Avenida da Liberdade Lisboa', 'Baixa Pombalina Lisboa', 'Lisbon panorama'] },
-  { slug: 'd7-visa',               terms: ['Setúbal Portugal', 'Aveiro Portugal', 'Viana do Castelo'] },
-  { slug: 'd8-digital-nomad-visa', terms: ['Funchal Madeira', 'Ponta do Sol Madeira', 'Madeira coast'] },
-  { slug: 'from-usa',              terms: ['Cascais Portugal', 'Estoril Portugal', 'Sintra Portugal'] },
-  { slug: 'cost-of-living',        terms: ['Porto Ribeira Douro', 'Porto Portugal panorama', 'Braga Portugal'] },
+  { slug: 'citizenship-by-investment', terms: ['Belém Lisboa Portugal', 'Torre de Belém', 'Jerónimos Lisboa'] },
+  { slug: 'retire-in-portugal',        terms: ['Tavira Portugal', 'Óbidos Portugal', 'Lagos Algarve Portugal'] },
+  { slug: 'best-places-to-live',       terms: ['Coimbra Portugal', 'Aveiro Portugal', 'Braga Portugal'] },
+  { slug: 'international-schools',     terms: ['Estoril Portugal', 'Oeiras Portugal', 'Carcavelos Portugal'] },
 ];
 
 const JUNK = /ecoponto|placa|plaque|sign(age)?\b|logo|coat of arms|bras[ãa]o|\bmap\b|mapa|diagram|graffiti|detalhe|close-?up|manhole|construction site|scaffold|roadworks|parking/i;
