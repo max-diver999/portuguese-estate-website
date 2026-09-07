@@ -26,20 +26,6 @@
       "bytes": 1071240,
       "uploaded_at": "2026-08-25T23:36:14Z"
     },
-    "albufeira-property-investment": {
-      "public_id": "more-group/portugal/areas/albufeira-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Beach_in_Town_Albufeira%2C_Portugal.jpg/1280px-Beach_in_Town_Albufeira%2C_Portugal.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Beach_in_Town_Albufeira%2C_Portugal.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Beach_in_Town_Albufeira,_Portugal.jpg",
-      "source_sha256": "27b1d2d393ff289d7c0b6d7ce0ab4f44ad44f7cef2b6264d553b4a1f4daab186",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787700974/more-group/portugal/areas/albufeira-property-investment/hero.jpg",
-      "version": 1787700974,
-      "format": "jpg",
-      "width": 1920,
-      "height": 1279,
-      "bytes": 587602,
-      "uploaded_at": "2026-08-25T23:36:14Z"
-    },
     "carvalhido": {
       "public_id": "more-group/portugal/projects/carvalhido/hero",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porto_-_Pal%C3%A1cio_da_Bolsa_%2854938113921%29.jpg/1280px-Porto_-_Pal%C3%A1cio_da_Bolsa_%2854938113921%29.jpg",
@@ -1131,20 +1117,6 @@
       "height": 842,
       "bytes": 393155,
       "uploaded_at": "2026-08-25T23:48:46Z"
-    },
-    "vilamoura-property-investment": {
-      "public_id": "more-group/portugal/areas/vilamoura-property-investment/hero",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flickr_-_ronsaunders47_-_ROAD_DOWN_TO_THE_MARINA._VILAMOURA_ALGARVE_PORTUGAL._%281%29.jpg/1280px-Flickr_-_ronsaunders47_-_ROAD_DOWN_TO_THE_MARINA._VILAMOURA_ALGARVE_PORTUGAL._%281%29.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flickr_-_ronsaunders47_-_ROAD_DOWN_TO_THE_MARINA._VILAMOURA_ALGARVE_PORTUGAL._%281%29.jpg",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Flickr_-_ronsaunders47_-_ROAD_DOWN_TO_THE_MARINA._VILAMOURA_ALGARVE_PORTUGAL._(1).jpg",
-      "source_sha256": "2d09ceff84a5efa187a06a94edf5367d3bc174e3d789afba9dc5635f5860e4f6",
-      "secure_url": "https://res.cloudinary.com/dlrrtf6bq/image/upload/v1787701734/more-group/portugal/areas/vilamoura-property-investment/hero.jpg",
-      "version": 1787701734,
-      "format": "jpg",
-      "width": 1280,
-      "height": 960,
-      "bytes": 409624,
-      "uploaded_at": "2026-08-25T23:48:54Z"
     },
     "buy-property-portugal-through-company": {
       "public_id": "more-group/portugal/guides/buy-property-portugal-through-company/hero",

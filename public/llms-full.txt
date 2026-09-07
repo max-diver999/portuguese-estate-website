@@ -82,11 +82,9 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/guides/stamp-duty-portugal-property/ - Portugal Stamp Duty on Property — 2026 Rates Guide: Portugal stamp duty (Imposto de Selo): 0.8% on purchase, 0.6% on mortgage. Payment at escritura, worked examples, and links to IMT and closing costs.
 - https://portuguese-estate.com/guides/uk-portugal-double-taxation-treaty/ - UK-Portugal Double Taxation Treaty: Property in 2026: How the 1968 UK-Portugal treaty splits tax on rent, gains and pensions: Portugal taxes the property, the UK credits it. Worked cases for owners.
 
-## Area guides (4)
-- https://portuguese-estate.com/areas/albufeira-property-investment/ - Albufeira Property Investment — Licensing and Hours 2026: Albufeira property: the opening-hours licence under your bedroom, the conduct-regulation perimeter, and what a câmara can shorten or revoke after you buy.
+## Area guides (2)
 - https://portuguese-estate.com/areas/ericeira-property-investment/ - Ericeira Property Investment — World Surf Reserve 2026: Ericeira property investment: €3,200-4,800/m², 4-5% yields, World Surf Reserve, D8 nomad spillover from Lisbon, Mafra coast, less saturated than Cascais.
 - https://portuguese-estate.com/areas/faro-property-investment/ - Faro Property — The Airport Easement Over Cheap Corridors: Faro's cheapest entry corridors sit under a mapped aeronautical easement. What it forbids, what it does not, and why it changes building rather than letting.
-- https://portuguese-estate.com/areas/vilamoura-property-investment/ - Vilamoura Property — Your Competition Is Already Zoned: Vilamoura was built to an approved urbanisation plan, so the supply that will compete with your resale is already written down. How to read it before buying.
 
 ## Comparisons (14)
 - https://portuguese-estate.com/compare/algarve-vs-lisbon-property-investment/ - Algarve vs Lisbon Property Investment — 2026 Compare: Algarve vs Lisbon property investment in 2026: INE 42.4% non-res value vs 12.5% Lisbon volume, yields 4–6% vs 4.3–4.6%, AL containment, and €/m² bands.
@@ -118,7 +116,8 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/developers/vanguard-properties-portugal/ - Portugal Developer Review: Vanguard Properties 2026: Vanguard Properties Portugal 2026 review: Lisbon and Comporta pipeline, DL 67/2003 bank guarantees, delay risk, and a verify-before-deposit investor checklist.
 - https://portuguese-estate.com/developers/vic-properties-portugal/ - VIC Properties Portugal: 2026 Developer Review Guide: VIC Properties Portugal 2026 review: Prata Riverside, Matinha, Pinheirinho, 2023 ownership change, CPCV clauses, delay risk and investor checklist.
 
-## Property for sale (16)
+## Property for sale (18)
+- https://portuguese-estate.com/property-for-sale/albufeira/ - Property for Sale in Albufeira: Areas and Prices 2026: Where to buy in Albufeira: the old town, the Strip, Oura, Olhos de Agua, the marina and inland Ferreiras, with seasonality, letting rules and holding costs.
 - https://portuguese-estate.com/property-for-sale/alentejo-comporta/ - Property for Sale in the Alentejo and Comporta 2026: Buying on the Alentejo coast and inland: Comporta, Melides, Milfontes and the plains, what each costs and what protection rules mean for building.
 - https://portuguese-estate.com/property-for-sale/algarve/ - Property for Sale in the Algarve: Prices by Area 2026: Where to buy in the Algarve and what each stretch costs: the golden triangle, the central strip, the west and the east, with buying and holding costs.
 - https://portuguese-estate.com/property-for-sale/apartments/ - Apartments for Sale in Portugal: Cities and Costs 2026: Buying an apartment in Portugal: Lisbon, Porto and the Algarve compared, what the condominium actually charges, and the questions to ask before you offer.
@@ -134,6 +133,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/property-for-sale/rural-and-land/ - Rural Property and Land for Sale in Portugal 2026: Buying a quinta, a farmhouse or land in Portugal: rustic versus urban classification, water, access, boundaries, building rights and what it costs.
 - https://portuguese-estate.com/property-for-sale/silver-coast/ - Property for Sale on the Silver Coast: Towns and Prices: Where to buy on Portugal's Silver Coast, from Ericeira and Nazare to Peniche, Obidos and Caldas da Rainha, with buying costs and what a house costs to hold.
 - https://portuguese-estate.com/property-for-sale/tavira/ - Property for Sale in Tavira: Areas and Prices 2026: Where to buy in Tavira and the eastern Algarve, from the old town to Cabanas and the island, with year-round living, buying costs and holding costs.
+- https://portuguese-estate.com/property-for-sale/vilamoura/ - Property for Sale in Vilamoura: Areas and Prices 2026: Where to buy in Vilamoura: the marina, the golf courses, Praia da Falesia and neighbouring Quarteira, with condominium costs, letting rules and resale depth.
 - https://portuguese-estate.com/property-for-sale/villas/ - Villas for Sale in Portugal: Prices and Running Costs: Buying a villa in Portugal: where they are, what they cost by region, and the pool, garden and maintenance bills that never appear in the listing.
 
 ## Moving to Portugal (10)

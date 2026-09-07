@@ -11,8 +11,8 @@
     "minBrightness": 0.42,
     "maxBrightness": 0.95
   },
-  "total": 90,
-  "uniqueFiles": 90,
+  "total": 88,
+  "uniqueFiles": 88,
   "failures": [],
   "images": [
     {
@@ -34,27 +34,6 @@
         "saturation": 0.42,
         "brightness": 0.63,
         "greyMass": 0.214
-      }
-    },
-    {
-      "slug": "albufeira-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Beach_in_Town_Albufeira%2C_Portugal.jpg/1280px-Beach_in_Town_Albufeira%2C_Portugal.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Beach_in_Town_Albufeira%2C_Portugal.jpg",
-      "width": 5860,
-      "height": 3907,
-      "alt": "Beach in Town Albufeira, Portugal — Albufeira, Algarve",
-      "altSubject": "Beach in Town Albufeira, Portugal",
-      "credit": "Баранов Георгий / Wikimedia Commons",
-      "licence": "CC BY-SA 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Beach_in_Town_Albufeira,_Portugal.jpg",
-      "commonsTitle": "File:Beach in Town Albufeira, Portugal.jpg",
-      "matchedTerm": "cat:Beaches of Albufeira",
-      "aesthetics": {
-        "colourfulness": 57.2,
-        "saturation": 0.326,
-        "brightness": 0.562,
-        "greyMass": 0.264
       }
     },
     {
@@ -1709,21 +1688,6 @@
         "brightness": 0.719,
         "greyMass": 0.076
       }
-    },
-    {
-      "slug": "vilamoura-property-investment",
-      "collection": "areas",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flickr_-_ronsaunders47_-_ROAD_DOWN_TO_THE_MARINA._VILAMOURA_ALGARVE_PORTUGAL._%281%29.jpg/1280px-Flickr_-_ronsaunders47_-_ROAD_DOWN_TO_THE_MARINA._VILAMOURA_ALGARVE_PORTUGAL._%281%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flickr_-_ronsaunders47_-_ROAD_DOWN_TO_THE_MARINA._VILAMOURA_ALGARVE_PORTUGAL._%281%29.jpg",
-      "width": 3072,
-      "height": 2304,
-      "alt": "Flickr - ronsaunders47 - ROAD DOWN TO THE MARINA. VILAMOURA ALGARVE PORTUGAL. — Vilamoura",
-      "credit": "Ronald Saunders from Warrington, UK / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Flickr_-_ronsaunders47_-_ROAD_DOWN_TO_THE_MARINA._VILAMOURA_ALGARVE_PORTUGAL._(1).jpg",
-      "commonsTitle": "File:Flickr - ronsaunders47 - ROAD DOWN TO THE MARINA. VILAMOURA ALGARVE PORTUGAL. (1).jpg",
-      "matchedTerm": "Vilamoura Algarve",
-      "altSubject": "Flickr - ronsaunders47 - ROAD DOWN TO THE MARINA. VILAMOURA ALGARVE PORTUGAL."
     }
   ]
 }
