@@ -8,20 +8,20 @@ const articles = (await getCollection('news'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // The news collection is currently empty. An indexable hub with no articles is
-// thin content, so keep it out of the index until the first piece ships —
+// thin content, so keep it out of the index until the first piece ships , 
 // same pattern as the projects hub.
 const hasArticles = articles.length > 0;
 ---
 <BaseLayout
   noindex={!hasArticles}
   title="Portugal Property Market News"
-  description="Portugal property market updates for foreign buyers — INE transaction data, non-resident capital flows, AICCOPN licensing and regional yield shifts."
+  description="Portugal property market updates for foreign buyers: INE transaction data, non-resident capital flows, AICCOPN licensing and regional yield shifts."
 >
   <section class="site-container py-14 md:py-20">
     <header class="max-w-2xl mb-12">
       <h1 class="text-3xl">Market news</h1>
       <p class="text-lg text-[var(--color-muted)] mt-3">
-        Data-driven updates on Portugal property markets — verify figures with counsel before investment decisions.
+        Data-driven updates on Portugal property markets, verify figures with counsel before investment decisions.
       </p>
     </header>
     <div class="grid gap-5 max-w-3xl">
@@ -37,7 +37,7 @@ const hasArticles = articles.length > 0;
       {!hasArticles && (
         <p class="text-[var(--color-muted)]">
           Market notes are published as INE and AICCOPN releases land. In the meantime, the
-          research is in the <a href="/guides/" class="text-[var(--color-accent)]">guides</a> —
+          research is in the <a href="/guides/" class="text-[var(--color-accent)]">guides</a> , 
           start with <a href="/guides/portugal-property-market-record-2025-ine-data/" class="text-[var(--color-accent)]">the 2025 INE market record</a>
           and <a href="/guides/portugal-property-market-forecast-2026-2027/" class="text-[var(--color-accent)]">the 2026–2027 forecast</a>.
         </p>

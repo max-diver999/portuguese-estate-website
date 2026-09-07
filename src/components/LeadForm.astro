@@ -44,7 +44,7 @@ const waHref = buildWaHref(decodeURIComponent(waText));
       <div>
         <label class="block text-xs font-medium mb-1" for="lf-market">Target market</label>
         <select id="lf-market" name="market">
-          <option value="">— Select —</option>
+          <option value="">Select</option>
           <option value="lisbon">Lisbon</option>
           <option value="algarve">Algarve</option>
           <option value="porto">Porto / Gaia</option>
@@ -57,7 +57,7 @@ const waHref = buildWaHref(decodeURIComponent(waText));
       <div>
         <label class="block text-xs font-medium mb-1" for="lf-budget">Budget (EUR)</label>
         <select id="lf-budget" name="budget">
-          <option value="">— Select —</option>
+          <option value="">Select</option>
           <option value="under-200k">Under €200k</option>
           <option value="200-300k">€200k – €300k</option>
           <option value="300-500k">€300k – €500k</option>
@@ -69,7 +69,7 @@ const waHref = buildWaHref(decodeURIComponent(waText));
     <div>
       <label class="block text-xs font-medium mb-1" for="lf-goal">Your goal</label>
       <select id="lf-goal" name="goal">
-        <option value="">— Select —</option>
+        <option value="">Select</option>
         <option value="investment">Rental yield / investment</option>
         <option value="holiday-home">Holiday home / personal use</option>
         <option value="relocation">Relocation / residency planning</option>
@@ -100,7 +100,7 @@ const waHref = buildWaHref(decodeURIComponent(waText));
       </a>
       {hasWhatsApp && SITE.whatsappDisplay && ` (${SITE.whatsappDisplay})`}
     </p>
-    <p id="lf-success" class="hidden text-green-700 text-sm font-medium text-center">Thank you — redirecting…</p>
+    <p id="lf-success" class="hidden text-green-700 text-sm font-medium text-center">Thank you, redirecting…</p>
     <p id="lf-error" class="hidden text-red-600 text-sm text-center">
       Something went wrong. Email {SITE.email} or{' '}
       <a

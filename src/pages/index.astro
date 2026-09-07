@@ -48,7 +48,7 @@ const hero = responsiveImage(HOMEPAGE_HERO_IMAGE, 'homepage');
 const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
 ---
 <BaseLayout
-  title="Portugal Property Investment 2026 — Guides & Shortlist"
+  title="Portugal Property Investment 2026: Guides & Shortlist"
   description="Independent Portugal property research for foreign buyers: IMT 7.5%, step-by-step purchase, Algarve yields, Golden Visa funds. Free shortlist within 1 business day."
   preloadImage={heroPreload.src}
   preloadImageSrcset={heroPreload.srcset}
@@ -126,7 +126,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
       <div class="flex items-end justify-between gap-4 mb-8">
         <div>
           <h2 class="text-2xl mb-2">Featured project reviews</h2>
-          <p class="text-[var(--color-muted)]">Click through for pricing, photos, yield math, and due diligence — not developer brochures.</p>
+          <p class="text-[var(--color-muted)]">Click through for pricing, photos, yield math, and due diligence, not developer brochures.</p>
         </div>
         <a href="/projects/" class="link-arrow shrink-0 hidden sm:inline">All {publishedProjects.length} projects →</a>
       </div>
@@ -146,7 +146,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
             priceFromUsd={project.data.priceFromUsd}
           />
         )) : (
-          <p class="text-[var(--color-muted)] col-span-full py-8">Project reviews publishing soon — parser batch 1 ready on Cloudinary.</p>
+          <p class="text-[var(--color-muted)] col-span-full py-8">Project reviews publishing soon, parser batch 1 ready on Cloudinary.</p>
         )}
       </div>
       <div class="mt-8 text-center sm:hidden">
@@ -176,7 +176,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
             meta={`${guide.data.readingTime ?? 8} min read`}
           />
         )) : (
-          <p class="text-[var(--color-muted)] col-span-full py-4">Buyer guides batch publishing next — see content map in research dossier.</p>
+          <p class="text-[var(--color-muted)] col-span-full py-4">Buyer guides batch publishing next, see content map in research dossier.</p>
         )}
       </div>
     </div>
@@ -256,7 +256,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
           </div>
           <div>
             <h3 class="font-semibold mb-1">Off-plan buyer protection</h3>
-            <p class="text-sm text-[var(--color-muted)]">Bank guarantee checks, stage payment timing, alvará de construção verification — not developer render galleries.</p>
+            <p class="text-sm text-[var(--color-muted)]">Bank guarantee checks, stage payment timing, alvará de construção verification, not developer render galleries.</p>
           </div>
         </div>
         <div class="flex gap-4">
@@ -265,7 +265,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
           </div>
           <div>
             <h3 class="font-semibold mb-1">Net yield calculators</h3>
-            <p class="text-sm text-[var(--color-muted)]">28% non-resident withholding, IMI, management, RNAL insurance — not gross brochure promises.</p>
+            <p class="text-sm text-[var(--color-muted)]">28% non-resident withholding, IMI, management, RNAL insurance, not gross brochure promises.</p>
           </div>
         </div>
         <div class="flex gap-4">
@@ -274,7 +274,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
           </div>
           <div>
             <h3 class="font-semibold mb-1">AL licence parish maps</h3>
-            <p class="text-sm text-[var(--color-muted)]">RMAL containment zones, Porto 15% caps, Lisbon 10% subsection blocks — verify before CPCV, not after deposit.</p>
+            <p class="text-sm text-[var(--color-muted)]">RMAL containment zones, Porto 15% caps, Lisbon 10% subsection blocks, verify before CPCV, not after deposit.</p>
           </div>
         </div>
         <div class="flex gap-4">
@@ -283,7 +283,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
           </div>
           <div>
             <h3 class="font-semibold mb-1">Tax treaty guidance</h3>
-            <p class="text-sm text-[var(--color-muted)]">US-Portugal, UK-Portugal, Germany-Portugal double-tax relief — CPA and solicitor referrals who file cross-border.</p>
+            <p class="text-sm text-[var(--color-muted)]">US-Portugal, UK-Portugal, Germany-Portugal double-tax relief: CPA and solicitor referrals who file cross-border.</p>
           </div>
         </div>
       </div>
@@ -292,8 +292,8 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
 
   <section class="section bg-[var(--color-surface)] border-t border-[var(--color-border-soft)]">
     <div class="site-container max-w-3xl text-center mb-8">
-      <h2 class="text-2xl mb-3">Talk to a human — not a chatbot</h2>
-      <p class="text-[var(--color-muted)]">WhatsApp or the form below. Independent advisory — we refer to licensed Portuguese lawyers and agents, not developer sales desks.</p>
+      <h2 class="text-2xl mb-3">Talk to a human, not a chatbot</h2>
+      <p class="text-[var(--color-muted)]">WhatsApp or the form below. Independent advisory, we refer to licensed Portuguese lawyers and agents, not developer sales desks.</p>
     </div>
     <div class="site-container max-w-xl">
       <LeadForm context="Homepage shortlist" />
@@ -327,7 +327,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
   /*
    * The photograph fills its column edge to edge. `height:100%` on an <img>
    * inside a stretched flex item does not resolve, which is what left the
-   * picture at its intrinsic size with a band of ground above it — so the
+   * picture at its intrinsic size with a band of ground above it, so the
    * image is positioned against the frame instead.
    */
   .home-hero__frame {

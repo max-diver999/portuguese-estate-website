@@ -1,5 +1,5 @@
 ---
-/** GA4 — set PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX in Vercel / .env. Loads 3s after full page load (LCP-first). */
+/** GA4, set PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX in Vercel / .env. Loads 3s after full page load (LCP-first). */
 const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID as string | undefined;
 ---
 {measurementId && (

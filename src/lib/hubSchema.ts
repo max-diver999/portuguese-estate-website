@@ -4,7 +4,7 @@ import { SITE } from '../data/site';
  * Breadcrumb + CollectionPage schema for hub (index) pages.
  *
  * ArticleLayout emits BreadcrumbList for the 126 collection pages, but the six
- * hubs render through BaseLayout and shipped with Organization schema only —
+ * hubs render through BaseLayout and shipped with Organization schema only , 
  * no breadcrumb trail and no page-level type.
  */
 export function hubSchemas({

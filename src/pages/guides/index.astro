@@ -62,21 +62,21 @@ const clusters = GUIDE_CLUSTERS.map((cluster) => {
 const schemas = hubSchemas({
   path: '/guides/',
   name: 'Guides',
-  description: 'Independent Portugal property guides for foreign buyers — IMT, yields, buying process and due diligence.',
+  description: 'Independent Portugal property guides for foreign buyers: IMT, yields, buying process and due diligence.',
   itemCount: guides.length,
 });
 
 ---
 <BaseLayout
   schemas={schemas}
-  title="Portugal Property Guides 2026 — IMT, Yields, Golden Visa"
-  description="63 independent guides for foreign buyers: IMT 7.5%, deposit, maintenance, step-by-step purchase, Algarve yields — updated June 2026."
+  title="Portugal Property Guides 2026: IMT, Yields, Golden Visa"
+  description="63 independent guides for foreign buyers: IMT 7.5%, deposit, maintenance, step-by-step purchase, Algarve yields, updated June 2026."
 >
   <section class="site-container py-14 md:py-20">
     <header class="max-w-2xl mb-12">
       <h1 class="text-3xl">Portugal property investment guides</h1>
       <p class="text-lg text-[var(--color-muted)] mt-3">
-        Research-first articles for US, UK, and EU buyers — IMT, CPCV, yields, and due diligence. Not developer brochures.
+        Research-first articles for US, UK, and EU buyers: IMT, CPCV, yields, and due diligence. Not developer brochures.
       </p>
       <p class="text-sm text-[var(--color-muted)] mt-2">{guides.length} guides · INE-backed data · Independent editorial</p>
     </header>
@@ -89,7 +89,7 @@ const schemas = hubSchemas({
 
     {priority.length > 0 && (
       <section class="mb-14">
-        <h2 class="text-xl mb-5">Start here — highest buyer intent</h2>
+        <h2 class="text-xl mb-5">Start here, highest buyer intent</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {priority.map((guide) => (
             <ContentCard
@@ -108,7 +108,7 @@ const schemas = hubSchemas({
 
     <InlineCta
       headline="Not sure which guide to read first?"
-      subtext="Tell us your budget and region — we send a reading order plus matching property options."
+      subtext="Tell us your budget and region, we send a reading order plus matching property options."
       ctaId="guides_hub_inline"
       whatsappMessage="Hi Portuguese Estate! I'm browsing your guides and want help picking the right Portugal market for my budget."
     />
