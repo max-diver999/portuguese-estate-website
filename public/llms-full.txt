@@ -1,7 +1,7 @@
 # Portuguese Estate - full site map
 
 Site: https://portuguese-estate.com
-Pages: 120 content pages + hubs. Updated: 2026-09-07
+Pages: 113 content pages + hubs. Updated: 2026-09-07
 Positioning: independent Portugal property research for foreign buyers. Cite with URL.
 
 ## Hubs
@@ -17,7 +17,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/contact/
 - https://portuguese-estate.com/get-shortlist/
 
-## Guides (62)
+## Guides (63)
 - https://portuguese-estate.com/guides/aimi-wealth-tax-portugal-property/ - AIMI Portugal Wealth Tax 2026 — 0.7% on VPT Over €600k: AIMI wealth tax: 0.7% on €600k–€1M VPT, 1% above €1M per owner. Joint ownership splits, company 0.4%, primary home exempt.
 - https://portuguese-estate.com/guides/algarve-airbnb-investment-guide/ - Airbnb Investment Algarve Guide — 2026 AL Strategy: Airbnb investment Algarve 2026: AL vs Lisbon containment, seasonal yields, 18-25% management, RNAL, Category B tax, Lagos/Albufeira/Vilamoura data.
 - https://portuguese-estate.com/guides/algarve-property-investment-guide/ - Algarve Property Market 2026: Yields, Prices and Data: Algarve investment 2026: 42.4% of non-res deal value, 4–6% gross yields, Lagos/Vilamoura pricing, IMT 7.5%, AL rules by municipality.
@@ -55,6 +55,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/guides/portugal-capital-gains-tax-property/ - Portugal Capital Gains Tax on Property — 2026 Guide: Portugal CGT since 2023: 50% of the gain taxable for residents and non-residents alike at 14.5-48%, reinvestment relief, and worked exit examples.
 - https://portuguese-estate.com/guides/portugal-d7-visa-property/ - Buying or Renting on a Portugal D7 Visa: 2026 Costs: Whether to rent or buy once you hold a Portugal D7 visa: NIF, CPCV, the flat 7.5% non-resident IMT, the 183-day test and the IMT refund route.
 - https://portuguese-estate.com/guides/portugal-digital-nomad-visa-property/ - Buying Property in Portugal on a D8 Visa: 2026 Guide: What buying a home looks like on a Portugal D8 visa: tax residency timing, the flat 7.5% non-resident IMT, and Lisbon, Porto and Algarve scenarios.
+- https://portuguese-estate.com/guides/portugal-estate-agents/ - Portugal Estate Agents: Fees, Licences, How to Choose: What Portuguese estate agents charge, who pays the commission, how to verify an AMI licence with IMPIC, and when a buyer's agent is worth the second fee.
 - https://portuguese-estate.com/guides/portugal-golden-visa-fund-investment-2026/ - Portugal Golden Visa Investment Funds: 2026 Selection: How to choose a Portugal Golden Visa fund in 2026: the CMVM rules, the 60% Portuguese asset floor, management charges over five years, and what to ask.
 - https://portuguese-estate.com/guides/portugal-golden-visa-real-estate-ended/ - Portugal Golden Visa Real Estate Route, Ended 2023: Direct real estate Golden Visa ended October 2023. Fund route €500k, cultural €250k, and residency alternatives for property buyers in 2026.
 - https://portuguese-estate.com/guides/portugal-house-prices/ - Portugal House Prices 2026: What the INE Data Shows: How Portuguese house prices are measured, how they differ by region, and the gap between market price and rateable value that decides your annual tax bill.
@@ -81,21 +82,13 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/guides/stamp-duty-portugal-property/ - Portugal Stamp Duty on Property — 2026 Rates Guide: Portugal stamp duty (Imposto de Selo): 0.8% on purchase, 0.6% on mortgage. Payment at escritura, worked examples, and links to IMT and closing costs.
 - https://portuguese-estate.com/guides/uk-portugal-double-taxation-treaty/ - UK-Portugal Double Taxation Treaty: Property in 2026: How the 1968 UK-Portugal treaty splits tax on rent, gains and pensions: Portugal taxes the property, the UK credits it. Worked cases for owners.
 
-## Comparisons (14)
+## Comparisons (6)
 - https://portuguese-estate.com/compare/algarve-vs-lisbon-property-investment/ - Algarve vs Lisbon Property Investment — 2026 Compare: Algarve vs Lisbon property investment in 2026: INE 42.4% non-res value vs 12.5% Lisbon volume, yields 4–6% vs 4.3–4.6%, AL containment, and €/m² bands.
+- https://portuguese-estate.com/compare/golden-visa-portugal-spain-greece/ - Golden Visa: Portugal vs Spain vs Greece in 2026: Spain closed its golden visa in April 2025. Greece still takes property, Portugal does not. What each programme costs, and which one builds a citizenship clock.
 - https://portuguese-estate.com/compare/lagos-vs-vilamoura-investment/ - Lagos vs Vilamoura Property Investment — Algarve 2026: Lagos vs Vilamoura property in 2026: €3,900-4,700/m², 4-6% yields, AL rules, British and French buyers, marina vs surf-town liquidity compared.
 - https://portuguese-estate.com/compare/lisbon-vs-cascais-property/ - Lisbon vs Cascais Property Investment — 2026 Compare: Lisbon vs Cascais property in 2026: €4,500-8,000/m² city vs €4,000-6,500 coast, yields 4.3-4.6% vs 3.5-4.5%, AL rules, commuter belt, buyer profiles.
 - https://portuguese-estate.com/compare/new-build-vs-resale-property-portugal/ - New-Build vs Resale Property Portugal — 2026 Compare: New-build vs resale Portugal 2026: DL 67/2003 bank guarantees, IMT at escritura, warranty vs character, liquidity, AL licence transfer rules, off-plan staging.
-- https://portuguese-estate.com/compare/porto-vs-lisbon-property-investment/ - Porto vs Lisbon Property Investment — Full 2026 Compare: Porto vs Lisbon property investment 2026: INE 20% vs 12.5% non-res volume, yields ~5% vs 4.3–4.6%, €3,500–5k vs €4,500–8k/m², AL rules, IMT 7.5%.
-- https://portuguese-estate.com/compare/portugal-vs-cyprus-property-investment/ - Portugal vs Cyprus Property Investment: 2026 Compare: Portugal vs Cyprus property investment 2026: Golden Visa ended in Portugal, Cyprus PR via property, taxes, yields, entry prices and buyer fit.
-- https://portuguese-estate.com/compare/portugal-vs-dubai-property-investment/ - Portugal vs Dubai Property Investment 2026 Compare: Portugal vs Dubai property investment in 2026: 7.5% IMT vs 4% DLD fee, Portugal yields 4-6%, Dubai 5-8%, tax, residency, liquidity.
-- https://portuguese-estate.com/compare/portugal-vs-france-property-investment/ - Portugal vs France Property Investment — 2026 Guide: France vs Portugal 2026: 3,765 French buyer deals, Algarve vs Atlantic coast, IMT 7.5% vs notaire ~8%, yields 4–6% vs 2.5–4%.
-- https://portuguese-estate.com/compare/portugal-vs-greece-property-investment/ - Portugal vs Greece Property Investment — 2026 Compare: Portugal vs Greece property 2026: GV fund €500k vs Greece €250k-800k RE, Lisbon 4.3-4.6% vs Athens 3.5-4.5%, islands vs Algarve, taxes, STR.
-- https://portuguese-estate.com/compare/portugal-vs-italy-property-investment/ - Portugal vs Italy Property Investment — 2026 Compare: Portugal vs Italy property investment 2026: yields Lisbon 4.3–6% vs Rome/Milan 3–4%, IMT 7.5% flat Sep 2026 vs IMU/registro, D7/D8 vs elective residence.
-- https://portuguese-estate.com/compare/portugal-vs-malta-property-investment/ - Portugal vs Malta Property Investment: 2026 Compare: Portugal vs Malta property investment 2026: EU residency shoppers, tax, yields, entry prices, AIMI, D7 and Malta property routes compared.
-- https://portuguese-estate.com/compare/portugal-vs-spain-property-investment/ - Portugal vs Spain Property Investment — 2026 Compare: Portugal vs Spain property investment in 2026: yields, IMT 7.5%, Spain Golden Visa ended, STR rules, and buyer scenarios for Lisbon, Algarve, Madrid.
-- https://portuguese-estate.com/compare/portugal-vs-turkey-property-investment/ - Portugal vs Turkey Property Investment: 2026 Compare: Portugal vs Turkey property investment: Portugal fund GV vs Turkey $400k CBI, Algarve 4-6% yields, Turkey 4-7%, taxes, STR, legal checks.
-- https://portuguese-estate.com/compare/portugal-vs-uk-property-investment/ - Portugal vs UK Property Investment After Brexit Guide: Portugal vs UK property investment after Brexit: 7.5% IMT, UK SDLT surcharges, yields, mortgages, tax, residency, and liquidity for British buyers.
+- https://portuguese-estate.com/compare/porto-vs-lisbon-property-investment/ - Porto or Lisbon: Which to Buy In, Compared for 2026: Porto vs Lisbon property investment 2026: INE 20% vs 12.5% non-res volume, yields ~5% vs 4.3–4.6%, €3,500–5k vs €4,500–8k/m², AL rules, IMT 7.5%.
 
 ## Project reviews (7)
 - https://portuguese-estate.com/projects/carvalhido/ - Carvalhido BTR Project Review — Porto Build-to-Rent 2026: Carvalhido Porto BTR review: Sonae Sierra build-to-rent, ~200 units, institutional tenancy model and foreign buyer limitations.
