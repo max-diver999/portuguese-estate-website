@@ -234,7 +234,7 @@ function analyze(file, index) {
       if (!/(риск|red flag|checklist|чеклист|what to check|insider tip|risks?)/i.test(body)) {
         issues.push('missing-risks');
       }
-      if (!/(сценари|scenario|for investors|для инвестор|who this is for|who .{0,24} suits?|buyer profile|decision framework)/i.test(body)) {
+      if (!/(сценари|scenario|for investors|для инвестор|who this is for|who .{0,24} (suits?|works for)|buyer profile|decision framework)/i.test(body)) {
         issues.push('missing-scenarios');
       }
       const nums = countNumericFacts(body);
