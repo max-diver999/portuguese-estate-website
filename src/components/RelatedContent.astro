@@ -1,0 +1,169 @@
+---
+import { getCollection } from 'astro:content';
+
+/**
+ * Renders the `relatedSlugs` frontmatter field.
+ *
+ * These were curated on 92 of 113 pages, 637 links in total, and until this
+ * component existed not one of them reached the site: the field was declared in
+ * content.config.ts, populated by editors, and read by nothing. The links were
+ * real work that produced no anchor in the HTML, so no crawler and no reader
+ * ever saw them.
+ *
+ * The cap is 14 because that is the longest curated list in this corpus, so
+ * nothing is discarded. A cap of 12 would have dropped exactly one link that
+ * lives nowhere else on its page, which is the failure this component exists to
+ * end. Raise it when lists grow; do not let the overflow disappear.
+ *
+ * Every collection serves /<collection>/<id>/, one route per folder.
+ */
+
+interface Props {
+  relatedSlugs?: string[];
+  currentSlug?: string;
+  max?: number;
+}
+
+const { relatedSlugs = [], currentSlug = '', max = 14 } = Astro.props;
+
+// `news` is deliberately absent: the collection has no entries, and asking for
+// it makes Astro log a warning on every page of the build.
+const COLLECTIONS = ['guides', 'property-for-sale', 'move-to-portugal', 'compare',
+  'projects', 'developers'] as const;
+
+const LABELS: Record<string, string> = {
+  guides: 'Guide',
+  'property-for-sale': 'Area',
+  'move-to-portugal': 'Relocation',
+  compare: 'Comparison',
+  projects: 'Project',
+  developers: 'Developer',
+};
+
+type Item = { slug: string; href: string; title: string; description: string; label: string };
+
+const index = new Map<string, Item>();
+for (const collection of COLLECTIONS) {
+  let entries: any[] = [];
+  try {
+    entries = await getCollection(collection as never);
+  } catch {
+    continue;
+  }
+  for (const entry of entries) {
+    if (entry.data?.noindex) continue;
+    const href = `/${collection}/${entry.id}/`;
+    if (!index.has(entry.id)) {
+      index.set(entry.id, {
+        slug: entry.id,
+        href,
+        title: entry.data.title ?? entry.id,
+        description: entry.data.description ?? '',
+        label: LABELS[collection] ?? collection,
+      });
+    }
+  }
+}
+
+const seen = new Set<string>([currentSlug]);
+const picked: Item[] = [];
+for (const slug of relatedSlugs) {
+  if (picked.length >= max) break;
+  const key = String(slug).trim();
+  if (!key || seen.has(key)) continue;
+  const item = index.get(key);
+  if (!item) continue;
+  seen.add(key);
+  picked.push(item);
+}
+---
+{picked.length > 0 && (
+  <nav class="related-content max-w-3xl mx-auto" aria-labelledby="related-heading">
+    <h2 id="related-heading">Related research</h2>
+    <ul>
+      {picked.map((item) => (
+        <li>
+          <a href={item.href}>
+            <span class="related-content__label">{item.label}</span>
+            <span class="related-content__title">{item.title}</span>
+            {item.description && <span class="related-content__desc">{item.description}</span>}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .related-content {
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .related-content h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+    color: var(--color-ink);
+  }
+  .related-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  @media (min-width: 720px) {
+    .related-content ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .related-content li {
+    margin: 0;
+  }
+  .related-content a {
+    display: block;
+    height: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    background: var(--color-frame, #fff);
+    transition: border-color 0.15s ease;
+  }
+  .related-content a:hover,
+  .related-content a:focus-visible {
+    border-color: var(--color-brass, var(--color-ink));
+  }
+  .related-content__label {
+    display: block;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 0.25rem;
+  }
+  .related-content__title {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    line-height: 1.35;
+  }
+  .related-content__desc {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .related-content a {
+      transition: none;
+    }
+  }
+</style>
