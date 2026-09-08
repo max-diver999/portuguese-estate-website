@@ -33,6 +33,8 @@ const {
 } = entry.data;
 ---
 <ArticleLayout
+  relatedSlugs={entry.data.relatedSlugs ?? []}
+  articleSlug={entry.id}
   {title}
   {description}
   {pubDate}
