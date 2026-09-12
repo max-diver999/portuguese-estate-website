@@ -1,0 +1,95 @@
+{
+  "siteUrl": "https://portuguese-estate.com",
+  "host": "portuguese-estate.com",
+  "brand": "Portuguese Estate",
+  "language": "en",
+  "title": "Portuguese Estate",
+  "tagline": "independent research on Portuguese property",
+  "summary": "Independent research on Portuguese property for foreign buyers: the nationality and residency rules as they now stand, NIF and the purchase process, IMT and running costs, local lodging licences, rental yields by area, and named developments. Not an agency, not a listings portal.",
+  "entity": "Portuguese Estate is an independent research publisher on Portuguese property for foreign buyers, part of the MORE Group network. It sells no listings and represents no developer. Wikidata: https://www.wikidata.org/wiki/Q140698878",
+  "contact": {
+    "email": "info@portuguese-estate.com",
+    "page": "/contact/"
+  },
+  "collections": [
+    {
+      "dir": "guides",
+      "urlPrefix": "/guides",
+      "label": "Guides"
+    },
+    {
+      "dir": "property-for-sale",
+      "urlPrefix": "/property-for-sale",
+      "label": "Areas and property for sale"
+    },
+    {
+      "dir": "move-to-portugal",
+      "urlPrefix": "/move-to-portugal",
+      "label": "Moving to Portugal"
+    },
+    {
+      "dir": "projects",
+      "urlPrefix": "/projects",
+      "label": "Project reviews"
+    },
+    {
+      "dir": "compare",
+      "urlPrefix": "/compare",
+      "label": "Comparisons"
+    },
+    {
+      "dir": "developers",
+      "urlPrefix": "/developers",
+      "label": "Developers"
+    },
+    {
+      "dir": "news",
+      "urlPrefix": "/news",
+      "label": "Market notes"
+    }
+  ],
+  "keyPages": [
+    {
+      "url": "/guides/",
+      "label": "Guides: residency, tax, purchase process"
+    },
+    {
+      "url": "/property-for-sale/",
+      "label": "Areas and property for sale"
+    },
+    {
+      "url": "/move-to-portugal/",
+      "label": "Moving to Portugal: visas, citizenship, living costs"
+    },
+    {
+      "url": "/projects/",
+      "label": "Project reviews, independent, not listings"
+    },
+    {
+      "url": "/compare/",
+      "label": "Comparisons"
+    },
+    {
+      "url": "/methodology/",
+      "label": "How the numbers are produced"
+    },
+    {
+      "url": "/about/",
+      "label": "About"
+    },
+    {
+      "url": "/contact/",
+      "label": "Contact"
+    }
+  ],
+  "contentPolicy": {
+    "search": "yes",
+    "aiInput": "yes",
+    "aiTrain": "no"
+  },
+  "writeLlmsFull": false,
+  "llms": {
+    "generated": true,
+    "note": "llms.txt is built by the generator this repo already has and is left alone."
+  }
+}

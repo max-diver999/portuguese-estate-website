@@ -7,9 +7,9 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "npm run images:verify && node scripts/generate-llms.mjs",
+    "prebuild": "npm run images:verify && node scripts/generate-llms.mjs && node scripts/ai-visibility/page-lastmod.mjs && node scripts/ai-visibility/generate-agent-markdown.mjs && node scripts/ai-visibility/generate-agent-card.mjs && node scripts/ai-visibility/check-agent-index.mjs",
     "build": "astro build",
-    "postbuild": "node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs && npm run speed:verify",
+    "postbuild": "node scripts/patch-vercel-output.mjs && node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs && npm run speed:verify",
     "preview": "astro preview",
     "healthcheck": "node scripts/post-deploy-smoke.mjs --http-only",
     "validate:content": "node scripts/qa-audit.mjs && node scripts/qa-duplicate-prose.mjs",
@@ -48,7 +48,12 @@
     "geo:score": "node scripts/geo-score.mjs",
     "geo:calibrate": "node scripts/geo-calibrate.mjs",
     "geo:cannibals": "node scripts/geo-cannibals.mjs",
-    "gen:llms": "node scripts/generate-llms.mjs"
+    "gen:llms": "node scripts/generate-llms.mjs",
+    "ai:markdown": "node scripts/ai-visibility/generate-agent-markdown.mjs",
+    "ai:card": "node scripts/ai-visibility/generate-agent-card.mjs",
+    "ai:lastmod": "node scripts/ai-visibility/page-lastmod.mjs",
+    "ai:check": "node scripts/ai-visibility/check-agent-index.mjs",
+    "ai:verify": "node scripts/ai-visibility/verify-live.mjs"
   },
   "dependencies": {
     "google-auth-library": "^10.6.2",
