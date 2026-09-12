@@ -22,3 +22,14 @@ _drafts/
 
 # Perceptual hashes for the hero-image uniqueness audit — regenerated on demand.
 .content-os/cache/
+
+# AI-visibility pack: generated at prebuild, never edited by hand
+public/index.md
+public/.well-known/
+public/guides/*.md
+public/property-for-sale/*.md
+public/projects/*.md
+public/compare/*.md
+public/developers/*.md
+public/move-to-portugal/*.md
+public/news/*.md

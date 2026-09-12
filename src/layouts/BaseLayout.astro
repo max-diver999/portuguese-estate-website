@@ -7,6 +7,7 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import WhatsAppIntentTracker from '../components/WhatsAppIntentTracker.astro';
 import CurrencyEngine from '../components/CurrencyEngine.astro';
 import { SITE } from '../data/site';
+import { lastmodFor } from '../lib/page-lastmod';
 
 interface Props {
   title: string;
@@ -63,7 +64,28 @@ const orgSchema = {
   ],
 };
 
-const allSchemas = [orgSchema, ...schemas];
+// Every page type carries a modification date, not only the articles. Articles ship
+// their own date inside their own schema, so the node is added only where nothing
+// else supplies one, and never on a page closed to indexing.
+const schemaCarriesDate = (schemas ?? []).some((s) => JSON.stringify(s).includes('"dateModified"'));
+// The canonical prop is optional in some of these layouts and resolved into a separate
+// variable in others, so resolve it here rather than trusting the prop.
+const aiCanonical = (typeof canonical === 'string' && canonical) || `${SITE.url}${Astro.url.pathname}`;
+const pageModified = noindex || schemaCarriesDate ? null : lastmodFor(aiCanonical);
+const webPageSchema = pageModified
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${aiCanonical.replace(/\/?$/, '/')}#webpage`,
+      url: aiCanonical,
+      name: title,
+      description,
+      inLanguage: 'en',
+      dateModified: pageModified,
+    }
+  : null;
+
+const allSchemas = [orgSchema, ...schemas, ...(webPageSchema ? [webPageSchema] : [])];
 ---
 <!doctype html>
 <html lang="en" dir="ltr">
