@@ -30,9 +30,39 @@ const {
   heroImageSource,
   faq,
   noindex,
+  priceFromEUR,
 } = entry.data;
+
+// Цена проекта в машиночитаемом виде. Карточка описывает застройку из многих лотов и
+// несёт цену «от», поэтому AggregateOffer с lowPrice, а не Offer с точной ценой.
+// Наличие ставим только там, где статус однозначен, иначе поле не выводим.
+const _status = String((entry.data as Record<string, unknown>).status ?? '').toLowerCase();
+const _availability = /resale|on-market|completed|ready/.test(_status)
+  ? 'https://schema.org/InStock'
+  : /off-plan|under-construction|delivering|approved|restoration|pre-launch/.test(_status)
+    ? 'https://schema.org/PreOrder'
+    : null;
+const priceSchema = typeof priceFromEUR === 'number' && priceFromEUR > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: (entry.data as Record<string, unknown>).projectName ?? title,
+      description,
+      ...(heroImage ? { image: heroImage } : {}),
+      url: `${SITE.url}/projects/${entry.id}/`,
+      offers: {
+        '@type': 'AggregateOffer',
+        lowPrice: priceFromEUR,
+        priceCurrency: 'EUR',
+        ...(_availability ? { availability: _availability } : {}),
+        url: `${SITE.url}/projects/${entry.id}/`,
+        seller: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+      },
+    }
+  : null;
 ---
 <ArticleLayout
+  extraSchema={priceSchema}
   relatedSlugs={entry.data.relatedSlugs ?? []}
   articleSlug={entry.id}
   {title}
