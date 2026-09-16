@@ -1,10 +1,10 @@
 ---
 export const prerender = true;
 
-const reportDate = '3 September 2026';
-const reportVersion = 'v2.5';
+const reportDate = '16 September 2026';
+const reportVersion = 'v2.6';
 const launchDate = '16 June 2026';
-const dataThrough = '31 August 2026';
+const dataThrough = '13 September 2026';
 
 const monthlyGsc = [
   { month: 'Jun 2026', label: 'Jun', clicks: 1, impressions: 164, position: 23.6, note: 'Live 16 Jun · first click 22 Jun · compare page' },
@@ -16,6 +16,7 @@ const monthlyGa4 = [
   { month: 'Jun', sessions: 94 },
   { month: 'Jul', sessions: 171 },
   { month: 'Aug', sessions: 268 },
+  { month: 'Sep', sessions: 94 },
 ];
 
 const dailyRaw = [
@@ -34,7 +35,7 @@ const contentBreakdown = [
   { type: 'Projects', count: 7, words: 8758, color: '#5f6672' },
 ];
 
-const gsc28d = { clicks: 12, impressions: 2753, ctr: 0.44, position: 45.4 };
+const gsc28d = { clicks: 13, impressions: 2556, ctr: 0.51, position: 42.9 };
 
 const totalClicks = monthlyGsc.reduce((s, m) => s + m.clicks, 0);
 const totalImp = monthlyGsc.reduce((s, m) => s + m.impressions, 0);
@@ -1029,6 +1030,15 @@ const chartPayload = JSON.stringify({
 
   <div class="section-title">Change history</div>
   <div class="changelog">
+          <div class="changelog-item">
+      <div class="changelog-date">16 Sep 2026</div>
+      <div class="changelog-content">
+        <div class="changelog-title">Site report v2.6 · GSC/GA4 MCP refresh</div>
+        <div class="changelog-desc">GSC 28d: 13 clk / 2 556 imp. GA4 Aug 267 · Sep 94.</div>
+        <div class="changelog-tags"><span class="tag green">Report v2.6</span><span class="tag blue">GSC MCP</span><span class="tag amber">GA4 MCP</span></div>
+      </div>
+    </div>
+
         <div class="changelog-item">
               <div class="changelog-item">
       <div class="changelog-date">3 Sep 2026 (v2.5)</div>
