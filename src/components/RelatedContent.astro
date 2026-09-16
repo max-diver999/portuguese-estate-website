@@ -135,26 +135,33 @@ for (const slug of relatedSlugs) {
   .related-content a:focus-visible {
     border-color: var(--color-brass, var(--color-ink));
   }
+  /*
+   * Цвета текста привязаны к фону карточки, а не к фону страницы. Карточка стоит на
+   * --color-frame, и на сайтах, где рама тёмная, --color-ink это почти чёрный по тёмному:
+   * на invest-spain-property.com у заголовка вышел контраст 1.30 при норме 4.5.
+   * Поэтому сначала спрашиваем цвета рамы, а --color-ink и --color-muted остаются запасными
+   * для сайтов со светлой карточкой. Считает контраст scripts/test-related-contrast.mjs.
+   */
   .related-content__label {
     display: block;
     font-size: 0.6875rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-muted);
+    color: var(--color-frame-muted, var(--color-muted));
     margin-bottom: 0.25rem;
   }
   .related-content__title {
     display: block;
     font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--color-ink);
+    color: var(--color-frame-text, var(--color-ink));
     line-height: 1.35;
   }
   .related-content__desc {
     display: block;
     margin-top: 0.3rem;
     font-size: 0.8125rem;
-    color: var(--color-muted);
+    color: var(--color-frame-muted, var(--color-muted));
     line-height: 1.45;
     display: -webkit-box;
     -webkit-line-clamp: 2;

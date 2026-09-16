@@ -26,8 +26,17 @@ function publicIdFromUrl(src: string): string | null {
   return src.slice(index + 1).replace(/\.(jpe?g|png|webp|avif)$/i, '');
 }
 
+/*
+ * Без g_auto. Он говорит Cloudinary, какую часть кадра оставить ПРИ ОБРЕЗКЕ, а здесь обрезки нет:
+ * картинка только уменьшается по ширине, пропорции сохраняются. Cloudinary такой адрес не
+ * игнорирует, а отвечает 400, и картинка не грузится совсем.
+ *
+ * Так и было: каждый вариант в srcset отдавал 400, и главные картинки статей не рисовались.
+ * Сборка этого не видит, а глазами каждую страницу не открывают. Проверка рядом:
+ * scripts/test-image-transforms.mjs. Та же поломка найдена 16.09.2026 на трёх сайтах сразу.
+ */
 function deliveryUrl(publicId: string, width: number): string {
-  return `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto:eco,g_auto,w_${width}/${publicId}`;
+  return `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto:eco,w_${width}/${publicId}`;
 }
 
 function localHomepageHero(src: string, variant: Variant) {
