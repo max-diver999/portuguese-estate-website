@@ -10,6 +10,7 @@ const DIST = fs.existsSync(path.join(ROOT, 'dist/client'))
 const errors = [];
 let pages = 0;
 let cloudinaryImages = 0;
+let r2Images = 0;
 let priorityHeroes = 0;
 
 function walk(dir) {
@@ -45,6 +46,11 @@ for (const file of walk(DIST).filter((item) => (
 
   for (const tag of html.match(/<img\b[^>]*>/g) || []) {
     const src = attribute(tag, 'src');
+    if (src.includes('.r2.dev/')) {
+      r2Images += 1;
+      if (attribute(tag, 'fetchpriority') === 'high') priorityHeroes += 1;
+      continue;
+    }
     if (!src.includes('res.cloudinary.com/dlrrtf6bq/image/upload/')) continue;
     cloudinaryImages += 1;
 
@@ -67,8 +73,8 @@ for (const file of walk(DIST).filter((item) => (
 }
 
 if (!pages) errors.push('no rendered HTML found');
-if (!cloudinaryImages) errors.push('no rendered Cloudinary images found');
-if (!priorityHeroes) errors.push('no priority Cloudinary heroes found');
+if (!cloudinaryImages && !r2Images) errors.push('no rendered hero images found');
+if (!priorityHeroes) errors.push('no priority heroes found');
 
 if (errors.length) {
   console.error(errors.slice(0, 40).join('\n'));
