@@ -46,7 +46,8 @@ function readSiteFlag(name) {
   return false;
 }
 const WHATSAPP_INTERIM = readSiteFlag('whatsappInterim');
-const siteConfig = { skipCollections: [], requireLeadForm: true };
+/** areas/segments are editorial MDX only; live URLs are under /property-for-sale/ */
+const siteConfig = { skipCollections: ['areas', 'segments'], requireLeadForm: true };
 
 function discoverCollections() {
   const contentRoot = path.join(ROOT, 'src/content');
