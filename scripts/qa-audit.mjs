@@ -136,7 +136,8 @@ const issues = [];
 /** heroImage URL -> the page that claimed it, so the second claimant fails. */
 const heroImageOwners = new Map();
 /** Hosts allowed to serve a hero: our own Cloudinary, or Wikimedia until the upload lands. */
-const ALLOWED_IMAGE_HOST = /^https:\/\/(res\.cloudinary\.com|upload\.wikimedia\.org)\//;
+const ALLOWED_IMAGE_HOST =
+  /^https:\/\/(res\.cloudinary\.com|upload\.wikimedia\.org|pub-[a-f0-9]+\.r2\.dev)\//;
 const stats = { total: 0, byColl: {}, wordSum: 0 };
 const reportRows = [];
 
