@@ -22,7 +22,7 @@ if (!fs.existsSync(root)) {
 }
 
 /** Pages whose job is to show other pages' images. */
-const LISTING = /^\/$|^\/(areas|guides|compare|projects|developers|segments|news|site-report)\/$/;
+const LISTING = /^\/$|^\/(areas|guides|compare|projects|developers|segments|news|site-report|property-for-sale|move-to-portugal)\/$/;
 
 const pages = [];
 (function walk(dir) {
