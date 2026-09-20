@@ -49,12 +49,16 @@ for (const item of source.images) {
     continue;
   }
   const text = fs.readFileSync(file, 'utf8');
-  const required = [
-    `heroImage: "https://res.cloudinary.com/dlrrtf6bq/image/upload/f_auto,q_auto,w_1280/${expectedPid}"`,
+  const heroCloud = `heroImage: "https://res.cloudinary.com/dlrrtf6bq/image/upload/f_auto,q_auto,w_1280/${expectedPid}"`;
+  const heroR2 = `heroImage: "https://pub-2855c73eea384110b510f25966292c37.r2.dev/${expectedPid}.webp"`;
+  if (!text.includes(heroCloud) && !text.includes(heroR2) && !text.includes(expectedPid)) {
+    errors.push(`missing heroImage for ${item.collection}/${item.slug}`);
+  }
+  const requiredMeta = [
     `heroImageSource: "${item.sourcePage.replace(/"/g, '\\"')}"`,
     `heroImageLicence: "${item.licence.replace(/"/g, '\\"')}"`,
   ];
-  for (const value of required) {
+  for (const value of requiredMeta) {
     if (!text.includes(value)) errors.push(`missing preserved field in ${item.collection}/${item.slug}: ${value.slice(0, 32)}`);
   }
 }

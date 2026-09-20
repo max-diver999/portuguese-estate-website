@@ -1,4 +1,4 @@
-// QA audit for portuguese-estate content: hard gate before publish
+// QA audit for portuguese-estate content — hard gate before publish
 // Usage:
 //   node scripts/qa-audit.mjs
 //   node scripts/qa-audit.mjs --changed
@@ -10,7 +10,7 @@ import { join, relative } from 'node:path';
 import { runExtendedChecks } from './lib/more-content-gate.mjs';
 
 const ROOT = decodeURIComponent(new URL('../src/content/', import.meta.url).pathname);
-const COLLECTIONS = ['guides', 'compare', 'projects', 'developers', 'news', 'move-to-portugal', 'property-for-sale'];
+const COLLECTIONS = ['guides', 'compare', 'areas', 'projects', 'developers', 'news', 'segments'];
 
 const BANNED_PHRASES = [
   'Regional diversification',
@@ -38,11 +38,11 @@ const BANNED_PHRASES = [
 const REGULATORY_STALE = [
   {
     pattern: /€\s?3,040\s*(?:per month|\/\s?month|\/mo)/i,
-    hint: 'D8 threshold EUR 3,040 is 4x the 2023 minimum wage (EUR 760), 2026 value is EUR 3,680',
+    hint: 'D8 threshold EUR 3,040 is 4x the 2023 minimum wage (EUR 760) — 2026 value is EUR 3,680',
   },
   {
     pattern: /€\s?3,480\s*(?:per month|\/\s?month|\/mo)/i,
-    hint: 'D8 threshold EUR 3,480 is 4x the 2025 minimum wage (EUR 870), 2026 value is EUR 3,680',
+    hint: 'D8 threshold EUR 3,480 is 4x the 2025 minimum wage (EUR 870) — 2026 value is EUR 3,680',
   },
   {
     pattern: /(?:D7|passive income)[^.]{0,80}€\s?(?:760|820|870)\s*(?:per month|\/\s?month|\/mo)/i,
@@ -50,11 +50,11 @@ const REGULATORY_STALE = [
   },
   {
     pattern: /golden visa[^.]{0,60}(?:buy|purchase|invest in)[^.]{0,40}(?:real estate|property)[^.]{0,30}(?:qualif|eligib|available)/i,
-    hint: 'Golden Visa real estate route closed by Law 56/2023 in October 2023, verify wording',
+    hint: 'Golden Visa real estate route closed by Law 56/2023 in October 2023 — verify wording',
   },
   {
     pattern: /NHR[^.]{0,60}(?:still (?:available|open)|you can (?:apply|register))/i,
-    hint: 'NHR closed to new applicants end-2024; IFICI (NHR 2.0) replaced it, verify wording',
+    hint: 'NHR closed to new applicants end-2024; IFICI (NHR 2.0) replaced it — verify wording',
   },
 ];
 
@@ -136,7 +136,8 @@ const issues = [];
 /** heroImage URL -> the page that claimed it, so the second claimant fails. */
 const heroImageOwners = new Map();
 /** Hosts allowed to serve a hero: our own Cloudinary, or Wikimedia until the upload lands. */
-const ALLOWED_IMAGE_HOST = /^https:\/\/(res\.cloudinary\.com|upload\.wikimedia\.org)\//;
+const ALLOWED_IMAGE_HOST =
+  /^https:\/\/(res\.cloudinary\.com|upload\.wikimedia\.org|pub-[a-f0-9]+\.r2\.dev)\//;
 const stats = { total: 0, byColl: {}, wordSum: 0 };
 const reportRows = [];
 
@@ -177,10 +178,10 @@ function auditFile(c, slug) {
     guides: 2000,
     projects: 1200,
     compare: 1800,
+    areas: 1800,
     developers: 1200,
     news: 600,
-    'move-to-portugal': 2000,
-    'property-for-sale': 1800,
+    segments: 2000,
   }[c] ?? 1800;
   if (words < minW) prob.push(`words:${words}<${minW}`);
 
@@ -199,7 +200,7 @@ function auditFile(c, slug) {
 
   const links = body.match(/\]\((\/[a-z0-9\-\/]*)\)/gi) || [];
   const internal = links.filter((l) =>
-    /\]\(\/(guides|compare|projects|developers|news|move-to-portugal|property-for-sale)\//i.test(l),
+    /\]\(\/(guides|compare|areas|projects|developers|news|segments)\//i.test(l),
   );
   if (internal.length < 5) prob.push(`intLinks:${internal.length}<5`);
   const noTrail = internal.filter((l) => !/\/\)$/.test(l));
@@ -209,7 +210,7 @@ function auditFile(c, slug) {
   // under the wrong collection prefix and 404'd in production. Resolve targets.
   for (const raw of internal) {
     const target = raw.replace(/^\]\(/, '').replace(/\)$/, '');
-    const m = target.match(/^\/([a-z][a-z-]*)\/([^/]+)\/?$/i);
+    const m = target.match(/^\/([a-z]+)\/([^/]+)\/?$/i);
     if (!m) continue;
     const [, coll, slug] = m;
     if (!COLLECTIONS.includes(coll)) continue;
@@ -244,7 +245,7 @@ function auditFile(c, slug) {
 
   /**
    * Pages that deliberately document the historical progression of a threshold
-   * would otherwise trip every staleness rule by design. Keep this list short,
+   * would otherwise trip every staleness rule by design. Keep this list short —
    * it is an exemption from a correctness gate, not a convenience.
    */
   const REGULATORY_HISTORY_PAGES = new Set(['portugal-residency-options-without-golden-visa']);
@@ -285,7 +286,7 @@ function auditFile(c, slug) {
   }
 
   const bodySlugs = [
-    ...body.matchAll(/\]\(\/(?:guides|compare|projects|developers|news)\/([a-z0-9\-]+)\/?\)/gi),
+    ...body.matchAll(/\]\(\/(?:guides|compare|areas|projects|developers|news)\/([a-z0-9\-]+)\/?\)/gi),
   ].map((m) => m[1]);
   const badLinks = [...new Set(bodySlugs.filter((s) => !allSlugs.has(s)))];
   if (badLinks.length) prob.push(`brokenInternalLinks:${badLinks.join('|')}`);
@@ -318,7 +319,7 @@ if (singleFile) {
 } else if (changedOnly) {
   filesToAudit = getChangedFiles();
   if (!filesToAudit.length) {
-    console.log('No changed MDX files, skipping audit.');
+    console.log('No changed MDX files — skipping audit.');
     process.exit(0);
   }
 } else {
