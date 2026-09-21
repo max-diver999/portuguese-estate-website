@@ -1,0 +1,195 @@
+{
+  "site": "portuguese-estate-website",
+  "source_cloud": "bwppi9gc",
+  "r2_public_base": "https://pub-2855c73eea384110b510f25966292c37.r2.dev",
+  "changed": 37,
+  "errors": 0,
+  "items": [
+    {
+      "mdx": "portuguese-estate-website/src/content/compare/golden-visa-portugal-spain-greece.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/compare/golden-visa-portugal-spain-greece/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/compare/golden-visa-portugal-spain-greece/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/guides/portugal-estate-agents.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/guides/portugal-estate-agents/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/guides/portugal-estate-agents/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/guides/portugal-house-prices.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/guides/portugal-house-prices/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/guides/portugal-house-prices/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/best-places-to-live.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/best-places-to-live/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/best-places-to-live/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/by-nationality.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/by-nationality/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/by-nationality/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/citizenship-by-investment.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/citizenship-by-investment/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/citizenship-by-investment/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/cost-of-living.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/cost-of-living/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/cost-of-living/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/d7-visa.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/d7-visa/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/d7-visa/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/d8-digital-nomad-visa.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/d8-digital-nomad-visa/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/d8-digital-nomad-visa/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/from-uk.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/from-uk/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/from-uk/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/from-usa.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/from-usa/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/from-usa/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/golden-visa.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/golden-visa/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/golden-visa/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/international-schools.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/international-schools/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/international-schools/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/move-to-portugal/retire-in-portugal.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/move-to-portugal/retire-in-portugal/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/move-to-portugal/retire-in-portugal/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/albufeira.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/albufeira/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/albufeira/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/alentejo-comporta.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/alentejo-comporta/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/alentejo-comporta/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/algarve.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/algarve/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/algarve/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/alvor.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/alvor/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/alvor/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/apartments.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/apartments/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/apartments/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/azores.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/azores/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/azores/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/carvoeiro.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/carvoeiro/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/carvoeiro/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/cascais.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/cascais/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/cascais/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/central-and-northern-portugal.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/central-and-northern-portugal/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/central-and-northern-portugal/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/cheap-property.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/cheap-property/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/cheap-property/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/coastal-sea-view.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/coastal-sea-view/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/coastal-sea-view/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/ericeira.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/ericeira/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/ericeira/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/faro.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/faro/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/faro/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/lagos.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/lagos/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/lagos/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/lisbon.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/lisbon/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/lisbon/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/madeira.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/madeira/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/madeira/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/porto.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/porto/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/porto/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/quinta-do-lago.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/quinta-do-lago/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/quinta-do-lago/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/rural-and-land.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/rural-and-land/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/rural-and-land/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/silver-coast.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/silver-coast/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/silver-coast/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/tavira.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/tavira/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/tavira/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/vilamoura.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/vilamoura/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/vilamoura/hero.webp"
+    },
+    {
+      "mdx": "portuguese-estate-website/src/content/property-for-sale/villas.mdx",
+      "old": "https://res.cloudinary.com/bwppi9gc/image/upload/f_auto,q_auto,w_1280/more-group/portugal/property-for-sale/villas/hero",
+      "new": "https://pub-2855c73eea384110b510f25966292c37.r2.dev/more-group/portugal/property-for-sale/villas/hero.webp"
+    }
+  ],
+  "failed": []
+}
