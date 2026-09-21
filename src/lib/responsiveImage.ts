@@ -4,7 +4,7 @@ type Variant = 'hero' | 'homepage' | 'card';
 type Dimension = { width: number; height: number };
 type LocalCandidate = { url: string; width: number };
 
-const CLOUD = 'dlrrtf6bq';
+const R2_PATTERN = /^https:\/\/pub-[a-f0-9]+\.r2\.dev\/(.+)$/i;
 const WIDTHS = {
   hero: [360, 480, 768, 1024, 1280],
   homepage: [360, 480, 768, 1024],
@@ -19,24 +19,10 @@ const LOCAL_HOMEPAGE_HERO: LocalCandidate[] = [
   { url: '/images/lisbon-baixa-rooftops.jpg', width: 1200 },
 ];
 
-function publicIdFromUrl(src: string): string | null {
-  const marker = '/more-group/portugal/';
-  const index = src.indexOf(marker);
-  if (!src.includes(`res.cloudinary.com/${CLOUD}/image/upload/`) || index === -1) return null;
-  return src.slice(index + 1).replace(/\.(jpe?g|png|webp|avif)$/i, '');
-}
-
-/*
- * Без g_auto. Он говорит Cloudinary, какую часть кадра оставить ПРИ ОБРЕЗКЕ, а здесь обрезки нет:
- * картинка только уменьшается по ширине, пропорции сохраняются. Cloudinary такой адрес не
- * игнорирует, а отвечает 400, и картинка не грузится совсем.
- *
- * Так и было: каждый вариант в srcset отдавал 400, и главные картинки статей не рисовались.
- * Сборка этого не видит, а глазами каждую страницу не открывают. Проверка рядом:
- * scripts/test-image-transforms.mjs. Та же поломка найдена 16.09.2026 на трёх сайтах сразу.
- */
-function deliveryUrl(publicId: string, width: number): string {
-  return `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto:eco,w_${width}/${publicId}`;
+function r2PublicId(src: string): string | null {
+  const match = R2_PATTERN.exec(src.trim());
+  if (!match) return null;
+  return match[1].replace(/\.webp$/i, '');
 }
 
 function localHomepageHero(src: string, variant: Variant) {
@@ -69,8 +55,8 @@ export function responsiveImage(src: string, variant: Variant = 'hero') {
   const localHero = localHomepageHero(src, variant);
   if (localHero) return localHero;
 
-  const publicId = publicIdFromUrl(src);
-  if (!publicId) {
+  const publicId = r2PublicId(src);
+  if (!publicId?.startsWith('more-group/portugal/')) {
     return {
       src,
       srcset: undefined,
@@ -81,14 +67,19 @@ export function responsiveImage(src: string, variant: Variant = 'hero') {
   }
 
   const native = (dimensions as Record<string, Dimension>)[publicId];
-  if (!native) throw new Error(`Missing Portugal image dimensions for ${publicId}`);
-  const requested = WIDTHS[variant].filter((width) => width <= native.width);
-  const widths = requested.length ? requested : [native.width];
-  const largest = widths.at(-1) ?? native.width;
+  if (!native) {
+    return {
+      src,
+      srcset: undefined,
+      sizes: undefined,
+      width: variant === 'card' ? 640 : 1280,
+      height: variant === 'card' ? 360 : 720,
+    };
+  }
 
   return {
-    src: deliveryUrl(publicId, largest),
-    srcset: widths.map((width) => `${deliveryUrl(publicId, width)} ${width}w`).join(', '),
+    src,
+    srcset: `${src} ${native.width}w`,
     sizes: variant === 'card'
       ? '(max-width: 639px) calc(100vw - 3rem), (max-width: 1023px) 50vw, 320px'
       : variant === 'homepage'
