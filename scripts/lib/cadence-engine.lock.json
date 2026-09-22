@@ -2,6 +2,7 @@
   "updatedAt": "2026-09-22",
   "files": {
     "scripts/lib/ai-cadence.mjs": "d14137b884707fa0018cb8c0e05ba019ee8185efad6019ed7e172e952c10f109",
-    "scripts/cadence-check.mjs": "36836f2317cf9a6ea8388bfc9db391da1305668c5d4c9e2c3e0152b0a7b74349"
+    "scripts/cadence-check.mjs": "36836f2317cf9a6ea8388bfc9db391da1305668c5d4c9e2c3e0152b0a7b74349",
+    "scripts/cadence-gate-new.mjs": "881f87d5e80762c9c87f4d3cd6762f13aa4b66640239b874920623976aa94fd2"
   }
 }

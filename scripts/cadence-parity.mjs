@@ -28,7 +28,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const LOCK = path.join(ROOT, 'scripts/lib/cadence-engine.lock.json');
-const SHARED = ['scripts/lib/ai-cadence.mjs', 'scripts/cadence-check.mjs'];
+const SHARED = ['scripts/lib/ai-cadence.mjs', 'scripts/cadence-check.mjs', 'scripts/cadence-gate-new.mjs'];
 
 /** Все сайты, где лежит та же пара файлов. Сверяются главные checkout-ы, не рабочие деревья. */
 const SIBLINGS = [
