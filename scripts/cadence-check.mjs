@@ -11,6 +11,9 @@
  *   node scripts/cadence-check.mjs --changed --fail-hard  ненулевой код только на невидимых
  *                                                         символах: так стоит в prebuild
  *
+ * Если на сайте есть scripts/lib/cadence-terms.mjs, та же команда за один проход
+ * ищет и английские слова и жаргон в тексте, с готовой заменой для каждого.
+ *
  * Коды выхода: 0 чисто, 1 есть замечания при --fail (или жёсткие при --fail-hard),
  * 2 ошибка ввода.
  */
@@ -20,6 +23,11 @@ import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { analyzeCadence, cadenceIssues } from './lib/ai-cadence.mjs';
 import { LANG, cadenceProfileFor } from './lib/cadence-thresholds.mjs';
+
+// Словарь чужих слов сайта. Файла нет - слой молчит. Файл есть, но сломан -
+// падаем громко: тихо проглоченный словарь это проверка, которой нет.
+const TERMS_FILE = path.join(path.dirname(fileURLToPath(import.meta.url)), 'lib/cadence-terms.mjs');
+const TERMS = fs.existsSync(TERMS_FILE) ? (await import(TERMS_FILE)).TERMS : null;
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'src/content');
@@ -79,7 +87,7 @@ function calibrate(files) {
   const rows = [];
   for (const f of files) {
     const raw = fs.readFileSync(f, 'utf8');
-    const a = analyzeCadence(raw, { lang: LANG });
+    const a = analyzeCadence(raw, { lang: LANG, terms: TERMS });
     if (a.words < 250) continue;
     rows.push({ file: path.relative(ROOT, f), collection: collectionOf(f), ...a });
   }
@@ -134,6 +142,21 @@ function calibrate(files) {
     console.log(`  ${k.padEnd(20)} ${String(Math.round(v)).padStart(6)}   (${(v / rows.length).toFixed(2)} на файл)`);
   }
 
+  if (TERMS) {
+    const ftTotals = new Map();
+    const unkTotals = new Map();
+    let ftFiles = 0;
+    for (const r of rows) {
+      if (r.foreignTerms.hits.length || r.foreignTerms.unknown.length) ftFiles += 1;
+      for (const h of r.foreignTerms.hits) ftTotals.set(`${h.term} → ${h.replace}`, (ftTotals.get(`${h.term} → ${h.replace}`) || 0) + h.count);
+      for (const u of r.foreignTerms.unknown) unkTotals.set(u.word, (unkTotals.get(u.word) || 0) + u.count);
+    }
+    console.log(`\nЧужие слова по словарю сайта: файлов с находками ${ftFiles} из ${rows.length}`);
+    for (const [k, v] of [...ftTotals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 25)) console.log(`  ${String(v).padStart(5)}  ${k}`);
+    console.log('Незнакомая строчная латиница (кандидаты в словарь или в allowLatin):');
+    console.log(`  ${[...unkTotals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 40).map(([w, c]) => `${w}:${c}`).join('  ')}`);
+  }
+
   const inv = rows.filter((r) => r.invisible.some((i) => !i.soft));
   const nbsp = rows.filter((r) => r.invisible.some((i) => i.soft));
   console.log(`\nНевидимые символы: жёсткие в ${inv.length} файлах, неразрывный пробел в ${nbsp.length}`);
@@ -162,10 +185,10 @@ function run(files) {
   for (const f of files) {
     const raw = fs.readFileSync(f, 'utf8');
     const collection = collectionOf(f);
-    const a = analyzeCadence(raw, { lang: LANG });
+    const a = analyzeCadence(raw, { lang: LANG, terms: TERMS });
     const { issues, hard } = cadenceIssues(a, cadenceProfileFor(collection));
     if (issues.length || hard.length) {
-      report.push({ file: path.relative(ROOT, f), collection, words: a.words, per1k: Number(a.per1k.toFixed(1)), metronomePct: Math.round(a.metronome.pct), cv: a.burstiness.cv, issues, hard, examples: a.examples });
+      report.push({ file: path.relative(ROOT, f), collection, words: a.words, per1k: Number(a.per1k.toFixed(1)), metronomePct: Math.round(a.metronome.pct), cv: a.burstiness.cv, issues, hard, examples: a.examples, foreignTerms: a.foreignTerms });
       if (issues.length) withIssues += 1;
       if (hard.length) withHard += 1;
     }
@@ -183,6 +206,9 @@ function run(files) {
         if (['antithesis', 'colonHook', 'superlativeOpener'].includes(k)) {
           for (const e of ex.slice(0, 2)) console.log(`         ${k}: «${e}»`);
         }
+      }
+      for (const h of (r.foreignTerms?.hits || []).slice(0, 3)) {
+        console.log(`         «${h.term}» → ${h.replace}: …${h.samples[0]}…`);
       }
       console.log('');
     }
