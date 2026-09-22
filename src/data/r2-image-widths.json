@@ -1,0 +1,1782 @@
+{
+  "more-group/portugal/areas/albufeira-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/alcantara-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/aveiro-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/braga-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 720,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/caldas-da-rainha-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/cascais-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/chiado-principe-real-property/hero.webp": {
+    "w": 1280,
+    "h": 852,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/coimbra-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/comporta-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/ericeira-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/faro-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 885,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/lagos-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 753,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/lourinha-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 863,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/madeira-property-investment-guide/hero.webp": {
+    "w": 1280,
+    "h": 719,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/marvila-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 848,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/matosinhos-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 819,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/nazare-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/obidos-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/oeiras-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/parque-das-nacoes-property/hero.webp": {
+    "w": 1280,
+    "h": 809,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/portimao-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/setubal-peninsula-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 720,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/sintra-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 608,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/tavira-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/vila-nova-de-gaia-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 848,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/areas/vilamoura-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/algarve-vs-lisbon-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/golden-visa-portugal-spain-greece/hero.webp": {
+    "w": 1280,
+    "h": 868,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/lagos-vs-vilamoura-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/lisbon-vs-cascais-property/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/new-build-vs-resale-property-portugal/hero.webp": {
+    "w": 1280,
+    "h": 939,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/porto-vs-lisbon-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 600,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-cyprus-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-dubai-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-france-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 720,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-greece-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-italy-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-malta-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 722,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-spain-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 941,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-turkey-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/compare/portugal-vs-uk-property-investment/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/developers/farinvest-properties-portugal/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/developers/vanguard-properties-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/developers/vic-properties-portugal/hero.webp": {
+    "w": 1280,
+    "h": 842,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/aimi-wealth-tax-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 832,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/al-license-transfer-portugal-sale/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/algarve-airbnb-investment-guide/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/algarve-property-investment-guide/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/alojamento-local-license-portugal/hero.webp": {
+    "w": 1280,
+    "h": 778,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/best-portugal-property-under-4000-euro-m2/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/best-regions-invest-portugal-property-2026/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/buy-property-portugal-foreigner/hero.webp": {
+    "w": 1280,
+    "h": 1030,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/buy-property-portugal-through-company/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/can-foreigners-buy-property-portugal/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/complete-before-september-2026-imt-guide/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/condominium-fees-portugal/hero.webp": {
+    "w": 1280,
+    "h": 941,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/cost-of-buying-property-portugal/hero.webp": {
+    "w": 1280,
+    "h": 915,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/cost-of-selling-property-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/cpcv-promissory-contract-portugal/hero.webp": {
+    "w": 1280,
+    "h": 755,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/currency-transfer-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 863,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/due-diligence-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 852,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/escritura-notary-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 852,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/fiscal-representative-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/gross-vs-net-yield-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/hidden-costs-buying-property-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/highest-rental-yield-areas-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/how-to-buy-portugal-property-remotely/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/how-to-buy-property-portugal-step-by-step/hero.webp": {
+    "w": 1280,
+    "h": 856,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/how-to-calculate-rental-yield-portugal/hero.webp": {
+    "w": 1280,
+    "h": 720,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/ifici-portugal-nhr-2-tax-regime/hero.webp": {
+    "w": 1280,
+    "h": 841,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/imi-property-tax-portugal/hero.webp": {
+    "w": 1280,
+    "h": 1024,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/imt-refund-tax-resident-portugal/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/imt-tax-non-resident-portugal-2026/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/is-portugal-property-good-investment-2026/hero.webp": {
+    "w": 1280,
+    "h": 863,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/lisbon-alojamento-local-containment-zones/hero.webp": {
+    "w": 1280,
+    "h": 691,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/lisbon-property-investment-guide/hero.webp": {
+    "w": 1280,
+    "h": 850,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/long-term-vs-holiday-rental-portugal/hero.webp": {
+    "w": 1280,
+    "h": 893,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/mais-valias-portugal-capital-gains/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/modelo-3-anexo-g-property-sale/hero.webp": {
+    "w": 1280,
+    "h": 959,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/moderate-rent-tax-incentives-portugal-2026/hero.webp": {
+    "w": 1280,
+    "h": 720,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/mortgage-broker-vs-bank-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/nif-portugal-property-purchase/hero.webp": {
+    "w": 1280,
+    "h": 909,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/non-resident-mortgage-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/non-resident-rental-income-tax-portugal/hero.webp": {
+    "w": 1280,
+    "h": 856,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/obras-licence-portugal-renovation/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/off-plan-property-portugal-guide/hero.webp": {
+    "w": 1280,
+    "h": 842,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/porto-alojamento-local-rules/hero.webp": {
+    "w": 1280,
+    "h": 823,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/porto-property-investment-guide/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-6-percent-vat-housing-works/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-buy-to-let-investment-guide/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-buying-costs-calculator-examples/hero.webp": {
+    "w": 1280,
+    "h": 732,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-capital-gains-tax-property/hero.webp": {
+    "w": 1280,
+    "h": 630,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-d7-visa-property/hero.webp": {
+    "w": 1280,
+    "h": 959,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-digital-nomad-visa-property/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-estate-agents/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-golden-visa-fund-investment-2026/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-golden-visa-real-estate-ended/hero.webp": {
+    "w": 1280,
+    "h": 964,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-golden-visa-vs-property-purchase/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-house-prices/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-housing-supply-licensing-2025/hero.webp": {
+    "w": 1280,
+    "h": 993,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-mortgage-rates-foreigners-2026/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-1-million-plus-investment/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-deposit-guide-cpcv/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-developers-guide-2026/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-inheritance-tax-foreigners/hero.webp": {
+    "w": 1280,
+    "h": 849,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-investment-guide/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-market-forecast-2026-2027/hero.webp": {
+    "w": 1280,
+    "h": 851,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-market-record-2025-ine-data/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-scams-avoid/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-under-300000-euros/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-property-under-500000-euros/hero.webp": {
+    "w": 1280,
+    "h": 708,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-rental-yield-guide/hero.webp": {
+    "w": 1280,
+    "h": 898,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-residency-options-without-golden-visa/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/portugal-tax-residency-183-days/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/power-of-attorney-property-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/prenuptial-agreement-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/property-maintenance-costs-portugal/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/property-management-portugal-cost/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/renovation-costs-portugal-per-m2/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/rnal-registration-portugal/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/sell-property-portugal-non-resident/hero.webp": {
+    "w": 1280,
+    "h": 848,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/silver-coast-portugal-property-guide/hero.webp": {
+    "w": 1280,
+    "h": 826,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/stamp-duty-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/guides/uk-portugal-double-taxation-treaty/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/best-places-to-live/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/by-nationality/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/citizenship-by-investment/hero.webp": {
+    "w": 1280,
+    "h": 981,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/cost-of-living/hero.webp": {
+    "w": 1280,
+    "h": 755,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/d7-visa/hero.webp": {
+    "w": 1280,
+    "h": 801,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/d8-digital-nomad-visa/hero.webp": {
+    "w": 1280,
+    "h": 866,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/from-uk/hero.webp": {
+    "w": 1280,
+    "h": 914,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/from-usa/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/golden-visa/hero.webp": {
+    "w": 1280,
+    "h": 724,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/international-schools/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/move-to-portugal/retire-in-portugal/hero.webp": {
+    "w": 1280,
+    "h": 864,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/projects/carvalhido/hero.webp": {
+    "w": 1280,
+    "h": 964,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/projects/castilho-203/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/projects/infinity/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/projects/mar-adentro/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/projects/six-senses-comporta/hero.webp": {
+    "w": 1280,
+    "h": 1036,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/projects/terracos-do-monte/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/projects/tomas-ribeiro-79/hero.webp": {
+    "w": 1280,
+    "h": 966,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/albufeira/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/alentejo-comporta/hero.webp": {
+    "w": 1280,
+    "h": 841,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/algarve/hero.webp": {
+    "w": 1280,
+    "h": 855,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/alvor/hero.webp": {
+    "w": 1280,
+    "h": 1280,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/apartments/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/azores/hero.webp": {
+    "w": 1280,
+    "h": 764,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/carvoeiro/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/cascais/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/central-and-northern-portugal/hero.webp": {
+    "w": 1280,
+    "h": 720,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/cheap-property/hero.webp": {
+    "w": 1280,
+    "h": 860,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/coastal-sea-view/hero.webp": {
+    "w": 1280,
+    "h": 855,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/ericeira/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/faro/hero.webp": {
+    "w": 1280,
+    "h": 885,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/lagos/hero.webp": {
+    "w": 1280,
+    "h": 753,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/lisbon/hero.webp": {
+    "w": 1280,
+    "h": 1030,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/madeira/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/porto/hero.webp": {
+    "w": 1280,
+    "h": 865,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/quinta-do-lago/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/rural-and-land/hero.webp": {
+    "w": 1280,
+    "h": 720,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/silver-coast/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/tavira/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/vilamoura/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/property-for-sale/villas/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/american-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 897,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/angolan-buyers-portugal/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/australian-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/brazilian-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 633,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/canadian-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 816,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/chinese-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/french-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/german-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 854,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/indian-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 960,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/israeli-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/south-african-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 853,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/uae-buyers-portugal-property/hero.webp": {
+    "w": 1280,
+    "h": 801,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  },
+  "more-group/portugal/segments/uk-buyers-portugal-property-brexit/hero.webp": {
+    "w": 1280,
+    "h": 715,
+    "variants": [
+      360,
+      640,
+      768,
+      960
+    ]
+  }
+}

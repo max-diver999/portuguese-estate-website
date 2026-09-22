@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "prebuild": "npm run images:verify && node scripts/generate-llms.mjs && node scripts/ai-visibility/page-lastmod.mjs && node scripts/ai-visibility/generate-agent-markdown.mjs && node scripts/ai-visibility/generate-agent-card.mjs && node scripts/ai-visibility/check-agent-index.mjs",
     "build": "astro build",
-    "postbuild": "node scripts/patch-vercel-output.mjs && node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs && npm run speed:verify && node scripts/test-image-transforms.mjs --offline && node scripts/test-related-contrast.mjs",
+    "postbuild": "node scripts/patch-vercel-output.mjs && node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs && npm run speed:verify && node scripts/test-image-transforms.mjs --offline && node scripts/test-related-contrast.mjs && node scripts/check-images.mjs --dir .vercel/output/static",
     "test:images": "node scripts/test-image-transforms.mjs",
     "test:related-contrast": "node scripts/test-related-contrast.mjs",
     "preview": "astro preview",
