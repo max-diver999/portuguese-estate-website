@@ -6,6 +6,8 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "cadence:gate": "node scripts/cadence-gate-new.mjs",
+    "validate:batch": "node scripts/cadence-gate-new.mjs",
     "dev": "astro dev",
     "prebuild": "node scripts/cadence-check.mjs --changed --fail-hard && npm run images:verify && node scripts/generate-llms.mjs && node scripts/ai-visibility/page-lastmod.mjs && node scripts/ai-visibility/generate-agent-markdown.mjs && node scripts/ai-visibility/generate-agent-card.mjs && node scripts/ai-visibility/check-agent-index.mjs",
     "build": "astro build",
