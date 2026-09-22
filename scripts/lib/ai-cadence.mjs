@@ -14,6 +14,9 @@
  *
  * Плюс жёсткий слой невидимых символов: им в тексте не место никогда.
  *
+ * И необязательный слой чужих слов: английский и транслит в тексте на другом
+ * языке, по словарю сайта с готовыми заменами (findForeignTerms).
+ *
  * Пороги НЕ зашиты. Их задаёт вызывающая сторона, а откалиброваны они по
  * нашему живому корпусу через `node scripts/ru-cadence-check.mjs --calibrate`.
  * Ставить порог из головы нельзя: наш собственный замер на GEO-балле уже
@@ -353,6 +356,181 @@ export function repeatedPhrases(prose, { n = 4, minCount = 3 } = {}) {
 }
 
 // ---------------------------------------------------------------------------
+// Слой 3: чужие слова по словарю сайта (необязательный)
+// ---------------------------------------------------------------------------
+
+/**
+ * Английские слова и транслит в тексте на другом языке: «shortlist», «yield»,
+ * «кейс», «фрихолд». Словарь с заменами задаёт сайт в scripts/lib/cadence-terms.mjs;
+ * нет файла - слой молчит.
+ *
+ * Зачем отдельный слой, а не разовая чистка. На русском сайте исправитель уже
+ * заменял 108 английских терминов, и часть вернулась: shortlist 13 раз, yield 25,
+ * compliance 13. Разовая чистка без проверки не держит.
+ *
+ * Главная ловушка - названия. «Serene Condo Layan», «Gardens of Eden», «LTR visa»
+ * законная латиница. Правило: слово из словаря не считается, если стоит внутри
+ * латинского оборота, где есть слово С ЗАГЛАВНОЙ буквы, которого нет в словаре.
+ * «Shortlist» в начале предложения ловится: в обороте нет других слов.
+ *
+ * Формат словаря:
+ *   { dictionary: [{ match: 'cash flow', replace: 'денежный поток' },
+ *                  { re: 'кейс[а-яё]*', replace: 'пример' }],
+ *     // evenCapitalized: true - метить и в названии («Land Department» → «земельный отдел»)
+ *     allowLatin: ['vs', ...],        // строчная латиница, которую не метить
+ *     flagUnknownLatin: true,         // метить незнакомую строчную латиницу
+ *     scanFrontmatter: ['title', 'description'] }
+ */
+
+const LATIN_TOKEN = /[A-Za-z][A-Za-z0-9'’&.%/+-]*/;
+const LATIN_SPAN = new RegExp(
+  `(?<![\\p{L}\\p{N}])${LATIN_TOKEN.source}(?:[ \\t]+[A-Za-z0-9][A-Za-z0-9'’&.%/+-]*)*(?![\\p{L}\\p{N}])`,
+  'gu',
+);
+const NAME_GLUE = new Set(['the', 'of', 'de', 'la', 'le', 'and', 'by', 'at', 'on', 'in', 'du', 'des', 'del', 'di', 'da', 'van', 'von', '&']);
+
+function escapeRe(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function compileTerms(terms) {
+  if (terms.__compiled) return terms.__compiled;
+  const entries = (terms.dictionary || []).map((e, i) => {
+    let src;
+    if (e.re) src = e.re;
+    else src = e.match.trim().split(/\s+/).map(escapeRe).join('[\\s-]+');
+    const re = new RegExp(`(?<![\\p{L}\\p{N}])(?:${src})(?![\\p{L}\\p{N}])`, 'giu');
+    return {
+      id: i, label: e.label || e.match || e.re, replace: e.replace, re, latin: /[A-Za-z]/.test(src),
+      evenCapitalized: Boolean(e.evenCapitalized), wordCount: e.match ? e.match.trim().split(/\s+/).length : 1,
+    };
+  });
+  const dictWords = new Set();
+  for (const e of terms.dictionary || []) {
+    if (e.match) for (const w of e.match.toLowerCase().split(/[\s-]+/)) dictWords.add(w);
+  }
+  const allow = new Set((terms.allowLatin || []).map((w) => w.toLowerCase()));
+  terms.__compiled = { entries, dictWords, allow };
+  return terms.__compiled;
+}
+
+function frontmatterFields(raw, fields) {
+  const fm = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!fm || !fields || !fields.length) return '';
+  const out = [];
+  for (const f of fields) {
+    const m = fm[1].match(new RegExp(`^${f}:\\s*(.+)$`, 'm'));
+    if (m) out.push(m[1].replace(/^["']|["']$/g, ''));
+  }
+  return out.join('.\n\n');
+}
+
+/** Латинские обороты текста: [начало, конец, слова]. */
+function latinSpans(text) {
+  const spans = [];
+  for (const m of text.matchAll(LATIN_SPAN)) {
+    spans.push({ start: m.index, end: m.index + m[0].length, words: m[0].split(/[ \t]+/) });
+  }
+  return spans;
+}
+
+/**
+ * Пояснение оригиналом: «документ о праве (Chanote)», «обещают “guaranteed return”».
+ * Правило русского текста это прямо разрешает: русское слово и оригинал в скобках.
+ * Латиница, которая целиком стоит в скобках или кавычках, не метится.
+ */
+function isGloss(text, span) {
+  const before = text.slice(Math.max(0, span.start - 3), span.start);
+  const after = text.slice(span.end, span.end + 3);
+  if (/\(\s*$/.test(before) && /^\s*[),;]/.test(after)) return true;
+  if (/[«"“‘']\s*$/.test(before) && /^\s*[»"”’']/.test(after)) return true;
+  return false;
+}
+
+/**
+ * Оборот считается названием, если:
+ *  - в нём есть слово с заглавной, которого нет в словаре («Serene Condo Layan»);
+ *  - или в нём два слова и больше, и все значимые слова с заглавной («The Title»,
+ *    «Pool Villa»). Так пишутся имена проектов, и слово из словаря внутри имени
+ *    не жаргон.
+ * Одно слово с заглавной («Shortlist» в начале предложения) названием не считается.
+ */
+function isNameSpan(span, dictWords) {
+  const clean = span.words.map((w) => ({ w, low: w.toLowerCase().replace(/[.,'’]+$/, '') }));
+  const unknownCapital = clean.some(({ w, low }) => /^[A-Z]/.test(w) && !NAME_GLUE.has(low) && !dictWords.has(low));
+  if (unknownCapital) return true;
+  // «The Title», «Pool Villa», «Gardens of Eden»: два слова с заглавной и больше,
+  // строчными допускаются только служебные («of», «de»).
+  const capitals = clean.filter(({ w }) => /^[A-Z0-9]/.test(w)).length;
+  const allNameLike = clean.every(({ w, low }) => /^[A-Z0-9]/.test(w) || NAME_GLUE.has(low));
+  return capitals >= 2 && allNameLike;
+}
+
+/** Слова, которые правило велит писать по-русски даже как имя: «Land Department». */
+function isForcedEvenAsName(entry, span) {
+  return Boolean(entry.evenCapitalized) && span.words.length <= entry.wordCount + 1;
+}
+
+export function findForeignTerms(raw, terms) {
+  if (!terms) return { hits: [], unknown: [] };
+  const { entries, dictWords, allow } = compileTerms(terms);
+  const text = `${frontmatterFields(raw, terms.scanFrontmatter)}\n\n${extractProse(raw)}`
+    .replace(/https?:\/\/\S+/g, ' ')
+    .replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, ' ');
+  const spans = latinSpans(text);
+  const spanAt = (pos) => spans.find((s) => pos >= s.start && pos < s.end);
+
+  // Все совпадения словаря, длинные раньше коротких, без наложений.
+  const raw_hits = [];
+  for (const e of entries) {
+    e.re.lastIndex = 0;
+    for (const m of text.matchAll(e.re)) raw_hits.push({ e, start: m.index, end: m.index + m[0].length, text: m[0] });
+  }
+  raw_hits.sort((a, b) => (b.end - b.start) - (a.end - a.start) || a.start - b.start);
+  const taken = [];
+  const counted = new Map();
+  for (const h of raw_hits) {
+    if (taken.some((t) => h.start < t.end && h.end > t.start)) continue;
+    if (h.e.latin) {
+      const span = spanAt(h.start);
+      if (span && isGloss(text, span)) continue;
+      if (span && isNameSpan(span, dictWords) && !isForcedEvenAsName(h.e, span)) continue;
+    }
+    taken.push(h);
+    const c = counted.get(h.e.id) || { term: h.e.label, replace: h.e.replace, count: 0, samples: [] };
+    c.count += 1;
+    if (c.samples.length < 2) {
+      c.samples.push(text.slice(Math.max(0, h.start - 40), Math.min(text.length, h.end + 40)).replace(/\s+/g, ' ').trim());
+    }
+    counted.set(h.e.id, c);
+  }
+
+  // Незнакомая строчная латиница вне названий.
+  const unknown = new Map();
+  if (terms.flagUnknownLatin) {
+    for (const span of spans) {
+      if (isNameSpan(span, dictWords) || isGloss(text, span)) continue;
+      let pos = span.start;
+      for (const w of span.words) {
+        const at = text.indexOf(w, pos);
+        pos = at + w.length;
+        const low = w.toLowerCase().replace(/[.,'’]+$/, '');
+        if (!/^[a-z]/.test(w) || low.length < 2) continue;
+        if (/\.[a-z]{2,}/.test(low)) continue; // домен
+        if (allow.has(low) || NAME_GLUE.has(low)) continue;
+        if (taken.some((t) => at >= t.start && at < t.end)) continue;
+        unknown.set(low, (unknown.get(low) || 0) + 1);
+      }
+    }
+  }
+
+  return {
+    hits: [...counted.values()].sort((a, b) => b.count - a.count),
+    unknown: [...unknown.entries()].sort((a, b) => b[1] - a[1]).map(([word, count]) => ({ word, count })),
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Главная функция
 // ---------------------------------------------------------------------------
 
@@ -378,9 +556,10 @@ function weighted(hits) {
  * @param {string} raw полный текст файла (с frontmatter)
  * @param {object} opts
  * @param {'ru'|'en'} opts.lang
+ * @param {object|null} opts.terms словарь чужих слов сайта (scripts/lib/cadence-terms.mjs)
  * @returns подробный разбор: счётчики, плотность, примеры
  */
-export function analyzeCadence(raw, { lang = 'ru' } = {}) {
+export function analyzeCadence(raw, { lang = 'ru', terms = null } = {}) {
   const pack = PACKS[lang];
   if (!pack) throw new Error(`неизвестный язык: ${lang}`);
 
@@ -417,6 +596,7 @@ export function analyzeCadence(raw, { lang = 'ru' } = {}) {
     staccato: staccato(prose),
     repeated: repeatedPhrases(prose),
     invisible: findInvisible(raw),
+    foreignTerms: findForeignTerms(raw, terms),
   };
 }
 
@@ -442,6 +622,18 @@ export function cadenceIssues(analysis, thresholds = {}) {
       kind: 'invisible-char',
       detail: `${inv.name} (${inv.code}) ×${inv.count}`,
     });
+  }
+
+  // Чужие слова считаются на любой длине: «shortlist» в короткой новости
+  // такая же ошибка, как в длинном гайде.
+  const ft = analysis.foreignTerms;
+  if (ft && ft.hits.length) {
+    const list = ft.hits.slice(0, 6).map((h) => `«${h.term}» → ${h.replace}${h.count > 1 ? ` ×${h.count}` : ''}`).join('; ');
+    issues.push({ kind: 'foreign-term', detail: `английские слова и жаргон: ${list}${ft.hits.length > 6 ? ` и ещё ${ft.hits.length - 6}` : ''}` });
+  }
+  if (ft && ft.unknown.length) {
+    const list = ft.unknown.slice(0, 8).map((u) => `${u.word}${u.count > 1 ? ` ×${u.count}` : ''}`).join(', ');
+    issues.push({ kind: 'latin-word', detail: `латиница без перевода: ${list}${ft.unknown.length > 8 ? ` и ещё ${ft.unknown.length - 8}` : ''} (если это законное слово - добавить в allowLatin)` });
   }
 
   if (analysis.words < minWords) return { issues, hard };
