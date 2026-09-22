@@ -1,0 +1,7 @@
+{
+  "updatedAt": "2026-09-22",
+  "files": {
+    "scripts/lib/ai-cadence.mjs": "a1e6aad2ea3b2730dee09e8a2f6b9c7c38f7d77611d18c4ac8d1dca7dfd40763",
+    "scripts/cadence-check.mjs": "1f25c08916ea2765e14ff1d1cfd019bcc0b172bf189360fc99f499f8308755e8"
+  }
+}

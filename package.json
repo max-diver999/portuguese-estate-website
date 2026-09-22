@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "npm run images:verify && node scripts/generate-llms.mjs && node scripts/ai-visibility/page-lastmod.mjs && node scripts/ai-visibility/generate-agent-markdown.mjs && node scripts/ai-visibility/generate-agent-card.mjs && node scripts/ai-visibility/check-agent-index.mjs",
+    "prebuild": "node scripts/cadence-check.mjs --changed --fail-hard && npm run images:verify && node scripts/generate-llms.mjs && node scripts/ai-visibility/page-lastmod.mjs && node scripts/ai-visibility/generate-agent-markdown.mjs && node scripts/ai-visibility/generate-agent-card.mjs && node scripts/ai-visibility/check-agent-index.mjs",
     "build": "astro build",
     "postbuild": "node scripts/patch-vercel-output.mjs && node scripts/audit-rendered-live.mjs --local --fail && node scripts/audit-rendered-image-uniqueness.mjs && npm run speed:verify && node scripts/test-image-transforms.mjs --offline && node scripts/test-related-contrast.mjs && node scripts/check-images.mjs --dir .vercel/output/static",
     "test:images": "node scripts/test-image-transforms.mjs",
@@ -55,7 +55,11 @@
     "ai:card": "node scripts/ai-visibility/generate-agent-card.mjs",
     "ai:lastmod": "node scripts/ai-visibility/page-lastmod.mjs",
     "ai:check": "node scripts/ai-visibility/check-agent-index.mjs",
-    "ai:verify": "node scripts/ai-visibility/verify-live.mjs"
+    "ai:verify": "node scripts/ai-visibility/verify-live.mjs",
+    "cadence": "node scripts/cadence-check.mjs --changed",
+    "cadence:all": "node scripts/cadence-check.mjs --all",
+    "cadence:calibrate": "node scripts/cadence-check.mjs --calibrate",
+    "cadence:parity": "node scripts/cadence-parity.mjs"
   },
   "dependencies": {
     "google-auth-library": "^10.6.2",
