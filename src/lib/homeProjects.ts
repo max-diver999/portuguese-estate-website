@@ -14,7 +14,6 @@ const AREA_PRIORITY = [
   'lisbon-sete-rios',
   'lisbon-graca',
   'comporta',
-  'porto-carvalhido',
   'faro',
 ];
 

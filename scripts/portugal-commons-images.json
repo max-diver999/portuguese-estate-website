@@ -11,7 +11,7 @@
     "minBrightness": 0.42,
     "maxBrightness": 0.95
   },
-  "total": 77,
+  "total": 75,
   "uniqueFiles": 88,
   "failures": [],
   "images": [
@@ -166,27 +166,6 @@
       "commonsTitle": "File:Houses in Porto (38089511162).jpg",
       "matchedTerm": "Porto Ribeira houses",
       "altSubject": "Houses in Porto"
-    },
-    {
-      "slug": "carvalhido",
-      "collection": "projects",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porto_-_Pal%C3%A1cio_da_Bolsa_%2854938113921%29.jpg/1280px-Porto_-_Pal%C3%A1cio_da_Bolsa_%2854938113921%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Porto_-_Pal%C3%A1cio_da_Bolsa_%2854938113921%29.jpg",
-      "width": 4080,
-      "height": 3072,
-      "alt": "The Palacio da Bolsa in Porto",
-      "altSubject": "Porto - Palácio da Bolsa",
-      "credit": "Joaquim Morgado / Wikimedia Commons",
-      "licence": "CC BY 4.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Porto_-_Pal%C3%A1cio_da_Bolsa_(54938113921).jpg",
-      "commonsTitle": "File:Porto - Palácio da Bolsa (54938113921).jpg",
-      "matchedTerm": "cat:Gardens in Porto",
-      "aesthetics": {
-        "colourfulness": 49.4,
-        "saturation": 0.409,
-        "brightness": 0.565,
-        "greyMass": 0.187
-      }
     },
     {
       "slug": "castilho-203",
@@ -351,28 +330,6 @@
         "saturation": 0.289,
         "brightness": 0.659,
         "greyMass": 0.266
-      }
-    },
-    {
-      "slug": "farinvest-properties-portugal",
-      "collection": "developers",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Marina_de_Vilamoura_-_Portugal_%284790285971%29.jpg/1280px-Marina_de_Vilamoura_-_Portugal_%284790285971%29.jpg",
-      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Marina_de_Vilamoura_-_Portugal_%284790285971%29.jpg",
-      "width": 5124,
-      "height": 3844,
-      "alt": "Praça Duque de Saldanha and Avenida da República, Lisbon",
-      "altSubject": "Marina de Vilamoura - Portugal",
-      "credit": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons",
-      "licence": "CC BY-SA 2.0",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Marina_de_Vilamoura_-_Portugal_(4790285971).jpg",
-      "commonsTitle": "File:Marina de Vilamoura - Portugal (4790285971).jpg",
-      "matchedTerm": "cat:Marina de Vilamoura",
-      "aesthetics": {
-        "colourfulness": 41,
-        "saturation": 0.281,
-        "brightness": 0.596,
-        "greyMass": 0.47,
-        "hash": "e0e0c002041b1882"
       }
     },
     {
