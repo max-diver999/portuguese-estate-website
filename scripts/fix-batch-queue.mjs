@@ -23,6 +23,7 @@ import { fileURLToPath } from 'node:url';
 import { runStrictValidate, validatorOnlyHints } from './lib/fix-batch-validate.mjs';
 import {
   AI_FLUFF_RE,
+  PROS_CONS_RE,
   BANNED_PHRASES,
   DRAFT_MARKERS_RE,
   countBoldSpans,
@@ -228,7 +229,7 @@ function analyze(file, index) {
       const noSlash = linksWithoutTrailingSlash(body);
       if (noSlash.length) issues.push('missing-trailing-slash');
       if (countMarkdownTableRows(body) < 6) issues.push('missing-table');
-      if (!/(pros|cons|плюс|минус|advantages|disadvantages)/i.test(body)) {
+      if (!PROS_CONS_RE.test(body)) {
         issues.push('missing-pros-cons');
       }
       if (!/(риск|red flag|checklist|чеклист|what to check|insider tip|risks?)/i.test(body)) {
