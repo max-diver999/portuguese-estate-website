@@ -40,8 +40,8 @@ const heroProject = projectBySlug.get(HOMEPAGE_HERO_PROJECT_SLUG) ?? homepagePro
 const featuredForSale = FEATURED_FOR_SALE_SLUGS.map((slug) => forSaleBySlug.get(slug)).filter(Boolean);
 
 /*
- * Served straight from the build. responsiveImage() only rewrites Cloudinary
- * public IDs and otherwise falls back to a hardcoded 1280x720, which did not
+ * Served straight from the build. responsiveImage() only builds a srcset for
+ * photos in the R2 manifest and otherwise falls back to a hardcoded 1280x720, which did not
  * match this photograph and left bands of ground inside the frame.
  */
 const hero = responsiveImage(HOMEPAGE_HERO_IMAGE, 'homepage');
@@ -146,7 +146,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
             priceFromUsd={project.data.priceFromUsd}
           />
         )) : (
-          <p class="text-[var(--color-muted)] col-span-full py-8">Project reviews publishing soon, parser batch 1 ready on Cloudinary.</p>
+          <p class="text-[var(--color-muted)] col-span-full py-8">Project reviews publishing soon.</p>
         )}
       </div>
       <div class="mt-8 text-center sm:hidden">
