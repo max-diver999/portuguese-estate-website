@@ -1,8 +1,8 @@
 User-agent: *
 # Content Signals (contentsignals.org / IETF draft-romm-aipref-contentsignals)
-# Citation in AI search and retrieval is allowed. Training on this content is not.
+# Citation in AI search and retrieval is allowed. Training on this content is allowed too.
 # In the wildcard group, because the directive speaks only for the group it sits in.
-Content-Signal: search=yes, ai-input=yes, ai-train=no
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Disallow: /api/
 Disallow: /thanks/
 Disallow: /site-report/
@@ -72,31 +72,58 @@ Disallow: /site-report/
 # Model-training crawlers
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: CCBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: Applebot-Extended
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: FacebookBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: meta-externalagent
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 User-agent: Bytespider
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /thanks/
+Disallow: /site-report/
 
 # Corpus index for answer engines
 # https://portuguese-estate.com/llms.txt

@@ -135,7 +135,7 @@ async function writeHomepage(perCollection) {
 
   lines.push(`## ${L.policyHeading}`, '');
   lines.push(`- ${L.policyCite} (Content-Signal: \`search=${p.search ?? 'yes'}, ai-input=${p.aiInput ?? 'yes'}\`).`);
-  lines.push(`- ${p.aiTrain === 'yes' ? L.policyTrainYes : L.policyTrainNo} (Content-Signal: \`ai-train=${p.aiTrain ?? 'no'}\`).`);
+  lines.push(`- ${p.aiTrain === 'yes' ? L.policyTrainYes : L.policyTrainNo} (Content-Signal: \`ai-train=${p.aiTrain ?? 'yes'}\`).`);
   lines.push(`- ${L.policyMarkdown}`);
   lines.push('');
   await fs.writeFile(path.join(PUBLIC_DIR, 'index.md'), lines.join('\n'), 'utf8');
@@ -179,7 +179,7 @@ async function writeLlmsIndex(perCollection) {
 
   lines.push(`## ${L.policyHeading}`, '');
   lines.push(`- ${L.policyCite} (Content-Signal: \`search=${p.search ?? 'yes'}, ai-input=${p.aiInput ?? 'yes'}\`).`);
-  lines.push(`- ${p.aiTrain === 'yes' ? L.policyTrainYes : L.policyTrainNo} (Content-Signal: \`ai-train=${p.aiTrain ?? 'no'}\`).`);
+  lines.push(`- ${p.aiTrain === 'yes' ? L.policyTrainYes : L.policyTrainNo} (Content-Signal: \`ai-train=${p.aiTrain ?? 'yes'}\`).`);
   lines.push(`- ${L.policyMarkdown}`);
   lines.push('');
   await fs.writeFile(path.join(PUBLIC_DIR, 'llms.txt'), lines.join('\n'), 'utf8');
