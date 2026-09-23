@@ -1,0 +1,149 @@
+AI-каденция: проверено 114, с замечаниями 26, с жёсткими нарушениями 0
+
+src/content/compare/algarve-vs-lisbon-property-investment.mdx  (3419 слов, 2.3/1k, метроном 10%, CV 0.45)
+   ---   parallel-starts: 4 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «not vary between the Algarve and Lisbon, but entry capital does»
+         antithesis: «, not the floor plan you would personally prefer»
+         colonHook: «. Critical investor rule:»
+         superlativeOpener: «. The most»
+
+src/content/compare/lagos-vs-vilamoura-investment.mdx  (2277 слов, 1.8/1k, метроном 22%, CV 0.54)
+   ---   parallel-starts: 4 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «not pick the town, but buyer pool depth affects resale liquidity and»
+         antithesis: «, not on the best July week an agent forwards in a»
+
+src/content/compare/lisbon-vs-cascais-property.mdx  (3052 слов, 2/1k, метроном 21%, CV 0.48)
+   ---   parallel-starts: 6 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «not pick the market, but buyer pool depth affects resale liquidity and»
+         antithesis: «, not on the best August week an agent forwards in»
+
+src/content/compare/new-build-vs-resale-property-portugal.mdx  (2475 слов, 2.4/1k, метроном 31%, CV 0.59)
+   ---   metronome: 27 из 87 абзацев закрыты короткой фразой (31%, порог 25%)
+   ---   parallel-starts: 5 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «, not empty developer accounts»
+         antithesis: «, not tax exemption»
+
+src/content/developers/farinvest-properties-portugal.mdx  (2664 слов, 6/1k, метроном 22%, CV 0.49)
+   ---   ai-marker-density: 6.0 маркеров на 1000 слов (порог 4); больше всего antithesis:16
+         antithesis: «, not a tier-one national developer like Vanguard P»
+         antithesis: «, not a recommendation to buy»
+
+src/content/developers/vanguard-properties-portugal.mdx  (2458 слов, 4.5/1k, метроном 16%, CV 0.45)
+   ---   ai-marker-density: 4.5 маркеров на 1000 слов (порог 4); больше всего antithesis:11
+   ---   parallel-starts: 4 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «, not a recommendation to buy»
+         antithesis: «, not negotiable»
+
+src/content/developers/vic-properties-portugal.mdx  (2304 слов, 5.6/1k, метроном 36%, CV 0.51)
+   ---   ai-marker-density: 5.6 маркеров на 1000 слов (порог 4); больше всего antithesis:12, colonHook:1
+   ---   metronome: 23 из 64 абзацев закрыты короткой фразой (36%, порог 30%)
+         antithesis: «, not a sales brochure»
+         antithesis: «, not investment»
+         colonHook: «. VIC's scale makes the guide more important, not less:»
+
+src/content/guides/complete-before-september-2026-imt-guide.mdx  (2199 слов, 3.6/1k, метроном 37%, CV 0.66)
+   ---   metronome: 19 из 51 абзацев закрыты короткой фразой (37%, порог 30%)
+         antithesis: «, not the offer date and not the CPCV date»
+         antithesis: «, not escritura»
+         colonHook: «. The key point is simple:»
+         superlativeOpener: «. The key point»
+
+src/content/guides/cpcv-promissory-contract-portugal.mdx  (4000 слов, 3/1k, метроном 24%, CV 0.75)
+   ---   parallel-starts: 4 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «not require notarisation, but many lawyers notarise it voluntarily to »
+         antithesis: «, not the seller's personal account)»
+
+src/content/guides/porto-alojamento-local-rules.mdx  (2959 слов, 2.4/1k, метроном 29%, CV 0.61)
+   ---   parallel-starts: 5 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «not use Lisbon's RMAL dual register, but it does operate a mandatory m»
+         antithesis: «, not rely on a map screenshot from a prior year»
+         colonHook: «Foz do Douro illustrates an important nuance:»
+
+src/content/guides/porto-property-investment-guide.mdx  (3579 слов, 2.2/1k, метроном 30%, CV 0.62)
+   ---   metronome: 22 из 73 абзацев закрыты короткой фразой (30%, порог 30%)
+         antithesis: «are not a monolith, but Porto occupies a distinct niche in their geog»
+         antithesis: «, not as a cheap substitute for Lisbon liquidity»
+         superlativeOpener: «. The most»
+
+src/content/guides/portugal-capital-gains-tax-property.mdx  (3752 слов, 2.1/1k, метроном 20%, CV 1.19)
+   ---   parallel-starts: 6 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «, not an election»
+         antithesis: «, not Portuguese property»
+         colonHook: «Key treaty countries:»
+         colonHook: «Critical timing considerations:»
+
+src/content/guides/portugal-d7-visa-property.mdx  (2553 слов, 0.8/1k, метроном 33%, CV 0.76)
+   ---   metronome: 22 из 66 абзацев закрыты короткой фразой (33%, порог 30%)
+         antithesis: «, not sunk cost»
+         antithesis: «, not only fiscal rep placeholder)»
+
+src/content/guides/portugal-property-1-million-plus-investment.mdx  (1727 слов, 2.9/1k, метроном 46%, CV 0.55)
+   ---   metronome: 18 из 39 абзацев закрыты короткой фразой (46%, порог 30%)
+         antithesis: «, not purchase price alone»
+         antithesis: «, not Lisbon multiples»
+
+src/content/guides/portugal-property-inheritance-tax-foreigners.mdx  (2300 слов, 2.2/1k, метроном 19%, CV 0.47)
+   ---   parallel-starts: 4 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «not opt in, but the regulation can still matter for Portugues»
+         antithesis: «, not template documents from two countries that ig»
+
+src/content/guides/portugal-property-under-500000-euros.mdx  (1925 слов, 3.1/1k, метроном 48%, CV 0.64)
+   ---   metronome: 19 из 40 абзацев закрыты короткой фразой (48%, порог 30%)
+         antithesis: «, not Chiado penthouses»
+         antithesis: «, not front-line marina»
+
+src/content/guides/sell-property-portugal-non-resident.mdx  (2020 слов, 3/1k, метроном 14%, CV 0.54)
+   ---   parallel-starts: 5 пар предложений с одинаковым стартом (порог 3)
+         antithesis: «, not agency services»
+         antithesis: «, not properties»
+
+src/content/move-to-portugal/cost-of-living.mdx  (2168 слов, 3.2/1k, метроном 18%, CV 0.76)
+   ---   ai-marker-density: 3.2 маркеров на 1000 слов (порог 3); больше всего antithesis:6, superlativeOpener:1
+         antithesis: «, not by local wages»
+         antithesis: «, not the gross»
+         superlativeOpener: «. The best»
+
+src/content/move-to-portugal/d7-visa.mdx  (2303 слов, 3/1k, метроном 15%, CV 0.80)
+   ---   ai-marker-density: 3.0 маркеров на 1000 слов (порог 3); больше всего antithesis:7
+         antithesis: «, not the target»
+         antithesis: «, not just an investment one»
+
+src/content/move-to-portugal/from-usa.mdx  (2202 слов, 3.2/1k, метроном 46%, CV 0.86)
+   ---   ai-marker-density: 3.2 маркеров на 1000 слов (порог 3); больше всего antithesis:7
+   ---   metronome: 21 из 46 абзацев закрыты короткой фразой (46%, порог 30%)
+         antithesis: «, not by passport»
+         antithesis: «, not a credit waiting to happen»
+
+src/content/move-to-portugal/retire-in-portugal.mdx  (1896 слов, 3.2/1k, метроном 26%, CV 0.82)
+   ---   ai-marker-density: 3.2 маркеров на 1000 слов (порог 3); больше всего antithesis:5, colonHook:1
+         antithesis: «, not investment»
+         antithesis: «, not under NHR»
+         colonHook: «. The exemption row is the good news and it is frequently misunderstoo»
+
+src/content/projects/tomas-ribeiro-79.mdx  (952 слов, 4.2/1k, метроном 6%, CV 0.58)
+   ---   ai-marker-density: 4.2 маркеров на 1000 слов (порог 4); больше всего antithesis:4
+         antithesis: «, not as a base case»
+         antithesis: «, not the marketing brand or an agency»
+
+src/content/property-for-sale/albufeira.mdx  (1905 слов, 2.6/1k, метроном 17%, CV 0.83)
+   ---   ai-marker-density: 2.6 маркеров на 1000 слов (порог 2.5); больше всего antithesis:5
+         antithesis: «, not inside them»
+         antithesis: «, not per town»
+
+src/content/property-for-sale/cascais.mdx  (2095 слов, 1.9/1k, метроном 30%, CV 0.71)
+   ---   metronome: 13 из 43 абзацев закрыты короткой фразой (30%, порог 30%)
+         antithesis: «, not by the view»
+         antithesis: «, not property»
+         superlativeOpener: «. The most»
+
+src/content/property-for-sale/cheap-property.mdx  (1716 слов, 2.9/1k, метроном 22%, CV 0.79)
+   ---   ai-marker-density: 2.9 маркеров на 1000 слов (порог 2.5); больше всего antithesis:5
+         antithesis: «, not the municipality's»
+         antithesis: «, not just a roof problem»
+
+src/content/property-for-sale/lisbon.mdx  (2115 слов, 2.8/1k, метроном 20%, CV 0.77)
+   ---   ai-marker-density: 2.8 маркеров на 1000 слов (порог 2.5); больше всего antithesis:5, superlativeOpener:1
+         antithesis: «, not after»
+         antithesis: «, not a percentage»
+         superlativeOpener: «. The most»
+
