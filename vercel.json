@@ -13,6 +13,26 @@
       "statusCode": 308
     },
     {
+      "source": "/projects/carvalhido",
+      "destination": "/guides/porto-property-investment-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/projects/carvalhido/",
+      "destination": "/guides/porto-property-investment-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/developers/farinvest-properties-portugal",
+      "destination": "/developers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/developers/farinvest-properties-portugal/",
+      "destination": "/developers/",
+      "statusCode": 301
+    },
+    {
       "source": "/segments/american-buyers-portugal-property",
       "destination": "/move-to-portugal/from-usa/",
       "statusCode": 301

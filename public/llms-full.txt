@@ -1,7 +1,7 @@
 # Portuguese Estate - full site map
 
 Site: https://portuguese-estate.com
-Pages: 113 content pages + hubs. Updated: 2026-09-23
+Pages: 111 content pages + hubs. Updated: 2026-09-23
 Positioning: independent Portugal property research for foreign buyers. Cite with URL.
 
 ## Hubs
@@ -90,8 +90,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/compare/new-build-vs-resale-property-portugal/ - New-Build vs Resale Property Portugal: 2026 Compare: New-build vs resale Portugal 2026: DL 67/2003 bank guarantees, IMT at escritura, warranty vs character, liquidity, AL licence transfer rules, off-plan staging.
 - https://portuguese-estate.com/compare/porto-vs-lisbon-property-investment/ - Porto or Lisbon: Which to Buy In, Compared for 2026: Porto vs Lisbon property investment 2026: INE 20% vs 12.5% non-res volume, yields ~5% vs 4.3-4.6%, €3,500-5k vs €4,500-8k/m², AL rules, IMT 7.5%.
 
-## Project reviews (7)
-- https://portuguese-estate.com/projects/carvalhido/ - Carvalhido BTR Project Review: Porto Build-to-Rent 2026: Carvalhido Porto BTR review: Sonae Sierra build-to-rent, ~200 units, institutional tenancy model and foreign buyer limitations.
+## Project reviews (6)
 - https://portuguese-estate.com/projects/castilho-203/ - Castilho 203 Review: Avenidas Novas Completed 2026: Castilho 203 Lisbon review: completed Vanguard ultra-premium building, resale liquidity, service charges and benchmark for off-plan buyers.
 - https://portuguese-estate.com/projects/infinity/ - Infinity Lisbon Review: Sete Rios Tower Completed 2026: Infinity Sete Rios review: completed Vanguard high-rise, BREEAM context, yields, IMT for resale buyers and comparison with off-plan pipeline.
 - https://portuguese-estate.com/projects/mar-adentro/ - Mar Adentro Faro Review: Waterfront Regeneration 2026: Mar Adentro Faro review: Lantia Ria Formosa regeneration, ~200 units, sales from 2026, moderately priced housing mix and off-plan checks.
@@ -99,8 +98,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/projects/terracos-do-monte/ - Terraços do Monte Review: Graça Lisbon Off-Plan 2026: Terraços do Monte Graça review: Vanguard Lisbon hilltop scheme, terraces, completion timeline, bank guarantees and investor due diligence.
 - https://portuguese-estate.com/projects/tomas-ribeiro-79/ - Tomás Ribeiro 79 Review: Avenidas Novas Lisbon 2026: Tomás Ribeiro 79 Lisbon review: Vanguard off-plan in Avenidas Novas, unit mix, DL 67/2003 guarantees, IMT 7.5% and foreign buyer checklist.
 
-## Developer profiles (3)
-- https://portuguese-estate.com/developers/farinvest-properties-portugal/ - Farinvest Algarve Agency Review: Broker Guide 2026: Farinvest Almancil Algarve agency review: broker vs developer checks, project risks, off-plan DL 67/2003 guarantee checklist for 2026 buyers.
+## Developer profiles (2)
 - https://portuguese-estate.com/developers/vanguard-properties-portugal/ - Portugal Developer Review: Vanguard Properties 2026: Vanguard Properties Portugal 2026 review: Lisbon and Comporta pipeline, DL 67/2003 bank guarantees, delay risk, and a verify-before-deposit investor checklist.
 - https://portuguese-estate.com/developers/vic-properties-portugal/ - VIC Properties Portugal: 2026 Developer Review Guide: VIC Properties Portugal 2026 review: Prata Riverside, Matinha, Pinheirinho, 2023 ownership change, CPCV clauses, delay risk and investor checklist.
 

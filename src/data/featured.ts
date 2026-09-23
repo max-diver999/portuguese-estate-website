@@ -3,7 +3,6 @@ export const FEATURED_PROJECT_SLUGS = [
   'tomas-ribeiro-79',
   'terracos-do-monte',
   'six-senses-comporta',
-  'carvalhido',
   'castilho-203',
   'infinity',
   'mar-adentro',

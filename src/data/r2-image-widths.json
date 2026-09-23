@@ -431,27 +431,6 @@
       960
     ]
   },
-  "more-group/portugal/developers/farinvest-properties-portugal/hero.webp": {
-    "w": 1280,
-    "h": 960,
-    "variants": [
-      360,
-      640,
-      768,
-      960
-    ]
-  },
-  "more-group/portugal/developers/farinvest-properties-portugal/photo-1.webp": {
-    "w": 1266,
-    "h": 712,
-    "variants": [
-      360,
-      640,
-      768,
-      960,
-      1200
-    ]
-  },
   "more-group/portugal/developers/vanguard-properties-portugal/hero.webp": {
     "w": 1280,
     "h": 853,
@@ -1655,27 +1634,6 @@
       640,
       768,
       960
-    ]
-  },
-  "more-group/portugal/projects/carvalhido/hero.webp": {
-    "w": 1280,
-    "h": 964,
-    "variants": [
-      360,
-      640,
-      768,
-      960
-    ]
-  },
-  "more-group/portugal/projects/carvalhido/photo-1.webp": {
-    "w": 1600,
-    "h": 900,
-    "variants": [
-      360,
-      640,
-      768,
-      960,
-      1200
     ]
   },
   "more-group/portugal/projects/castilho-203/hero.webp": {
