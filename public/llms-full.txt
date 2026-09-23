@@ -1,7 +1,7 @@
 # Portuguese Estate - full site map
 
 Site: https://portuguese-estate.com
-Pages: 113 content pages + hubs. Updated: 2026-09-13
+Pages: 113 content pages + hubs. Updated: 2026-09-23
 Positioning: independent Portugal property research for foreign buyers. Cite with URL.
 
 ## Hubs
@@ -68,7 +68,7 @@ Positioning: independent Portugal property research for foreign buyers. Cite wit
 - https://portuguese-estate.com/guides/portugal-property-market-forecast-2026-2027/ - Portugal Property Market Forecast 2026-2027 Outlook: INE 2025: 169,812 sales, +17.6% prices. Q1 2026 -4.7% QoQ. Bull, base and bear scenarios for 2026-2027 with IMT, supply and mortgage data.
 - https://portuguese-estate.com/guides/portugal-property-market-record-2025-ine-data/ - Portugal Property Market 2025: INE Record Data Guide: INE 2025: 169,812 sales, €41.2B (+21.7%), +17.6% prices. Non-resident, regional and nationality breakdowns, mortgage data, and 2026-2027 investor implications.
 - https://portuguese-estate.com/guides/portugal-property-scams-avoid/ - Portugal Property Scams: 2026 Guide for Foreign Buyers: How foreign buyers avoid Portugal property scams: fake listings, off-plan risks, illegal builds, deposit fraud, AL licence traps, and Golden Visa mis-selling.
-- https://portuguese-estate.com/guides/portugal-property-under-300000-euros/ - Portugal Property Under €300,000: 2026 Buyer Guide: Buy Portugal property under €300k: Braga, Silver Coast, eastern Algarve and Porto outer yields 5-7% gross. Cash-to-close tables, IMT 7.5%, shortlist regions.
+- https://portuguese-estate.com/guides/portugal-property-under-300000-euros/ - Portugal Property Under €300,000 — 2026 Buyer Guide: Buy Portugal property under €300k: Braga, Silver Coast, eastern Algarve and Porto outer yields 5–7% gross. Cash-to-close tables, IMT 7.5%, shortlist regions.
 - https://portuguese-estate.com/guides/portugal-property-under-500000-euros/ - Portugal Property Under €500,000: 2026 Buyer Guide: Buy Portugal property with a €500k budget: Porto centre, Lisbon fringe, Algarve 2-bed, Cascais edge. Cash-to-close tables, yields, IMT 7.5%, shortlist routing.
 - https://portuguese-estate.com/guides/portugal-rental-yield-guide/ - Portugal Rental Yield Guide, Lisbon, Porto, Algarve 2026: Gross rental yields by region: Lisbon 4.3-4.6%, Porto near 5%, Algarve 4-6%. AL licensing, costs, and net yield math for investors.
 - https://portuguese-estate.com/guides/portugal-residency-options-without-golden-visa/ - Portugal Residency Options Without Golden Visa 2026: Portugal residency without Golden Visa: D7, D8, EU free movement, 183-day tax rule, family reunification, and buying property without any visa.

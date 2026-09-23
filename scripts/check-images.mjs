@@ -3,7 +3,7 @@
  * Гейт картинок. Кладётся в каждый сайт как scripts/check-images.mjs и запускается после сборки.
  *
  * Зачем. Проверки, которые были на сайтах до сентября 2026, искали в собранных страницах адреса
- * Cloudinary. После переезда на R2 таких адресов не осталось, и проверки стали зелёными всегда,
+ * прежнего хостинга картинок. После переезда на R2 таких адресов не осталось, и проверки стали зелёными всегда,
  * что бы ни случилось. В тот же период на живых сайтах оказались: обложка размером 54 байта и
  * кадром 2 на 2 пикселя, иконка приложения 180 на 180, растянутая на 1280 на 720, и полная потеря
  * выбора размера, из-за которой телефон качал файл для компьютера.
@@ -12,6 +12,7 @@
  *
  *   node scripts/check-images.mjs              проверить dist
  *   node scripts/check-images.mjs --dir build  другая папка сборки
+ *   node scripts/check-images.mjs --r2-only    картинки только из R2 и с самого сайта
  */
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -20,11 +21,15 @@ const args = process.argv.slice(2);
 const dirIdx = args.indexOf('--dir');
 const DIST = dirIdx >= 0 ? args[dirIdx + 1] : 'dist';
 /**
- * --forbid-cloudinary: любое упоминание res.cloudinary.com в собранных страницах валит сборку.
- * Добавлено 23.09.2026: после переезда на R2 новые статьи по старым инструкциям снова приносили
- * адреса Cloudinary, а этот гейт их пропускал, потому что проверял только картинки с R2.
+ * --r2-only: каждая картинка страницы (src, srcset, og:image, twitter:image) лежит в хранилище R2
+ * или на самом сайте (относительный адрес или хост из canonical). Картинка с любого другого адреса
+ * валит сборку, пиксели статистики 1 на 1 не в счёт. Добавлено 23.09.2026: после переезда на R2
+ * новые статьи по старым инструкциям снова приносили адреса прежнего хостинга, а гейт их
+ * пропускал, потому что проверял только картинки с R2. Правило через разрешённые адреса ловит
+ * любой чужой хостинг, а не одно известное имя.
  */
-const FORBID_CLOUDINARY = args.includes('--forbid-cloudinary');
+const R2_ONLY = args.includes('--r2-only');
+let seenSiteHost = null;
 const R2_HOST = 'pub-2855c73eea384110b510f25966292c37.r2.dev';
 
 /** Картинка легче этого это не картинка, а пустышка. */
@@ -50,16 +55,34 @@ const attr = (tag, name) => {
   return m ? m[1] : '';
 };
 
-const problems = { tiny: [], noSrcset: [], noSize: [], iconAsPhoto: [], smallSource: [], cloudinary: [] };
+const problems = { tiny: [], noSrcset: [], noSize: [], iconAsPhoto: [], smallSource: [], foreign: [] };
 const seen = new Set();
 const pages = htmlFiles(DIST);
 
 for (const file of pages) {
   const html = readFileSync(file, 'utf8');
   const page = file.replace(DIST, '').replace(/index\.html$/, '') || '/';
-  if (FORBID_CLOUDINARY) {
-    const hit = html.match(/https?:\/\/res\.cloudinary\.com\/[^"'\s)]+/);
-    if (hit) problems.cloudinary.push({ page, src: hit[0] });
+  if (R2_ONLY) {
+    // Адрес сайта: canonical страницы, иначе og:url, иначе тот, что встречался на прошлых страницах
+    // (у служебных страниц вроде /thanks/ canonical нет).
+    const siteHost = (html.match(/<link[^>]+rel=["']canonical["'][^>]*href=["']https?:\/\/([^/"']+)/i) || [])[1]
+      || (html.match(/<meta[^>]+property=["']og:url["'][^>]*content=["']https?:\/\/([^/"']+)/i) || [])[1]
+      || seenSiteHost;
+    if (siteHost) seenSiteHost = siteHost;
+    const foreign = (u) => { const m = u.match(/^(?:https?:)?\/\/([^/"'\s]+)/i); return m && m[1] !== R2_HOST && m[1] !== siteHost; };
+    // Внутри <noscript> живут пиксели счётчиков (Метрика, Pinterest): браузер с включённым JS их
+    // не показывает, и размеров 1 на 1 у них может не быть. 23.09.2026 так упала выкладка
+    // moregroupestate.ru на mc.yandex.ru/watch. Чужое фото с расширением файла в <noscript>
+    // всё равно поймает check-image-urls.mjs.
+    const visible = html.replace(/<noscript\b[\s\S]*?<\/noscript>/gi, '');
+    for (const tag of visible.match(/<img\b[^>]*>/gi) || []) {
+      if (attr(tag, 'width') === '1' && attr(tag, 'height') === '1') continue;
+      const urls = [attr(tag, 'src') || '', ...(attr(tag, 'srcset') || '').split(',').map((c) => c.trim().split(/\s+/)[0])];
+      for (const u of urls) if (u && foreign(u)) { problems.foreign.push({ page, src: u }); break; }
+    }
+    for (const m of html.matchAll(/<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*content=["']([^"']+)["']/gi)) {
+      if (foreign(m[1])) problems.foreign.push({ page, src: m[1] });
+    }
   }
 
   for (const tag of html.match(/<img\b[^>]*>/gi) || []) {
@@ -187,7 +210,7 @@ report('Пустые или неоткрывающиеся картинки', pr
 report('Без выбора размера (телефон качает файл для компьютера)', noSrcset, (x) => `${x.page}  ${x.src}`);
 report('Без размеров кадра (страница прыгает при загрузке)', noSize, (x) => `${x.page}  ${x.src}`);
 report('Иконка в роли фотографии', icons, (x) => `${x.page}  ${x.src}`);
-report('Ссылки на Cloudinary (картинки сайта живут на R2)', problems.cloudinary, (x) => `${x.page}  ${x.src.slice(0, 100)}`);
+report('Картинки не из хранилища R2 и не с сайта', uniq(problems.foreign, 'src'), (x) => `${x.page}  ${x.src.slice(0, 100)}`);
 
 const small = uniq(problems.smallSource, 'src');
 if (small.length) {
