@@ -50,10 +50,10 @@ function buildCard() {
     },
     keyPages: (cfg.keyPages || []).map((k) => ({ url: abs(k.url), label: k.label })),
     contentPolicy: {
-      signal: `search=${p.search ?? 'yes'}, ai-input=${p.aiInput ?? 'yes'}, ai-train=${p.aiTrain ?? 'no'}`,
+      signal: `search=${p.search ?? 'yes'}, ai-input=${p.aiInput ?? 'yes'}, ai-train=${p.aiTrain ?? 'yes'}`,
       search: p.search ?? 'yes',
       aiInput: p.aiInput ?? 'yes',
-      aiTrain: p.aiTrain ?? 'no',
+      aiTrain: p.aiTrain ?? 'yes',
       attribution: `Cite as "${cfg.brand}" with a link to the page URL.`,
       source: 'https://contentsignals.org',
     },

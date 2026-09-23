@@ -85,7 +85,7 @@
   "contentPolicy": {
     "search": "yes",
     "aiInput": "yes",
-    "aiTrain": "no"
+    "aiTrain": "yes"
   },
   "writeLlmsFull": false,
   "llms": {
