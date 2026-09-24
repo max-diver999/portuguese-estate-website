@@ -46,7 +46,8 @@ for (const file of walk(DIST).filter((item) => (
 
   for (const tag of html.match(/<img\b[^>]*>/g) || []) {
     const src = attribute(tag, 'src');
-    if (src.includes('.r2.dev/')) {
+    // Хранилище картинок: старый адрес r2.dev и с 24.09.2026 свой домен media.oper-stack.com.
+    if (src.includes('.r2.dev/') || src.includes('//media.oper-stack.com/')) {
       r2Images += 1;
       if (attribute(tag, 'fetchpriority') === 'high') priorityHeroes += 1;
       continue;

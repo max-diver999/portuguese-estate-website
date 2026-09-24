@@ -30,7 +30,9 @@ const FP_PATH = join(ROOT, 'src/data/image-fingerprints.json');
 const ALLOW_PATH = join(ROOT, 'src/data/photo-repeat-allow.json');
 const MANIFEST_PATH = join(ROOT, 'src/data/r2-image-widths.json');
 const THRESHOLD = 6;
-const R2 = 'https://pub-2855c73eea384110b510f25966292c37.r2.dev/';
+/** Ключ в манифесте ширин: путь после адреса хранилища, старого или нового (media.oper-stack.com с 24.09.2026). */
+const R2_PREFIXES = ['https://media.oper-stack.com/', 'https://pub-2855c73eea384110b510f25966292c37.r2.dev/'];
+const r2KeyOf = (u) => { const p = R2_PREFIXES.find((x) => u.startsWith(x)); return p ? u.slice(p.length) : null; };
 
 const walk = (d, out = []) => {
   if (!existsSync(d)) return out;
@@ -66,7 +68,7 @@ const manifest = existsSync(MANIFEST_PATH) ? JSON.parse(readFileSync(MANIFEST_PA
 const norm = (u) => u.split('?')[0];
 
 async function fingerprint(url) {
-  const key = norm(url).startsWith(R2) ? norm(url).slice(R2.length) : null;
+  const key = r2KeyOf(norm(url));
   const entry = key && manifest[key];
   const src = entry && (entry.variants || []).includes(360) ? norm(url).replace(/\.webp$/i, '-w360.webp') : url;
   const r = await fetch(src, { headers: { 'user-agent': 'MoreGroupPhotoGate/1.0' } });
@@ -122,7 +124,7 @@ for (const [, ps] of byGroup) {
   }
 }
 const small = photos.filter((p) => {
-  const key = norm(p.url).startsWith(R2) ? norm(p.url).slice(R2.length) : null;
+  const key = r2KeyOf(norm(p.url));
   const w = key && manifest[key] ? manifest[key].w : null;
   return w && ((p.role === 'обложка' && w < 960) || (p.role === 'в тексте' && w < 640));
 });

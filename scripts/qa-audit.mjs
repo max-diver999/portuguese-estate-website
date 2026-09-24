@@ -137,7 +137,7 @@ const issues = [];
 const heroImageOwners = new Map();
 /** Hosts allowed to serve a hero: our own Cloudinary, or Wikimedia until the upload lands. */
 const ALLOWED_IMAGE_HOST =
-  /^https:\/\/(res\.cloudinary\.com|upload\.wikimedia\.org|pub-[a-f0-9]+\.r2\.dev)\//;
+  /^https:\/\/(res\.cloudinary\.com|upload\.wikimedia\.org|(?:pub-[a-f0-9]+\.r2\.dev|media\.oper-stack\.com))\//;
 const stats = { total: 0, byColl: {}, wordSum: 0 };
 const reportRows = [];
 
