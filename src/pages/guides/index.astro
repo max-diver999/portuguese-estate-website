@@ -98,7 +98,7 @@ const schemas = hubSchemas({
               description={guide.data.description}
               image={guide.data.heroImage}
               imageAlt={guide.data.heroImageAlt}
-              badges={['Pillar', ...(guide.data.tags?.slice(0, 1) ?? [])]}
+              badges={[]}
               meta={`${guide.data.readingTime ?? 8} min read`}
             />
           ))}
@@ -137,7 +137,7 @@ const schemas = hubSchemas({
                 description={guide.data.description}
                 image={guide.data.heroImage}
                 imageAlt={guide.data.heroImageAlt}
-                badges={guide.data.tags?.slice(0, 2) ?? []}
+                badges={[]}
                 meta={`${guide.data.readingTime ?? 8} min read`}
               />
             </div>
