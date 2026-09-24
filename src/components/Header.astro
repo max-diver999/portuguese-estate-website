@@ -38,7 +38,7 @@ const waText = waLabel('WhatsApp', 'Talk to us');
       <a
         href={waHref}
         {...waLinkAttrs}
-        class="btn-secondary text-sm px-4 py-2 shrink-0 hidden sm:inline-flex"
+        class="btn-secondary header-wa text-sm px-4 py-2 shrink-0 hidden sm:inline-flex"
         data-wa-placement="header"
         data-cta="whatsapp_header"
       >
@@ -158,6 +158,10 @@ const waText = waLabel('WhatsApp', 'Talk to us');
     text-decoration: none;
   }
   @media (max-width: 767px) { .mobile-header-cta { display: none; } }
+  /* `hidden` у кнопки WhatsApp не срабатывал: глобальный .btn-secondary {display:inline-flex} вне слоя
+     бьёт утилиту Tailwind. На 390 px кнопка стояла, и шапка была шире экрана на 17 px, кнопка меню
+     обрезана справа (замер 24.09.2026). На телефоне WhatsApp остаётся в плавающей кнопке и в меню. */
+  @media (max-width: 639px) { .header-wa { display: none; } }
 </style>
 
 <script>
