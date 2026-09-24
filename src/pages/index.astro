@@ -172,7 +172,7 @@ const heroPreload = lcpPreloadFromResponsive(HOMEPAGE_HERO_IMAGE, 'homepage');
             description={guide.data.description}
             image={guide.data.heroImage}
             imageAlt={guide.data.heroImageAlt}
-            badges={['Guide', ...(guide.data.tags?.slice(0, 1) ?? [])]}
+            badges={['Guide']}
             meta={`${guide.data.readingTime ?? 8} min read`}
           />
         )) : (

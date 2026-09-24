@@ -42,7 +42,7 @@ const schemas = hubSchemas({
           description={item.data.description}
           image={item.data.heroImage}
           imageAlt={item.data.heroImageAlt}
-          badges={item.data.tags?.slice(0, 2) ?? []}
+          badges={[]}
           meta={`${item.data.readingTime ?? 8} min read`}
         />
       ))}
