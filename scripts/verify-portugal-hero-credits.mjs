@@ -24,7 +24,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const R2 = /^https:\/\/pub-[a-f0-9]+\.r2\.dev\/more-group\/portugal\/[^"]+\.webp$/;
+const R2 = /^https:\/\/(?:pub-[a-f0-9]+\.r2\.dev|media\.oper-stack\.com)\/more-group\/portugal\/[^"]+\.webp$/;
 const errors = [];
 let commons = 0;
 let own = 0;

@@ -5,7 +5,7 @@ type Variant = 'hero' | 'homepage' | 'card';
 type Dimension = { width: number; height: number };
 type LocalCandidate = { url: string; width: number };
 
-const R2_PATTERN = /^https:\/\/pub-[a-f0-9]+\.r2\.dev\/(.+)$/i;
+const R2_PATTERN = /^https:\/\/(?:pub-[a-f0-9]+\.r2\.dev|media\.oper-stack\.com)\/(.+)$/i;
 const WIDTHS = {
   hero: [360, 480, 768, 1024, 1280],
   homepage: [360, 480, 768, 1024],

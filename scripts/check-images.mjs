@@ -13,6 +13,7 @@
  *   node scripts/check-images.mjs              проверить dist
  *   node scripts/check-images.mjs --dir build  другая папка сборки
  *   node scripts/check-images.mjs --r2-only    картинки только из R2 и с самого сайта
+ *   node scripts/check-images.mjs --forbid-r2dev  ни одной ссылки на старый адрес r2.dev
  */
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -30,7 +31,17 @@ const DIST = dirIdx >= 0 ? args[dirIdx + 1] : 'dist';
  */
 const R2_ONLY = args.includes('--r2-only');
 let seenSiteHost = null;
-const R2_HOST = 'pub-2855c73eea384110b510f25966292c37.r2.dev';
+/**
+ * Адреса хранилища. С 23.09.2026 картинки отдаёт свой домен media.oper-stack.com: r2.dev по
+ * документации Cloudflare ограничен по частоте, отвечал 429 сборкам и мог так же отвечать
+ * посетителям, а кэш Cloudflare на нём не работает. Файлы те же, меняется только начало адреса.
+ * Старый адрес в списке, пока сайты переезжают: без него гейт перестал бы проверять их картинки.
+ */
+const R2_DEV_HOST = 'pub-2855c73eea384110b510f25966292c37.r2.dev';
+const R2_HOSTS = ['media.oper-stack.com', R2_DEV_HOST];
+const onR2 = (url) => R2_HOSTS.some((h) => url.includes(`//${h}/`));
+/** --forbid-r2dev: любая ссылка на старый адрес в собранных страницах валит сборку. Ставится сайту после переезда. */
+const FORBID_R2DEV = args.includes('--forbid-r2dev');
 
 /** Картинка легче этого это не картинка, а пустышка. */
 const MIN_BYTES = 2048;
@@ -55,13 +66,16 @@ const attr = (tag, name) => {
   return m ? m[1] : '';
 };
 
-const problems = { tiny: [], noSrcset: [], noSize: [], iconAsPhoto: [], smallSource: [], foreign: [] };
+const problems = { tiny: [], noSrcset: [], noSize: [], iconAsPhoto: [], smallSource: [], foreign: [], r2dev: [] };
 const seen = new Set();
 const pages = htmlFiles(DIST);
 
 for (const file of pages) {
   const html = readFileSync(file, 'utf8');
   const page = file.replace(DIST, '').replace(/index\.html$/, '') || '/';
+  if (FORBID_R2DEV && html.includes(R2_DEV_HOST)) {
+    problems.r2dev.push({ page, src: (html.match(new RegExp(`[^"'\\s(]*${R2_DEV_HOST.replace(/\./g, '\\.')}[^"'\\s)<]*`)) || [R2_DEV_HOST])[0] });
+  }
   if (R2_ONLY) {
     // Адрес сайта: canonical страницы, иначе og:url, иначе тот, что встречался на прошлых страницах
     // (у служебных страниц вроде /thanks/ canonical нет).
@@ -69,7 +83,7 @@ for (const file of pages) {
       || (html.match(/<meta[^>]+property=["']og:url["'][^>]*content=["']https?:\/\/([^/"']+)/i) || [])[1]
       || seenSiteHost;
     if (siteHost) seenSiteHost = siteHost;
-    const foreign = (u) => { const m = u.match(/^(?:https?:)?\/\/([^/"'\s]+)/i); return m && m[1] !== R2_HOST && m[1] !== siteHost; };
+    const foreign = (u) => { const m = u.match(/^(?:https?:)?\/\/([^/"'\s]+)/i); return m && !R2_HOSTS.includes(m[1]) && m[1] !== siteHost; };
     // Внутри <noscript> живут пиксели счётчиков (Метрика, Pinterest): браузер с включённым JS их
     // не показывает, и размеров 1 на 1 у них может не быть. 23.09.2026 так упала выкладка
     // moregroupestate.ru на mc.yandex.ru/watch. Чужое фото с расширением файла в <noscript>
@@ -93,7 +107,7 @@ for (const file of pages) {
     const boxW = Number(attr(tag, 'width') || 0);
     if (NOT_A_PHOTO.test(src) && boxW >= 600) problems.iconAsPhoto.push({ page, src });
 
-    if (!src.includes(R2_HOST)) continue;
+    if (!onR2(src)) continue;
 
     if (!attr(tag, 'width') || !attr(tag, 'height')) problems.noSize.push({ page, src });
 
@@ -211,6 +225,7 @@ report('Без выбора размера (телефон качает файл
 report('Без размеров кадра (страница прыгает при загрузке)', noSize, (x) => `${x.page}  ${x.src}`);
 report('Иконка в роли фотографии', icons, (x) => `${x.page}  ${x.src}`);
 report('Картинки не из хранилища R2 и не с сайта', uniq(problems.foreign, 'src'), (x) => `${x.page}  ${x.src.slice(0, 100)}`);
+report('Страницы со ссылкой на старый адрес r2.dev (картинки теперь на media.oper-stack.com)', problems.r2dev, (x) => `${x.page}  ${x.src.slice(0, 110)}`);
 
 const small = uniq(problems.smallSource, 'src');
 if (small.length) {
