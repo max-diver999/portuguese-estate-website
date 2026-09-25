@@ -19,6 +19,9 @@ async function sendTelegram(text: string) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ chat_id: TG_CHAT_ID, text, parse_mode: 'HTML' }),
+    // A Telegram that takes the connection and never answers would hold the lead
+    // until the function limit. After 8 s this becomes an error.
+    signal: AbortSignal.timeout(8000),
   });
   if (!res.ok) throw new Error(`Telegram ${res.status}`);
 }
@@ -79,7 +82,16 @@ export const POST: APIRoute = async ({ request }) => {
       page ? `🌐 <b>Page:</b> ${page}` : null,
     ].filter(Boolean).join('\n');
 
-    await sendTelegram(lines);
+    // Telegram and the owner email are two channels. When Telegram fails, the email
+    // and the auto-reply still go out and the person still sees the success screen;
+    // before this a Telegram outage answered 500 and lost the lead.
+    let telegramFailure = '';
+    try {
+      await sendTelegram(lines);
+    } catch (err) {
+      telegramFailure = err instanceof Error ? err.message : 'unknown error';
+      console.error('Lead Telegram notify failed:', err);
+    }
 
     let notifyFailure = '';
     try {
@@ -88,7 +100,9 @@ export const POST: APIRoute = async ({ request }) => {
         subject: isHealthcheck
           ? 'TEST lead: portuguese-estate.com'
           : `New lead: ${subjectName} (${phoneText || 'no phone'})`,
-        htmlBody: lines,
+        htmlBody: telegramFailure
+          ? `⚠️ <b>Telegram notify failed</b> (${escapeHtml(telegramFailure)}). This email is the only copy of the lead.\n\n${lines}`
+          : lines,
         replyTo: emailText.includes('@') ? emailText : undefined,
       });
       if (!notify.ok) notifyFailure = notify.reason;
@@ -97,12 +111,22 @@ export const POST: APIRoute = async ({ request }) => {
       console.error('Owner notify email failed:', err);
     }
 
-    if (notifyFailure) {
+    if (notifyFailure && !telegramFailure) {
       try {
         await sendTelegram(`⚠️ email notify failed: ${escapeHtml(notifyFailure)}`);
       } catch (err) {
         console.error('Telegram notify-failure ping failed:', err);
       }
+    }
+
+    if (telegramFailure && notifyFailure) {
+      // Neither channel took the lead. The log line is its last copy; the person sees
+      // an error instead of a false success and can write on WhatsApp.
+      console.error('LEAD_UNDELIVERED', lines);
+      return new Response(JSON.stringify({ error: 'Lead not delivered' }), {
+        status: 502,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     if (!isHealthcheck && emailText) {
@@ -114,7 +138,7 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     const payload = isHealthcheck
-      ? { success: true, notify: { telegram: 'ok', email: notifyFailure || 'ok' } }
+      ? { success: true, notify: { telegram: telegramFailure || 'ok', email: notifyFailure || 'ok' } }
       : { success: true };
 
     return new Response(JSON.stringify(payload), {
