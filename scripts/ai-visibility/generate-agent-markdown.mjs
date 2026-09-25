@@ -93,6 +93,7 @@ async function processCollection(col) {
       url: canonical,
       mdUrl: `${cfg.siteUrl}${col.urlPrefix}/${slug}.md`,
       updated: isoDay(fm.updatedDate || fm.pubDate),
+      fm,
     });
   }
   entries.sort((a, b) => a.title.localeCompare(b.title));
@@ -186,6 +187,85 @@ async function writeLlmsIndex(perCollection) {
   return total;
 }
 
+/**
+ * Priced project catalog in llms.txt (25.09.2026, after more-group-website #107).
+ * One line per indexable card of cfg.catalog.collection: name, area, type, status, entry
+ * price from the card's own frontmatter, page. No completion dates: a status with a year or
+ * a percentage in it is left out. The section is rebuilt on every run and placed before the
+ * corpus section, so a hand-kept llms.txt keeps everything else as written.
+ */
+const SMALL_WORDS = new Set(['de', 'del', 'la', 'las', 'los', 'el', 'di', 'da', 'do', 'dos', 'das', 'of', 'the', 'and', 'al', 'y', 'e', 'en', 'sur', 'van', 'von']);
+const labelOf = (slug) =>
+  /[A-Z ]/.test(String(slug || '')) ? String(slug).trim() : String(slug || '')
+    .split('-')
+    .filter(Boolean)
+    .map((w, i) => (i > 0 && SMALL_WORDS.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1)))
+    .join(' ');
+
+// "Aldea Tulum Review: Delivering Condos From $188K 2026" -> "Aldea Tulum"
+const catalogName = (title) =>
+  String(title)
+    .split(/:\s| [-–|] /)[0]
+    .replace(/\s+(Investment\s+)?Review(\s+20\d\d)?\s*$/i, '')
+    .replace(/\s+20\d\d\s*$/, '')
+    .trim();
+
+const CURRENCY = {
+  USD: (n) => `$${n.toLocaleString('en-US')}`,
+  EUR: (n) => `€${n.toLocaleString('en-US')}`,
+  ZAR: (n) => `R${n.toLocaleString('en-US')}`,
+  SGD: (n) => `S$${n.toLocaleString('en-US')}`,
+  AED: (n) => `AED ${n.toLocaleString('en-US')}`,
+};
+
+async function injectCatalog(perCollection) {
+  const c = cfg.catalog;
+  const found = perCollection.find((x) => x.col.dir === c.collection);
+  if (!found) return 0;
+  const fmt = CURRENCY[c.currency];
+  const heading = c.heading || 'Project catalog with prices';
+  const rows = found.entries.map((e) => {
+    const price = Number(e.fm[c.priceField]);
+    const status = String(e.fm[c.statusField || 'status'] || '').trim();
+    const parts = [
+      labelOf(e.fm[c.areaField || 'area']),
+      c.typeField ? labelOf(e.fm[c.typeField]).toLowerCase() : '',
+      /[0-9%]/.test(status) ? '' : status.replace(/-/g, ' ').replace(/^off plan$/, 'off-plan').replace(/^pre construction$/, 'pre-construction'),
+      price > 0 ? `from ${fmt(price)}` : 'price on request',
+    ].filter(Boolean);
+    return { area: labelOf(e.fm[c.areaField || 'area']), price: price > 0 ? price : Infinity, line: `- [${catalogName(e.title)}](${e.url}): ${parts.join(', ')}` };
+  });
+  rows.sort((a, b) => a.area.localeCompare(b.area) || a.price - b.price);
+  const section = [
+    `## ${heading}`,
+    '',
+    `One line per ${c.noun || 'project'}: name, area, ${c.typeField ? 'property type, ' : ''}status, entry price, page. ` +
+      'Append `.md` to any page URL for its full markdown review.',
+    '',
+    ...rows.map((r) => r.line),
+    '',
+  ];
+
+  const file = path.join(PUBLIC_DIR, 'llms.txt');
+  const lines = (await fs.readFile(file, 'utf8')).split('\n');
+  // Drop the section a previous run wrote: from its heading to the next H2.
+  const start = lines.findIndex((l) => l.trim() === `## ${heading}`);
+  if (start !== -1) {
+    let end = lines.findIndex((l, i) => i > start && /^## /.test(l));
+    if (end === -1) end = lines.length;
+    lines.splice(start, end - start);
+  }
+  const before = lines.findIndex((l) => /^## (Full corpus|Content policy)/i.test(l));
+  if (before === -1) {
+    if (lines.length && lines[lines.length - 1].trim() !== '') lines.push('');
+    lines.push(...section);
+  } else {
+    lines.splice(before, 0, ...section);
+  }
+  await fs.writeFile(file, lines.join('\n').replace(/\n{3,}/g, '\n\n'), 'utf8');
+  return rows.length;
+}
+
 async function writeFullCorpus(perCollection) {
   const chunks = [
     `# ${cfg.title}: ${L.fullCorpusTitle}\n`,
@@ -226,6 +306,10 @@ async function main() {
   if (cfg.writeLlms) {
     const listed = await writeLlmsIndex(perCollection);
     note += `, llms.txt lists ${listed} page(s)`;
+  }
+  if (cfg.catalog) {
+    const listed = await injectCatalog(perCollection);
+    note += `, llms.txt catalog ${listed} line(s)`;
   }
   if (cfg.writeLlmsFull) {
     const fullBytes = await writeFullCorpus(perCollection);

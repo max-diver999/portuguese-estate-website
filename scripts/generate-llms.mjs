@@ -68,6 +68,8 @@ const shortLines = [
   '',
   `- Site: ${SITE}`,
   '- Contact: info@portuguese-estate.com',
+  // Same entity as SITE.wikidataId in src/data/site.ts and the sameAs in reference-infra.config.json.
+  '- Wikidata: https://www.wikidata.org/wiki/Q140698878',
   '- Markets: Lisbon, Porto, the Algarve, Cascais, the Silver Coast, Madeira, the Azores, Alentejo and Comporta',
   '- Focus: IMT 7.5% flat for non-residents (DL 97/2026, from Sep 2026), the D7, D8 and Golden Visa routes, naturalisation under Lei Organica 1/2026, AL/RNAL licensing, buying process and running costs for foreign owners',
   `- Corpus: ${total} pages, updated ${today}`,
