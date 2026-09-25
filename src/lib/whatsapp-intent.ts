@@ -6,6 +6,7 @@ export const WHATSAPP_PLACEMENTS = [
   'footer_contact',
   'inline_cta',
   'guide_commercial',
+  'guide_inline',
   'project_cta',
 ] as const;
 
@@ -38,6 +39,7 @@ const PLACEMENT_SUFFIX: Record<WhatsAppPlacement, string> = {
   footer_contact: 'FOOTERC',
   inline_cta: 'INLINE',
   guide_commercial: 'GUIDE',
+  guide_inline: 'GUIDEIN',
   project_cta: 'PROJECT',
 };
 

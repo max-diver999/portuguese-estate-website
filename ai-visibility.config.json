@@ -91,5 +91,13 @@
   "llms": {
     "generated": true,
     "note": "llms.txt is built by the generator this repo already has and is left alone."
+  },
+  "catalog": {
+    "collection": "projects",
+    "priceField": "priceFromEUR",
+    "currency": "EUR",
+    "areaField": "area",
+    "typeField": "propertyType",
+    "statusField": "status"
   }
 }

@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import InlineLeadCta from '../components/InlineLeadCta.astro';
+import GuideMessengerBlock from '../components/GuideMessengerBlock.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import RelatedContent from '../components/RelatedContent.astro';
 import { SITE } from '../data/site';
@@ -160,6 +161,8 @@ const schemas = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : 
 
     <div class="prose">
       <slot />
+      {/* Guides: WhatsApp in the first 10% of the text, the block's script moves it there. */}
+      {Astro.url.pathname.startsWith('/guides/') && <GuideMessengerBlock title={title} />}
     </div>
 
     {/* Rendered here, then relocated by its own inline script to sit between the
